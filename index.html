@@ -1,1254 +1,1520 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBU Tutor Platform - Essay Simulation Builder</title>
-    <style>
-        :root {
-            --primary: #2c5aa0;
-            --primary-dark: #1e3d72;
-            --secondary: #f8f9fa;
-            --success: #28a745;
-            --danger: #dc3545;
-            --warning: #ffc107;
-            --info: #17a2b8;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --border: #dee2e6;
-            --shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-        
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-        
-        .header p {
-            text-align: center;
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-        
-        .user-info {
-            background: rgba(255,255,255,0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-            overflow: hidden;
-        }
-        
-        .card-header {
-            background: var(--secondary);
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .card-header h2 {
-            margin: 0;
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-        
-        .card-body {
-            padding: 1.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
-        }
-        
-        .form-select {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-            background-position: right 0.5rem center;
-            background-repeat: no-repeat;
-            background-size: 1.5em 1.5em;
-            padding-right: 2.5rem;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            gap: 0.5rem;
-        }
-        
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-        
-        .btn-primary:hover:not(:disabled) {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
-        }
-        
-        .btn-success {
-            background: var(--success);
-            color: white;
-        }
-        
-        .btn-success:hover:not(:disabled) {
-            background: #218838;
-            transform: translateY(-1px);
-        }
-        
-        .btn-danger {
-            background: var(--danger);
-            color: white;
-        }
-        
-        .btn-danger:hover:not(:disabled) {
-            background: #c82333;
-            transform: translateY(-1px);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-        
-        .btn-outline:hover:not(:disabled) {
-            background: var(--primary);
-            color: white;
-        }
-        
-        .btn-sm {
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-        }
-        
-        .steps-container {
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            max-height: 500px;
-            overflow-y: auto;
-            padding: 1rem;
-        }
-        
-        .step-card {
-            background: var(--light);
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-        
-        .step-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .step-number {
-            background: var(--primary);
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.875rem;
-        }
-        
-        .step-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .option-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .option-radio {
-            margin: 0;
-        }
-        
-        .option-input {
-            flex: 1;
-        }
-        
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .table th,
-        .table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .table th {
-            background: var(--secondary);
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .table tbody tr:hover {
-            background: var(--light);
-        }
-        
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        
-        .badge-success {
-            background: #d4edda;
-            color: #155724;
-        }
-        
-        .badge-warning {
-            background: #fff3cd;
-            color: #856404;
-        }
-        
-        .badge-info {
-            background: #d1ecf1;
-            color: #0c5460;
-        }
-        
-        .alert {
-            padding: 1rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            border-left: 4px solid transparent;
-        }
-        
-        .alert-success {
-            background: #d4edda;
-            border-color: var(--success);
-            color: #155724;
-        }
-        
-        .alert-error {
-            background: #f8d7da;
-            border-color: var(--danger);
-            color: #721c24;
-        }
-        
-        .alert-warning {
-            background: #fff3cd;
-            border-color: var(--warning);
-            color: #856404;
-        }
-        
-        .alert-info {
-            background: #d1ecf1;
-            border-color: var(--info);
-            color: #0c5460;
-        }
-        
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .hidden {
-            display: none !important;
-        }
-        
-        .flex {
-            display: flex;
-        }
-        
-        .items-center {
-            align-items: center;
-        }
-        
-        .justify-between {
-            justify-content: space-between;
-        }
-        
-        .gap-4 {
-            gap: 1rem;
-        }
-        
-        .mt-4 {
-            margin-top: 1rem;
-        }
-        
-        .mb-4 {
-            margin-bottom: 1rem;
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        .text-muted {
-            color: #6c757d;
-        }
-        
-        .simulation-id {
-            font-family: monospace;
-            background: var(--light);
-            padding: 0.25rem 0.5rem;
-            border-radius: 3px;
-            font-size: 0.875rem;
-        }
-        
-        .auth-required {
-            text-align: center;
-            padding: 3rem;
-        }
-        
-        .auth-required h2 {
-            color: var(--danger);
-            margin-bottom: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App - Courses & Terms | Kaeri EdTech</title>
+
+  <!-- FONTS -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS STYLES (Base B + Version A Hybrid + Fixes) -->
+
+  <style>
+/* --- GLOBAL SETTINGS (Base B) --- */
+body { 
+font-family: 'Roboto', sans-serif; 
+background: #0d1b2a; 
+margin: 0; 
+color: #e0e6ed; 
+line-height: 1.6; 
+overflow-y: auto; 
+padding-top: 160px; 
+padding-left: 20px; 
+padding-right: 20px; 
+padding-bottom: 30px; 
+transition: padding-top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+body.view-course { padding-top: 130px; }
+
+h1, h2, h3 { color: #72efdd; text-align: center; margin-bottom: 25px; }
+p { margin-bottom: 15px; }
+button { cursor: pointer; }
+
+/* --- LANDING PAGE FIXED HEADER --- */
+#landing-header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #0d1b2a; 
+z-index: 1002;
+text-align: center;
+padding: 20px 0;
+border-bottom: 1px solid #1b263b;
+box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.brand-title {
+color: #64ffda;
+font-weight: 900;
+font-size: 2.2rem;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+margin: 0;
+line-height: 1;
+display: block;
+}
+
+.brand-slogan {
+color: #e0e6ed;
+font-style: italic;
+font-size: 1rem;
+opacity: 0.8;
+margin-top: 8px;
+font-weight: 400;
+display: block;
+}
+
+/* --- CONTAINERS (Base B) --- */
+.quiz-container { 
+max-width: 1200px; 
+margin: auto; 
+background: #1b263b; 
+padding: 40px 30px; 
+border-radius: 16px; 
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* --- STUDENT BOARD (FLASHCARD STYLE) --- */
+.student-board-wrapper {
+display: grid;
+grid-template-columns: 1.4fr 1fr; /* Desktop Ratio */
+gap: 20px;
+max-width: 100%;
+margin-bottom: 30px;
+}
+
+.board-section {
+/* BRAND: Flashcard Front Color */
+background-color: #2b3a55; 
+border-radius: 12px; 
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+padding: 25px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: 1px solid #3e506e;
+transition: transform 0.3s ease;
+min-height: 140px;
+}
+
+.board-section:hover {
+transform: translateY(-2px); 
+}
+
+/* Announcement Text */
+.board-announcement-title {
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+font-size: 1.15em;
+color: #72efdd; /* Teal Accent */
+margin-bottom: 12px;
+display: flex;
+align-items: center;
+gap: 10px;
+border-bottom: 1px solid #3e506e;
+padding-bottom: 10px;
+}
+
+.board-announcement-body {
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
+line-height: 1.6;
+color: #e0e6ed;
+font-size: 0.95em;
+}
+
+/* Semantic Status Borders */
+.board-section.type-info { border-left: 6px solid #007bff; }
+.board-section.type-success { border-left: 6px solid #28a745; }
+.board-section.type-warning { border-left: 6px solid #ffc107; }
+.board-section.type-critical { border-left: 6px solid #dc3545; }
+
+/* Motivation Box */
+.board-motivation-box {
+background-color: #2b3a55; 
+border: 1px solid #72efdd; /* Teal Border */
+text-align: center;
+font-style: italic;
+position: relative;
+}
+
+.quote-content {
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+color: #e0e6ed;
+font-size: 1.1em;
+line-height: 1.5;
+}
+
+.quote-icon { 
+display: block; 
+font-size: 1.8rem; 
+margin-bottom: 10px;
+text-shadow: 0 0 10px rgba(114, 239, 221, 0.3);
+}
+
+/* Dynamic Layouts */
+.layout-full-width { grid-template-columns: 1fr !important; }
+
+/* --- LANDING PAGE (Base B) --- */
+.course-section { 
+margin-bottom: 40px; 
+border: 1px solid #007bff; 
+border-radius: 10px; 
+padding: 20px; 
+}
+.course-button { 
+background-color: #007bff; 
+color: white; 
+border: none; 
+padding: 15px 25px; 
+font-size: 1.2em; 
+border-radius: 8px; 
+margin-bottom: 20px; 
+width: 100%; 
+box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); 
+transition: all 0.3s ease; 
+}
+.course-button:hover { 
+background-color: #0056b3; 
+transform: translateY(-3px); 
+box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); 
+}
+.course-button.active { 
+background-color: #28a745; 
+box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); 
+}
+.term-buttons { 
+display: none; 
+flex-direction: column; 
+gap: 10px; 
+margin-top: 15px; 
+}
+.term-buttons button { 
+background-color: #6c757d; 
+color: white; 
+border: none; 
+padding: 12px 20px; 
+font-size: 1em; 
+border-radius: 6px; 
+transition: all 0.3s ease; 
+}
+.term-buttons button:hover { 
+background-color: #5a6268; 
+transform: translateY(-2px); 
+}
+
+/* --- COURSE PAGE FIXED HEADER --- */
+#fixed-header { 
+display: none; 
+position: fixed; 
+top: 0; 
+left: 0; 
+width: 100%; 
+background: #1b263b; 
+z-index: 1001; 
+padding: 10px 20px; 
+box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+box-sizing: border-box; 
+}
+
+.header-grid { 
+display: grid; 
+grid-template-columns: 1fr auto; 
+gap: 15px; 
+align-items: center; 
+}
+
+#unlock-btn { 
+background: linear-gradient(45deg, #ffc107, #ff9800); 
+color: #333; 
+border: none; 
+padding: 8px 15px; 
+border-radius: 20px; 
+font-weight: bold; 
+font-size: 0.9em; 
+box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); 
+animation: pulse 2s infinite; 
+text-transform: uppercase; 
+margin-top: 0; 
+}
+#unlock-btn:hover { transform: scale(1.05); }
+@keyframes pulse { 
+0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); } 
+70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); } 
+100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); } 
+}
+
+#price-banner { 
+display: none;
+position: fixed; 
+top: 70px; 
+right: 20px; 
+background: #007bff; 
+color: white; 
+padding: 10px 16px; 
+font-weight: 700; 
+font-size: 1rem; 
+border-radius: 8px; 
+z-index: 1000; 
+box-shadow: 0 3px 10px rgba(0,0,0,0.3); 
+}
+
+/* --- QUIZ INTERFACE (Base B) --- */
+.mode-buttons { 
+display: grid; 
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+gap: 15px; 
+margin-bottom: 30px; 
+}
+.mode-buttons button { 
+background-color: #007bff; 
+color: white; 
+border: none; 
+padding: 15px 20px; 
+font-size: 1.1em; 
+border-radius: 8px; 
+transition: all 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+.mode-buttons button:hover { 
+background-color: #0056b3; 
+transform: translateY(-3px); 
+}
+#tts-toggle-button { background-color: #6610f2; }
+#tts-toggle-button:hover { background-color: #520dc2; }
+
+#quiz-form { 
+background-color: #0d1b2a; 
+padding: 25px; 
+border-radius: 12px; 
+margin-bottom: 25px; 
+box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+.question-header { 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+margin-bottom: 15px; 
+flex-wrap: wrap; 
+}
+.question-header h3 { 
+margin: 0; 
+flex-basis: 100%; 
+margin-bottom: 10px; 
+text-align: left; 
+}
+.question-header span { 
+background-color: #007bff; 
+color: white; 
+padding: 5px 10px; 
+border-radius: 5px; 
+font-size: 0.8em; 
+margin-left: 10px; 
+margin-bottom: 5px; 
+}
+.question-text, .question-box p { 
+font-size: 1.15em; 
+margin-bottom: 20px; 
+color: #cdd6e0; 
+}
+
+.options label { 
+display: block; 
+background-color: #2b3a55; 
+padding: 12px; 
+margin-bottom: 10px; 
+border-radius: 8px; 
+cursor: pointer; 
+transition: all 0.3s ease; 
+font-size: 1em; 
+}
+.options label:hover { 
+background-color: #3e506e; 
+transform: translateX(5px); 
+}
+.options input[type="radio"] { 
+margin-right: 10px; 
+transform: scale(1.2); 
+}
+
+textarea { 
+width: calc(100% - 20px); 
+padding: 10px; 
+margin-top: 10px; 
+border: 1px solid #3e506e; 
+border-radius: 8px; 
+background-color: #0d1b2a; 
+color: #e0e6ed; 
+font-size: 1em; 
+resize: vertical; 
+min-height: 100px; 
+}
+textarea:focus { 
+outline: none; 
+border-color: #007bff; 
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+button { 
+background-color: #28a745; 
+color: white; 
+border: none; 
+padding: 12px 25px; 
+font-size: 1em; 
+border-radius: 8px; 
+margin-top: 20px; 
+transition: all 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+button:hover { 
+background-color: #218838; 
+transform: translateY(-2px); 
+}
+button:disabled { 
+background-color: #6c757d; 
+cursor: not-allowed; 
+transform: none; 
+box-shadow: none; 
+}
+
+#result button, .question-box button, .explanation-box + button, #quiz-form button:last-child { 
+background-color: #28a745; 
+color: white; 
+border: none; 
+padding: 12px 25px; 
+font-size: 1em; 
+border-radius: 8px; 
+margin-top: 20px; 
+transition: all 0.3s ease; 
+cursor: pointer; 
+display: inline-block; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+#result button:hover, .question-box button:hover, .explanation-box + button:hover { 
+background-color: #218838; 
+transform: translateY(-2px); 
+}
+#quiz-form button:last-child { background-color: #ffc107; color: #333; }
+#quiz-form button:last-child:hover { background-color: #e0a800; }
+
+.submit-btn, .whatsapp-buttons button { 
+background-color: #28a745; 
+color: white; 
+border: none; 
+padding: 12px 25px; 
+font-size: 1em; 
+border-radius: 8px; 
+margin-top: 20px; 
+transition: all 0.3s ease; 
+}
+.submit-btn:hover, .whatsapp-buttons button:hover { 
+background-color: #218838; 
+transform: translateY(-2px); 
+}
+
+.back-button { 
+background-color: #6c757d; 
+color: white; 
+border: none; 
+padding: 12px 20px; 
+font-size: 1em; 
+cursor: pointer; 
+border-radius: 8px; 
+margin-top: 20px; 
+text-decoration: none; 
+display: inline-block; 
+transition: all 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+.back-button:hover { 
+background-color: #5a6268; 
+transform: translateY(-2px); 
+}
+
+/* Challenge Button */
+.challenge-button { 
+background-color: #6610f2 !important; 
+color: white !important; 
+margin-left: 10px; 
+}
+.challenge-button:hover { 
+background-color: #520dc2 !important; 
+transform: translateY(-2px); 
+}
+
+/* --- FEEDBACK --- */
+.feedback, .explanation-box { 
+margin-top: 20px; 
+padding: 15px; 
+border-radius: 8px; 
+background-color: #0d1b2a; 
+border: 1px solid #3e506e; 
+}
+.feedback p { margin: 0 0 10px 0; font-weight: bold; }
+.explanation-box { color: #a0a8b4; font-style: italic; }
+#result { 
+margin-top: 20px; 
+padding: 25px; 
+background-color: #0d1b2a; 
+border-radius: 12px; 
+text-align: center; 
+box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+#result h2 { margin-bottom: 15px; }
+#result p { font-size: 1.2em; margin-bottom: 20px; }
+
+.restart-button, .reset-button { 
+background-color: #ffc107 !important; 
+color: #333 !important; 
+border: none; 
+padding: 12px 25px; 
+border-radius: 8px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+.restart-button:hover, .reset-button:hover { 
+background-color: #e0a800 !important; 
+transform: translateY(-2px); 
+}
+
+/* --- PROGRESS --- */
+#mode-banner { 
+background-color: #2c3e50; 
+color: #fff; 
+padding: 10px 15px; 
+text-align: center; 
+font-weight: bold; 
+font-size: 1.1em; 
+border-radius: 8px; 
+margin-bottom: 15px; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+.demo-mode-banner { border: 2px solid #ffc107; color: #ffc107 !important; }
+.full-access-banner { border: 2px solid #28a745; color: #28a745 !important; }
+#progress-container { 
+width: 100%; 
+background-color: #3e506e; 
+border-radius: 5px; 
+margin-top: 10px; 
+height: 20px; 
+overflow: hidden; 
+}
+#progress-fill { 
+height: 100%; 
+width: 0%; 
+background-color: #28a745; 
+border-radius: 5px; 
+transition: width 0.4s ease-in-out; 
+}
+#progress-text { 
+text-align: center; 
+margin-top: 5px; 
+font-size: 0.9em; 
+color: #a0a8b4; 
+}
+
+/* --- FLASHCARDS --- */
+.flashcard-nav-header { 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+margin-bottom: 20px; 
+flex-wrap: wrap; 
+}
+.flashcard-nav-buttons { 
+display: flex; 
+justify-content: space-between; 
+width: 100%; 
+gap: 15px; 
+margin-top: 10px; 
+}
+.flashcard-nav-buttons button { 
+flex-grow: 1; 
+background-color: #007bff; 
+color: white; 
+border: none; 
+padding: 12px 20px; 
+font-size: 1em; 
+border-radius: 8px; 
+transition: all 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+.flashcard-nav-buttons button:hover { 
+background-color: #0056b3; 
+transform: translateY(-2px); 
+}
+.flashcard-nav-buttons button:disabled { 
+background-color: #4a5460; 
+cursor: not-allowed; 
+transform: none; 
+box-shadow: none; 
+}
+.flashcard-wrapper { 
+perspective: 1000px; 
+width: 100%; 
+max-width: 500px; 
+height: 300px; 
+margin: 30px auto; 
+overflow: hidden; 
+}
+.flashcard { 
+width: 100%; 
+height: 100%; 
+position: relative; 
+transform-style: preserve-3d; 
+transition: transform 0.6s ease-in-out; 
+border-radius: 12px; 
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+cursor: pointer; 
+}
+.flashcard.back-active { transform: rotateY(180deg); }
+.card-face { 
+position: absolute; 
+width: 100%; 
+height: 100%; 
+backface-visibility: hidden; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+padding: 20px; 
+box-sizing: border-box; 
+border-radius: 12px; 
+font-size: 1.3em; 
+text-align: center; 
+overflow-y: auto; 
+word-break: break-word; 
+overflow-wrap: break-word; 
+transition: opacity 0.4s ease-in-out; 
+}
+.card-front { background-color: #2b3a55; color: #e0e6ed; }
+.card-back { 
+background-color: #4a5460; 
+color: #e0e6ed; 
+transform: rotateY(180deg); 
+opacity: 0; 
+}
+.flashcard.back-active .card-front { opacity: 0; }
+.flashcard.back-active .card-back { opacity: 1; }
+.flip-button { background-color: #ffc107; color: #333; margin-top: 15px; }
+.flip-button:hover { background-color: #e0a800; }
+.back-to-topics-button { 
+background-color: #6c757d; 
+margin-top: 15px; 
+margin-left: 10px; 
+color: white; 
+border: none; 
+padding: 12px 20px; 
+font-size: 1em; 
+border-radius: 8px; 
+transition: all 0.3s ease; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+.back-to-topics-button:hover { 
+background-color: #5a6268; 
+transform: translateY(-2px); 
+}
+.flashcard-topic-list h2 { text-align: center; margin-bottom: 25px; }
+.flashcard-topic-buttons { 
+display: grid; 
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+gap: 15px; 
+margin-bottom: 30px; 
+}
+.flashcard-topic-buttons button { 
+background-color: #28a745; 
+color: white; 
+padding: 15px 20px; 
+font-size: 1.1em; 
+border-radius: 8px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+border: none; 
+transition: all 0.3s ease; 
+margin-top: 0; 
+}
+.flashcard-topic-buttons button:hover { 
+background-color: #218838; 
+transform: translateY(-3px); 
+}
+
+/* --- NOTIFICATIONS --- */
+.announcement, .price-list { 
+background-color: #0d1b2a; 
+border: 1px solid #007bff; 
+border-radius: 10px; 
+padding: 15px; 
+margin-bottom: 25px; 
+font-size: 0.95em; 
+line-height: 1.5; 
+text-align: left; 
+}
+.announcement strong, .price-list strong { color: #72efdd; }
+.announcement a, .price-list a { color: #007bff; text-decoration: none; }
+.announcement a:hover, .price-list a:hover { text-decoration: underline; }
+.landing-whatsapp-button { 
+position: fixed; 
+bottom: 20px; 
+right: 20px; 
+background-color: #25D366; 
+color: white; 
+width: 60px; 
+height: 60px; 
+border-radius: 50%; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+font-size: 2rem; 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+text-decoration: none; 
+transition: transform 0.3s ease; 
+z-index: 2000; 
+border: 2px solid white; 
+}
+.landing-whatsapp-button:hover { 
+background-color: #128C7E; 
+transform: scale(1.1); 
+}
+.whatsapp-buttons { 
+display: flex; 
+justify-content: center; 
+gap: 15px; 
+margin-top: 30px; 
+margin-bottom: 20px; 
+}
+
+#app-notification { 
+position: fixed; 
+top: 10px; 
+left: 50%; 
+transform: translateX(-50%); 
+background-color: #333; 
+color: white; 
+padding: 12px 25px; 
+border-radius: 8px; 
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+z-index: 99999; 
+opacity: 0; 
+visibility: hidden; 
+transition: opacity 0.5s ease, visibility 0.5s ease; 
+display: flex; 
+align-items: center; 
+gap: 10px; 
+max-width: 90%; 
+text-align: center; 
+}
+#app-notification.show { opacity: 1; visibility: visible; }
+#app-notification .close-btn { 
+background: none; 
+border: none; 
+color: white; 
+font-size: 1.2em; 
+cursor: pointer; 
+padding: 0 5px; 
+}
+#app-notification.info { background-color: #17a2b8; }
+#app-notification.success { background-color: #28a745; }
+#app-notification.warning { background-color: #ffc107; color: #333; }
+#app-notification.error { background-color: #dc3545; }
+
+/* === COMPACT PAYMENT MODAL === */
+.modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.85); 
+    z-index: 9999; 
+    overflow-y: auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    align-items: center; 
+    justify-content: center; 
+}
+.modal.show { 
+    display: flex; 
+    align-items: flex-start; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.modal-content { 
+    background: white; 
+    color: #333; 
+    width: 95%; 
+    max-width: 400px; 
+    max-height: 90vh; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    padding: 0; 
+    overflow: hidden; 
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+}
+.pay-header { 
+    background: linear-gradient(135deg, #007bff, #6610f2); 
+    color: white; 
+    padding: 15px; 
+    text-align: center; 
+}
+.pay-header h2 { color: white; margin: 0; font-size: 1.4rem; }
+.pay-header p { margin: 5px 0 0; font-size: 0.9em; opacity: 0.9; }
+.pay-body { 
+    padding: 20px; 
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: calc(90vh - 150px);
+} 
+.pay-price { 
+    font-size: 1.8rem; 
+    color: #28a745; 
+    font-weight: bold; 
+    text-align: center; 
+    display: block; 
+    margin: 10px 0; 
+}
+.payment-info-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.85em;
+    color: #495057;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.pay-input { 
+    width: 100%; 
+    padding: 12px; 
+    font-size: 1em; 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
+}
+.pay-input:focus { border-color: #007bff; outline: none; }
+.pay-btn { 
+    width: 100%; 
+    background-color: #28a745; 
+    color: white; 
+    font-size: 1.1em; 
+    padding: 12px; 
+    margin-top: 5px; 
+    border-radius: 8px; 
+    border: none; 
+    box-shadow: none; 
+}
+.pay-btn:hover { background-color: #218838; transform: none; }
+.cancel-pay-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #6c757d;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9em;
+    box-shadow: none;
+}
+.cancel-pay-btn:hover { color: #343a40; background: none; transform: none; box-shadow: none; }
+.close-modal { 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    box-shadow: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Additional styles for Buy Now button */
+#buy-now-link button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+}
+
+@media (max-width: 768px) {
+    #buy-now-link button {
+        padding: 10px !important;
+        font-size: 0.95em !important;
+    }
+    .modal.show {
+        padding: 10px;
+        align-items: flex-start;
+    }
+    .modal-content {
+        width: 100%;
+        max-height: 95vh;
+    }
+    .pay-body {
+        max-height: calc(95vh - 150px);
+    }
+}
+
+/* === PRINT MODAL === */
+.print-modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.85); 
+    z-index: 9999; 
+    overflow-y: auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+.print-modal.show { 
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.print-modal-content { 
+    background: white; 
+    color: #333; 
+    width: 90%; 
+    max-width: 800px; 
+    max-height: 90vh; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
+}
+.print-modal-header { 
+    background: #007bff; 
+    color: white; 
+    padding: 15px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid #ddd; 
+}
+.print-modal-header h2 { margin: 0; color: white; text-align: left; }
+.close-print-preview { 
+    background: none; 
+    border: none; 
+    color: white; 
+    font-size: 28px; 
+    cursor: pointer; 
+    padding: 0; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    box-shadow: none; 
+    margin-top: 0; 
+}
+.close-print-preview:hover { 
+    background: rgba(255, 255, 255, 0.2); 
+    transform: none; 
+}
+.print-preview-body { 
+    padding: 25px; 
+    overflow-y: auto; 
+    flex-grow: 1; 
+    background: #f9f9f9; 
+    position: relative; 
+    min-height: 400px; 
+    max-height: calc(90vh - 130px);
+}
+.print-preview-body::before { 
+    content: "Kaeri EdTech\A 0964312504"; 
+    white-space: pre; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) rotate(-45deg); 
+    font-size: 5rem; 
+    text-align: center; 
+    line-height: 1.2; 
+    color: rgba(0, 0, 0, 0.05); 
+    z-index: 0; 
+    font-weight: bold; 
+    pointer-events: none; 
+    opacity: 0.7; 
+}
+.print-preview-body > * { position: relative; z-index: 1; }
+.print-modal-footer { 
+    background: #f5f5f5; 
+    padding: 15px 20px; 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 15px; 
+    border-top: 1px solid #ddd; 
+}
+.cancel-btn { 
+    background: #6c757d; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 1em; 
+    margin-top: 0; 
+}
+.print-btn { 
+    background: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 1em; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 0; 
+}
+.cancel-btn:hover { background: #5a6268; transform: translateY(0); }
+.print-btn:hover { background: #218838; transform: translateY(0); }
+
+/* === PREVIEW CONTENT === */
+.preview-header { 
+    text-align: center; 
+    border-bottom: 2px solid #007bff; 
+    margin-bottom: 25px; 
+    padding-bottom: 15px; 
+}
+.preview-header h1 { color: #333; margin-bottom: 10px; }
+.preview-step { 
+    margin-bottom: 25px; 
+    border-left: 4px solid #007bff; 
+    padding-left: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background: white; 
+    border-radius: 6px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.preview-q { font-weight: bold; margin-bottom: 8px; color: #333; }
+.preview-ans { 
+    color: #28a745; 
+    font-weight: bold; 
+    margin: 8px 0; 
+    padding-left: 10px; 
+    border-left: 2px solid #28a745; 
+}
+.preview-exp { 
+    font-style: italic; 
+    color: #555; 
+    margin-top: 8px; 
+    padding: 8px; 
+    background: #f5f5f5; 
+    border-radius: 4px; 
+}
+
+/* === PRINT OUTPUT === */
+@media print {
+    body * { visibility: hidden !important; }
+    .print-modal, .print-btn, .cancel-btn, .modal { display: none !important; }
+    #printable-summary, #printable-summary * { visibility: visible !important; }
+    #printable-summary { 
+        display: block !important; 
+        position: absolute !important; 
+        top: 0 !important; 
+        left: 0 !important; 
+        width: 100% !important; 
+        background: white !important; 
+        color: black !important; 
+        padding: 20px !important; 
+        font-family: 'Times New Roman', serif !important; 
+        line-height: 1.6 !important; 
+        font-size: 12pt !important; 
+    }
+    body { 
+        background: white !important; 
+        margin: 0 !important; 
+        padding: 0 !important; 
+        overflow: visible !important; 
+    }
+    #printable-summary::before { 
+        content: "Kaeri EdTech\A 0964312504"; 
+        white-space: pre; 
+        position: fixed !important; 
+        top: 50% !important; 
+        left: 50% !important; 
+        transform: translate(-50%, -50%) rotate(-45deg) !important; 
+        font-size: 6rem !important; 
+        text-align: center !important; 
+        line-height: 1.2 !important; 
+        color: rgba(0, 0, 0, 0.05) !important; 
+        z-index: -1 !important; 
+        font-weight: bold !important; 
+        pointer-events: none !important; 
+        opacity: 1 !important; 
+        width: 100vw !important; 
+        height: 100vh !important; 
+    }
+    .pdf-header { 
+        text-align: center; 
+        border-bottom: 2px solid #000; 
+        margin-bottom: 25px; 
+        padding-bottom: 15px; 
+        page-break-after: avoid; 
+    }
+    .pdf-step { 
+        margin-bottom: 30px; 
+        border-left: 4px solid #007bff; 
+        padding-left: 20px; 
+        page-break-inside: avoid; 
+    }
+    .pdf-q { font-weight: bold; margin-bottom: 8px; color: #333; }
+    .pdf-ans { color: #28a745; font-weight: bold; margin: 8px 0; }
+    .pdf-exp { font-style: italic; color: #555; margin-top: 8px; }
+    .pdf-step:nth-child(10n) { page-break-before: always; }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 992px) { 
+    .quiz-container { margin: 40px 20px; padding: 30px 20px; } 
+}
+@media (max-width: 768px) {
+    body { padding-top: 110px; } 
+    body.view-course { padding-top: 110px; } 
+    #fixed-header { padding: 10px 15px; }
+    .quiz-container { margin: 30px 15px; padding: 25px 15px; } 
+    h1 { font-size: 2.2rem; }
+    .mode-buttons { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+    .mode-buttons button { padding: 12px 15px; font-size: 1em; }
+    .options label { padding: 10px; }
+    .question-header h3 { font-size: 1.2em; } 
+    .question-header span { font-size: 0.75em; padding: 4px 8px; }
+    .whatsapp-buttons { flex-direction: column; align-items: center; gap: 10px; margin-top: 20px; margin-bottom: 15px; }
+    .whatsapp-buttons button { width: auto; padding: 10px 18px; font-size: 0.9em; }
+    .flashcard-wrapper { height: 250px; } 
+    .card-face { font-size: 1.1em; padding: 15px; }
+    .header-grid { grid-template-columns: 1fr; gap: 5px; text-align: center; } 
+    #unlock-btn { width: 100%; margin-top: 5px; }
+    .modal, .print-modal {
+        padding: 10px;
+    }
+    .modal-content, .print-modal-content {
+        width: 100%;
+        max-height: 95vh;
+    }
+    .pay-body {
+        max-height: calc(95vh - 150px);
+    }
+    .print-preview-body {
+        max-height: calc(95vh - 130px);
+        padding: 15px;
+    }
+    .print-preview-body::before {
+        font-size: 3rem;
+    }
+    /* Student Board Responsive */
+    .student-board-wrapper { grid-template-columns: 1fr; gap: 15px; }
+}
+@media (max-width: 480px) {
+    body { padding-top: 100px; } 
+    body.view-course { padding-top: 100px; } 
+    #fixed-header { padding: 8px 10px; }
+    .quiz-container { padding: 15px 10px; }
+    .mode-buttons { grid-template-columns: 1fr; }
+    .flashcard-topic-buttons, .flashcard-nav-buttons { grid-template-columns: 1fr; gap: 10px; }
+    .flashcard { margin: 15px auto; }
+    .mode-buttons button, .flashcard-topic-buttons button, .flashcard-nav-buttons button { 
+        font-size: 1em; 
+        padding: 14px 18px; 
+    }
+    .card-face { font-size: 1em; line-height: 1.4; }
+}
+  </style>
+
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <h1>Essay Simulation Builder</h1>
-            <p>Create and manage guided essay simulations for the CBU Tutor Platform</p>
-            <div class="user-info" id="userInfo">
-                <div class="loading"></div> Checking authentication...
-            </div>
-        </div>
+
+  <!-- ==================== NOTIFICATIONS ==================== -->
+
+  <div id="app-notification" role="alert">
+    <span class="notification-message"></span>
+    <button class="close-btn" aria-label="Close notification">×</button>
+  </div>
+
+  <!-- ==================== LANDING PAGE HEADER (FIXED) ==================== -->
+
+  <div id="landing-header">
+    <div style="text-align: center;">
+      <span class="brand-title" style="color: #64ffda; font-weight: 900; font-size: 2.2rem; letter-spacing: 1.5px; text-transform: uppercase; text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);">
+        Kaeri EdTech
+      </span>
+      <div style="width: 60px; height: 3px; background: #007bff; margin: 8px auto 8px auto; border-radius: 2px;"></div>
+      <p style="margin: 0; color: #e0e6ed; font-style: italic; font-size: 1rem; opacity: 0.8;">Study Smarter. Grow Confident. One Step at a Time.</p>
     </div>
+  </div>
 
-    <div class="container">
-        <!-- Alert Container -->
-        <div id="alertContainer"></div>
+  <!-- ==================== COURSE PAGE HEADER (HIDDEN INITIALLY) ==================== -->
 
-        <!-- Authentication Required View -->
-        <div id="authRequiredView" class="hidden">
-            <div class="card">
-                <div class="auth-required">
-                    <h2>Authentication Required</h2>
-                    <p>You must be logged in with a valid tutor account to access this system.</p>
-                    <div class="alert alert-warning">
-                        <strong>Please ensure:</strong>
-                        <ul style="text-align: left; margin-top: 0.5rem;">
-                            <li>You are logged into your Google account</li>
-                            <li>Your email is registered in the Tutors sheet</li>
-                            <li>Your account is marked as active (IsActive = TRUE)</li>
-                        </ul>
-                    </div>
-                    <button class="btn btn-primary" onclick="checkAuthentication()">
-                        <div class="loading"></div> Retry Authentication
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dashboard View -->
-        <div id="dashboardView" class="hidden">
-            <div class="card">
-                <div class="card-header">
-                    <div class="flex justify-between items-center">
-                        <h2>Essay Simulations</h2>
-                        <button class="btn btn-primary" onclick="showCreateForm()">
-                            <span>+ Create New Simulation</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <input type="text" id="searchInput" class="form-control" placeholder="Search simulations by title, course, or topic..." onkeyup="filterSimulations()">
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table" id="simulationsTable">
-                            <thead>
-                                <tr>
-                                    <th>Simulation ID</th>
-                                    <th>Course/Term</th>
-                                    <th>Topic</th>
-                                    <th>Title</th>
-                                    <th>Steps</th>
-                                    <th>Duration</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody id="simulationsTableBody">
-                                <!-- Dynamic content will be loaded here -->
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="loadingIndicator" class="text-center mt-4">
-                        <div class="loading"></div>
-                        <p class="text-muted">Loading simulations...</p>
-                    </div>
-                    <div id="noSimulations" class="hidden text-center mt-4">
-                        <p class="text-muted">No essay simulations found. Create your first one to get started!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Creation/Edit Form -->
-        <div id="formView" class="hidden">
-            <div class="card">
-                <div class="card-header">
-                    <div class="flex justify-between items-center">
-                        <h2 id="formTitle">Create New Essay Simulation</h2>
-                        <button class="btn btn-outline" onclick="showDashboard()">
-                            <span>← Back to Dashboard</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <!-- Stage 1: Header Form -->
-                    <div id="headerForm">
-                        <div class="alert alert-info">
-                            <strong>Stage 1:</strong> First, define the basic information about your essay simulation.
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="courseSelect">Course *</label>
-                            <select class="form-control form-select" id="courseSelect" required>
-                                <option value="">Select a course</option>
-                                <option value="BI110">BI110 - Biology</option>
-                                <option value="CS110">CS110 - Computer Science</option>
-                                <option value="MA110">MA110 - Mathematics</option>
-                                <option value="CH110">CH110 - Chemistry</option>
-                                <option value="PH110">PH110 - Physics</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="termSelect">Term *</label>
-                            <select class="form-control form-select" id="termSelect" required>
-                                <option value="">Select a term</option>
-                                <option value="T1">Term 1</option>
-                                <option value="T2">Term 2</option>
-                                <option value="ALL">All Terms</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="topicInput">Topic *</label>
-                            <input type="text" class="form-control" id="topicInput" placeholder="e.g., Cell Biology, Programming Basics" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="titleInput">Essay Title/Prompt *</label>
-                            <textarea class="form-control" id="titleInput" rows="3" placeholder="Enter the main essay question or prompt that students will answer..." required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="durationInput">Estimated Duration (minutes) *</label>
-                            <input type="number" class="form-control" id="durationInput" min="5" max="180" value="25" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="tutorIdInput">Tutor ID *</label>
-                            <input type="text" class="form-control" id="tutorIdInput" readonly style="background-color: #f8f9fa;">
-                            <small class="text-muted">Automatically set from your authenticated account</small>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="tagsInput">Tags</label>
-                            <input type="text" class="form-control" id="tagsInput" placeholder="Optional tags for categorization (comma-separated)">
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <button class="btn btn-primary" id="saveHeaderBtn" onclick="saveSimulationHeader()">
-                                <span>Save Header & Continue to Steps →</span>
-                            </button>
-                            <button class="btn btn-outline" onclick="showDashboard()">
-                                <span>Cancel</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Stage 2: Steps Form -->
-                    <div id="stepsForm" class="hidden">
-                        <div class="alert alert-success">
-                            <strong>Stage 2:</strong> Now build the guided steps for your essay simulation. 
-                            <span id="editingSimulationId" class="simulation-id"></span>
-                        </div>
-                        
-                        <div class="steps-container" id="stepsContainer">
-                            <!-- Dynamic step cards will be added here -->
-                        </div>
-                        
-                        <div class="flex gap-4 mt-4">
-                            <button class="btn btn-outline" onclick="addStep()">
-                                <span>+ Add New Step</span>
-                            </button>
-                            <button class="btn btn-success" id="saveStepsBtn" onclick="saveAllSteps()">
-                                <span>Save All Steps</span>
-                            </button>
-                            <button class="btn btn-outline" onclick="showDashboard()">
-                                <span>Cancel</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div id="fixed-header">
+    <div style="position: absolute; top: 5px; left: 20px; font-size: 0.7rem; color: #64ffda; opacity: 0.7; font-weight: bold; letter-spacing: 1px;">
+        Kaeri EdTech
     </div>
+    <div class="header-grid">
+      <div>
+        <div id="mode-banner"></div>
+        <div id="progress-container">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="progress-text">Progress: 0 of 0</div>
+      </div>
+      <!-- GOLD UNLOCK BUTTON -->
+      <button id="unlock-btn" onclick="openPaymentModal()">🔓 Unlock Full Access</button>
+    </div>
+  </div>
 
-    <script>
-        // Configuration - UPDATE THIS WITH YOUR DEPLOYED APPS SCRIPT URL
-        const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbwlGsGNKGZxDH7l_W7wKJnFPKFsWiE_HA0RaIg3_JGM1D2ub18jLpsOXfG0K-5ifgHt/exec';
+  <div id="price-banner">Price: K15</div>
+
+  <!-- ==================== MAIN CONTAINER ==================== -->
+
+  <div class="quiz-container">
+
+
+<!-- :::: VIEW 1: LANDING PAGE :::: -->
+<div id="landing-view">
+  
+  <!-- Spacing for Fixed Header handled by body padding -->
+  <h1 style="margin-top: 20px;">Select a Course & Term</h1>
+
+  <!-- === START STUDENT BOARD === -->
+  <div id="student-board" class="student-board-wrapper" style="display: none;">
+    <!-- Announcements Section -->
+    <div id="board-announcements" class="board-section"></div>
+    <!-- Motivation Section -->
+    <div id="board-motivation" class="board-section"></div>
+  </div>
+  <!-- === END STUDENT BOARD === -->
+
+  <!-- COMMUNITY HUB (Channel + Group) -->
+  <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 35px; flex-wrap: wrap;">
+    <!-- CHANNEL (News) -->
+    <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
+      <button style="background: transparent; border: 1px solid #25D366; color: #25D366; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
+        📢 <strong>Follow Channel</strong>
+      </button>
+    </a>
+    <!-- GROUP (Chat) -->
+    <a href="https://chat.whatsapp.com/FnYwrwYzxP1DScBwqL6dBV?mode=hqrc" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
+      <button style="background: #25D366; border: none; color: white; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
+        👥 <strong>Join Group</strong>
+      </button>
+    </a>
+  </div>
+
+<div class="course-section">
+<button class="course-button" onclick="toggleTerms('gm220')">GM220 - Introduction to Geology</button>
+<div id="gm220-terms" class="term-buttons">
+<button onclick="loadCourse('GM220', 'T1', 15)">Term 1</button>
+<button onclick="loadCourse('GM220', 'T2', 15)">Term 2</button>
+<button onclick="loadCourse('GM220', 'T3', 20)">Term 3</button>
+</div>
+</div>
+
+<div class="course-section">
+<button class="course-button" onclick="toggleTerms('mi213')">MI213 - Introduction to Mining</button>
+<div id="mi213-terms" class="term-buttons">
+<button onclick="loadCourse('MI213', 'T1', 15)">Term 1</button>
+<button onclick="loadCourse('MI213', 'T2', 15)">Term 2</button>
+<button onclick="loadCourse('MI213', 'T3', 20)">Term 3</button>
+</div>
+</div>
+
+<div class="course-section">
+<button class="course-button" onclick="toggleTerms('ma210')">MA210 - Engineering Mathematics II</button>
+<div id="ma210-terms" class="term-buttons">
+<button onclick="loadCourse('MA210', 'T1', 15)">Term 1</button>
+<button onclick="loadCourse('MA210', 'T2', 15)">Term 2</button>
+<button onclick="loadCourse('MA210', 'T3', 20)">Term 3</button>
+</div>
+</div>
+
+<div class="course-section">
+<button class="course-button" onclick="toggleTerms('mt221')">MT221 - Introduction to Metallurgy</button>
+<div id="mt221-terms" class="term-buttons">
+<button onclick="loadCourse('MT221', 'T1', 15)">Term 1</button>
+<button onclick="loadCourse('MT221', 'T2', 15)">Term 2</button>
+<button onclick="loadCourse('MT221', 'T3', 20)">Term 3</button>
+</div>
+</div>
+
+<div class="course-section">
+<button class="course-button" onclick="toggleTerms('ch210')">CH210 - Chemistry II</button>
+<div id="ch210-terms" class="term-buttons">
+<button onclick="loadCourse('CH210', 'T1', 15)">Term 1</button>
+<button onclick="loadCourse('CH210', 'T2', 15)">Term 2</button>
+<button onclick="loadCourse('CH210', 'T3', 20)">Term 3</button>
+</div>
+</div>
+
+<div class="course-section">
+<button class="course-button" onclick="toggleTerms('ph210')">PH210 - Physics II</button>
+<div id="ph210-terms" class="term-buttons">
+<button onclick="loadCourse('PH210', 'T1', 15)">Term 1</button>
+<button onclick="loadCourse('PH210', 'T2', 15)">Term 2</button>
+<button onclick="loadCourse('PH210', 'T3', 20)">Term 3</button>
+</div>
+</div>
+</div>
+
+<!-- :::: VIEW 2: COURSE PAGE :::: -->
+<div id="course-view" style="display: none;">
+  <h1 id="course-title">Study Materials</h1>
+  
+  <p class="announcement">
+    <strong>Important:</strong> The full course is available. Your support keeps the app free & online.
+    <small style="opacity:0.7; font-size:0.8em; display:block; margin-top:5px;">
+      💡 Tip: Press 'U' to unlock full access
+    </small>
+  </p>
+  
+  <p class="price-list">
+    💰 <span id="price-desc">Course</span>: <strong><span id="price-val">K15</span></strong><br>
+    To MTN 0961005406 or Airtel 0974784161<br>
+    Or to Zanaco Account: 4584568100159 (Kaluluma Kaumbu)<br>
+    📞 WhatsApp proof to <a href="https://wa.me/260964312504" target="_blank">0964312504</a>
+  </p>
+
+  <div class="mode-buttons">
+    <button onclick="renderQuiz()">📋 Multiple Choice</button>
+    <button onclick="renderShortAnswers()">✍️ Short Answer</button>
+    <button onclick="renderEssaySimulation()">📝 Essay Simulation</button>
+    <button onclick="renderFlashcardTopics()">🃏 Flashcards</button>
+    <!-- TTS Button will be appended here by JS -->
+  </div>
+
+  <div id="quiz-form"></div>
+  <div id="result"></div>
+
+  <button onclick="backToMenu()" class="back-button">⬅️ Back to Course Selection</button>
+  
+  <!-- FOOTER LINKS -->
+  <div class="whatsapp-buttons" style="margin-top:30px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+    <p style="margin: 0; color: #8892b0; font-size: 0.9em;">Stay connected with us:</p>
+    <div style="display: flex; gap: 15px; width: 100%; justify-content: center; flex-wrap: wrap;">
+        <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration:none;">
+        <button style="background: transparent; border: 1px solid #25D366; color: #25D366; padding: 10px 20px; font-size: 0.95em;">
+            📢 Official Channel
+        </button>
+        </a>
+        <a href="https://chat.whatsapp.com/FnYwrwYzxP1DScBwqL6dBV?mode=hqrc" target="_blank" style="text-decoration:none;">
+        <button style="background: #25D366; color: white; padding: 10px 20px; font-size: 0.95em;">
+            👥 Discussion Group
+        </button>
+        </a>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+
+
+<a href="https://wa.me/260964312504" target="_blank" class="landing-whatsapp-button">💬</a>
+
+<!-- COMPACT PAYMENT MODAL -->
+
+<div id="payment-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closePaymentModal()">&times;</button>
+    <div class="pay-header">
+      <h2>🔓 Unlock Access</h2>
+      <p id="pay-term-name">Course</p>
+    </div>
+    <div class="pay-body">
+      <span class="pay-price" id="pay-amount">K15</span>
+
+
+<!-- PAYMENT OPTIONS SECTION -->
+  <div style="margin-bottom: 20px; border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden;">
+    <!-- OPTION 1: BUY NOW -->
+    <div style="background: #f8f9fa; padding: 15px; border-bottom: 1px solid #dee2e6;">
+      <h4 style="margin: 0 0 10px 0; color: #007bff;">Option 1: Buy New Access</h4>
+      <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
+        Purchase fresh access for <strong id="buy-price">K15</strong>
+      </p>
+      <a id="buy-now-link" href="https://script.google.com/macros/s/AKfycbz2g3G6nxVlUW3afcHFpvKY360Qd-XoAKkJ7Jz20pznebDrpBHGKjgkhgC4DMXijnN_/exec" 
+         target="_blank" 
+         style="text-decoration: none;">
+        <button style="width: 100%; background: linear-gradient(135deg, #007bff, #0056b3); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">
+          🛒 Buy Now (K15)
+        </button>
+      </a>
+    </div>
+    
+    <!-- OPTION 2: ACTIVATE EXISTING -->
+    <div style="padding: 15px;">
+      <h4 style="margin: 0 0 10px 0; color: #28a745;">Option 2: Activate Code</h4>
+      <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
+        Already paid? Enter your access code below
+      </p>
+      <input type="text" id="access-code-input" class="pay-input" placeholder="Enter Access Code">
+      <button class="pay-btn" onclick="verifyCodeFromModal()">✅ Activate Code</button>
+    </div>
+  </div>
+  
+  <!-- PAYMENT INFO BOX -->
+  <div class="payment-info-box">
+    <strong>Send Payment to:</strong><br>
+    • MTN: 0961005406<br>
+    • Airtel: 0974784161<br>
+    • Zanaco: 4584568100159 (Kaluluma Kaumbu)<br>
+    <em style="display:block; margin-top:5px; color:#007bff;">WhatsApp proof to: 0964312504</em>
+  </div>
+  
+  <button class="cancel-pay-btn" onclick="closePaymentModal()">Maybe Later (Use Demo)</button>
+</div>
+  </div>
+</div>
+
+  <!-- PRINT PREVIEW MODAL -->
+
+  <div id="print-preview-modal" class="print-modal">
+    <div class="print-modal-content">
+      <div class="print-modal-header">
+        <h2>📄 Print Preview</h2>
+        <button class="close-print-preview">&times;</button>
+      </div>
+      <div class="print-preview-body" id="print-preview-content"></div>
+      <div class="print-modal-footer">
+        <button onclick="closePrintPreview()" class="cancel-btn">Cancel</button>
+        <button onclick="proceedToPrint()" class="print-btn">🖨️ Print / Save PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden container for final print -->
+
+  <div id="printable-summary"></div>
+
+  <!-- ==================== EXTERNAL DATA SCRIPTS ==================== -->
+
+  <script src="assets/mcqDa.js"></script>
+
+  <script src="assets/shortDa.js"></script>
+
+  <script src="assets/essayDa.js"></script>
+
+  <script src="assets/flashcards.js"></script>
+
+  <!-- NEW SCRIPTS -->
+
+  <script src="assets/announcements.js"></script>
+
+  <script src="assets/motivation.js"></script>
+
+  <!-- ==================== MAIN LOGIC SCRIPTS ==================== -->
+
+  <script src="acc.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Logic to toggle the landing header when navigating
+    const originalLoadCourse = window.loadCourse;
+    window.loadCourse = function(course, term, price) {
+        document.getElementById('landing-header').style.display = 'none';
+        if (originalLoadCourse) originalLoadCourse(course, term, price);
+    }
+    
+    const originalBackToMenu = window.backToMenu;
+    window.backToMenu = function() {
+        document.getElementById('landing-header').style.display = 'block';
+        if (originalBackToMenu) originalBackToMenu();
+    }
+
+    // STUDENT BOARD RENDER LOGIC (Inline Injection)
+    function renderStudentBoard() {
+        const board = document.getElementById('student-board');
+        const annContainer = document.getElementById('board-announcements');
+        const motContainer = document.getElementById('board-motivation');
         
-        // Global state
-        let currentUser = null;
-        let currentEditingSimulationId = null;
-        let allSimulations = [];
-        let stepCounter = 0;
+        if (!board || !annContainer || !motContainer) return;
 
-        // DOM Elements
-        const elements = {
-            authRequiredView: document.getElementById('authRequiredView'),
-            dashboardView: document.getElementById('dashboardView'),
-            formView: document.getElementById('formView'),
-            headerForm: document.getElementById('headerForm'),
-            stepsForm: document.getElementById('stepsForm'),
-            simulationsTableBody: document.getElementById('simulationsTableBody'),
-            loadingIndicator: document.getElementById('loadingIndicator'),
-            noSimulations: document.getElementById('noSimulations'),
-            stepsContainer: document.getElementById('stepsContainer'),
-            formTitle: document.getElementById('formTitle'),
-            editingSimulationId: document.getElementById('editingSimulationId'),
-            saveHeaderBtn: document.getElementById('saveHeaderBtn'),
-            saveStepsBtn: document.getElementById('saveStepsBtn'),
-            userInfo: document.getElementById('userInfo')
-        };
-
-        // Initialize the application
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 Essay Simulation Builder initializing...');
-            checkAuthentication();
+        // 1. Data Validation & Filtering
+        const today = new Date();
+        let validAnnouncements = (typeof announcements !== 'undefined' ? announcements : []).filter(item => {
+            return item.active && (!item.expiry || new Date(item.expiry) >= today);
         });
+        let validMotivation = typeof motivation !== 'undefined' ? motivation : [];
 
-        // Authentication Management
-        async function checkAuthentication() {
-            console.log('🔐 Checking authentication...');
-            showLoading(true);
-            
-            try {
-                const response = await callBackend('testBackend', {}, 'GET');
-                console.log('📦 Authentication response:', response);
-                
-                if (response.success) {
-                    currentUser = {
-                        email: response.authenticatedUser,
-                        tutorId: response.authenticatedTutorID
-                    };
-                    
-                    // Update UI for authenticated user
-                    elements.userInfo.innerHTML = `Logged in as: <strong>${currentUser.email}</strong> (Tutor ID: <strong>${currentUser.tutorId}</strong>)`;
-                    document.getElementById('tutorIdInput').value = currentUser.tutorId;
-                    
-                    // Show dashboard
-                    elements.authRequiredView.classList.add('hidden');
-                    elements.dashboardView.classList.remove('hidden');
-                    
-                    console.log('✅ Authentication successful:', currentUser);
-                    loadSimulations();
-                    
-                } else {
-                    throw new Error(response.error);
-                }
-            } catch (error) {
-                console.error('❌ Authentication failed:', error);
-                elements.userInfo.innerHTML = `Authentication failed: ${error.message}`;
-                elements.authRequiredView.classList.remove('hidden');
-                elements.dashboardView.classList.add('hidden');
-                showAlert('error', `Authentication failed: ${error.message}`);
-            } finally {
-                showLoading(false);
-            }
+        // 2. State Determination
+        const hasNews = validAnnouncements.length > 0;
+        const hasQuote = validMotivation.length > 0;
+
+        // 3. Render: Empty State
+        if (!hasNews && !hasQuote) {
+            board.style.display = 'none';
+            return;
         }
 
-        // View Management
-        function showDashboard() {
-            console.log('📊 Switching to Dashboard view');
-            elements.dashboardView.classList.remove('hidden');
-            elements.formView.classList.add('hidden');
-            resetForm();
-            loadSimulations();
-        }
+        // 4. Reset & Prepare Layout
+        board.style.display = 'grid';
+        board.classList.remove('layout-full-width');
 
-        function showCreateForm() {
-            console.log('📝 Switching to Create form');
-            elements.dashboardView.classList.add('hidden');
-            elements.formView.classList.remove('hidden');
-            elements.headerForm.classList.remove('hidden');
-            elements.stepsForm.classList.add('hidden');
-            elements.formTitle.textContent = 'Create New Essay Simulation';
-            currentEditingSimulationId = null;
-            resetForm();
-        }
+        // 5. Render Announcement (Priority Item)
+        if (hasNews) {
+            const item = validAnnouncements[0];
+            annContainer.style.display = 'flex';
+            // Apply Flashcard Style Class + Semantic Type
+            annContainer.className = `board-section type-${item.type || 'info'}`;
+            
+            // Icon Helper
+            let icon = '📢';
+            if (item.type === 'warning') icon = '⚠️';
+            if (item.type === 'critical') icon = '🔴';
+            if (item.type === 'success') icon = '🎉';
 
-        function showStepsForm(simulationId) {
-            console.log('🔄 Transitioning to Steps form for:', simulationId);
-            
-            elements.headerForm.classList.add('hidden');
-            elements.stepsForm.classList.remove('hidden');
-            elements.editingSimulationId.textContent = simulationId;
-            currentEditingSimulationId = simulationId;
-            
-            if (elements.stepsContainer.children.length === 0) {
-                console.log('➕ Adding initial step');
-                addStep();
-            }
-            
-            console.log('✅ Steps form ready. Current simulation ID:', currentEditingSimulationId);
-        }
-
-        function showEditForm(simulationId) {
-            console.log('✏️ Loading edit form for:', simulationId);
-            elements.dashboardView.classList.add('hidden');
-            elements.formView.classList.remove('hidden');
-            elements.headerForm.classList.remove('hidden');
-            elements.stepsForm.classList.add('hidden');
-            elements.formTitle.textContent = 'Edit Essay Simulation';
-            loadSimulationForEditing(simulationId);
-        }
-
-        // Data Management
-        async function loadSimulations() {
-            console.log('📥 Loading simulations...');
-            showLoading(true);
-            
-            try {
-                const response = await callBackend('getAllEssaySimulations', {}, 'GET');
-                console.log('📦 Simulations response:', response);
-                
-                if (response.success) {
-                    allSimulations = response.data || [];
-                    console.log(`✅ Loaded ${allSimulations.length} simulations`);
-                    displaySimulations(allSimulations);
-                } else {
-                    console.error('❌ Failed to load simulations:', response.error);
-                    showAlert('error', `Failed to load simulations: ${response.error}`);
-                }
-            } catch (error) {
-                console.error('❌ Network error loading simulations:', error);
-                showAlert('error', `Network error: ${error.message}`);
-            } finally {
-                showLoading(false);
-            }
-        }
-
-        function displaySimulations(simulations) {
-            const tbody = elements.simulationsTableBody;
-            tbody.innerHTML = '';
-            
-            if (simulations.length === 0) {
-                elements.noSimulations.classList.remove('hidden');
-                console.log('ℹ️ No simulations found');
-                return;
-            }
-            
-            elements.noSimulations.classList.add('hidden');
-            console.log(`📊 Displaying ${simulations.length} simulations`);
-            
-            simulations.forEach(sim => {
-                const row = document.createElement('tr');
-                
-                row.innerHTML = `
-                    <td>
-                        <div class="simulation-id">${sim.SimulationID}</div>
-                        <small class="text-muted">v${sim.Version || '1.0'}</small>
-                    </td>
-                    <td>${sim.Course} / ${sim.Term}</td>
-                    <td>${sim.Topic}</td>
-                    <td>
-                        <strong>${sim.Title}</strong>
-                        ${sim.Tags ? `<br><small class="text-muted">${sim.Tags}</small>` : ''}
-                    </td>
-                    <td>
-                        <span class="badge badge-info">${sim.StepCount} steps</span>
-                    </td>
-                    <td>${sim.FormattedDuration || sim.EstimatedDuration + ' min'}</td>
-                    <td>
-                        <div class="flex gap-4">
-                            <button class="btn btn-outline btn-sm" onclick="showEditForm('${sim.SimulationID}')">
-                                Edit
-                            </button>
-                            <button class="btn btn-danger btn-sm" onclick="deleteSimulation('${sim.SimulationID}')">
-                                Delete
-                            </button>
-                        </div>
-                    </td>
-                `;
-                
-                tbody.appendChild(row);
-            });
-        }
-
-        async function loadSimulationForEditing(simulationId) {
-            console.log('📥 Loading simulation data for editing:', simulationId);
-            showLoading(true);
-            
-            try {
-                const response = await callBackend('getEssaySimulationById', { simulationId }, 'POST');
-                console.log('📦 Edit data response:', response);
-                
-                if (response.success) {
-                    const { header, steps } = response.data;
-                    currentEditingSimulationId = simulationId;
-                    
-                    // Populate header form
-                    document.getElementById('courseSelect').value = header.Course;
-                    document.getElementById('termSelect').value = header.Term;
-                    document.getElementById('topicInput').value = header.Topic;
-                    document.getElementById('titleInput').value = header.Title;
-                    document.getElementById('durationInput').value = header.EstimatedDuration;
-                    document.getElementById('tutorIdInput').value = header.TutorID;
-                    document.getElementById('tagsInput').value = header.Tags || '';
-                    
-                    // Clear and populate steps
-                    elements.stepsContainer.innerHTML = '';
-                    stepCounter = 0;
-                    
-                    if (steps && steps.length > 0) {
-                        console.log(`➕ Loading ${steps.length} steps`);
-                        steps.forEach(step => {
-                            addStep(step);
-                        });
-                    }
-                    
-                    console.log('🔄 Transitioning to steps form for editing');
-                    showStepsForm(simulationId);
-                } else {
-                    console.error('❌ Failed to load simulation:', response.error);
-                    showAlert('error', `Failed to load simulation: ${response.error}`);
-                }
-            } catch (error) {
-                console.error('❌ Network error loading simulation:', error);
-                showAlert('error', `Network error: ${error.message}`);
-            } finally {
-                showLoading(false);
-            }
-        }
-
-        // Form Operations
-        async function saveSimulationHeader() {
-            console.log('💾 Saving simulation header...');
-            const btn = elements.saveHeaderBtn;
-            const originalText = btn.innerHTML;
-            
-            if (!validateHeaderForm()) {
-                console.log('❌ Header form validation failed');
-                return;
-            }
-            
-            btn.disabled = true;
-            btn.innerHTML = '<div class="loading"></div> Processing...';
-            
-            try {
-                const formData = {
-                    Course: document.getElementById('courseSelect').value,
-                    Term: document.getElementById('termSelect').value,
-                    Topic: document.getElementById('topicInput').value,
-                    Title: document.getElementById('titleInput').value,
-                    EstimatedDuration: parseInt(document.getElementById('durationInput').value),
-                    TutorID: currentUser.tutorId, // Use authenticated tutor ID
-                    Tags: document.getElementById('tagsInput').value
-                };
-                
-                if (currentEditingSimulationId) {
-                    formData.SimulationID = currentEditingSimulationId;
-                }
-                
-                console.log('📤 Sending header data:', formData);
-                const response = await callBackend('createOrUpdateSimulationHeader', formData);
-                console.log('📦 Header save response:', response);
-                
-                if (response.success) {
-                    console.log('✅ Header saved successfully, transitioning to steps');
-                    showAlert('success', response.message);
-                    
-                    // Force UI update before transition
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                    showStepsForm(response.id);
-                    
-                } else {
-                    console.error('❌ Header save failed:', response.error);
-                    
-                    if (response.error.includes('Authentication')) {
-                        showAlert('error', 'Authentication failed. Please refresh the page.');
-                        checkAuthentication();
-                    } else if (response.error.includes('TutorID mismatch')) {
-                        showAlert('error', 'Tutor ID mismatch. Please use your assigned Tutor ID.');
-                    } else {
-                        showAlert('error', `Failed to save header: ${response.error}`);
-                    }
-                }
-            } catch (error) {
-                console.error('❌ Network error saving header:', error);
-                showAlert('error', `Network error: ${error.message}`);
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = originalText;
-            }
-        }
-
-        async function saveAllSteps() {
-            console.log('💾 Saving all steps...');
-            const btn = elements.saveStepsBtn;
-            const originalText = btn.innerHTML;
-            
-            const steps = collectStepsData();
-            if (steps.length === 0) {
-                console.log('❌ No steps to save');
-                showAlert('error', 'Please add at least one step');
-                return;
-            }
-            
-            if (!validateAllSteps()) {
-                console.log('❌ Steps validation failed');
-                showAlert('error', 'Please complete all steps before saving');
-                return;
-            }
-            
-            console.log(`📤 Preparing to save ${steps.length} steps`);
-            btn.disabled = true;
-            btn.innerHTML = '<div class="loading"></div> Saving Steps...';
-            
-            try {
-                const response = await callBackend('saveSimulationSteps', {
-                    simulationId: currentEditingSimulationId,
-                    steps: steps
-                });
-                
-                console.log('📦 Steps save response:', response);
-                
-                if (response.success) {
-                    console.log('✅ All steps saved successfully');
-                    showAlert('success', response.message);
-                    
-                    setTimeout(() => {
-                        showDashboard();
-                    }, 1500);
-                } else {
-                    console.error('❌ Steps save failed:', response.error);
-                    showAlert('error', `Failed to save steps: ${response.error}`);
-                }
-            } catch (error) {
-                console.error('❌ Network error saving steps:', error);
-                showAlert('error', `Network error: ${error.message}`);
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = originalText;
-            }
-        }
-
-        function addStep(stepData = null) {
-            stepCounter++;
-            const stepId = `step_${stepCounter}`;
-            
-            console.log(`➕ Adding step ${stepCounter}`, stepData ? '(with data)' : '(new)');
-            
-            const stepCard = document.createElement('div');
-            stepCard.className = 'step-card';
-            stepCard.id = stepId;
-            
-            stepCard.innerHTML = `
-                <div class="step-header">
-                    <div class="step-number">${stepCounter}</div>
-                    <div class="step-actions">
-                        <button class="btn btn-danger btn-sm" onclick="removeStep('${stepId}')">
-                            Remove
-                        </button>
-                    </div>
+            annContainer.innerHTML = `
+                <div class="board-announcement-title">
+                    <span>${icon}</span> ${item.title}
                 </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Step Question *</label>
-                    <textarea class="form-control step-question" placeholder="Enter the multiple choice question for this step..." required>${stepData ? stepData.Question : ''}</textarea>
-                </div>
-                
-                <div class="options-grid">
-                    <div class="option-item">
-                        <input type="radio" class="option-radio" name="correct_${stepCounter}" value="0" ${stepData && stepData.CorrectAnswerIndex === 0 ? 'checked' : ''}>
-                        <input type="text" class="form-control option-input option-1" placeholder="Option 1" value="${stepData ? stepData.Option1 : ''}" required>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" class="option-radio" name="correct_${stepCounter}" value="1" ${stepData && stepData.CorrectAnswerIndex === 1 ? 'checked' : ''}>
-                        <input type="text" class="form-control option-input option-2" placeholder="Option 2" value="${stepData ? stepData.Option2 : ''}" required>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" class="option-radio" name="correct_${stepCounter}" value="2" ${stepData && stepData.CorrectAnswerIndex === 2 ? 'checked' : ''}>
-                        <input type="text" class="form-control option-input option-3" placeholder="Option 3" value="${stepData ? stepData.Option3 : ''}" required>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" class="option-radio" name="correct_${stepCounter}" value="3" ${stepData && stepData.CorrectAnswerIndex === 3 ? 'checked' : ''}>
-                        <input type="text" class="form-control option-input option-4" placeholder="Option 4" value="${stepData ? stepData.Option4 : ''}" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Explanation *</label>
-                    <textarea class="form-control step-explanation" placeholder="Explain why the correct answer is right..." required>${stepData ? stepData.Explanation : ''}</textarea>
+                <div class="board-announcement-body">${item.body}</div>
+            `;
+        } else {
+            annContainer.style.display = 'none';
+        }
+
+        // 6. Render Motivation (Randomized)
+        if (hasQuote) {
+            const randomQuote = validMotivation[Math.floor(Math.random() * validMotivation.length)];
+            motContainer.style.display = 'flex';
+            motContainer.className = 'board-section board-motivation-box';
+            motContainer.innerHTML = `
+                <div class="quote-wrapper">
+                    <span class="quote-icon">💡</span>
+                    <span class="quote-content">"${randomQuote}"</span>
                 </div>
             `;
-            
-            elements.stepsContainer.appendChild(stepCard);
+        } else {
+            motContainer.style.display = 'none';
         }
 
-        function removeStep(stepId) {
-            console.log('🗑️ Removing step:', stepId);
-            const stepElement = document.getElementById(stepId);
-            if (stepElement) {
-                stepElement.remove();
-                renumberSteps();
-            }
+        // 7. Full Width Override
+        if ((hasNews && !hasQuote) || (!hasNews && hasQuote)) {
+            board.classList.add('layout-full-width');
         }
+    }
 
-        function renumberSteps() {
-            const stepCards = elements.stepsContainer.getElementsByClassName('step-card');
-            stepCounter = 0;
-            
-            console.log('🔢 Renumbering steps, count:', stepCards.length);
-            
-            Array.from(stepCards).forEach((card, index) => {
-                stepCounter++;
-                const stepNumber = card.querySelector('.step-number');
-                const radioButtons = card.querySelectorAll('.option-radio');
-                
-                if (stepNumber) {
-                    stepNumber.textContent = stepCounter;
-                }
-                
-                radioButtons.forEach(radio => {
-                    radio.name = `correct_${stepCounter}`;
-                });
-            });
-        }
+    // Initialize Board
+    document.addEventListener('DOMContentLoaded', () => { setTimeout(renderStudentBoard, 100); });
+  </script>
 
-        // Data Collection
-        function collectStepsData() {
-            const steps = [];
-            const stepCards = elements.stepsContainer.getElementsByClassName('step-card');
-            
-            console.log('📋 Collecting data from', stepCards.length, 'steps');
-            
-            Array.from(stepCards).forEach((card, index) => {
-                const question = card.querySelector('.step-question').value;
-                const option1 = card.querySelector('.option-1').value;
-                const option2 = card.querySelector('.option-2').value;
-                const option3 = card.querySelector('.option-3').value;
-                const option4 = card.querySelector('.option-4').value;
-                const explanation = card.querySelector('.step-explanation').value;
-                
-                const correctRadio = card.querySelector('.option-radio:checked');
-                const correctAnswerIndex = correctRadio ? parseInt(correctRadio.value) : -1;
-                
-                console.log(`📝 Step ${index + 1}:`, {
-                    question: question.substring(0, 50) + '...',
-                    correctAnswerIndex: correctAnswerIndex,
-                    hasExplanation: !!explanation
-                });
-                
-                if (question && option1 && option2 && option3 && option4 && explanation && correctAnswerIndex !== -1) {
-                    steps.push({
-                        Question: question,
-                        Option1: option1,
-                        Option2: option2,
-                        Option3: option3,
-                        Option4: option4,
-                        CorrectAnswerIndex: correctAnswerIndex,
-                        Explanation: explanation,
-                        TutorID: currentUser.tutorId // Use authenticated tutor ID
-                    });
-                }
-            });
-            
-            console.log('✅ Collected', steps.length, 'valid steps');
-            return steps;
-        }
-
-        // Validation
-        function validateHeaderForm() {
-            const requiredFields = [
-                'courseSelect', 'termSelect', 'topicInput', 'titleInput', 'durationInput'
-            ];
-            
-            for (let fieldId of requiredFields) {
-                const field = document.getElementById(fieldId);
-                if (!field.value.trim()) {
-                    console.log('❌ Validation failed: Missing field', fieldId);
-                    showAlert('error', `Please fill in all required fields`);
-                    field.focus();
-                    return false;
-                }
-            }
-            
-            console.log('✅ Header form validation passed');
-            return true;
-        }
-
-        function validateAllSteps() {
-            const stepCards = elements.stepsContainer.getElementsByClassName('step-card');
-            let allValid = true;
-            
-            console.log('🔍 Validating', stepCards.length, 'steps');
-            
-            for (let card of stepCards) {
-                const question = card.querySelector('.step-question').value.trim();
-                const option1 = card.querySelector('.option-1').value.trim();
-                const option2 = card.querySelector('.option-2').value.trim();
-                const option3 = card.querySelector('.option-3').value.trim();
-                const option4 = card.querySelector('.option-4').value.trim();
-                const explanation = card.querySelector('.step-explanation').value.trim();
-                const correctRadio = card.querySelector('.option-radio:checked');
-                
-                const stepValid = question && option1 && option2 && option3 && option4 && explanation && correctRadio;
-                
-                if (!stepValid) {
-                    console.log('❌ Step validation failed for one or more steps');
-                    allValid = false;
-                    break;
-                }
-            }
-            
-            console.log('✅ Steps validation:', allValid ? 'PASSED' : 'FAILED');
-            return allValid;
-        }
-
-        // Delete Operation
-        async function deleteSimulation(simulationId) {
-            console.log('🗑️ Requesting deletion for:', simulationId);
-            
-            if (!confirm('Are you sure you want to delete this essay simulation? This action cannot be undone.')) {
-                console.log('❌ Deletion cancelled by user');
-                return;
-            }
-            
-            try {
-                const response = await callBackend('deleteEssaySimulation', { simulationId });
-                console.log('📦 Delete response:', response);
-                
-                if (response.success) {
-                    console.log('✅ Simulation deleted successfully');
-                    showAlert('success', response.message);
-                    loadSimulations();
-                } else {
-                    console.error('❌ Delete failed:', response.error);
-                    showAlert('error', `Failed to delete simulation: ${response.error}`);
-                }
-            } catch (error) {
-                console.error('❌ Network error during deletion:', error);
-                showAlert('error', `Network error: ${error.message}`);
-            }
-        }
-
-        // Search and Filter
-        function filterSimulations() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            console.log('🔍 Filtering simulations with term:', searchTerm);
-            
-            if (!searchTerm) {
-                displaySimulations(allSimulations);
-                return;
-            }
-            
-            const filtered = allSimulations.filter(sim => 
-                sim.SimulationID.toLowerCase().includes(searchTerm) ||
-                sim.Course.toLowerCase().includes(searchTerm) ||
-                sim.Topic.toLowerCase().includes(searchTerm) ||
-                sim.Title.toLowerCase().includes(searchTerm) ||
-                (sim.Tags && sim.Tags.toLowerCase().includes(searchTerm))
-            );
-            
-            console.log('📊 Filter results:', filtered.length, 'simulations found');
-            displaySimulations(filtered);
-        }
-
-        // Utility Functions
-        function resetForm() {
-            console.log('🔄 Resetting form');
-            document.getElementById('headerForm').reset();
-            elements.stepsContainer.innerHTML = '';
-            stepCounter = 0;
-            currentEditingSimulationId = null;
-        }
-
-        function showLoading(show) {
-            console.log('⏳ Loading state:', show);
-            elements.loadingIndicator.classList.toggle('hidden', !show);
-            if (show) {
-                elements.simulationsTableBody.innerHTML = '';
-            }
-        }
-
-        function showAlert(type, message) {
-            console.log(`📢 ${type.toUpperCase()}: ${message}`);
-            const alertContainer = document.getElementById('alertContainer');
-            const alertClass = type === 'error' ? 'alert-error' : type === 'warning' ? 'alert-warning' : 'alert-success';
-            
-            const alertDiv = document.createElement('div');
-            alertDiv.className = `alert ${alertClass}`;
-            alertDiv.innerHTML = message;
-            
-            alertContainer.appendChild(alertDiv);
-            
-            setTimeout(() => {
-                if (alertDiv.parentNode) {
-                    alertDiv.remove();
-                }
-            }, 5000);
-        }
-
-        // Backend Communication
-        async function callBackend(action, data = {}, method = 'POST') {
-            const url = new URL(BACKEND_URL);
-            
-            console.log(`🌐 ${method} request to backend:`, { action, data });
-            
-            try {
-                let response;
-                
-                if (method === 'GET') {
-                    url.searchParams.append('action', action);
-                    if (data.simulationId) {
-                        url.searchParams.append('simulationId', data.simulationId);
-                    }
-                    
-                    response = await fetch(url, { 
-                        method: 'GET',
-                        credentials: 'include'
-                    });
-                } else {
-                    response = await fetch(BACKEND_URL, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ action, data }),
-                        credentials: 'include'
-                    });
-                }
-                
-                const result = await response.json();
-                console.log(`📦 Backend response for ${action}:`, result);
-                return result;
-                
-            } catch (error) {
-                console.error('❌ Backend call failed:', error);
-                throw error;
-            }
-        }
-
-        // Make functions globally available
-        window.showDashboard = showDashboard;
-        window.showCreateForm = showCreateForm;
-        window.showEditForm = showEditForm;
-        window.saveSimulationHeader = saveSimulationHeader;
-        window.saveAllSteps = saveAllSteps;
-        window.addStep = addStep;
-        window.removeStep = removeStep;
-        window.deleteSimulation = deleteSimulation;
-        window.filterSimulations = filterSimulations;
-        window.checkAuthentication = checkAuthentication;
-
-        console.log('🎉 Essay Simulation Builder frontend loaded!');
-    </script>
 </body>
 </html>
