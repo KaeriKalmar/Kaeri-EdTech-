@@ -1723,7 +1723,6 @@ const mcqData = [
   
 // --- GM220 Module 1: The Earth - Evolution, Composition and Structure ---
 
-7
   "q": "What is the Earth?",
   "options": ["A static planet formed 1 billion years ago", "A planet that evolved over 4.6 billion years through differentiation", "A homogenous body that never changed", "A layered planet formed instantly"],
   "correct": 1,
