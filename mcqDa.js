@@ -1717,6 +1717,1234 @@ const mcqData = [
     "topic": "Gangue Minerals",
     "year": "2024",
     "tag": "Application"
-  }
+  },
+
+
+  
+// --- GM220 Module 1: The Earth - Evolution, Composition and Structure ---
+
+7
+  "q": "What is the Earth?",
+  "options": ["A static planet formed 1 billion years ago", "A planet that evolved over 4.6 billion years through differentiation", "A homogenous body that never changed", "A layered planet formed instantly"],
+  "correct": 1,
+  "explanation": "Earth is a planet that evolved over 4.6 billion years from a homogenous body into a layered structure through the process of differentiation.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Evolution of the Earth",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "How old is the Earth?",
+  "options": ["2.3 billion years", "3.8 billion years", "4.6 billion years", "5.2 billion years"],
+  "correct": 2,
+  "explanation": "Earth is 4.6 billion years old.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Evolution of the Earth",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What was Earth's initial state after formation?",
+  "options": ["Layered and complex", "Homogenous and uniform", "Partially differentiated", "Completely molten"],
+  "correct": 1,
+  "explanation": "Earth began as a homogenous body - uniform in composition throughout.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Evolution of the Earth",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is differentiation in Earth's evolution?",
+  "options": ["The cooling of Earth's surface", "The process that segregated Earth into layers through melting", "The formation of continents", "The creation of the atmosphere"],
+  "correct": 1,
+  "explanation": "Differentiation is the process that caused segregation of Earth into various layers, initiated by large-scale melting of the aggregated Earth in its early stages of evolution.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Differentiation",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What caused differentiation in Earth?",
+  "options": ["Solar radiation only", "Giant impact and radioactive decay", "Volcanic activity", "Meteor bombardment"],
+  "correct": 1,
+  "explanation": "Differentiation was caused by a giant impact that melted 30-65% of Earth, and decaying of radioactive materials.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Differentiation",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of Earth melted during differentiation?",
+  "options": ["10-20%", "20-30%", "30-65%", "70-90%"],
+  "correct": 2,
+  "explanation": "30 to 65% of Earth is believed to have melted during the differentiation process.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Differentiation",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "When did the differentiation process occur?",
+  "options": ["Between 3.0 and 3.5 billion years ago", "Between 3.5 and 4.0 billion years ago", "Between 4.1 and 4.4 billion years ago", "Between 4.5 and 4.6 billion years ago"],
+  "correct": 2,
+  "explanation": "The differentiation process occurred between 4.1 and 4.4 billion years ago.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Differentiation",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What happened during Earth's melting phase?",
+  "options": ["All materials mixed uniformly", "Heavy materials sank and light materials rose", "The surface cooled rapidly", "The atmosphere formed"],
+  "correct": 1,
+  "explanation": "Heavy materials sank towards the centre and lighter materials rose towards the surface, forming the various layers.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Differentiation",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the two main sources of heat that caused differentiation?",
+  "options": ["Solar heat and friction", "Giant impact and radioactive decay", "Volcanic activity and compression", "Meteor impacts and solar radiation"],
+  "correct": 1,
+  "explanation": "The two sources of heat were: (1) Giant impact and (2) Decaying of radioactive material.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Differentiation",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the three stages of Earth evolution?",
+  "options": ["Formation, cooling, stabilization", "Homogenous Earth, segregation after melting, layered Earth", "Molten, semi-solid, solid", "Oceanic, continental, atmospheric"],
+  "correct": 1,
+  "explanation": "The three stages are: (a) Homogenous Earth (b) Segregation of heavy and light materials after melting (c) Layered Earth.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Earth Evolution Stages",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "How many main layers is Earth divided into?",
+  "options": ["Three layers", "Four layers", "Five layers", "Six layers"],
+  "correct": 2,
+  "explanation": "Earth is divided into five main layers composed of different materials, chemistry, and states.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Earth's Structure",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the two categories of Earth's structure?",
+  "options": ["Solid and liquid", "Hot and cold", "Internal and external", "Dense and light"],
+  "correct": 2,
+  "explanation": "Earth's structure is divided into Internal structure and External structure.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Earth's Structure",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "Which layer is gaseous and contains different gases?",
+  "options": ["Hydrosphere", "Atmosphere", "Crust", "Exosphere"],
+  "correct": 1,
+  "explanation": "The Atmosphere is the gaseous layer containing different gases.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Earth's Structure",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the three components of Earth's internal structure?",
+  "options": ["Atmosphere, hydrosphere, lithosphere", "Core, mantle, crust", "Inner core, outer core, mantle", "Upper, middle, lower layers"],
+  "correct": 1,
+  "explanation": "Earth's internal structure consists of: (1) Crust (Continental and Oceanic) (2) Mantle (Upper and Lower) (3) Core (Outer and Inner).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Internal Structure",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the inner core composed of?",
+  "options": ["Silicon and oxygen", "Iron and nickel", "Magnesium and iron", "Aluminum and silicon"],
+  "correct": 1,
+  "explanation": "The inner core is solid and composed mostly of iron (Fe) and nickel (Ni).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the diameter of the inner core?",
+  "options": ["1432 km", "2432 km", "3432 km", "4432 km"],
+  "correct": 1,
+  "explanation": "The inner core has a diameter of approximately 2432 km.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the density of the inner core?",
+  "options": ["10 g/cm³", "11 g/cm³", "12 g/cm³", "13 g/cm³"],
+  "correct": 3,
+  "explanation": "The inner core has a high specific gravity with a density of 13 g/cm³.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What state is the inner core in?",
+  "options": ["Liquid", "Gaseous", "Solid", "Plasma"],
+  "correct": 2,
+  "explanation": "The inner core is in a solid state, despite high temperatures, due to immense pressure at Earth's center.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the outer core composed of?",
+  "options": ["Iron, nickel, and oxygen", "Iron, nickel, and sulfur", "Iron, silicon, and magnesium", "Nickel, silicon, and oxygen"],
+  "correct": 1,
+  "explanation": "The outer core is liquid comprising iron (Fe), nickel (Ni), and probably sulfur (S).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the diameter of the outer core?",
+  "options": ["1255 km", "2255 km", "3255 km", "4255 km"],
+  "correct": 1,
+  "explanation": "The outer core has a diameter of approximately 2255 km.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the density range of the outer core?",
+  "options": ["5-8 g/cm³", "8-10 g/cm³", "10-12 g/cm³", "12-14 g/cm³"],
+  "correct": 2,
+  "explanation": "The outer core has a specific gravity (density) of 10-12 g/cm³.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What state is the outer core in?",
+  "options": ["Solid", "Liquid", "Gaseous", "Semi-solid"],
+  "correct": 1,
+  "explanation": "The outer core is in a liquid state.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "Why is the inner core solid despite high temperatures?",
+  "options": ["It's made of special materials", "Due to immense pressure", "It's cooled by the mantle", "Due to magnetic fields"],
+  "correct": 1,
+  "explanation": "The inner core is solid despite high temperatures due to the immense pressure at Earth's center.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What are the main elements in both the inner and outer core?",
+  "options": ["Silicon and oxygen", "Magnesium and iron", "Iron and nickel", "Aluminum and silicon"],
+  "correct": 2,
+  "explanation": "Both the inner and outer core are primarily composed of iron (Fe) and nickel (Ni).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Core",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of solid Earth does the mantle constitute by volume?",
+  "options": ["60%", "72%", "82%", "92%"],
+  "correct": 2,
+  "explanation": "The mantle constitutes approximately 82% of solid Earth by volume.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Mantle",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of solid Earth does the mantle constitute by mass?",
+  "options": ["57%", "67%", "77%", "87%"],
+  "correct": 1,
+  "explanation": "The mantle constitutes approximately 67% of solid Earth by mass.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Mantle",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the three layers of the mantle?",
+  "options": ["Inner, middle, outer", "Upper, transitional, lower", "Top, center, bottom", "Primary, secondary, tertiary"],
+  "correct": 1,
+  "explanation": "The mantle is composed of three layers: upper mantle, transitional layer, and lower mantle.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Mantle",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the mantle composed of?",
+  "options": ["Iron and nickel compounds", "Oxygen compounds with Mg, Fe, and Si", "Silicon and aluminum compounds", "Carbon and oxygen compounds"],
+  "correct": 1,
+  "explanation": "The mantle consists of rock of intermediate density mainly composed of compounds of oxygen (O) with magnesium (Mg), iron (Fe), and silicon (Si).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Mantle",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the thickness range of the crust?",
+  "options": ["0-20 km", "0-40 km", "0-60 km", "0-80 km"],
+  "correct": 1,
+  "explanation": "The crust ranges from 0 to 40 km thick.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Crust",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the two types of crust?",
+  "options": ["Upper and lower", "Inner and outer", "Continental and oceanic", "Primary and secondary"],
+  "correct": 2,
+  "explanation": "The two types are: (1) Continental crust (lower density felsic) and (2) Oceanic crust (higher density mafic).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Crust",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "Which type of crust has lower density?",
+  "options": ["Oceanic crust", "Continental crust", "Both have equal density", "Neither has low density"],
+  "correct": 1,
+  "explanation": "Continental crust has lower density and is composed of felsic (light-colored) rocks.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Crust",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the physical nature of the crust?",
+  "options": ["Very flexible and soft", "Very rigid with low melting temperatures", "Liquid and flowing", "Gaseous and unstable"],
+  "correct": 1,
+  "explanation": "The crust is a very rigid part of Earth composed of light materials with low melting temperatures.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Crust",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What elements compose the crust?",
+  "options": ["Only iron and nickel", "Si, Al, Fe, Ca, Mg, Na, K compounds", "Only oxygen and silicon", "Carbon and hydrogen compounds"],
+  "correct": 1,
+  "explanation": "The crust is composed of compounds of silicon (Si), aluminum (Al), iron (Fe), calcium (Ca), magnesium (Mg), sodium (Na), and potassium (K).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Crust",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of the crust is comprised of just 8 elements?",
+  "options": ["85.5%", "92.5%", "98.5%", "99.5%"],
+  "correct": 2,
+  "explanation": "98.5% of the crust is comprised of just 8 elements.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the most abundant element in the crust by weight?",
+  "options": ["Silicon", "Aluminum", "Oxygen", "Iron"],
+  "correct": 2,
+  "explanation": "Oxygen (O) is the most abundant element at 46.6% by weight.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of crustal volume does oxygen occupy?",
+  "options": ["46.6%", "60.5%", "78.1%", "93.8%"],
+  "correct": 3,
+  "explanation": "Oxygen occupies approximately 93.8% of the crustal volume.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "Why does oxygen occupy such a large percentage of crustal volume?",
+  "options": ["It's very reactive", "It's a large atom", "It's very light", "It's abundant"],
+  "correct": 1,
+  "explanation": "Oxygen is a large atom, so despite being 46.6% by weight, it occupies 93.8% of the volume.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What does the abundance of oxygen in the crust reflect?",
+  "options": ["The presence of water", "The importance of silicate minerals", "Atmospheric composition", "Volcanic activity"],
+  "correct": 1,
+  "explanation": "The abundance of oxygen reflects the importance of silicate (SiO₂)-based minerals in Earth's crust.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What is the second most abundant element in the crust by weight?",
+  "options": ["Aluminum", "Silicon", "Iron", "Calcium"],
+  "correct": 1,
+  "explanation": "Silicon (Si) is the second most abundant at 27.7% by weight.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of the crust is aluminum?",
+  "options": ["5.0%", "6.5%", "8.1%", "10.2%"],
+  "correct": 2,
+  "explanation": "Aluminum comprises 8.1% of the crust by weight.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of the crust is iron?",
+  "options": ["3.0%", "5.0%", "7.0%", "9.0%"],
+  "correct": 1,
+  "explanation": "Iron comprises 5.0% of the crust by weight.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of the crust do 'all other' elements comprise?",
+  "options": ["0.5%", "1.5%", "2.5%", "3.5%"],
+  "correct": 1,
+  "explanation": "All other elements comprise only 1.5% by weight.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Crustal Composition",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the five components of Earth's external structure?",
+  "options": ["Core, mantle, crust, ocean, air", "Atmosphere, hydrosphere, cryosphere, lithosphere, biosphere", "Land, water, air, ice, life", "Solid, liquid, gas, plasma, living"],
+  "correct": 1,
+  "explanation": "The five components are: (1) Atmosphere (2) Hydrosphere (3) Cryosphere (4) Lithosphere (5) Biosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "External Structure",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the atmosphere?",
+  "options": ["The liquid water on Earth", "The gaseous envelope surrounding Earth", "The solid ice on Earth", "The living organisms on Earth"],
+  "correct": 1,
+  "explanation": "The atmosphere is the gaseous envelope surrounding the Earth.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "External Structure",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the hydrosphere?",
+  "options": ["All gases", "All ice", "All liquid water", "All land"],
+  "correct": 2,
+  "explanation": "The hydrosphere is liquid water including oceans, lakes, underground water, etc.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "External Structure",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the cryosphere?",
+  "options": ["Liquid water", "Solid water (ice)", "Water vapor", "Underground water"],
+  "correct": 1,
+  "explanation": "The cryosphere is solid water including sea ice, glaciers, and ice sheets.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "External Structure",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the biosphere?",
+  "options": ["All rocks", "All water", "All living organisms", "All gases"],
+  "correct": 2,
+  "explanation": "The biosphere encompasses all the living organisms on Earth.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "External Structure",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "Which part of Earth's system is the most unstable and rapidly changing?",
+  "options": ["The hydrosphere", "The cryosphere", "The atmosphere", "The lithosphere"],
+  "correct": 2,
+  "explanation": "The atmosphere is the most unstable and rapidly changing part of the system.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of Earth's atmosphere is nitrogen?",
+  "options": ["20.9%", "46.6%", "78.1%", "93.8%"],
+  "correct": 2,
+  "explanation": "Nitrogen (N₂) comprises 78.1% by volume mixing ratio.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of Earth's atmosphere is oxygen?",
+  "options": ["0.97%", "8.1%", "20.9%", "46.6%"],
+  "correct": 2,
+  "explanation": "Oxygen (O₂) comprises 20.9% by volume mixing ratio.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of Earth's atmosphere is argon?",
+  "options": ["0.04%", "0.97%", "3.5%", "8.1%"],
+  "correct": 1,
+  "explanation": "Argon (Ar) comprises 0.97% by volume mixing ratio.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of Earth's atmosphere consists of greenhouse gases?",
+  "options": ["Less than 0.1%", "About 1%", "About 5%", "About 10%"],
+  "correct": 0,
+  "explanation": "Greenhouse gases comprise less than 0.1% of the atmosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "Do other planets have atmospheres like Earth's?",
+  "options": ["Yes, all planets have N₂ and O₂", "Some have atmospheres but none have N₂ and O₂ as dominant", "No planets have atmospheres", "Only Mars has a similar atmosphere"],
+  "correct": 1,
+  "explanation": "Some planets have atmospheres, but none have nitrogen and oxygen as dominant gases like Earth.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "When did Earth become oxygen-rich?",
+  "options": ["1.0 billion years ago", "2.5 billion years ago", "3.5 billion years ago", "4.6 billion years ago"],
+  "correct": 1,
+  "explanation": "Earth was oxygen-free until approximately 2.5 billion years ago (2.5 Ga).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the greenhouse effect?",
+  "options": ["Cooling of Earth's surface", "Infrared radiation trapped causing warming", "Formation of clouds", "Creation of ozone"],
+  "correct": 1,
+  "explanation": "The greenhouse effect occurs when incoming infrared radiation from the sun can enter the atmosphere but cannot escape after being reflected, resulting in global warming.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "Which gases produce the greenhouse effect?",
+  "options": ["Nitrogen and oxygen", "Argon and carbon dioxide", "Oxygen and hydrogen", "Nitrogen and argon"],
+  "correct": 1,
+  "explanation": "Argon and carbon dioxide (CO₂) produce the greenhouse effect.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the result of the greenhouse effect?",
+  "options": ["Global cooling", "Global warming", "Ozone depletion", "Atmospheric thinning"],
+  "correct": 1,
+  "explanation": "The greenhouse effect results in global warming.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is ozone and why is it important?",
+  "options": ["O₂ that produces oxygen", "O₃ that blocks UV radiation", "CO₂ that traps heat", "N₂ that provides nitrogen"],
+  "correct": 1,
+  "explanation": "Ozone (O₃) formed in the upper atmosphere serves as an important barrier to incoming ultraviolet (UV) radiation.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What is the current concern regarding the ozone layer?",
+  "options": ["It's expanding too much", "Thinned layer and growing hole over Antarctica", "It's producing too much oxygen", "It's blocking all solar radiation"],
+  "correct": 1,
+  "explanation": "Currently there is a thinned ozone layer and a large (and growing) ozone hole over Antarctica.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Atmosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "How is the atmosphere divided structurally?",
+  "options": ["By temperature only", "By pressure only", "Into distinct layers based on altitude", "By gas composition only"],
+  "correct": 2,
+  "explanation": "The atmosphere is divided into distinct layers based on altitude.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the correct order of atmospheric layers from bottom to top?",
+  "options": ["Stratosphere, Troposphere, Mesosphere, Thermosphere, Exosphere", "Troposphere, Mesosphere, Stratosphere, Thermosphere, Exosphere", "Troposphere, Stratosphere, Mesosphere, Thermosphere, Exosphere", "Mesosphere, Troposphere, Stratosphere, Thermosphere, Exosphere"],
+  "correct": 2,
+  "explanation": "The correct order is: Troposphere, Stratosphere, Mesosphere, Thermosphere, Exosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the troposphere?",
+  "options": ["The highest atmospheric layer", "The coldest atmospheric layer", "The lowest layer where all weather occurs", "The layer with the ozone"],
+  "correct": 2,
+  "explanation": "The troposphere is the lowest atmospheric layer extending from the surface to 8-18 km where all weather occurs and which contains 80% of atmospheric gases.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the altitude range of the troposphere?",
+  "options": ["0-5 km", "8-18 km", "18-30 km", "30-50 km"],
+  "correct": 1,
+  "explanation": "The troposphere extends from the surface to between 8 and 18 kilometers.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of atmospheric gases does the troposphere contain?",
+  "options": ["50%", "65%", "80%", "95%"],
+  "correct": 2,
+  "explanation": "The troposphere contains 80% of the gases that form Earth's atmosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the stratosphere?",
+  "options": ["The layer where weather occurs", "The layer with ozone that absorbs UV rays", "The coldest atmospheric layer", "The outermost layer"],
+  "correct": 1,
+  "explanation": "The stratosphere is the layer extending up to 50 km above the troposphere where ozone absorbs incoming ultraviolet rays from the sun.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the altitude range of the stratosphere?",
+  "options": ["0-18 km", "18-50 km", "50-80 km", "80-800 km"],
+  "correct": 1,
+  "explanation": "The stratosphere extends up to 50 km above the troposphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What makes the stratosphere stable?",
+  "options": ["High temperatures", "Separation from tropospheric storms", "High pressure", "Low altitude"],
+  "correct": 1,
+  "explanation": "The stratosphere is a much more stable layer almost completely separated from the turbulent storms and processes common in the troposphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What is the mesosphere?",
+  "options": ["The warmest layer", "The layer with ozone", "The coldest atmospheric layer", "The lowest layer"],
+  "correct": 2,
+  "explanation": "The mesosphere is the atmospheric layer located above the stratosphere (50-80/90 km) containing the coldest parts of our atmosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the altitude range of the mesosphere?",
+  "options": ["0-18 km", "18-50 km", "50-80/90 km", "80-800 km"],
+  "correct": 2,
+  "explanation": "The mesosphere is located 50 to 80/90 km above the surface.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the temperature range in the mesosphere?",
+  "options": ["-30°C", "-60°C", "-90°C", "-120°C"],
+  "correct": 2,
+  "explanation": "The mesosphere can reach as low as -90°C (the coldest parts of our atmosphere).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the thermosphere?",
+  "options": ["The coldest layer", "The layer that absorbs high energy radiation and heats to 1,500°C", "The lowest layer", "The layer with weather"],
+  "correct": 1,
+  "explanation": "The thermosphere is the layer with extremely low density (80/90-800 km altitude) that absorbs high energy radiation from the sun and can heat up to 1,500°C or higher.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the altitude range of the thermosphere?",
+  "options": ["0-50 km", "50-80 km", "80-800 km", "800-3000 km"],
+  "correct": 2,
+  "explanation": "The thermosphere extends from above 80/90 km to 800 km.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the temperature range in the thermosphere?",
+  "options": ["Up to 500°C", "Up to 1,000°C", "Up to 1,500°C or higher", "Up to 2,000°C"],
+  "correct": 2,
+  "explanation": "The thermosphere can heat up to 1,500°C or higher.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is the exosphere?",
+  "options": ["The lowest atmospheric layer", "The outermost layer where atmosphere merges with space", "The layer with ozone", "The weather layer"],
+  "correct": 1,
+  "explanation": "The exosphere is the outermost atmospheric layer (800-3000 km) where the atmosphere merges with space.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What is the altitude range of the exosphere?",
+  "options": ["50-800 km", "80-800 km", "800-3000 km", "3000-5000 km"],
+  "correct": 2,
+  "explanation": "The exosphere extends from 800 to 3000 km.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "In which atmospheric layers does temperature decrease with altitude?",
+  "options": ["Troposphere and Stratosphere", "Troposphere and Mesosphere", "Stratosphere and Thermosphere", "Mesosphere and Thermosphere"],
+  "correct": 1,
+  "explanation": "Temperature decreases with altitude in the Troposphere and Mesosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "In which atmospheric layers does temperature increase with altitude?",
+  "options": ["Troposphere and Mesosphere", "Stratosphere and Thermosphere", "Troposphere and Stratosphere", "Mesosphere and Exosphere"],
+  "correct": 1,
+  "explanation": "Temperature increases with altitude in the Stratosphere and Thermosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Structure of the Atmosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What does the hydrosphere comprise?",
+  "options": ["Only ocean water", "All ice on Earth", "All liquid water including rivers, lakes, and oceans", "Only freshwater"],
+  "correct": 2,
+  "explanation": "The hydrosphere comprises all liquid surface and subterranean water, including fresh water (rivers, lakes, aquifers) and saline water (oceans and seas).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What percentage of Earth's surface does the hydrosphere cover?",
+  "options": ["50%", "60%", "70%", "80%"],
+  "correct": 2,
+  "explanation": "The hydrosphere covers approximately 70% of Earth's surface.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What role does the hydrosphere play in Earth's climate?",
+  "options": ["Minor role", "Central role through motions and heat capacity", "No significant role", "Only affects coastal areas"],
+  "correct": 1,
+  "explanation": "The hydrosphere plays a central role in Earth's climate through its motions and heat capacity.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "On what timescales does the hydrosphere interact with the atmosphere?",
+  "options": ["Only hours", "Days to months", "Days to thousands of years", "Only thousands of years"],
+  "correct": 2,
+  "explanation": "The hydrosphere interacts with the atmosphere on timescales from days to thousands of years.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What is seawater composed of?",
+  "options": ["100% pure water", "90% water and 10% salts", "96.5% water and 3.5% dissolved materials", "80% water and 20% salts"],
+  "correct": 2,
+  "explanation": "Seawater is composed of 96.5% water and 3.5% dissolved salts, particles, gases, and organic matter.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the most important dissolved components in seawater?",
+  "options": ["Oxygen and nitrogen", "Chlorides and sodium", "Carbon and oxygen", "Sulfur and calcium"],
+  "correct": 1,
+  "explanation": "Chlorides and sodium are the most important, representing about 85% of the dissolved material.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What percentage of heat transport from equator to pole do oceans handle?",
+  "options": ["25%", "50%", "75%", "100%"],
+  "correct": 1,
+  "explanation": "Oceans transport approximately 50% of heat from equator to pole (atmosphere handles the other 50%).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "How are ocean and atmosphere related?",
+  "options": ["They don't interact", "They are closely coupled systems", "They only interact at the surface", "They work independently"],
+  "correct": 1,
+  "explanation": "Ocean and atmosphere are closely coupled systems.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Hydrosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What is the cryosphere?",
+  "options": ["All liquid water", "The portion where water is in solid form", "All gases", "All living organisms"],
+  "correct": 1,
+  "explanation": "The cryosphere is the portion of Earth's surface where water is in solid form, including ice sheets, glaciers, snow fields, sea ice, and permafrost.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Cryosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "What does the cryosphere include?",
+  "options": ["Only sea ice", "Only glaciers", "Ice sheets, glaciers, snow fields, sea ice, and permafrost", "Only snow"],
+  "correct": 2,
+  "explanation": "The cryosphere includes ice sheets of Greenland and Antarctica, continental glaciers and snow fields, sea ice, and permafrost.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Cryosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "Why are ice sheets important for sea level?",
+  "options": ["They have no effect", "They store water that affects sea level when volumes change", "They only affect local sea levels", "They lower sea levels permanently"],
+  "correct": 1,
+  "explanation": "Ice sheets store a large amount of water, hence variations in their volume are a potential source of sea level variations.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Cryosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What ice dynamics are important in the cryosphere?",
+  "options": ["Only melting rates", "Only freezing rates", "Glacier flow rates and other ice dynamics", "Only ice formation"],
+  "correct": 2,
+  "explanation": "Glacier flow rates and other ice dynamics are important in the cryosphere.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Cryosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "How does the cryosphere interact with other Earth systems?",
+  "options": ["Only with the atmosphere", "Close interaction with atmosphere and oceans", "Only with the lithosphere", "It doesn't interact"],
+  "correct": 1,
+  "explanation": "The cryosphere has close interaction with both the atmosphere and oceans.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Cryosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What is the lithosphere in the context of external structure?",
+  "options": ["The atmosphere", "The land surface", "The ocean floor", "The ice sheets"],
+  "correct": 1,
+  "explanation": "The lithosphere is the land surface whose distribution and topography influence many climate characteristics.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Lithosphere",
+  "year": "2024",
+  "tag": "Definition"
+},
+
+{
+  "q": "How do mountain chains affect climate?",
+  "options": ["They have no effect", "They act as barriers to winds influencing continental climate", "They only affect local weather", "They decrease rainfall everywhere"],
+  "correct": 1,
+  "explanation": "Mountain chains such as the Andes or Rocky Mountains are formidable barriers to westerly winds that influence climate on a continental scale.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Lithosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What role do mountains play at hemispheric scale?",
+  "options": ["They have no hemispheric role", "They affect planetary waves and global atmospheric circulation", "They only affect local temperature", "They only create rain shadows"],
+  "correct": 1,
+  "explanation": "Mountains affect planetary waves and the global atmospheric circulation at hemispheric scale.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Lithosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "How does distance to coast affect regional climate?",
+  "options": ["It has no effect", "It influences temperature and aridity", "It only affects humidity", "It only affects wind patterns"],
+  "correct": 1,
+  "explanation": "The distance to the coast influences the temperature and aridity of a region.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Lithosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What impact does the biosphere have on the atmosphere?",
+  "options": ["No impact", "Minor impact on oxygen only", "Major impact on atmospheric composition", "Only affects water vapor"],
+  "correct": 2,
+  "explanation": "The marine and terrestrial biospheres have a major impact on the atmosphere's composition.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Biosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What do most plants and animals require?",
+  "options": ["Only water", "Only sunlight", "Sufficient sunlight and water", "Only oxygen"],
+  "correct": 2,
+  "explanation": "Most plants and animals require sufficient sunlight and water.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Biosphere",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "How does the biota influence greenhouse gases?",
+  "options": ["No influence", "Only produces them", "Influences the uptake and release of greenhouse gases", "Only absorbs them"],
+  "correct": 2,
+  "explanation": "The biota influence the uptake and release of greenhouse gases.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Biosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What is the role of photosynthesis in the carbon cycle?",
+  "options": ["It releases all carbon", "Plants store carbon from CO₂", "It has no role", "It only produces oxygen"],
+  "correct": 1,
+  "explanation": "Through photosynthesis, both marine and terrestrial plants (especially forests) store significant amounts of carbon from carbon dioxide.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Biosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What role does the biosphere play in atmospheric gas budgets?",
+  "options": ["Only affects oxygen", "Important role in carbon cycle and other gas budgets", "No significant role", "Only produces methane"],
+  "correct": 1,
+  "explanation": "The biosphere plays an important role in the carbon cycle, as well as the budgets of many other gases such as methane and nitrous oxide.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "The Biosphere",
+  "year": "2024",
+  "tag": "Applied"
+},
+
+{
+  "q": "What caused Earth to segregate into layers?",
+  "options": ["Cooling only", "Differentiation from giant impact and radioactive decay", "Atmospheric formation", "Meteor bombardment"],
+  "correct": 1,
+  "explanation": "Earth segregated into various layers by the process of differentiation caused by giant impact and decaying of radioactive materials.",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Summary",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the three main components of Earth's internal structure?",
+  "options": ["Atmosphere, hydrosphere, lithosphere", "Core (Fe, Ni), Mantle (O with Mg, Fe, Si), Crust (light elements)", "Upper, middle, lower", "Solid, liquid, gas"],
+  "correct": 1,
+  "explanation": "The internal structure comprises the Core (Fe, Ni), Mantle (O with Mg, Fe, Si), and Crust (light elements like Si, Al, Fe, Ca, Mg, Na, K).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Summary",
+  "year": "2024",
+  "tag": "Basic"
+},
+
+{
+  "q": "What are the five components of Earth's external structure?",
+  "options": ["Core, mantle, crust, ocean, air", "Atmosphere, Hydrosphere, Cryosphere, Lithosphere, Biosphere", "Solid, liquid, gas, ice, life", "Land, water, air, heat, cold"],
+  "correct": 1,
+  "explanation": "The external structure comprises the Atmosphere (gases), Hydrosphere (liquid water), Cryosphere (ice), Lithosphere (land), and Biosphere (living organisms).",
+  "course": "GM220",
+  "term": "T1",
+  "topic": "Summary",
+  "year": "2024",
+  "tag": "Basic"
+},
 
 ];
