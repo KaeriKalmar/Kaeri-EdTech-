@@ -1,4 +1,5 @@
 const flashcards = {
+  //MT221
   "MODULE 1: INTRODUCTION TO METALLURGY": [
     {
       "front": "What is metallurgy?",
@@ -892,8 +893,835 @@ const flashcards = {
     }
   ],
 
-
-
+"MODULE 2: PRINCIPLES OF COMMINUTION": [
+    {
+        "front": "What is comminution?",
+        "back": "Comminution is the reduction in size, or simply 'to make small.' It involves mechanical operations that break large particles into smaller particles.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the two broad categories of operations that fall under 'comminution' in the widest sense?",
+        "back": "(1) Mechanical operations like turning, drilling, sawing, carving, or planning that change individual objects in shape to predetermined dimensions, and (2) Making small particles out of large particles.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is comminution essential to modern industrial civilization?",
+        "back": "Modern industrial civilization cannot exist without exploiting a wide range of comminution technologies, from coarse crushing of mined ore and quarry rock to very fine grinding for material production.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the purposes of comminution in its earliest stages?",
+        "back": "(1) To make freshly excavated material easier to handle by scrapers, conveyors, and ore carriers, and (2) In the case of quarry products, to produce material of controlled particle size.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What can be considered the first stage in comminution?",
+        "back": "Blasting with explosives used in mining to remove ores from their natural beds can be regarded as the first stage in comminution.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What modern approach to comminution has shown substantial economic benefits?",
+        "back": "Integrating the comminution stages of mining and mineral processing in a holistic way, rather than seeing them as decoupled or competitive elements of the production process.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Are sizing processes themselves size reduction devices?",
+        "back": "No, sizing processes are not size reduction devices themselves. However, they are an integral part of any comminution circuit and contribute directly to circuit performance and energy utilization efficiency.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the four main purposes of comminution?",
+        "back": "(1) To produce material having a size range convenient for transportation and storage, (2) To liberate minerals disseminated in basic rock, (3) To expose mineral values to chemical attack during processes like leaching, (4) To produce a given surface area for improved reaction time.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the primary objective of size reduction in mineral processing?",
+        "back": "The primary objective is the liberation of individual mineral particles.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the two deleterious phenomena that accompany size reduction?",
+        "back": "(1) Over-grinding (overproduction of fines), and (2) Under-grinding (presence of high proportion of coarse particles).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What does undergrinding of ores lead to?",
+        "back": "Undergrinding leads to an increase of metal value losses in the larger particle sizes, which increases the tailings grade.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the five negative consequences of over-grinding?",
+        "back": "(1) Loss of finer sizes due to slime coating around air bubbles, (2) Slime floatability and non-selective mechanical entrainment, (3) Excess reagent consumption, (4) Deleterious effects in thickening, filtration, and drying, (5) Excess energy consumption during metal extraction.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is weighing and sampling of ore normally done on the finished product of a crushing plant before entering the grinding circuit?",
+        "back": "Because this product is more homogeneous than run-of-mine ore and has not yet been ground into pulp, making it more representative for weighing and sampling.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What determines the degree of size reduction required for each ore?",
+        "back": "It is determined mainly by the characteristics of the ore (interlocking, dissemination) and by economic considerations.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is size reduction nearly always done in stages using different machines?",
+        "back": "This assists in eliminating the effects of either over-grinding or under-grinding, rather than attempting to achieve the desired product size in a single operation.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is a closed circuit operation in comminution?",
+        "back": "In closed circuit operation, the product is sized, the undersize passes to the next stage, and the oversize returns to the breaker.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is an open circuit operation in comminution?",
+        "back": "In open circuit operation, the material passes straight through the breaker and the entire product passes on to the next stage without any material returning.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is circulating load in closed circuit operations?",
+        "back": "Circulating load is the tonnage of material returning to the breaker, normally expressed as a percentage of the new feed coming in.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are typical circulating loads in crushing operations?",
+        "back": "In most crushing operations, circulating loads are relatively small (less than 100%).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are typical circulating loads in modern grinding practice?",
+        "back": "In modern grinding practice, circulating loads are often very high (250-700%).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why are circulating loads so much higher in grinding than in crushing?",
+        "back": "This reflects the different nature of the operations and the need for tighter size control in grinding operations.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are conveyor belts?",
+        "back": "Conveyor belts are loops which move materials from one location to another, consisting of two or more pulleys with a continuous loop of material.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the difference between a drive pulley and an idler pulley?",
+        "back": "The powered pulley is called the drive pulley, while the unpowered pulley is called the idler.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How are conveyor belts typically driven?",
+        "back": "They are often driven by variable speed electric motors.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the basic components of a belt conveyor?",
+        "back": "Head, tail and snub pulleys, idlers, motor and reduction gear.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why should secondary crushers be protected against tramp metal?",
+        "back": "Because large pieces of 'tramp' metal can jam the crusher, resulting in loss of production time and damaged equipment.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Where should a magnet or metal detector be positioned in the system?",
+        "back": "In the conveyor system between the primary and secondary crushers, or between the stockpile and the SAG mill.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is crushed ore fed onto a stockpile?",
+        "back": "Crushed ore is fed onto the stockpile using a moveable tripper.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What monitors the movement of the tripper on a stockpile?",
+        "back": "Two limits: operating limit and overtravel limit switches on both sides of the stockpile ends.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is ore reclaimed from the stockpile?",
+        "back": "Ore is reclaimed by vibrating feeders.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What drives the vibrating feeders and how are they controlled?",
+        "back": "Vibrating feeders are installed with unbalanced electromagnetically operated drives and are controlled from a Variable Speed Drive panel.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is feed rate control into the mill adjusted?",
+        "back": "By increasing the vibrations on the vibrator feeder in operation.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are four reasons why material flow through crushing equipment may be disrupted?",
+        "back": "(1) Breakdown of equipment, (2) Breakdown of delivery system, (3) Planned maintenance in the crushing circuit, (4) When there are no ore deliveries.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the purpose of storage bins in a crushing circuit?",
+        "back": "Storage bins or bunkers provide emergency storage capacity to maintain operations during disruptions.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does the capacity of storage bins relate to plant size?",
+        "back": "Capacity depends on plant size. Small plants may not have storage bins, while bigger plants normally have them. Larger bins may have several thousand tonnes capacity.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Give an example of how storage bins provide flexibility.",
+        "back": "If there's a breakdown of secondary crusher, primary crusher product can be diverted to storage bins. If the primary crusher is down, ore can be withdrawn from the storage bin as feed to secondary crushers.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How are secondary and tertiary crushers normally fed?",
+        "back": "They are normally fed from an ore bin, which ensures uninterrupted feed to the crusher while feed into the bin can be intermittent.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the typical surge capacity of bins preceding primary jaw crushers?",
+        "back": "Such bins normally have capacity of no more than several hundred tonnes (surge capacity).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How are semi-autogenous mills normally fed?",
+        "back": "Semi-autogenous mills are normally fed from the chute using belt conveyors from the stockpile.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What device is used to regulate feed from bins to crushers?",
+        "back": "Feeders are used to regulate feed to crushers.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What may the material from bins be screened on before feeding to crushers?",
+        "back": "The material may be screened on a double or triple deck screen to produce material suitable for feed to secondary and tertiary crushers.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What does a semi-autogenous or autogenous mill do?",
+        "back": "The semi-autogenous or autogenous mill grinds crusher product and prepares it for final grinding in a ball mill or rod mill.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is the product of a semi-autogenous mill typically processed?",
+        "back": "Its product is usually passed over a large vibrating screen to separate oversize 'pebbles' from correct-size particles.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What happens to the correct-size material from the SAG mill screen?",
+        "back": "The correct-size material is sent forward to a ball mill for final grinding.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What happens to the oversize pebbles from the SAG mill screen?",
+        "back": "The oversize pebbles are recycled through a small pebble crusher, and then back to the semi-autogenous or autogenous mill.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the benefits of the SAG mill pebble recycling procedure?",
+        "back": "This procedure maximizes ore throughput and minimizes electrical energy consumption.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What do ball mills tumble?",
+        "back": "Ball mills tumble iron or steel balls.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What happens to the balls in a ball mill during operation?",
+        "back": "They gradually wear away as grinding proceeds.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the typical composition of a ball mill by volume?",
+        "back": "Ball mills typically contain about 75% ore and 25% 'steel' by volume.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What type of grind do ball mills produce?",
+        "back": "They give a controlled final grind.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What does the ball mill accept and produce?",
+        "back": "The ball mill accepts the semi-autogenous or autogenous mill product and produces uniform-size flotation feed.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is the ball mill operated?",
+        "back": "It is operated in closed circuit with a particle size measurement device and size control cyclones.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is comminution theory concerned with?",
+        "back": "Comminution theory is concerned with the relationship between energy input and the particle size made from a given feed size.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the greatest problem in comminution theory?",
+        "back": "Most of the energy input to a crushing or grinding machine is absorbed by the machine itself, and only a small fraction of the total energy is available for breaking the material.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What percentage of total energy input is available for actual size reduction in a ball mill?",
+        "back": "Less than 1% of the total energy input is available for actual size reduction in a ball mill; the bulk of the energy is utilized in the production of heat.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What assumption do all theories of comminution make?",
+        "back": "All theories assume that the material is brittle, so that no energy is absorbed in processes such as elongation or contraction which is not finally utilized in breakage.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the problem with plastic materials in comminution?",
+        "back": "A material which is plastic will consume energy in changing shape, which it will retain without creating significant new surface.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the oldest comminution theory?",
+        "back": "The oldest theory is that of Von Rittinger (1867).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What does Rittinger's Law of Surface Theory state?",
+        "back": "The law states that the energy consumed in size reduction is proportional to the area of new surface produced.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "For which type of operation does Rittinger's hypothesis approximate power consumption most closely?",
+        "back": "This hypothesis approximates power consumption for secondary grinding most closely, but may be roughly applied to all stages of crushing and grinding.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "According to Rittinger's law, how does energy requirement vary with particle size?",
+        "back": "The energy required to achieve reduction ratio varies inversely with the particle size.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Write the relationship showing surface energy is proportional to what?",
+        "back": "Es ∝ 1/X² where Es is the surface energy and X is the particle size.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is surface area of particles related to their diameter?",
+        "back": "The surface area of a known weight of particles of uniform diameter is inversely proportional to the diameter.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Write Rittinger's equation.",
+        "back": "E = CR(S2 - S1) = CR(1/x2 - 1/x1) Where: E = energy input, x1 = initial particle size, x2 = final particle size, CR = Rittinger's constant, S1 = initial specific surface (feed), S2 = final specific surface (product).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Who developed the second theory of comminution and when?",
+        "back": "Kick developed the second theory in 1885.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What does Kick's Law of Volume Theory state?",
+        "back": "He stated that the work required is proportional to the reduction in volume of the particles concerned.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Define the reduction ratio according to Kick.",
+        "back": "R = f/p, where R is the reduction ratio, f is the diameter of the feed particles, and p is the diameter of the product particles.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "According to Kick's law, what is the energy required for comminution proportional to?",
+        "back": "The energy is proportional to ln(x1/x2).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Write Kick's equation in integrated form.",
+        "back": "E = CK ln(x1/x2) Where: E = energy input, x1 = initial particle size, x2 = final particle size, CK = Kick's constant.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Who developed the third theory of comminution and when?",
+        "back": "Bond developed the third theory in 1952.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is Bond's third theory based on?",
+        "back": "The theory is based on the idea that work input is proportional to the new crack tip length produced in particle breakage, and equals the work represented by the product minus that represented by the feed.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How did Bond criticize Rittinger and Kick theories?",
+        "back": "Bond criticized both theories and postulated his own third theory as an alternative approach.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "In particles of similar shape, how is surface area of unit volume related to diameter?",
+        "back": "The surface area of unit volume of material is inversely proportional to the diameter.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is crack length in unit volume related to diameter in Bond's theory?",
+        "back": "The crack length in unit volume is considered proportional to one side of the surface area and therefore inversely proportional to the square root of the diameter.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What particle size criterion does Bond use for practical calculations?",
+        "back": "The size in microns which 80% passes is selected as the criterion of particle size.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Define P and F in Bond's equation.",
+        "back": "P is the diameter in microns which 80% of the product passes, and F is the size which 80% of the feed passes.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Write Bond's third theory equation.",
+        "back": "W = Wi[10/√P - 10/√F] Where: W = work input (kWh/t), Wi = work index (kWh/t), P = size at which 80% of product passes (µm), F = size at which 80% of feed passes (µm).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Write the equation for power draw using Bond's theory.",
+        "back": "Pw = T × W Where: Pw = power draw (kW), T = throughput of new feed (t/h).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the work index?",
+        "back": "The work index is the comminution parameter which expresses the resistance of the material to crushing and grinding.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How is the work index numerically defined?",
+        "back": "Numerically, it is defined as the work input in kilowatt hour per tonne required for the reduction in size from theoretical infinite feed size to 80% passing 100 microns.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "For what range of conditions does grinding power calculated using Bond's work indices apply reasonably well?",
+        "back": "It applies reasonably well in the range of conventional rod mill and ball mill grinding conditions and can be corrected for other conditions.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does the hardness of ore relate to the work index value?",
+        "back": "The harder the ore, the higher the work index value and the greater the amount of work required to reduce it from size F to size P.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is an 'operating work index'?",
+        "back": "An operating work index can be determined for an existing comminution operation using Bond's equation, and it normally varies from about 10 for soft ores to 20 for ores that are difficult to break.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What can the operating work index be used for?",
+        "back": "It can be used to compare feed ore types or assess the crushing or grinding performance in relative terms.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What did Hukki (1975) suggest about the relationship between energy and particle size?",
+        "back": "Hukki suggested that the relationship between energy and particle size is a composite form of the three laws and concluded that no single relationship was adequate.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does the probability of breakage vary with particle size?",
+        "back": "The probability of breakage in comminution is high for large particles and rapidly diminishes for fine sizes.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "According to Hukki, which law is appropriate at crushing sizes?",
+        "back": "At crushing sizes, Kick's relationship was appropriate.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "For which type of mills does Bond's law work well?",
+        "back": "Bond's 'law' worked well for rod and ball mills, as might be expected.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "At what particle sizes are Rittinger's ideas about surface more plausible?",
+        "back": "At finer sizes, Rittinger's ideas about surface were more plausible.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is specific energy required for crushing much lower than for grinding?",
+        "back": "Crushing operations produce the smallest change in particle surface area and hence, as predicted by the theories, the specific energy required is much lower than for grinding.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is Bond's law useful for predicting?",
+        "back": "Bond's law is a useful predictor of energy consumption and of power requirements.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "On what type of rock is Bond's index (Wi) mainly based, and what is a limitation?",
+        "back": "Bond's index Wi (grindability constant) is mainly based on homogeneous rock, but most rocks are heterogeneous or aggregates of other minerals.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Who proposed a general equation for comminution and when?",
+        "back": "Walker and others proposed a general equation in 1937.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Write the general differential equation for comminution proposed by Walker.",
+        "back": "dE/dX = -C/X^n Where: E = net energy per unit mass required, X = particle size, n = constant depending on material (grindability constant).",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does the Walker equation unify the three laws of comminution?",
+        "back": "Each of the three laws (Rittinger, Kick, Bond) can be derived as the integral of this basic differential equation with different values of the constant n.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What does the constant 'n' represent in Walker's equation?",
+        "back": "The constant 'n' depends upon the material and represents a grindability constant.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why do the three theories of comminution appear different if they describe the same phenomenon?",
+        "back": "Various attempts have been made to show that the relationships of Rittinger, Kick, and Bond are interpretations of a single general equation, with different values of constants or different regions of applicability.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "In what size ranges are each of the three laws most applicable?",
+        "back": "Kick's law is most applicable at crushing sizes (largest particles), Bond's law works well for intermediate sizes in rod and ball mills, and Rittinger's law is most applicable at the finest sizes.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is it important to understand all three laws of comminution?",
+        "back": "Understanding all three laws provides a comprehensive view of energy-size relationships across the entire comminution process, allowing engineers to select appropriate equipment and optimize energy consumption for different stages.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does the relationship between energy consumption and particle size change across the comminution process?",
+        "back": "The relationship changes from volume-based (Kick) at coarse sizes, to crack-length based (Bond) at intermediate sizes, to surface-area based (Rittinger) at fine sizes.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is closed circuit operation with high circulating loads used in modern grinding?",
+        "back": "High circulating loads (250-700%) in modern grinding allow for tighter size control, maximize throughput, and minimize overgrinding while achieving the desired product size distribution.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does the integration of SAG mills with ball mills optimize the grinding process?",
+        "back": "The SAG mill performs coarse grinding and screens out correct-size material for the ball mill. Oversize pebbles are crushed and recycled, while the ball mill provides controlled final grinding.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What role do screens play in a closed circuit grinding system?",
+        "back": "Screens separate particles by size, sending undersize material forward to the next stage while returning oversize material to the mill for additional grinding.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is metal detection important between crushing stages?",
+        "back": "Metal detection prevents tramp metal from entering secondary crushers, which would cause jamming, production downtime, and equipment damage.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How do storage bins contribute to overall plant efficiency?",
+        "back": "Storage bins provide surge capacity that allows continuous operation of downstream equipment even when upstream equipment is disrupted, maximizing overall plant utilization.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the relationship between liberation and particle size?",
+        "back": "As particle size decreases through comminution, mineral particles become more liberated from gangue material, but there's an optimal size where further grinding becomes counterproductive due to overgrinding effects.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is energy efficiency a critical concern in comminution?",
+        "back": "Most energy input is lost as heat rather than used for breakage (less than 1% efficiency in ball mills), and comminution is one of the most energy-intensive operations in mineral processing.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does particle size affect energy consumption per tonne in grinding?",
+        "back": "Energy consumption increases dramatically as target particle size decreases, following the inverse square root relationship in Bond's equation.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What factors determine the total energy required for a comminution operation?",
+        "back": "Feed particle size, desired product particle size, ore work index (hardness), throughput rate, and equipment efficiency all determine total energy requirements.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why is staged comminution more efficient than single-stage reduction?",
+        "back": "Staged reduction allows use of equipment optimized for each size range, prevents overgrinding, and distributes the energy input more effectively across multiple operations.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What are the trade-offs between open and closed circuit operations?",
+        "back": "Open circuits are simpler but may produce variable product size and overgrinding. Closed circuits provide better size control and prevent overgrinding but require additional equipment and have higher capital costs.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does ore heterogeneity affect sampling and weighing?",
+        "back": "Heterogeneous run-of-mine ore gives less representative samples, which is why sampling is done on crushed product which is more homogeneous.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why are automated weighers and samplers used in modern plants?",
+        "back": "They provide continuous, consistent monitoring of feed characteristics, enabling better process control and optimization.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How does ore mineralogy (interlocking, dissemination) affect comminution strategy?",
+        "back": "Highly disseminated ores require finer grinding for liberation, while coarsely interlocked ores may achieve adequate liberation at larger sizes, affecting the required degree of size reduction.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Explain the complete flow of material from mining through fine grinding.",
+        "back": "Ore is blasted, then crushed in stages with screening between stages. Material is stored in stockpiles/bins, then fed to SAG mills. SAG mill product is screened; correct size goes to ball mills, oversize is crushed and recycled. Ball mills in closed circuit with cyclones produce final product for flotation.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "Why must comminution be viewed as an integrated process rather than discrete stages?",
+        "back": "Each stage affects subsequent operations. Blast fragmentation affects crusher performance, crusher product affects grinding, and grinding product affects downstream separation. Optimizing the entire chain produces better economics.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "How do the physical properties of ores influence comminution circuit design?",
+        "back": "Ore hardness (work index) determines equipment selection and power requirements. Brittleness affects breakage mechanism. Mineralogy determines required degree of liberation and target particle size. Moisture affects handling and screening.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    },
+    {
+        "front": "What is the fundamental challenge in achieving optimal comminution?",
+        "back": "Balancing the competing objectives of adequate liberation (requires fine grinding), avoiding overgrinding, and minimizing energy consumption while maintaining required throughput.",
+        "course": "MT221",
+        "term": "T1",
+        "topic": "principles of comminution"
+    }
+]
+,
   //GM220 T1
 
   "MODULE 1: THE EARTH - EVOLUTION, COMPOSITION AND STRUCTURE": [
