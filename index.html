@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,1136 +6,1145 @@
   <title>Quiz App - Courses & Terms | Kaeri EdTech</title>
 
   <!-- FONTS -->
-
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- CSS STYLES (Base B + Version A Hybrid + Fixes) -->
+  <!-- ==================== UNIVERSAL ENGINE (KaTeX) ==================== -->
+  <!-- CSS (The Skin) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <!-- JS (The Brain) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <!-- Auto-Render (The Automator) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <!-- Chemistry (The Chemist) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/mhchem.min.js"></script>
 
+  <!-- CSS STYLES -->
   <style>
-/* --- GLOBAL SETTINGS (Base B) --- */
-body { 
-font-family: 'Roboto', sans-serif; 
-background: #0d1b2a; 
-margin: 0; 
-color: #e0e6ed; 
-line-height: 1.6; 
-overflow-y: auto; 
-padding-top: 160px; 
-padding-left: 20px; 
-padding-right: 20px; 
-padding-bottom: 30px; 
-transition: padding-top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-body.view-course { padding-top: 130px; }
-
-h1, h2, h3 { color: #72efdd; text-align: center; margin-bottom: 25px; }
-p { margin-bottom: 15px; }
-button { cursor: pointer; }
-
-/* --- LANDING PAGE FIXED HEADER --- */
-#landing-header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-background: #0d1b2a; 
-z-index: 1002;
-text-align: center;
-padding: 20px 0;
-border-bottom: 1px solid #1b263b;
-box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.brand-title {
-color: #64ffda;
-font-weight: 900;
-font-size: 2.2rem;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
-margin: 0;
-line-height: 1;
-display: block;
-}
-
-.brand-slogan {
-color: #e0e6ed;
-font-style: italic;
-font-size: 1rem;
-opacity: 0.8;
-margin-top: 8px;
-font-weight: 400;
-display: block;
-}
-
-/* --- CONTAINERS (Base B) --- */
-.quiz-container { 
-max-width: 1200px; 
-margin: auto; 
-background: #1b263b; 
-padding: 40px 30px; 
-border-radius: 16px; 
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-}
-
-/* --- STUDENT BOARD (FLASHCARD STYLE) --- */
-.student-board-wrapper {
-display: grid;
-grid-template-columns: 1.4fr 1fr; /* Desktop Ratio */
-gap: 20px;
-max-width: 100%;
-margin-bottom: 30px;
-}
-
-.board-section {
-/* BRAND: Flashcard Front Color */
-background-color: #2b3a55; 
-border-radius: 12px; 
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
-padding: 25px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-border: 1px solid #3e506e;
-transition: transform 0.3s ease;
-min-height: 140px;
-}
-
-.board-section:hover {
-transform: translateY(-2px); 
-}
-
-/* Announcement Text */
-.board-announcement-title {
-font-family: 'Roboto', sans-serif;
-font-weight: 700;
-font-size: 1.15em;
-color: #72efdd; /* Teal Accent */
-margin-bottom: 12px;
-display: flex;
-align-items: center;
-gap: 10px;
-border-bottom: 1px solid #3e506e;
-padding-bottom: 10px;
-}
-
-.board-announcement-body {
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-line-height: 1.6;
-color: #e0e6ed;
-font-size: 0.95em;
-}
-
-/* Semantic Status Borders */
-.board-section.type-info { border-left: 6px solid #007bff; }
-.board-section.type-success { border-left: 6px solid #28a745; }
-.board-section.type-warning { border-left: 6px solid #ffc107; }
-.board-section.type-critical { border-left: 6px solid #dc3545; }
-
-/* Motivation Box */
-.board-motivation-box {
-background-color: #2b3a55; 
-border: 1px solid #72efdd; /* Teal Border */
-text-align: center;
-font-style: italic;
-position: relative;
-}
-
-.quote-content {
-font-family: 'Roboto', sans-serif;
-font-weight: 500;
-color: #e0e6ed;
-font-size: 1.1em;
-line-height: 1.5;
-}
-
-.quote-icon { 
-display: block; 
-font-size: 1.8rem; 
-margin-bottom: 10px;
-text-shadow: 0 0 10px rgba(114, 239, 221, 0.3);
-}
-
-/* Dynamic Layouts */
-.layout-full-width { grid-template-columns: 1fr !important; }
-
-/* --- LANDING PAGE (Base B) --- */
-.course-section { 
-margin-bottom: 40px; 
-border: 1px solid #007bff; 
-border-radius: 10px; 
-padding: 20px; 
-}
-.course-button { 
-background-color: #007bff; 
-color: white; 
-border: none; 
-padding: 15px 25px; 
-font-size: 1.2em; 
-border-radius: 8px; 
-margin-bottom: 20px; 
-width: 100%; 
-box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); 
-transition: all 0.3s ease; 
-}
-.course-button:hover { 
-background-color: #0056b3; 
-transform: translateY(-3px); 
-box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); 
-}
-.course-button.active { 
-background-color: #28a745; 
-box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); 
-}
-.term-buttons { 
-display: none; 
-flex-direction: column; 
-gap: 10px; 
-margin-top: 15px; 
-}
-.term-buttons button { 
-background-color: #6c757d; 
-color: white; 
-border: none; 
-padding: 12px 20px; 
-font-size: 1em; 
-border-radius: 6px; 
-transition: all 0.3s ease; 
-}
-.term-buttons button:hover { 
-background-color: #5a6268; 
-transform: translateY(-2px); 
-}
-
-/* --- COURSE PAGE FIXED HEADER --- */
-#fixed-header { 
-display: none; 
-position: fixed; 
-top: 0; 
-left: 0; 
-width: 100%; 
-background: #1b263b; 
-z-index: 1001; 
-padding: 10px 20px; 
-box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
-box-sizing: border-box; 
-}
-
-.header-grid { 
-display: grid; 
-grid-template-columns: 1fr auto; 
-gap: 15px; 
-align-items: center; 
-}
-
-#unlock-btn { 
-background: linear-gradient(45deg, #ffc107, #ff9800); 
-color: #333; 
-border: none; 
-padding: 8px 15px; 
-border-radius: 20px; 
-font-weight: bold; 
-font-size: 0.9em; 
-box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); 
-animation: pulse 2s infinite; 
-text-transform: uppercase; 
-margin-top: 0; 
-}
-#unlock-btn:hover { transform: scale(1.05); }
-@keyframes pulse { 
-0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); } 
-70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); } 
-100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); } 
-}
-
-#price-banner { 
-display: none;
-position: fixed; 
-top: 70px; 
-right: 20px; 
-background: #007bff; 
-color: white; 
-padding: 10px 16px; 
-font-weight: 700; 
-font-size: 1rem; 
-border-radius: 8px; 
-z-index: 1000; 
-box-shadow: 0 3px 10px rgba(0,0,0,0.3); 
-}
-
-/* --- QUIZ INTERFACE (Base B) --- */
-.mode-buttons { 
-display: grid; 
-grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-gap: 15px; 
-margin-bottom: 30px; 
-}
-.mode-buttons button { 
-background-color: #007bff; 
-color: white; 
-border: none; 
-padding: 15px 20px; 
-font-size: 1.1em; 
-border-radius: 8px; 
-transition: all 0.3s ease; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-.mode-buttons button:hover { 
-background-color: #0056b3; 
-transform: translateY(-3px); 
-}
-#tts-toggle-button { background-color: #6610f2; }
-#tts-toggle-button:hover { background-color: #520dc2; }
-
-#quiz-form { 
-background-color: #0d1b2a; 
-padding: 25px; 
-border-radius: 12px; 
-margin-bottom: 25px; 
-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
-}
-.question-header { 
-display: flex; 
-justify-content: space-between; 
-align-items: center; 
-margin-bottom: 15px; 
-flex-wrap: wrap; 
-}
-.question-header h3 { 
-margin: 0; 
-flex-basis: 100%; 
-margin-bottom: 10px; 
-text-align: left; 
-}
-.question-header span { 
-background-color: #007bff; 
-color: white; 
-padding: 5px 10px; 
-border-radius: 5px; 
-font-size: 0.8em; 
-margin-left: 10px; 
-margin-bottom: 5px; 
-}
-.question-text, .question-box p { 
-font-size: 1.15em; 
-margin-bottom: 20px; 
-color: #cdd6e0; 
-}
-
-.options label { 
-display: block; 
-background-color: #2b3a55; 
-padding: 12px; 
-margin-bottom: 10px; 
-border-radius: 8px; 
-cursor: pointer; 
-transition: all 0.3s ease; 
-font-size: 1em; 
-}
-.options label:hover { 
-background-color: #3e506e; 
-transform: translateX(5px); 
-}
-.options input[type="radio"] { 
-margin-right: 10px; 
-transform: scale(1.2); 
-}
-
-textarea { 
-width: calc(100% - 20px); 
-padding: 10px; 
-margin-top: 10px; 
-border: 1px solid #3e506e; 
-border-radius: 8px; 
-background-color: #0d1b2a; 
-color: #e0e6ed; 
-font-size: 1em; 
-resize: vertical; 
-min-height: 100px; 
-}
-textarea:focus { 
-outline: none; 
-border-color: #007bff; 
-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-}
-
-button { 
-background-color: #28a745; 
-color: white; 
-border: none; 
-padding: 12px 25px; 
-font-size: 1em; 
-border-radius: 8px; 
-margin-top: 20px; 
-transition: all 0.3s ease; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-button:hover { 
-background-color: #218838; 
-transform: translateY(-2px); 
-}
-button:disabled { 
-background-color: #6c757d; 
-cursor: not-allowed; 
-transform: none; 
-box-shadow: none; 
-}
-
-#result button, .question-box button, .explanation-box + button, #quiz-form button:last-child { 
-background-color: #28a745; 
-color: white; 
-border: none; 
-padding: 12px 25px; 
-font-size: 1em; 
-border-radius: 8px; 
-margin-top: 20px; 
-transition: all 0.3s ease; 
-cursor: pointer; 
-display: inline-block; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-#result button:hover, .question-box button:hover, .explanation-box + button:hover { 
-background-color: #218838; 
-transform: translateY(-2px); 
-}
-#quiz-form button:last-child { background-color: #ffc107; color: #333; }
-#quiz-form button:last-child:hover { background-color: #e0a800; }
-
-.submit-btn, .whatsapp-buttons button { 
-background-color: #28a745; 
-color: white; 
-border: none; 
-padding: 12px 25px; 
-font-size: 1em; 
-border-radius: 8px; 
-margin-top: 20px; 
-transition: all 0.3s ease; 
-}
-.submit-btn:hover, .whatsapp-buttons button:hover { 
-background-color: #218838; 
-transform: translateY(-2px); 
-}
-
-.back-button { 
-background-color: #6c757d; 
-color: white; 
-border: none; 
-padding: 12px 20px; 
-font-size: 1em; 
-cursor: pointer; 
-border-radius: 8px; 
-margin-top: 20px; 
-text-decoration: none; 
-display: inline-block; 
-transition: all 0.3s ease; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-.back-button:hover { 
-background-color: #5a6268; 
-transform: translateY(-2px); 
-}
-
-/* Challenge Button */
-.challenge-button { 
-background-color: #6610f2 !important; 
-color: white !important; 
-margin-left: 10px; 
-}
-.challenge-button:hover { 
-background-color: #520dc2 !important; 
-transform: translateY(-2px); 
-}
-
-/* --- FEEDBACK --- */
-.feedback, .explanation-box { 
-margin-top: 20px; 
-padding: 15px; 
-border-radius: 8px; 
-background-color: #0d1b2a; 
-border: 1px solid #3e506e; 
-}
-.feedback p { margin: 0 0 10px 0; font-weight: bold; }
-.explanation-box { color: #a0a8b4; font-style: italic; }
-#result { 
-margin-top: 20px; 
-padding: 25px; 
-background-color: #0d1b2a; 
-border-radius: 12px; 
-text-align: center; 
-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
-}
-#result h2 { margin-bottom: 15px; }
-#result p { font-size: 1.2em; margin-bottom: 20px; }
-
-.restart-button, .reset-button { 
-background-color: #ffc107 !important; 
-color: #333 !important; 
-border: none; 
-padding: 12px 25px; 
-border-radius: 8px; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-.restart-button:hover, .reset-button:hover { 
-background-color: #e0a800 !important; 
-transform: translateY(-2px); 
-}
-
-/* --- PROGRESS --- */
-#mode-banner { 
-background-color: #2c3e50; 
-color: #fff; 
-padding: 10px 15px; 
-text-align: center; 
-font-weight: bold; 
-font-size: 1.1em; 
-border-radius: 8px; 
-margin-bottom: 15px; 
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-}
-.demo-mode-banner { border: 2px solid #ffc107; color: #ffc107 !important; }
-.full-access-banner { border: 2px solid #28a745; color: #28a745 !important; }
-#progress-container { 
-width: 100%; 
-background-color: #3e506e; 
-border-radius: 5px; 
-margin-top: 10px; 
-height: 20px; 
-overflow: hidden; 
-}
-#progress-fill { 
-height: 100%; 
-width: 0%; 
-background-color: #28a745; 
-border-radius: 5px; 
-transition: width 0.4s ease-in-out; 
-}
-#progress-text { 
-text-align: center; 
-margin-top: 5px; 
-font-size: 0.9em; 
-color: #a0a8b4; 
-}
-
-/* --- FLASHCARDS --- */
-.flashcard-nav-header { 
-display: flex; 
-justify-content: space-between; 
-align-items: center; 
-margin-bottom: 20px; 
-flex-wrap: wrap; 
-}
-.flashcard-nav-buttons { 
-display: flex; 
-justify-content: space-between; 
-width: 100%; 
-gap: 15px; 
-margin-top: 10px; 
-}
-.flashcard-nav-buttons button { 
-flex-grow: 1; 
-background-color: #007bff; 
-color: white; 
-border: none; 
-padding: 12px 20px; 
-font-size: 1em; 
-border-radius: 8px; 
-transition: all 0.3s ease; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-.flashcard-nav-buttons button:hover { 
-background-color: #0056b3; 
-transform: translateY(-2px); 
-}
-.flashcard-nav-buttons button:disabled { 
-background-color: #4a5460; 
-cursor: not-allowed; 
-transform: none; 
-box-shadow: none; 
-}
-.flashcard-wrapper { 
-perspective: 1000px; 
-width: 100%; 
-max-width: 500px; 
-height: 300px; 
-margin: 30px auto; 
-overflow: hidden; 
-}
-.flashcard { 
-width: 100%; 
-height: 100%; 
-position: relative; 
-transform-style: preserve-3d; 
-transition: transform 0.6s ease-in-out; 
-border-radius: 12px; 
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
-cursor: pointer; 
-}
-.flashcard.back-active { transform: rotateY(180deg); }
-.card-face { 
-position: absolute; 
-width: 100%; 
-height: 100%; 
-backface-visibility: hidden; 
-display: flex; 
-justify-content: center; 
-align-items: center; 
-padding: 20px; 
-box-sizing: border-box; 
-border-radius: 12px; 
-font-size: 1.3em; 
-text-align: center; 
-overflow-y: auto; 
-word-break: break-word; 
-overflow-wrap: break-word; 
-transition: opacity 0.4s ease-in-out; 
-}
-.card-front { background-color: #2b3a55; color: #e0e6ed; }
-.card-back { 
-background-color: #4a5460; 
-color: #e0e6ed; 
-transform: rotateY(180deg); 
-opacity: 0; 
-}
-.flashcard.back-active .card-front { opacity: 0; }
-.flashcard.back-active .card-back { opacity: 1; }
-.flip-button { background-color: #ffc107; color: #333; margin-top: 15px; }
-.flip-button:hover { background-color: #e0a800; }
-.back-to-topics-button { 
-background-color: #6c757d; 
-margin-top: 15px; 
-margin-left: 10px; 
-color: white; 
-border: none; 
-padding: 12px 20px; 
-font-size: 1em; 
-border-radius: 8px; 
-transition: all 0.3s ease; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-}
-.back-to-topics-button:hover { 
-background-color: #5a6268; 
-transform: translateY(-2px); 
-}
-.flashcard-topic-list h2 { text-align: center; margin-bottom: 25px; }
-.flashcard-topic-buttons { 
-display: grid; 
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-gap: 15px; 
-margin-bottom: 30px; 
-}
-.flashcard-topic-buttons button { 
-background-color: #28a745; 
-color: white; 
-padding: 15px 20px; 
-font-size: 1.1em; 
-border-radius: 8px; 
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-border: none; 
-transition: all 0.3s ease; 
-margin-top: 0; 
-}
-.flashcard-topic-buttons button:hover { 
-background-color: #218838; 
-transform: translateY(-3px); 
-}
-
-/* --- NOTIFICATIONS --- */
-.announcement, .price-list { 
-background-color: #0d1b2a; 
-border: 1px solid #007bff; 
-border-radius: 10px; 
-padding: 15px; 
-margin-bottom: 25px; 
-font-size: 0.95em; 
-line-height: 1.5; 
-text-align: left; 
-}
-.announcement strong, .price-list strong { color: #72efdd; }
-.announcement a, .price-list a { color: #007bff; text-decoration: none; }
-.announcement a:hover, .price-list a:hover { text-decoration: underline; }
-.landing-whatsapp-button { 
-position: fixed; 
-bottom: 20px; 
-right: 20px; 
-background-color: #25D366; 
-color: white; 
-width: 60px; 
-height: 60px; 
-border-radius: 50%; 
-display: flex; 
-justify-content: center; 
-align-items: center; 
-font-size: 2rem; 
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-text-decoration: none; 
-transition: transform 0.3s ease; 
-z-index: 2000; 
-border: 2px solid white; 
-}
-.landing-whatsapp-button:hover { 
-background-color: #128C7E; 
-transform: scale(1.1); 
-}
-.whatsapp-buttons { 
-display: flex; 
-justify-content: center; 
-gap: 15px; 
-margin-top: 30px; 
-margin-bottom: 20px; 
-}
-
-#app-notification { 
-position: fixed; 
-top: 10px; 
-left: 50%; 
-transform: translateX(-50%); 
-background-color: #333; 
-color: white; 
-padding: 12px 25px; 
-border-radius: 8px; 
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
-z-index: 99999; 
-opacity: 0; 
-visibility: hidden; 
-transition: opacity 0.5s ease, visibility 0.5s ease; 
-display: flex; 
-align-items: center; 
-gap: 10px; 
-max-width: 90%; 
-text-align: center; 
-}
-#app-notification.show { opacity: 1; visibility: visible; }
-#app-notification .close-btn { 
-background: none; 
-border: none; 
-color: white; 
-font-size: 1.2em; 
-cursor: pointer; 
-padding: 0 5px; 
-}
-#app-notification.info { background-color: #17a2b8; }
-#app-notification.success { background-color: #28a745; }
-#app-notification.warning { background-color: #ffc107; color: #333; }
-#app-notification.error { background-color: #dc3545; }
-
-/* === COMPACT PAYMENT MODAL === */
-.modal { 
-    display: none; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0, 0, 0, 0.85); 
-    z-index: 9999; 
+    /* --- GLOBAL SETTINGS --- */
+    body { 
+    font-family: 'Roboto', sans-serif; 
+    background: #0d1b2a; 
+    margin: 0; 
+    color: #e0e6ed; 
+    line-height: 1.6; 
     overflow-y: auto; 
-    padding: 20px; 
-    box-sizing: border-box; 
-    align-items: center; 
-    justify-content: center; 
-}
-.modal.show { 
-    display: flex; 
-    align-items: flex-start; 
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.modal-content { 
-    background: white; 
-    color: #333; 
-    width: 95%; 
-    max-width: 400px; 
-    max-height: 90vh; 
+    padding-top: 160px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-bottom: 30px; 
+    transition: padding-top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    body.view-course { padding-top: 130px; }
+
+    h1, h2, h3 { color: #72efdd; text-align: center; margin-bottom: 25px; }
+    p { margin-bottom: 15px; }
+    button { cursor: pointer; }
+
+    /* --- UNIVERSAL MATH RESPONSIVENESS (The Safety Scroll) --- */
+    .katex-display {
+        max-width: 100%;       /* Force it to stay within parent */
+        overflow-x: auto;      /* Add horizontal scrollbar ONLY if needed */
+        overflow-y: hidden;    /* Hide vertical scrollbars */
+        padding-bottom: 5px;   /* Space for the scrollbar to look nice */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        text-align: center;    /* Keep it centered */
+        margin: 1em 0;
+    }
+    /* Mobile Adjustment for Math */
+    @media (max-width: 480px) {
+        .katex { font-size: 0.95em !important; }
+        .katex-display { margin: 0.5em 0 !important; }
+    }
+    /* Protect English text from breaking layout */
+    .question-box, .explanation-box, .flashcard .card-face {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+    /* Scrollbar Styling */
+    .katex-display::-webkit-scrollbar { height: 4px; }
+    .katex-display::-webkit-scrollbar-track { background: #0d1b2a; }
+    .katex-display::-webkit-scrollbar-thumb { background: #3e506e; border-radius: 2px; }
+
+    /* --- LANDING PAGE FIXED HEADER --- */
+    #landing-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0d1b2a; 
+    z-index: 1002;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #1b263b;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .brand-title {
+    color: #64ffda;
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    margin: 0;
+    line-height: 1;
+    display: block;
+    }
+
+    .brand-slogan {
+    color: #e0e6ed;
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 8px;
+    font-weight: 400;
+    display: block;
+    }
+
+    /* --- CONTAINERS --- */
+    .quiz-container { 
+    max-width: 1200px; 
+    margin: auto; 
+    background: #1b263b; 
+    padding: 40px 30px; 
+    border-radius: 16px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    }
+
+    /* --- STUDENT BOARD --- */
+    .student-board-wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    }
+
+    .board-section {
+    background-color: #2b3a55; 
     border-radius: 12px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-    padding: 0; 
-    overflow: hidden; 
-    position: relative; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    padding: 25px;
     display: flex;
     flex-direction: column;
-}
-.pay-header { 
-    background: linear-gradient(135deg, #007bff, #6610f2); 
-    color: white; 
-    padding: 15px; 
-    text-align: center; 
-}
-.pay-header h2 { color: white; margin: 0; font-size: 1.4rem; }
-.pay-header p { margin: 5px 0 0; font-size: 0.9em; opacity: 0.9; }
-.pay-body { 
-    padding: 20px; 
-    overflow-y: auto;
-    flex-grow: 1;
-    max-height: calc(90vh - 150px);
-} 
-.pay-price { 
-    font-size: 1.8rem; 
-    color: #28a745; 
-    font-weight: bold; 
-    text-align: center; 
+    justify-content: center;
+    border: 1px solid #3e506e;
+    transition: transform 0.3s ease;
+    min-height: 140px;
+    }
+
+    .board-section:hover { transform: translateY(-2px); }
+
+    .board-announcement-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.15em;
+    color: #72efdd; 
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #3e506e;
+    padding-bottom: 10px;
+    }
+
+    .board-announcement-body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #e0e6ed;
+    font-size: 0.95em;
+    }
+
+    .board-section.type-info { border-left: 6px solid #007bff; }
+    .board-section.type-success { border-left: 6px solid #28a745; }
+    .board-section.type-warning { border-left: 6px solid #ffc107; }
+    .board-section.type-critical { border-left: 6px solid #dc3545; }
+
+    .board-motivation-box {
+    background-color: #2b3a55; 
+    border: 1px solid #72efdd;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    }
+
+    .quote-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #e0e6ed;
+    font-size: 1.1em;
+    line-height: 1.5;
+    }
+
+    .quote-icon { 
     display: block; 
-    margin: 10px 0; 
-}
-.payment-info-box {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 0.85em;
-    color: #495057;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
-.pay-input { 
-    width: 100%; 
-    padding: 12px; 
-    font-size: 1em; 
-    border: 2px solid #ddd; 
+    font-size: 1.8rem; 
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(114, 239, 221, 0.3);
+    }
+
+    .layout-full-width { grid-template-columns: 1fr !important; }
+
+    /* --- LANDING PAGE --- */
+    .course-section { 
+    margin-bottom: 40px; 
+    border: 1px solid #007bff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    }
+    .course-button { 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 15px 25px; 
+    font-size: 1.2em; 
     border-radius: 8px; 
-    margin-top: 5px; 
-    margin-bottom: 10px; 
-    box-sizing: border-box; 
-}
-.pay-input:focus { border-color: #007bff; outline: none; }
-.pay-btn { 
+    margin-bottom: 20px; 
     width: 100%; 
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); 
+    transition: all 0.3s ease; 
+    }
+    .course-button:hover { 
+    background-color: #0056b3; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); 
+    }
+    .course-button.active { 
     background-color: #28a745; 
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); 
+    }
+    .term-buttons { 
+    display: none; 
+    flex-direction: column; 
+    gap: 10px; 
+    margin-top: 15px; 
+    }
+    .term-buttons button { 
+    background-color: #6c757d; 
     color: white; 
-    font-size: 1.1em; 
-    padding: 12px; 
-    margin-top: 5px; 
-    border-radius: 8px; 
     border: none; 
-    box-shadow: none; 
-}
-.pay-btn:hover { background-color: #218838; transform: none; }
-.cancel-pay-btn {
-    width: 100%;
-    background: none;
-    border: none;
-    color: #6c757d;
-    padding: 10px;
-    margin-top: 5px;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 0.9em;
-    box-shadow: none;
-}
-.cancel-pay-btn:hover { color: #343a40; background: none; transform: none; box-shadow: none; }
-.close-modal { 
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
-    background: transparent; 
-    border: none; 
-    color: white; 
-    font-size: 1.5rem; 
-    cursor: pointer; 
-    box-shadow: none; 
-    margin: 0; 
-    padding: 0; 
-}
+    padding: 12px 20px; 
+    font-size: 1em; 
+    border-radius: 6px; 
+    transition: all 0.3s ease; 
+    }
+    .term-buttons button:hover { 
+    background-color: #5a6268; 
+    transform: translateY(-2px); 
+    }
 
-/* Additional styles for Buy Now button */
-#buy-now-link button:hover {
-    background: linear-gradient(135deg, #0056b3, #004085) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
-}
-
-@media (max-width: 768px) {
-    #buy-now-link button {
-        padding: 10px !important;
-        font-size: 0.95em !important;
-    }
-    .modal.show {
-        padding: 10px;
-        align-items: flex-start;
-    }
-    .modal-content {
-        width: 100%;
-        max-height: 95vh;
-    }
-    .pay-body {
-        max-height: calc(95vh - 150px);
-    }
-}
-
-/* === PRINT MODAL === */
-.print-modal { 
+    /* --- COURSE PAGE FIXED HEADER --- */
+    #fixed-header { 
     display: none; 
     position: fixed; 
     top: 0; 
     left: 0; 
     width: 100%; 
-    height: 100%; 
-    background: rgba(0, 0, 0, 0.85); 
-    z-index: 9999; 
-    overflow-y: auto; 
-    padding: 20px; 
+    background: #1b263b; 
+    z-index: 1001; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
     box-sizing: border-box; 
-}
-.print-modal.show { 
-    display: flex; 
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.print-modal-content { 
-    background: white; 
+    }
+
+    .header-grid { 
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    gap: 15px; 
+    align-items: center; 
+    }
+
+    #unlock-btn { 
+    background: linear-gradient(45deg, #ffc107, #ff9800); 
     color: #333; 
-    width: 90%; 
-    max-width: 800px; 
-    max-height: 90vh; 
-    border-radius: 12px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-    display: flex; 
-    flex-direction: column; 
-    overflow: hidden; 
-}
-.print-modal-header { 
+    border: none; 
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    font-size: 0.9em; 
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); 
+    animation: pulse 2s infinite; 
+    text-transform: uppercase; 
+    margin-top: 0; 
+    }
+    #unlock-btn:hover { transform: scale(1.05); }
+    @keyframes pulse { 
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); } 
+    70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); } 
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); } 
+    }
+
+    #price-banner { 
+    display: none;
+    position: fixed; 
+    top: 70px; 
+    right: 20px; 
     background: #007bff; 
     color: white; 
+    padding: 10px 16px; 
+    font-weight: 700; 
+    font-size: 1rem; 
+    border-radius: 8px; 
+    z-index: 1000; 
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3); 
+    }
+
+    /* --- QUIZ INTERFACE --- */
+    .mode-buttons { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    }
+    .mode-buttons button { 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
     padding: 15px 20px; 
+    font-size: 1.1em; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    .mode-buttons button:hover { 
+    background-color: #0056b3; 
+    transform: translateY(-3px); 
+    }
+    #tts-toggle-button { background-color: #6610f2; }
+    #tts-toggle-button:hover { background-color: #520dc2; }
+
+    #quiz-form { 
+    background-color: #0d1b2a; 
+    padding: 25px; 
+    border-radius: 12px; 
+    margin-bottom: 25px; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+    .question-header { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    border-bottom: 1px solid #ddd; 
-}
-.print-modal-header h2 { margin: 0; color: white; text-align: left; }
-.close-print-preview { 
+    margin-bottom: 15px; 
+    flex-wrap: wrap; 
+    }
+    .question-header h3 { 
+    margin: 0; 
+    flex-basis: 100%; 
+    margin-bottom: 10px; 
+    text-align: left; 
+    }
+    .question-header span { 
+    background-color: #007bff; 
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    font-size: 0.8em; 
+    margin-left: 10px; 
+    margin-bottom: 5px; 
+    }
+    .question-text, .question-box p { 
+    font-size: 1.15em; 
+    margin-bottom: 20px; 
+    color: #cdd6e0; 
+    }
+
+    .options label { 
+    display: block; 
+    background-color: #2b3a55; 
+    padding: 12px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-size: 1em; 
+    }
+    .options label:hover { 
+    background-color: #3e506e; 
+    transform: translateX(5px); 
+    }
+    .options input[type="radio"] { 
+    margin-right: 10px; 
+    transform: scale(1.2); 
+    }
+
+    textarea { 
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin-top: 10px; 
+    border: 1px solid #3e506e; 
+    border-radius: 8px; 
+    background-color: #0d1b2a; 
+    color: #e0e6ed; 
+    font-size: 1em; 
+    resize: vertical; 
+    min-height: 100px; 
+    }
+    textarea:focus { 
+    outline: none; 
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    }
+
+    button { 
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 12px 25px; 
+    font-size: 1em; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    button:hover { 
+    background-color: #218838; 
+    transform: translateY(-2px); 
+    }
+    button:disabled { 
+    background-color: #6c757d; 
+    cursor: not-allowed; 
+    transform: none; 
+    box-shadow: none; 
+    }
+
+    #result button, .question-box button, .explanation-box + button, #quiz-form button:last-child { 
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 12px 25px; 
+    font-size: 1em; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    display: inline-block; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    #result button:hover, .question-box button:hover, .explanation-box + button:hover { 
+    background-color: #218838; 
+    transform: translateY(-2px); 
+    }
+    #quiz-form button:last-child { background-color: #ffc107; color: #333; }
+    #quiz-form button:last-child:hover { background-color: #e0a800; }
+
+    .submit-btn, .whatsapp-buttons button { 
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 12px 25px; 
+    font-size: 1em; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+    transition: all 0.3s ease; 
+    }
+    .submit-btn:hover, .whatsapp-buttons button:hover { 
+    background-color: #218838; 
+    transform: translateY(-2px); 
+    }
+
+    .back-button { 
+    background-color: #6c757d; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    .back-button:hover { 
+    background-color: #5a6268; 
+    transform: translateY(-2px); 
+    }
+
+    .challenge-button { 
+    background-color: #6610f2 !important; 
+    color: white !important; 
+    margin-left: 10px; 
+    }
+    .challenge-button:hover { 
+    background-color: #520dc2 !important; 
+    transform: translateY(-2px); 
+    }
+
+    /* --- FEEDBACK --- */
+    .feedback, .explanation-box { 
+    margin-top: 20px; 
+    padding: 15px; 
+    border-radius: 8px; 
+    background-color: #0d1b2a; 
+    border: 1px solid #3e506e; 
+    }
+    .feedback p { margin: 0 0 10px 0; font-weight: bold; }
+    .explanation-box { color: #a0a8b4; font-style: italic; }
+    #result { 
+    margin-top: 20px; 
+    padding: 25px; 
+    background-color: #0d1b2a; 
+    border-radius: 12px; 
+    text-align: center; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+    #result h2 { margin-bottom: 15px; }
+    #result p { font-size: 1.2em; margin-bottom: 20px; }
+
+    .restart-button, .reset-button { 
+    background-color: #ffc107 !important; 
+    color: #333 !important; 
+    border: none; 
+    padding: 12px 25px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    .restart-button:hover, .reset-button:hover { 
+    background-color: #e0a800 !important; 
+    transform: translateY(-2px); 
+    }
+
+    /* --- PROGRESS --- */
+    #mode-banner { 
+    background-color: #2c3e50; 
+    color: #fff; 
+    padding: 10px 15px; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 1.1em; 
+    border-radius: 8px; 
+    margin-bottom: 15px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    }
+    .demo-mode-banner { border: 2px solid #ffc107; color: #ffc107 !important; }
+    .full-access-banner { border: 2px solid #28a745; color: #28a745 !important; }
+    #progress-container { 
+    width: 100%; 
+    background-color: #3e506e; 
+    border-radius: 5px; 
+    margin-top: 10px; 
+    height: 20px; 
+    overflow: hidden; 
+    }
+    #progress-fill { 
+    height: 100%; 
+    width: 0%; 
+    background-color: #28a745; 
+    border-radius: 5px; 
+    transition: width 0.4s ease-in-out; 
+    }
+    #progress-text { 
+    text-align: center; 
+    margin-top: 5px; 
+    font-size: 0.9em; 
+    color: #a0a8b4; 
+    }
+
+    /* --- FLASHCARDS --- */
+    .flashcard-nav-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+    }
+    .flashcard-nav-buttons { 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    gap: 15px; 
+    margin-top: 10px; 
+    }
+    .flashcard-nav-buttons button { 
+    flex-grow: 1; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    font-size: 1em; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    .flashcard-nav-buttons button:hover { 
+    background-color: #0056b3; 
+    transform: translateY(-2px); 
+    }
+    .flashcard-nav-buttons button:disabled { 
+    background-color: #4a5460; 
+    cursor: not-allowed; 
+    transform: none; 
+    box-shadow: none; 
+    }
+    .flashcard-wrapper { 
+    perspective: 1000px; 
+    width: 100%; 
+    max-width: 500px; 
+    height: 300px; 
+    margin: 30px auto; 
+    overflow: hidden; 
+    }
+    .flashcard { 
+    width: 100%; 
+    height: 100%; 
+    position: relative; 
+    transform-style: preserve-3d; 
+    transition: transform 0.6s ease-in-out; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    cursor: pointer; 
+    }
+    .flashcard.back-active { transform: rotateY(180deg); }
+    .card-face { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    backface-visibility: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    border-radius: 12px; 
+    font-size: 1.3em; 
+    text-align: center; 
+    overflow-y: auto; 
+    word-break: break-word; 
+    overflow-wrap: break-word; 
+    transition: opacity 0.4s ease-in-out; 
+    }
+    .card-front { background-color: #2b3a55; color: #e0e6ed; }
+    .card-back { 
+    background-color: #4a5460; 
+    color: #e0e6ed; 
+    transform: rotateY(180deg); 
+    opacity: 0; 
+    }
+    .flashcard.back-active .card-front { opacity: 0; }
+    .flashcard.back-active .card-back { opacity: 1; }
+    .flip-button { background-color: #ffc107; color: #333; margin-top: 15px; }
+    .flip-button:hover { background-color: #e0a800; }
+    .back-to-topics-button { 
+    background-color: #6c757d; 
+    margin-top: 15px; 
+    margin-left: 10px; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    font-size: 1em; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    }
+    .back-to-topics-button:hover { 
+    background-color: #5a6268; 
+    transform: translateY(-2px); 
+    }
+    .flashcard-topic-list h2 { text-align: center; margin-bottom: 25px; }
+    .flashcard-topic-buttons { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    }
+    .flashcard-topic-buttons button { 
+    background-color: #28a745; 
+    color: white; 
+    padding: 15px 20px; 
+    font-size: 1.1em; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    border: none; 
+    transition: all 0.3s ease; 
+    margin-top: 0; 
+    }
+    .flashcard-topic-buttons button:hover { 
+    background-color: #218838; 
+    transform: translateY(-3px); 
+    }
+
+    /* --- NOTIFICATIONS --- */
+    .announcement, .price-list { 
+    background-color: #0d1b2a; 
+    border: 1px solid #007bff; 
+    border-radius: 10px; 
+    padding: 15px; 
+    margin-bottom: 25px; 
+    font-size: 0.95em; 
+    line-height: 1.5; 
+    text-align: left; 
+    }
+    .announcement strong, .price-list strong { color: #72efdd; }
+    .announcement a, .price-list a { color: #007bff; text-decoration: none; }
+    .announcement a:hover, .price-list a:hover { text-decoration: underline; }
+    .landing-whatsapp-button { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #25D366; 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 2rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    text-decoration: none; 
+    transition: transform 0.3s ease; 
+    z-index: 2000; 
+    border: 2px solid white; 
+    }
+    .landing-whatsapp-button:hover { 
+    background-color: #128C7E; 
+    transform: scale(1.1); 
+    }
+    .whatsapp-buttons { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 30px; 
+    margin-bottom: 20px; 
+    }
+
+    #app-notification { 
+    position: fixed; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #333; 
+    color: white; 
+    padding: 12px 25px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    z-index: 99999; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    max-width: 90%; 
+    text-align: center; 
+    }
+    #app-notification.show { opacity: 1; visibility: visible; }
+    #app-notification .close-btn { 
     background: none; 
     border: none; 
     color: white; 
-    font-size: 28px; 
+    font-size: 1.2em; 
     cursor: pointer; 
-    padding: 0; 
-    width: 30px; 
-    height: 30px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 50%; 
-    box-shadow: none; 
-    margin-top: 0; 
-}
-.close-print-preview:hover { 
-    background: rgba(255, 255, 255, 0.2); 
-    transform: none; 
-}
-.print-preview-body { 
-    padding: 25px; 
-    overflow-y: auto; 
-    flex-grow: 1; 
-    background: #f9f9f9; 
-    position: relative; 
-    min-height: 400px; 
-    max-height: calc(90vh - 130px);
-}
-.print-preview-body::before { 
-    content: "Kaeri EdTech\A 0964312504"; 
-    white-space: pre; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%) rotate(-45deg); 
-    font-size: 5rem; 
-    text-align: center; 
-    line-height: 1.2; 
-    color: rgba(0, 0, 0, 0.05); 
-    z-index: 0; 
-    font-weight: bold; 
-    pointer-events: none; 
-    opacity: 0.7; 
-}
-.print-preview-body > * { position: relative; z-index: 1; }
-.print-modal-footer { 
-    background: #f5f5f5; 
-    padding: 15px 20px; 
-    display: flex; 
-    justify-content: flex-end; 
-    gap: 15px; 
-    border-top: 1px solid #ddd; 
-}
-.cancel-btn { 
-    background: #6c757d; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    border-radius: 6px; 
-    cursor: pointer; 
-    font-size: 1em; 
-    margin-top: 0; 
-}
-.print-btn { 
-    background: #28a745; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    border-radius: 6px; 
-    cursor: pointer; 
-    font-size: 1em; 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-    margin-top: 0; 
-}
-.cancel-btn:hover { background: #5a6268; transform: translateY(0); }
-.print-btn:hover { background: #218838; transform: translateY(0); }
-
-/* === PREVIEW CONTENT === */
-.preview-header { 
-    text-align: center; 
-    border-bottom: 2px solid #007bff; 
-    margin-bottom: 25px; 
-    padding-bottom: 15px; 
-}
-.preview-header h1 { color: #333; margin-bottom: 10px; }
-.preview-step { 
-    margin-bottom: 25px; 
-    border-left: 4px solid #007bff; 
-    padding-left: 20px; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
-    background: white; 
-    border-radius: 6px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-}
-.preview-q { font-weight: bold; margin-bottom: 8px; color: #333; }
-.preview-ans { 
-    color: #28a745; 
-    font-weight: bold; 
-    margin: 8px 0; 
-    padding-left: 10px; 
-    border-left: 2px solid #28a745; 
-}
-.preview-exp { 
-    font-style: italic; 
-    color: #555; 
-    margin-top: 8px; 
-    padding: 8px; 
-    background: #f5f5f5; 
-    border-radius: 4px; 
-}
-
-/* === PRINT OUTPUT === */
-@media print {
-    body * { visibility: hidden !important; }
-    .print-modal, .print-btn, .cancel-btn, .modal { display: none !important; }
-    #printable-summary, #printable-summary * { visibility: visible !important; }
-    #printable-summary { 
-        display: block !important; 
-        position: absolute !important; 
-        top: 0 !important; 
-        left: 0 !important; 
-        width: 100% !important; 
-        background: white !important; 
-        color: black !important; 
-        padding: 20px !important; 
-        font-family: 'Times New Roman', serif !important; 
-        line-height: 1.6 !important; 
-        font-size: 12pt !important; 
+    padding: 0 5px; 
     }
-    body { 
-        background: white !important; 
-        margin: 0 !important; 
-        padding: 0 !important; 
-        overflow: visible !important; 
+    #app-notification.info { background-color: #17a2b8; }
+    #app-notification.success { background-color: #28a745; }
+    #app-notification.warning { background-color: #ffc107; color: #333; }
+    #app-notification.error { background-color: #dc3545; }
+
+    /* === COMPACT PAYMENT MODAL === */
+    .modal { 
+        display: none; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.85); 
+        z-index: 9999; 
+        overflow-y: auto; 
+        padding: 20px; 
+        box-sizing: border-box; 
+        align-items: center; 
+        justify-content: center; 
     }
-    #printable-summary::before { 
+    .modal.show { 
+        display: flex; 
+        align-items: flex-start; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .modal-content { 
+        background: white; 
+        color: #333; 
+        width: 95%; 
+        max-width: 400px; 
+        max-height: 90vh; 
+        border-radius: 12px; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+        padding: 0; 
+        overflow: hidden; 
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+    }
+    .pay-header { 
+        background: linear-gradient(135deg, #007bff, #6610f2); 
+        color: white; 
+        padding: 15px; 
+        text-align: center; 
+    }
+    .pay-header h2 { color: white; margin: 0; font-size: 1.4rem; }
+    .pay-header p { margin: 5px 0 0; font-size: 0.9em; opacity: 0.9; }
+    .pay-body { 
+        padding: 20px; 
+        overflow-y: auto;
+        flex-grow: 1;
+        max-height: calc(90vh - 150px);
+    } 
+    .pay-price { 
+        font-size: 1.8rem; 
+        color: #28a745; 
+        font-weight: bold; 
+        text-align: center; 
+        display: block; 
+        margin: 10px 0; 
+    }
+    .payment-info-box {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 0.85em;
+        color: #495057;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    .pay-input { 
+        width: 100%; 
+        padding: 12px; 
+        font-size: 1em; 
+        border: 2px solid #ddd; 
+        border-radius: 8px; 
+        margin-top: 5px; 
+        margin-bottom: 10px; 
+        box-sizing: border-box; 
+    }
+    .pay-input:focus { border-color: #007bff; outline: none; }
+    .pay-btn { 
+        width: 100%; 
+        background-color: #28a745; 
+        color: white; 
+        font-size: 1.1em; 
+        padding: 12px; 
+        margin-top: 5px; 
+        border-radius: 8px; 
+        border: none; 
+        box-shadow: none; 
+    }
+    .pay-btn:hover { background-color: #218838; transform: none; }
+    .cancel-pay-btn {
+        width: 100%;
+        background: none;
+        border: none;
+        color: #6c757d;
+        padding: 10px;
+        margin-top: 5px;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 0.9em;
+        box-shadow: none;
+    }
+    .cancel-pay-btn:hover { color: #343a40; background: none; transform: none; box-shadow: none; }
+    .close-modal { 
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background: transparent; 
+        border: none; 
+        color: white; 
+        font-size: 1.5rem; 
+        cursor: pointer; 
+        box-shadow: none; 
+        margin: 0; 
+        padding: 0; 
+    }
+
+    #buy-now-link button:hover {
+        background: linear-gradient(135deg, #0056b3, #004085) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        #buy-now-link button {
+            padding: 10px !important;
+            font-size: 0.95em !important;
+        }
+        .modal.show {
+            padding: 10px;
+            align-items: flex-start;
+        }
+        .modal-content {
+            width: 100%;
+            max-height: 95vh;
+        }
+        .pay-body {
+            max-height: calc(95vh - 150px);
+        }
+    }
+
+    /* === PRINT MODAL === */
+    .print-modal { 
+        display: none; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.85); 
+        z-index: 9999; 
+        overflow-y: auto; 
+        padding: 20px; 
+        box-sizing: border-box; 
+    }
+    .print-modal.show { 
+        display: flex; 
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .print-modal-content { 
+        background: white; 
+        color: #333; 
+        width: 90%; 
+        max-width: 800px; 
+        max-height: 90vh; 
+        border-radius: 12px; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+        display: flex; 
+        flex-direction: column; 
+        overflow: hidden; 
+    }
+    .print-modal-header { 
+        background: #007bff; 
+        color: white; 
+        padding: 15px 20px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        border-bottom: 1px solid #ddd; 
+    }
+    .print-modal-header h2 { margin: 0; color: white; text-align: left; }
+    .close-print-preview { 
+        background: none; 
+        border: none; 
+        color: white; 
+        font-size: 28px; 
+        cursor: pointer; 
+        padding: 0; 
+        width: 30px; 
+        height: 30px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        border-radius: 50%; 
+        box-shadow: none; 
+        margin-top: 0; 
+    }
+    .close-print-preview:hover { 
+        background: rgba(255, 255, 255, 0.2); 
+        transform: none; 
+    }
+    .print-preview-body { 
+        padding: 25px; 
+        overflow-y: auto; 
+        flex-grow: 1; 
+        background: #f9f9f9; 
+        position: relative; 
+        min-height: 400px; 
+        max-height: calc(90vh - 130px);
+    }
+    .print-preview-body::before { 
         content: "Kaeri EdTech\A 0964312504"; 
         white-space: pre; 
-        position: fixed !important; 
-        top: 50% !important; 
-        left: 50% !important; 
-        transform: translate(-50%, -50%) rotate(-45deg) !important; 
-        font-size: 6rem !important; 
-        text-align: center !important; 
-        line-height: 1.2 !important; 
-        color: rgba(0, 0, 0, 0.05) !important; 
-        z-index: -1 !important; 
-        font-weight: bold !important; 
-        pointer-events: none !important; 
-        opacity: 1 !important; 
-        width: 100vw !important; 
-        height: 100vh !important; 
-    }
-    .pdf-header { 
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%) rotate(-45deg); 
+        font-size: 5rem; 
         text-align: center; 
-        border-bottom: 2px solid #000; 
+        line-height: 1.2; 
+        color: rgba(0, 0, 0, 0.05); 
+        z-index: 0; 
+        font-weight: bold; 
+        pointer-events: none; 
+        opacity: 0.7; 
+    }
+    .print-preview-body > * { position: relative; z-index: 1; }
+    .print-modal-footer { 
+        background: #f5f5f5; 
+        padding: 15px 20px; 
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 15px; 
+        border-top: 1px solid #ddd; 
+    }
+    .cancel-btn { 
+        background: #6c757d; 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        border-radius: 6px; 
+        cursor: pointer; 
+        font-size: 1em; 
+        margin-top: 0; 
+    }
+    .print-btn { 
+        background: #28a745; 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        border-radius: 6px; 
+        cursor: pointer; 
+        font-size: 1em; 
+        display: flex; 
+        align-items: center; 
+        gap: 8px; 
+        margin-top: 0; 
+    }
+    .cancel-btn:hover { background: #5a6268; transform: translateY(0); }
+    .print-btn:hover { background: #218838; transform: translateY(0); }
+
+    /* === PREVIEW CONTENT === */
+    .preview-header { 
+        text-align: center; 
+        border-bottom: 2px solid #007bff; 
         margin-bottom: 25px; 
         padding-bottom: 15px; 
-        page-break-after: avoid; 
     }
-    .pdf-step { 
-        margin-bottom: 30px; 
+    .preview-header h1 { color: #333; margin-bottom: 10px; }
+    .preview-step { 
+        margin-bottom: 25px; 
         border-left: 4px solid #007bff; 
         padding-left: 20px; 
-        page-break-inside: avoid; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        background: white; 
+        border-radius: 6px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     }
-    .pdf-q { font-weight: bold; margin-bottom: 8px; color: #333; }
-    .pdf-ans { color: #28a745; font-weight: bold; margin: 8px 0; }
-    .pdf-exp { font-style: italic; color: #555; margin-top: 8px; }
-    .pdf-step:nth-child(10n) { page-break-before: always; }
-}
+    .preview-q { font-weight: bold; margin-bottom: 8px; color: #333; }
+    .preview-ans { 
+        color: #28a745; 
+        font-weight: bold; 
+        margin: 8px 0; 
+        padding-left: 10px; 
+        border-left: 2px solid #28a745; 
+    }
+    .preview-exp { 
+        font-style: italic; 
+        color: #555; 
+        margin-top: 8px; 
+        padding: 8px; 
+        background: #f5f5f5; 
+        border-radius: 4px; 
+    }
 
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 992px) { 
-    .quiz-container { margin: 40px 20px; padding: 30px 20px; } 
-}
-@media (max-width: 768px) {
-    body { padding-top: 110px; } 
-    body.view-course { padding-top: 110px; } 
-    #fixed-header { padding: 10px 15px; }
-    .quiz-container { margin: 30px 15px; padding: 25px 15px; } 
-    h1 { font-size: 2.2rem; }
-    .mode-buttons { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
-    .mode-buttons button { padding: 12px 15px; font-size: 1em; }
-    .options label { padding: 10px; }
-    .question-header h3 { font-size: 1.2em; } 
-    .question-header span { font-size: 0.75em; padding: 4px 8px; }
-    .whatsapp-buttons { flex-direction: column; align-items: center; gap: 10px; margin-top: 20px; margin-bottom: 15px; }
-    .whatsapp-buttons button { width: auto; padding: 10px 18px; font-size: 0.9em; }
-    .flashcard-wrapper { height: 250px; } 
-    .card-face { font-size: 1.1em; padding: 15px; }
-    .header-grid { grid-template-columns: 1fr; gap: 5px; text-align: center; } 
-    #unlock-btn { width: 100%; margin-top: 5px; }
-    .modal, .print-modal {
-        padding: 10px;
+    /* === PRINT OUTPUT === */
+    @media print {
+        body * { visibility: hidden !important; }
+        .print-modal, .print-btn, .cancel-btn, .modal { display: none !important; }
+        #printable-summary, #printable-summary * { visibility: visible !important; }
+        #printable-summary { 
+            display: block !important; 
+            position: absolute !important; 
+            top: 0 !important; 
+            left: 0 !important; 
+            width: 100% !important; 
+            background: white !important; 
+            color: black !important; 
+            padding: 20px !important; 
+            font-family: 'Times New Roman', serif !important; 
+            line-height: 1.6 !important; 
+            font-size: 12pt !important; 
+        }
+        body { 
+            background: white !important; 
+            margin: 0 !important; 
+            padding: 0 !important; 
+            overflow: visible !important; 
+        }
+        #printable-summary::before { 
+            content: "Kaeri EdTech\A 0964312504"; 
+            white-space: pre; 
+            position: fixed !important; 
+            top: 50% !important; 
+            left: 50% !important; 
+            transform: translate(-50%, -50%) rotate(-45deg) !important; 
+            font-size: 6rem !important; 
+            text-align: center !important; 
+            line-height: 1.2 !important; 
+            color: rgba(0, 0, 0, 0.05) !important; 
+            z-index: -1 !important; 
+            font-weight: bold !important; 
+            pointer-events: none !important; 
+            opacity: 1 !important; 
+            width: 100vw !important; 
+            height: 100vh !important; 
+        }
+        .pdf-header { 
+            text-align: center; 
+            border-bottom: 2px solid #000; 
+            margin-bottom: 25px; 
+            padding-bottom: 15px; 
+            page-break-after: avoid; 
+        }
+        .pdf-step { 
+            margin-bottom: 30px; 
+            border-left: 4px solid #007bff; 
+            padding-left: 20px; 
+            page-break-inside: avoid; 
+        }
+        .pdf-q { font-weight: bold; margin-bottom: 8px; color: #333; }
+        .pdf-ans { color: #28a745; font-weight: bold; margin: 8px 0; }
+        .pdf-exp { font-style: italic; color: #555; margin-top: 8px; }
+        .pdf-step:nth-child(10n) { page-break-before: always; }
     }
-    .modal-content, .print-modal-content {
-        width: 100%;
-        max-height: 95vh;
+
+    /* === RESPONSIVE DESIGN === */
+    @media (max-width: 992px) { 
+        .quiz-container { margin: 40px 20px; padding: 30px 20px; } 
     }
-    .pay-body {
-        max-height: calc(95vh - 150px);
+    @media (max-width: 768px) {
+        body { padding-top: 110px; } 
+        body.view-course { padding-top: 110px; } 
+        #fixed-header { padding: 10px 15px; }
+        .quiz-container { margin: 30px 15px; padding: 25px 15px; } 
+        h1 { font-size: 2.2rem; }
+        .mode-buttons { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+        .mode-buttons button { padding: 12px 15px; font-size: 1em; }
+        .options label { padding: 10px; }
+        .question-header h3 { font-size: 1.2em; } 
+        .question-header span { font-size: 0.75em; padding: 4px 8px; }
+        .whatsapp-buttons { flex-direction: column; align-items: center; gap: 10px; margin-top: 20px; margin-bottom: 15px; }
+        .whatsapp-buttons button { width: auto; padding: 10px 18px; font-size: 0.9em; }
+        .flashcard-wrapper { height: 250px; } 
+        .card-face { font-size: 1.1em; padding: 15px; }
+        .header-grid { grid-template-columns: 1fr; gap: 5px; text-align: center; } 
+        #unlock-btn { width: 100%; margin-top: 5px; }
+        .modal, .print-modal { padding: 10px; }
+        .modal-content, .print-modal-content { width: 100%; max-height: 95vh; }
+        .pay-body { max-height: calc(95vh - 150px); }
+        .print-preview-body { max-height: calc(95vh - 130px); padding: 15px; }
+        .print-preview-body::before { font-size: 3rem; }
+        .student-board-wrapper { grid-template-columns: 1fr; gap: 15px; }
     }
-    .print-preview-body {
-        max-height: calc(95vh - 130px);
-        padding: 15px;
+    @media (max-width: 480px) {
+        body { padding-top: 100px; } 
+        body.view-course { padding-top: 100px; } 
+        #fixed-header { padding: 8px 10px; }
+        .quiz-container { padding: 15px 10px; }
+        .mode-buttons { grid-template-columns: 1fr; }
+        .flashcard-topic-buttons, .flashcard-nav-buttons { grid-template-columns: 1fr; gap: 10px; }
+        .flashcard { margin: 15px auto; }
+        .mode-buttons button, .flashcard-topic-buttons button, .flashcard-nav-buttons button { font-size: 1em; padding: 14px 18px; }
+        .card-face { font-size: 1em; line-height: 1.4; }
     }
-    .print-preview-body::before {
-        font-size: 3rem;
-    }
-    /* Student Board Responsive */
-    .student-board-wrapper { grid-template-columns: 1fr; gap: 15px; }
-}
-@media (max-width: 480px) {
-    body { padding-top: 100px; } 
-    body.view-course { padding-top: 100px; } 
-    #fixed-header { padding: 8px 10px; }
-    .quiz-container { padding: 15px 10px; }
-    .mode-buttons { grid-template-columns: 1fr; }
-    .flashcard-topic-buttons, .flashcard-nav-buttons { grid-template-columns: 1fr; gap: 10px; }
-    .flashcard { margin: 15px auto; }
-    .mode-buttons button, .flashcard-topic-buttons button, .flashcard-nav-buttons button { 
-        font-size: 1em; 
-        padding: 14px 18px; 
-    }
-    .card-face { font-size: 1em; line-height: 1.4; }
-}
   </style>
 
 </head>
@@ -1186,37 +1194,56 @@ padding: 0 5px;
 
   <div class="quiz-container">
 
+    <!-- :::: VIEW 1: LANDING PAGE :::: -->
+    <div id="landing-view">
+      
+      <!-- Spacing for Fixed Header handled by body padding -->
+      <h1 style="margin-top: 20px;">Select a Course & Term</h1>
 
-<!-- :::: VIEW 1: LANDING PAGE :::: -->
-<div id="landing-view">
-  
-  <!-- Spacing for Fixed Header handled by body padding -->
-  <h1 style="margin-top: 20px;">Select a Course & Term</h1>
+      <!-- === START STUDENT BOARD === -->
+      <div id="student-board" class="student-board-wrapper" style="display: none;">
+        <!-- Announcements Section -->
+        <div id="board-announcements" class="board-section"></div>
+        <!-- Motivation Section -->
+        <div id="board-motivation" class="board-section"></div>
+      </div>
+      <!-- === END STUDENT BOARD === -->
 
-  <!-- === START STUDENT BOARD === -->
-  <div id="student-board" class="student-board-wrapper" style="display: none;">
-    <!-- Announcements Section -->
-    <div id="board-announcements" class="board-section"></div>
-    <!-- Motivation Section -->
-    <div id="board-motivation" class="board-section"></div>
-  </div>
-  <!-- === END STUDENT BOARD === -->
+      <!-- COMMUNITY HUB (Channel + Group) -->
+      <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 35px; flex-wrap: wrap;">
+        <!-- CHANNEL (News) -->
+        <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
+          <button style="background: transparent; border: 1px solid #25D366; color: #25D366; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
+            📢 <strong>Follow Channel</strong>
+          </button>
+        </a>
+        <!-- GROUP (Chat) -->
+        <a href="https://chat.whatsapp.com/FnYwrwYzxP1DScBwqL6dBV?mode=hqrc" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
+          <button style="background: #25D366; border: none; color: white; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
+            👥 <strong>Join Group</strong>
+          </button>
+        </a>
+      </div>
 
-  <!-- COMMUNITY HUB (Channel + Group) -->
-  <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 35px; flex-wrap: wrap;">
-    <!-- CHANNEL (News) -->
-    <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
-      <button style="background: transparent; border: 1px solid #25D366; color: #25D366; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
-        📢 <strong>Follow Channel</strong>
-      </button>
-    </a>
-    <!-- GROUP (Chat) -->
-    <a href="https://chat.whatsapp.com/FjTEHlwUV765J4hcmKh0uB?mode=hqrc" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
-      <button style="background: #25D366; border: none; color: white; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
-        👥 <strong>Join Group</strong>
-      </button>
-    </a>
-  </div>
+      <!-- Course: BI110 -->
+      <div class="course-section">
+        <button class="course-button" onclick="toggleTerms('bi110')">BI110 - Biology</button>
+        <div id="bi110-terms" class="term-buttons">
+          <button onclick="loadCourse('BI110', 'T1', 15)">Term 1</button>
+          <button onclick="loadCourse('BI110', 'T2', 15)">Term 2</button>
+          <button onclick="loadCourse('BI110', 'T3', 20)">Term 3</button>
+        </div>
+      </div>
+
+      <!-- Course: CS110 -->
+      <div class="course-section">
+        <button class="course-button" onclick="toggleTerms('cs110')">CS110 - Computer Science</button>
+        <div id="cs110-terms" class="term-buttons">
+          <button onclick="loadCourse('CS110', 'T1', 15)">Term 1</button>
+          <button onclick="loadCourse('CS110', 'T2', 15)">Term 2</button>
+          <button onclick="loadCourse('CS110', 'T3', 20)">Term 3</button>
+        </div>
+      </div>
 
 <div class="course-section">
 <button class="course-button" onclick="toggleTerms('gm220')">GM220 - Introduction to Geology</button>
@@ -1273,118 +1300,111 @@ padding: 0 5px;
 </div>
 </div>
 
-<!-- :::: VIEW 2: COURSE PAGE :::: -->
-<div id="course-view" style="display: none;">
-  <h1 id="course-title">Study Materials</h1>
-  
-  <p class="announcement">
-    <strong>Important:</strong> The full course is available. Your support keeps the app free & online.
-    <small style="opacity:0.7; font-size:0.8em; display:block; margin-top:5px;">
-      💡 Tip: Press 'U' to unlock full access
-    </small>
-  </p>
-  
-  <p class="price-list">
-    💰 <span id="price-desc">Course</span>: <strong><span id="price-val">K15</span></strong><br>
-    To MTN 0961005406 or Airtel 0974784161<br>
-    Or to Zanaco Account: 4584568100159 (Kaluluma Kaumbu)<br>
-    📞 WhatsApp proof to <a href="https://wa.me/260964312504" target="_blank">0964312504</a>
-  </p>
+    <!-- :::: VIEW 2: COURSE PAGE :::: -->
+    <div id="course-view" style="display: none;">
+      <h1 id="course-title">Study Materials</h1>
+      
+      <p class="announcement">
+        <strong>Important:</strong> The full course is available. Your support keeps the app free & online.
+        <small style="opacity:0.7; font-size:0.8em; display:block; margin-top:5px;">
+          💡 Tip: Press 'U' to unlock full access
+        </small>
+      </p>
+      
+      <p class="price-list">
+        💰 <span id="price-desc">Course</span>: <strong><span id="price-val">K15</span></strong><br>
+        To MTN 0961005406 or Airtel 0974784161<br>
+        Or to Zanaco Account: 4584568100159 (Kaluluma Kaumbu)<br>
+        📞 WhatsApp proof to <a href="https://wa.me/260964312504" target="_blank">0964312504</a>
+      </p>
 
-  <div class="mode-buttons">
-    <button onclick="renderQuiz()">📋 Multiple Choice</button>
-    <button onclick="renderShortAnswers()">✍️ Short Answer</button>
-    <button onclick="renderEssaySimulation()">📝 Essay Simulation</button>
-    <button onclick="renderFlashcardTopics()">🃏 Flashcards</button>
-    <!-- TTS Button will be appended here by JS -->
-  </div>
+      <div class="mode-buttons">
+        <button onclick="renderQuiz()">📋 Multiple Choice</button>
+        <button onclick="renderShortAnswers()">✍️ Short Answer</button>
+        <button onclick="renderEssaySimulation()">📝 Essay Simulation</button>
+        <button onclick="renderFlashcardTopics()">🃏 Flashcards</button>
+        <!-- TTS and Docs Buttons will be appended here by JS -->
+      </div>
 
-  <div id="quiz-form"></div>
-  <div id="result"></div>
+      <div id="quiz-form"></div>
+      <div id="result"></div>
 
-  <button onclick="backToMenu()" class="back-button">⬅️ Back to Course Selection</button>
-  
-  <!-- FOOTER LINKS -->
-  <div class="whatsapp-buttons" style="margin-top:30px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
-    <p style="margin: 0; color: #8892b0; font-size: 0.9em;">Stay connected with us:</p>
-    <div style="display: flex; gap: 15px; width: 100%; justify-content: center; flex-wrap: wrap;">
-        <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration:none;">
-        <button style="background: transparent; border: 1px solid #25D366; color: #25D366; padding: 10px 20px; font-size: 0.95em;">
-            📢 Official Channel
-        </button>
-        </a>
-        <a href="https://chat.whatsapp.com/FnYwrwYzxP1DScBwqL6dBV?mode=hqrc" target="_blank" style="text-decoration:none;">
-        <button style="background: #25D366; color: white; padding: 10px 20px; font-size: 0.95em;">
-            👥 Discussion Group
-        </button>
-        </a>
+      <button onclick="backToMenu()" class="back-button">⬅️ Back to Course Selection</button>
+      
+      <!-- FOOTER LINKS -->
+      <div class="whatsapp-buttons" style="margin-top:30px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+        <p style="margin: 0; color: #8892b0; font-size: 0.9em;">Stay connected with us:</p>
+        <div style="display: flex; gap: 15px; width: 100%; justify-content: center; flex-wrap: wrap;">
+            <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration:none;">
+            <button style="background: transparent; border: 1px solid #25D366; color: #25D366; padding: 10px 20px; font-size: 0.95em;">
+                📢 Official Channel
+            </button>
+            </a>
+            <a href="https://chat.whatsapp.com/FnYwrwYzxP1DScBwqL6dBV?mode=hqrc" target="_blank" style="text-decoration:none;">
+            <button style="background: #25D366; color: white; padding: 10px 20px; font-size: 0.95em;">
+                👥 Discussion Group
+            </button>
+            </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </div>
 
   <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/260964312504" target="_blank" class="landing-whatsapp-button">💬</a>
 
+  <!-- COMPACT PAYMENT MODAL -->
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closePaymentModal()">&times;</button>
+      <div class="pay-header">
+        <h2>🔓 Unlock Access</h2>
+        <p id="pay-term-name">Course</p>
+      </div>
+      <div class="pay-body">
+        <span class="pay-price" id="pay-amount">K15</span>
 
-<a href="https://wa.me/260964312504" target="_blank" class="landing-whatsapp-button">💬</a>
-
-<!-- COMPACT PAYMENT MODAL -->
-
-<div id="payment-modal" class="modal">
-  <div class="modal-content">
-    <button class="close-modal" onclick="closePaymentModal()">&times;</button>
-    <div class="pay-header">
-      <h2>🔓 Unlock Access</h2>
-      <p id="pay-term-name">Course</p>
-    </div>
-    <div class="pay-body">
-      <span class="pay-price" id="pay-amount">K15</span>
-
-
-<!-- PAYMENT OPTIONS SECTION -->
-  <div style="margin-bottom: 20px; border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden;">
-    <!-- OPTION 1: BUY NOW -->
-    <div style="background: #f8f9fa; padding: 15px; border-bottom: 1px solid #dee2e6;">
-      <h4 style="margin: 0 0 10px 0; color: #007bff;">Option 1: Buy New Access</h4>
-      <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
-        Purchase fresh access for <strong id="buy-price">K15</strong>
-      </p>
-      <a id="buy-now-link" href="https://script.google.com/macros/s/AKfycbz2g3G6nxVlUW3afcHFpvKY360Qd-XoAKkJ7Jz20pznebDrpBHGKjgkhgC4DMXijnN_/exec" 
-         target="_blank" 
-         style="text-decoration: none;">
-        <button style="width: 100%; background: linear-gradient(135deg, #007bff, #0056b3); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">
-          🛒 Buy Now (K15)
-        </button>
-      </a>
-    </div>
-    
-    <!-- OPTION 2: ACTIVATE EXISTING -->
-    <div style="padding: 15px;">
-      <h4 style="margin: 0 0 10px 0; color: #28a745;">Option 2: Activate Code</h4>
-      <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
-        Already paid? Enter your access code below
-      </p>
-      <input type="text" id="access-code-input" class="pay-input" placeholder="Enter Access Code">
-      <button class="pay-btn" onclick="verifyCodeFromModal()">✅ Activate Code</button>
+        <!-- PAYMENT OPTIONS SECTION -->
+        <div style="margin-bottom: 20px; border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden;">
+          <!-- OPTION 1: BUY NOW -->
+          <div style="background: #f8f9fa; padding: 15px; border-bottom: 1px solid #dee2e6;">
+            <h4 style="margin: 0 0 10px 0; color: #007bff;">Option 1: Buy New Access</h4>
+            <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
+              Purchase fresh access for <strong id="buy-price">K15</strong>
+            </p>
+            <a id="buy-now-link" href="#" target="_blank" style="text-decoration: none;">
+              <button style="width: 100%; background: linear-gradient(135deg, #007bff, #0056b3); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">
+                🛒 Buy Now (K15)
+              </button>
+            </a>
+          </div>
+          
+          <!-- OPTION 2: ACTIVATE EXISTING -->
+          <div style="padding: 15px;">
+            <h4 style="margin: 0 0 10px 0; color: #28a745;">Option 2: Activate Code</h4>
+            <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
+              Already paid? Enter your access code below
+            </p>
+            <input type="text" id="access-code-input" class="pay-input" placeholder="Enter Access Code">
+            <button class="pay-btn" onclick="verifyCodeFromModal()">✅ Activate Code</button>
+          </div>
+        </div>
+        
+        <!-- PAYMENT INFO BOX -->
+        <div class="payment-info-box">
+          <strong>Send Payment to:</strong><br>
+          • MTN: 0961005406<br>
+          • Airtel: 0974784161<br>
+          • Zanaco: 4584568100159 (Kaluluma Kaumbu)<br>
+          <em style="display:block; margin-top:5px; color:#007bff;">WhatsApp proof to: 0964312504</em>
+        </div>
+        
+        <button class="cancel-pay-btn" onclick="closePaymentModal()">Maybe Later (Use Demo)</button>
+      </div>
     </div>
   </div>
-  
-  <!-- PAYMENT INFO BOX -->
-  <div class="payment-info-box">
-    <strong>Send Payment to:</strong><br>
-    • MTN: 0961005406<br>
-    • Airtel: 0974784161<br>
-    • Zanaco: 4584568100159 (Kaluluma Kaumbu)<br>
-    <em style="display:block; margin-top:5px; color:#007bff;">WhatsApp proof to: 0964312504</em>
-  </div>
-  
-  <button class="cancel-pay-btn" onclick="closePaymentModal()">Maybe Later (Use Demo)</button>
-</div>
-  </div>
-</div>
 
   <!-- PRINT PREVIEW MODAL -->
-
   <div id="print-preview-modal" class="print-modal">
     <div class="print-modal-content">
       <div class="print-modal-header">
@@ -1400,121 +1420,19 @@ padding: 0 5px;
   </div>
 
   <!-- Hidden container for final print -->
-
   <div id="printable-summary"></div>
 
   <!-- ==================== EXTERNAL DATA SCRIPTS ==================== -->
-
   <script src="assets/mcqDa.js"></script>
-
   <script src="assets/shortDa.js"></script>
-
   <script src="assets/essayDa.js"></script>
-
   <script src="assets/flashcards.js"></script>
-
-  <!-- NEW SCRIPTS -->
-
   <script src="assets/announcements.js"></script>
-
   <script src="assets/motivation.js"></script>
 
   <!-- ==================== MAIN LOGIC SCRIPTS ==================== -->
-
   <script src="acc.js"></script>
-
   <script src="script.js"></script>
-
-  <script>
-    // Logic to toggle the landing header when navigating
-    const originalLoadCourse = window.loadCourse;
-    window.loadCourse = function(course, term, price) {
-        document.getElementById('landing-header').style.display = 'none';
-        if (originalLoadCourse) originalLoadCourse(course, term, price);
-    }
-    
-    const originalBackToMenu = window.backToMenu;
-    window.backToMenu = function() {
-        document.getElementById('landing-header').style.display = 'block';
-        if (originalBackToMenu) originalBackToMenu();
-    }
-
-    // STUDENT BOARD RENDER LOGIC (Inline Injection)
-    function renderStudentBoard() {
-        const board = document.getElementById('student-board');
-        const annContainer = document.getElementById('board-announcements');
-        const motContainer = document.getElementById('board-motivation');
-        
-        if (!board || !annContainer || !motContainer) return;
-
-        // 1. Data Validation & Filtering
-        const today = new Date();
-        let validAnnouncements = (typeof announcements !== 'undefined' ? announcements : []).filter(item => {
-            return item.active && (!item.expiry || new Date(item.expiry) >= today);
-        });
-        let validMotivation = typeof motivation !== 'undefined' ? motivation : [];
-
-        // 2. State Determination
-        const hasNews = validAnnouncements.length > 0;
-        const hasQuote = validMotivation.length > 0;
-
-        // 3. Render: Empty State
-        if (!hasNews && !hasQuote) {
-            board.style.display = 'none';
-            return;
-        }
-
-        // 4. Reset & Prepare Layout
-        board.style.display = 'grid';
-        board.classList.remove('layout-full-width');
-
-        // 5. Render Announcement (Priority Item)
-        if (hasNews) {
-            const item = validAnnouncements[0];
-            annContainer.style.display = 'flex';
-            // Apply Flashcard Style Class + Semantic Type
-            annContainer.className = `board-section type-${item.type || 'info'}`;
-            
-            // Icon Helper
-            let icon = '📢';
-            if (item.type === 'warning') icon = '⚠️';
-            if (item.type === 'critical') icon = '🔴';
-            if (item.type === 'success') icon = '🎉';
-
-            annContainer.innerHTML = `
-                <div class="board-announcement-title">
-                    <span>${icon}</span> ${item.title}
-                </div>
-                <div class="board-announcement-body">${item.body}</div>
-            `;
-        } else {
-            annContainer.style.display = 'none';
-        }
-
-        // 6. Render Motivation (Randomized)
-        if (hasQuote) {
-            const randomQuote = validMotivation[Math.floor(Math.random() * validMotivation.length)];
-            motContainer.style.display = 'flex';
-            motContainer.className = 'board-section board-motivation-box';
-            motContainer.innerHTML = `
-                <div class="quote-wrapper">
-                    <span class="quote-icon">💡</span>
-                    <span class="quote-content">"${randomQuote}"</span>
-                </div>
-            `;
-        } else {
-            motContainer.style.display = 'none';
-        }
-
-        // 7. Full Width Override
-        if ((hasNews && !hasQuote) || (!hasNews && hasQuote)) {
-            board.classList.add('layout-full-width');
-        }
-    }
-
-    // Initialize Board
-    document.addEventListener('DOMContentLoaded', () => { setTimeout(renderStudentBoard, 100); });
-  </script>
 
 </body>
 </html>
