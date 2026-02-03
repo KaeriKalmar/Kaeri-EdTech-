@@ -1720,9 +1720,953 @@ const flashcards = {
         "term": "T1",
         "topic": "principles of comminution"
     }
-]
-,
+],
   //GM220 T1
+  "MODULE 1: INTRODUCTION TO GEOLOGY": [
+    {
+      "front": "What is geology?",
+      "back": "Geology (or Geoscience or Earth Science) is the study of Earth in terms of its History, its Materials, the Processes affecting these materials, and the Environment.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "definition of geology"
+    },
+    {
+      "front": "How old is Earth?",
+      "back": "Approximately 4.6 billion years old.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "earth's age"
+    },
+    {
+      "front": "Where is Earth's history recorded?",
+      "back": "Earth's history is recorded in rocks (which serve as the 'book') and minerals (which serve as the 'words').",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "earth's history"
+    },
+    {
+      "front": "What are the main Earth materials that geology studies?",
+      "back": "Rocks and soils, minerals, water, and oil and gas.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "earth materials"
+    },
+    {
+      "front": "What are examples of internal geological processes?",
+      "back": "Magmatism and metamorphism.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "What are examples of surface geological processes?",
+      "back": "Weathering.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "Give examples of natural processes that affect Earth materials.",
+      "back": "Magmatism and volcanism.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "Give an example of artificial or man-induced processes that affect Earth materials.",
+      "back": "Pollution.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "What is mineralogy?",
+      "back": "The study of the chemistry, crystal structure, and physical properties of minerals.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mineralogy"
+    },
+    {
+      "front": "What three aspects of minerals does mineralogy study?",
+      "back": "1. Chemistry of minerals\n2. Crystal structure of minerals\n3. Physical properties of minerals",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mineralogy"
+    },
+    {
+      "front": "What is petrology?",
+      "back": "The study of rocks, their origin, and composition.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "petrology"
+    },
+    {
+      "front": "What are the three main types of rocks studied in petrology?",
+      "back": "1. Igneous rocks\n2. Sedimentary rocks\n3. Metamorphic rocks",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "petrology"
+    },
+    {
+      "front": "What is structural geology?",
+      "back": "Deals with the form, arrangement, and internal structure of rocks, especially those resulting from deformation.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "structural geology"
+    },
+    {
+      "front": "What does structural geology particularly focus on?",
+      "back": "Rocks that have been deformed.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "structural geology"
+    },
+    {
+      "front": "What is stratigraphy/sedimentology?",
+      "back": "The study of the layering of rocks and their sequences.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "stratigraphy"
+    },
+    {
+      "front": "What does stratigraphy examine?",
+      "back": "The layering of rocks and their sequences.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "stratigraphy"
+    },
+    {
+      "front": "What is geochemistry?",
+      "back": "Uses the tools and principles of chemistry to explain the mechanisms behind major geological systems in the Earth.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geochemistry"
+    },
+    {
+      "front": "What scientific discipline does geochemistry combine with geology?",
+      "back": "Chemistry.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geochemistry"
+    },
+    {
+      "front": "What is economic geology?",
+      "back": "Concerned with materials that can be used for economic or industrial purposes.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "economic geology"
+    },
+    {
+      "front": "What is the practical focus of economic geology?",
+      "back": "Materials that have economic or industrial value and can be extracted and used profitably.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "economic geology"
+    },
+    {
+      "front": "What is mining geology?",
+      "back": "Concerned with the extraction of valuable minerals and other geological materials from the Earth.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mining geology"
+    },
+    {
+      "front": "What is the main activity involved in mining geology?",
+      "back": "Extraction of valuable minerals and geological materials from the Earth.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mining geology"
+    },
+    {
+      "front": "What is engineering geology?",
+      "back": "Focuses on the stability of materials for building things.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "engineering geology"
+    },
+    {
+      "front": "Why is engineering geology important?",
+      "back": "Assesses the stability of geological materials to ensure safe construction of buildings and infrastructure.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "engineering geology"
+    },
+    {
+      "front": "What is hydrogeology?",
+      "back": "The study of groundwater and its interaction with rocks and minerals.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "hydrogeology"
+    },
+    {
+      "front": "What two main aspects does hydrogeology study?",
+      "back": "1. Groundwater\n2. The interaction of groundwater with rocks and minerals",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "hydrogeology"
+    },
+    {
+      "front": "What is environmental geology?",
+      "back": "The application of geological principles in solving environmental problems.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "environmental geology"
+    },
+    {
+      "front": "How does environmental geology contribute to society?",
+      "back": "Applies geological knowledge and principles to identify, understand, and solve environmental problems.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "environmental geology"
+    },
+    {
+      "front": "What is petroleum geology?",
+      "back": "Concerned with the discovery of oil, gas, and other hydrocarbons.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "petroleum geology"
+    },
+    {
+      "front": "What materials does petroleum geology focus on discovering?",
+      "back": "Oil, gas, and other hydrocarbons.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "petroleum geology"
+    },
+    {
+      "front": "What is volcanology?",
+      "back": "The study of active and ancient volcanoes.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "volcanology"
+    },
+    {
+      "front": "What two types of volcanoes does volcanology study?",
+      "back": "1. Active volcanoes\n2. Ancient volcanoes",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "volcanology"
+    },
+    {
+      "front": "What is geomorphology?",
+      "back": "The study of landforms and the processes that shape them.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geomorphology"
+    },
+    {
+      "front": "What two aspects does geomorphology examine?",
+      "back": "1. Landforms\n2. The processes that shape landforms",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geomorphology"
+    },
+    {
+      "front": "What is paleontology?",
+      "back": "The study of ancient life through fossils.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "paleontology"
+    },
+    {
+      "front": "What does paleontology study?",
+      "back": "Ancient life (fossils).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "paleontology"
+    },
+    {
+      "front": "What is climatology?",
+      "back": "The study of past, present, and future climate interactions.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "climatology"
+    },
+    {
+      "front": "What time periods does climatology cover?",
+      "back": "Past, present, and future climate.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "climatology"
+    },
+    {
+      "front": "Why is geology described as 'such a broad field'?",
+      "back": "Because it has a rich collection of many disciplines or specializations, and the career choices are 'endless.'",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geology as a field"
+    },
+    {
+      "front": "List at least 10 specialized branches of geology.",
+      "back": "1. Mineralogy\n2. Petrology\n3. Structural geology\n4. Stratigraphy/Sedimentology\n5. Geochemistry\n6. Economic geology\n7. Mining geology\n8. Engineering geology\n9. Hydrogeology\n10. Environmental geology\n11. Petroleum geology\n12. Volcanology\n13. Geomorphology\n14. Paleontology\n15. Climatology",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geology branches"
+    },
+    {
+      "front": "What are the two main educational levels for geologists mentioned in the course?",
+      "back": "1. BSc. Mining and Exploration Geology (produces General Geologists)\n2. MSc. and PhD. (produces Specialized Geologists)",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geology education"
+    },
+    {
+      "front": "What type of geologist does a BSc. Mining and Exploration Geology produce?",
+      "back": "A General Geologist.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geology education"
+    },
+    {
+      "front": "What type of geologist do MSc. and PhD. programs produce?",
+      "back": "Specialized Geologists.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geology education"
+    },
+    {
+      "front": "What job positions can geologists hold in exploration companies?",
+      "back": "Exploration Geologist and Project Manager.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "exploration careers"
+    },
+    {
+      "front": "What is an Exploration Geologist?",
+      "back": "A professional who works in exploration companies to locate and identify mineral deposits and resources.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "exploration careers"
+    },
+    {
+      "front": "What job positions can geologists hold in mining organizations?",
+      "back": "Mining Geologist and Mine Manager.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mining careers"
+    },
+    {
+      "front": "What is a Mining Geologist?",
+      "back": "A professional who works in mining organizations and is involved in the extraction and management of mineral resources.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mining careers"
+    },
+    {
+      "front": "Name four government ministries or organizations where geologists can work in Zambia.",
+      "back": "1. Ministry of Mines & Minerals Development\n2. GSZ (Geological Survey of Zambia)\n3. WARMA (Water Resources Management Authority)\n4. ZEMA (Zambia Environmental Management Agency)",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "government careers"
+    },
+    {
+      "front": "What does GSZ stand for?",
+      "back": "Geological Survey of Zambia.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "government organizations"
+    },
+    {
+      "front": "What does WARMA stand for?",
+      "back": "Water Resources Management Authority.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "government organizations"
+    },
+    {
+      "front": "What does ZEMA stand for?",
+      "back": "Zambia Environmental Management Agency.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "government organizations"
+    },
+    {
+      "front": "What geological work is relevant to WARMA?",
+      "back": "Hydrogeology (the study of groundwater and its interaction with rocks and minerals).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "government organizations"
+    },
+    {
+      "front": "What geological work is relevant to ZEMA?",
+      "back": "Environmental geology (the application of geological principles in solving environmental problems).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "government organizations"
+    },
+    {
+      "front": "What is a lapidary?",
+      "back": "A business or establishment that works with gemstones.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "other careers"
+    },
+    {
+      "front": "What position can a geologist hold in a lapidary?",
+      "back": "Gemmologist.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "other careers"
+    },
+    {
+      "front": "What is a Gemmologist?",
+      "back": "A professional who specializes in the study and identification of gemstones.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "other careers"
+    },
+    {
+      "front": "Where can geologists work in academia?",
+      "back": "Universities and research institutions as academics.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "academic careers"
+    },
+    {
+      "front": "Name three other career opportunities for geologists beyond mining and exploration.",
+      "back": "1. Managers of various projects (e.g., World Bank projects)\n2. Entrepreneurs (e.g., owning small-scale mines of gemstones and other minerals)\n3. Working in NGOs as activists",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "other careers"
+    },
+    {
+      "front": "How can a geologist be an entrepreneur?",
+      "back": "By owning small-scale mines of gemstones and other minerals.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "entrepreneurship"
+    },
+    {
+      "front": "Can geologists work internationally?",
+      "back": "Yes, geologists can work outside Zambia in mining, exploration and private organizations, government, and universities.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "international careers"
+    },
+    {
+      "front": "Which branch of geology is most relevant for work in exploration companies?",
+      "back": "Economic geology and exploration geology (which applies principles from multiple branches to locate mineral deposits).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology is most relevant for work in WARMA?",
+      "back": "Hydrogeology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology is most relevant for work in ZEMA?",
+      "back": "Environmental geology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology is most relevant for working as a Gemmologist?",
+      "back": "Mineralogy.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branches of geology are most important for mining operations?",
+      "back": "Mining geology (extraction of materials), economic geology (identifying valuable materials), structural geology (understanding rock arrangement), and engineering geology (ensuring stability).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology studies the materials needed for construction?",
+      "back": "Engineering geology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology is concerned with oil and gas discovery?",
+      "back": "Petroleum geology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology would be important for predicting volcanic eruptions?",
+      "back": "Volcanology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology studies how rivers and valleys are formed?",
+      "back": "Geomorphology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "Which branch of geology uses fossils to understand Earth's past?",
+      "back": "Paleontology.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career applications"
+    },
+    {
+      "front": "What is the difference between a rock and a mineral?",
+      "back": "Minerals are naturally occurring substances with specific chemistry and crystal structure, while rocks are composed of one or more minerals and are studied for their origin and composition.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological materials"
+    },
+    {
+      "front": "Why are rocks called the 'book' of Earth's history?",
+      "back": "Because they record Earth's 4.6 billion year history.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological materials"
+    },
+    {
+      "front": "Why are minerals called the 'words' of Earth's history?",
+      "back": "Because they are the specific components that make up rocks and contain detailed information about Earth's past.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological materials"
+    },
+    {
+      "front": "What Earth materials does economic geology focus on?",
+      "back": "Materials that can be used for economic or industrial purposes, including valuable minerals, metals, and other geological materials.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological materials"
+    },
+    {
+      "front": "What Earth material does hydrogeology specifically study?",
+      "back": "Water, particularly groundwater and its interaction with rocks and minerals.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological materials"
+    },
+    {
+      "front": "What Earth materials does petroleum geology focus on?",
+      "back": "Oil, gas, and other hydrocarbons.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological materials"
+    },
+    {
+      "front": "What is magmatism?",
+      "back": "An internal geological process involving the formation and movement of magma within the Earth.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "What is volcanism?",
+      "back": "A natural geological process involving the eruption of molten rock, gases, and other materials from volcanoes onto the Earth's surface.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "What is metamorphism?",
+      "back": "An internal geological process where rocks are transformed by heat and pressure within the Earth.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "What is weathering?",
+      "back": "A surface geological process where rocks and minerals break down due to exposure to atmospheric conditions, water, and biological activity.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "How does pollution relate to geology?",
+      "back": "Pollution is an artificial or man-induced process that affects Earth materials and is studied in environmental geology to understand and solve environmental problems.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "Are all geological processes natural?",
+      "back": "No, geological processes include both natural processes (such as magmatism and volcanism) and artificial or man-induced processes (such as pollution).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological processes"
+    },
+    {
+      "front": "How does mineralogy support economic geology?",
+      "back": "Mineralogy provides knowledge about the chemistry, crystal structure, and physical properties of minerals, which helps economic geology identify and evaluate materials of economic or industrial value.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "How does structural geology help mining geology?",
+      "back": "Structural geology provides information about the form, arrangement, and internal structure of rocks, which helps mining geology plan safe and efficient extraction of valuable minerals.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "How does stratigraphy support petroleum geology?",
+      "back": "Stratigraphy studies the layering of rocks and their sequences, which helps petroleum geology identify rock layers where oil, gas, and hydrocarbons may be found.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "How does geochemistry contribute to understanding Earth systems?",
+      "back": "Geochemistry uses chemical tools and principles to explain the mechanisms behind major geological systems in the Earth, helping us understand how elements are distributed and how chemical processes shape our planet.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "Why would a mining company need both a mining geologist and an engineering geologist?",
+      "back": "A mining company needs a mining geologist to extract valuable minerals from the Earth, and an engineering geologist to ensure the stability of materials and structures for safe mining operations and infrastructure.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "How does paleontology help us understand climate change?",
+      "back": "Paleontology studies ancient life through fossils, which provides evidence of past environments and climates. This information, combined with climatology, helps us understand how climate has changed over Earth's history.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "Why is hydrogeology important for environmental geology?",
+      "back": "Hydrogeology studies groundwater and its interaction with rocks and minerals, which is essential for environmental geology's work in solving environmental problems related to water contamination, pollution, and resource management.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "How does geomorphology relate to engineering geology?",
+      "back": "Geomorphology studies landforms and the processes that shape them, which helps engineering geology understand landscape stability, erosion risks, and suitable locations for building structures.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "branch relationships"
+    },
+    {
+      "front": "Why would an exploration company hire a geologist?",
+      "back": "To locate and identify mineral deposits and resources using geological knowledge and techniques.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "What role does a geologist play in a mining organization?",
+      "back": "Manages the extraction of minerals, understands the geology of the ore body, and ensures efficient and safe mining operations.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "Why does WARMA need geologists?",
+      "back": "To study groundwater, manage water resources, and understand how water interacts with rocks and minerals.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "Why does ZEMA need geologists?",
+      "back": "To apply geological principles in solving environmental problems and managing environmental impacts.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "What geological knowledge does a Gemmologist need?",
+      "back": "Knowledge of mineralogy (the chemistry, crystal structure, and physical properties of minerals) to identify, evaluate, and work with gemstones.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "How can geology help in project management (such as World Bank projects)?",
+      "back": "Geology provides understanding of Earth materials, processes, and environmental factors that are essential for managing development projects, infrastructure projects, and resource management initiatives.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "What geological knowledge would be useful for an entrepreneur owning small-scale mines?",
+      "back": "Knowledge of economic geology (identifying valuable materials), mining geology (extraction methods), and potentially environmental geology (managing environmental impacts).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "Why might NGOs hire geologists as activists?",
+      "back": "Geological knowledge is essential for environmental protection, understanding natural resource issues, climate change, and advocating for sustainable practices.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "What makes geologists employable internationally?",
+      "back": "Earth processes, minerals, rocks, and geological principles are universal. The skills learned in geology apply to mining, exploration, environmental issues, and resource management worldwide.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "real-world applications"
+    },
+    {
+      "front": "According to the course, what determines a geologist's career success?",
+      "back": "\"YOU ARE YOUR OWN LIMITATION\" - meaning career success is primarily determined by the geologist's own effort, determination, and initiative, as the market for geology professionals remains strong.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "career success"
+    }
+  ],
+  
+"MODULE 2: THE SOLAR SYSTEM": [
+    {
+      "front": "What is the solar system?",
+      "back": "A gravitationally bound system comprising the Sun, eight planets, dwarf planets, moons, asteroids, and comets.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "definition of solar system"
+    },
+    {
+      "front": "What galaxy is our solar system part of?",
+      "back": "The Milky Way Galaxy.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "galactic context"
+    },
+    {
+      "front": "How old is the solar system?",
+      "back": "4.6 billion years.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "age of solar system"
+    },
+    {
+      "front": "How was the age of the solar system established?",
+      "back": "By dating Earth rocks, lunar rocks, and meteorite rocks.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "dating methods"
+    },
+    {
+      "front": "What is the Nebular Hypothesis?",
+      "back": "The theory that the solar system formed from the gravitational collapse of a giant cloud of gas and dust (nebula).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "origin theory"
+    },
+    {
+      "front": "Describe the initial nebula that formed the solar system.",
+      "back": "Several light-years across, composed mostly of hydrogen and helium, with small amounts of heavier elements.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "solar nebula"
+    },
+    {
+      "front": "How did the Sun form according to the Nebular Hypothesis?",
+      "back": "Gravity condensed the central mass, increasing temperature and density until nuclear fusion ignited.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "sun formation"
+    },
+    {
+      "front": "How did the inner (terrestrial) planets form?",
+      "back": "From rocky materials left after the solar wind blew away lighter gases from the inner disk.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "terrestrial planet formation"
+    },
+    {
+      "front": "How did the outer (giant) planets form?",
+      "back": "In the cooler outer disk where solar wind was weaker, allowing gases and ices to accumulate.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "giant planet formation"
+    },
+    {
+      "front": "What percentage of the solar system's mass does the Sun comprise?",
+      "back": "About 99.86%.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mass distribution"
+    },
+    {
+      "front": "What do the four giant planets account for in terms of mass?",
+      "back": "99% of the remaining mass (after the Sun).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mass distribution"
+    },
+    {
+      "front": "What percentage of the total solar system mass do all other objects make up?",
+      "back": "Less than 0.002%.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mass distribution"
+    },
+    {
+      "front": "What is the Sun primarily composed of?",
+      "back": "Approximately 98% hydrogen and helium (72% H, 26% He, 2% other).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "solar composition"
+    },
+    {
+      "front": "What are the inner planets mostly made of?",
+      "back": "Rocky materials like silicon, iron, and nickel.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "terrestrial composition"
+    },
+    {
+      "front": "What are Jupiter and Saturn mostly made of?",
+      "back": "Gases like hydrogen and helium.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "gas giant composition"
+    },
+    {
+      "front": "Why are Uranus and Neptune called 'ice giants'?",
+      "back": "Because they are composed largely of icy substances like water, ammonia, and methane ices.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "ice giants"
+    },
+    {
+      "front": "Define 'volatiles' in planetary science.",
+      "back": "Substances with low melting points that easily evaporate, such as gases and ices.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planetary materials"
+    },
+    {
+      "front": "List the terrestrial planets.",
+      "back": "Mercury, Venus, Earth, Mars.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet classification"
+    },
+    {
+      "front": "List the gas giants.",
+      "back": "Jupiter and Saturn.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet classification"
+    },
+    {
+      "front": "List the ice giants.",
+      "back": "Uranus and Neptune.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet classification"
+    },
+    {
+      "front": "Name the five officially recognized dwarf planets.",
+      "back": "Pluto, Ceres, Makemake, Haumea, Eris.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "dwarf planets"
+    },
+    {
+      "front": "How many moons are in the solar system?",
+      "back": "At least 290.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "solar system objects"
+    },
+    {
+      "front": "Roughly how many asteroids are there?",
+      "back": "More than 1.3 million.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "solar system objects"
+    },
+    {
+      "front": "How do we study the solar system?",
+      "back": "Using telescopes, radio telescopes, satellites, space probes, and by analyzing light and radiation.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "study methods"
+    },
+    {
+      "front": "Give two examples of space probes.",
+      "back": "Mars Pathfinder and Spirit.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "study tools"
+    },
+    {
+      "front": "Why is studying meteorites important?",
+      "back": "They provide direct physical samples of early solar system material.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "study methods"
+    },
+    {
+      "front": "What is the largest planet in the solar system?",
+      "back": "Jupiter.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet facts"
+    },
+    {
+      "front": "Which planet has the most moons?",
+      "back": "Jupiter (at least 95 confirmed).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet facts"
+    },
+    {
+      "front": "Which planets have no moons?",
+      "back": "Mercury and Venus.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet facts"
+    },
+    {
+      "front": "What is the Great Red Spot?",
+      "back": "A giant storm on Jupiter.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet features"
+    },
+    {
+      "front": "Which planet rotates on its side?",
+      "back": "Uranus.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "planet features"
+    },
+    {
+      "front": "True or False: The solar system is about 20 billion years old.",
+      "back": "False. It is 4.6 billion years old.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "true/false"
+    },
+    {
+      "front": "True or False: Jupiter is a terrestrial planet.",
+      "back": "False. It is a gas giant.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "true/false"
+    },
+    {
+      "front": "True or False: Solar wind helped form the gas giants.",
+      "back": "False. It helped form terrestrial planets by blowing gases away from the inner system.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "true/false"
+    }
+  ],
+  
+  
 
   "MODULE 3: THE EARTH - EVOLUTION, COMPOSITION AND STRUCTURE": [
     {
@@ -2403,6 +3347,345 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "summary"
+    }
+  ],
+  
+  "MODULE 4: PLATE TECTONICS": [
+    {
+      "front": "What are the Intended Learning Objectives (ILOs) for Plate Tectonics?",
+      "back": "Explain the process of tectonic plate motion; recognize and assemble continents of the supercontinent Pangaea; understand the importance of convection currents; explain the significance of convection currents and plate tectonics.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "learning objectives"
+    },
+    {
+      "front": "What is plate tectonics?",
+      "back": "The scientific theory that Earth's lithosphere comprises several large tectonic plates that have been slowly moving since about 3.4 billion years ago.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "definition"
+    },
+    {
+      "front": "What does plate tectonics explain?",
+      "back": "How major landforms are created due to Earth's subterranean movements, including mountains, volcanoes, and earthquakes.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "theory explanation"
+    },
+    {
+      "front": "List six phenomena that plate tectonics provides a unified explanation for.",
+      "back": "1. Igneous, sedimentary, and metamorphic rocks\n2. Distribution of earthquakes and volcanoes\n3. Origin of continents and ocean basins\n4. Distribution of fossil plants and animals\n5. Genesis and destruction of mountain chains\n6. Continental drift",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "unified explanation"
+    },
+    {
+      "front": "What is the world's longest above-water mountain range?",
+      "back": "The Andes, about 7,000 km long.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mountain ranges"
+    },
+    {
+      "front": "What is the longest mountain range if submarine mountains are included?",
+      "back": "The global mid-ocean ridge system, extending about 65,000 km.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mountain ranges"
+    },
+    {
+      "front": "How are mountain chains typically formed?",
+      "back": "By plate tectonics: plates slide over the mantle, driven by heat currents, causing buckling at plate edges to form mountains.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mountain formation"
+    },
+    {
+      "front": "Who is considered the 'Grandfather of Plate Tectonics'?",
+      "back": "Alfred Wegener.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "history"
+    },
+    {
+      "front": "What supercontinent did Alfred Wegener propose?",
+      "back": "Pangaea.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "history"
+    },
+    {
+      "front": "List the six types of evidence for continental drift.",
+      "back": "1. Fit of the continents\n2. Plant fossils (Glossopteris)\n3. Fossil animals (early reptiles)\n4. Paleoclimatologic evidence (evaporites, coals, deserts, glaciers)\n5. Paleomagnetic evidence\n6. Sea floor spreading",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "evidence"
+    },
+    {
+      "front": "What is sea floor spreading?",
+      "back": "A process at mid-ocean ridges where new oceanic crust forms through volcanic activity and moves away from the ridge.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "sea floor spreading"
+    },
+    {
+      "front": "What is a magmatic dike?",
+      "back": "A sheet of igneous rock that cuts across older rock beds, formed when magma fills a fracture and solidifies.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "geological features"
+    },
+    {
+      "front": "What is the range of plate velocities?",
+      "back": "From 1 mm/year to 200 mm/year (8 inches/year).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "plate motion"
+    },
+    {
+      "front": "How are plate movements measured over short periods?",
+      "back": "Using extremely precise positioning equipment (months to decades).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "measurement"
+    },
+    {
+      "front": "How are plate movements measured over geologic time?",
+      "back": "From seafloor spreading rates and fault azimuths in ocean basins.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "measurement"
+    },
+    {
+      "front": "What is the lithosphere?",
+      "back": "The outermost ~100 km of Earth, divided into tectonic plates that 'float' on the asthenosphere.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "structure"
+    },
+    {
+      "front": "How many major tectonic plates are there?",
+      "back": "About 13 major plates and several minor ones.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "plate count"
+    },
+    {
+      "front": "What are the three types of plate boundaries?",
+      "back": "1. Divergent\n2. Convergent\n3. Transform",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "plate boundaries"
+    },
+    {
+      "front": "Describe a divergent plate boundary.",
+      "back": "Plates spread apart; new crust is formed (e.g., mid-ocean ridges).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "divergent boundary"
+    },
+    {
+      "front": "Describe a convergent plate boundary.",
+      "back": "Plates come together; one plate is subducted under another (e.g., subduction zones).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "convergent boundary"
+    },
+    {
+      "front": "Describe a transform plate boundary.",
+      "back": "Plates slide past each other horizontally; crust is neither created nor destroyed (e.g., San Andreas Fault).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "transform boundary"
+    },
+    {
+      "front": "What geological processes are associated with divergent boundaries?",
+      "back": "1. Plate growth\n2. Earthquakes\n3. Volcanism",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "divergent processes"
+    },
+    {
+      "front": "What are mid-ocean ridges?",
+      "back": "Linear mountain ranges in Earth's ocean basins, like the Mid-Atlantic Ridge.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "mid-ocean ridges"
+    },
+    {
+      "front": "What is subduction?",
+      "back": "When two plates collide, one (usually oceanic) bends and sinks into the asthenosphere.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "subduction"
+    },
+    {
+      "front": "Why does oceanic crust subduct?",
+      "back": "Because it is denser than the asthenosphere.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "subduction"
+    },
+    {
+      "front": "What geological processes occur at convergent boundaries?",
+      "back": "1. Mountain building\n2. Crustal consumption\n3. Earthquakes\n4. Volcanism\n5. Partial melting",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "convergent processes"
+    },
+    {
+      "front": "What are the three settings where subduction occurs?",
+      "back": "1. Oceanic under oceanic\n2. Oceanic under continental\n3. Continental under continental (rare, doesn't subduct far)",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "subduction settings"
+    },
+    {
+      "front": "What forms at subduction zones involving oceanic crust?",
+      "back": "An oceanic trench and a volcanic arc.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "subduction features"
+    },
+    {
+      "front": "What is the Benioff zone?",
+      "back": "A downward-sloping plane of earthquakes coincident with the top of a subducting plate.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "Benioff zone"
+    },
+    {
+      "front": "How does a volcanic arc form?",
+      "back": "Water from the subducting plate lowers the melting point of mantle rock, causing partial melting and magma that rises to form volcanoes.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "volcanic arc formation"
+    },
+    {
+      "front": "What is an accretionary prism?",
+      "back": "A deformed sediment wedge scraped off a subducting plate and welded onto the overriding plate.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "accretionary prism"
+    },
+    {
+      "front": "What is orogeny?",
+      "back": "Mountain building, especially by folding and thrusting of rock layers, often at colliding plate boundaries.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "orogeny"
+    },
+    {
+      "front": "Why can't continental crust subduct easily?",
+      "back": "It is too light (not dense enough) to be carried down into the mantle.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "continental collision"
+    },
+    {
+      "front": "What is the hypothesized fate of subducted plates?",
+      "back": "They may sink all the way to the lower mantle near the core-mantle boundary.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "subducted plate fate"
+    },
+    {
+      "front": "What happens at transform plate boundaries?",
+      "back": "Plates slide horizontally past each other; crust is neither created nor destroyed.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "transform boundaries"
+    },
+    {
+      "front": "Give an example of a transform fault.",
+      "back": "The San Andreas Fault in California, USA.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "examples"
+    },
+    {
+      "front": "What geological process is absent at transform boundaries?",
+      "back": "Volcanism.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "transform features"
+    },
+    {
+      "front": "What is the Wilson Cycle?",
+      "back": "A model describing the opening and closing of ocean basins due to plate tectonics during supercontinent assembly and breakup.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "Wilson Cycle"
+    },
+    {
+      "front": "List the six stages of the Wilson Cycle with an example for each.",
+      "back": "1. Embryonic (East African Rift)\n2. Juvenile (Red Sea)\n3. Mature (Atlantic Ocean)\n4. Declining (Pacific Ocean)\n5. Terminal (Mediterranean Sea)\n6. Suturing (Himalaya Mountains)",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "Wilson Cycle stages"
+    },
+    {
+      "front": "What is the average density of oceanic crust?",
+      "back": "About 3.3 g/cm³.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "oceanic crust"
+    },
+    {
+      "front": "Where is oceanic crust generated?",
+      "back": "At spreading centers (mid-ocean ridges).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "oceanic crust formation"
+    },
+    {
+      "front": "What are the two types of continental margins?",
+      "back": "1. Passive margins\n2. Active margins",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "continental margins"
+    },
+    {
+      "front": "Describe a passive continental margin.",
+      "back": "Forms from continental rifting; thick sediment accumulation; not a plate boundary (e.g., U.S. East Coast).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "passive margin"
+    },
+    {
+      "front": "Describe an active continental margin.",
+      "back": "Located at plate boundaries; frequent earthquakes and volcanism; includes subduction or transform zones (e.g., Pacific Northwest).",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "active margin"
+    },
+    {
+      "front": "What are the three parts of a continental margin?",
+      "back": "1. Continental shelf\n2. Continental slope\n3. Continental rise",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "margin parts"
+    },
+    {
+      "front": "Describe the continental shelf.",
+      "back": "Shallowest part of the ocean, slopes gently offshore, depth up to ~200 m.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "continental shelf"
+    },
+    {
+      "front": "Describe the continental slope.",
+      "back": "Steeper slope (4-5°), depth increases to ~5 km, characterized by submarine canyons.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "continental slope"
+    },
+    {
+      "front": "Describe the continental rise.",
+      "back": "At the base of the slope; gentle slope; sediment accumulation from turbidity currents; leads to the abyssal plain.",
+      "course": "GM220",
+      "term": "T1",
+      "topic": "continental rise"
     }
   ],
 };
