@@ -1724,7 +1724,7 @@ const flashcards = {
 ,
   //GM220 T1
 
-  "MODULE 1: THE EARTH - EVOLUTION, COMPOSITION AND STRUCTURE": [
+  "MODULE 3: THE EARTH - EVOLUTION, COMPOSITION AND STRUCTURE": [
     {
       "front": "What is the Earth?",
       "back": "A planet that evolved over 4.6 billion years from a homogenous body into a layered structure through the process of differentiation.",
