@@ -657,7 +657,6 @@ const flashcards = {
       "back": "(a) Liberation of the minerals from the rock (b) Separation of the liberated minerals",
       "course": "MT221",
       "term": "T1",
-      //```javascript
       "topic": "beneficiation and mineral dressing"
     },
     {
