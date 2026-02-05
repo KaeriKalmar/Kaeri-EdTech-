@@ -1721,6 +1721,1312 @@ const flashcards = {
         "topic": "principles of comminution"
     }
 ],
+
+
+"MODULE 3: CRUSHING": [
+    {
+      "front": "What does metallic mineral processing typically involve?",
+      "back": "Metallic mineral processing typically involves: (1) mining of ore from either open pit or underground mines, (2) crushing and grinding of ore, (3) separation of valuable minerals from matrix rock through various concentration steps, and (4) at some operations, the drying, calcining, or palletizing of concentrates to ease further handling and refining.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "What is the objective of comminution?",
+      "back": "The objective of comminution is to produce small particles from larger ones. Smaller particles are the desired product either because of their large surface or because of their shape, size, and number.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "How can the energy efficiency of comminution operations be related?",
+      "back": "The energy efficiency of the operation can be related to the new surface formed by the reduction in size using the various comminution laws.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "What is crushing in the context of mineral processing?",
+      "back": "Crushing is the first mechanical stage in the process of comminution in which the main objective is the liberation of the valuable minerals from the gangue.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "What is the typical size of run-of-mine ore lumps and what are they reduced to in primary crushing?",
+      "back": "Lumps of run-of-mine ore can be as large as 1.5 m across and these are reduced in the primary crushing stage to 10-20 cm in heavy-duty machines.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "How does the number of crushing steps vary with ore type?",
+      "back": "The number of crushing steps necessary to reduce ore to the proper size varies with the type of ore. Hard ores, including some copper, gold, iron, and molybdenum ores, may require as much as tertiary crushing. Softer ores, such as some uranium, bauxite, and titanium/zirconium ores, require little or no crushing.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "What is used for final comminution of both hard and soft ores?",
+      "back": "Final comminution of both hard and soft ores is often accomplished by grinding operations using media such as balls or rods of various materials.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction to metallic mineral processing"
+    },
+    {
+      "front": "Is crushing normally a wet or dry process?",
+      "back": "Crushing is normally a dry process, except for some moisture (2-5%) in the ore as received.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "What is the basic mechanical principle of crushing?",
+      "back": "The particles to be broken should be large enough to be 'nipped' and crushed between two solid steel members, one or both of which moves to and fro in a fixed path cycle. The rock particles gravitate down through the expanding and contracting gap between the members.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "How does industrial grinding differ from crushing in terms of operation?",
+      "back": "Industrial grinding is carried out in horizontally revolving 'tumbling mills', in which the grinding media (steel rods, steel balls, rock pebbles) are rotated together with the rock and do not follow fixed paths, as opposed to crushing where crushing members follow fixed paths.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "What are the force and energy characteristics of coarse (primary) crushing?",
+      "back": "In coarse crushing (primary crushing), large rocks are broken into relatively smaller rocks. This requires very large forces, but relatively little energy for a given mass of rock.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "What are the force and energy characteristics of intermediate and fine crushing?",
+      "back": "In intermediate and fine crushing (secondary and tertiary crushing), where the rocks are much smaller, the forces required to break individual rock particles are also much smaller, but much more energy is required because of the much larger amount of new surface created.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "What are the force and energy characteristics of grinding?",
+      "back": "In grinding, the forces required to break individual particles are quite small, but the energy required to break the same mass of material is very high.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "Why are different crushing stages carried out in machines of different design?",
+      "back": "Because of the differences in force and energy requirements at different stages (coarse crushing, intermediate crushing, fine crushing, and grinding), the various crushing stages and grinding are carried out in machines of quite different design.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "How are primary and secondary crushers typically operated in circuit configuration?",
+      "back": "Primary and secondary crushers are both operated in open circuit. Primary gyratory crushers are fed directly (e.g., from open pit ore with truck). Secondary crushers are fed from surge bin via scalping screen.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing principles"
+    },
+    {
+      "front": "What is the purpose of primary crushers?",
+      "back": "Primary crushers are heavy-duty machines, used to reduce the run-of-mine ore down to a size suitable for transport and for feeding the secondary crushers or AG/SAG mills.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "primary crushers - general"
+    },
+    {
+      "front": "How are primary crushers always operated?",
+      "back": "They are always operated in open circuit, with or without heavy-duty scalping screens (grizzlies).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "primary crushers - general"
+    },
+    {
+      "front": "What are the two main types of primary crushers in metalliferous operations?",
+      "back": "The two main types are jaw crushers and gyratory crushers, although the impact crusher has limited use as a primary crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "primary crushers - general"
+    },
+    {
+      "front": "What is the general principle of jaw crushers?",
+      "back": "The crusher consists essentially of two crushing surfaces set at a small angle convergent downward. One surface is fixed to the main frame, the other is moveable and is caused to approach and recede from the fixed surface alternately.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "Describe the Blake crusher mechanism.",
+      "back": "In the Blake crusher, the moveable jaw is pivoted on a shaft at the top of the crusher. The jaws are protected by replaceable jaw plates. Ore is fed from the top and gravitates down between the two jaws.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How does the moving jaw operate in a Blake crusher?",
+      "back": "The moving jaw advances toward the fixed jaw, fast at first and then more slowly, but with increasing power at the end of the stroke. The rock particles are nipped between the jaws and broken by impact of the blow and the pressure exerted by the moving jaw.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What happens during the backward stroke of the jaw?",
+      "back": "When the moving jaw recedes on the backward stroke, the broken particles fall until they are arrested, either by other rock particles or by the jaws.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "Why do most modern jaw crushers use curved swing-jaw plates?",
+      "back": "With curved swing-jaw plates, the downward travel of the broken rock is faster so that choking at the throat of the crusher is less likely to occur, despite the swell of the broken rock.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is the 'set' of a jaw crusher?",
+      "back": "The set of a crusher is the maximum opening between the jaws at the discharge point. It is the maximum size (in one dimension) that a particle should have when it leaves the crushing zone.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "Can slabs of rock pass through with larger dimensions than the set?",
+      "back": "Yes, slabs of rock can pass through with much larger sizes in the other two dimensions besides the set dimension.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How is the size of jaw crushers expressed?",
+      "back": "The size of jaw crushers is expressed as the two dimensions of the feed opening.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is the 'gape' of a jaw crusher?",
+      "back": "The smallest of the feed opening dimensions is called the gape. The gape indicates the maximum size of the rocks that can be accepted as feed to the crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How is the reduction ratio of a jaw crusher estimated?",
+      "back": "A rough estimate of the reduction ratio of a jaw crusher is given by the ratio between the gape and set (the apparent reduction ratio, RA).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How can the reduction ratio be altered?",
+      "back": "The reduction ratio can be altered by adjusting the set.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How are small adjustments to the set made?",
+      "back": "Small adjustments can be made by screwing the adjustment block up or down.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How are large adjustments to the set made?",
+      "back": "For large adjustments, the toggle-plates must be changed for toggles of a different length.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How is wear of the jaw plates compensated for?",
+      "back": "To adjust for wear of the jaw plates, the adjustment block is screwed up. This adjusts the throw, i.e., the horizontal distance travelled by the swing jaw on each stroke.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is done with worn jaw plates?",
+      "back": "The jaw plates wear rapidly and are therefore easily replaceable. If possible, the jaw plates are first turned 180° before they are discarded.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is the crushing angle?",
+      "back": "The crushing angle is the maximum angle between the converging jaw plates. It is usually between 18° and 24°.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What happens to the crushing angle when the set is reduced?",
+      "back": "If the set is reduced, the crushing angle is increased.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is the angle of nip?",
+      "back": "The angle of nip is determined by the coefficient of friction between the jaw plates and the rock and varies between 20° and 30° for most types of dry rock.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "Why may the crushing angle never exceed the angle of nip?",
+      "back": "The crushing angle may never exceed the angle of nip, because then the rock particles would not be nipped and crushed, but just bounce up and down on the swing jaw.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How does moisture affect the angle of nip and crushing operations?",
+      "back": "With wet and smooth rock, the angle of nip is smaller (say, 16°), hence the crushing angle must be smaller still, hence the set must be larger and the reduction ratio smaller.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How can 'nip' be improved?",
+      "back": "'Nip' can be improved by using corrugated jaw plates or by providing ribs on the jaw plates. This then allows a smaller set, hence a slightly larger reduction ratio, but such jaw surfaces wear rapidly.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "Why is a flywheel necessary in jaw crushers?",
+      "back": "The jaw crusher has an intermittent load (no force is exerted on the receding stroke of the swing jaw), hence a flywheel must be provided on the drive shaft, which stores the energy on the idling stroke and delivers it on the crushing stroke.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What does the balancing action of the flywheel accomplish?",
+      "back": "This balancing action smoothes vibration and saves power.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What characteristic does the starting torque of jaw crushers have?",
+      "back": "The starting torque of jaw crushers is very high.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is the function of the tension-rod in jaw crushers?",
+      "back": "A tension-rod holds the toggles on the swing jaw. The toggles break easily and are therefore easily accessible for replacement.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What serves as a 'safety link' in jaw crushers?",
+      "back": "Usually, the back toggle is deliberately weakened to serve as a 'safety link'. In the case of excessive stress, this easily accessible point will then be the breaking point.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What are the two distinct operating modes for primary crushers?",
+      "back": "Primary crushers can be operated in 'free crushing' and 'choked crushing'.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is 'free crushing'?",
+      "back": "In free crushing, the particles are relatively free to fall between successive blows and the main force exerted upon a rock particle is applied directly by the crushing surfaces.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is 'choked crushing'?",
+      "back": "In choked crushing, the crusher is kept 'choke-fed' and a substantial amount of comminution results from the impact of rock upon rock.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What are the effects of choked crushing?",
+      "back": "Choked crushing produces more fines and the throughput is less than when the same crusher would be crushing free.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "When is choked crushing used?",
+      "back": "Smaller plants, which cannot afford many crushing stages, often choke-feed the crushers to achieve a higher reduction ratio at the lower throughput.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "Are jaw crushers prone to choking?",
+      "back": "Yes, jaw crushers are prone to choking and should preferentially be free crushing.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "How is free crushing achieved in jaw crushers?",
+      "back": "This is achieved by feeding them with an ore feeder from a bin, usually via a scalping grizzly to take out fines prior to crushing.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is a key feature of all jaw crushers?",
+      "back": "A feature of all jaw crushers is the heavy flywheel attached to the drive, which is necessary to store energy.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "List the main characteristics of jaw crushers.",
+      "back": "Discontinuous crushing (intermittent load), hence flywheel; maximum force applied at the top, i.e., on the coarsest material; maximum amplitude below, i.e., on swelled broken material; stroke frequency of 150-200 min⁻¹; reduction ratio of 4-8.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "jaw crushers"
+    },
+    {
+      "front": "What is the most commonly used type of gyratory crusher?",
+      "back": "The suspended-spindle type is the most commonly used gyratory crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What is the general principle of a gyratory crusher?",
+      "back": "The general principle consists of a conical breaking head suspended on a spindle (the main shaft) from a two-armed 'spider', mounted on the main frame.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Describe the main frame of a gyratory crusher.",
+      "back": "The main frame consists of an upper and lower shell. The upper shell is an inverted conic frustum with concave liners.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How is the head given its gyration?",
+      "back": "The head is given an eccentric gyration by an eccentric sleeve, which is rotated by a bevel gear and pinion, driven by a countershaft, which is coupled to the drive.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What are the crushing media in a gyratory crusher?",
+      "back": "The gyrating head and the stationary concave are the crushing media.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How are the components protected from wear?",
+      "back": "Just as concave liners protect the shell, the head is protected by a wear-resistant mantle.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Describe the crushing process in a gyratory crusher.",
+      "back": "Ore is fed from the top and falls until arrested. The gyrating head continuously advances towards points along the stationary concave as it progresses and recedes from its previous position. Where the head advances, rock is crushed between head and concave. Where the head recedes, crushed rock can fall downward until arrested again.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "When does crushing stop in a gyratory crusher?",
+      "back": "This crushing continues until the crushed particles fall clear from the lowest annular opening between head and concave (the discharge point).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How is the crushing action in a gyratory crusher similar to a jaw crusher?",
+      "back": "In each vertical cross-section of a gyratory crusher, the crushing action is quite similar to the action in a jaw crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What is the 'set' in a gyratory crusher?",
+      "back": "Like the jaw crusher, the set of a gyratory is the maximum opening between head and concave at the discharge point.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What is the gape in a gyratory crusher?",
+      "back": "The gape is the size of the receiving opening.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How is the reduction ratio estimated for gyratory crushers?",
+      "back": "The ratio gape:set gives a rough estimate of the reduction ratio (the apparent reduction ratio).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How is the size of gyratory crushers usually expressed?",
+      "back": "The size of gyratory crushers is usually expressed as the size of the receiving opening (gape).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Can a gyratory crusher be choke-fed?",
+      "back": "Yes, contrary to the jaw crusher, a gyratory crusher can be choke-fed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How are gyratory crushers typically fed?",
+      "back": "It is often fed directly from trucks, without bins, feeders and scalping grizzlies.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Why is a gyratory crusher suitable for 'slabby' feed?",
+      "back": "It is suitable for 'slabby' feed because the annular shape of the crushing cavity will break up the slabs, whereas these could slide through a jaw crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What type of ore is less suitable for gyratory crushers?",
+      "back": "Sticky and clayey ores are less suitable, since they will tend to choke the discharge opening.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Why can the crushing angle be larger in gyratory crushers?",
+      "back": "The gyratory crusher can be kept full, and as such the crushing angle can be somewhat larger than for the jaw crusher on similar material (22°-30°).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Can the spindle rotate freely?",
+      "back": "Yes, the spindle can revolve freely around its own axis.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What causes the spindle to rotate and in what direction?",
+      "back": "During crushing, friction between concave, ore and head will cause the head (mantle) and spindle to rotate in the direction opposite to the eccentric gyration.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What is the result of the spindle rotation?",
+      "back": "This rotation of the spindle is superimposed upon the eccentric gyration. As a result, wear of the mantle is regular.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How is the set adjusted in larger gyratory crushers?",
+      "back": "With the larger gyratory crushers, the set is adjusted by screwing the spindle up or down with an adjustment nut in the spider cap (the 'dome'). This is not an easy operation.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What is the Allis-Chalmers Hydroset system?",
+      "back": "With some modern smaller gyratory crushers, the head and spindle are supported hydraulically (Allis-Chalmers Hydroset). This system uses a hydraulic piston, which can raise or lower head and spindle, thus increasing or decreasing the set.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "What advantage does the Hydroset system provide during power failure?",
+      "back": "In the event of a power failure, the head can be lowered to allow the contents of the crushing chamber (the 'load') to drop out, before the crusher is restarted.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How does the balance cylinder protect the crusher?",
+      "back": "If there is a 'balance cylinder' provided with this system, this protects the crusher against damage from large uncrushable objects such as shovel teeth. When such an object threatens to jam the crusher, the balance cylinder lowers head and spindle to allow the object to drop out of the crusher, and then automatically raises the head again to its original setting.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "Can the throw be easily altered in gyratory crushers?",
+      "back": "No, the throw can only be altered by changing the eccentric sleeve, which is not a normal adjustment.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How is wear of mantle and concave compensated for?",
+      "back": "Wear of mantle and concave is compensated for by periodically adjusting the set.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "List the main characteristics of the suspended-spindle type gyratory crusher.",
+      "back": "Continuous crushing action (even load), hence no flywheel; maximum force applied at the top, i.e., on the coarsest material; maximum amplitude below, i.e., on 'swelled' broken material; 'set' is the maximum opening between concave and mantle at the discharge point; annular feed and discharge openings; rather low speed (100-200 gyrations min⁻¹ ~ 200-400 pinion revolutions min⁻¹); reduction ratio of 5-8.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "gyratory crushers"
+    },
+    {
+      "front": "How do secondary crushers compare to primary crushers in terms of construction?",
+      "back": "Secondary crushers are much lighter than the heavy-duty, rugged primary machines.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What is the typical maximum feed size for secondary crushers?",
+      "back": "Since they take the primary crushed ore as feed, the maximum feed size will normally be less than 15 cm in diameter.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "Why is secondary crusher ore easier to handle?",
+      "back": "Because most of the harmful constituents in the ore, such as tramp metal, wood, clays, and slimes have already been removed, it is much easier to handle.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "How do transportation and feeding arrangements differ for secondary crushers?",
+      "back": "The transportation and feeding arrangements serving the crushers do not need to be as rugged as in the primary stage.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "Do secondary crushers operate with dry or wet feeds?",
+      "back": "Secondary crushers also operate with dry feeds.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What is the purpose of secondary crushers?",
+      "back": "Their purpose is to reduce the ore to a size suitable for grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "When is a tertiary crushing stage used?",
+      "back": "In those cases where size reduction can be more efficiently carried out by crushing, there may be a tertiary stage before the material is passed to the grinding mills.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "How do tertiary crushers differ from secondary crushers?",
+      "back": "Tertiary crushers are, to all intents and purposes, of the same design as secondaries, except that they have a closer set.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What type of crusher performs the bulk of secondary crushing?",
+      "back": "The bulk of secondary crushing of metalliferous ores is performed by cone crushers, although crushing rolls and hammer mills are used for some applications.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What is a cone crusher?",
+      "back": "The cone crusher is a modified gyratory crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the essential difference between a cone crusher and a gyratory crusher?",
+      "back": "The essential difference is that the shorter spindle of the cone crusher is not suspended, as in the gyratory, but is supported in a curved, universal bearing below the gyratory head or cone.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Why does the crushing shell flare outwards in a cone crusher?",
+      "back": "Since a large gape is not required, the crushing shell or 'bowl' flares outwards which allows for the swell of broken ore by providing an increasing cross-sectional area towards the discharge end.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What type of crusher is the cone crusher described as?",
+      "back": "The cone crusher is therefore an excellent arrested crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Describe the general principle of operation of a cone crusher.",
+      "back": "The general principle consists of a conical breaking head given an eccentric gyration inside a stationary truncated cone, called the bowl.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the shape of the outside of the bowl?",
+      "back": "The outside of the bowl is cylindrical.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How does the cross-section of the crushing cavity change?",
+      "back": "The cross-section of the crushing cavity, i.e., the inside of the bowl, increases from top to bottom.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the head protected in a cone crusher?",
+      "back": "The head is lined with a wear-resistant mantle.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What protects the inside of the bowl?",
+      "back": "The inside of the bowl is lined with a wear-resistant bowl-liner.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How can the crushing cavity shape be changed?",
+      "back": "The bowl-liner comes in different shapes, thus determining the shape of the crushing cavity for different crushing purposes (fine, medium, coarse and extra-coarse).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the 'parallel zone' in a cone crusher?",
+      "back": "The shape of all bowl liners is such that their lower end is roughly parallel with the mantle ('parallel zone').",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the gyrating speed of the head in a cone crusher?",
+      "back": "The head with the mantle gyrates at high speed (400-700 gyrations min⁻¹).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Describe the ore crushing process in a cone crusher.",
+      "back": "Ore is fed from the top and gyrates down through the crushing cavity. On its way down, it receives a series of rapid blows from the crushing head, crushing the ore between mantle and bowl liner.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Why does the increasing cross-section of the bowl prevent choking?",
+      "back": "The increasing cross-section of the bowl allows for the 'swell' of the ore as it breaks further, thus avoiding choked crushing.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the purpose of the parallel zone in the crushing process?",
+      "back": "The purpose of the parallel zone is that each particle will receive a number of blows in that zone, before it has a chance to drop out of the annular discharge opening, and thus will be at least as small as the minimum clearance between mantle and bowl liner before it leaves the crushing cavity.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How does the product sizing of cone crushers compare to jaw and gyratory crushers?",
+      "back": "Compared to jaw crushers and gyratory crushers, cone crushers deliver a more evenly sized product.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the 'set' defined in a cone crusher?",
+      "back": "The 'set' can be taken as the minimum clearance between mantle and bowl liner at the discharge point.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What does the main frame hold?",
+      "back": "The main frame is a cylindrical shell, which holds the eccentric assembly and a socket with a hemispherical socket-liner, which supports the head assembly.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the eccentric rotated?",
+      "back": "The eccentric and the inner eccentric bearing are rotated through a gear and pinion by the countershaft, which is coupled to the drive.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What carries the weight of the eccentric and gear?",
+      "back": "The weight of the eccentric and gear is carried by the eccentric-thrust bearings at the bottom.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Describe the main shaft assembly.",
+      "back": "The main shaft is pressed into the conical breaking head, which carries a replaceable mantle. The tapered lower end of the main shaft is bushed onto the eccentric.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the distributor plate and what is its function?",
+      "back": "The upper end of the main shaft, above the head, carries the distributor plate, which gyrates with the head and is used to distribute the feed evenly over the crushing cavity.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the bowl attached to the main frame?",
+      "back": "The bowl is threaded onto an adjustment ring, which rests on the main frame.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the set adjusted in a cone crusher?",
+      "back": "The 'set' of the crusher can be adjusted by screwing the bowl up and down with the adjustment ring, by means of a winch or a crane.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the function of the tensioned springs?",
+      "back": "Bowl and adjustment ring are held onto the main frame by tensioned springs. These serve as a protection against excessive stress from oversize rocks or uncrushable material (e.g., tramp metal) which otherwise would jam or damage the crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What happens when uncrushable material enters the crushing cavity?",
+      "back": "When such material enters the crushing cavity, the springs will allow the bowl to move upwards, thereby allowing this material to pass through.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What does the oil circulation system lubricate?",
+      "back": "An oil circulation system lubricates eccentric and socket bearings, gears and countershaft bearings.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What safety feature is in the lubrication system?",
+      "back": "The flow switch in the circulation system will trip out the crusher in the case of failure of the lubricating system.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How does the construction of a cone crusher differ from a gyratory crusher?",
+      "back": "The head of the cone crusher is a much flatter cone and the eccentric is longer than for a gyratory crusher. The pressure per unit of surface is much lower than in a gyratory, so that its construction can be much lighter.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the head assembly supported differently in a cone crusher?",
+      "back": "In contrast to a gyratory, the head assembly is not suspended from the top, but supported on a socket and socket liner.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What type of breaker is a cone crusher?",
+      "back": "The high gyrating speed combined with low unit pressures make a cone crusher a typical intermediate breaker.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What gives the cone crusher its high capacity?",
+      "back": "The increasing cross-section of the crushing cavity from top to bottom and the high speed give it a very high capacity for its size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What results in a fairly evenly sized product?",
+      "back": "The high speed and parallel zone result in a fairly evenly sized product.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the reduction ratio for cone crushers?",
+      "back": "The reduction ratio is higher than for primary crushers.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "List the main characteristics of cone crushers.",
+      "back": "Continuous crushing action; maximum force applied at the top (on coarsest material); cross-section of crushing cavity increases from top to bottom; annular feed and discharge openings; parallel zone between crushing media at the lower end; set is the minimum opening between the crushing media at the discharge point; high speed: 400-700 gyrations min⁻¹; large throw: 5-9 × set; comparatively large reduction ratio: 10-20; fairly evenly sized product and large capacity for its size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What are standard cone crushers most commonly used for?",
+      "back": "Standard cone crushers are the most commonly used crushers for intermediate crushing, i.e., for a size-reduction from approx. 15 cm to 2.5 cm.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Can smaller standard cone crushers be used for finer crushing?",
+      "back": "Yes, the smaller standards can also be used for finer crushing (down to approx. 1 cm), but in larger plants this range is usually covered by short-head cone crushers or rod mills or a combination of the two.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How often is the set of cone crushers checked?",
+      "back": "The set of the cone crushers is normally checked at regular intervals.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the usual checking procedure for the set?",
+      "back": "The usual checking procedure is to pass lead billets through the crusher when it is otherwise running empty, and then to measure the billets. Their smallest dimension is then the size of the discharge opening.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Can the set be adjusted after checking?",
+      "back": "Yes, if required, the set can then be adjusted by means of the adjustment ring.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the Symons short-head cone crusher?",
+      "back": "The Symons short-head cone crusher (Nordberg Manufacturing Co.) has essentially the same frame and mechanism as the standard cone crusher, but a different head and bowl.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the head angle differ in a short-head crusher?",
+      "back": "The head angle is steeper than in a standard cone crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the feed opening compare to a standard cone crusher?",
+      "back": "The feed opening is narrower than in a standard cone crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the parallel zone compare to a standard cone crusher?",
+      "back": "The parallel zone is longer than in a standard cone crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What type of feed should a short-head crusher receive?",
+      "back": "It should receive a finer feed than the standard cone crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What product size does a short-head crusher deliver?",
+      "back": "It delivers a finer product (0.4-1.5 cm) than the standard cone crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the capacity of a short-head crusher compare?",
+      "back": "Its capacity is markedly lower than a standard cone crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "Can short-head crushers be fitted with different bowl liners?",
+      "back": "Yes, like the standard cone crusher, it can be fitted with four different bowl liners.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What is the typical use of a short-head cone crusher?",
+      "back": "It is most often used as a tertiary crusher in closed circuit with a screen, receiving the secondary crusher product.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What are reduction-gyratory crushers?",
+      "back": "Reduction-gyratory crushers (Allis-Chalmers Manufacturing Co.) are small modifications of the common gyratory crusher, incorporating some of the characteristics of the cone crushers, such as high speed and large throw.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How does the crushing head differ from a common gyratory crusher?",
+      "back": "The crushing head is a much flatter cone than in the common gyratory crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How does the stationary concave differ?",
+      "back": "The stationary concave starts to flare outward at a much higher point than in the suspended-spindle gyratories.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What does the flaring provide?",
+      "back": "This provides a parallel crushing zone as in the cone crushers and reduces the chance of choking.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What are reduction-gyratory crushers used for?",
+      "back": "They are used as intermediate crushers.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How is the set adjusted in recent versions?",
+      "back": "In recent versions of the reduction-gyratory, the set can be adjusted hydraulically, by raising or lowering the head.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How is protection against overload provided?",
+      "back": "Protection against overload is provided by the same hydraulic system, by means of a gas accumulator (automatic reset).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What is the hydrocone?",
+      "back": "The best-known version is the hydrocone (Allis-Chalmers), which could be described as a 'cone crusher with automatic reset'.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What is the basic construction of crushing rolls?",
+      "back": "Crushing rolls consist essentially of two horizontally mounted cylinders, which are rotated in opposite directions, inward and downward.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How should the feed behave in crushing rolls?",
+      "back": "The feed should be nipped between the approaching roll faces and be drawn down between the rolls.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How are modern roll crushers protected against damage?",
+      "back": "In all modern roll crushers, one of the rolls is rigidly mounted and the other spring-loaded, as a protection against damage caused by the passage of an uncrushable object (tramp iron).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the construction of the rolls?",
+      "back": "Normally, the rolls consist of a permanent core (the 'heart'), covered by a replaceable, wear-resistant 'shell'.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How is the life of the shells increased?",
+      "back": "To increase the life of the shells, some modern machines have an automatic lateral adjustment mechanism, which automatically draws the fixed roll back and forth along its axis as the rolls rotate, thus giving a more even wear.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What happens to the rolls during operation?",
+      "back": "In operation, the ore passing through will force the rolls apart.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the typical relationship between roll spacing and product size?",
+      "back": "Therefore, the roll spacing (set) is usually 0.7-0.8 × the required product size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What determines the diameter of the rolls?",
+      "back": "The diameter of the rolls should be large in comparison with the feed size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Why are crushing rolls limited to fine crushing?",
+      "back": "Therefore crushing rolls are limited to fine crushing only.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the typical speed of rotation?",
+      "back": "The speed of rotation is relatively low (80-120 rev/min⁻¹).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Why can't higher speeds be used?",
+      "back": "Higher speeds become dangerous, in particular with large, heavy rolls.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What has generally superseded crushing rolls?",
+      "back": "Crushing rolls are generally superseded by short head cone crushers and rod mills.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Where are crushing rolls still used?",
+      "back": "They still find application in smaller plants and laboratories.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How are crushing rolls usually operated?",
+      "back": "Because of their uneven product size, crushing rolls are usually operated in closed circuit with a screen.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the typical circulating load?",
+      "back": "The circulating load is normally high (up to 600%).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is 'graded crushing'?",
+      "back": "To avoid production of too much fines, 'graded crushing' can be practiced. This is the gradual reduction in size by means of a series of crushing rolls, each with a smaller set than the preceding one, and with screens in between to remove fines.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the characteristic of each set of rolls in graded crushing?",
+      "back": "Each set of rolls will be free crushing and have a low reduction ratio.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How can a higher reduction ratio be achieved with rolls?",
+      "back": "Conversely, a higher reduction ratio can be achieved by choked crushing with high circulating loads. This is done in small plants.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Why are rolls still popular in small plants?",
+      "back": "Rolls are still popular in small plants because of their low initial cost.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "List the main characteristics of crushing rolls.",
+      "back": "Simple and cheap (low initial cost); maintenance easy, but usually high maintenance costs; low reduction ratio: 2-4; uneven product and low capacity.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is essential for maximum utilization of roll surfaces?",
+      "back": "A proper feeding arrangement, which distributes the feed constantly and evenly between the rolls, is essential to ensure maximum utilization of the roll surfaces.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What can hammer mills do in one operation?",
+      "back": "Hammer mills (impact crushers) reduce ore from a large size to very fine in one operation (i.e., they have a very large reduction ratio).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What is the common principle of hammer mills?",
+      "back": "Many forms exist, but the common principle is that a set of beaters (flailing hammers) spins round inside a stationary casing, with a large grid at the bottom as discharge.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What determines the product size in a hammer mill?",
+      "back": "The size of the openings in the grid determines the product size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "How are the crushing forces applied?",
+      "back": "The crushing forces are applied instantaneously (impact).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "How are rock particles broken in a hammer mill?",
+      "back": "The rock particles are broken either by impact from the hammers or by impact against the casing or against other particles.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What type of material are hammer mills best suited for?",
+      "back": "Hammer mills are best suitable for rather soft and friable material.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What is a disadvantage of hammer mills?",
+      "back": "They wear rapidly.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What type of ore are hammer mills particularly used for?",
+      "back": "They are used in particular on clayey ores, that would clog reciprocating (i.e., with a to-and-fro movement of the crushing media) crushers as jaw crushers and particularly gyratory and cone crushers.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What is the main difference in crushing action between jaw and gyratory crushers?",
+      "back": "Jaw crushers have discontinuous (intermittent) crushing action requiring a flywheel, while gyratory crushers have continuous crushing action with even load and no flywheel required.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "How do the feed and discharge openings differ?",
+      "back": "Jaw crushers have rectangular feed and discharge openings, while gyratory crushers have annular (ring-shaped) feed and discharge openings.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "How does the speed compare between the two types?",
+      "back": "Jaw crushers operate at 150-200 strokes per minute, while gyratory crushers operate at lower speed (100-200 gyrations min⁻¹ or 200-400 pinion revolutions min⁻¹).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "How do the reduction ratios compare?",
+      "back": "Jaw crushers have a reduction ratio of 4-8, while gyratory crushers have a slightly higher reduction ratio of 5-8.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "Which crusher can be choke-fed?",
+      "back": "Gyratory crushers can be choke-fed and are often fed directly from trucks. Jaw crushers are prone to choking and should preferentially be free crushing, fed via an ore feeder and scalping grizzly.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "Which crusher is suitable for slabby feed?",
+      "back": "Gyratory crushers are suitable for slabby feed because the annular shape of the crushing cavity will break up the slabs, whereas slabs could slide through a jaw crusher.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "How do they differ in handling sticky and clayey ores?",
+      "back": "Sticky and clayey ores are less suitable for gyratory crushers as they tend to choke the discharge opening. Jaw crushers may handle them slightly better but can also experience choking issues.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "What is the typical crushing angle range for each?",
+      "back": "Jaw crushers typically have a crushing angle of 18-24°. Gyratory crushers can have a somewhat larger crushing angle of 22-30° on similar material because they can be kept full.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "How does capacity compare for similar sizes?",
+      "back": "Gyratory crushers generally have higher capacity than jaw crushers of comparable gape size due to their continuous crushing action and annular discharge.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    },
+    {
+      "front": "Which requires a flywheel and why?",
+      "back": "Only jaw crushers require a flywheel because of their intermittent load. The flywheel stores energy on the idling stroke and delivers it on the crushing stroke, smoothing vibration and saving power.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison of jaw and gyratory crushers"
+    }
+  ],
   //GM220 T1
   "MODULE 1: INTRODUCTION TO GEOLOGY": [
     {
