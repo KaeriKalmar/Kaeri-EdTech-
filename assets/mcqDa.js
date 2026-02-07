@@ -1,4 +1,3 @@
-
 const mcqData = [
 
   // --- MT221 Module 1: Introduction to Metallurgy ---
@@ -2943,8 +2942,5 @@ const mcqData = [
     "topic": "Summary",
     "year": "2024",
     "tag": "Basic"
-  },
-  
- 
-  
+  }
 ];
