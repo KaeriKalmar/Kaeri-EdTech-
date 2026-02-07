@@ -2946,7 +2946,7 @@ const mcqData = [
   },
   
   //MI213
- {
+  {
     "q": "What is the primary aim of the Introduction to Mining module?",
     "options": ["To introduce students to mining terminologies, stages in a mine's life, primary rock breakage/handling activities, and mine planning considerations.", "To teach advanced mineral processing techniques.", "To focus exclusively on underground mining safety.", "To prepare students for fieldwork in geology."],
     "correct": 3,
@@ -5145,5 +5145,6 @@ const mcqData = [
     "topic": "Reclamation Procedures",
     "year": "2024",
     "tag": "Applied"
-  },
+  }
+  
 ];
