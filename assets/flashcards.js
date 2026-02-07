@@ -1,8 +1,9 @@
+
 const flashcards = {
   // =================================================================
   // MT221 - MODULE 1
   // =================================================================
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 1 (Definitions & Classification)": [
+  "MODULE 1: INTRODUCTION TO METALLURGY - Section 1 - Definitions & Classification": [
     {
       "front": "What is metallurgy?",
       "back": "The science and technology of metals, involving extracting metals from their ores and adapting them to the various uses of man.",
@@ -89,7 +90,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 2 (Sources, Geology & Mining)": [
+  "MODULE 1: INTRODUCTION TO METALLURGY - Section 2 - Sources, Geology & Mining": [
     {
       "front": "What is primary (virgin) metal?",
       "back": "Metal extracted from ores, natural brines, or ocean water.",
@@ -246,7 +247,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 3 (Ores, Minerals & Grades)": [
+  "MODULE 1: INTRODUCTION TO METALLURGY - Section 3 - Ores, Minerals & Grades": [
     {
       "front": "Define the term 'ore.'",
       "back": "A naturally occurring aggregate of minerals from which a metal or metals may be extracted at a profit.",
@@ -473,137 +474,136 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 4 (Processing & Industry)",
-    [
-      {
-        "front": "What are wet processes in extractive metallurgy?",
-        "back": "Processes involving reactions in aqueous solutions usually at low temperatures.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "wet and dry processes"
-      },
-      {
-        "front": "What are dry processes in extractive metallurgy?",
-        "back": "Processes involving reactions of solid material at high temperatures; sometimes melting takes place.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "wet and dry processes"
-      },
-      {
-        "front": "What is the current trend in wet versus dry processes and why?",
-        "back": "The trend is to use wet methods since they usually have less pollution problems.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "wet and dry processes"
-      },
-      {
-        "front": "List five hydrometallurgical processes.",
-        "back": "1. Leaching 2. Precipitation from leach solution 3. Ion exchange 4. Solvent extraction 5. Electrolysis of aqueous solution",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "wet and dry processes"
-      },
-      {
-        "front": "List five pyrometallurgical processes.",
-        "back": "1. Alkali fusion 2. Roasting 3. Reduction 4. Chlorine metallurgy 5. Fluorine metallurgy 6. Carbonyl metallurgy 7. Electrolysis of fused salts",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "wet and dry processes"
-      },
-      {
-        "front": "What must be known about ore before attempting metal recovery?",
-        "back": "Its mineralogical structure - whether it's an oxide, sulphide, phosphate, silicate, etc.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "wet and dry processes"
-      },
-      {
-        "front": "How are the metal and chemical industries related?",
-        "back": "Products of the chemical industry are raw materials for the metallurgical industry, and products or by-products of the metallurgical industry are raw materials for the chemical industry.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What is sulphuric acid used for in the metal industry?",
-        "back": "Leaching of ores and pickling of steel.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What is sodium cyanide used for in metallurgy?",
-        "back": "Leaching of gold ores.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What is oxygen used for in the metal industry?",
-        "back": "Steel making, pressure leaching, and flash roasting.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What are xanthates used for?",
-        "back": "Flotation of minerals.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "Give three metallurgical by-products used in the chemical industry.",
-        "back": "1. Metal powders - used in paints 2. Coke-oven gas - used in ammonia synthesis 3. Coal tar - used in chemical plastics 4. Elemental sulphur - used in H₂SO₄ manufacture",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What is pyrite cinder (from H₂SO₄ manufacture) used for?",
-        "back": "Pig iron manufacture.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What is blast-furnace slag used for?",
-        "back": "Road pavement.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "interrelation of metal and chemical industry"
-      },
-      {
-        "front": "What are the three processing routes for copper ore recovery?",
-        "back": "1. Pyrometallurgical processes (dry) 2. Hydrometallurgical processes (wet) 3. Combined pyrometallurgical and hydrometallurgical processes",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "copper ore treatment"
-      },
-      {
-        "front": "Describe the pyrometallurgical process for copper recovery.",
-        "back": "Roasting → Reduction → Metal",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "copper ore treatment"
-      },
-      {
-        "front": "Describe the hydrometallurgical process for copper recovery.",
-        "back": "Sulphide Ore → Pressure Leaching → Precipitation by H₂ under pressure → Metal",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "copper ore treatment"
-      },
-      {
-        "front": "Describe a combined process for treating copper sulfide ore.",
-        "back": "Sulphide Ore → Roasting → Leaching → Electrolysis → Metal OR: Sulphide Ore → Partial Roasting → Matte Formation → Converting → Metal",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "copper ore treatment"
-      }
-    ],
+  "MODULE 1: INTRODUCTION TO METALLURGY - Section 4 - Processing & Industry": [
+    {
+      "front": "What are wet processes in extractive metallurgy?",
+      "back": "Processes involving reactions in aqueous solutions usually at low temperatures.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "wet and dry processes"
+    },
+    {
+      "front": "What are dry processes in extractive metallurgy?",
+      "back": "Processes involving reactions of solid material at high temperatures; sometimes melting takes place.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "wet and dry processes"
+    },
+    {
+      "front": "What is the current trend in wet versus dry processes and why?",
+      "back": "The trend is to use wet methods since they usually have less pollution problems.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "wet and dry processes"
+    },
+    {
+      "front": "List five hydrometallurgical processes.",
+      "back": "1. Leaching 2. Precipitation from leach solution 3. Ion exchange 4. Solvent extraction 5. Electrolysis of aqueous solution",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "wet and dry processes"
+    },
+    {
+      "front": "List five pyrometallurgical processes.",
+      "back": "1. Alkali fusion 2. Roasting 3. Reduction 4. Chlorine metallurgy 5. Fluorine metallurgy 6. Carbonyl metallurgy 7. Electrolysis of fused salts",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "wet and dry processes"
+    },
+    {
+      "front": "What must be known about ore before attempting metal recovery?",
+      "back": "Its mineralogical structure - whether it's an oxide, sulphide, phosphate, silicate, etc.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "wet and dry processes"
+    },
+    {
+      "front": "How are the metal and chemical industries related?",
+      "back": "Products of the chemical industry are raw materials for the metallurgical industry, and products or by-products of the metallurgical industry are raw materials for the chemical industry.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What is sulphuric acid used for in the metal industry?",
+      "back": "Leaching of ores and pickling of steel.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What is sodium cyanide used for in metallurgy?",
+      "back": "Leaching of gold ores.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What is oxygen used for in the metal industry?",
+      "back": "Steel making, pressure leaching, and flash roasting.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What are xanthates used for?",
+      "back": "Flotation of minerals.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "Give three metallurgical by-products used in the chemical industry.",
+      "back": "1. Metal powders - used in paints 2. Coke-oven gas - used in ammonia synthesis 3. Coal tar - used in chemical plastics 4. Elemental sulphur - used in H₂SO₄ manufacture",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What is pyrite cinder (from H₂SO₄ manufacture) used for?",
+      "back": "Pig iron manufacture.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What is blast-furnace slag used for?",
+      "back": "Road pavement.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "interrelation of metal and chemical industry"
+    },
+    {
+      "front": "What are the three processing routes for copper ore recovery?",
+      "back": "1. Pyrometallurgical processes (dry) 2. Hydrometallurgical processes (wet) 3. Combined pyrometallurgical and hydrometallurgical processes",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "copper ore treatment"
+    },
+    {
+      "front": "Describe the pyrometallurgical process for copper recovery.",
+      "back": "Roasting → Reduction → Metal",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "copper ore treatment"
+    },
+    {
+      "front": "Describe the hydrometallurgical process for copper recovery.",
+      "back": "Sulphide Ore → Pressure Leaching → Precipitation by H₂ under pressure → Metal",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "copper ore treatment"
+    },
+    {
+      "front": "Describe a combined process for treating copper sulfide ore.",
+      "back": "Sulphide Ore → Roasting → Leaching → Electrolysis → Metal OR: Sulphide Ore → Partial Roasting → Matte Formation → Converting → Metal",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "copper ore treatment"
+    }
+  ],
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 5 (Beneficiation & Liberation)": [
+  "MODULE 1: INTRODUCTION TO METALLURGY - Section 5 - Beneficiation & Liberation": [
     {
       "front": "What is beneficiation?",
       "back": "The treatment of ores and mineral products by mechanical and physical means to separate valuable minerals from worthless constituents.",
@@ -732,7 +732,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 6 (Separation Methods & Flotation)": [
+  "MODULE 1: INTRODUCTION TO METALLURGY - Section 6 - Separation Methods & Flotation": [
     {
       "front": "What is a concentrate in mineral processing?",
       "back": "The enriched product derived from the concentration process that contains the valuable minerals.",
@@ -913,7 +913,7 @@ const flashcards = {
   // =================================================================
   // MT221 - MODULE 2
   // =================================================================
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 1 (Basics of Comminution)": [
+  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 1 - Basics of Comminution": [
     {
       "front": "What is comminution?",
       "back": "Comminution is the reduction in size, or simply 'to make small.' It involves mechanical operations that break large particles into smaller particles.",
@@ -1000,7 +1000,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 2 (Circuits and Operations)": [
+  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 2 - Circuits and Operations": [
     {
       "front": "Why is weighing and sampling of ore normally done on the finished product of a crushing plant before entering the grinding circuit?",
       "back": "Because this product is more homogeneous than run-of-mine ore and has not yet been ground into pulp, making it more representative for weighing and sampling.",
@@ -1066,7 +1066,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 3 (Handling and Storage Equipment)": [
+  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 3 - Handling and Storage Equipment": [
     {
       "front": "What are conveyor belts?",
       "back": "Conveyor belts are loops which move materials from one location to another, consisting of two or more pulleys with a continuous loop of material.",
@@ -1209,557 +1209,555 @@ const flashcards = {
     }
   ],
 
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 4 (Grinding Equipment)",
-    [
-      {
-        "front": "What does a semi-autogenous or autogenous mill do?",
-        "back": "The semi-autogenous or autogenous mill grinds crusher product and prepares it for final grinding in a ball mill or rod mill.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How is the product of a semi-autogenous mill typically processed?",
-        "back": "Its product is usually passed over a large vibrating screen to separate oversize 'pebbles' from correct-size particles.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What happens to the correct-size material from the SAG mill screen?",
-        "back": "The correct-size material is sent forward to a ball mill for final grinding.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What happens to the oversize pebbles from the SAG mill screen?",
-        "back": "The oversize pebbles are recycled through a small pebble crusher, and then back to the semi-autogenous or autogenous mill.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What are the benefits of the SAG mill pebble recycling procedure?",
-        "back": "This procedure maximizes ore throughput and minimizes electrical energy consumption.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What do ball mills tumble?",
-        "back": "Ball mills tumble iron or steel balls.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What happens to the balls in a ball mill during operation?",
-        "back": "They gradually wear away as grinding proceeds.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the typical composition of a ball mill by volume?",
-        "back": "Ball mills typically contain about 75% ore and 25% 'steel' by volume.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What type of grind do ball mills produce?",
-        "back": "They give a controlled final grind.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What does the ball mill accept and produce?",
-        "back": "The ball mill accepts the semi-autogenous or autogenous mill product and produces uniform-size flotation feed.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How is the ball mill operated?",
-        "back": "It is operated in closed circuit with a particle size measurement device and size control cyclones.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      }
-    ],
+  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 4 - Grinding Equipment": [
+    {
+      "front": "What does a semi-autogenous or autogenous mill do?",
+      "back": "The semi-autogenous or autogenous mill grinds crusher product and prepares it for final grinding in a ball mill or rod mill.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How is the product of a semi-autogenous mill typically processed?",
+      "back": "Its product is usually passed over a large vibrating screen to separate oversize 'pebbles' from correct-size particles.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What happens to the correct-size material from the SAG mill screen?",
+      "back": "The correct-size material is sent forward to a ball mill for final grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What happens to the oversize pebbles from the SAG mill screen?",
+      "back": "The oversize pebbles are recycled through a small pebble crusher, and then back to the semi-autogenous or autogenous mill.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What are the benefits of the SAG mill pebble recycling procedure?",
+      "back": "This procedure maximizes ore throughput and minimizes electrical energy consumption.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What do ball mills tumble?",
+      "back": "Ball mills tumble iron or steel balls.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What happens to the balls in a ball mill during operation?",
+      "back": "They gradually wear away as grinding proceeds.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the typical composition of a ball mill by volume?",
+      "back": "Ball mills typically contain about 75% ore and 25% 'steel' by volume.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What type of grind do ball mills produce?",
+      "back": "They give a controlled final grind.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What does the ball mill accept and produce?",
+      "back": "The ball mill accepts the semi-autogenous or autogenous mill product and produces uniform-size flotation feed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How is the ball mill operated?",
+      "back": "It is operated in closed circuit with a particle size measurement device and size control cyclones.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    }
+  ],
 
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 5 (Comminution Theory)",
-    [
-      {
-        "front": "What is comminution theory concerned with?",
-        "back": "Comminution theory is concerned with the relationship between energy input and the particle size made from a given feed size.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the greatest problem in comminution theory?",
-        "back": "Most of the energy input to a crushing or grinding machine is absorbed by the machine itself, and only a small fraction of the total energy is available for breaking the material.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What percentage of total energy input is available for actual size reduction in a ball mill?",
-        "back": "Less than 1% of the total energy input is available for actual size reduction in a ball mill; the bulk of the energy is utilized in the production of heat.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What assumption do all theories of comminution make?",
-        "back": "All theories assume that the material is brittle, so that no energy is absorbed in processes such as elongation or contraction which is not finally utilized in breakage.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the problem with plastic materials in comminution?",
-        "back": "A material which is plastic will consume energy in changing shape, which it will retain without creating significant new surface.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the oldest comminution theory?",
-        "back": "The oldest theory is that of Von Rittinger (1867).",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What does Rittinger's Law of Surface Theory state?",
-        "back": "The law states that the energy consumed in size reduction is proportional to the area of new surface produced.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "For which type of operation does Rittinger's hypothesis approximate power consumption most closely?",
-        "back": "This hypothesis approximates power consumption for secondary grinding most closely, but may be roughly applied to all stages of crushing and grinding.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "According to Rittinger's law, how does energy requirement vary with particle size?",
-        "back": "The energy required to achieve reduction ratio varies inversely with the particle size.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Write the relationship showing surface energy is proportional to what?",
-        "back": "Es ∝ 1/X² where Es is the surface energy and X is the particle size.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How is surface area of particles related to their diameter?",
-        "back": "The surface area of a known weight of particles of uniform diameter is inversely proportional to the diameter.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Write Rittinger's equation.",
-        "back": "E = CR(S2 - S1) = CR(1/x2 - 1/x1) Where: E = energy input, x1 = initial particle size, x2 = final particle size, CR = Rittinger's constant, S1 = initial specific surface (feed), S2 = final specific surface (product).",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Who developed the second theory of comminution and when?",
-        "back": "Kick developed the second theory in 1885.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What does Kick's Law of Volume Theory state?",
-        "back": "He stated that the work required is proportional to the reduction in volume of the particles concerned.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Define the reduction ratio according to Kick.",
-        "back": "R = f/p, where R is the reduction ratio, f is the diameter of the feed particles, and p is the diameter of the product particles.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "According to Kick's law, what is the energy required for comminution proportional to?",
-        "back": "The energy is proportional to ln(x1/x2).",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Write Kick's equation in integrated form.",
-        "back": "E = CK ln(x1/x2) Where: E = energy input, x1 = initial particle size, x2 = final particle size, CK = Kick's constant.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Who developed the third theory of comminution and when?",
-        "back": "Bond developed the third theory in 1952.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is Bond's third theory based on?",
-        "back": "The theory is based on the idea that work input is proportional to the new crack tip length produced in particle breakage, and equals the work represented by the product minus that represented by the feed.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How did Bond criticize Rittinger and Kick theories?",
-        "back": "Bond criticized both theories and postulated his own third theory as an alternative approach.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "In particles of similar shape, how is surface area of unit volume related to diameter?",
-        "back": "The surface area of unit volume of material is inversely proportional to the diameter.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How is crack length in unit volume related to diameter in Bond's theory?",
-        "back": "The crack length in unit volume is considered proportional to one side of the surface area and therefore inversely proportional to the square root of the diameter.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What particle size criterion does Bond use for practical calculations?",
-        "back": "The size in microns which 80% passes is selected as the criterion of particle size.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Define P and F in Bond's equation.",
-        "back": "P is the diameter in microns which 80% of the product passes, and F is the size which 80% of the feed passes.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Write Bond's third theory equation.",
-        "back": "W = Wi[10/√P - 10/√F] Where: W = work input (kWh/t), Wi = work index (kWh/t), P = size at which 80% of product passes (µm), F = size at which 80% of feed passes (µm).",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Write the equation for power draw using Bond's theory.",
-        "back": "Pw = T × W Where: Pw = power draw (kW), T = throughput of new feed (t/h).",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the work index?",
-        "back": "The work index is the comminution parameter which expresses the resistance of the material to crushing and grinding.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How is the work index numerically defined?",
-        "back": "Numerically, it is defined as the work input in kilowatt hour per tonne required for the reduction in size from theoretical infinite feed size to 80% passing 100 microns.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "For what range of conditions does grinding power calculated using Bond's work indices apply reasonably well?",
-        "back": "It applies reasonably well in the range of conventional rod mill and ball mill grinding conditions and can be corrected for other conditions.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does the hardness of ore relate to the work index value?",
-        "back": "The harder the ore, the higher the work index value and the greater the amount of work required to reduce it from size F to size P.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is an 'operating work index'?",
-        "back": "An operating work index can be determined for an existing comminution operation using Bond's equation, and it normally varies from about 10 for soft ores to 20 for ores that are difficult to break.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What can the operating work index be used for?",
-        "back": "It can be used to compare feed ore types or assess the crushing or grinding performance in relative terms.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What did Hukki (1975) suggest about the relationship between energy and particle size?",
-        "back": "Hukki suggested that the relationship between energy and particle size is a composite form of the three laws and concluded that no single relationship was adequate.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does the probability of breakage vary with particle size?",
-        "back": "The probability of breakage in comminution is high for large particles and rapidly diminishes for fine sizes.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "According to Hukki, which law is appropriate at crushing sizes?",
-        "back": "At crushing sizes, Kick's relationship was appropriate.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "For which type of mills does Bond's law work well?",
-        "back": "Bond's 'law' worked well for rod and ball mills, as might be expected.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "At what particle sizes are Rittinger's ideas about surface more plausible?",
-        "back": "At finer sizes, Rittinger's ideas about surface were more plausible.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why is specific energy required for crushing much lower than for grinding?",
-        "back": "Crushing operations produce the smallest change in particle surface area and hence, as predicted by the theories, the specific energy required is much lower than for grinding.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is Bond's law useful for predicting?",
-        "back": "Bond's law is a useful predictor of energy consumption and of power requirements.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "On what type of rock is Bond's index (Wi) mainly based, and what is a limitation?",
-        "back": "Bond's index Wi (grindability constant) is mainly based on homogeneous rock, but most rocks are heterogeneous or aggregates of other minerals.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Who proposed a general equation for comminution and when?",
-        "back": "Walker and others proposed a general equation in 1937.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Write the general differential equation for comminution proposed by Walker.",
-        "back": "dE/dX = -C/X^n Where: E = net energy per unit mass required, X = particle size, n = constant depending on material (grindability constant).",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does the Walker equation unify the three laws of comminution?",
-        "back": "Each of the three laws (Rittinger, Kick, Bond) can be derived as the integral of this basic differential equation with different values of the constant n.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What does the constant 'n' represent in Walker's equation?",
-        "back": "The constant 'n' depends upon the material and represents a grindability constant.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why do the three theories of comminution appear different if they describe the same phenomenon?",
-        "back": "Various attempts have been made to show that the relationships of Rittinger, Kick, and Bond are interpretations of a single general equation, with different values of constants or different regions of applicability.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "In what size ranges are each of the three laws most applicable?",
-        "back": "Kick's law is most applicable at crushing sizes (largest particles), Bond's law works well for intermediate sizes in rod and ball mills, and Rittinger's law is most applicable at the finest sizes.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why is it important to understand all three laws of comminution?",
-        "back": "Understanding all three laws provides a comprehensive view of energy-size relationships across the entire comminution process, allowing engineers to select appropriate equipment and optimize energy consumption for different stages.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does the relationship between energy consumption and particle size change across the comminution process?",
-        "back": "The relationship changes from volume-based (Kick) at coarse sizes, to crack-length based (Bond) at intermediate sizes, to surface-area based (Rittinger) at fine sizes.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why is closed circuit operation with high circulating loads used in modern grinding?",
-        "back": "High circulating loads (250-700%) in modern grinding allow for tighter size control, maximize throughput, and minimize overgrinding while achieving the desired product size distribution.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does the integration of SAG mills with ball mills optimize the grinding process?",
-        "back": "The SAG mill performs coarse grinding and screens out correct-size material for the ball mill. Oversize pebbles are crushed and recycled, while the ball mill provides controlled final grinding.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What role do screens play in a closed circuit grinding system?",
-        "back": "Screens separate particles by size, sending undersize material forward to the next stage while returning oversize material to the mill for additional grinding.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why is metal detection important between crushing stages?",
-        "back": "Metal detection prevents tramp metal from entering secondary crushers, which would cause jamming, production downtime, and equipment damage.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How do storage bins contribute to overall plant efficiency?",
-        "back": "Storage bins provide surge capacity that allows continuous operation of downstream equipment even when upstream equipment is disrupted, maximizing overall plant utilization.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the relationship between liberation and particle size?",
-        "back": "As particle size decreases through comminution, mineral particles become more liberated from gangue material, but there's an optimal size where further grinding becomes counterproductive due to overgrinding effects.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why is energy efficiency a critical concern in comminution?",
-        "back": "Most energy input is lost as heat rather than used for breakage (less than 1% efficiency in ball mills), and comminution is one of the most energy-intensive operations in mineral processing.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does particle size affect energy consumption per tonne in grinding?",
-        "back": "Energy consumption increases dramatically as target particle size decreases, following the inverse square root relationship in Bond's equation.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What factors determine the total energy required for a comminution operation?",
-        "back": "Feed particle size, desired product particle size, ore work index (hardness), throughput rate, and equipment efficiency all determine total energy requirements.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why is staged comminution more efficient than single-stage reduction?",
-        "back": "Staged reduction allows use of equipment optimized for each size range, prevents overgrinding, and distributes the energy input more effectively across multiple operations.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What are the trade-offs between open and closed circuit operations?",
-        "back": "Open circuits are simpler but may produce variable product size and overgrinding. Closed circuits provide better size control and prevent overgrinding but require additional equipment and have higher capital costs.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does ore heterogeneity affect sampling and weighing?",
-        "back": "Heterogeneous run-of-mine ore gives less representative samples, which is why sampling is done on crushed product which is more homogeneous.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why are automated weighers and samplers used in modern plants?",
-        "back": "They provide continuous, consistent monitoring of feed characteristics, enabling better process control and optimization.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How does ore mineralogy (interlocking, dissemination) affect comminution strategy?",
-        "back": "Highly disseminated ores require finer grinding for liberation, while coarsely interlocked ores may achieve adequate liberation at larger sizes, affecting the required degree of size reduction.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Explain the complete flow of material from mining through fine grinding.",
-        "back": "Ore is blasted, then crushed in stages with screening between stages. Material is stored in stockpiles/bins, then fed to SAG mills. SAG mill product is screened; correct size goes to ball mills, oversize is crushed and recycled. Ball mills in closed circuit with cyclones produce final product for flotation.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "Why must comminution be viewed as an integrated process rather than discrete stages?",
-        "back": "Each stage affects subsequent operations. Blast fragmentation affects crusher performance, crusher product affects grinding, and grinding product affects downstream separation. Optimizing the entire chain produces better economics.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "How do the physical properties of ores influence comminution circuit design?",
-        "back": "Ore hardness (work index) determines equipment selection and power requirements. Brittleness affects breakage mechanism. Mineralogy determines required degree of liberation and target particle size. Moisture affects handling and screening.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      },
-      {
-        "front": "What is the fundamental challenge in achieving optimal comminution?",
-        "back": "Balancing the competing objectives of adequate liberation (requires fine grinding), avoiding overgrinding, and minimizing energy consumption while maintaining required throughput.",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "principles of comminution"
-      }
-    ],
+  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 5 - Comminution Theory": [
+    {
+      "front": "What is comminution theory concerned with?",
+      "back": "Comminution theory is concerned with the relationship between energy input and the particle size made from a given feed size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the greatest problem in comminution theory?",
+      "back": "Most of the energy input to a crushing or grinding machine is absorbed by the machine itself, and only a small fraction of the total energy is available for breaking the material.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What percentage of total energy input is available for actual size reduction in a ball mill?",
+      "back": "Less than 1% of the total energy input is available for actual size reduction in a ball mill; the bulk of the energy is utilized in the production of heat.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What assumption do all theories of comminution make?",
+      "back": "All theories assume that the material is brittle, so that no energy is absorbed in processes such as elongation or contraction which is not finally utilized in breakage.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the problem with plastic materials in comminution?",
+      "back": "A material which is plastic will consume energy in changing shape, which it will retain without creating significant new surface.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the oldest comminution theory?",
+      "back": "The oldest theory is that of Von Rittinger (1867).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What does Rittinger's Law of Surface Theory state?",
+      "back": "The law states that the energy consumed in size reduction is proportional to the area of new surface produced.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "For which type of operation does Rittinger's hypothesis approximate power consumption most closely?",
+      "back": "This hypothesis approximates power consumption for secondary grinding most closely, but may be roughly applied to all stages of crushing and grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "According to Rittinger's law, how does energy requirement vary with particle size?",
+      "back": "The energy required to achieve reduction ratio varies inversely with the particle size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Write the relationship showing surface energy is proportional to what?",
+      "back": "Es ∝ 1/X² where Es is the surface energy and X is the particle size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How is surface area of particles related to their diameter?",
+      "back": "The surface area of a known weight of particles of uniform diameter is inversely proportional to the diameter.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Write Rittinger's equation.",
+      "back": "E = CR(S2 - S1) = CR(1/x2 - 1/x1) Where: E = energy input, x1 = initial particle size, x2 = final particle size, CR = Rittinger's constant, S1 = initial specific surface (feed), S2 = final specific surface (product).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Who developed the second theory of comminution and when?",
+      "back": "Kick developed the second theory in 1885.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What does Kick's Law of Volume Theory state?",
+      "back": "He stated that the work required is proportional to the reduction in volume of the particles concerned.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Define the reduction ratio according to Kick.",
+      "back": "R = f/p, where R is the reduction ratio, f is the diameter of the feed particles, and p is the diameter of the product particles.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "According to Kick's law, what is the energy required for comminution proportional to?",
+      "back": "The energy is proportional to ln(x1/x2).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Write Kick's equation in integrated form.",
+      "back": "E = CK ln(x1/x2) Where: E = energy input, x1 = initial particle size, x2 = final particle size, CK = Kick's constant.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Who developed the third theory of comminution and when?",
+      "back": "Bond developed the third theory in 1952.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is Bond's third theory based on?",
+      "back": "The theory is based on the idea that work input is proportional to the new crack tip length produced in particle breakage, and equals the work represented by the product minus that represented by the feed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How did Bond criticize Rittinger and Kick theories?",
+      "back": "Bond criticized both theories and postulated his own third theory as an alternative approach.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "In particles of similar shape, how is surface area of unit volume related to diameter?",
+      "back": "The surface area of unit volume of material is inversely proportional to the diameter.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How is crack length in unit volume related to diameter in Bond's theory?",
+      "back": "The crack length in unit volume is considered proportional to one side of the surface area and therefore inversely proportional to the square root of the diameter.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What particle size criterion does Bond use for practical calculations?",
+      "back": "The size in microns which 80% passes is selected as the criterion of particle size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Define P and F in Bond's equation.",
+      "back": "P is the diameter in microns which 80% of the product passes, and F is the size which 80% of the feed passes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Write Bond's third theory equation.",
+      "back": "W = Wi[10/√P - 10/√F] Where: W = work input (kWh/t), Wi = work index (kWh/t), P = size at which 80% of product passes (µm), F = size at which 80% of feed passes (µm).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Write the equation for power draw using Bond's theory.",
+      "back": "Pw = T × W Where: Pw = power draw (kW), T = throughput of new feed (t/h).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the work index?",
+      "back": "The work index is the comminution parameter which expresses the resistance of the material to crushing and grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How is the work index numerically defined?",
+      "back": "Numerically, it is defined as the work input in kilowatt hour per tonne required for the reduction in size from theoretical infinite feed size to 80% passing 100 microns.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "For what range of conditions does grinding power calculated using Bond's work indices apply reasonably well?",
+      "back": "It applies reasonably well in the range of conventional rod mill and ball mill grinding conditions and can be corrected for other conditions.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does the hardness of ore relate to the work index value?",
+      "back": "The harder the ore, the higher the work index value and the greater the amount of work required to reduce it from size F to size P.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is an 'operating work index'?",
+      "back": "An operating work index can be determined for an existing comminution operation using Bond's equation, and it normally varies from about 10 for soft ores to 20 for ores that are difficult to break.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What can the operating work index be used for?",
+      "back": "It can be used to compare feed ore types or assess the crushing or grinding performance in relative terms.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What did Hukki (1975) suggest about the relationship between energy and particle size?",
+      "back": "Hukki suggested that the relationship between energy and particle size is a composite form of the three laws and concluded that no single relationship was adequate.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does the probability of breakage vary with particle size?",
+      "back": "The probability of breakage in comminution is high for large particles and rapidly diminishes for fine sizes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "According to Hukki, which law is appropriate at crushing sizes?",
+      "back": "At crushing sizes, Kick's relationship was appropriate.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "For which type of mills does Bond's law work well?",
+      "back": "Bond's 'law' worked well for rod and ball mills, as might be expected.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "At what particle sizes are Rittinger's ideas about surface more plausible?",
+      "back": "At finer sizes, Rittinger's ideas about surface were more plausible.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why is specific energy required for crushing much lower than for grinding?",
+      "back": "Crushing operations produce the smallest change in particle surface area and hence, as predicted by the theories, the specific energy required is much lower than for grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is Bond's law useful for predicting?",
+      "back": "Bond's law is a useful predictor of energy consumption and of power requirements.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "On what type of rock is Bond's index (Wi) mainly based, and what is a limitation?",
+      "back": "Bond's index Wi (grindability constant) is mainly based on homogeneous rock, but most rocks are heterogeneous or aggregates of other minerals.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Who proposed a general equation for comminution and when?",
+      "back": "Walker and others proposed a general equation in 1937.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Write the general differential equation for comminution proposed by Walker.",
+      "back": "dE/dX = -C/X^n Where: E = net energy per unit mass required, X = particle size, n = constant depending on material (grindability constant).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does the Walker equation unify the three laws of comminution?",
+      "back": "Each of the three laws (Rittinger, Kick, Bond) can be derived as the integral of this basic differential equation with different values of the constant n.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What does the constant 'n' represent in Walker's equation?",
+      "back": "The constant 'n' depends upon the material and represents a grindability constant.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why do the three theories of comminution appear different if they describe the same phenomenon?",
+      "back": "Various attempts have been made to show that the relationships of Rittinger, Kick, and Bond are interpretations of a single general equation, with different values of constants or different regions of applicability.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "In what size ranges are each of the three laws most applicable?",
+      "back": "Kick's law is most applicable at crushing sizes (largest particles), Bond's law works well for intermediate sizes in rod and ball mills, and Rittinger's law is most applicable at the finest sizes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why is it important to understand all three laws of comminution?",
+      "back": "Understanding all three laws provides a comprehensive view of energy-size relationships across the entire comminution process, allowing engineers to select appropriate equipment and optimize energy consumption for different stages.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does the relationship between energy consumption and particle size change across the comminution process?",
+      "back": "The relationship changes from volume-based (Kick) at coarse sizes, to crack-length based (Bond) at intermediate sizes, to surface-area based (Rittinger) at fine sizes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why is closed circuit operation with high circulating loads used in modern grinding?",
+      "back": "High circulating loads (250-700%) in modern grinding allow for tighter size control, maximize throughput, and minimize overgrinding while achieving the desired product size distribution.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does the integration of SAG mills with ball mills optimize the grinding process?",
+      "back": "The SAG mill performs coarse grinding and screens out correct-size material for the ball mill. Oversize pebbles are crushed and recycled, while the ball mill provides controlled final grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What role do screens play in a closed circuit grinding system?",
+      "back": "Screens separate particles by size, sending undersize material forward to the next stage while returning oversize material to the mill for additional grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why is metal detection important between crushing stages?",
+      "back": "Metal detection prevents tramp metal from entering secondary crushers, which would cause jamming, production downtime, and equipment damage.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How do storage bins contribute to overall plant efficiency?",
+      "back": "Storage bins provide surge capacity that allows continuous operation of downstream equipment even when upstream equipment is disrupted, maximizing overall plant utilization.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the relationship between liberation and particle size?",
+      "back": "As particle size decreases through comminution, mineral particles become more liberated from gangue material, but there's an optimal size where further grinding becomes counterproductive due to overgrinding effects.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why is energy efficiency a critical concern in comminution?",
+      "back": "Most energy input is lost as heat rather than used for breakage (less than 1% efficiency in ball mills), and comminution is one of the most energy-intensive operations in mineral processing.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does particle size affect energy consumption per tonne in grinding?",
+      "back": "Energy consumption increases dramatically as target particle size decreases, following the inverse square root relationship in Bond's equation.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What factors determine the total energy required for a comminution operation?",
+      "back": "Feed particle size, desired product particle size, ore work index (hardness), throughput rate, and equipment efficiency all determine total energy requirements.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why is staged comminution more efficient than single-stage reduction?",
+      "back": "Staged reduction allows use of equipment optimized for each size range, prevents overgrinding, and distributes the energy input more effectively across multiple operations.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What are the trade-offs between open and closed circuit operations?",
+      "back": "Open circuits are simpler but may produce variable product size and overgrinding. Closed circuits provide better size control and prevent overgrinding but require additional equipment and have higher capital costs.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does ore heterogeneity affect sampling and weighing?",
+      "back": "Heterogeneous run-of-mine ore gives less representative samples, which is why sampling is done on crushed product which is more homogeneous.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why are automated weighers and samplers used in modern plants?",
+      "back": "They provide continuous, consistent monitoring of feed characteristics, enabling better process control and optimization.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How does ore mineralogy (interlocking, dissemination) affect comminution strategy?",
+      "back": "Highly disseminated ores require finer grinding for liberation, while coarsely interlocked ores may achieve adequate liberation at larger sizes, affecting the required degree of size reduction.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Explain the complete flow of material from mining through fine grinding.",
+      "back": "Ore is blasted, then crushed in stages with screening between stages. Material is stored in stockpiles/bins, then fed to SAG mills. SAG mill product is screened; correct size goes to ball mills, oversize is crushed and recycled. Ball mills in closed circuit with cyclones produce final product for flotation.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "Why must comminution be viewed as an integrated process rather than discrete stages?",
+      "back": "Each stage affects subsequent operations. Blast fragmentation affects crusher performance, crusher product affects grinding, and grinding product affects downstream separation. Optimizing the entire chain produces better economics.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "How do the physical properties of ores influence comminution circuit design?",
+      "back": "Ore hardness (work index) determines equipment selection and power requirements. Brittleness affects breakage mechanism. Mineralogy determines required degree of liberation and target particle size. Moisture affects handling and screening.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    },
+    {
+      "front": "What is the fundamental challenge in achieving optimal comminution?",
+      "back": "Balancing the competing objectives of adequate liberation (requires fine grinding), avoiding overgrinding, and minimizing energy consumption while maintaining required throughput.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "principles of comminution"
+    }
+  ],
 
   // =================================================================
   // MT221 - MODULE 3
   // =================================================================
-  "MODULE 3: CRUSHING - Section 1 (Introduction & Principles)": [
+  "MODULE 3: CRUSHING - Section 1 - Introduction & Principles": [
     {
       "front": "What does metallic mineral processing typically involve?",
       "back": "It's a 4-step process to get metals from rocks:\n① MINE the ore (dig it up)\n② CRUSH it into smaller pieces\n③ SEPARATE valuable minerals from waste\n④ PREPARE the concentrate for refining\n💡 Like making apple juice: pick apples → crush them → separate juice from pulp → bottle it",
@@ -1867,7 +1865,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 3: CRUSHING - Section 2 (Primary Crushers: Jaw & Gyratory)": [
+  "MODULE 3: CRUSHING - Section 2 - Primary Crushers: Jaw & Gyratory": [
     {
       "front": "What is the purpose of primary crushers?",
       "back": "SUPER-STRONG machines that:\n• Take giant rocks (1.5m) 🗻\n• Crush them to manageable size (10-20cm) 🪨\n• Make them ready for next step\n\n💡 The \"heavyweight champion\" of crushing",
@@ -2402,679 +2400,678 @@ const flashcards = {
     }
   ],
 
-  "MODULE 3: CRUSHING - Section 3 (Secondary Crushers: Cone & Rolls)",
-    [
-      {
-        "front": "How do secondary crushers compare to primary crushers in terms of construction?",
-        "back": "MUCH LIGHTER\nNot as heavy-duty\n\nPrimary = heavyweight boxer 🥊\nSecondary = middleweight",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "What is the typical maximum feed size for secondary crushers?",
-        "back": "Less than 15 cm diameter\nAlready crushed once\n\nLike taking chopped veggies for finer chopping",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "Why is secondary crusher ore easier to handle?",
-        "back": "Bad stuff already removed:\n• Tramp metal (accidental metal)\n• Wood\n• Clay\n• Slimes\n\nCleaner material = easier processing",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "How do transportation and feeding arrangements differ for secondary crushers?",
-        "back": "Less rugged needed\nPrimary stage did hard work\n\nLike using regular truck vs dump truck",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "Do secondary crushers operate with dry or wet feeds?",
-        "back": "DRY - like all crushing stages\nWater causes problems",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "What is the purpose of secondary crushers?",
-        "back": "Reduce ore to GRINDING size\nFinal prep for powder making\n\nLast chop before blending",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "When is a tertiary crushing stage used?",
-        "back": "If crushing is MORE EFFICIENT than grinding\nExtra step saves energy overall\n\nLike chopping veggies finely before blending",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "How do tertiary crushers differ from secondary crushers?",
-        "back": "SAME DESIGN\nJust CLOSER SET\n\nLike using finer blade on food processor",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "What type of crusher performs the bulk of secondary crushing?",
-        "back": "CONE CRUSHERS\nSome use crushing rolls or hammer mills\n\nCone = most popular choice",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "secondary crushers - general"
-      },
-      {
-        "front": "What is a cone crusher?",
-        "back": "Modified GYRATORY crusher\nLike gyratory's younger brother\n\nShorter, faster, lighter",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the essential difference between a cone crusher and a gyratory crusher?",
-        "back": "Spindle NOT SUSPENDED\nSupported from BELOW\n\nLike table lamp (cone) vs hanging lamp (gyratory)",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Why does the crushing shell flare outwards in a cone crusher?",
-        "back": "Allows for SWELL of broken ore\nMore space as ore breaks down\n\nPrevents choking\n\nLike expanding bag for popcorn",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What type of crusher is the cone crusher described as?",
-        "back": "EXCELLENT arrested crusher\nControls particle path well",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Describe the general principle of operation of a cone crusher.",
-        "back": "Conical head gyrates inside BOWL\nStationary truncated cone\n\nLike spinning top in bowl",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the shape of the outside of the bowl?",
-        "back": "CYLINDRICAL\nSmooth outside\n\nInside is what matters",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How does the cross-section of the crushing cavity change?",
-        "back": "INCREASES top to bottom\nWider at bottom\n\nLike upside-down funnel",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How is the head protected in a cone crusher?",
-        "back": "WEAR-RESISTANT MANTLE\nReplaceable liner\n\nLike armor for the head",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What protects the inside of the bowl?",
-        "back": "BOWL-LINER\nDifferent shapes available\n\nInterchangeable for different jobs",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How can the crushing cavity shape be changed?",
-        "back": "For different crushing:\n• Fine\n• Medium\n• Coarse\n• Extra-coarse\n\nLike different sieve sizes",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the 'parallel zone' in a cone crusher?",
-        "back": "Where mantle and bowl are PARALLEL\nAt lower end\n\nWhere final sizing happens\n\nLike parallel train tracks",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the gyrating speed of the head in a cone crusher?",
-        "back": "HIGH: 400-700 gyrations/minute\nMuch faster than gyratory\n\nLike sports car vs truck",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Describe the ore crushing process in a cone crusher.",
-        "back": "1. Ore fed top\n2. Spirals down\n3. Multiple rapid blows\n4. Between mantle and bowl\n\nLike going down a corkscrew slide",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Why does the increasing cross-section of the bowl prevent choking?",
-        "back": "Expanding cavity allows SWELL\nOre has room to expand as breaks\n\nLike growing popcorn has room in bag",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the purpose of the parallel zone in the crushing process?",
-        "back": "Makes each particle get MULTIPLE BLOWS\nEnsures proper sizing\n\nNo early escape!\n\nLike quality control checkpoint",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How does the product sizing of cone crushers compare to jaw and gyratory crushers?",
-        "back": "MORE EVEN than jaw/gyratory\nBetter control in parallel zone\n\nUniform product like graded gravel",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How is the 'set' defined in a cone crusher?",
-        "back": "MINIMUM clearance at discharge\n(Not maximum like others)\n\nThe tightest gap\n\nLike minimum door width",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What does the main frame hold?",
-        "back": "• Eccentric assembly\n• Socket with liner\n• Supports head assembly\n\nThe \"skeleton\" of the machine",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How is the eccentric rotated?",
-        "back": "Through GEAR and PINION\nDriven by countershaft\n\nLike bicycle gears",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What carries the weight of the eccentric and gear?",
-        "back": "ECCENTRIC-THRUST BEARINGS\nAt bottom\n\nCarry the heavy load",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Describe the main shaft assembly.",
-        "back": "• Main shaft pressed into head\n• Carries mantle\n• Lower end bushed onto eccentric\n\nThe \"spine\" of the crusher",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the distributor plate and what is its function?",
-        "back": "Above head, gyrates with it\nSpreads feed EVENLY\n\nLike spinning sprinkler",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How is the bowl attached to the main frame?",
-        "back": "Threaded onto ADJUSTMENT RING\nRing rests on main frame\n\nLike screw-on lid",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How is the set adjusted in a cone crusher?",
-        "back": "Screw bowl UP/DOWN\nUsing winch or crane\n\nChange discharge opening size",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the function of the tensioned springs?",
-        "back": "OVERLOAD PROTECTION\nAllow bowl to lift if jam\n\nLike safety valve",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What happens when uncrushable material enters the crushing cavity?",
-        "back": "Springs compress → bowl lifts\nMaterial passes through\nBowl returns to position\n\nAutomatic release system",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What does the oil circulation system lubricate?",
-        "back": "OIL CIRCULATION for:\n• Bearings\n• Gears\n• Countershaft\n\nLike engine oil system",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What safety feature is in the lubrication system?",
-        "back": "FLOW SWITCH\nStops crusher if oil fails\n\nPrevents damage\n\nLike low oil light in car",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How does the construction of a cone crusher differ from a gyratory crusher?",
-        "back": "• Flatter cone head\n• Longer eccentric\n• LOWER pressure per area\n• LIGHTER construction\n\nMore efficient design",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How is the head assembly supported differently in a cone crusher?",
-        "back": "Supported on SOCKET below\nNot suspended from top\n\nDifferent engineering approach",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What type of breaker is a cone crusher?",
-        "back": "TYPICAL INTERMEDIATE breaker\nBetween primary and grinding\n\nThe \"middle manager\" of crushing",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What gives the cone crusher its high capacity?",
-        "back": "1. Expanding cavity\n2. High speed\n\nMoves lots of material fast\n\nLike high-speed conveyor",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What results in a fairly evenly sized product?",
-        "back": "HIGH SPEED + PARALLEL ZONE\nEach particle treated similarly\n\nConsistent results",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the reduction ratio for cone crushers?",
-        "back": "HIGHER than primary: 10-20\nMore reduction per pass\n\nEfficient size reduction",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "List the main characteristics of cone crushers.",
-        "back": "• Continuous crushing\n• Max force at top\n• Expanding cavity top→bottom\n• Annular openings\n• Parallel zone at bottom\n• Set = minimum opening\n• High speed: 400-700/min\n• Large throw: 5-9 × set\n• High reduction: 10-20\n• Even product, high capacity\n\n💡 The \"efficient middleman\"",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What are standard cone crushers most commonly used for?",
-        "back": "Most common for INTERMEDIATE crushing\n15 cm → 2.5 cm\n\nMain workhorse",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Can smaller standard cone crushers be used for finer crushing?",
-        "back": "Smaller standards can go to ~1 cm\nBut bigger plants use SHORT-HEAD or rod mills\n\nSpecialized tools for special jobs",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "How often is the set of cone crushers checked?",
-        "back": "REGULAR INTERVALS\nImportant maintenance task\n\nLike checking tire pressure",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the usual checking procedure for the set?",
-        "back": "Use LEAD BILLETS:\n1. Run crusher empty\n2. Pass billets through\n3. Measure smallest dimension\n\nThat's the discharge opening!\n\nLike using feeler gauges",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "Can the set be adjusted after checking?",
-        "back": "YES - use adjustment ring\nFine-tune as needed\n\nLike tuning instrument",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "cone crushers"
-      },
-      {
-        "front": "What is the Symons short-head cone crusher?",
-        "back": "Special cone crusher type\nSame basic design but modified\n\nFor EXTRA-FINE crushing",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "How does the head angle differ in a short-head crusher?",
-        "back": "STEEPER than standard\nMore vertical\n\nLike steep hill vs gentle slope",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "How does the feed opening compare to a standard cone crusher?",
-        "back": "NARROWER than standard\nTakes finer feed\n\nSmaller \"mouth\"",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "How does the parallel zone compare to a standard cone crusher?",
-        "back": "LONGER than standard\nMore time in sizing zone\n\nBetter control of final size",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "What type of feed should a short-head crusher receive?",
-        "back": "FINER feed than standard\nAlready crushed material\n\nLike taking chopped nuts for grinding",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "What product size does a short-head crusher deliver?",
-        "back": "FINER: 0.4-1.5 cm\nvs standard's 2.5 cm\n\nExtra-fine output",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "How does the capacity of a short-head crusher compare?",
-        "back": "MARKEDLY LOWER than standard\nTrade-off: finer product = less volume\n\nLike espresso vs drip coffee - finer but slower",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "Can short-head crushers be fitted with different bowl liners?",
-        "back": "FOUR different types available\nLike standard cone\n\nVersatile for different needs",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "What is the typical use of a short-head cone crusher?",
-        "back": "TERTIARY crusher in CLOSED CIRCUIT\nWith screen, gets secondary crusher product\n\nFinal touch before grinding",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "symons short-head cone crusher"
-      },
-      {
-        "front": "What are reduction-gyratory crushers?",
-        "back": "Hybrid design\nGyratory + cone crusher features\n\nBest of both worlds",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "How does the crushing head differ from a common gyratory crusher?",
-        "back": "MUCH FLATTER cone\nLike cone crusher\n\nDifferent shape for different action",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "How does the stationary concave differ?",
-        "back": "Flares outward HIGHER UP\nDifferent profile\n\nChanges crushing dynamics",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "What does the flaring provide?",
-        "back": "PARALLEL CRUSHING ZONE\nLike cone crushers\n\nReduces choking chance",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "What are reduction-gyratory crushers used for?",
-        "back": "INTERMEDIATE crushers\nBetween primary and fine crushing\n\nSpecialized position",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "How is the set adjusted in recent versions?",
-        "back": "HYDRAULICALLY\nRaise/lower head\n\nModern convenience",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "How is protection against overload provided?",
-        "back": "Same hydraulic system\nGAS ACCUMULATOR for automatic reset\n\nSmart safety feature",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "What is the hydrocone?",
-        "back": "\"Cone crusher with automatic reset\"\nAllis-Chalmers version\n\nFamous brand/model",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "reduction-gyratory crushers"
-      },
-      {
-        "front": "What is the basic construction of crushing rolls?",
-        "back": "TWO HORIZONTAL CYLINDERS\nRotate inward, downward\n\nLike old-fashioned wringer washer",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "How should the feed behave in crushing rolls?",
-        "back": "Nipped between rolls\nDrawn down between them\n\nLike dough through pasta roller",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "How are modern roll crushers protected against damage?",
-        "back": "One roll SPRING-LOADED\nGives way for uncrushables\n\nSafety release",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is the construction of the rolls?",
-        "back": "PERMANENT CORE (\"heart\")\n+ REPLACEABLE SHELL\n\nLike pencil + eraser",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "How is the life of the shells increased?",
-        "back": "AUTOMATIC LATERAL ADJUSTMENT\nRoll moves side-to-side as rotates\n\nEven wear distribution\n\nLike rotating tires",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What happens to the rolls during operation?",
-        "back": "Ore forces rolls APART\nGap increases under load\n\nLike squeezing balloon",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is the typical relationship between roll spacing and product size?",
-        "back": "Set = 0.7-0.8 × desired product\nAccount for spring-back\n\nLike over-shooting target",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What determines the diameter of the rolls?",
-        "back": "LARGE compared to feed size\nNeed leverage for crushing\n\nLike using long wrench",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "Why are crushing rolls limited to fine crushing?",
-        "back": "FINE CRUSHING ONLY\nNot for coarse work\n\nSpecialist, not generalist",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is the typical speed of rotation?",
-        "back": "LOW: 80-120 rev/minute\nSafety and control\n\nSlow and steady",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "Why can't higher speeds be used?",
-        "back": "DANGEROUS with heavy rolls\nCould fly apart!\n\nLike spinning heavy wheel too fast",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What has generally superseded crushing rolls?",
-        "back": "SHORT-HEAD CONE CRUSHERS\nand ROD MILLS\n\nMore efficient modern options",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "Where are crushing rolls still used?",
-        "back": "SMALL PLANTS and LABS\nLow cost, simple\n\nLike using hand tools vs power tools",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "How are crushing rolls usually operated?",
-        "back": "CLOSED CIRCUIT with screen\nRecycle oversized material\n\nQuality control loop",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is the typical circulating load?",
-        "back": "HIGH: up to 600%\nLots of recycling\n\nMultiple attempts to get right size",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is 'graded crushing'?",
-        "back": "SERIES of roll sets\nEach finer than last\nScreens between stages\n\nStep-by-step refinement\n\nLike sifting flour through different sieves",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is the characteristic of each set of rolls in graded crushing?",
-        "back": "FREE CRUSHING\nLOW reduction ratio (2-4)\n\nGentle, controlled reduction",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "How can a higher reduction ratio be achieved with rolls?",
-        "back": "CHOKE CRUSHING\nHigh circulating loads\n\nSmall plants use this trick",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "Why are rolls still popular in small plants?",
-        "back": "LOW INITIAL COST\nSimple to operate\n\nBudget-friendly option",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "List the main characteristics of crushing rolls.",
-        "back": "• Simple and cheap\n• Easy maintenance (but high cost)\n• Low reduction: 2-4\n• Uneven product\n• Low capacity\n\n💡 The \"budget option\"",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What is essential for maximum utilization of roll surfaces?",
-        "back": "CONSTANT, EVEN distribution\nAcross roll width\n\nCritical for good performance\n\nLike spreading butter evenly",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "crushing rolls"
-      },
-      {
-        "front": "What can hammer mills do in one operation?",
-        "back": "LARGE to VERY FINE in ONE STEP\nHuge reduction ratio\n\nLike blender for rocks",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "What is the common principle of hammer mills?",
-        "back": "FLAILING HAMMERS spin inside casing\nGrid at bottom controls size\n\nLike giant food processor",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "What determines the product size in a hammer mill?",
-        "back": "GRID OPENING SIZE\nSmaller holes = finer product\n\nLike sieve mesh size",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "How are the crushing forces applied?",
-        "back": "INSTANTANEOUS IMPACT\nNot squeezing, but hitting\n\nLike hammer vs vice",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "How are rock particles broken in a hammer mill?",
-        "back": "1. Hit by hammers\n2. Hit casing\n3. Hit other particles\n\nThree ways to break!",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "What type of material are hammer mills best suited for?",
-        "back": "SOFT and FRIABLE material\nBreaks easily on impact\n\nLike crackers vs hard candy",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "What is a disadvantage of hammer mills?",
-        "back": "WEAR RAPIDLY\nHammers need frequent replacement\n\nHigh maintenance",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      },
-      {
-        "front": "What type of ore are hammer mills particularly used for?",
-        "back": "CLAYEY ORES\nWould clog other crushers\n\nThe \"clay specialist\"",
-        "course": "MT221",
-        "term": "T1",
-        "topic": "hammer mills (impact crushers)"
-      }
-    ],
+  "MODULE 3: CRUSHING - Section 3 - Secondary Crushers: Cone & Rolls": [
+    {
+      "front": "How do secondary crushers compare to primary crushers in terms of construction?",
+      "back": "MUCH LIGHTER\nNot as heavy-duty\n\nPrimary = heavyweight boxer 🥊\nSecondary = middleweight",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What is the typical maximum feed size for secondary crushers?",
+      "back": "Less than 15 cm diameter\nAlready crushed once\n\nLike taking chopped veggies for finer chopping",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "Why is secondary crusher ore easier to handle?",
+      "back": "Bad stuff already removed:\n• Tramp metal (accidental metal)\n• Wood\n• Clay\n• Slimes\n\nCleaner material = easier processing",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "How do transportation and feeding arrangements differ for secondary crushers?",
+      "back": "Less rugged needed\nPrimary stage did hard work\n\nLike using regular truck vs dump truck",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "Do secondary crushers operate with dry or wet feeds?",
+      "back": "DRY - like all crushing stages\nWater causes problems",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What is the purpose of secondary crushers?",
+      "back": "Reduce ore to GRINDING size\nFinal prep for powder making\n\nLast chop before blending",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "When is a tertiary crushing stage used?",
+      "back": "If crushing is MORE EFFICIENT than grinding\nExtra step saves energy overall\n\nLike chopping veggies finely before blending",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "How do tertiary crushers differ from secondary crushers?",
+      "back": "SAME DESIGN\nJust CLOSER SET\n\nLike using finer blade on food processor",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What type of crusher performs the bulk of secondary crushing?",
+      "back": "CONE CRUSHERS\nSome use crushing rolls or hammer mills\n\nCone = most popular choice",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "secondary crushers - general"
+    },
+    {
+      "front": "What is a cone crusher?",
+      "back": "Modified GYRATORY crusher\nLike gyratory's younger brother\n\nShorter, faster, lighter",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the essential difference between a cone crusher and a gyratory crusher?",
+      "back": "Spindle NOT SUSPENDED\nSupported from BELOW\n\nLike table lamp (cone) vs hanging lamp (gyratory)",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Why does the crushing shell flare outwards in a cone crusher?",
+      "back": "Allows for SWELL of broken ore\nMore space as ore breaks down\n\nPrevents choking\n\nLike expanding bag for popcorn",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What type of crusher is the cone crusher described as?",
+      "back": "EXCELLENT arrested crusher\nControls particle path well",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Describe the general principle of operation of a cone crusher.",
+      "back": "Conical head gyrates inside BOWL\nStationary truncated cone\n\nLike spinning top in bowl",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the shape of the outside of the bowl?",
+      "back": "CYLINDRICAL\nSmooth outside\n\nInside is what matters",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How does the cross-section of the crushing cavity change?",
+      "back": "INCREASES top to bottom\nWider at bottom\n\nLike upside-down funnel",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the head protected in a cone crusher?",
+      "back": "WEAR-RESISTANT MANTLE\nReplaceable liner\n\nLike armor for the head",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What protects the inside of the bowl?",
+      "back": "BOWL-LINER\nDifferent shapes available\n\nInterchangeable for different jobs",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How can the crushing cavity shape be changed?",
+      "back": "For different crushing:\n• Fine\n• Medium\n• Coarse\n• Extra-coarse\n\nLike different sieve sizes",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the 'parallel zone' in a cone crusher?",
+      "back": "Where mantle and bowl are PARALLEL\nAt lower end\n\nWhere final sizing happens\n\nLike parallel train tracks",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the gyrating speed of the head in a cone crusher?",
+      "back": "HIGH: 400-700 gyrations/minute\nMuch faster than gyratory\n\nLike sports car vs truck",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Describe the ore crushing process in a cone crusher.",
+      "back": "1. Ore fed top\n2. Spirals down\n3. Multiple rapid blows\n4. Between mantle and bowl\n\nLike going down a corkscrew slide",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Why does the increasing cross-section of the bowl prevent choking?",
+      "back": "Expanding cavity allows SWELL\nOre has room to expand as breaks\n\nLike growing popcorn has room in bag",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the purpose of the parallel zone in the crushing process?",
+      "back": "Makes each particle get MULTIPLE BLOWS\nEnsures proper sizing\n\nNo early escape!\n\nLike quality control checkpoint",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How does the product sizing of cone crushers compare to jaw and gyratory crushers?",
+      "back": "MORE EVEN than jaw/gyratory\nBetter control in parallel zone\n\nUniform product like graded gravel",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the 'set' defined in a cone crusher?",
+      "back": "MINIMUM clearance at discharge\n(Not maximum like others)\n\nThe tightest gap\n\nLike minimum door width",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What does the main frame hold?",
+      "back": "• Eccentric assembly\n• Socket with liner\n• Supports head assembly\n\nThe \"skeleton\" of the machine",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the eccentric rotated?",
+      "back": "Through GEAR and PINION\nDriven by countershaft\n\nLike bicycle gears",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What carries the weight of the eccentric and gear?",
+      "back": "ECCENTRIC-THRUST BEARINGS\nAt bottom\n\nCarry the heavy load",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Describe the main shaft assembly.",
+      "back": "• Main shaft pressed into head\n• Carries mantle\n• Lower end bushed onto eccentric\n\nThe \"spine\" of the crusher",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the distributor plate and what is its function?",
+      "back": "Above head, gyrates with it\nSpreads feed EVENLY\n\nLike spinning sprinkler",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the bowl attached to the main frame?",
+      "back": "Threaded onto ADJUSTMENT RING\nRing rests on main frame\n\nLike screw-on lid",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the set adjusted in a cone crusher?",
+      "back": "Screw bowl UP/DOWN\nUsing winch or crane\n\nChange discharge opening size",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the function of the tensioned springs?",
+      "back": "OVERLOAD PROTECTION\nAllow bowl to lift if jam\n\nLike safety valve",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What happens when uncrushable material enters the crushing cavity?",
+      "back": "Springs compress → bowl lifts\nMaterial passes through\nBowl returns to position\n\nAutomatic release system",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What does the oil circulation system lubricate?",
+      "back": "OIL CIRCULATION for:\n• Bearings\n• Gears\n• Countershaft\n\nLike engine oil system",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What safety feature is in the lubrication system?",
+      "back": "FLOW SWITCH\nStops crusher if oil fails\n\nPrevents damage\n\nLike low oil light in car",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How does the construction of a cone crusher differ from a gyratory crusher?",
+      "back": "• Flatter cone head\n• Longer eccentric\n• LOWER pressure per area\n• LIGHTER construction\n\nMore efficient design",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How is the head assembly supported differently in a cone crusher?",
+      "back": "Supported on SOCKET below\nNot suspended from top\n\nDifferent engineering approach",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What type of breaker is a cone crusher?",
+      "back": "TYPICAL INTERMEDIATE breaker\nBetween primary and grinding\n\nThe \"middle manager\" of crushing",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What gives the cone crusher its high capacity?",
+      "back": "1. Expanding cavity\n2. High speed\n\nMoves lots of material fast\n\nLike high-speed conveyor",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What results in a fairly evenly sized product?",
+      "back": "HIGH SPEED + PARALLEL ZONE\nEach particle treated similarly\n\nConsistent results",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the reduction ratio for cone crushers?",
+      "back": "HIGHER than primary: 10-20\nMore reduction per pass\n\nEfficient size reduction",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "List the main characteristics of cone crushers.",
+      "back": "• Continuous crushing\n• Max force at top\n• Expanding cavity top→bottom\n• Annular openings\n• Parallel zone at bottom\n• Set = minimum opening\n• High speed: 400-700/min\n• Large throw: 5-9 × set\n• High reduction: 10-20\n• Even product, high capacity\n\n💡 The \"efficient middleman\"",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What are standard cone crushers most commonly used for?",
+      "back": "Most common for INTERMEDIATE crushing\n15 cm → 2.5 cm\n\nMain workhorse",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Can smaller standard cone crushers be used for finer crushing?",
+      "back": "Smaller standards can go to ~1 cm\nBut bigger plants use SHORT-HEAD or rod mills\n\nSpecialized tools for special jobs",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "How often is the set of cone crushers checked?",
+      "back": "REGULAR INTERVALS\nImportant maintenance task\n\nLike checking tire pressure",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the usual checking procedure for the set?",
+      "back": "Use LEAD BILLETS:\n1. Run crusher empty\n2. Pass billets through\n3. Measure smallest dimension\n\nThat's the discharge opening!\n\nLike using feeler gauges",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "Can the set be adjusted after checking?",
+      "back": "YES - use adjustment ring\nFine-tune as needed\n\nLike tuning instrument",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "cone crushers"
+    },
+    {
+      "front": "What is the Symons short-head cone crusher?",
+      "back": "Special cone crusher type\nSame basic design but modified\n\nFor EXTRA-FINE crushing",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the head angle differ in a short-head crusher?",
+      "back": "STEEPER than standard\nMore vertical\n\nLike steep hill vs gentle slope",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the feed opening compare to a standard cone crusher?",
+      "back": "NARROWER than standard\nTakes finer feed\n\nSmaller \"mouth\"",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the parallel zone compare to a standard cone crusher?",
+      "back": "LONGER than standard\nMore time in sizing zone\n\nBetter control of final size",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What type of feed should a short-head crusher receive?",
+      "back": "FINER feed than standard\nAlready crushed material\n\nLike taking chopped nuts for grinding",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What product size does a short-head crusher deliver?",
+      "back": "FINER: 0.4-1.5 cm\nvs standard's 2.5 cm\n\nExtra-fine output",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "How does the capacity of a short-head crusher compare?",
+      "back": "MARKEDLY LOWER than standard\nTrade-off: finer product = less volume\n\nLike espresso vs drip coffee - finer but slower",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "Can short-head crushers be fitted with different bowl liners?",
+      "back": "FOUR different types available\nLike standard cone\n\nVersatile for different needs",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What is the typical use of a short-head cone crusher?",
+      "back": "TERTIARY crusher in CLOSED CIRCUIT\nWith screen, gets secondary crusher product\n\nFinal touch before grinding",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "symons short-head cone crusher"
+    },
+    {
+      "front": "What are reduction-gyratory crushers?",
+      "back": "Hybrid design\nGyratory + cone crusher features\n\nBest of both worlds",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How does the crushing head differ from a common gyratory crusher?",
+      "back": "MUCH FLATTER cone\nLike cone crusher\n\nDifferent shape for different action",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How does the stationary concave differ?",
+      "back": "Flares outward HIGHER UP\nDifferent profile\n\nChanges crushing dynamics",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What does the flaring provide?",
+      "back": "PARALLEL CRUSHING ZONE\nLike cone crushers\n\nReduces choking chance",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What are reduction-gyratory crushers used for?",
+      "back": "INTERMEDIATE crushers\nBetween primary and fine crushing\n\nSpecialized position",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How is the set adjusted in recent versions?",
+      "back": "HYDRAULICALLY\nRaise/lower head\n\nModern convenience",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "How is protection against overload provided?",
+      "back": "Same hydraulic system\nGAS ACCUMULATOR for automatic reset\n\nSmart safety feature",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What is the hydrocone?",
+      "back": "\"Cone crusher with automatic reset\"\nAllis-Chalmers version\n\nFamous brand/model",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "reduction-gyratory crushers"
+    },
+    {
+      "front": "What is the basic construction of crushing rolls?",
+      "back": "TWO HORIZONTAL CYLINDERS\nRotate inward, downward\n\nLike old-fashioned wringer washer",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How should the feed behave in crushing rolls?",
+      "back": "Nipped between rolls\nDrawn down between them\n\nLike dough through pasta roller",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How are modern roll crushers protected against damage?",
+      "back": "One roll SPRING-LOADED\nGives way for uncrushables\n\nSafety release",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the construction of the rolls?",
+      "back": "PERMANENT CORE (\"heart\")\n+ REPLACEABLE SHELL\n\nLike pencil + eraser",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How is the life of the shells increased?",
+      "back": "AUTOMATIC LATERAL ADJUSTMENT\nRoll moves side-to-side as rotates\n\nEven wear distribution\n\nLike rotating tires",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What happens to the rolls during operation?",
+      "back": "Ore forces rolls APART\nGap increases under load\n\nLike squeezing balloon",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the typical relationship between roll spacing and product size?",
+      "back": "Set = 0.7-0.8 × desired product\nAccount for spring-back\n\nLike over-shooting target",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What determines the diameter of the rolls?",
+      "back": "LARGE compared to feed size\nNeed leverage for crushing\n\nLike using long wrench",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Why are crushing rolls limited to fine crushing?",
+      "back": "FINE CRUSHING ONLY\nNot for coarse work\n\nSpecialist, not generalist",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the typical speed of rotation?",
+      "back": "LOW: 80-120 rev/minute\nSafety and control\n\nSlow and steady",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Why can't higher speeds be used?",
+      "back": "DANGEROUS with heavy rolls\nCould fly apart!\n\nLike spinning heavy wheel too fast",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What has generally superseded crushing rolls?",
+      "back": "SHORT-HEAD CONE CRUSHERS\nand ROD MILLS\n\nMore efficient modern options",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Where are crushing rolls still used?",
+      "back": "SMALL PLANTS and LABS\nLow cost, simple\n\nLike using hand tools vs power tools",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How are crushing rolls usually operated?",
+      "back": "CLOSED CIRCUIT with screen\nRecycle oversized material\n\nQuality control loop",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the typical circulating load?",
+      "back": "HIGH: up to 600%\nLots of recycling\n\nMultiple attempts to get right size",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is 'graded crushing'?",
+      "back": "SERIES of roll sets\nEach finer than last\nScreens between stages\n\nStep-by-step refinement\n\nLike sifting flour through different sieves",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is the characteristic of each set of rolls in graded crushing?",
+      "back": "FREE CRUSHING\nLOW reduction ratio (2-4)\n\nGentle, controlled reduction",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "How can a higher reduction ratio be achieved with rolls?",
+      "back": "CHOKE CRUSHING\nHigh circulating loads\n\nSmall plants use this trick",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "Why are rolls still popular in small plants?",
+      "back": "LOW INITIAL COST\nSimple to operate\n\nBudget-friendly option",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "List the main characteristics of crushing rolls.",
+      "back": "• Simple and cheap\n• Easy maintenance (but high cost)\n• Low reduction: 2-4\n• Uneven product\n• Low capacity\n\n💡 The \"budget option\"",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What is essential for maximum utilization of roll surfaces?",
+      "back": "CONSTANT, EVEN distribution\nAcross roll width\n\nCritical for good performance\n\nLike spreading butter evenly",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "crushing rolls"
+    },
+    {
+      "front": "What can hammer mills do in one operation?",
+      "back": "LARGE to VERY FINE in ONE STEP\nHuge reduction ratio\n\nLike blender for rocks",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What is the common principle of hammer mills?",
+      "back": "FLAILING HAMMERS spin inside casing\nGrid at bottom controls size\n\nLike giant food processor",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What determines the product size in a hammer mill?",
+      "back": "GRID OPENING SIZE\nSmaller holes = finer product\n\nLike sieve mesh size",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "How are the crushing forces applied?",
+      "back": "INSTANTANEOUS IMPACT\nNot squeezing, but hitting\n\nLike hammer vs vice",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "How are rock particles broken in a hammer mill?",
+      "back": "1. Hit by hammers\n2. Hit casing\n3. Hit other particles\n\nThree ways to break!",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What type of material are hammer mills best suited for?",
+      "back": "SOFT and FRIABLE material\nBreaks easily on impact\n\nLike crackers vs hard candy",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What is a disadvantage of hammer mills?",
+      "back": "WEAR RAPIDLY\nHammers need frequent replacement\n\nHigh maintenance",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    },
+    {
+      "front": "What type of ore are hammer mills particularly used for?",
+      "back": "CLAYEY ORES\nWould clog other crushers\n\nThe \"clay specialist\"",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "hammer mills (impact crushers)"
+    }
+  ],
 
   // =================================================================
   // GM220 - MODULE 1
   // =================================================================
-  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 1 (Fundamentals)": [
+  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 1 - Fundamentals": [
     {
       "front": "What is geology?",
       "back": "Geology (or Geoscience or Earth Science) is the study of Earth in terms of its History, its Materials, the Processes affecting these materials, and the Environment.",
@@ -3196,7 +3193,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 2 (Branches of Geology)": [
+  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 2 - Branches of Geology": [
     {
       "front": "What is mineralogy?",
       "back": "The study of the chemistry, crystal structure, and physical properties of minerals.",
@@ -3479,7 +3476,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 3 (Careers & Education)": [
+  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 3 - Careers & Education": [
     {
       "front": "What are the two main educational levels for geologists mentioned in the course?",
       "back": "1. BSc. Mining and Exploration Geology (produces General Geologists)\n2. MSc. and PhD. (produces Specialized Geologists)",
@@ -3765,7 +3762,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 2
   // =================================================================
-  "MODULE 2: THE SOLAR SYSTEM - Section 1 (Origins & Formation)": [
+  "MODULE 2: THE SOLAR SYSTEM - Section 1 - Origins & Formation": [
     {
       "front": "What is the solar system?",
       "back": "A gravitationally bound system comprising the Sun, eight planets, dwarf planets, moons, asteroids, and comets.",
@@ -3831,7 +3828,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 2: THE SOLAR SYSTEM - Section 2 (Composition & Mass)": [
+  "MODULE 2: THE SOLAR SYSTEM - Section 2 - Composition & Mass": [
     {
       "front": "What percentage of the solar system's mass does the Sun comprise?",
       "back": "About 99.86%.",
@@ -3890,7 +3887,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 2: THE SOLAR SYSTEM - Section 3 (Classification & Objects)": [
+  "MODULE 2: THE SOLAR SYSTEM - Section 3 - Classification & Objects": [
     {
       "front": "List the terrestrial planets.",
       "back": "Mercury, Venus, Earth, Mars.",
@@ -3970,7 +3967,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 2: THE SOLAR SYSTEM - Section 4 (Methods & Review)": [
+  "MODULE 2: THE SOLAR SYSTEM - Section 4 - Methods & Review": [
     {
       "front": "How do we study the solar system?",
       "back": "Using telescopes, radio telescopes, satellites, space probes, and by analyzing light and radiation.",
@@ -4018,7 +4015,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 3
   // =================================================================
-  "MODULE 3: THE EARTH - Section 1 (Evolution & Differentiation)": [
+  "MODULE 3: THE EARTH - Section 1 - Evolution & Differentiation": [
     {
       "front": "What is the Earth?",
       "back": "A planet that evolved over 4.6 billion years from a homogenous body into a layered structure through the process of differentiation.",
@@ -4098,7 +4095,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 3: THE EARTH - Section 2 (Internal Structure)": [
+  "MODULE 3: THE EARTH - Section 2 - Internal Structure": [
     {
       "front": "How many main layers is Earth divided into?",
       "back": "Five main layers composed of different materials, chemistry, and states.",
@@ -4297,7 +4294,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 3: THE EARTH - Section 3 (External Structure)": [
+  "MODULE 3: THE EARTH - Section 3 - External Structure": [
     {
       "front": "What are the five components of Earth's external structure?",
       "back": "1. Atmosphere (gaseous envelope) 2. Hydrosphere (liquid water) 3. Cryosphere (solid water/ice) 4. Lithosphere (land surface) 5. Biosphere (living organisms)",
@@ -4709,7 +4706,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 4
   // =================================================================
-  "MODULE 4: PLATE TECTONICS - Section 1 (Theory, History & Evidence)": [
+  "MODULE 4: PLATE TECTONICS - Section 1 - Theory, History & Evidence": [
     {
       "front": "What are the Intended Learning Objectives (ILOs) for Plate Tectonics?",
       "back": "Explain the process of tectonic plate motion; recognize and assemble continents of the supercontinent Pangaea; understand the importance of convection currents; explain the significance of convection currents and plate tectonics.",
@@ -4782,7 +4779,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 4: PLATE TECTONICS - Section 2 (Mechanics & Motion)": [
+  "MODULE 4: PLATE TECTONICS - Section 2 - Mechanics & Motion": [
     {
       "front": "What is sea floor spreading?",
       "back": "A process at mid-ocean ridges where new oceanic crust forms through volcanic activity and moves away from the ridge.",
@@ -4834,7 +4831,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 4: PLATE TECTONICS - Section 3 (Plate Boundaries)": [
+  "MODULE 4: PLATE TECTONICS - Section 3 - Plate Boundaries": [
     {
       "front": "What are the three types of plate boundaries?",
       "back": "1. Divergent\n2. Convergent\n3. Transform",
@@ -4977,7 +4974,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 4: PLATE TECTONICS - Section 4 (Wilson Cycle & Margins)": [
+  "MODULE 4: PLATE TECTONICS - Section 4 - Wilson Cycle & Margins": [
     {
       "front": "What is the Wilson Cycle?",
       "back": "A model describing the opening and closing of ocean basins due to plate tectonics during supercontinent assembly and breakup.",
@@ -5054,6 +5051,1432 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "continental rise"
+    }
+  ],
+// =================================================================
+  // MI213 - INTRODUCTION TO MINING
+  // =================================================================
+  "INTRODUCTION TO MINING - Section 1 - Objectives & Basic Terminology": [
+    {
+      "front": "What is the primary aim of the Introduction to Mining module?",
+      "back": "The primary aim is to introduce students to terms used to identify certain features of a mine, the five stages a mine goes through from inception to closure, the primary activities involved in the breakage and handling of rocks in the mine, as well as some mine planning and design considerations.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What should students be able to do at the end of this module?",
+      "back": "At the end of this module, students will be able to: Learn commonly used mining terminologies, understand the logical steps followed in the life of a mine, learn the primary activities to detach rock and deliver it to surface, and have an appreciation of factors in designing a surface mine.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is a mine?",
+      "back": "A mine is an excavation made in the earth to extract minerals of value.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is mining?",
+      "back": "Mining is the activity, occupation, and industry concerned with the extraction of minerals from the earth.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is mining engineering?",
+      "back": "Mining engineering is the practice of applying engineering principles to the development, planning, operation, closure, and reclamation of mines.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is a mineral?",
+      "back": "A mineral is a naturally occurring inorganic element or compound having an orderly internal structure and a characteristic chemical composition, crystal form, and physical properties.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is rock?",
+      "back": "Rock is any naturally formed aggregate of one or more types of mineral particles.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is ore?",
+      "back": "Ore is a mineral deposit that has sufficient utility and value to be mined at a profit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is gangue?",
+      "back": "Gangue is the valueless mineral particles within an ore deposit that must be discarded.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What is waste in mining?",
+      "back": "Waste is the material associated with or surrounds an ore deposit that must be mined out to get to the ore and must then be discarded. Gangue is a particular type of waste.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What are metallic ores?",
+      "back": "Metallic ores are those ores of the ferrous metals (Iron, Manganese, etc.), the base metals (Copper, Lead, Zinc, Tin), and the radioactive minerals (Uranium, Thorium, Radium).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What are nonmetallic minerals (industrial minerals)?",
+      "back": "Nonmetallic minerals (also known as industrial minerals) are the nonfuel mineral ores that are not associated with the production of metals. These include Phosphate, Potash, Halite, Trona, Sand, Gravel, Limestone, Sulphur, and others.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    },
+    {
+      "front": "What are fossil fuels (mineral fuels)?",
+      "back": "Fossil fuels (also known as mineral fuels) are the organic mineral substances that can be utilized as fuels, such as Coal, Petroleum, Natural Gas, Coalbed Methane, Gilsonite, and Tar sands.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "objectives and basics"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 2 - Underground Terminologies": [
+    {
+      "front": "What is a shaft?",
+      "back": "A shaft is a vertical or an inclined main permanent opening, excavated at a safe distance from the influence of underground mining activities, which provides access from the surface or below surface to an ore body, and through which the mine is exploited.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What are cages in mining?",
+      "back": "Cages are containers used to carry men and materials in and out of the mine through a shaft.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What are skips in mining?",
+      "back": "Skips are containers used to transport ore and waste out of the mine through a shaft.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is strike?",
+      "back": "Strike is the direction of a horizontal line in the plane of an inclined bedded or vein-type mineral deposit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What are main levels?",
+      "back": "Main levels are a system of horizontal permanent underground workings, connected to the shaft, the basis of operations for excavation of ore above or below, usually driven in waste rock and along the strike or parallel to the ore body.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What are sublevels?",
+      "back": "Sublevels are a system of horizontal temporary underground workings driven between main levels, in both waste and ore, to provide access to the stopes or ore body.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a stope?",
+      "back": "A stope is an underground tertiary excavation designed to produce ore.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a raise?",
+      "back": "A raise is an underground opening driven upwards from one (main or sub) level to another.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a winze?",
+      "back": "A winze is an underground opening driven downwards from one (main or sub) level to another.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is an adit?",
+      "back": "An adit is a horizontal entrance to a mine, usually in the side of the mountain.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is the back in mining?",
+      "back": "The back is the roof or overhead surface of an underground excavation.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is the hangingwall?",
+      "back": "The hangingwall is the rock above an ore deposit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is the footwall?",
+      "back": "The footwall is the rock below the ore deposit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a cone/chamber?",
+      "back": "A cone/chamber is a funnel-shaped excavation at the top of a raise or winze intended to collect rock from an area or stope above.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a drift/drive?",
+      "back": "A drift/drive is an underground opening usually driven parallel to the ore body (along strike).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a crosscut?",
+      "back": "A crosscut is a horizontal or near horizontal underground opening driven perpendicular to drives/drifts (usually across the ore body).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a chute?",
+      "back": "A chute is a loading arrangement in a haulage utilizing gravity flow for the transfer of ore or waste from a stope to cars on a haulage train.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a drawpoint?",
+      "back": "A drawpoint is a place where ore can be gathered and removed, usually by mechanical loaders, located beneath the stoping area (or cone/chamber level) and using gravity flow for the transfer of ore to it.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a grizzley?",
+      "back": "A grizzley is an arrangement intended to prevent oversize rock from entering an ore transfer system, usually consisting of I-beams or steel grating.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a manway?",
+      "back": "A manway is an inclined or vertical underground opening (e.g., raise) intended for communication and personnel access.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is an ore/waste pass?",
+      "back": "An ore/waste pass is an inclined or vertical underground opening intended for transfer of ore or waste.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a ramp?",
+      "back": "A ramp is an inclined underground opening connecting levels or production areas, with an inclination allowing for passage of motorized vehicles.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a slot?",
+      "back": "A slot is a vertical or inclined underground ore section excavated on one side of the stope to provide a free face for blasting of the rest of the rounds.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a surface mine?",
+      "back": "A surface mine is a term used to describe the excavation used for mining if it is entirely open or operated from the surface.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is an underground mine?",
+      "back": "An underground mine is a term used to describe the excavation consisting of openings for human, machinery and materials entry below the earth's surface.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    },
+    {
+      "front": "What is a mining method?",
+      "back": "A mining method describes the details of the procedure, layout, and equipment used in the mine to produce or mine the ore.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "underground terminologies"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 3 - Open Pit Terminologies": [
+    {
+      "front": "What is a bench in open pit mining?",
+      "back": "A bench may be defined as a ledge that forms a single level of operation above which mineral or waste materials are mined back to a bench face. The mineral or waste is removed in successive layers, each of which is a bench.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "Can several benches operate simultaneously in an open pit mine?",
+      "back": "Yes, several benches may be in operation simultaneously in different parts of, and at different elevations in the open pit mine.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is bench height?",
+      "back": "Bench height is the vertical distance between the highest point of the bench, or the bench crest, and the toe of the bench.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What factors normally govern the bench height?",
+      "back": "The bench height is normally governed by the specifications of operating machines, such as drills and shovels, and by government mining regulations.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is bench slope?",
+      "back": "Bench slope is the angle, measured in degrees, between the horizontal and a line joining the bench toe and crest (or bench face).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What are pit limits (or ultimate pit limits)?",
+      "back": "Pit limits (or ultimate pit limits) are the vertical and lateral extent to which the open pit mining may be economically conducted.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is the prime factor controlling the limits of the pit?",
+      "back": "The cost of removing overburden or waste material vs. the minable value of the ore is usually the prime factor controlling the limits of the pit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What other factors can influence pit limits besides economics?",
+      "back": "Other factors that can influence pit limits are existing surface infrastructures, such as townships, rivers, etc.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is a berm?",
+      "back": "A berm is a horizontal shelf or ledge within the ultimate pit wall slope, left to enhance the stability of a slope within the pit and for safety reasons.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is the overall (or ultimate) pit slope angle?",
+      "back": "The overall (or ultimate) pit slope angle is the angle at which the wall of an open pit stands, as measured between the horizontal and an imaginary line joining the top bench crest with the bottom bench toe.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is a spiral system in open pit mining?",
+      "back": "A spiral system is an arrangement whereby the haul road is arranged spirally along the perimeter walls of the pit so that the gradient of the road is more or less uniform from the top to the bottom of the pit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is a zigzag or switchback system?",
+      "back": "A zigzag or switchback system is an arrangement in which the road surmounts the steep grade of a pit wall by zigzagging, generally on the footwall side of the pit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What determines the choice between spiral or zigzag haul road systems?",
+      "back": "The choice of spiral or zigzag is dependent upon the shape and size of the ore body, truck economics, and pit slope stability.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What governs haul road width?",
+      "back": "Haul road width is governed by the required capacity of the road and type of haulage unit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is grade in relation to haul roads?",
+      "back": "Grade may be defined as the inclination of the road in terms of degrees from the horizontal or percentage of rise to the horizontal.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is the angle of repose or angle of rest?",
+      "back": "The angle of repose or angle of rest is the maximum slope at which a heap of loose material will stand without sliding.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What does sub outcrop depth represent?",
+      "back": "The sub outcrop depth represents the depth of waste that must be removed before any ore is exposed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    },
+    {
+      "front": "What is preproduction stripping?",
+      "back": "Preproduction stripping refers to waste removal that must be done before any ore is exposed, also referred to as sub outcrop depth removal.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "open pit terminologies"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 4 - Prospecting Stage": [
+    {
+      "front": "What are the five stages in the life of a mine?",
+      "back": "The five stages in the life of a mine are: prospecting, exploration, development, exploitation, and reclamation.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "When can reclamation be done during mining operations?",
+      "back": "Reclamation can be done whilst the exploitation is taking place or after the ore body is exhausted and the mine is closed. Reclamation may also continue even after the mine is closed in compliance with regulatory authorities such as the Zambia Environmental Management Authority (ZEMA).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "How is the life of an orebody compared to physical assets?",
+      "back": "Just like any other physical asset, an orebody goes through a life cycle, that is, acquisition, commissioning, operation, and final disposal.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "Which professionals are more involved in prospecting and exploration?",
+      "back": "Geologists and mining engineers often share responsibility for prospecting and exploration – geologists more involved with prospecting, mining engineers more with exploration.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "Which professionals are more involved in development and exploitation?",
+      "back": "Development and exploitation are the main province of the mining engineer, with the metallurgist more involved in exploitation in form of run-of-mine mineral processing.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "Why has reclamation been added as a necessary stage in mining?",
+      "back": "Reclamation has been added to reflect the times, because of the demands of society for a cleaner environment and stricter laws regulating the abandonment of a mine.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "What is sustainable development in mining?",
+      "back": "Sustainable development is \"the development that meets the needs of the present without compromising the ability of the future generations to meet their own needs.\"",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "What is sustainability?",
+      "back": "Sustainability is \"the persistence over a long time – indefinitely – of certain necessary and/or desired characteristics of both human society and the enveloping ecosystem.\"",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "stages of mining"
+    },
+    {
+      "front": "What is prospecting?",
+      "back": "Prospecting, the first stage in the utilization of a mineral deposit, is the search for ores or other valuable minerals (coal or nonmetallic).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "Why are both direct and indirect prospecting techniques employed?",
+      "back": "Because mineral deposits may be located either at or below the surface of the earth, both direct and indirect prospecting techniques are employed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What does the direct method of discovery consist of?",
+      "back": "The direct method of discovery, normally limited to surface deposits, consists of visual examination of either the exposure (outcrop) of the deposit or the loose fragments (float) that have weathered away from the outcrop.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What augments the simple, direct technique of prospecting?",
+      "back": "Geologic studies of the entire area augment this simple, direct technique, including aerial photography, geologic maps, and structural assessment of an area.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "How do geologists gather evidence by direct methods?",
+      "back": "By means of aerial photography, geologic maps, and structural assessment of an area, the geologist gathers evidence by direct methods to locate mineral deposits.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What additional direct methods enable geologists to locate hidden mineralization?",
+      "back": "Precise mapping and structural analysis plus microscopic studies of samples enable the geologist to locate the hidden as well as surface mineralization.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What is the most valuable scientific tool employed in indirect prospecting?",
+      "back": "The most valuable scientific tool employed in the indirect search for hidden mineral deposits is geophysics.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What is geophysics?",
+      "back": "Geophysics is the science of detecting anomalies using physical measurements of gravitational, seismic, magnetic, electrical, electromagnetic, and radiometric variables of the earth.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "From where can geophysical methods be applied?",
+      "back": "The methods are applied from the air, using aircraft and satellite; on the surface of the earth; and from beneath the earth, using methods that probe below the topography.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What other tools can be employed in prospecting besides geophysics?",
+      "back": "Geochemistry (the quantitative analysis of soil, rock, and water samples) and geobotany (the analysis of plant growth patterns) can also be employed as prospecting tools.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What is the typical time duration for the prospecting stage?",
+      "back": "The prospecting stage typically takes 1-3 years.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting"
+    },
+    {
+      "front": "What are the direct prospecting methods?",
+      "back": "Direct prospecting methods include: physical and geologic methods.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting procedures"
+    },
+    {
+      "front": "What are the indirect prospecting methods?",
+      "back": "Indirect prospecting methods include: geophysical and geochemical methods.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting procedures"
+    },
+    {
+      "front": "What are the three levels of prospecting search areas?",
+      "back": "The three levels are: Air (aerial photography, airborne geophysics, satellite), Surface (ground geophysics, geology), and identifying anomalies for analysis and evaluation.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting procedures"
+    },
+    {
+      "front": "What is done to locate favorable loci during prospecting?",
+      "back": "Maps, literature, and old mines are used to locate favourable loci.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "prospecting procedures"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 5 - Exploration & Development Stages": [
+    {
+      "front": "What is exploration?",
+      "back": "Exploration, the second stage in the life of a mine, determines as accurately as possible the size and value of a mineral deposit, utilizing techniques like but more refined than those used in prospecting.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What is the line of demarcation between prospecting and exploration?",
+      "back": "There is a thin line of demarcation between prospecting and exploration.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "Where does exploration generally shift to?",
+      "back": "Exploration generally shifts to surface and subsurface locations, using a variety of measurements to obtain a more positive picture of the extent and grade of the ore body.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What evaluation techniques may representative samples be subjected to?",
+      "back": "Representative samples taken from the mineral deposit may be subjected to chemical, metallurgical, X-ray, spectrographic or radiometric evaluation techniques.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "How are samples obtained during exploration?",
+      "back": "Samples are obtained by chipping outcrops, trenching, tunneling, and drilling.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What additional information can be provided during exploration?",
+      "back": "Borehole logs may be provided to study the geologic and structural makeup of the deposit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "Why are diamond drills used in exploration?",
+      "back": "Diamond drills are used because the cores they yield provide more information and knowledge about the geologic structure of the ore body and surrounding rocks.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What does evaluation of samples enable the geologist or mining engineer to calculate?",
+      "back": "Evaluation of the samples enables the geologist or mining engineer to calculate the tonnage and grade, or richness, of the mineral deposit.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What other estimates and evaluations are made during exploration?",
+      "back": "Estimates of the mining costs, evaluations of the recovery of the valuable minerals, determination of environmental costs, and assessments of other foreseeable factors in an effort to reach a conclusion about the profitability of the mineral deposit are also made.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What is the crux of the analysis during exploration?",
+      "back": "The crux of the analysis is the question of whether the property is just another mineral deposit or an ore body.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What is the typical time duration for the exploration stage?",
+      "back": "The exploration stage typically takes 2-5 years.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration"
+    },
+    {
+      "front": "What is the main purpose of exploration?",
+      "back": "The main purpose is defining the extent and value of ore through examination and evaluation.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration procedures"
+    },
+    {
+      "front": "What sampling methods are used in exploration?",
+      "back": "Drilling or excavation are used to obtain samples.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration procedures"
+    },
+    {
+      "front": "What is done with samples after they are obtained?",
+      "back": "Samples are assayed and tested.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration procedures"
+    },
+    {
+      "front": "What is estimated during exploration?",
+      "back": "Tonnage and grade are estimated.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration procedures"
+    },
+    {
+      "front": "How is the deposit valued during exploration?",
+      "back": "The deposit is valued using the Discounted Cashflow method, where Net Present Value = future income – future cost >= 0 at today's money terms.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration procedures"
+    },
+    {
+      "front": "What study is conducted to make a decision during exploration?",
+      "back": "A feasibility study is conducted to make a decision to abandon or develop.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploration procedures"
+    },
+    {
+      "front": "What is development in mining?",
+      "back": "In the third stage, development, the work of opening a mineral deposit for exploitation is performed. With it begins the actual mining of the deposit, now called the ore.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "How can access to the deposit be gained during development?",
+      "back": "Access to the deposit must be gained either (1) by stripping the overburden, which is the soil and/or rock covering the deposit, to expose the near-surface ore for mining or (2) by excavating openings from the surface to access more deeply buried deposits to prepare for underground mining.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "What preliminary development work is generally required before any development takes place?",
+      "back": "Preliminary development work includes acquiring water and mineral rights, buying surface lands, arranging for financing, and preparing permit applications and an environmental impact statement (EIS).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "What requirements must be provided before actual mining in most cases?",
+      "back": "The provision of many requirements must precede actual mining: access roads, power sources, mineral transportation systems, mineral processing facilities, waste disposal areas, offices, houses, schools, hospitals, recreational facilities, negotiations with local communities and other support facilities.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "What happens after these preliminary steps are achieved for surface mining?",
+      "back": "When these steps have been achieved, stripping of the overburden will then proceed if the minerals are to be mined at the surface.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "How does development for underground mining compare to surface mining?",
+      "back": "Development for underground mining is generally more complex and expensive. It requires careful planning and layout of access openings for efficient mining, safety, and performance.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "What are the principal openings for underground mining?",
+      "back": "The principal openings may be shafts, ramps, or adits; each must be planned to allow passage of workers, machines, ore, waste, air, water, and utilities.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "How are metal mines typically opened?",
+      "back": "Many metal mines are located along steeply dipping deposits and thus are opened from shafts, while drifts, winzes, and raises serve the production areas.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "How do coal and nonmetallic mineral deposits differ in their development?",
+      "back": "Many coal and nonmetallic mineral deposits occur horizontally and therefore their mines are laid out in nearly horizontal direction. Their primary openings may be drifts or entries, which may be distinctly different from those of metal mines.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "What is the typical time duration for the development stage?",
+      "back": "The development stage typically takes 2-5 years.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development"
+    },
+    {
+      "front": "What is the main purpose of development?",
+      "back": "The main purpose of development is opening the ore deposit for production.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development procedures"
+    },
+    {
+      "front": "What rights must be acquired during development (if not done earlier)?",
+      "back": "Mining rights must be acquired during development (if not done above).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development procedures"
+    },
+    {
+      "front": "What environmental documentation must be filed during development?",
+      "back": "Environmental impact statement and technology assessment must be filed, and permits must be acquired.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development procedures"
+    },
+    {
+      "front": "What must be constructed during development?",
+      "back": "Access roads, transport system, surface facilities must be constructed, and the mine must be excavated (surface mine or underground mine – sink shaft).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "development procedures"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 6 - Exploitation & Reclamation Stages": [
+    {
+      "front": "What is exploitation in mining?",
+      "back": "Exploitation, the fourth stage of mining, is associated with the actual recovery of minerals from the earth in quantity.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "Does development continue during exploitation?",
+      "back": "Although development may continue, the emphasis in the production stage is on production.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "How much development is done prior to exploitation?",
+      "back": "Usually only enough development is done prior to exploitation to ensure that production, once started, can continue uninterrupted throughout the life of the mine.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What mainly determines the mining method selected for exploitation?",
+      "back": "The mining method selected for exploitation is determined mainly by the characteristics of the mineral deposit and the limits imposed by safety, technology, environmental concerns, and economics.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What geologic conditions play a key role in selecting the mining method?",
+      "back": "Geologic conditions, such as the dip, shape, and strength of the ore and the surrounding rock, play key role in selecting the method.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What are the two broad categories of traditional exploitation methods?",
+      "back": "Traditional exploitation methods fall into two broad categories based on locale: surface or underground.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What does surface mining include?",
+      "back": "Surface mining includes mechanical excavation methods such as open pit and open cast (strip mining), and aqueous methods such as placer and solution mining.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "How is underground mining usually classified?",
+      "back": "Underground mining is usually classified in three categories of methods: unsupported, supported, and caving.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What is the typical time duration for the exploitation stage?",
+      "back": "The exploitation stage typically takes 10-30 years.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What is monitored during the exploitation stage?",
+      "back": "Costs and economic payback period (usually 3-10 years) are monitored, i.e., managed, until closure.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation"
+    },
+    {
+      "front": "What is the main activity during exploitation?",
+      "back": "Large-scale production of ore is the main activity.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation procedures"
+    },
+    {
+      "front": "What factors are considered in the choice of mining method?",
+      "back": "Factors include: geologic, geographic, economic, environmental, societal, and safety considerations.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation procedures"
+    },
+    {
+      "front": "What are the types of surface mining methods?",
+      "back": "Surface mining methods include: open pit, open cast, etc.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation procedures"
+    },
+    {
+      "front": "What are the types of underground mining methods?",
+      "back": "Underground mining methods include: room and pillar, block caving, etc.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation procedures"
+    },
+    {
+      "front": "What is monitored during exploitation until closure?",
+      "back": "Costs and economic payback period (usually 3-10 years) are monitored, i.e., managed, until closure.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "exploitation procedures"
+    },
+    {
+      "front": "What is reclamation?",
+      "back": "Reclamation is the final stage in the operation of most mines, the process of closing a mine and recontouring, revegetating, and restoring the water and land values.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "When is the best time to begin the reclamation process?",
+      "back": "The best time to begin the reclamation process of a mine is before the first excavations are initiated.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "How should mine planning engineers approach reclamation?",
+      "back": "Mine planning engineers should plan the mine so that the reclamation process is considered and the overall cost of mining plus reclamation is minimized, not just the cost of mining itself.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What is the new philosophy in the mining industry regarding reclamation?",
+      "back": "The new philosophy in the mining industry is sustainability or sustainable development, that is, the meeting of (economic and environmental) needs of the present while enhancing the ability of future generations to meet their own needs.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What is the first concern that must be addressed in planning for reclamation?",
+      "back": "The first of these is the safety of the mine site, particularly if the area is open to the public.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What must generally be accomplished regarding surface structures during reclamation?",
+      "back": "The removal of office buildings, processing facilities, transportation equipment, utilities, and other surface structures must generally be accomplished.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What is the mining company required to do regarding mine openings?",
+      "back": "The mining company is then required to seal all mine shafts, adits, and other openings that may present physical hazards.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What may be required to prevent injuries or death due to geologic failures?",
+      "back": "Any existing high-walls or other geologic structures may require mitigation to prevent injuries or death due to geologic failures.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What is the second major issue to be addressed during reclamation?",
+      "back": "The second major issue to be addressed during reclamation of a mine site is restoration of the land surface, the water quality, and the waste disposal areas so that long-term water pollution, soil erosion, dust generation, or vegetation problems do not occur.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "Why is restoration of native plants often important in reclamation?",
+      "back": "The restoration of native plants is often a very important part of this process, as the plants help build a stable soil structure and naturalize the area.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What may be necessary regarding acid-producing materials during reclamation?",
+      "back": "It may be necessary to carefully place any rock or tailings with acid-producing properties in locations where rainfall has little effect on the material and acid mine drainage production is minimized.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What may be true of certain heavy metals during reclamation?",
+      "back": "The same may be true of certain of the heavy metals that pollute streams.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "How can pollution problems be prevented during reclamation?",
+      "back": "Planning of the waste dumps, tailings ponds, and other disturbed areas will help prevent pollution problems, but remediation work may also be necessary to complete the reclamation stage of mining and satisfy the regulatory agencies.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What may be the final concern of the mining engineer during reclamation?",
+      "back": "The final concern of the mining (or environmental) engineer may be the subsequent use of the land after mining is completed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What have old mine sites been converted to?",
+      "back": "Old mine sites have been converted to wildlife refuges, shopping malls, golf courses, boating clubs, airports, lakes, underground storage facilities, real estate developments, solid waste disposal areas, and other uses that can benefit society.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "How can mine planners enhance the value of the mined land?",
+      "back": "By planning the mine for a subsequent development, mine planners can enhance the value of the mined land and help convert it to a use that the public will consider favourable.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What will the successful completion of reclamation enhance?",
+      "back": "The successful completion of the reclamation of a mine will enhance public opinion of the mining industry and keep the mining company in the good graces of the regulatory agencies and public.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "Why is the fifth stage of mining of paramount importance?",
+      "back": "The fifth stage of mining is thus of paramount importance and should be planned at the earliest possible time in the life of the mine.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "What is the typical time duration for the reclamation stage?",
+      "back": "The reclamation stage typically takes 1-10 years.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation"
+    },
+    {
+      "front": "When does restoration of the site occur?",
+      "back": "Restoration of site occurs during exploitation, at closure, or post closure.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation procedures"
+    },
+    {
+      "front": "What must be removed during reclamation?",
+      "back": "Plant and buildings must be removed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation procedures"
+    },
+    {
+      "front": "What must be reclaimed during the reclamation stage?",
+      "back": "Waste and tailings dumps must be reclaimed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation procedures"
+    },
+    {
+      "front": "What must be monitored during reclamation?",
+      "back": "Discharges must be monitored during reclamation.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "reclamation procedures"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 7 - Mining Operations": [
+    {
+      "front": "What are unit operations of mining?",
+      "back": "The unit operations of mining are the basic steps used to produce a mineral from the deposit, supported by the auxiliary operations.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "When are unit operations normally employed?",
+      "back": "During the development and exploitation stages of mining when natural materials are extracted from the earth, remarkably similar unit operations are normally employed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What are production operations?",
+      "back": "The steps contributing directly to mineral extraction are production operations, which constitute the production cycle of operations.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What are auxiliary operations?",
+      "back": "The ancillary steps that support the production cycle are termed auxiliary operations.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What are the two main groups of unit operations in the production cycle?",
+      "back": "The production cycle employs unit operations that are normally grouped into rock breakage and materials handling.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What does breakage generally consist of?",
+      "back": "Breakage generally consists of drilling and blasting.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What does materials handling encompass?",
+      "back": "Materials handling encompasses loading or excavation and haulage (horizontal transport) and sometimes hoisting (vertical or inclined transport).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What is the basic production cycle formula?",
+      "back": "Production cycle = drill + blast + load + haul = Rock breakage (drill + blast) + Materials handling (load + haul)",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What is the trend in modern mining regarding production operations?",
+      "back": "Although production operations tend to be separate and cyclic in nature, the trend in modern mining and tunneling is to eliminate or combine functions and to increase continuity of extraction.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What do continuous miners do?",
+      "back": "In coal and other soft rock mines, continuous miners break (rip material by force) and load the mineral to eliminate drilling and blasting.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What do boring machines do in medium-hard rock?",
+      "back": "Boring machines perform the same tasks as continuous miners in medium-hard rock.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "How do the cycle of operations in surface and underground mining differ?",
+      "back": "The cycle of operations in surface and underground mining differ primarily by the scale of the equipment.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What have evolved to meet the unique needs of surface and underground mining?",
+      "back": "Specialized machines have evolved to meet the unique needs of the two regimes.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What blasthole diameters are produced in modern surface mining?",
+      "back": "In modern surface mining, blastholes of 75 to 380 mm in diameter are produced.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What types of drills produce blastholes in surface mining?",
+      "back": "Blastholes are produced by rotary or percussion drills for the placement of explosives when consolidated rock must be removed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "Why is the explosives charge inserted and detonated?",
+      "back": "The explosives charge is then inserted and detonated to reduce the overburden or ore to a size range suitable for loading (or excavation).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "By what is broken material loaded in surface mining?",
+      "back": "The broken material is loaded by shovel, dragline, or wheel loader into haulage units.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What are the general haulage units in surface mining?",
+      "back": "The general haulage units are trucks for transport.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What other transport methods are used in surface mining?",
+      "back": "Railroad cars are also used for haulage, and belt conveyors are often used after the material is crushed.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "How are soil and coal often moved in surface mining?",
+      "back": "Soil and coal are often moved in the same manner, though blasting is sometimes unnecessary, but simply excavated.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "How are dimension stone blocks often freed in quarrying?",
+      "back": "In the quarrying of dimension stone, the blocks are often freed without blasting, using wire saws or other mechanical devices.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "How does the production cycle in underground mining compare to surface mining?",
+      "back": "In underground mining, the production cycle is similar, although the equipment used may be scaled down in size.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What is different about drillholes in underground mining?",
+      "back": "Smaller drillholes are used in underground mining.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What sometimes replaces trucks in underground mining?",
+      "back": "Trucks are sometimes replaced by shuttle cars in underground mining.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What is more prevalent in underground mining compared to surface mining?",
+      "back": "LHDs and belt conveyors are more prevalent in underground mining.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "How are coal, salt, potash, and trona often mined underground?",
+      "back": "Coal, salt, potash, and trona are often mined without the use of explosives or mined after undercutting the face to reduce the consumption of explosives.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What must be performed in addition to production cycle operations?",
+      "back": "In addition to the operations of the production cycle, certain auxiliary operations must be performed in many cases.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What are the usual auxiliary operations underground?",
+      "back": "Underground, these usually include roof support, ventilation and air-conditioning, power supply, pumping, maintenance, lighting, communications, and delivery of compressed air, water, and supplies to the working sections.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    },
+    {
+      "front": "What are the primary auxiliary operations in surface mining?",
+      "back": "In surface mining, the primary auxiliary operations include those providing slope stability, pumping, power supply, maintenance, waste disposal, dust control and supply of material to the production centres.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mining operations"
+    }
+  ],
+
+  "INTRODUCTION TO MINING - Section 8 - Mine Planning & Design": [
+    {
+      "front": "What is open pit mining?",
+      "back": "Open pit mining is a method of operating a surface mine that is simple in concept but complex in its cost and efficiency requirements.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "Why must open pit mining be carefully planned and executed?",
+      "back": "It is evident that open pit mining must be carefully planned and executed to keep unit costs to a minimum.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "How is the average open pit mine engineered?",
+      "back": "Accordingly, the average open pit mine is heavily engineered even though it is simple in configuration.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What must be considered in the initial planning and design of an open pit?",
+      "back": "There are many factors that must be considered in the initial planning and design.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What are the natural and geological factors in surface mine planning?",
+      "back": "Natural and geological factors include: geological conditions, ore types and grades, hydrologic conditions, topography, metallurgical characteristics of the ore, climate, and environmental variables of the site.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What are the economic factors in surface mine planning?",
+      "back": "Economic factors include: ore tonnage, stripping ratio, cutoff grade, operating cost, investment/capital cost, desired profit margin, production rate, processing and/or smelting costs, and market conditions.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What are the technological factors in surface mine planning?",
+      "back": "Technological factors include: equipment, pit slope, bench height, road grade, property lines, transportation options, and pit limits.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What will the pit planning team most likely strive to optimize?",
+      "back": "The pit planning team will most likely strive to optimize the pit design in respect to the technological factors.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What happens to most of the other factors (natural, geological, economic)?",
+      "back": "Most of the other factors are beyond their control and become part of the constraints.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is studied regarding the overall plan for the pit?",
+      "back": "The overall plan for the pit is then studied, including both the overall pit limit and the sequence of extraction.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "Why must many variables be considered in pit planning?",
+      "back": "Many variables must be considered in this exercise so that the ore is brought into production as early as possible and the sequence is conducted without disrupting production or cash flow.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "Why is initial cash flow very important?",
+      "back": "The initial cash flow is very important, as the income generated during the first five or ten years of exploitation is more apt to make or break the mine than the economics of the long-term mine plan.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the first objective that applies to most pit planning operations?",
+      "back": "Mine the ore body so that the production cost per kg of metal is a minimum, (i.e., mine the \"next best ore\" to generate income as early as possible).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the second objective in pit planning?",
+      "back": "Maintain proper operating parameters (adequate bench width and haul roads).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the third objective in pit planning?",
+      "back": "Maintain sufficient exposure of ore to overcome miscalculation or delays in drilling and blasting.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the fourth objective in pit planning?",
+      "back": "Defer stripping as long as possible without constraining equipment, manpower, or the production schedule.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the fifth objective in pit planning?",
+      "back": "Follow a logical and achievable start-up schedule (for training personnel, equipment procurement and deployment, etc.) that minimizes the risk of delays in the initial cash flow.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the sixth objective in pit planning?",
+      "back": "Maximize pit slopes, while maintaining reasonably low likelihood of slope failure (provide safe berms, employ good rock mechanics, implement good slope monitoring systems, etc.).",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the seventh objective in pit planning?",
+      "back": "Examine the economic merits of various production rates and cutoff grades.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What is the eighth objective in pit planning?",
+      "back": "Subject the favoured choice of method, equipment, and pit sequence to exhaustive contingency planning before proceeding with development.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "How may the mine planning department analyze the overall economics?",
+      "back": "To accomplish these goals or objectives, the mine planning department may analyze the overall economics of the deposit and its extraction using several different alternatives.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
+    },
+    {
+      "front": "What are the three types of planning used in mine planning analysis?",
+      "back": "These are 1) long range mine planning, 2) short-range mine planning, and 3) production scheduling.",
+      "course": "MI213",
+      "term": "T1",
+      "topic": "mine planning"
     }
   ]
 };
