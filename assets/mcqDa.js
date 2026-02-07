@@ -2944,729 +2944,1073 @@ const mcqData = [
     "tag": "Basic"
   },
 
+ // --- SECTION 1: MODULE OBJECTIVES AND OUTCOMES ---
 
-
-  
   {
     "q": "What is the primary aim of the Introduction to Mining module?",
-    "options": ["To introduce students to mining terminologies, stages in a mine's life, primary rock breakage/handling activities, and mine planning considerations.", "To teach advanced mineral processing techniques.", "To focus exclusively on underground mining safety.", "To prepare students for fieldwork in geology."],
-    "correct": 3,
-    "explanation": "The primary aim is to introduce students to terms used to identify certain features of a mine, the five stages a mine goes through from inception to closure, the primary activities involved in the breakage and handling of rocks in the mine, as well as some mine planning and design considerations.",
+    "options": [
+      "To teach chemical processing of gold ore",
+      "To provide a history of mining in the 19th century",
+      "To introduce students to terms used to identify certain features of a mine, the five stages a mine goes through, breakage activities, and planning considerations",
+      "To teach advanced rock mechanics calculations"
+    ],
+    "correct": 2,
+    "explanation": "The primary aim is to introduce students to terms used to identify certain features of a mine, the five stages a mine goes through, breakage activities, and planning considerations.",
     "course": "MI213",
     "term": "T1",
     "topic": "Module Objectives",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
-    "q": "What should students be able to do at the end of this module?",
-    "options": ["Design a complete mine from scratch.", "Learn mining terminologies, understand the life cycle of a mine, learn primary rock breakage/handling activities, and appreciate surface mine design factors.", "Only operate mining equipment.", "Write environmental impact reports."],
+    "q": "Which of the following is a learning outcome of this module?",
+    "options": [
+      "Understanding the logical steps followed in the life of a mine and learning commonly used mining terminologies",
+      "Repairing mining machinery",
+      "Designing a complex ventilation system",
+      "Calculating the exact NPV of a specific mine"
+    ],
     "correct": 0,
-    "explanation": "Students will be able to: Learn commonly used mining terminologies; Understand the logical steps in the life of a mine; Learn the primary activities to detach rock and deliver it to surface; Have an appreciation of surface mine design factors.",
+    "explanation": "Outcomes include learning mining terminologies, understanding the life of a mine stages, learning rock breakage activities, and appreciating surface mine design factors.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Module Outcomes",
+    "topic": "Module Objectives",
     "year": "2024",
-    "tag": "Outcome"
+    "tag": "Basic"
   },
+
+  // --- SECTION 2: BASIC MINING TERMINOLOGIES ---
+
   {
     "q": "What is a mine?",
-    "options": ["A natural cave in the earth.", "An excavation made in the earth to extract minerals of value.", "Any large hole in the ground.", "A place where rocks are studied."],
-    "correct": 2,
+    "options": [
+      "A geological survey office",
+      "A mineral processing plant",
+      "A storage facility for rocks",
+      "An excavation made in the earth to extract minerals of value"
+    ],
+    "correct": 3,
     "explanation": "A mine is an excavation made in the earth to extract minerals of value.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is mining?",
-    "options": ["The study of minerals.", "The activity, occupation, and industry concerned with the extraction of minerals from the earth.", "The processing of extracted ores.", "The selling of minerals."],
-    "correct": 1,
+    "options": [
+      "The activity, occupation, and industry concerned with the extraction of minerals from the earth",
+      "The study of rocks",
+      "The chemical refining of metals",
+      "The process of selling minerals"
+    ],
+    "correct": 0,
     "explanation": "Mining is the activity, occupation, and industry concerned with the extraction of minerals from the earth.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is mining engineering?",
-    "options": ["The science of mineral identification.", "The practice of applying engineering principles to the development, planning, operation, closure, and reclamation of mines.", "The design of processing plants only.", "The economic analysis of mineral sales."],
-    "correct": 0,
+    "options": [
+      "The chemical engineering of explosives",
+      "Designing civil infrastructure like bridges",
+      "Surveying land for agriculture",
+      "The practice of applying engineering principles to the development, planning, operation, closure, and reclamation of mines"
+    ],
+    "correct": 3,
     "explanation": "Mining engineering is the practice of applying engineering principles to the development, planning, operation, closure, and reclamation of mines.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a mineral?",
-    "options": ["Any valuable material.", "A man-made compound.", "A naturally occurring inorganic element or compound having an orderly internal structure and characteristic chemical composition, crystal form, and physical properties.", "Synonymous with rock."],
-    "correct": 3,
+    "options": [
+      "A naturally occurring inorganic element or compound having an orderly internal structure and a characteristic chemical composition",
+      "A man-made chemical compound",
+      "Organic matter found in soil",
+      "Any rock found in the ground"
+    ],
+    "correct": 0,
     "explanation": "A mineral is a naturally occurring inorganic element or compound having an orderly internal structure and a characteristic chemical composition, crystal form, and physical properties.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is rock?",
-    "options": ["A single mineral crystal.", "Any naturally formed aggregate of one or more types of mineral particles.", "Material that contains valuable metals.", "The same as ore."],
-    "correct": 1,
+    "options": [
+      "Hardened soil",
+      "A single mineral crystal",
+      "A metallic compound",
+      "Any naturally formed aggregate of one or more types of mineral particles"
+    ],
+    "correct": 3,
     "explanation": "Rock is any naturally formed aggregate of one or more types of mineral particles.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is ore?",
-    "options": ["Any rock containing minerals.", "A mineral deposit that has sufficient utility and value to be mined at a profit.", "The waste material in a mine.", "The final metal product."],
-    "correct": 2,
+    "options": [
+      "A mineral deposit that has sufficient utility and value to be mined at a profit",
+      "Any mineral deposit",
+      "Waste rock",
+      "A geological anomaly"
+    ],
+    "correct": 0,
     "explanation": "Ore is a mineral deposit that has sufficient utility and value to be mined at a profit.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is gangue?",
-    "options": ["The valuable part of the ore.", "The valueless mineral particles within an ore deposit that must be discarded.", "The metal produced after smelting.", "The overburden soil."],
-    "correct": 0,
+    "options": [
+      "Valuable minerals",
+      "The machinery used to mine",
+      "The valueless mineral particles within an ore deposit that must be discarded",
+      "The profit from a mine"
+    ],
+    "correct": 2,
     "explanation": "Gangue is the valueless mineral particles within an ore deposit that must be discarded.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is waste in mining?",
-    "options": ["The valuable mineral.", "The material associated with or surrounds an ore deposit that must be mined out to get to the ore and must then be discarded. Gangue is a particular type of waste.", "Only the topsoil.", "The processed concentrate."],
-    "correct": 1,
-    "explanation": "Waste is the material associated with or surrounds an ore deposit that must be mined out to get to the ore and must then be discarded. Gangue is a particular type of waste.",
+    "options": [
+      "The equipment that is broken",
+      "Only the water used",
+      "The final product",
+      "Material associated with or surrounding an ore deposit that must be mined to get to the ore and discarded"
+    ],
+    "correct": 3,
+    "explanation": "Waste is the material associated with or surrounds an ore deposit that must be mined out to get to the ore and must then be discarded. Gangue is a type of waste.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What are metallic ores?",
-    "options": ["Ores of ferrous metals, base metals, and radioactive minerals.", "Ores like sand and gravel.", "Fossil fuels like coal.", "Non-fuel minerals like phosphate."],
-    "correct": 3,
-    "explanation": "Metallic ores are those ores of the ferrous metals (Iron, Manganese, etc.), the base metals (Copper, Lead, etc.), and the radioactive minerals (Uranium, Thorium, etc.).",
+    "q": "Which of the following are considered metallic ores?",
+    "options": [
+      "Phosphate, Potash, Halite",
+      "Ferrous metals, base metals, and radioactive minerals",
+      "Sand, Gravel, Limestone",
+      "Coal, Petroleum, Natural Gas"
+    ],
+    "correct": 1,
+    "explanation": "Metallic ores include ferrous metals (Iron, Manganese, etc.), base metals (Copper, Lead, Zinc, Tin), and radioactive minerals (Uranium, Thorium, Radium).",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What are nonmetallic minerals (industrial minerals)?",
-    "options": ["Metals like iron and copper.", "The nonfuel mineral ores that are not associated with the production of metals, such as Phosphate, Potash, Sand, Gravel, etc.", "Fossil fuels.", "Radioactive minerals."],
-    "correct": 0,
-    "explanation": "Nonmetallic minerals are the nonfuel mineral ores that are not associated with the production of metals. These include Phosphate, Potash, Halite, Sand, Gravel, Limestone, Sulphur, and many others.",
+    "options": [
+      "Ores of Iron and Copper",
+      "Petroleum and Coal",
+      "Nonfuel mineral ores not associated with metal production (e.g., Phosphate, Sand, Limestone)",
+      "Radioactive minerals"
+    ],
+    "correct": 2,
+    "explanation": "Nonmetallic minerals are nonfuel ores not associated with metals, such as Phosphate, Potash, Halite, Sand, Gravel, and Limestone.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What are fossil fuels (mineral fuels)?",
-    "options": ["Metallic ores.", "Industrial minerals.", "The organic mineral substances that can be utilized as fuels, such as Coal, Petroleum, Natural Gas, etc.", "Construction materials."],
-    "correct": 3,
-    "explanation": "Fossil fuels are the organic mineral substances that can be utilized as fuels, such as Coal, Petroleum, Natural Gas, Coalbed Methane, Gilsonite, and Tar sands.",
+    "options": [
+      "Uranium and Thorium",
+      "Sand and Gravel",
+      "Organic mineral substances utilizable as fuels (e.g., Coal, Petroleum)",
+      "Iron and Copper"
+    ],
+    "correct": 2,
+    "explanation": "Fossil fuels are organic mineral substances utilized as fuels, such as Coal, Petroleum, Natural Gas, Coalbed Methane, Gilsonite, and Tar sands.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Basic Terminologies",
+    "topic": "Basic Mining Terminologies",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
+
+  // --- SECTION 3: UNDERGROUND MINING TERMINOLOGIES ---
+
   {
     "q": "What is a shaft?",
-    "options": ["A temporary tunnel.", "A vertical or inclined main permanent opening that provides access from surface to ore body and acts as a conduit for ventilation and services.", "An open pit.", "A small exploratory drill hole."],
-    "correct": 1,
-    "explanation": "A shaft is a vertical or an inclined main permanent opening, excavated at a safe distance, which provides access from the surface to an ore body, and through which the mine is exploited. It also acts as a conduit for ventilation and services.",
+    "options": [
+      "A vertical or inclined main permanent opening providing access from surface to an ore body",
+      "A waste dump",
+      "A horizontal tunnel",
+      "A room where ore is mined"
+    ],
+    "correct": 0,
+    "explanation": "A shaft is a vertical or inclined main permanent opening providing access from surface to an ore body, used for exploitation, ventilation, and services.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What are cages in mining?",
-    "options": ["Containers for transporting ore.", "Containers used to carry men and materials in and out of the mine through a shaft.", "Ventilation ducts.", "Support structures."],
+    "q": "What are cages used for in mining?",
+    "options": [
+      "Crushing rock",
+      "Ventilation",
+      "Carrying men and materials in and out of the mine through a shaft",
+      "Transporting ore"
+    ],
     "correct": 2,
     "explanation": "Cages are containers used to carry men and materials in and out of the mine through a shaft.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What are skips in mining?",
-    "options": ["Small trucks.", "Containers used to transport ore and waste out of the mine through a shaft.", "Personnel elevators.", "Blasting equipment."],
-    "correct": 0,
+    "q": "What are skips used for in mining?",
+    "options": [
+      "Carrying personnel",
+      "Drilling holes",
+      "Storing water",
+      "Transporting ore and waste out of the mine through a shaft"
+    ],
+    "correct": 3,
     "explanation": "Skips are containers used to transport ore and waste out of the mine through a shaft.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What is strike?",
-    "options": ["The act of hitting rock.", "The direction of a horizontal line in the plane of an inclined bedded or vein-type mineral deposit.", "The vertical depth.", "The dip angle."],
+    "q": "What is 'strike'?",
+    "options": [
+      "The angle of dip",
+      "The direction of a horizontal line in the plane of an inclined bedded or vein-type mineral deposit",
+      "The direction of a vertical line",
+      "The depth of the mine"
+    ],
     "correct": 1,
     "explanation": "Strike is the direction of a horizontal line in the plane of an inclined bedded or vein-type mineral deposit.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What are main levels?",
-    "options": ["The surface of the mine.", "A system of horizontal permanent underground workings, connected to the shaft, driven in waste rock and along the strike, serving as a basis for operations.", "Temporary mining areas.", "Vertical shafts."],
+    "options": [
+      "Temporary workings",
+      "The surface of the mine",
+      "Vertical openings",
+      "A system of horizontal permanent underground workings connected to the shaft"
+    ],
     "correct": 3,
-    "explanation": "Main levels are a system of horizontal permanent underground workings, connected to the shaft, the basis of operations for excavation of ore above or below, usually driven in waste rock and along the strike.",
+    "explanation": "Main levels are horizontal permanent workings connected to the shaft, acting as the basis for operations, usually driven in waste rock.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What are sublevels?",
-    "options": ["Surface offices.", "A system of horizontal temporary underground workings driven between main levels, in both waste and ore, to provide access to the stopes.", "The lowest part of the mine.", "Ventilation shafts."],
+    "options": [
+      "Surface roads",
+      "A system of horizontal temporary underground workings driven between main levels",
+      "Vertical shafts",
+      "The deepest part of the mine"
+    ],
     "correct": 1,
-    "explanation": "Sublevels are a system of horizontal temporary underground workings driven between main levels, in both waste and ore, to provide access to the stopes or ore body.",
+    "explanation": "Sublevels are horizontal temporary workings driven between main levels to provide access to stopes or the ore body.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a stope?",
-    "options": ["A surface excavation.", "An underground tertiary excavation designed to produce ore.", "A haulage tunnel.", "A shaft station."],
-    "correct": 2,
+    "options": [
+      "A haulage road",
+      "An underground tertiary excavation designed to produce ore",
+      "A waste storage area",
+      "An entrance"
+    ],
+    "correct": 1,
     "explanation": "A stope is an underground tertiary excavation designed to produce ore.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a raise?",
-    "options": ["An opening driven downwards.", "An underground opening driven upwards from one (main or sub) level to another.", "A horizontal tunnel.", "A surface ramp."],
-    "correct": 0,
+    "options": [
+      "A horizontal tunnel",
+      "An underground opening driven upwards from one level to another",
+      "A type of drill",
+      "An opening driven downwards"
+    ],
+    "correct": 1,
     "explanation": "A raise is an underground opening driven upwards from one (main or sub) level to another.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a winze?",
-    "options": ["An opening driven upwards.", "An underground opening driven downwards from one (main or sub) level to another.", "A connection to surface.", "A type of support."],
-    "correct": 2,
+    "options": [
+      "A ventilation fan",
+      "An underground opening driven downwards from one level to another",
+      "An opening driven upwards",
+      "A horizontal drive"
+    ],
+    "correct": 1,
     "explanation": "A winze is an underground opening driven downwards from one (main or sub) level to another.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is an adit?",
-    "options": ["A vertical shaft.", "A horizontal entrance to a mine, usually in the side of the mountain.", "A stope.", "A processing plant."],
-    "correct": 1,
+    "options": [
+      "A vertical shaft",
+      "An inclined ramp",
+      "A ventilation shaft",
+      "A horizontal entrance to a mine, usually in the side of a mountain"
+    ],
+    "correct": 3,
     "explanation": "An adit is a horizontal entrance to a mine, usually in the side of the mountain.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What is the back in mining?",
-    "options": ["The floor of an excavation.", "The side wall.", "The roof or overhead surface of an underground excavation.", "The end of a tunnel."],
-    "correct": 3,
+    "q": "What is the 'back' in mining?",
+    "options": [
+      "The roof or overhead surface of an underground excavation",
+      "The entrance",
+      "The rear of the truck",
+      "The floor"
+    ],
+    "correct": 0,
     "explanation": "The back is the roof or overhead surface of an underground excavation.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is the hangingwall?",
-    "options": ["The rock below an ore deposit.", "The rock above an ore deposit.", "The side of a tunnel.", "The surface ground."],
-    "correct": 0,
+    "options": [
+      "The ore itself",
+      "The rock above an ore deposit",
+      "The floor of the stope",
+      "Rock below the ore"
+    ],
+    "correct": 1,
     "explanation": "The hangingwall is the rock above an ore deposit.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is the footwall?",
-    "options": ["The rock above the ore deposit.", "The rock below the ore deposit.", "The roof of a stope.", "The side of a raise."],
+    "options": [
+      "The roof",
+      "The rock below the ore deposit",
+      "Rock above the ore",
+      "The entrance"
+    ],
     "correct": 1,
     "explanation": "The footwall is the rock below the ore deposit.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a cone/chamber?",
-    "options": ["A vertical shaft.", "A funnel-shaped excavation at the top of a raise or winze intended to collect rock from an area or stope above.", "A type of drill.", "A storage area for explosives."],
+    "options": [
+      "A room for machinery",
+      "A ventilation duct",
+      "A funnel-shaped excavation at the top of a raise or winze intended to collect rock",
+      "A water storage tank"
+    ],
     "correct": 2,
     "explanation": "A cone/chamber is a funnel-shaped excavation at the top of a raise or winze intended to collect rock from an area or stope above.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a drift/drive?",
-    "options": ["A vertical opening.", "An underground opening usually driven parallel to the ore body (along strike).", "An opening across the ore body.", "A shaft station."],
-    "correct": 1,
+    "options": [
+      "A shaft entrance",
+      "An opening driven perpendicular to the ore",
+      "A vertical opening",
+      "An underground opening usually driven parallel to the ore body (along strike)"
+    ],
+    "correct": 3,
     "explanation": "A drift/drive is an underground opening usually driven parallel to the ore body (along strike).",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a crosscut?",
-    "options": ["A vertical shaft.", "A horizontal or near horizontal underground opening driven perpendicular to drives/drifts (usually across the ore body).", "A tunnel along the ore.", "A surface road."],
-    "correct": 3,
-    "explanation": "A crosscut is a horizontal or near horizontal underground opening driven perpendicular to drives/drifts (usually across the ore body).",
+    "options": [
+      "A surface road",
+      "An opening parallel to strike",
+      "A horizontal underground opening driven perpendicular to drives/drifts",
+      "A vertical shaft"
+    ],
+    "correct": 2,
+    "explanation": "A crosscut is a horizontal opening driven perpendicular to drives/drifts, usually across the ore body.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a chute?",
-    "options": ["A loading arrangement in a haulage utilizing gravity flow for the transfer of ore or waste from a stope to cars.", "A type of truck.", "A vertical shaft.", "A blasting pattern."],
+    "options": [
+      "A loading arrangement utilizing gravity flow for the transfer of ore or waste",
+      "A type of drill",
+      "A vertical shaft",
+      "A ventilation fan"
+    ],
     "correct": 0,
-    "explanation": "A chute is a loading arrangement in a haulage utilizing gravity flow for the transfer of ore or waste from a stope to cars on a haulage train.",
+    "explanation": "A chute is a loading arrangement in a haulage utilizing gravity flow for the transfer of ore or waste from a stope to cars.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a drawpoint?",
-    "options": ["The top of a stope.", "A place where ore can be gathered and removed, usually by mechanical loaders, located beneath the stoping area and using gravity flow.", "A ventilation shaft.", "A drilling site."],
-    "correct": 1,
-    "explanation": "A drawpoint is a place where ore can be gathered and removed, usually by mechanical loaders, located beneath the stoping area (or cone/chamber level) and using gravity flow.",
+    "options": [
+      "A place where ore can be gathered and removed (usually by loaders), located beneath the stoping area",
+      "A drafting table",
+      "A waste dump",
+      "The top of a shaft"
+    ],
+    "correct": 0,
+    "explanation": "A drawpoint is a place where ore can be gathered and removed (usually by loaders), located beneath the stoping area and using gravity flow.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a grizzley?",
-    "options": ["A type of bear found in mines.", "An arrangement intended to prevent oversize rock from entering an ore transfer system, usually consisting of I-beams or steel grating.", "A crushing machine.", "A loading machine."],
+    "options": [
+      "A type of bear",
+      "A large truck",
+      "An arrangement of I-beams or grating intended to prevent oversize rock from entering an ore transfer system",
+      "A drilling machine"
+    ],
     "correct": 2,
     "explanation": "A grizzley is an arrangement intended to prevent oversize rock from entering an ore transfer system, usually consisting of I-beams or steel grating.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a manway?",
-    "options": ["A haulage road for trucks.", "An inclined or vertical underground opening (e.g., raise) intended for communication and personnel access.", "A conveyor belt.", "A pipe for water."],
-    "correct": 0,
-    "explanation": "A manway is an inclined or vertical underground opening (e.g., raise) intended for communication and personnel access.",
+    "options": [
+      "A water pipe",
+      "An inclined or vertical underground opening intended for communication and personnel access",
+      "A main haulage road",
+      "A ventilation shaft"
+    ],
+    "correct": 1,
+    "explanation": "A manway is an inclined or vertical underground opening intended for communication and personnel access.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is an ore/waste pass?",
-    "options": ["A conveyor system.", "An inclined or vertical underground opening intended for transfer of ore or waste.", "A shaft for personnel.", "A ventilation raise."],
+    "options": [
+      "A surface road",
+      "A ticket to enter the mine",
+      "A storage room",
+      "An inclined or vertical underground opening intended for transfer of ore or waste"
+    ],
     "correct": 3,
     "explanation": "An ore/waste pass is an inclined or vertical underground opening intended for transfer of ore or waste.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a ramp?",
-    "options": ["A vertical shaft.", "An inclined underground opening connecting levels or production areas, with an inclination allowing for passage of motorized vehicles.", "A horizontal drift.", "A stairway."],
-    "correct": 1,
+    "options": [
+      "A flat tunnel",
+      "A vertical ladder",
+      "An inclined underground opening connecting levels allowing passage of motorized vehicles",
+      "A loading chute"
+    ],
+    "correct": 2,
     "explanation": "A ramp is an inclined underground opening connecting levels or production areas, with an inclination allowing for passage of motorized vehicles.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a slot?",
-    "options": ["A small drift.", "A vertical or inclined underground ore section excavated on one side of the stope to provide a free face for blasting.", "A raise.", "A cut in the rock for supports."],
+    "options": [
+      "A coin machine",
+      "A narrow drift",
+      "A vertical or inclined underground ore section excavated to provide a free face for blasting",
+      "A type of rock bolt"
+    ],
     "correct": 2,
-    "explanation": "A slot is a vertical or inclined underground ore section excavated on one side of the stope to provide a free face for blasting of the rest of the rounds.",
+    "explanation": "A slot is a vertical or inclined underground ore section excavated on one side of the stope to provide a free face for blasting.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Terminologies",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a surface mine?",
-    "options": ["A mine with underground access.", "A term used to describe the excavation used for mining if it is entirely open or operated from the surface.", "A mine accessed by a shaft.", "A mine only for coal."],
-    "correct": 3,
-    "explanation": "A surface mine is a term used to describe the excavation used for mining if it is entirely open or operated from the surface.",
+    "options": [
+      "A mine under the sea",
+      "An excavation used for mining if it is entirely open or operated from the surface",
+      "A tunnel into a mountain",
+      "A deep shaft mine"
+    ],
+    "correct": 1,
+    "explanation": "A surface mine is an excavation used for mining if it is entirely open or operated from the surface.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Mine Types",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is an underground mine?",
-    "options": ["An open pit.", "A term used to describe the excavation consisting of openings for human, machinery and materials entry below the earth's surface.", "A quarry.", "A placer mine."],
-    "correct": 1,
-    "explanation": "An underground mine is a term used to describe the excavation consisting of openings for human, machinery and materials entry below the earth's surface.",
+    "options": [
+      "An open pit",
+      "A quarry",
+      "A strip mine",
+      "An excavation consisting of openings for human, machinery, and materials entry below the earth's surface"
+    ],
+    "correct": 3,
+    "explanation": "An underground mine consists of openings for human, machinery, and materials entry below the earth's surface.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Mine Types",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a mining method?",
-    "options": ["The type of equipment used.", "Describes the details of the procedure, layout, and equipment used in the mine to produce or mine the ore.", "The blasting pattern.", "The processing technique."],
-    "correct": 0,
+    "options": [
+      "The selling price of ore",
+      "The type of mineral mined",
+      "The details of the procedure, layout, and equipment used in the mine to produce ore",
+      "The company policy"
+    ],
+    "correct": 2,
     "explanation": "A mining method describes the details of the procedure, layout, and equipment used in the mine to produce or mine the ore.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Mining Method",
+    "topic": "Underground Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
+
+  // --- SECTION 4: OPEN PIT MINING TERMINOLOGIES ---
+
   {
     "q": "What is a bench in open pit mining?",
-    "options": ["The office area.", "A ledge that forms a single level of operation above which mineral or waste materials are mined back to a bench face.", "The bottom of the pit.", "A haul road."],
-    "correct": 2,
-    "explanation": "A bench may be defined as a ledge that forms a single level of operation above which mineral or waste materials are mined back to a bench face.",
+    "options": [
+      "A ledge that forms a single level of operation above which material is mined back to a bench face",
+      "A haul road",
+      "A seat for workers",
+      "The bottom of the pit"
+    ],
+    "correct": 0,
+    "explanation": "A bench is a ledge that forms a single level of operation above which mineral or waste is mined back to a bench face.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "Can several benches operate simultaneously in an open pit mine?",
-    "options": ["No, only one at a time.", "Yes, several benches may be in operation simultaneously in different parts of, and at different elevations in the open pit mine.", "Only in different pits.", "Only if they are the same elevation."],
-    "correct": 1,
+    "q": "Can several benches operate simultaneously?",
+    "options": [
+      "Only in coal mines",
+      "Only if they are adjacent",
+      "No, only one at a time",
+      "Yes, several benches may be in operation simultaneously in different parts of the pit"
+    ],
+    "correct": 3,
     "explanation": "Yes, several benches may be in operation simultaneously in different parts of, and at different elevations in the open pit mine.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Basic"
   },
   {
     "q": "What is bench height?",
-    "options": ["The width of the bench.", "The horizontal distance from crest to toe.", "The vertical distance between the highest point of the bench (crest) and the toe of the bench.", "The slope angle."],
+    "options": [
+      "The vertical distance between the highest point of the bench (crest) and the toe of the bench",
+      "Length of the pit",
+      "Width of the bench",
+      "Angle of the slope"
+    ],
     "correct": 0,
-    "explanation": "Bench height is the vertical distance between the highest point of the bench, or the bench crest, and the toe of the bench.",
+    "explanation": "Bench height is the vertical distance between the highest point of the bench (crest) and the toe of the bench.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What factors normally govern the bench height?",
-    "options": ["Only the depth of the ore.", "The specifications of operating machines (drills, shovels) and government mining regulations.", "The weather.", "The type of ore only."],
-    "correct": 2,
-    "explanation": "The bench height is normally governed by the specifications of operating machines, such as drills and shovels, and by government mining regulations.",
+    "q": "What factors govern bench height?",
+    "options": [
+      "Specifications of operating machines and government mining regulations",
+      "Temperature",
+      "Color of the rock",
+      "Time of year"
+    ],
+    "correct": 0,
+    "explanation": "Bench height is governed by specifications of operating machines (drills, shovels) and government mining regulations.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What is bench slope?",
-    "options": ["The horizontal width.", "The angle, measured in degrees, between the horizontal and a line joining the bench toe and crest (or bench face).", "The height of the bench.", "The overall pit angle."],
-    "correct": 3,
-    "explanation": "Bench slope is the angle, measured in degrees, between the horizontal and a line joining the bench toe and crest (or bench face).",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Open Pit Terminologies",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What are pit limits (or ultimate pit limits)?",
-    "options": ["The current working area.", "The vertical and lateral extent to which the open pit mining may be economically conducted.", "The boundary of the mining lease.", "The limit of exploration."],
-    "correct": 1,
-    "explanation": "Pit limits (or ultimate pit limits) are the vertical and lateral extent to which the open pit mining may be economically conducted.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Open Pit Terminologies",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What is the prime factor controlling the limits of the pit?",
-    "options": ["The shape of the ore body.", "The cost of removing overburden/waste vs. the minable value of the ore.", "The available equipment.", "The depth to groundwater."],
+    "options": [
+      "The height of the bench",
+      "The road gradient",
+      "The angle, measured in degrees, between the horizontal and a line joining the bench toe and crest",
+      "The depth of the pit"
+    ],
     "correct": 2,
-    "explanation": "The cost of removing overburden or waste material vs. the minable value of the ore is usually the prime factor controlling the limits of the pit.",
+    "explanation": "Bench slope is the angle (in degrees) between the horizontal and a line joining the bench toe and crest.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Definition"
   },
   {
-    "q": "What other factors can influence pit limits besides economics?",
-    "options": ["Only the ore grade.", "Existing surface infrastructures, such as townships, rivers, etc.", "The color of the rock.", "The mining method."],
-    "correct": 0,
-    "explanation": "Other factors that can influence pit limits are existing surface infrastructures, such as townships, rivers, etc.",
+    "q": "What are pit limits (ultimate pit limits)?",
+    "options": [
+      "The lifespan of the mine",
+      "The vertical and lateral extent to which the open pit mining may be economically conducted",
+      "The number of trucks allowed",
+      "The fence around the mine"
+    ],
+    "correct": 1,
+    "explanation": "Pit limits are the vertical and lateral extent to which the open pit mining may be economically conducted.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Definition"
+  },
+  {
+    "q": "What is the prime factor controlling pit limits?",
+    "options": [
+      "Weather",
+      "The cost of removing overburden or waste material vs. the minable value of the ore",
+      "Type of explosives",
+      "Number of workers"
+    ],
+    "correct": 1,
+    "explanation": "The prime factor is the cost of removing overburden/waste vs. the minable value of the ore.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Open Pit Mining Terminologies",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What factors besides economics influence pit limits?",
+    "options": [
+      "Worker preference",
+      "Truck color",
+      "Existing surface infrastructures (e.g., townships, rivers)",
+      "Shift timing"
+    ],
+    "correct": 2,
+    "explanation": "Existing surface infrastructures like townships and rivers can influence pit limits.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Open Pit Mining Terminologies",
+    "year": "2024",
+    "tag": "Basic"
   },
   {
     "q": "What is a berm?",
-    "options": ["A haul road.", "A horizontal shelf or ledge within the ultimate pit wall slope, left to enhance stability and for safety.", "The crest of a bench.", "The floor of the pit."],
-    "correct": 3,
-    "explanation": "A berm is a horizontal shelf or ledge within the ultimate pit wall slope, left to enhance the stability of a slope within the pit and for safety reasons.",
+    "options": [
+      "A waste pile",
+      "A large rock",
+      "A horizontal shelf or ledge within the ultimate pit wall slope, left to enhance stability and for safety",
+      "A type of drill"
+    ],
+    "correct": 2,
+    "explanation": "A berm is a horizontal shelf or ledge within the pit wall slope, left to enhance stability and for safety.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What is the overall (or ultimate) pit slope angle?",
-    "options": ["The bench slope angle.", "The angle at which the wall of an open pit stands, as measured between the horizontal and an imaginary line joining the top bench crest with the bottom bench toe.", "The angle of the haul road.", "The dip of the ore body."],
-    "correct": 1,
-    "explanation": "The overall (or ultimate) pit slope angle is the angle at which the wall of an open pit stands, as measured between the horizontal and an imaginary line joining the top bench crest with the bottom bench toe.",
+    "q": "What is the overall (ultimate) pit slope angle?",
+    "options": [
+      "Angle of a single bench",
+      "Angle of the ramp",
+      "90 degrees",
+      "The angle at which the wall of an open pit stands, measured between the horizontal and a line joining the top bench crest with the bottom bench toe"
+    ],
+    "correct": 3,
+    "explanation": "Overall pit slope angle is measured between the horizontal and an imaginary line joining the top bench crest with the bottom bench toe.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is a spiral system in open pit mining?",
-    "options": ["A drilling pattern.", "An arrangement whereby the haul road is arranged spirally along the perimeter walls so the gradient is more or less uniform from top to bottom.", "A blasting sequence.", "A dewatering method."],
-    "correct": 2,
-    "explanation": "A spiral system is an arrangement whereby the haul road is arranged spirally along the perimeter walls of the pit so that the gradient of the road is more or less uniform from the top to the bottom of the pit.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Open Pit Terminologies",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What is a zigzag or switchback system?",
-    "options": ["A road that spirals down.", "An arrangement in which the road surmounts the steep grade of a pit wall by zigzagging, generally on the footwall side.", "A conveyor system.", "A ventilation system."],
-    "correct": 0,
-    "explanation": "A zigzag or switchback system is an arrangement in which the road surmounts the steep grade of a pit wall by zigzagging, generally on the footwall side of the pit.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Open Pit Terminologies",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What determines the choice between spiral or zigzag haul road systems?",
-    "options": ["Only the pit depth.", "The choice is dependent upon the shape and size of the ore body, truck economics, and pit slope stability.", "The preference of the mine manager.", "The type of ore."],
+    "options": [
+      "A type of drill bit",
+      "An arrangement whereby the haul road is arranged spirally along the perimeter walls of the pit",
+      "A conveyor belt shape",
+      "A water drainage system"
+    ],
     "correct": 1,
-    "explanation": "The choice of spiral or zigzag is dependent upon the shape and size of the ore body, truck economics, and pit slope stability.",
+    "explanation": "A spiral system is a haul road arranged spirally so the gradient is uniform from top to bottom.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Definition"
+  },
+  {
+    "q": "What is a zigzag (switchback) system?",
+    "options": [
+      "An arrangement in which the road surmounts the steep grade of a pit wall by zigzagging",
+      "A vertical lift",
+      "A drainage pattern",
+      "A straight road"
+    ],
+    "correct": 0,
+    "explanation": "A zigzag system is an arrangement where the road surmounts steep grades by zigzagging, generally on the footwall side.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Open Pit Mining Terminologies",
+    "year": "2024",
+    "tag": "Definition"
+  },
+  {
+    "q": "What determines the choice between spiral and zigzag roads?",
+    "options": [
+      "Color of the road",
+      "Driver preference",
+      "Time of day",
+      "The shape and size of the ore body, truck economics, and pit slope stability"
+    ],
+    "correct": 3,
+    "explanation": "The choice depends on ore body shape/size, truck economics, and pit slope stability.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Open Pit Mining Terminologies",
+    "year": "2024",
+    "tag": "Basic"
   },
   {
     "q": "What governs haul road width?",
-    "options": ["Only the size of the smallest truck.", "The required capacity of the road and type of haulage unit.", "The bench height.", "The pit slope angle."],
-    "correct": 3,
+    "options": [
+      "Availability of asphalt",
+      "The required capacity of the road and type of haulage unit",
+      "Length of the road",
+      "Driver skill"
+    ],
+    "correct": 1,
     "explanation": "Haul road width is governed by the required capacity of the road and type of haulage unit.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
-    "q": "What is grade in relation to haul roads?",
-    "options": ["The ore quality.", "The inclination of the road in terms of degrees from the horizontal or percentage of rise to the horizontal.", "The road surface material.", "The curvature of the road."],
+    "q": "What is 'grade' in relation to haul roads?",
+    "options": [
+      "Quality of the road",
+      "Width of the road",
+      "Speed limit",
+      "The inclination of the road in terms of degrees from the horizontal or percentage of rise"
+    ],
+    "correct": 3,
+    "explanation": "Grade is the inclination of the road in terms of degrees from horizontal or percentage of rise.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Open Pit Mining Terminologies",
+    "year": "2024",
+    "tag": "Definition"
+  },
+  {
+    "q": "What is the angle of repose?",
+    "options": [
+      "Drill angle",
+      "Slope of a bench",
+      "The maximum slope at which a heap of loose material will stand without sliding",
+      "Angle of the sun"
+    ],
     "correct": 2,
-    "explanation": "Grade may be defined as the inclination of the road in terms of degrees from the horizontal or percentage of rise to the horizontal.",
+    "explanation": "Angle of repose is the maximum slope at which a heap of loose material will stand without sliding.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
-    "q": "What is the angle of repose or angle of rest?",
-    "options": ["The bench slope.", "The maximum slope at which a heap of loose material will stand without sliding.", "The overall pit slope.", "The road gradient."],
+    "q": "What is sub outcrop depth?",
+    "options": [
+      "The depth of waste that must be removed before any ore is exposed",
+      "Depth of the water table",
+      "Depth of the ore",
+      "Height of the bench"
+    ],
     "correct": 0,
-    "explanation": "The angle of repose or angle of rest is the maximum slope at which a heap of loose material will stand without sliding.",
+    "explanation": "Sub outcrop depth represents the depth of waste that must be removed before any ore is exposed.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Open Pit Terminologies",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What does sub outcrop depth represent?",
-    "options": ["The total depth of the pit.", "The depth of waste that must be removed before any ore is exposed.", "The depth of the ore body.", "The depth of weathering."],
-    "correct": 1,
-    "explanation": "The sub outcrop depth represents the depth of waste that must be removed before any ore is exposed.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Open Pit Terminologies",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is preproduction stripping?",
-    "options": ["Stripping done after production starts.", "Waste removal that must be done before any ore is exposed, also referred to as sub outcrop depth removal.", "Removing ore.", "Final pit wall smoothing."],
-    "correct": 2,
-    "explanation": "Preproduction stripping refers to waste removal that must be done before any ore is exposed, also referred to as sub outcrop depth removal.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Open Pit Terminologies",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What are the five stages in the life of a mine?",
-    "options": ["Planning, Building, Operating, Closing, Selling.", "Prospecting, Exploration, Development, Exploitation, Reclamation.", "Drilling, Blasting, Loading, Hauling, Processing.", "Discovery, Design, Excavation, Production, Abandonment."],
-    "correct": 3,
-    "explanation": "The five stages in the life of a mine are: prospecting, exploration, development, exploitation, and reclamation.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Life of a Mine",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "When can reclamation be done during mining operations?",
-    "options": ["Only after the mine is completely closed.", "Reclamation can be done whilst exploitation is taking place or after closure. It may also continue post-closure to comply with regulations.", "Never during operations.", "Only during the development stage."],
-    "correct": 1,
-    "explanation": "Reclamation can be done whilst the exploitation is taking place or after the ore body is exhausted and the mine is closed. Reclamation may also continue even after the mine is closed in compliance with regulatory authorities.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Life of a Mine",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How is the life of an orebody compared to physical assets?",
-    "options": ["It has no comparison.", "Just like any other physical asset, an orebody goes through a life cycle: acquisition, commissioning, operation, and final disposal.", "It is like a renewable resource.", "It is perpetual."],
+    "options": [
+      "Waste removal that must be done before any ore is exposed",
+      "Final mine closure",
+      "Cleaning equipment",
+      "Stripping wire insulation"
+    ],
     "correct": 0,
-    "explanation": "Just like any other physical asset, an orebody goes through a life cycle, that is, acquisition, commissioning, operation, and final disposal.",
+    "explanation": "Preproduction stripping is waste removal done before any ore is exposed (sub outcrop depth removal).",
     "course": "MI213",
     "term": "T1",
-    "topic": "Life of a Mine",
+    "topic": "Open Pit Mining Terminologies",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Definition"
   },
+
+  // --- SECTION 5: STAGES IN THE LIFE OF A MINE ---
+
   {
-    "q": "Which professionals are more involved in prospecting and exploration?",
-    "options": ["Only geologists.", "Geologists and mining engineers often share responsibility – geologists more with prospecting, mining engineers more with exploration.", "Only mining engineers.", "Metallurgists and chemists."],
-    "correct": 2,
-    "explanation": "Geologists and mining engineers often share responsibility for prospecting and exploration – geologists more involved with prospecting, mining engineers more with exploration.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Life of a Mine",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "Which professionals are more involved in development and exploitation?",
-    "options": ["Geologists.", "Development and exploitation are the main province of the mining engineer, with the metallurgist more involved in exploitation in form of run-of-mine mineral processing.", "Environmental scientists.", "Civil engineers."],
+    "q": "What are the five stages in the life of a mine in chronological order?",
+    "options": [
+      "Exploration, Development, Prospecting, Exploitation, Reclamation",
+      "Prospecting, Development, Exploration, Reclamation, Exploitation",
+      "Development, Prospecting, Exploitation, Exploration, Reclamation",
+      "Prospecting, Exploration, Development, Exploitation, Reclamation"
+    ],
     "correct": 3,
-    "explanation": "Development and exploitation are the main province of the mining engineer, with the metallurgist more involved in exploitation in form of run-of-mine mineral processing.",
+    "explanation": "The five stages are: prospecting, exploration, development, exploitation, and reclamation.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Life of a Mine",
+    "topic": "Stages in Life of a Mine",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Sequence"
+  },
+  {
+    "q": "When can reclamation occur?",
+    "options": [
+      "Only after closure",
+      "Only before mining starts",
+      "Whilst the exploitation is taking place or after the ore body is exhausted and the mine is closed",
+      "Never"
+    ],
+    "correct": 2,
+    "explanation": "Reclamation can be done whilst exploitation is taking place or after the mine is closed.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Stages in Life of a Mine",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the life cycle of an orebody similar to?",
+    "options": [
+      "A chemical reaction",
+      "Any other physical asset (acquisition, commissioning, operation, and final disposal)",
+      "Stock market trends",
+      "A plant growing"
+    ],
+    "correct": 1,
+    "explanation": "An orebody goes through a life cycle like any physical asset: acquisition, commissioning, operation, and final disposal.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Stages in Life of a Mine",
+    "year": "2024",
+    "tag": "Analogy"
+  },
+  {
+    "q": "Which professionals are primarily responsible for prospecting and exploration?",
+    "options": [
+      "Lawyers",
+      "Accountants",
+      "Geologists and mining engineers",
+      "Civil engineers"
+    ],
+    "correct": 2,
+    "explanation": "Geologists (mostly prospecting) and mining engineers (mostly exploration) share responsibility.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Stages in Life of a Mine",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "Which professionals are primarily responsible for development and exploitation?",
+    "options": [
+      "Geologists",
+      "Biologists",
+      "Architects",
+      "Mining engineers (with metallurgists involved in processing)"
+    ],
+    "correct": 3,
+    "explanation": "Development and exploitation are the province of the mining engineer, with metallurgists involved in processing.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Stages in Life of a Mine",
+    "year": "2024",
+    "tag": "Basic"
   },
   {
     "q": "Why has reclamation been added as a necessary stage in mining?",
-    "options": ["To increase costs.", "To reflect the times, because of societal demands for a cleaner environment and stricter laws regulating mine abandonment.", "Because it's easy to do.", "Only for public relations."],
-    "correct": 1,
-    "explanation": "Reclamation has been added to reflect the times, because of the demands of society for a cleaner environment and stricter laws regulating the abandonment of a mine.",
+    "options": [
+      "To employ more people",
+      "To increase profits",
+      "To make mining longer",
+      "Because of the demands of society for a cleaner environment and stricter laws regulating abandonment"
+    ],
+    "correct": 3,
+    "explanation": "It was added due to societal demands for a cleaner environment and stricter laws regulating abandonment.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Life of a Mine",
+    "topic": "Stages in Life of a Mine",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Reasoning"
   },
   {
     "q": "What is sustainable development in mining?",
-    "options": ["Development that uses all resources immediately.", "\"The development that meets the needs of the present without compromising the ability of future generations to meet their own needs.\"", "Development focused only on profit.", "Development that ignores the environment."],
-    "correct": 2,
-    "explanation": "Sustainable development is \"the development that meets the needs of the present without compromising the ability of the future generations to meet their own needs.\"",
+    "options": [
+      "Maximizing short-term wealth",
+      "Preserving nature and stopping development",
+      "Mining everything now",
+      "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs"
+    ],
+    "correct": 3,
+    "explanation": "Sustainable development is meeting present needs without compromising the ability of future generations to meet their own needs.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Life of a Mine",
+    "topic": "Stages in Life of a Mine",
     "year": "2024",
     "tag": "Definition"
   },
   {
     "q": "What is sustainability?",
-    "options": ["Short-term profit maximization.", "\"The persistence over a long time – indefinitely – of certain necessary and/or desired characteristics of both human society and the enveloping ecosystem.\"", "Using resources until they are gone.", "A type of mining method."],
-    "correct": 0,
-    "explanation": "Sustainability is \"the persistence over a long time – indefinitely – of certain necessary and/or desired characteristics of both human society and the enveloping ecosystem.\"",
+    "options": [
+      "Rapid growth",
+      "The persistence over a long time – indefinitely – of certain necessary and/or desired characteristics of both human society and the enveloping ecosystem",
+      "Short-term survival",
+      "Industrial stagnation"
+    ],
+    "correct": 1,
+    "explanation": "Sustainability is the persistence over a long time of certain necessary/desired characteristics of human society and the enveloping ecosystem.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Life of a Mine",
+    "topic": "Stages in Life of a Mine",
     "year": "2024",
     "tag": "Definition"
   },
+
+  // --- SECTION 6: PROSPECTING ---
+
   {
     "q": "What is prospecting?",
-    "options": ["The large-scale mining of ore.", "The search for ores or other valuable minerals (coal or nonmetallic), the first stage in utilization.", "The detailed evaluation of an ore body.", "The construction of mine infrastructure."],
+    "options": [
+      "Building a processing plant",
+      "Digging a shaft",
+      "The search for ores or other valuable minerals",
+      "Closing a mine"
+    ],
     "correct": 2,
-    "explanation": "Prospecting, the first stage in the utilization of a mineral deposit, is the search for ores or other valuable minerals (coal or nonmetallic).",
+    "explanation": "Prospecting is the first stage: the search for ores or other valuable minerals.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
@@ -3675,20 +4019,30 @@ const mcqData = [
   },
   {
     "q": "Why are both direct and indirect prospecting techniques employed?",
-    "options": ["Because it's cheaper.", "Because mineral deposits may be located either at or below the surface of the earth.", "Because regulations require it.", "Because indirect methods are always better."],
+    "options": [
+      "Because mineral deposits may be located either at or below the surface of the earth",
+      "To use more equipment",
+      "To spend more money",
+      "Because laws require it"
+    ],
     "correct": 0,
-    "explanation": "Because mineral deposits may be located either at or below the surface of the earth, both direct and indirect prospecting techniques are employed.",
+    "explanation": "Both are used because deposits may be located either at or below the surface.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Reasoning"
   },
   {
     "q": "What does the direct method of discovery consist of?",
-    "options": ["Using satellites.", "The direct method consists of visual examination of either the exposure (outcrop) of the deposit or the loose fragments (float).", "Drilling deep holes.", "Geophysical surveys."],
-    "correct": 3,
-    "explanation": "The direct method of discovery, normally limited to surface deposits, consists of visual examination of either the exposure (outcrop) of the deposit or the loose fragments (float) that have weathered away from the outcrop.",
+    "options": [
+      "Seismic survey",
+      "Visual examination of either the exposure (outcrop) of the deposit or the loose fragments (float)",
+      "Satellite imaging",
+      "Chemical analysis"
+    ],
+    "correct": 1,
+    "explanation": "Direct method consists of visual examination of exposure (outcrop) or loose fragments (float).",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
@@ -3697,53 +4051,78 @@ const mcqData = [
   },
   {
     "q": "What augments the simple, direct technique of prospecting?",
-    "options": ["Only luck.", "Geologic studies of the entire area, including aerial photography, geologic maps, and structural assessment.", "Blasting.", "Building roads."],
-    "correct": 1,
-    "explanation": "Geologic studies of the entire area augment this simple, direct technique, including aerial photography, geologic maps, and structural assessment of an area.",
+    "options": [
+      "Drilling only",
+      "Mining",
+      "Guesswork",
+      "Geologic studies of the entire area (including aerial photography, geologic maps, and structural assessment)"
+    ],
+    "correct": 3,
+    "explanation": "Geologic studies like aerial photography, geologic maps, and structural assessment augment direct techniques.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "How do geologists gather evidence by direct methods?",
-    "options": ["By drilling only.", "By means of aerial photography, geologic maps, and structural assessment of an area, the geologist gathers evidence by direct methods to locate mineral deposits.", "By asking locals.", "By using divining rods."],
-    "correct": 0,
-    "explanation": "By means of aerial photography, geologic maps, and structural assessment of an area, the geologist gathers evidence by direct methods to locate mineral deposits.",
+    "options": [
+      "By using geophysics",
+      "By digging random holes",
+      "By means of aerial photography, geologic maps, and structural assessment",
+      "By asking locals"
+    ],
+    "correct": 2,
+    "explanation": "Geologists gather evidence via aerial photography, geologic maps, and structural assessment.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What additional direct methods enable geologists to locate hidden mineralization?",
-    "options": ["Precise mapping and structural analysis plus microscopic studies of samples.", "Guessing.", "Large-scale blasting.", "Waiting for erosion."],
-    "correct": 1,
-    "explanation": "Precise mapping and structural analysis plus microscopic studies of samples enable the geologist to locate the hidden as well as surface mineralization.",
+    "options": [
+      "Strip mining",
+      "Building roads",
+      "Guessing",
+      "Precise mapping and structural analysis plus microscopic studies of samples"
+    ],
+    "correct": 3,
+    "explanation": "Precise mapping, structural analysis, and microscopic studies enable locating hidden mineralization.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What is the most valuable scientific tool employed in indirect prospecting?",
-    "options": ["Excavators.", "Geophysics.", "Microscopes.", "Compasses."],
+    "options": [
+      "Compass",
+      "Microscope",
+      "Shovel",
+      "Geophysics"
+    ],
     "correct": 3,
-    "explanation": "The most valuable scientific tool employed in the indirect search for hidden mineral deposits is geophysics.",
+    "explanation": "Geophysics is the most valuable scientific tool employed in the indirect search for hidden deposits.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
     "q": "What is geophysics?",
-    "options": ["The study of plants.", "The science of detecting anomalies using physical measurements of gravitational, seismic, magnetic, electrical, electromagnetic, and radiometric variables of the earth.", "The study of chemicals in soil.", "The art of map making."],
-    "correct": 2,
-    "explanation": "Geophysics is the science of detecting anomalies using physical measurements of gravitational, seismic, magnetic, electrical, electromagnetic, and radiometric variables of the earth.",
+    "options": [
+      "Chemical analysis",
+      "The science of detecting anomalies using physical measurements of gravitational, seismic, magnetic, electrical, electromagnetic, and radiometric variables",
+      "Study of rocks",
+      "Study of plant growth"
+    ],
+    "correct": 1,
+    "explanation": "Geophysics detects anomalies using measurements of gravitational, seismic, magnetic, electrical, electromagnetic, and radiometric variables.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
@@ -3752,31 +4131,14 @@ const mcqData = [
   },
   {
     "q": "From where can geophysical methods be applied?",
-    "options": ["Only from the ground.", "The methods are applied from the air, using aircraft and satellite; on the surface of the earth; and from beneath the earth.", "Only from space.", "Only in laboratories."],
-    "correct": 0,
-    "explanation": "The methods are applied from the air, using aircraft and satellite; on the surface of the earth; and from beneath the earth, using methods that probe below the topography.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Prospecting",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What other tools can be employed in prospecting besides geophysics?",
-    "options": ["Only geology.", "Geochemistry (analysis of soil, rock, water) and geobotany (analysis of plant growth patterns).", "Archeology.", "Meteorology."],
+    "options": [
+      "Only on the ground",
+      "From the air, on the surface, and from beneath the earth",
+      "Only underground",
+      "Only from satellites"
+    ],
     "correct": 1,
-    "explanation": "Geochemistry (the quantitative analysis of soil, rock, and water samples) and geobotany (the analysis of plant growth patterns) can also be employed as prospecting tools.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Prospecting",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What is the typical time duration for the prospecting stage?",
-    "options": ["5-10 years.", "1-3 years.", "6 months.", "10-20 years."],
-    "correct": 2,
-    "explanation": "The prospecting stage typically takes 1-3 years.",
+    "explanation": "They are applied from the air (aircraft/satellite), surface, and beneath the earth.",
     "course": "MI213",
     "term": "T1",
     "topic": "Prospecting",
@@ -3784,10 +4146,50 @@ const mcqData = [
     "tag": "Basic"
   },
   {
-    "q": "What is exploration?",
-    "options": ["The large-scale production of ore.", "Exploration determines as accurately as possible the size and value of a mineral deposit, utilizing techniques more refined than prospecting.", "The closure of a mine.", "The construction of access roads."],
+    "q": "What other tools can be employed in prospecting besides geophysics?",
+    "options": [
+      "Economics",
+      "Geochemistry (analysis of samples) and geobotany (analysis of plant growth)",
+      "Astrology",
+      "Psychology"
+    ],
     "correct": 1,
-    "explanation": "Exploration, the second stage in the life of a mine, determines as accurately as possible the size and value of a mineral deposit, utilizing techniques like but more refined than those used in prospecting.",
+    "explanation": "Geochemistry (analysis of soil/rock/water) and geobotany (plant growth patterns) are also used.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Prospecting",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the typical time duration for the prospecting stage?",
+    "options": [
+      "1-3 years",
+      "20 years",
+      "5-10 years",
+      "1 month"
+    ],
+    "correct": 0,
+    "explanation": "The prospecting stage typically takes 1-3 years.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Prospecting",
+    "year": "2024",
+    "tag": "Timeframe"
+  },
+
+  // --- SECTION 7: EXPLORATION ---
+
+  {
+    "q": "What is exploration?",
+    "options": [
+      "Closing the mine",
+      "Finding a new mineral",
+      "Digging the mine",
+      "Determining as accurately as possible the size and value of a mineral deposit"
+    ],
+    "correct": 3,
+    "explanation": "Exploration determines as accurately as possible the size and value of a mineral deposit.",
     "course": "MI213",
     "term": "T1",
     "topic": "Exploration",
@@ -3795,109 +4197,15 @@ const mcqData = [
     "tag": "Definition"
   },
   {
-    "q": "What is the line of demarcation between prospecting and exploration?",
-    "options": ["A thick, clear line.", "A physical fence.", "There is a thin line of demarcation between prospecting and exploration.", "There is no difference."],
+    "q": "Is there a clear line between prospecting and exploration?",
+    "options": [
+      "No, there is a thin line of demarcation",
+      "Prospecting is for oil only",
+      "Yes, they are totally different",
+      "Exploration comes first"
+    ],
     "correct": 0,
     "explanation": "There is a thin line of demarcation between prospecting and exploration.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "Where does exploration generally shift to?",
-    "options": ["Only to surface locations.", "Exploration generally shifts to surface and subsurface locations, using a variety of measurements to obtain a more positive picture of the extent and grade of the ore body.", "Only to office studies.", "Only to analyzing old maps."],
-    "correct": 3,
-    "explanation": "Exploration generally shifts to surface and subsurface locations, using a variety of measurements to obtain a more positive picture of the extent and grade of the ore body.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What evaluation techniques may representative samples be subjected to?",
-    "options": ["Only visual inspection.", "Representative samples may be subjected to chemical, metallurgical, X-ray, spectrographic or radiometric evaluation techniques.", "Only weighing.", "Only crushing."],
-    "correct": 2,
-    "explanation": "Representative samples taken from the mineral deposit may be subjected to chemical, metallurgical, X-ray, spectrographic or radiometric evaluation techniques.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How are samples obtained during exploration?",
-    "options": ["Only by drilling.", "Samples are obtained by chipping outcrops, trenching, tunneling, and drilling.", "By buying them.", "By collecting from stockpiles."],
-    "correct": 1,
-    "explanation": "Samples are obtained by chipping outcrops, trenching, tunneling, and drilling.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What additional information can be provided during exploration?",
-    "options": ["Weather reports.", "Borehole logs may be provided to study the geologic and structural makeup of the deposit.", "Stock market trends.", "Equipment manuals."],
-    "correct": 0,
-    "explanation": "Borehole logs may be provided to study the geologic and structural makeup of the deposit.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "Why are diamond drills used in exploration?",
-    "options": ["Because they are cheap.", "Diamond drills are used because the cores they yield provide more information about the geologic structure of the ore body and surrounding rocks.", "Because they drill fastest.", "Because they don't need water."],
-    "correct": 2,
-    "explanation": "Diamond drills are used because the cores they yield provide more information and knowledge about the geologic structure of the ore body and surrounding rocks.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What does evaluation of samples enable the geologist or mining engineer to calculate?",
-    "options": ["Only the color of the ore.", "Evaluation enables them to calculate the tonnage and grade, or richness, of the mineral deposit.", "The future metal price.", "The number of employees needed."],
-    "correct": 3,
-    "explanation": "Evaluation of the samples enables the geologist or mining engineer to calculate the tonnage and grade, or richness, of the mineral deposit.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What other estimates and evaluations are made during exploration?",
-    "options": ["Only the tonnage.", "Estimates of mining costs, evaluations of mineral recovery, determination of environmental costs, and assessments of other factors to reach a conclusion about profitability.", "The design of the processing plant.", "The hiring schedule."],
-    "correct": 1,
-    "explanation": "Estimates of the mining costs, evaluations of the recovery of the valuable minerals, determination of environmental costs, and assessments of other foreseeable factors in an effort to reach a conclusion about the profitability of the mineral deposit are also made.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What is the crux of the analysis during exploration?",
-    "options": ["The color of the soil.", "The crux is the question of whether the property is just another mineral deposit or an ore body.", "The distance to a port.", "The name of the deposit."],
-    "correct": 0,
-    "explanation": "The crux of the analysis is the question of whether the property is just another mineral deposit or an ore body.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploration",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "What is the typical time duration for the exploration stage?",
-    "options": ["1 year.", "2-5 years.", "10 years.", "6 months."],
-    "correct": 2,
-    "explanation": "The exploration stage typically takes 2-5 years.",
     "course": "MI213",
     "term": "T1",
     "topic": "Exploration",
@@ -3905,10 +4213,162 @@ const mcqData = [
     "tag": "Basic"
   },
   {
-    "q": "What is development in mining?",
-    "options": ["The search for minerals.", "In the third stage, development, the work of opening a mineral deposit for exploitation is performed. With it begins the actual mining of the deposit, now called the ore.", "The final closure.", "The marketing of metals."],
+    "q": "Where does exploration generally shift to?",
+    "options": [
+      "Space",
+      "Administrative offices",
+      "Only the laboratory",
+      "Surface and subsurface locations, using a variety of measurements"
+    ],
+    "correct": 3,
+    "explanation": "It shifts to surface and subsurface locations to obtain a more positive picture of extent and grade.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What evaluation techniques may representative samples be subjected to?",
+    "options": [
+      "By taste",
+      "By color only",
+      "Chemical, metallurgical, X-ray, spectrographic or radiometric techniques",
+      "By weight only"
+    ],
+    "correct": 2,
+    "explanation": "Samples are subjected to chemical, metallurgical, X-ray, spectrographic or radiometric evaluation.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "How are samples obtained during exploration?",
+    "options": [
+      "Buying them",
+      "By chipping outcrops, trenching, tunneling, and drilling",
+      "From museums",
+      "From other mines"
+    ],
     "correct": 1,
-    "explanation": "In the third stage, development, the work of opening a mineral deposit for exploitation is performed. With it begins the actual mining of the deposit, now called the ore.",
+    "explanation": "Samples are obtained by chipping outcrops, trenching, tunneling, and drilling.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What additional information can be provided during exploration?",
+    "options": [
+      "Employee records",
+      "Borehole logs to study the geologic and structural makeup of the deposit",
+      "Cost estimates",
+      "Water quality data"
+    ],
+    "correct": 1,
+    "explanation": "Borehole logs study the geologic and structural makeup of the deposit.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "Why are diamond drills used in exploration?",
+    "options": [
+      "They are fast",
+      "They are cheap",
+      "Because the cores they yield provide more information about the geologic structure",
+      "They use less fuel"
+    ],
+    "correct": 2,
+    "explanation": "Diamond drill cores provide more information/knowledge about the geologic structure.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What does evaluation of samples enable the geologist or mining engineer to calculate?",
+    "options": [
+      "Age of the earth",
+      "The tonnage and grade, or richness, of the mineral deposit",
+      "Air quality",
+      "Water depth"
+    ],
+    "correct": 1,
+    "explanation": "Evaluation enables calculation of tonnage and grade (richness) of the deposit.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What other estimates and evaluations are made during exploration?",
+    "options": [
+      "Office layout",
+      "Estimates of mining costs, recovery, environmental costs, and profitability",
+      "Worker salaries",
+      "Truck brands"
+    ],
+    "correct": 1,
+    "explanation": "Estimates of mining costs, recovery, environmental costs, and profitability are made.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the crux of the analysis during exploration?",
+    "options": [
+      "Whether the property is just another mineral deposit or an ore body",
+      "Buying land",
+      "Choosing a name",
+      "Hiring staff"
+    ],
+    "correct": 0,
+    "explanation": "The crux is determining whether the property is just a mineral deposit or an actual ore body.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the typical time duration for the exploration stage?",
+    "options": [
+      "2-5 years",
+      "10 years",
+      "50 years",
+      "1 year"
+    ],
+    "correct": 0,
+    "explanation": "The exploration stage typically takes 2-5 years.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploration",
+    "year": "2024",
+    "tag": "Timeframe"
+  },
+
+  // --- SECTION 8: DEVELOPMENT ---
+
+  {
+    "q": "What is development in mining?",
+    "options": [
+      "Reclaiming land",
+      "Processing ore",
+      "The work of opening a mineral deposit for exploitation",
+      "Finding ore"
+    ],
+    "correct": 2,
+    "explanation": "Development is the work of opening a mineral deposit for exploitation.",
     "course": "MI213",
     "term": "T1",
     "topic": "Development",
@@ -3917,97 +4377,14 @@ const mcqData = [
   },
   {
     "q": "How can access to the deposit be gained during development?",
-    "options": ["Only by shaft.", "Access can be gained either by stripping overburden to expose near-surface ore, or by excavating openings from the surface to access deeper deposits.", "Only by adit.", "By waiting for erosion."],
-    "correct": 3,
-    "explanation": "Access to the deposit must be gained either (1) by stripping the overburden to expose the near-surface ore for mining or (2) by excavating openings from the surface to access more deeply buried deposits to prepare for underground mining.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What preliminary development work is generally required before any development takes place?",
-    "options": ["Only buying equipment.", "Preliminary work includes acquiring water and mineral rights, buying surface lands, arranging for financing, and preparing permit applications and an environmental impact statement (EIS).", "Only hiring workers.", "Only clearing vegetation."],
+    "options": [
+      "Using explosives only",
+      "Building roads only",
+      "By stripping the overburden or by excavating openings from the surface",
+      "By asking permission"
+    ],
     "correct": 2,
-    "explanation": "Preliminary development work includes acquiring water and mineral rights, buying surface lands, arranging for financing, and preparing permit applications and an environmental impact statement (EIS).",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What requirements must be provided before actual mining in most cases?",
-    "options": ["Only a mine plan.", "The provision of many requirements: access roads, power sources, mineral transportation systems, processing facilities, waste disposal areas, offices, houses, schools, hospitals, etc.", "Only explosives.", "Only safety gear."],
-    "correct": 0,
-    "explanation": "The provision of many requirements must precede actual mining: access roads, power sources, mineral transportation systems, mineral processing facilities, waste disposal areas, offices, houses, schools, hospitals, recreational facilities, negotiations with local communities and other support facilities.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What happens after these preliminary steps are achieved for surface mining?",
-    "options": ["Mining starts immediately.", "When these steps have been achieved, stripping of the overburden will then proceed if the minerals are to be mined at the surface.", "The mine is closed.", "Exploration resumes."],
-    "correct": 1,
-    "explanation": "When these steps have been achieved, stripping of the overburden will then proceed if the minerals are to be mined at the surface.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How does development for underground mining compare to surface mining?",
-    "options": ["It's simpler and cheaper.", "Development for underground mining is generally more complex and expensive. It requires careful planning and layout of access openings.", "It's exactly the same.", "It doesn't require planning."],
-    "correct": 3,
-    "explanation": "Development for underground mining is generally more complex and expensive. It requires careful planning and layout of access openings for efficient mining, safety, and performance.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What are the principal openings for underground mining?",
-    "options": ["Only shafts.", "The principal openings may be shafts, ramps, or adits; each must be planned to allow passage of workers, machines, ore, waste, air, water, and utilities.", "Only tunnels.", "Only raises."],
-    "correct": 1,
-    "explanation": "The principal openings may be shafts, ramps, or adits; each must be planned to allow passage of workers, machines, ore, waste, air, water, and utilities.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How are metal mines typically opened?",
-    "options": ["Only by adits.", "Many metal mines are located along steeply dipping deposits and thus are opened from shafts, while drifts, winzes, and raises serve the production areas.", "Only by ramps.", "They are not opened; they are surface mines."],
-    "correct": 2,
-    "explanation": "Many metal mines are located along steeply dipping deposits and thus are opened from shafts, while drifts, winzes, and raises serve the production areas.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How do coal and nonmetallic mineral deposits differ in their development?",
-    "options": ["They don't differ.", "Many coal and nonmetallic mineral deposits occur horizontally and therefore their mines are laid out in nearly horizontal direction. Their primary openings may be drifts or entries.", "They are always developed by shafts.", "They require no development."],
-    "correct": 0,
-    "explanation": "Many coal and nonmetallic mineral deposits occur horizontally and therefore their mines are laid out in nearly horizontal direction. Their primary openings may be drifts or entries, which may be distinctly different from those of metal mines.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Development",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What is the typical time duration for the development stage?",
-    "options": ["1 year.", "2-5 years.", "10 years.", "6 months."],
-    "correct": 1,
-    "explanation": "The development stage typically takes 2-5 years.",
+    "explanation": "Access is gained by stripping overburden (surface) or excavating openings like shafts (underground).",
     "course": "MI213",
     "term": "T1",
     "topic": "Development",
@@ -4015,10 +4392,146 @@ const mcqData = [
     "tag": "Basic"
   },
   {
-    "q": "What is exploitation in mining?",
-    "options": ["The search for ore.", "Exploitation, the fourth stage of mining, is associated with the actual recovery of minerals from the earth in quantity.", "The planning stage.", "The reclamation stage."],
+    "q": "What preliminary development work is generally required before any development takes place?",
+    "options": [
+      "Buying trucks",
+      "Hiring miners",
+      "Digging immediately",
+      "Acquiring rights, buying land, financing, and preparing EIS/permits"
+    ],
     "correct": 3,
-    "explanation": "Exploitation, the fourth stage of mining, is associated with the actual recovery of minerals from the earth in quantity.",
+    "explanation": "Preliminary work involves acquiring rights/land, financing, permits, and EIS.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What requirements must be provided before actual mining in most cases?",
+    "options": [
+      "None",
+      "Only a shovel",
+      "Roads, power, mineral transportation, processing facilities, offices, houses, etc.",
+      "Only explosives"
+    ],
+    "correct": 2,
+    "explanation": "Roads, power, transport, processing facilities, offices, houses, etc., must be provided.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What happens after these preliminary steps are achieved for surface mining?",
+    "options": [
+      "Selling the mine",
+      "Stripping of the overburden will proceed",
+      "Underground drilling",
+      "Nothing"
+    ],
+    "correct": 1,
+    "explanation": "Stripping of overburden proceeds if minerals are mined at the surface.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "How does development for underground mining compare to surface mining?",
+    "options": [
+      "It is faster",
+      "It is generally more complex and expensive",
+      "It is cheaper",
+      "It is easier"
+    ],
+    "correct": 1,
+    "explanation": "Underground development is generally more complex and expensive, requiring careful planning.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Comparison"
+  },
+  {
+    "q": "What are the principal openings for underground mining?",
+    "options": [
+      "Pits and trenches",
+      "Roads and bridges",
+      "Windows and doors",
+      "Shafts, ramps, or adits"
+    ],
+    "correct": 3,
+    "explanation": "Principal openings are shafts, ramps, or adits.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "How are metal mines typically opened?",
+    "options": [
+      "From adits only",
+      "From surface pits",
+      "From horizontal drifts",
+      "Often from shafts (due to steeply dipping deposits)"
+    ],
+    "correct": 3,
+    "explanation": "Many metal mines are along steeply dipping deposits and opened from shafts.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "How do coal and nonmetallic mineral deposits differ in their development?",
+    "options": [
+      "Ramps only",
+      "Shafts",
+      "Often opened by drifts or entries (due to horizontal occurrence)",
+      "Open pits only"
+    ],
+    "correct": 2,
+    "explanation": "Coal/nonmetallic deposits are often horizontal, so openings are drifts or entries.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the typical time duration for the development stage?",
+    "options": [
+      "10 years",
+      "20 years",
+      "1 month",
+      "2-5 years"
+    ],
+    "correct": 3,
+    "explanation": "The development stage typically takes 2-5 years.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Development",
+    "year": "2024",
+    "tag": "Timeframe"
+  },
+
+  // --- SECTION 9: EXPLOITATION ---
+
+  {
+    "q": "What is exploitation in mining?",
+    "options": [
+      "Closing the mine",
+      "Finding the minerals",
+      "Planning the mine",
+      "The actual recovery of minerals from the earth in quantity"
+    ],
+    "correct": 3,
+    "explanation": "Exploitation is the actual recovery of minerals from the earth in quantity.",
     "course": "MI213",
     "term": "T1",
     "topic": "Exploitation",
@@ -4027,86 +4540,14 @@ const mcqData = [
   },
   {
     "q": "Does development continue during exploitation?",
-    "options": ["No, development stops completely.", "Although development may continue, the emphasis in the production stage is on production.", "Development only happens after exploitation.", "They are the same thing."],
+    "options": [
+      "Yes, but emphasis is on production",
+      "No, completely",
+      "Only in surface mines",
+      "It becomes the main focus"
+    ],
     "correct": 0,
-    "explanation": "Although development may continue, the emphasis in the production stage is on production.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How much development is done prior to exploitation?",
-    "options": ["All development is completed first.", "Usually only enough development is done prior to exploitation to ensure that production, once started, can continue uninterrupted throughout the life of the mine.", "No development is done beforehand.", "Development and exploitation occur simultaneously from the start."],
-    "correct": 2,
-    "explanation": "Usually only enough development is done prior to exploitation to ensure that production, once started, can continue uninterrupted throughout the life of the mine.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What mainly determines the mining method selected for exploitation?",
-    "options": ["The manager's preference.", "The mining method selected is determined mainly by the characteristics of the mineral deposit and the limits imposed by safety, technology, environmental concerns, and economics.", "The color of the ore.", "The time of year."],
-    "correct": 0,
-    "explanation": "The mining method selected for exploitation is determined mainly by the characteristics of the mineral deposit and the limits imposed by safety, technology, environmental concerns, and economics.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What geologic conditions play a key role in selecting the mining method?",
-    "options": ["Only the ore grade.", "Geologic conditions, such as the dip, shape, and strength of the ore and the surrounding rock, play key role in selecting the method.", "The country where the mine is located.", "The type of equipment available."],
-    "correct": 1,
-    "explanation": "Geologic conditions, such as the dip, shape, and strength of the ore and the surrounding rock, play key role in selecting the method.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What are the two broad categories of traditional exploitation methods?",
-    "options": ["Small and large scale.", "Traditional exploitation methods fall into two broad categories based on locale: surface or underground.", "Cheap and expensive.", "Manual and mechanized."],
-    "correct": 3,
-    "explanation": "Traditional exploitation methods fall into two broad categories based on locale: surface or underground.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What does surface mining include?",
-    "options": ["Only open pit.", "Surface mining includes mechanical excavation methods such as open pit and open cast (strip mining), and aqueous methods such as placer and solution mining.", "Only underground caving.", "Only quarrying."],
-    "correct": 2,
-    "explanation": "Surface mining includes mechanical excavation methods such as open pit and open cast (strip mining), and aqueous methods such as placer and solution mining.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "How is underground mining usually classified?",
-    "options": ["By depth.", "Underground mining is usually classified in three categories of methods: unsupported, supported, and caving.", "By the metal produced.", "By the number of levels."],
-    "correct": 0,
-    "explanation": "Underground mining is usually classified in three categories of methods: unsupported, supported, and caving.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Exploitation",
-    "year": "2024",
-    "tag": "Definition"
-  },
-  {
-    "q": "What is the typical time duration for the exploitation stage?",
-    "options": ["1-5 years.", "10-30 years.", "50-100 years.", "Less than 1 year."],
-    "correct": 1,
-    "explanation": "The exploitation stage typically takes 10-30 years.",
+    "explanation": "Development may continue, but the emphasis is on production.",
     "course": "MI213",
     "term": "T1",
     "topic": "Exploitation",
@@ -4114,21 +4555,146 @@ const mcqData = [
     "tag": "Basic"
   },
   {
-    "q": "What is monitored during the exploitation stage?",
-    "options": ["Only production tonnage.", "Costs and economic payback period (usually 3-10 years) are monitored, i.e., managed, until closure.", "Only safety statistics.", "Only employee satisfaction."],
-    "correct": 2,
-    "explanation": "Costs and economic payback period (usually 3-10 years) are monitored, i.e., managed, until closure.",
+    "q": "How much development is done prior to exploitation?",
+    "options": [
+      "Only surface work",
+      "Enough to ensure that production can continue uninterrupted",
+      "None",
+      "All of it"
+    ],
+    "correct": 1,
+    "explanation": "Only enough to ensure that production can continue uninterrupted.",
     "course": "MI213",
     "term": "T1",
     "topic": "Exploitation",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
-    "q": "What is reclamation?",
-    "options": ["The first stage of mining.", "Reclamation is the final stage, the process of closing a mine and recontouring, revegetating, and restoring the water and land values.", "The blasting process.", "The mineral processing stage."],
+    "q": "What mainly determines the mining method selected for exploitation?",
+    "options": [
+      "Random choice",
+      "The characteristics of the mineral deposit and limits imposed by safety, technology, and economics",
+      "Worker vote",
+      "Availability of dynamite"
+    ],
+    "correct": 1,
+    "explanation": "Determined by deposit characteristics, safety, technology, environmental concerns, and economics.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What geologic conditions play a key role in selecting the mining method?",
+    "options": [
+      "Color of rock",
+      "Age of rock",
+      "Origin of rock",
+      "The dip, shape, and strength of the ore and the surrounding rock"
+    ],
     "correct": 3,
-    "explanation": "Reclamation is the final stage in the operation of most mines, the process of closing a mine and recontouring, revegetating, and restoring the water and land values.",
+    "explanation": "Dip, shape, and strength of ore and surrounding rock play a key role.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What are the two broad categories of traditional exploitation methods?",
+    "options": [
+      "Big and Small",
+      "Surface and Underground",
+      "Hard and Soft",
+      "Fast and Slow"
+    ],
+    "correct": 1,
+    "explanation": "Methods fall into Surface or Underground.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Classification"
+  },
+  {
+    "q": "What does surface mining include?",
+    "options": [
+      "Longwall",
+      "Sublevel caving",
+      "Room and pillar",
+      "Mechanical excavation methods (open pit, open cast) and aqueous methods (placer, solution)"
+    ],
+    "correct": 3,
+    "explanation": "Includes open pit, open cast (strip), placer, and solution mining.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Classification"
+  },
+  {
+    "q": "How is underground mining usually classified?",
+    "options": [
+      "Manual and Mechanized",
+      "Unsupported, Supported, and Caving",
+      "Wet and Dry",
+      "Deep and Shallow"
+    ],
+    "correct": 1,
+    "explanation": "Classified into unsupported, supported, and caving methods.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Classification"
+  },
+  {
+    "q": "What is the typical time duration for the exploitation stage?",
+    "options": [
+      "10-30 years",
+      "50-100 years",
+      "Forever",
+      "1-5 years"
+    ],
+    "correct": 0,
+    "explanation": "The exploitation stage typically takes 10-30 years.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Timeframe"
+  },
+  {
+    "q": "What is monitored during the exploitation stage?",
+    "options": [
+      "Costs and economic payback period",
+      "Weather only",
+      "Employee morale",
+      "Traffic"
+    ],
+    "correct": 0,
+    "explanation": "Costs and economic payback period are monitored/managed until closure.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Exploitation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+
+  // --- SECTION 10: RECLAMATION AND CLOSURE ---
+
+  {
+    "q": "What is reclamation?",
+    "options": [
+      "Selling a mine",
+      "Expanding a mine",
+      "The process of closing a mine and recontouring, revegetating, and restoring the water and land values",
+      "Opening a mine"
+    ],
+    "correct": 2,
+    "explanation": "Reclamation is closing a mine, recontouring, revegetating, and restoring water and land values.",
     "course": "MI213",
     "term": "T1",
     "topic": "Reclamation",
@@ -4137,196 +4703,14 @@ const mcqData = [
   },
   {
     "q": "When is the best time to begin the reclamation process?",
-    "options": ["After the mine is bankrupt.", "The best time to begin the reclamation process of a mine is before the first excavations are initiated.", "Only when forced by law.", "After all ore is processed."],
+    "options": [
+      "During production",
+      "Before the first excavations are initiated",
+      "After closure",
+      "Never"
+    ],
     "correct": 1,
-    "explanation": "The best time to begin the reclamation process of a mine is before the first excavations are initiated.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "How should mine planning engineers approach reclamation?",
-    "options": ["Ignore it until the end.", "Mine planning engineers should plan the mine so that reclamation is considered and the overall cost of mining plus reclamation is minimized, not just the cost of mining itself.", "It's not their responsibility.", "Assume the government will handle it."],
-    "correct": 2,
-    "explanation": "Mine planning engineers should plan the mine so that the reclamation process is considered and the overall cost of mining plus reclamation is minimized, not just the cost of mining itself.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "What is the new philosophy in the mining industry regarding reclamation?",
-    "options": ["Profit at all costs.", "The new philosophy is sustainability or sustainable development, meeting the needs of the present while enhancing the ability of future generations to meet their own needs.", "Ignore the environment.", "Leave the site as is."],
-    "correct": 0,
-    "explanation": "The new philosophy in the mining industry is sustainability or sustainable development, that is, the meeting of (economic and environmental) needs of the present while enhancing the ability of future generations to meet their own needs.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "What is the first concern that must be addressed in planning for reclamation?",
-    "options": ["Making the site beautiful.", "The first concern is the safety of the mine site, particularly if the area is open to the public.", "Planting trees.", "Building a park."],
-    "correct": 1,
-    "explanation": "The first of these is the safety of the mine site, particularly if the area is open to the public.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What must generally be accomplished regarding surface structures during reclamation?",
-    "options": ["Leave them for future use.", "The removal of office buildings, processing facilities, transportation equipment, utilities, and other surface structures must generally be accomplished.", "Paint them., "Convert them into museums."],
-    "correct": 0,
-    "explanation": "The removal of office buildings, processing facilities, transportation equipment, utilities, and other surface structures must generally be accomplished.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What is the mining company required to do regarding mine openings?",
-    "options": ["Leave them open for ventilation.", "The mining company is then required to seal all mine shafts, adits, and other openings that may present physical hazards.", "Use them for storage.", "Fill them with waste."],
-    "correct": 3,
-    "explanation": "The mining company is then required to seal all mine shafts, adits, and other openings that may present physical hazards.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What may be required to prevent injuries or death due to geologic failures?",
-    "options": ["Post warning signs.", "Any existing high-walls or other geologic structures may require mitigation to prevent injuries or death due to geologic failures.", "Nothing can be done.", "Build fences."],
-    "correct": 1,
-    "explanation": "Any existing high-walls or other geologic structures may require mitigation to prevent injuries or death due to geologic failures.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What is the second major issue to be addressed during reclamation?",
-    "options": ["Making a profit.", "The second major issue is restoration of the land surface, the water quality, and the waste disposal areas so that long-term water pollution, soil erosion, dust generation, or vegetation problems do not occur.", "Naming the site.", "Taking photographs."],
-    "correct": 2,
-    "explanation": "The second major issue to be addressed during reclamation of a mine site is restoration of the land surface, the water quality, and the waste disposal areas so that long-term water pollution, soil erosion, dust generation, or vegetation problems do not occur.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "Why is restoration of native plants often important in reclamation?",
-    "options": ["Because they are pretty.", "The restoration of native plants is often important as the plants help build a stable soil structure and naturalize the area.", "Because they grow fast.", "Because they are cheap."],
-    "correct": 0,
-    "explanation": "The restoration of native plants is often a very important part of this process, as the plants help build a stable soil structure and naturalize the area.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What may be necessary regarding acid-producing materials during reclamation?",
-    "options": ["Spread them thinly.", "It may be necessary to carefully place any rock or tailings with acid-producing properties in locations where rainfall has little effect to minimize acid mine drainage.", "Ignore them.", "Mix them with lime."],
-    "correct": 3,
-    "explanation": "It may be necessary to carefully place any rock or tailings with acid-producing properties in locations where rainfall has little effect on the material and acid mine drainage production is minimized.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What may be true of certain heavy metals during reclamation?",
-    "options": ["They are harmless.", "The same may be true of certain of the heavy metals that pollute streams; they need careful management.", "They evaporate.", "They turn into valuable ore."],
-    "correct": 2,
-    "explanation": "The same may be true of certain of the heavy metals that pollute streams.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How can pollution problems be prevented during reclamation?",
-    "options": ["They cannot be prevented.", "Planning of the waste dumps, tailings ponds, and other disturbed areas will help prevent pollution problems, but remediation work may also be necessary.", "By covering everything with soil.", "By moving to a new site."],
-    "correct": 1,
-    "explanation": "Planning of the waste dumps, tailings ponds, and other disturbed areas will help prevent pollution problems, but remediation work may also be necessary to complete the reclamation stage of mining and satisfy the regulatory agencies.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "What may be the final concern of the mining engineer during reclamation?",
-    "options": ["Getting a new job.", "The final concern may be the subsequent use of the land after mining is completed.", "Selling leftover equipment.", "Writing a report."],
-    "correct": 0,
-    "explanation": "The final concern of the mining (or environmental) engineer may be the subsequent use of the land after mining is completed.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "What have old mine sites been converted to?",
-    "options": ["Only landfills.", "Old mine sites have been converted to wildlife refuges, shopping malls, golf courses, boating clubs, airports, lakes, underground storage, real estate, etc.", "Left abandoned.", "Always replanted as forests."],
-    "correct": 2,
-    "explanation": "Old mine sites have been converted to wildlife refuges, shopping malls, golf courses, boating clubs, airports, lakes, underground storage facilities, real estate developments, solid waste disposal areas, and other uses that can benefit society.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "How can mine planners enhance the value of the mined land?",
-    "options": ["By ignoring it.", "By planning the mine for a subsequent development, mine planners can enhance the value of the mined land and help convert it to a favourable public use.", "By mining all resources.", "By leaving it bare."],
-    "correct": 3,
-    "explanation": "By planning the mine for a subsequent development, mine planners can enhance the value of the mined land and help convert it to a use that the public will consider favourable.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "What will the successful completion of reclamation enhance?",
-    "options": ["Only company profits.", "The successful completion of reclamation will enhance public opinion of the mining industry and keep the company in good graces with regulatory agencies and the public.", "The ore grade.", "The stock price in the short term."],
-    "correct": 1,
-    "explanation": "The successful completion of the reclamation of a mine will enhance public opinion of the mining industry and keep the mining company in the good graces of the regulatory agencies and public.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "Why is the fifth stage of mining of paramount importance?",
-    "options": ["Because it's the cheapest.", "The fifth stage (reclamation) is thus of paramount importance and should be planned at the earliest possible time in the life of the mine.", "Because it's optional.", "Because it involves blasting."],
-    "correct": 0,
-    "explanation": "The fifth stage of mining is thus of paramount importance and should be planned at the earliest possible time in the life of the mine.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Reclamation",
-    "year": "2024",
-    "tag": "Conceptual"
-  },
-  {
-    "q": "What is the typical time duration for the reclamation stage?",
-    "options": ["1-10 years.", "1 month.", "20-30 years.", "It never ends."],
-    "correct": 2,
-    "explanation": "The reclamation stage typically takes 1-10 years.",
+    "explanation": "The best time to begin is before the first excavations are initiated.",
     "course": "MI213",
     "term": "T1",
     "topic": "Reclamation",
@@ -4334,10 +4718,290 @@ const mcqData = [
     "tag": "Basic"
   },
   {
-    "q": "What are unit operations of mining?",
-    "options": ["Administrative tasks.", "The unit operations are the basic steps used to produce a mineral from the deposit, supported by auxiliary operations.", "Financial calculations.", "Environmental studies."],
+    "q": "How should mine planning engineers approach reclamation?",
+    "options": [
+      "Plan so that the overall cost of mining plus reclamation is minimized",
+      "Ignore costs",
+      "Do it last",
+      "Maximize mining cost"
+    ],
+    "correct": 0,
+    "explanation": "They should plan so the overall cost of mining plus reclamation is minimized.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the new philosophy in the mining industry regarding reclamation?",
+    "options": [
+      "Government control",
+      "Profit first",
+      "Sustainability or sustainable development",
+      "Abandonment"
+    ],
+    "correct": 2,
+    "explanation": "The new philosophy is sustainability (meeting present needs without compromising future needs).",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the first concern that must be addressed in planning for reclamation?",
+    "options": [
+      "Cost",
+      "Safety of the mine site (particularly if open to public)",
+      "Appearance",
+      "Speed"
+    ],
     "correct": 1,
-    "explanation": "The unit operations of mining are the basic steps used to produce a mineral from the deposit, supported by the auxiliary operations.",
+    "explanation": "Safety of the mine site is the first concern, especially if open to public.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What must generally be accomplished regarding surface structures during reclamation?",
+    "options": [
+      "Left as monuments",
+      "Sold",
+      "Removal of office buildings, processing facilities, equipment, utilities, etc.",
+      "Buried"
+    ],
+    "correct": 2,
+    "explanation": "Removal of office buildings, facilities, equipment, etc., involves accomplishment.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the mining company required to do regarding mine openings?",
+    "options": [
+      "Seal all mine shafts, adits, and other openings",
+      "Used as storage",
+      "Filled with water",
+      "Left open"
+    ],
+    "correct": 0,
+    "explanation": "Shafts, adits, and openings must be sealed.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What may be required to prevent injuries or death due to geologic failures?",
+    "options": [
+      "Mitigation of existing high-walls or other geologic structures",
+      "Fences",
+      "Trees",
+      "Roads"
+    ],
+    "correct": 0,
+    "explanation": "High-walls or geologic structures may require mitigation to prevent failure injuries.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the second major issue to be addressed during reclamation?",
+    "options": [
+      "Employee severance",
+      "Speed of closure",
+      "Restoration of the land surface, water quality, and waste disposal areas",
+      "Profit"
+    ],
+    "correct": 2,
+    "explanation": "Restoration of land, water, and waste areas to prevent pollution/erosion is the second issue.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "Why is restoration of native plants often important in reclamation?",
+    "options": [
+      "They look nice",
+      "They help build a stable soil structure and naturalize the area",
+      "They are cheap",
+      "They grow fast"
+    ],
+    "correct": 1,
+    "explanation": "Native plants help build stable soil structure and naturalize the area.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What may be necessary regarding acid-producing materials during reclamation?",
+    "options": [
+      "Carefully place them in locations where rainfall has little effect",
+      "Burned",
+      "Buried deeply",
+      "Dumped in river"
+    ],
+    "correct": 0,
+    "explanation": "Placed in locations where rainfall has little effect to minimize acid mine drainage.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What may be true of certain heavy metals during reclamation?",
+    "options": [
+      "They pollute streams and require similar care to acid-materials",
+      "They are valuable",
+      "They evaporate",
+      "They are safe"
+    ],
+    "correct": 0,
+    "explanation": "Heavy metals can pollute streams and require similar care.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "How can pollution problems be prevented during reclamation?",
+    "options": [
+      "By ignoring them",
+      "Using chemicals",
+      "Planning of waste dumps/tailings ponds and remediation work",
+      "Stopping mining"
+    ],
+    "correct": 2,
+    "explanation": "Planning waste dumps/tailings ponds helps; remediation may also be necessary.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What may be the final concern of the mining engineer during reclamation?",
+    "options": [
+      "Time",
+      "The subsequent use of the land after mining is completed",
+      "Cost",
+      "Legal issues"
+    ],
+    "correct": 1,
+    "explanation": "The subsequent use of the land after mining is completed.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What have old mine sites been converted to?",
+    "options": [
+      "New mines",
+      "Wildlife refuges, shopping malls, golf courses, lakes, etc.",
+      "Prisons",
+      "Nothing"
+    ],
+    "correct": 1,
+    "explanation": "Wildlife refuges, malls, golf courses, lakes, storage, real estate, etc.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "How can mine planners enhance the value of the mined land?",
+    "options": [
+      "Selling it cheap",
+      "Fencing it off",
+      "By leaving it alone",
+      "By planning the mine for a subsequent development favorable to the public"
+    ],
+    "correct": 3,
+    "explanation": "By planning for subsequent development favored by the public.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What will the successful completion of reclamation enhance?",
+    "options": [
+      "Public opinion and standing with regulatory agencies",
+      "Extraction",
+      "Pollution",
+      "Costs"
+    ],
+    "correct": 0,
+    "explanation": "Enhances public opinion and standing with regulatory agencies.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "Why is the fifth stage of mining of paramount importance?",
+    "options": [
+      "It is optional",
+      "It is easy",
+      "It generates revenue",
+      "It should be planned at the earliest possible time in the life of the mine"
+    ],
+    "correct": 3,
+    "explanation": "It is of paramount importance and should be planned at the earliest possible time.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Basic"
+  },
+  {
+    "q": "What is the typical time duration for the reclamation stage?",
+    "options": [
+      "100 years",
+      "1-10 years",
+      "1 month",
+      "50 years"
+    ],
+    "correct": 1,
+    "explanation": "The reclamation stage typically takes 1-10 years.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Reclamation",
+    "year": "2024",
+    "tag": "Timeframe"
+  },
+
+  // --- SECTION 11: UNIT OPERATIONS OF MINING ---
+
+  {
+    "q": "What are unit operations of mining?",
+    "options": [
+      "Basic steps used to produce a mineral from the deposit, supported by auxiliary operations",
+      "Hiring staff",
+      "Administrative tasks",
+      "Selling minerals"
+    ],
+    "correct": 0,
+    "explanation": "Basic steps used to produce a mineral from the deposit, supported by auxiliary operations.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
@@ -4346,20 +5010,30 @@ const mcqData = [
   },
   {
     "q": "When are unit operations normally employed?",
-    "options": ["Only during exploration.", "During the development and exploitation stages of mining when natural materials are extracted, remarkably similar unit operations are normally employed.", "Only during reclamation.", "During prospecting."],
-    "correct": 0,
-    "explanation": "During the development and exploitation stages of mining when natural materials are extracted from the earth, remarkably similar unit operations are normally employed.",
+    "options": [
+      "During prospecting",
+      "During exploration",
+      "During reclamation",
+      "During the development and exploitation stages"
+    ],
+    "correct": 3,
+    "explanation": "During development and exploitation stages.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What are production operations?",
-    "options": ["The steps contributing directly to mineral extraction; they constitute the production cycle.", "Office work.", "Maintenance tasks.", "Safety inspections."],
-    "correct": 2,
-    "explanation": "The steps contributing directly to mineral extraction are production operations, which constitute the production cycle of operations.",
+    "options": [
+      "Planning steps",
+      "The steps contributing directly to mineral extraction",
+      "Cleaning steps",
+      "Support steps"
+    ],
+    "correct": 1,
+    "explanation": "Steps contributing directly to mineral extraction.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
@@ -4368,9 +5042,14 @@ const mcqData = [
   },
   {
     "q": "What are auxiliary operations?",
-    "options": ["The main extraction steps.", "The ancillary steps that support the production cycle.", "The processing of ore.", "The marketing of products."],
-    "correct": 3,
-    "explanation": "The ancillary steps that support the production cycle are termed auxiliary operations.",
+    "options": [
+      "The ancillary steps that support the production cycle",
+      "Main extraction steps",
+      "Office work",
+      "Transportation"
+    ],
+    "correct": 0,
+    "explanation": "Ancillary steps that support the production cycle.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
@@ -4379,53 +5058,78 @@ const mcqData = [
   },
   {
     "q": "What are the two main groups of unit operations in the production cycle?",
-    "options": ["Drilling and blasting.", "Loading and hauling.", "The production cycle employs unit operations normally grouped into rock breakage and materials handling.", "Ventilation and support."],
+    "options": [
+      "Rock breakage and materials handling",
+      "Digging and Filling",
+      "Loading and Dumping",
+      "Drilling and Driving"
+    ],
     "correct": 0,
-    "explanation": "The production cycle employs unit operations that are normally grouped into rock breakage and materials handling.",
+    "explanation": "Grouped into rock breakage and materials handling.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What does breakage generally consist of?",
-    "options": ["Loading and hauling.", "Breakage generally consists of drilling and blasting.", "Ventilation.", "Ground support."],
+    "options": [
+      "Crushing and grinding",
+      "Loading and hauling",
+      "Drilling and blasting",
+      "Pumping and ventilation"
+    ],
     "correct": 2,
     "explanation": "Breakage generally consists of drilling and blasting.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
     "q": "What does materials handling encompass?",
-    "options": ["Drilling.", "Materials handling encompasses loading or excavation and haulage (horizontal transport) and sometimes hoisting (vertical or inclined transport).", "Blasting.", "Drill sharpening."],
-    "correct": 1,
-    "explanation": "Materials handling encompasses loading or excavation and haulage (horizontal transport) and sometimes hoisting (vertical or inclined transport).",
+    "options": [
+      "Loading, haulage, and sometimes hoisting",
+      "Drilling and blasting",
+      "Ventilation",
+      "Support"
+    ],
+    "correct": 0,
+    "explanation": "Encompasses loading/excavation, haulage (horizontal), and sometimes hoisting (vertical).",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
     "q": "What is the basic production cycle formula?",
-    "options": ["Production = Sales - Cost.", "Production cycle = drill + blast + load + haul = Rock breakage (drill + blast) + Materials handling (load + haul)", "Cycle = Time / Tonnage.", "Formula = Profit / Ore."],
-    "correct": 0,
-    "explanation": "Production cycle = drill + blast + load + haul = Rock breakage (drill + blast) + Materials handling (load + haul)",
+    "options": [
+      "Load + Haul + Dump",
+      "Drill + Blast + Load + Haul",
+      "Drill + Load",
+      "Blast + Haul"
+    ],
+    "correct": 1,
+    "explanation": "Production cycle = drill + blast + load + haul.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Formula"
   },
   {
     "q": "What is the trend in modern mining regarding production operations?",
-    "options": ["To make them more cyclic.", "The trend is to eliminate or combine functions and to increase continuity of extraction.", "To use more manual labor.", "To separate them further."],
-    "correct": 3,
-    "explanation": "Although production operations tend to be separate and cyclic in nature, the trend in modern mining and tunneling is to eliminate or combine functions and to increase continuity of extraction.",
+    "options": [
+      "More manual labor",
+      "Slower extraction",
+      "To eliminate or combine functions and to increase continuity of extraction",
+      "More separate steps"
+    ],
+    "correct": 2,
+    "explanation": "Trend is to eliminate or combine functions and increase continuity of extraction.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
@@ -4434,31 +5138,46 @@ const mcqData = [
   },
   {
     "q": "What do continuous miners do?",
-    "options": ["They drill holes.", "In coal and other soft rock mines, continuous miners break (rip material by force) and load the mineral to eliminate drilling and blasting.", "They haul rock.", "They provide ventilation."],
-    "correct": 1,
-    "explanation": "In coal and other soft rock mines, continuous miners break (rip material by force) and load the mineral to eliminate drilling and blasting.",
+    "options": [
+      "Support roof",
+      "Drill only",
+      "Haul only",
+      "Break and load the mineral to eliminate drilling and blasting"
+    ],
+    "correct": 3,
+    "explanation": "They break (rip) and load mineral to eliminate drilling and blasting (in coal/soft rock).",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Equipment"
   },
   {
     "q": "What do boring machines do in medium-hard rock?",
-    "options": ["They load trucks.", "Boring machines perform the same tasks as continuous miners in medium-hard rock.", "They drill blastholes.", "They crush ore."],
-    "correct": 2,
-    "explanation": "Boring machines perform the same tasks as continuous miners in medium-hard rock.",
+    "options": [
+      "Transport ore",
+      "Bore holes for water",
+      "Crush rock",
+      "Perform the same tasks as continuous miners"
+    ],
+    "correct": 3,
+    "explanation": "They perform same tasks as continuous miners in medium-hard rock.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Equipment"
   },
   {
     "q": "How do the cycle of operations in surface and underground mining differ?",
-    "options": ["They are completely different.", "The cycle differs primarily by the scale of the equipment.", "Underground mining has no cycle.", "Surface mining doesn't involve hauling."],
-    "correct": 0,
-    "explanation": "The cycle of operations in surface and underground mining differ primarily by the scale of the equipment.",
+    "options": [
+      "Surface uses no explosives",
+      "Totally different steps",
+      "Underground uses no equipment",
+      "Primarily by the scale of the equipment"
+    ],
+    "correct": 3,
+    "explanation": "They differ primarily by the scale of the equipment.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
@@ -4467,328 +5186,496 @@ const mcqData = [
   },
   {
     "q": "What have evolved to meet the unique needs of surface and underground mining?",
-    "options": ["Identical equipment.", "Specialized machines have evolved to meet the unique needs of the two regimes.", "Only manual tools.", "No special equipment."],
-    "correct": 1,
-    "explanation": "Specialized machines have evolved to meet the unique needs of the two regimes.",
+    "options": [
+      "Nothing",
+      "Better explosives",
+      "Specialized machines",
+      "Harder rocks"
+    ],
+    "correct": 2,
+    "explanation": "Specialized machines have evolved to meet unique needs of both regimes.",
     "course": "MI213",
     "term": "T1",
     "topic": "Unit Operations",
     "year": "2024",
-    "tag": "Trend"
+    "tag": "Basic"
   },
+
+  // --- SECTION 12: MODERN SURFACE MINING OPERATIONS ---
+
   {
     "q": "What blasthole diameters are produced in modern surface mining?",
-    "options": ["10-50 mm.", "75 to 380 mm.", "500-1000 mm.", "5-10 mm."],
-    "correct": 3,
-    "explanation": "In modern surface mining, blastholes of 75 to 380 mm in diameter are produced.",
+    "options": [
+      "500 to 1000 mm",
+      "75 to 380 mm",
+      "10 to 50 mm",
+      "1 to 5 mm"
+    ],
+    "correct": 1,
+    "explanation": "Blastholes of 75 to 380 mm in diameter are produced.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mining Ops",
+    "topic": "Surface Mining Operations",
+    "year": "2024",
+    "tag": "Equipment"
+  },
+  {
+    "q": "What types of drills produce blastholes in surface mining?",
+    "options": [
+      "Water jets",
+      "Laser drills",
+      "Rotary or percussion drills",
+      "Hand drills"
+    ],
+    "correct": 2,
+    "explanation": "Rotary or percussion drills are used.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Surface Mining Operations",
+    "year": "2024",
+    "tag": "Equipment"
+  },
+  {
+    "q": "Why is the explosives charge inserted and detonated?",
+    "options": [
+      "To clear trees",
+      "To make noise",
+      "To reduce the overburden or ore to a size range suitable for loading",
+      "To burn the rock"
+    ],
+    "correct": 2,
+    "explanation": "To reduce overburden or ore to a size range suitable for loading.",
+    "course": "MI213",
+    "term": "T1",
+    "topic": "Surface Mining Operations",
     "year": "2024",
     "tag": "Basic"
   },
   {
-    "q": "What types of drills produce blastholes in surface mining?",
-    "options": ["Hand drills.", "Blastholes are produced by rotary or percussion drills.", "Water jets.", "Lasers."],
-    "correct": 2,
-    "explanation": "Blastholes are produced by rotary or percussion drills for the placement of explosives when consolidated rock must be removed.",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Surface Mining Ops",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
-    "q": "Why is the explosives charge inserted and detonated?",
-    "options": ["To make noise.", "To reduce the overburden or ore to a size range suitable for loading.", "To compact the ground.", "To find water."],
-    "correct": 1,
-    "explanation": "The explosives charge is then inserted and detonated to reduce the overburden or ore to a size range suitable for loading (or excavation).",
-    "course": "MI213",
-    "term": "T1",
-    "topic": "Surface Mining Ops",
-    "year": "2024",
-    "tag": "Applied"
-  },
-  {
     "q": "By what is broken material loaded in surface mining?",
-    "options": ["By hand.", "The broken material is loaded by shovel, dragline, or wheel loader into haulage units.", "By conveyor belts directly.", "By pumps."],
-    "correct": 0,
-    "explanation": "The broken material is loaded by shovel, dragline, or wheel loader into haulage units.",
+    "options": [
+      "Conveyors",
+      "Trucks",
+      "Shovel, dragline, or wheel loader",
+      "Cranes"
+    ],
+    "correct": 2,
+    "explanation": "Shovel, dragline, or wheel loader.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mining Ops",
+    "topic": "Surface Mining Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Equipment"
   },
   {
     "q": "What are the general haulage units in surface mining?",
-    "options": ["Conveyor belts only.", "The general haulage units are trucks for transport.", "Pipelines.", "Aerial tramways."],
-    "correct": 2,
-    "explanation": "The general haulage units are trucks for transport.",
+    "options": [
+      "Boats",
+      "Cars",
+      "Planes",
+      "Trucks"
+    ],
+    "correct": 3,
+    "explanation": "Trucks are general haulage units.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mining Ops",
+    "topic": "Surface Mining Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Equipment"
   },
   {
     "q": "What other transport methods are used in surface mining?",
-    "options": ["Only trucks.", "Railroad cars are also used for haulage, and belt conveyors are often used after the material is crushed.", "Helicopters.", "Boats."],
-    "correct": 3,
-    "explanation": "Railroad cars are also used for haulage, and belt conveyors are often used after the material is crushed.",
+    "options": [
+      "Pipelines",
+      "Helicopters",
+      "Railroad cars and belt conveyors",
+      "Bicycles"
+    ],
+    "correct": 2,
+    "explanation": "Railroad cars and belt conveyors (after crushing) are also used.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mining Ops",
+    "topic": "Surface Mining Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Equipment"
   },
   {
     "q": "How are soil and coal often moved in surface mining?",
-    "options": ["Always with explosives.", "Soil and coal are often moved in the same manner, though blasting is sometimes unnecessary, but simply excavated.", "Only by dredging.", "Only by hydraulic methods."],
-    "correct": 1,
-    "explanation": "Soil and coal are often moved in the same manner, though blasting is sometimes unnecessary, but simply excavated.",
+    "options": [
+      "Often moved in the same manner, though blasting is sometimes unnecessary (simply excavated)",
+      "Always blasted",
+      "Burned",
+      "Dissolved"
+    ],
+    "correct": 0,
+    "explanation": "Often moved in same manner, though blasting is sometimes unnecessary.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mining Ops",
+    "topic": "Surface Mining Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Method"
   },
   {
     "q": "How are dimension stone blocks often freed in quarrying?",
-    "options": ["Only by blasting.", "In the quarrying of dimension stone, the blocks are often freed without blasting, using wire saws or other mechanical devices.", "By burning.", "By freezing."],
-    "correct": 0,
-    "explanation": "In the quarrying of dimension stone, the blocks are often freed without blasting, using wire saws or other mechanical devices.",
+    "options": [
+      "Melted",
+      "Freed without blasting using wire saws or other mechanical devices",
+      "Heavy blasting",
+      "Crushed"
+    ],
+    "correct": 1,
+    "explanation": "Blocks are freed without blasting, using wire saws or mechanical devices.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mining Ops",
+    "topic": "Surface Mining Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Method"
   },
+
+  // --- SECTION 13: UNDERGROUND MINING OPERATIONS ---
+
   {
     "q": "How does the production cycle in underground mining compare to surface mining?",
-    "options": ["It is completely different.", "In underground mining, the production cycle is similar, although the equipment used may be scaled down in size.", "There is no production cycle underground.", "It is faster."],
-    "correct": 2,
-    "explanation": "In underground mining, the production cycle is similar, although the equipment used may be scaled down in size.",
+    "options": [
+      "Similar, although the equipment used may be scaled down in size",
+      "Faster",
+      "It is different",
+      "Uses no equipment"
+    ],
+    "correct": 0,
+    "explanation": "Cycle is similar, though equipment may be scaled down in size.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Mining Ops",
+    "topic": "Underground Mining Operations",
     "year": "2024",
     "tag": "Comparison"
   },
   {
     "q": "What is different about drillholes in underground mining?",
-    "options": ["They are larger.", "Smaller drillholes are used in underground mining.", "They are not used.", "They are horizontal only."],
-    "correct": 1,
-    "explanation": "Smaller drillholes are used in underground mining.",
+    "options": [
+      "None",
+      "Same size",
+      "Smaller drillholes are used",
+      "Larger"
+    ],
+    "correct": 2,
+    "explanation": "Smaller drillholes are used.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Mining Ops",
+    "topic": "Underground Mining Operations",
     "year": "2024",
-    "tag": "Comparison"
+    "tag": "Equipment"
   },
   {
     "q": "What sometimes replaces trucks in underground mining?",
-    "options": ["Larger trucks.", "Trucks are sometimes replaced by shuttle cars in underground mining.", "Airplanes.", "Boats."],
-    "correct": 3,
-    "explanation": "Trucks are sometimes replaced by shuttle cars in underground mining.",
+    "options": [
+      "Wheelbarrows",
+      "Bicycles",
+      "Shuttle cars",
+      "Trains only"
+    ],
+    "correct": 2,
+    "explanation": "Trucks are sometimes replaced by shuttle cars.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Mining Ops",
+    "topic": "Underground Mining Operations",
     "year": "2024",
-    "tag": "Comparison"
+    "tag": "Equipment"
   },
   {
     "q": "What is more prevalent in underground mining compared to surface mining?",
-    "options": ["Large shovels.", "LHDs and belt conveyors are more prevalent in underground mining.", "Draglines.", "Rotary drills."],
-    "correct": 0,
-    "explanation": "LHDs and belt conveyors are more prevalent in underground mining.",
+    "options": [
+      "Large shovels",
+      "LHDs and belt conveyors",
+      "Scrapers",
+      "Draglines"
+    ],
+    "correct": 1,
+    "explanation": "LHDs and belt conveyors are more prevalent.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Mining Ops",
+    "topic": "Underground Mining Operations",
     "year": "2024",
-    "tag": "Comparison"
+    "tag": "Equipment"
   },
   {
     "q": "How are coal, salt, potash, and trona often mined underground?",
-    "options": ["Always with heavy blasting.", "Coal, salt, potash, and trona are often mined without the use of explosives or mined after undercutting the face to reduce explosive consumption.", "Only by solution mining.", "Only by block caving."],
-    "correct": 1,
-    "explanation": "Coal, salt, potash, and trona are often mined without the use of explosives or mined after undercutting the face to reduce the consumption of explosives.",
+    "options": [
+      "Heavy blasting",
+      "Chemical leaching",
+      "Without the use of explosives or after undercutting the face",
+      "Melting"
+    ],
+    "correct": 2,
+    "explanation": "Often mined without explosives or after undercutting face to reduce explosives.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Underground Mining Ops",
+    "topic": "Underground Mining Operations",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Method"
   },
+
+  // --- SECTION 14: AUXILIARY OPERATIONS ---
+
   {
     "q": "What must be performed in addition to production cycle operations?",
-    "options": ["Only management tasks.", "In addition to the production cycle, certain auxiliary operations must be performed in many cases.", "Nothing else.", "Only reclamation."],
-    "correct": 2,
-    "explanation": "In addition to the operations of the production cycle, certain auxiliary operations must be performed in many cases.",
+    "options": [
+      "Certain auxiliary operations",
+      "Nothing",
+      "Sales",
+      "Marketing"
+    ],
+    "correct": 0,
+    "explanation": "Certain auxiliary operations must be performed.",
     "course": "MI213",
     "term": "T1",
     "topic": "Auxiliary Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
     "q": "What are the usual auxiliary operations underground?",
-    "options": ["Drilling and blasting.", "Underground, auxiliary operations usually include roof support, ventilation, power supply, pumping, maintenance, lighting, communications, and delivery of supplies.", "Loading and hauling.", "Ore processing."],
-    "correct": 3,
-    "explanation": "Underground, these usually include roof support, ventilation and air-conditioning, power supply, pumping, maintenance, lighting, communications, and delivery of compressed air, water, and supplies to the working sections.",
+    "options": [
+      "Roof support, ventilation, power, pumping, maintenance, lighting, etc.",
+      "Waste disposal",
+      "Slope stability",
+      "Dust control"
+    ],
+    "correct": 0,
+    "explanation": "Roof support, ventilation, power, pumping, maintenance, lighting, comms, supplies.",
     "course": "MI213",
     "term": "T1",
     "topic": "Auxiliary Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What are the primary auxiliary operations in surface mining?",
-    "options": ["Drilling and blasting.", "In surface mining, primary auxiliary operations include those providing slope stability, pumping, power supply, maintenance, waste disposal, dust control and supply of material.", "Ventilation.", "Roof support."],
-    "correct": 0,
-    "explanation": "In surface mining, the primary auxiliary operations include those providing slope stability, pumping, power supply, maintenance, waste disposal, dust control and supply of material to the production centres.",
+    "options": [
+      "Ventilation",
+      "Roof support",
+      "Lighting",
+      "Slope stability, pumping, power, maintenance, waste disposal, dust control"
+    ],
+    "correct": 3,
+    "explanation": "Slope stability, pumping, power, maintenance, waste disposal, dust control, supply.",
     "course": "MI213",
     "term": "T1",
     "topic": "Auxiliary Operations",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
+
+  // --- SECTION 15: SURFACE MINE PLANNING AND DESIGN - GENERAL ---
+
   {
     "q": "What is open pit mining?",
-    "options": ["A type of underground mining.", "Open pit mining is a method of operating a surface mine that is simple in concept but complex in its cost and efficiency requirements.", "A processing method.", "A reclamation technique."],
-    "correct": 1,
-    "explanation": "Open pit mining is a method of operating a surface mine that is simple in concept but complex in its cost and efficiency requirements.",
+    "options": [
+      "Hard everything",
+      "Easy everything",
+      "Simple in concept but complex in its cost and efficiency requirements",
+      "Complex concept, simple cost"
+    ],
+    "correct": 2,
+    "explanation": "Simple in concept but complex in its cost and efficiency requirements.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
     "q": "Why must open pit mining be carefully planned and executed?",
-    "options": ["Because it's fun.", "It must be carefully planned to keep unit costs to a minimum.", "Because regulations require lots of paperwork.", "Because the equipment is cheap."],
+    "options": [
+      "To maximize cost",
+      "Government rule",
+      "To keep unit costs to a minimum",
+      "To look busy"
+    ],
     "correct": 2,
-    "explanation": "It is evident that open pit mining must be carefully planned and executed to keep unit costs to a minimum.",
+    "explanation": "To keep unit costs to a minimum.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Reasoning"
   },
   {
     "q": "How is the average open pit mine engineered?",
-    "options": ["It's not engineered; it's natural.", "Accordingly, the average open pit mine is heavily engineered even though it is simple in configuration.", "By trial and error.", "By copying other mines."],
+    "options": [
+      "Slightly engineered",
+      "Randomly dug",
+      "No",
+      "Heavily engineered even though simple in configuration"
+    ],
     "correct": 3,
-    "explanation": "Accordingly, the average open pit mine is heavily engineered even though it is simple in configuration.",
+    "explanation": "Heavily engineered even though simple in configuration.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Basic"
   },
   {
     "q": "What must be considered in the initial planning and design of an open pit?",
-    "options": ["Only the ore grade.", "There are many factors that must be considered in the initial planning and design.", "Only the pit shape.", "Only the equipment type."],
-    "correct": 0,
-    "explanation": "There are many factors that must be considered in the initial planning and design.",
+    "options": [
+      "Few factors",
+      "Only cost",
+      "Many factors",
+      "Only geology"
+    ],
+    "correct": 2,
+    "explanation": "Many factors must be considered.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Basic"
   },
+
+  // --- SECTION 16: FACTORS IN SURFACE MINE PLANNING ---
+
   {
     "q": "What are the natural and geological factors in surface mine planning?",
-    "options": ["Equipment costs.", "Natural and geological factors include: geological conditions, ore types and grades, hydrologic conditions, topography, metallurgical characteristics, climate, and environmental variables.", "Labor rates.", "Market prices."],
-    "correct": 1,
-    "explanation": "Natural and geological factors include: geological conditions, ore types and grades, hydrologic conditions, topography, metallurgical characteristics of the ore, climate, and environmental variables of the site.",
+    "options": [
+      "Geological conditions, ore types, hydrologic conditions, topography, metallurgical characteristics, climate",
+      "Costs",
+      "Equipment",
+      "Pit slope"
+    ],
+    "correct": 0,
+    "explanation": "Geological conditions, ore types/grades, hydrology, topography, metallurgy, climate, environment.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning Factors",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Classification"
   },
   {
     "q": "What are the economic factors in surface mine planning?",
-    "options": ["Rock strength.", "Economic factors include: ore tonnage, stripping ratio, cutoff grade, operating cost, investment/capital cost, desired profit margin, production rate, processing costs, and market conditions.", "Dip of the ore body.", "Groundwater level."],
-    "correct": 2,
-    "explanation": "Economic factors include: ore tonnage, stripping ratio, cutoff grade, operating cost, investment/capital cost, desired profit margin, production rate, processing and/or smelting costs, and market conditions.",
+    "options": [
+      "Ore tonnage, stripping ratio, cutoff grade, operating cost, investment cost, profit, production rate",
+      "Climate",
+      "Topography",
+      "Equipment"
+    ],
+    "correct": 0,
+    "explanation": "Ore tonnage, stripping ratio, cutoff grade, costs, profit, production rate, market.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning Factors",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Classification"
   },
   {
     "q": "What are the technological factors in surface mine planning?",
-    "options": ["Weather patterns.", "Technological factors include: equipment, pit slope, bench height, road grade, property lines, transportation options, and pit limits.", "Community relations.", "Government policies."],
-    "correct": 0,
-    "explanation": "Technological factors include: equipment, pit slope, bench height, road grade, property lines, transportation options, and pit limits.",
+    "options": [
+      "Market",
+      "Equipment, pit slope, bench height, road grade, property lines, transportation, pit limits",
+      "Climate",
+      "Ore grade"
+    ],
+    "correct": 1,
+    "explanation": "Equipment, pit slope, bench height, road grade, property lines, transport, limits.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning Factors",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Classification"
   },
   {
     "q": "What will the pit planning team most likely strive to optimize?",
-    "options": ["The weather.", "The pit planning team will most likely strive to optimize the pit design in respect to the technological factors.", "The ore grade.", "The political landscape."],
-    "correct": 3,
-    "explanation": "The pit planning team will most likely strive to optimize the pit design in respect to the technological factors.",
+    "options": [
+      "Climate",
+      "The pit design in respect to the technological factors",
+      "Natural factors",
+      "Economic factors"
+    ],
+    "correct": 1,
+    "explanation": "Strive to optimize pit design in respect to technological factors.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning Factors",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What happens to most of the other factors (natural, geological, economic)?",
-    "options": ["They are optimized.", "Most of the other factors are beyond their control and become part of the constraints.", "They are ignored.", "They change daily."],
-    "correct": 1,
-    "explanation": "Most of the other factors are beyond their control and become part of the constraints.",
+    "options": [
+      "Beyond their control and become constraints",
+      "Changed",
+      "Ignored",
+      "Optimized"
+    ],
+    "correct": 0,
+    "explanation": "Most other factors are beyond control and become constraints.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Surface Mine Planning",
+    "topic": "Mine Planning Factors",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
+
+  // --- SECTION 17: PIT PLANNING OBJECTIVES ---
+
   {
     "q": "What is studied regarding the overall plan for the pit?",
-    "options": ["Only the first bench.", "The overall plan for the pit is then studied, including both the overall pit limit and the sequence of extraction.", "Only the haul roads.", "Only the final slope."],
-    "correct": 2,
-    "explanation": "The overall plan for the pit is then studied, including both the overall pit limit and the sequence of extraction.",
+    "options": [
+      "Pit limit only",
+      "Both the overall pit limit and the sequence of extraction",
+      "Extraction only",
+      "Nothing"
+    ],
+    "correct": 1,
+    "explanation": "Both overall pit limit and sequence of extraction.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "Why must many variables be considered in pit planning?",
-    "options": ["To make it complicated.", "Many variables must be considered so that ore is brought into production as early as possible and the sequence is conducted without disrupting production or cash flow.", "Because each variable is interesting.", "To fill reports."],
+    "options": [
+      "To bring ore into production early without disrupting production or cash flow",
+      "To confuse workers",
+      "To delay production",
+      "To spend time"
+    ],
     "correct": 0,
-    "explanation": "Many variables must be considered in this exercise so that the ore is brought into production as early as possible and the sequence is conducted without disrupting production or cash flow.",
+    "explanation": "To bring ore into production early and conduct sequence without disrupting production/cash flow.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Reasoning"
   },
   {
     "q": "Why is initial cash flow very important?",
-    "options": ["It's not important.", "The initial cash flow is very important, as the income generated during the first five or ten years is more apt to make or break the mine than the long-term plan.", "Because it pays for parties.", "It determines the final pit depth."],
-    "correct": 1,
-    "explanation": "The initial cash flow is very important, as the income generated during the first five or ten years of exploitation is more apt to make or break the mine than the economics of the long-term mine plan.",
+    "options": [
+      "Income in the first 5-10 years is more apt to make or break the mine",
+      "Banks require it",
+      "Long term is more important",
+      "It isn't"
+    ],
+    "correct": 0,
+    "explanation": "Income in first 5-10 years is more apt to make or break the mine.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
     "year": "2024",
-    "tag": "Conceptual"
+    "tag": "Basic"
   },
   {
     "q": "What is the first objective that applies to most pit planning operations?",
-    "options": ["Make the pit look round.", "Mine the ore body so that the production cost per kg of metal is a minimum, (i.e., mine the 'next best ore' to generate income as early as possible).", "Use the largest equipment.", "Remove all waste first."],
-    "correct": 2,
-    "explanation": "Mine the ore body so that the production cost per kg of metal is a minimum, (i.e., mine the 'next best ore' to generate income as early as possible).",
+    "options": [
+      "Mine waste first",
+      "Mine the ore body so that the production cost per kg of metal is a minimum (next best ore)",
+      "Build roads",
+      "Mine any ore"
+    ],
+    "correct": 1,
+    "explanation": "Mine ore so production cost/kg is minimum (mine next best ore for early income).",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
@@ -4797,8 +5684,13 @@ const mcqData = [
   },
   {
     "q": "What is the second objective in pit planning?",
-    "options": ["Maintain proper operating parameters (adequate bench width and haul roads).", "Make the pit deep.", "Use the cheapest explosives.", "Employ the fewest people."],
-    "correct": 3,
+    "options": [
+      "Buy cheap trucks",
+      "Dig deep",
+      "Maintain proper operating parameters (adequate bench width and haul roads)",
+      "Ignore parameters"
+    ],
+    "correct": 2,
     "explanation": "Maintain proper operating parameters (adequate bench width and haul roads).",
     "course": "MI213",
     "term": "T1",
@@ -4808,9 +5700,14 @@ const mcqData = [
   },
   {
     "q": "What is the third objective in pit planning?",
-    "options": ["Keep the pit dry.", "Maintain sufficient exposure of ore to overcome miscalculation or delays in drilling and blasting.", "Blast once a week.", "Have one shovel."],
-    "correct": 0,
-    "explanation": "Maintain sufficient exposure of ore to overcome miscalculation or delays in drilling and blasting.",
+    "options": [
+      "Sell ore",
+      "Maintain sufficient exposure of ore to overcome miscalculation or delays",
+      "Hide ore",
+      "Stop drilling"
+    ],
+    "correct": 1,
+    "explanation": "Maintain sufficient exposure of ore to overcome miscalculation or delays.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
@@ -4819,9 +5716,14 @@ const mcqData = [
   },
   {
     "q": "What is the fourth objective in pit planning?",
-    "options": ["Defer stripping as long as possible without constraining equipment, manpower, or the production schedule.", "Strip everything immediately.", "Never strip waste.", "Strip only at night."],
-    "correct": 1,
-    "explanation": "Defer stripping as long as possible without constraining equipment, manpower, or the production schedule.",
+    "options": [
+      "Strip everything",
+      "Stop stripping",
+      "Defer stripping as long as possible without constraining equipment or schedule",
+      "Strip early"
+    ],
+    "correct": 2,
+    "explanation": "Defer stripping as long as possible without constraining equipment/schedule.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
@@ -4830,9 +5732,14 @@ const mcqData = [
   },
   {
     "q": "What is the fifth objective in pit planning?",
-    "options": ["Follow a logical and achievable start-up schedule that minimizes the risk of delays in the initial cash flow.", "Start immediately with no plan.", "Hire everyone on day one.", "Buy all equipment at once."],
-    "correct": 2,
-    "explanation": "Follow a logical and achievable start-up schedule (for training personnel, equipment procurement and deployment, etc.) that minimizes the risk of delays in the initial cash flow.",
+    "options": [
+      "Follow a logical and achievable start-up schedule",
+      "Delay start-up",
+      "Skip start-up",
+      "Rush start-up"
+    ],
+    "correct": 0,
+    "explanation": "Follow logical/achievable start-up schedule to minimize risk of delays in initial cash flow.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
@@ -4841,9 +5748,14 @@ const mcqData = [
   },
   {
     "q": "What is the sixth objective in pit planning?",
-    "options": ["Maximize pit slopes, while maintaining reasonably low likelihood of slope failure.", "Make walls vertical.", "Ignore slope stability.", "Use no berms."],
-    "correct": 0,
-    "explanation": "Maximize pit slopes, while maintaining reasonably low likelihood of slope failure (provide safe berms, employ good rock mechanics, implement good slope monitoring systems, etc.).",
+    "options": [
+      "Make slopes vertical",
+      "Maximize pit slopes, while maintaining reasonably low likelihood of slope failure",
+      "Make slopes flat",
+      "Ignore slopes"
+    ],
+    "correct": 1,
+    "explanation": "Maximize pit slopes while maintaining reasonably low likelihood of failure.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
@@ -4852,9 +5764,14 @@ const mcqData = [
   },
   {
     "q": "What is the seventh objective in pit planning?",
-    "options": ["Examine the economic merits of various production rates and cutoff grades.", "Always use the highest production rate.", "Ignore cutoff grades.", "Set production once and never change."],
-    "correct": 1,
-    "explanation": "Examine the economic merits of various production rates and cutoff grades.",
+    "options": [
+      "Examine the economic merits of various production rates and cutoff grades",
+      "Ignore economics",
+      "One grade",
+      "Fixed rate"
+    ],
+    "correct": 0,
+    "explanation": "Examine economic merits of various production rates and cutoff grades.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
@@ -4863,290 +5780,438 @@ const mcqData = [
   },
   {
     "q": "What is the eighth objective in pit planning?",
-    "options": ["Subject the favoured choice of method, equipment, and pit sequence to exhaustive contingency planning before proceeding.", "Assume nothing will go wrong.", "Copy the plan from a similar mine.", "Let the contractor decide."],
-    "correct": 3,
-    "explanation": "Subject the favoured choice of method, equipment, and pit sequence to exhaustive contingency planning before proceeding with development.",
+    "options": [
+      "Subject the favoured choice of method and pit sequence to exhaustive contingency planning",
+      "Proceed immediately",
+      "Hoping",
+      "Guessing"
+    ],
+    "correct": 0,
+    "explanation": "Subject favored choice to exhaustive contingency planning.",
     "course": "MI213",
     "term": "T1",
     "topic": "Pit Planning Objectives",
     "year": "2024",
     "tag": "Objective"
   },
+
+  // --- SECTION 18: MINE PLANNING ANALYSIS METHODS ---
+
   {
     "q": "How may the mine planning department analyze the overall economics?",
-    "options": ["By guessing.", "To accomplish these goals, the mine planning department may analyze the overall economics using several different alternatives.", "By only looking at the best case.", "By ignoring economics."],
+    "options": [
+      "One way",
+      "Asking boss",
+      "Using several different alternatives",
+      "Guessing"
+    ],
     "correct": 2,
-    "explanation": "To accomplish these goals or objectives, the mine planning department may analyze the overall economics of the deposit and its extraction using several different alternatives.",
+    "explanation": "Analyze overall economics using several different alternatives.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Mine Planning Analysis",
+    "topic": "Analysis Methods",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What are the three types of planning used in mine planning analysis?",
-    "options": ["Daily, weekly, monthly.", "These are 1) long range mine planning, 2) short-range mine planning, and 3) production scheduling.", "Exploration, development, exploitation.", "Financial, operational, environmental."],
+    "options": [
+      "Daily, Weekly, Monthly",
+      "Long-range, short-range, and production scheduling",
+      "Good, Bad, Ugly",
+      "Past, Present, Future"
+    ],
     "correct": 1,
-    "explanation": "These are 1) long range mine planning, 2) short-range mine planning, and 3) production scheduling.",
+    "explanation": "Long range mine planning, short-range mine planning, and production scheduling.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Mine Planning Analysis",
+    "topic": "Analysis Methods",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
+
+  // --- SECTION 19: PROSPECTING PROCEDURES (FROM TABLE) ---
+
   {
     "q": "What are the direct prospecting methods?",
-    "options": ["Geophysical methods.", "Direct prospecting methods include: physical and geologic methods.", "Geochemical methods.", "Satellite methods."],
-    "correct": 0,
-    "explanation": "Direct prospecting methods include: physical and geologic methods.",
+    "options": [
+      "Geophysics",
+      "Aerial",
+      "Physical and geologic methods",
+      "Geochemistry"
+    ],
+    "correct": 2,
+    "explanation": "Physical and geologic methods.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Prospecting Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What are the indirect prospecting methods?",
-    "options": ["Visual examination.", "Indirect prospecting methods include: geophysical and geochemical methods.", "Trenching.", "Drilling."],
-    "correct": 2,
-    "explanation": "Indirect prospecting methods include: geophysical and geochemical methods.",
+    "options": [
+      "Visual",
+      "Geologic",
+      "Physical",
+      "Geophysical and geochemical methods"
+    ],
+    "correct": 3,
+    "explanation": "Geophysical and geochemical methods.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Prospecting Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What are the three levels of prospecting search areas?",
-    "options": ["Surface, underground, core.", "The three levels are: Air (aerial photography, airborne geophysics, satellite), Surface (ground geophysics, geology), and identifying anomalies for analysis.", "Past, present, future.", "Local, regional, global."],
-    "correct": 3,
-    "explanation": "The three levels are: Air (aerial photography, airborne geophysics, satellite), Surface (ground geophysics, geology), and identifying anomalies for analysis and evaluation.",
+    "options": [
+      "Air, Surface, and identifying anomalies",
+      "High, Med, Low",
+      "Visual, Audio, Tactile",
+      "Space, Earth, Water"
+    ],
+    "correct": 0,
+    "explanation": "Air, Surface, and identifying anomalies.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Prospecting Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What is done to locate favorable loci during prospecting?",
-    "options": ["Drill randomly.", "Maps, literature, and old mines are used to locate favourable loci.", "Ask local farmers.", "Use a divining rod."],
-    "correct": 1,
-    "explanation": "Maps, literature, and old mines are used to locate favourable loci.",
+    "options": [
+      "Random walk",
+      "Drilling only",
+      "Maps, literature, and old mines are used",
+      "Satellite only"
+    ],
+    "correct": 2,
+    "explanation": "Maps, literature, and old mines.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Prospecting Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
+
+  // --- SECTION 20: EXPLORATION PROCEDURES (FROM TABLE) ---
+
   {
     "q": "What is the main purpose of exploration?",
-    "options": ["To start mining.", "The main purpose is defining the extent and value of ore through examination and evaluation.", "To build infrastructure.", "To hire staff."],
-    "correct": 0,
-    "explanation": "The main purpose is defining the extent and value of ore through examination and evaluation.",
+    "options": [
+      "Selling",
+      "Defining the extent and value of ore through examination and evaluation",
+      "Finding minerals",
+      "Digging"
+    ],
+    "correct": 1,
+    "explanation": "Defining the extent and value of ore through examination and evaluation.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploration Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Objective"
   },
   {
     "q": "What sampling methods are used in exploration?",
-    "options": ["Only surface sampling.", "Drilling or excavation are used to obtain samples.", "Only buying samples.", "Only using satellites."],
-    "correct": 2,
-    "explanation": "Drilling or excavation are used to obtain samples.",
+    "options": [
+      "Looking",
+      "Drilling or excavation",
+      "Buying",
+      "Guessing"
+    ],
+    "correct": 1,
+    "explanation": "Drilling or excavation.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploration Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Method"
   },
   {
     "q": "What is done with samples after they are obtained?",
-    "options": ["They are stored.", "Samples are assayed and tested.", "They are displayed.", "They are discarded."],
-    "correct": 1,
-    "explanation": "Samples are assayed and tested.",
+    "options": [
+      "Assayed and tested",
+      "Discarded",
+      "Sold",
+      "Stored"
+    ],
+    "correct": 0,
+    "explanation": "Assayed and tested.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploration Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Method"
   },
   {
     "q": "What is estimated during exploration?",
-    "options": ["The number of trucks needed.", "Tonnage and grade are estimated.", "The closure cost.", "The manager's salary."],
-    "correct": 0,
-    "explanation": "Tonnage and grade are estimated.",
+    "options": [
+      "Width",
+      "Tonnage and grade",
+      "Depth",
+      "Length"
+    ],
+    "correct": 1,
+    "explanation": "Tonnage and grade.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploration Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Objective"
   },
   {
     "q": "How is the deposit valued during exploration?",
-    "options": ["By its weight.", "The deposit is valued using the Discounted Cashflow method, where Net Present Value = future income – future cost >= 0 at today's money terms.", "By its area.", "By its depth."],
+    "options": [
+      "Cost",
+      "Using the Discounted Cashflow method (NPV)",
+      "Guess",
+      "Price"
+    ],
     "correct": 1,
-    "explanation": "The deposit is valued using the Discounted Cashflow method, where Net Present Value = future income – future cost >= 0 at today's money terms.",
+    "explanation": "Discounted Cashflow method (NPV).",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploration Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Method"
   },
   {
     "q": "What study is conducted to make a decision during exploration?",
-    "options": ["A marketing study.", "A feasibility study is conducted to make a decision to abandon or develop.", "A psychological study.", "A historical study."],
+    "options": [
+      "Case study",
+      "Pilot study",
+      "No study",
+      "Feasibility study"
+    ],
     "correct": 3,
-    "explanation": "A feasibility study is conducted to make a decision to abandon or develop.",
+    "explanation": "Feasibility study.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploration Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
+
+  // --- SECTION 21: DEVELOPMENT PROCEDURES (FROM TABLE) ---
+
   {
     "q": "What is the main purpose of development?",
-    "options": ["To find more ore.", "The main purpose of development is opening the ore deposit for production.", "To process ore.", "To sell the mine."],
+    "options": [
+      "Closing",
+      "Finding ore",
+      "Opening the ore deposit for production",
+      "Processing"
+    ],
     "correct": 2,
-    "explanation": "The main purpose of development is opening the ore deposit for production.",
+    "explanation": "Opening the ore deposit for production.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Development Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Objective"
   },
   {
     "q": "What rights must be acquired during development (if not done earlier)?",
-    "options": ["Water rights only.", "Mining rights must be acquired during development (if not done above).", "Fishing rights.", "Air rights."],
-    "correct": 0,
-    "explanation": "Mining rights must be acquired during development (if not done earlier).",
+    "options": [
+      "None",
+      "Flying rights",
+      "Fishing rights",
+      "Mining rights"
+    ],
+    "correct": 3,
+    "explanation": "Mining rights.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Development Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What environmental documentation must be filed during development?",
-    "options": ["A birthday card.", "Environmental impact statement and technology assessment must be filed, and permits must be acquired.", "A equipment manual.", "A company newsletter."],
+    "options": [
+      "Tax returns",
+      "Environmental impact statement and technology assessment",
+      "Resumes",
+      "Invoices"
+    ],
     "correct": 1,
-    "explanation": "Environmental impact statement and technology assessment must be filed, and permits must be acquired.",
+    "explanation": "EIS, technology assessment, permits.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Development Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What must be constructed during development?",
-    "options": ["Only the mine.", "Access roads, transport system, surface facilities must be constructed, and the mine must be excavated (surface mine or underground mine – sink shaft).", "Only houses.", "Only a fence."],
-    "correct": 3,
-    "explanation": "Access roads, transport system, surface facilities must be constructed, and the mine must be excavated (surface mine or underground mine – sink shaft).",
+    "options": [
+      "Access roads, transport system, surface facilities, excavation",
+      "Shops",
+      "Houses",
+      "Nothing"
+    ],
+    "correct": 0,
+    "explanation": "Access roads, transport system, surface facilities, excavation.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Development Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
+
+  // --- SECTION 22: EXPLOITATION PROCEDURES (FROM TABLE) ---
+
   {
     "q": "What is the main activity during exploitation?",
-    "options": ["Exploration.", "Large-scale production of ore is the main activity.", "Permitting.", "Reclamation."],
-    "correct": 1,
-    "explanation": "Large-scale production of ore is the main activity.",
+    "options": [
+      "Large-scale production of ore",
+      "Planning",
+      "Closing",
+      "Exploring"
+    ],
+    "correct": 0,
+    "explanation": "Large-scale production of ore.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploitation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Basic"
   },
   {
     "q": "What factors are considered in the choice of mining method?",
-    "options": ["Only cost.", "Factors include: geologic, geographic, economic, environmental, societal, and safety considerations.", "Only the equipment brand.", "Only the manager's preference."],
-    "correct": 2,
-    "explanation": "Factors include: geologic, geographic, economic, environmental, societal, and safety considerations.",
+    "options": [
+      "Geologic, geographic, economic, environmental, societal, safety",
+      "None",
+      "Time only",
+      "Cost only"
+    ],
+    "correct": 0,
+    "explanation": "Geologic, geographic, economic, environmental, societal, safety.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploitation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What are the types of surface mining methods?",
-    "options": ["Only open pit.", "Surface mining methods include: open pit, open cast, etc.", "Only room and pillar.", "Only block caving."],
-    "correct": 0,
-    "explanation": "Surface mining methods include: open pit, open cast, etc.",
+    "options": [
+      "Longwall",
+      "Room and pillar",
+      "Open pit, open cast",
+      "Caving"
+    ],
+    "correct": 2,
+    "explanation": "Open pit, open cast, etc.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploitation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What are the types of underground mining methods?",
-    "options": ["Only open pit.", "Underground mining methods include: room and pillar, block caving, etc.", "Only placer mining.", "Only solution mining."],
-    "correct": 3,
-    "explanation": "Underground mining methods include: room and pillar, block caving, etc.",
+    "options": [
+      "Strip mining",
+      "Open pit",
+      "Room and pillar, block caving",
+      "Dredging"
+    ],
+    "correct": 2,
+    "explanation": "Room and pillar, block caving, etc.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploitation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Definition"
+    "tag": "Classification"
   },
   {
     "q": "What is monitored during exploitation until closure?",
-    "options": ["Only safety.", "Costs and economic payback period (usually 3-10 years) are monitored, i.e., managed, until closure.", "Only production tonnage.", "Only employee attendance."],
-    "correct": 1,
-    "explanation": "Costs and economic payback period (usually 3-10 years) are monitored, i.e., managed, until closure.",
+    "options": [
+      "Nothing",
+      "Weather",
+      "Costs and economic payback period",
+      "News"
+    ],
+    "correct": 2,
+    "explanation": "Costs and economic payback period.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Exploitation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
+
+  // --- SECTION 23: RECLAMATION PROCEDURES (FROM TABLE) ---
+
   {
     "q": "When does restoration of the site occur?",
-    "options": ["Never.", "Restoration of site occurs during exploitation, at closure, or post closure.", "Only before mining starts.", "Only 100 years later."],
-    "correct": 2,
-    "explanation": "Restoration of site occurs during exploitation, at closure, or post closure.",
+    "options": [
+      "Before mining",
+      "After 100 years",
+      "Never",
+      "During exploitation, at closure, or post closure"
+    ],
+    "correct": 3,
+    "explanation": "During exploitation, at closure, or post closure.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Reclamation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Timeframe"
   },
   {
     "q": "What must be removed during reclamation?",
-    "options": ["The ore body.", "Plant and buildings must be removed.", "The waste rock.", "The groundwater."],
-    "correct": 0,
-    "explanation": "Plant and buildings must be removed.",
+    "options": [
+      "Soil",
+      "Plant and buildings",
+      "Ore",
+      "Trees"
+    ],
+    "correct": 1,
+    "explanation": "Plant and buildings.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Reclamation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What must be reclaimed during the reclamation stage?",
-    "options": ["Only the office.", "Waste and tailings dumps must be reclaimed.", "Only the haul roads.", "Only the shaft."],
+    "options": [
+      "Ore",
+      "Waste and tailings dumps",
+      "Tools",
+      "Money"
+    ],
     "correct": 1,
-    "explanation": "Waste and tailings dumps must be reclaimed.",
+    "explanation": "Waste and tailings dumps.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Reclamation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
   {
     "q": "What must be monitored during reclamation?",
-    "options": ["Equipment performance.", "Discharges must be monitored during reclamation.", "Employee morale.", "Stock prices."],
+    "options": [
+      "Production",
+      "Traffic",
+      "Sales",
+      "Discharges"
+    ],
     "correct": 3,
-    "explanation": "Discharges must be monitored during reclamation.",
+    "explanation": "Discharges.",
     "course": "MI213",
     "term": "T1",
-    "topic": "Reclamation Procedures",
+    "topic": "Procedures",
     "year": "2024",
-    "tag": "Applied"
+    "tag": "Basic"
   },
-  
+
   
 ];
