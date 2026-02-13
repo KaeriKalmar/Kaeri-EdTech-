@@ -3067,6 +3067,723 @@ const flashcards = {
       "topic": "hammer mills (impact crushers)"
     }
   ],
+  
+  
+
+  "MODULE 4: GRINDING - Section 1 - Introduction & Fundamentals (Q1-Q10)": [
+    {
+      "front": "What is grinding and where does it fit in the comminution process?",
+      "back": "Grinding is the last stage in the process of comminution. Particles between 5 and 250 mm are reduced in size to between 10 and 300 μm by impact, chipping, and abrasion. It produces fine material needed for subsequent mineral processing operations.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction"
+    },
+    {
+      "front": "What are tumbling mills and what are their main components?",
+      "back": "Tumbling mills are rotating cylindrical steel vessels used for grinding. They contain a charge of loose crushing bodies called the grinding medium (steel rods, balls, hard rock, or ore itself) which is free to move inside the mill, thus comminuting the ore particles.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction"
+    },
+    {
+      "front": "Define 'mill charge' and describe its composition.",
+      "back": "When the mill is rotated, the mixture of the medium, ore, and water is known as the Mill Charge. This charge contains three main components: the grinding medium (rods, balls, or ore), the ore particles being ground, and water (in wet grinding operations).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction"
+    },
+    {
+      "front": "Why is grinding considered the most energy-intensive operation in mineral processing?",
+      "back": "Most of the kinetic energy of the tumbling load is dissipated as heat, noise, and other losses. Only a small fraction of the input energy is actually expended in breaking the particles. This low energy efficiency means large amounts of power must be supplied to achieve the desired size reduction.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction"
+    },
+    {
+      "front": "Why is correct grinding said to be the key to good mineral processing?",
+      "back": "Correct grinding exercises close control on the product size, which directly affects downstream process efficiency (flotation, gravity separation, leaching). Improper grinding results in insufficient liberation (particles too coarse) or excessive energy consumption and slime production (particles too fine).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "introduction"
+    },
+    {
+      "front": "Describe the three main mechanisms of breakage in grinding.",
+      "back": "1. IMPACT (normal forces): Direct collision causing compression/fracture.\n2. CHIPPING (oblique forces): Glancing blows that chip off edges and corners.\n3. ABRASION (forces parallel): Grinding media rubs against particles, wearing them down through surface contact.\nAll three mechanisms distort particles beyond their elastic limits, causing breakage depending on mill speed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mechanics"
+    },
+    {
+      "front": "How does grinding differ from crushing in terms of process characteristics?",
+      "back": "Unlike crushing (more predictable and controlled), grinding is a random process subject to the laws of probability. Grinding is influenced by the size, quantity, type of motion, and spaces between the grinding medium. Particles of any size have some probability of being struck and broken.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mechanics"
+    },
+    {
+      "front": "What factors influence grinding within a tumbling mill?",
+      "back": "1. Size of the grinding medium\n2. Quantity of grinding medium\n3. Type of motion (cascading vs. cataracting)\n4. Spaces between the medium\n5. Speed of the mill\n6. Nature of the ore feed\n7. Type of circuit used (open vs. closed)",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mechanics"
+    },
+    {
+      "front": "Explain the difference between wet and dry grinding. Which is more common?",
+      "back": "Wet grinding adds water to form a slurry; dry grinding processes material without water. Wet grinding is generally used due to overall economies of operation. Dry grinding is used when materials undergo physical/chemical changes with water, or when subsequent processes require dry feed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mechanics"
+    },
+    {
+      "front": "Why is grinding considered a continuous process in mineral processing?",
+      "back": "Material is fed at a controlled rate from storage bins into one end of the mill and overflows at the other end after suitable dwell time. This continuous flow ensures steady production, consistent product quality, and is efficient for large-scale operations compared to batch processing.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mechanics"
+    }
+  ],
+
+  "MODULE 4: GRINDING - Section 2 - Mill Types & Design (Q11-Q33)": [
+    {
+      "front": "List and describe the four basic types of tumbling mills.",
+      "back": "1. ROD MILLS: Steel rods as medium; length 1.5-2.5x diameter\n2. BALL MILLS: Steel balls as medium; most common for fine grinding\n3. SAG MILLS: Ore + steel balls (10-35% mill volume) as medium\n4. AG MILLS: Only the ore itself as grinding media",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mill types"
+    },
+    {
+      "front": "What structural features are common to all tumbling mills?",
+      "back": "Horizontal cylindrical shell, renewable wearing liners, charge of grinding medium, hollow trunnions attached to end walls for rotation/feed/discharge, and support structure. Feed enters through one trunnion, product exits via other trunnion or peripheral ports.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mill types"
+    },
+    {
+      "front": "How do mill diameter and length affect operation?",
+      "back": "DIAMETER: Determines pressure/impact energy from drop height. Larger diameter = greater drop height and impact energy.\nLENGTH: Together with diameter determines volume and capacity. Longer mill provides more residence time for grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "mill types"
+    },
+    {
+      "front": "Define autogenous milling and when it is used.",
+      "back": "Autogenous milling uses the ore itself as grinding media. Used when crushed ore pieces are hard enough to perform all grinding without steel balls or rods. Larger, harder ore particles grind smaller, softer particles.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "What is the difference between AG and SAG mills?",
+      "back": "AG (Autogenous) mills: Only ore as grinding media.\nSAG (Semi-Autogenous) mills: Ore plus steel balls (10-35% of mill volume including voids) as grinding media.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "List and explain the main advantages of AG/SAG mills.",
+      "back": "1. Lower capital cost - replaces multiple stages\n2. Treat wide range of ore types including sticky/clayey feeds\n3. Relatively simple flowsheets - fewer process steps\n4. Large equipment size - higher throughput capacity\n5. Lower manpower requirements\n6. Reduced grinding media expense - uses ore as media",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "What are aspect ratios and what are the three main groups?",
+      "back": "Aspect ratio = diameter : length\n1. HIGH ASPECT: D 1.5-3x L (AG/SAG mills)\n2. SQUARE: D ≈ L\n3. LOW ASPECT: L 1.5-3x D (rod mills)",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "What is the main mechanism of comminution in AG/SAG mills?",
+      "back": "Abrasion and impact. Larger ore particles impact and abrade smaller particles as they tumble inside the mill.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "Describe the internal components of a SAG mill and their functions.",
+      "back": "1. WEARING PLATES: Line the mill, protect shell from wear\n2. LIFTER BARS: Bolted to shell, reduce slippage, prevent rapid liner wear, improve grinding action\n3. GRATE: Holds back grinding media, allows fines/slurry to flow through holes (10-40 mm, square/round/slotted)\nTotal grate open area: 2-12% of mill cross-sectional area",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "What is the significance of lifter bar geometry in SAG mills?",
+      "back": "The height and face angle of lifter bars have significant influence on milling performance. They affect how the mill charge is lifted and the trajectory of falling media, directly impacting grinding efficiency and liner wear.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "What size range can AG/SAG mills typically handle?",
+      "back": "Feed ore as large as 200 mm (primary crusher product or run-of-mine ore) reducing to product of 0.1 mm in one piece of equipment. This wide size reduction ratio is a key advantage.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "Explain the pebble mill process in SAG milling.",
+      "back": "The coarsest feed fraction is separated by screening and recirculated or sent to pebble mills. Pebble mills use hard ore chunks as grinding media for completion of fine grinding, allowing better size control and efficiency.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ag/sag"
+    },
+    {
+      "front": "What is the feed and product size range of rod mills?",
+      "back": "Feed up to 50 mm, product down to 300 μm. Suitable for either fine crushing or coarse grinding applications.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "What is the distinctive structural feature of a rod mill?",
+      "back": "The length of the cylindrical shell is between 1.5 and 2.5 times its diameter. This ratio prevents rods (only a few cm shorter than shell length) from turning and becoming wedged across the cylinder diameter.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "Describe the three types of rod mills based on discharge mechanism.",
+      "back": "1. CENTRE PERIPHERAL DISCHARGE: Fed both ends, discharge through circumferential ports at shell center. Wet/dry, high tonnage, coarse product, minimum fines.\n2. END PERIPHERAL DISCHARGE: Fed one end, discharge via peripheral apertures at other end. Mainly dry/damp grinding.\n3. TRUNNION OVERFLOW: Fed one trunnion, discharges through other. Wet grinding only, converts crusher product to ball mill feed. Most widely used.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "Why are high carbon steel rods preferred for rod mills?",
+      "back": "High carbon steel (0.90% C) rods are hard and break rather than warp when worn. Brittleness is important - warped rods could wedge across the mill diameter, disrupting operation. Rods should fail cleanly when worn down.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "What is the optimum rod volume in a rod mill?",
+      "back": "Optimum grinding rates are obtained when rod volume is 35% of shell volume with new rods. This provides best balance between grinding media contact with ore and free movement of the charge.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "What is the typical operating speed range for rod mills and why?",
+      "back": "50-65% of critical speed, ensuring rods cascade rather than cataract. Cascading motion provides better grinding action for rods, maintains line contact between rods and ore particles, avoids excessive impact that could damage rods.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "Explain the grinding action of rods and why it produces selective grinding.",
+      "back": "Line contact of rods on ore particles. Rods tumble in parallel alignment and spin, acting like series of crushing rolls. Coarse feed spreads rods at feed end, producing wedge/cone-shaped array. This increases preferential grinding of larger particles, producing minimum extremely fine material and narrow size range with little oversize or slimes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "Why are rod mills nearly always run in open circuit?",
+      "back": "The selective grinding action produces a product of relatively narrow size range with little oversize or slimes, eliminating the need for classification and recirculation of oversize material.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "What applications are rod mills particularly suitable for?",
+      "back": "Preparation of feed to:\n- Gravity concentrators\n- Flotation processes with slime problems\n- Magnetic cobbing\n- Ball mills\nBecause they produce controlled size distribution with minimal slimes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "What determines the size of rods used in a rod mill?",
+      "back": "Coarse feed or product normally requires larger rods. Rods must be sized to effectively grind the largest particles in the feed while avoiding excessive energy consumption.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    },
+    {
+      "front": "What is the typical rod consumption rate?",
+      "back": "0.1-1.0 kg of steel per tonne of ore for wet grinding, less for dry grinding. Varies with mill feed characteristics, mill speed, rod length, and product size.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "rod mills"
+    }
+  ],
+
+  "MODULE 4: GRINDING - Section 3 - Ball Mills, Circuits & Operation (Q34-Q65)": [
+    {
+      "front": "How are ball mills classified by discharge type?",
+      "back": "1. TRUNNION OVERFLOW: Product overflows through discharge trunnion. Simplest, used for most applications, especially fine grinding and regrinding.\n2. GRATE DISCHARGE: Fitted with discharge grates between mill body and discharge trunnion. Lower pulp level, reduced dwell time, little overgrinding, produces coarse material for recirculation.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "Compare pulp level and residence time: Overflow vs Grate Discharge ball mills.",
+      "back": "Grate discharge mills have lower pulp level than overflow mills, thus reducing the dwell time of particles in the mill. This lower residence time means less overgrinding and a coarser product requiring classification and recirculation.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "What are the advantages of closed-circuit grinding with ball mills?",
+      "back": "1. Closely sized end product (narrow particle size distribution)\n2. High output per unit volume compared to open circuit\n3. Less overgrinding\n4. Better control of product size\n5. High circulating loads improve efficiency",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "Why is the trunnion overflow mill most commonly used?",
+      "back": "Simplest to operate, used for most ball-mill applications (especially fine grinding and regrinding). Energy consumption is about 15% less than grate discharge mill of same size, though grinding efficiencies are the same.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "Explain how grinding occurs in a ball mill differently than in a rod mill.",
+      "back": "Ball mill: Point contact of balls and ore particles, random process - probability of fine particle being struck equals that of coarse particle. Given time, any degree of fineness achievable, less selective grinding.\nRod mill: Line contact, selective grinding, preferential grinding of larger particles.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "What is the optimal pulp density range for ball mills and why?",
+      "back": "65-80% solids by weight, depending on ore. Pulp density should be as high as possible consistent with ease of flow. Essential that balls are coated with ore layer; too dilute increases metal-to-metal contact, increased steel consumption, reduced efficiency.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "How does particle fineness affect the required pulp density?",
+      "back": "Pulp viscosity increases with particle fineness. Therefore, fine-grinding circuits may need lower pulp densities to maintain adequate fluidity for material flow through the mill.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "What is meant by 'point contact' in ball mill grinding?",
+      "back": "Balls contact ore particles at discrete points rather than along lines (as rods do). Point contact means grinding is less selective - any particle, regardless of size, has essentially the same probability of being struck and broken.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "ball mills"
+    },
+    {
+      "front": "When is dry grinding necessary?",
+      "back": "Dry grinding is necessary with some materials due to physical or chemical changes which occur if water is added. Also used when subsequent processes require dry feed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "circuits"
+    },
+    {
+      "front": "What are the advantages of dry grinding?",
+      "back": "1. Less wear on liners and grinding media\n2. Higher proportion of fines in product (desirable in some cases)\n3. Eliminates issues with materials that react with water\n4. Product is dry for subsequent processes",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "circuits"
+    },
+    {
+      "front": "List and explain the five main advantages of wet grinding.",
+      "back": "1. LOWER POWER CONSUMPTION per tonne of product\n2. HIGHER CAPACITY per unit mill volume\n3. MAKES POSSIBLE wet screening/classification for close product control\n4. ELIMINATION OF DUST PROBLEMS - safer, cleaner\n5. ENABLES handling/transport methods (pumps, pipes, launders) - easier material handling",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "circuits"
+    },
+    {
+      "front": "Why is wet grinding generally preferred in mineral processing?",
+      "back": "Overall economies of operation. Advantages (lower power consumption, higher capacity, better product control, dust elimination, easier handling) outweigh costs of water addition and handling slurries in most applications.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "circuits"
+    },
+    {
+      "front": "Describe the motion of the grinding charge in a tumbling mill.",
+      "back": "Due to rotation and friction of mill shell, grinding medium is lifted along rising side until dynamic equilibrium reached. Bodies cascade and cataract down free surface of other bodies, around a dead zone (little movement), down to the toe of the charge.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "Define and describe 'cascading action' in a tumbling mill.",
+      "back": "At relatively low speeds, grinding media slides over and rolls down to the toe of the mill. Cascading action produces essentially abrasive comminution, leading to finer grinding with increased slime production and liner wear.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "What happens at very high mill speeds (near critical speed)?",
+      "back": "Work input increases then slippage increases. At critical speed, solids are centrifuged on the shell and no work is done - the charge rotates with the mill without falling. No grinding occurs.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "Define and describe 'cataracting action' in a tumbling mill.",
+      "back": "At intermediate speeds, grinding media are carried up then fall onto material at bottom of mill. Cataracting converts potential energy into kinetic energy of impact at the toe, producing impact comminution with coarser product and reduced liner wear.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "What is the practical operating speed range for tumbling mills?",
+      "back": "50-90% of critical speed, choice influenced by economic considerations. Speed increases capacity, but little increase in efficiency above 40-50% of critical speed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "Where does most grinding occur in the mill?",
+      "back": "At the toe of the charge, where there is direct impact of cataracting medium onto the charge. This is the zone of maximum energy transfer and particle breakage.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "Why is it essential that cataracting medium falls inside the mill charge?",
+      "back": "Cataracting medium should fall well inside the mill charge, not directly onto the liner. Media striking liner directly excessively increases steel consumption (liner wear) without contributing effectively to grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "motion"
+    },
+    {
+      "front": "Define critical speed of a grinding mill.",
+      "back": "Critical speed is the speed in rpm at which the outer layer of rods or balls will theoretically centrifuge. At this speed, grinding media is held against mill shell by centrifugal force and no grinding occurs because media does not fall back into the charge.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "speed"
+    },
+    {
+      "front": "Why is mill speed usually stated as a percentage of critical speed?",
+      "back": "% critical indicates the degree of cascading or cataracting of grinding media regardless of mill size. This percentage gives a universal reference point - charge behavior is similar at the same % critical speed across different mill sizes.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "speed"
+    },
+    {
+      "front": "How does the percentage of critical speed affect grinding media behavior?",
+      "back": "Higher % critical: Media rises higher on rising side before dropping to toe → more cataracting (impact grinding).\nLower % critical: Less lift → more cascading (abrasive grinding).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "speed"
+    },
+    {
+      "front": "What are the specifications for steel rods used as grinding media?",
+      "back": "Diameter: 64-113 mm\nLength: Just shorter than mill shell\nComposition: 0.90% carbon steel\nProperty: Sufficiently brittle (break rather than warp when worn)",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "How often should rods be added to a rod mill and how is correct level maintained?",
+      "back": "Mill should be stopped and rods added 2-3 times per week to maintain constant level, indicated by constant power draw on ammeter. Power draw is good indicator of grinding media level.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "What is the typical rod consumption rate and what factors affect it?",
+      "back": "0.1-1.0 kg steel/tonne ore for wet grinding, less for dry grinding. Varies with:\n- Mill feed characteristics (hardness, abrasiveness)\n- Mill speed\n- Rod length\n- Product size required",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "What are the specifications for steel balls used as grinding media?",
+      "back": "Diameter: 20-125 mm (depending on feed size)\nComposition: Cast iron or steel\nSelection basis: Lowest cost per tonne of material ground\nNew balls: Usually largest size required",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "How are balls added to the mill and how often?",
+      "back": "Balls added daily through feed opening of the mill. No mill stoppage required, making ball addition more convenient than rod addition.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "What is the principle for selecting ball size?",
+      "back": "Balls should be as small as possible, and charge should be graded such that balls are just heavy enough to grind the largest and hardest particles in the feed. Ensures efficient grinding without wasting energy on unnecessarily large media.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "What is an equilibrium ball charge?",
+      "back": "A seasoned charge consisting of a wide range of ball sizes due to wear. New balls (largest size) are continuously added and wear down, creating a natural size distribution that effectively grinds particles of all sizes in the feed.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "What is the typical ball consumption rate and what factors affect it?",
+      "back": "0.1-1.0 kg per tonne of ore, depending on:\n- Hardness of ore\n- Fineness of grind\n- Medium quality\nHarder ore and finer product = higher consumption.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    },
+    {
+      "front": "How are undersize balls removed from the mill?",
+      "back": "Undersize balls leave the mill with the ore product and are removed by passing the discharge over screens. Prevents excessive accumulation of very small, ineffective grinding media.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "media"
+    }
+  ],
+
+  "MODULE 4: GRINDING - Section 4 - Liners & Operational Factors (Q66-Q85)": [
+    {
+      "front": "What are the two major functions of mill liners?",
+      "back": "1. PROTECT the cylindrical shell of the mill against abrasion, preventing wear of the mill shell.\n2. HELP in tumbling and rotating the mill load (assist in lifting the charge).",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "liners"
+    },
+    {
+      "front": "How are liners attached to the mill and why is this important?",
+      "back": "Liners are fixed or bolted to the mill shell and revolve with peripheral speed without slipping. This ensures liners effectively transfer rotational motion to the mill charge and provide consistent lifting action.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "liners"
+    },
+    {
+      "front": "Describe the three types of mill liners.",
+      "back": "1. SMOOTH LINERS: Simple frictional contact with charge, quiet churning motion.\n2. GRATE LINERS: Pockets/grids where ore and media wedge in openings forming wearing surface.\n3. LIFTING LINERS: Longitudinal waves, ribs, lifters, wedge bars that grip crop load on rising side. Apply positive lifting force, higher climb, violent falling, add shattering action.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "liners"
+    },
+    {
+      "front": "Compare the effect of smooth versus lifting liners on mill operation.",
+      "back": "SMOOTH: Crop load loses contact soon after rising, causing quiet churning (cascading action).\nLIFTING: Positive lifting force, higher climb, load falls with considerable violence, adding shattering action to abrasion characteristic of churning motion.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "liners"
+    },
+    {
+      "front": "What materials are typically used for mill liners?",
+      "back": "Alloy steel and alloy cast irons. These materials provide necessary hardness and wear resistance while being cost-effective.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "liners"
+    },
+    {
+      "front": "Where is liner wear most severe in a tumbling mill?",
+      "back": "Central part of liners, much more than at ends. The central region experiences the most impact from falling grinding media and charge.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "liners"
+    },
+    {
+      "front": "How does mill speed affect grinding mill operation?",
+      "back": "Mill speed affects both efficiency of grinding media action and capacity. Increasing speed transitions motion from cascading (abrasive, fine grinding) to cataracting (impact, coarser grinding). Must optimize to balance capacity and efficiency without reaching critical speed where centrifuging occurs.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "How does the load of grinding media and material affect power requirement?",
+      "back": "Power increases with load until maximum value reached, then decreases as center of gravity of load approaches axis of rotation. There is an optimal loading that maximizes power draw and grinding efficiency.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "Explain the effect of pulp level on mill operation.",
+      "back": "Higher pulp level = more power required.\nLower pulp level = greater freedom of movement of grinding media, more effective grinding.\nPulp level must be high enough to coat media and prevent metal-to-metal contact.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "What is the ideal solid-liquid ratio (pulp density) and why?",
+      "back": "Ore particles should form coating on liners and grinding media, while pulp is sufficiently fluid to flow steadily through mill.\nTOO THIN: Solids settle, centrifuge outward, coatings patchy/non-existent.\nTOO LITTLE WATER: Charge sluggish and pasty, kinetic energy wasted overcoming viscosity, ore sandwiched and cushioned.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "Why is size distribution of grinding media important?",
+      "back": "Media size distribution should be near close packing grading. Media should be size proportionate to feed size, otherwise nipping of particles will not occur. Media must be large enough to break largest feed particles but not so large that energy is wasted.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "What is circulating load and what is its practical limit?",
+      "back": "Circulating load is return load in closed circuit grinding. Building circulating load prevents overgrinding from reducing all feed to finishing size in one operation. Practical limit: 5:1 to 6:1 ratio of circulating load to new feed in primary grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "What problems does excessive fine material cause in grinding?",
+      "back": "Excessive fine material (primary slime, clay, fines, gangue) in mill charge causes:\n- Surfaces of grinding media become coated with film of fine material\n- Film acts as lubricant\n- Results in slip and reduction in impact grinding\n- Reduces grinding efficiency",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "Why is proper coating of grinding media with ore important?",
+      "back": "1. Prevents metal-to-metal contact between grinding media\n2. Metal-to-metal contact increases steel consumption (wear)\n3. Reduces grinding efficiency\n4. Coating should be ore particles, not fine slimes\n5. Adequate coating ensures energy is used for grinding, not wearing down media",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "factors"
+    },
+    {
+      "front": "Compare and contrast rod mills and ball mills in terms of grinding action and product.",
+      "back": "ROD MILLS:\n- Line contact\n- Selective grinding (preferentially larger particles)\n- Narrow size distribution, minimal slimes\n- Product down to 300 μm\n- 50-65% critical speed (cascading)\n- Usually open circuit\n- Good for gravity/flotation feed prep\n\nBALL MILLS:\n- Point contact\n- Random grinding (any size equally likely)\n- Any fineness achievable given time\n- Product 10-300 μm (finer)\n- 65-80% critical speed\n- Usually closed circuit\n- Best for fine grinding/regrinding",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison"
+    },
+    {
+      "front": "Compare AG/SAG mills with conventional ball mills.",
+      "back": "AG/SAG MILLS:\n- Ore as grinding media (± balls)\n- Lower capital cost\n- Feed up to 200 mm\n- Simple flowsheets\n- Handles sticky/clayey feeds\n- Lower media expense\n- Large single units\n- Abrasion/impact mechanisms\n\nBALL MILLS:\n- Steel balls only\n- Higher media costs\n- Smaller feed size\n- May need multiple stages\n- Better controlled fine grinding\n- More predictable\n- Point contact\n- Usually need primary crushing ahead",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison"
+    },
+    {
+      "front": "Why would you choose a rod mill over a ball mill for a specific application?",
+      "back": "Choose rod mill when:\n- Feed prep for gravity concentration (slimes problematic)\n- Narrow size distribution product desired\n- Feed relatively coarse (up to 50 mm)\n- Product doesn't need extreme fineness (300 μm acceptable)\n- Flotation feed prep where slimes interfere\n- Open circuit operation preferred\n- Selective grinding of larger particles beneficial",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison"
+    },
+    {
+      "front": "Explain why closed circuit grinding is more efficient than open circuit.",
+      "back": "1. Prevents overgrinding of fine material\n2. Returns only oversize for additional grinding\n3. Produces closely sized end product\n4. Higher output per unit volume\n5. High circulating loads improve efficiency\n6. Classifier removes finished product immediately\n7. Reduces energy wasted on grinding already-fine particles\n8. Better control over final product size",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison"
+    },
+    {
+      "front": "What are the trade-offs between wet and dry grinding?",
+      "back": "WET ADVANTAGES:\n- Lower power consumption\n- Higher capacity\n- Better product control (classification)\n- No dust problems\n- Easier material handling\n- Generally more economical\n\nDRY ADVANTAGES:\n- No water addition needed\n- Less liner and media wear\n- Higher proportion of fines\n- Required for water-sensitive materials\n- Product dry for subsequent processes\n\nTRADE-OFF: Wet grinding preferred unless materials react with water or subsequent processes require dry feed, despite higher wear rates.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "comparison"
+    },
+    {
+      "front": "How would you optimize a ball mill for maximum grinding efficiency?",
+      "back": "1. Maintain optimal pulp density (65-80% solids)\n2. Ensure grinding media properly sized for feed\n3. Maintain equilibrium ball charge through regular addition\n4. Operate at optimal speed (70-75% critical)\n5. Use closed circuit with proper circulating load (250-350%)\n6. Maintain proper pulp level (not too high/low)\n7. Ensure balls coated with ore, not slimes\n8. Regular liner maintenance\n9. Control feed rate for consistent residence time\n10. Monitor power draw to maintain optimal loading",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "optimization"
+    },
+    {
+      "front": "Describe a complete grinding circuit from primary crushing to final product.",
+      "back": "1. PRIMARY CRUSHING: ROM ore <200 mm\n2. SAG MILL: Reduces to <10 mm, removes coarse fraction\n3. SCREEN: Separates oversize for return to SAG\n4. BALL MILL (Closed Circuit): Grinds to final size (e.g., 75 μm)\n5. CLASSIFIER (Cyclone/Spiral): Separates fines from oversize\n6. Underflow returns to ball mill (circulating load)\n7. Overflow = final product to flotation/leaching\nCirculating load typically 250-350% of new feed",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "circuit"
+    }
+  ],
+
+  "MODULE 4: GRINDING - Section 5 - Problem Solving & Advanced Concepts (Q86-Q100)": [
+    {
+      "front": "A mill operates at 72% of critical speed. Explain what this means for the grinding media motion.",
+      "back": "At 72% critical speed, mill operates in cataracting region. Grinding media lifted considerably high on rising side before falling through air onto toe of charge. Provides:\n- Significant impact grinding\n- Good energy transfer to ore\n- Balance between capacity and efficiency\n- Less liner wear than higher speeds\n- More impact breakage than cascading\nWithin optimal range (50-90% critical), near typical optimum 70-75% for ball mills.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "problem solving"
+    },
+    {
+      "front": "If a rod mill charge spreads at the feed end forming a cone, explain what is happening and why this is beneficial.",
+      "back": "Coarse feed spreads rods at feed end, producing wedge/cone-shaped array. Beneficial because:\n- Larger particles enter first, encounter more widely spaced rods\n- Increases tendency for preferential grinding of larger particles\n- Smaller particles pass through more easily\n- Results in selective grinding\n- Produces minimum extremely fine material\n- Creates narrow size distribution product\nSelf-adjusting mechanism makes rod mills excellent for controlled grinding.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "problem solving"
+    },
+    {
+      "front": "A ball mill shows decreasing power draw over several days. What could be the problem and solution?",
+      "back": "PROBLEM: Decreasing power draw indicates:\n- Loss of grinding media (balls wearing out, not replaced)\n- Lower mill loading\n- Reduced charge volume\n- Potentially lower throughput\n\nSOLUTION:\n- Add new balls to restore proper charge level\n- Monitor power draw with ammeter\n- Return to normal power draw indicates proper loading restored\n- Implement regular ball addition schedule\n- Check for undersize balls leaving with product\n- Ensure screen removing worn balls effectively",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "problem solving"
+    },
+    {
+      "front": "Explain why a pulp that is too dilute reduces grinding efficiency.",
+      "back": "When pulp too dilute:\n1. Solids settle and centrifuge outward (separated from water)\n2. Coating on grinding media becomes patchy/non-existent\n3. Increased metal-to-metal contact between grinding media\n4. Causes:\n   - Increased steel consumption (media and liner wear)\n   - Reduced grinding efficiency (energy to wear steel, not break ore)\n   - More noise\n   - Less energy transfer to ore particles\n5. Water takes space that could be occupied by ore\n6. Lower throughput per unit mill volume\n\nOPTIMAL: 65-80% solids ensures balls coated with ore while maintaining fluidity.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "problem solving"
+    },
+    {
+      "front": "A grinding circuit is producing too many slimes (ultrafine particles). What changes would you recommend?",
+      "back": "CIRCUIT CHANGES:\n- Switch closed to open circuit if using ball mill\n- Consider rod mill instead of ball mill for primary grinding\n- Reduce circulating load ratio\n- Improve classifier efficiency\n\nOPERATIONAL CHANGES:\n- Decrease mill speed (more cascading, less impact)\n- Increase feed rate (reduce residence time)\n- Lower pulp level\n- Ensure not over-loading with small media\n\nEQUIPMENT CHANGES:\n- Use larger grinding media\n- Install grate discharge instead of overflow\n- Consider SAG mill for single-stage grinding\n\nMONITORING:\n- Check for excessive fine material in feed (cushioning)\n- Ensure classifier working properly",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "problem solving"
+    },
+    {
+      "front": "Explain the concept of 'dead zone' in a tumbling mill and its significance.",
+      "back": "Dead zone: Region in center of mill charge where little movement occurs. As charge lifted up rising side, it cascades and cataracts down free surface of other bodies, moving around this relatively stationary dead zone.\n\nSIGNIFICANCE:\n- Particles in dead zone receive minimal grinding\n- Active grinding occurs around periphery of dead zone\n- Dead zone helps define trajectory of falling media\n- Most grinding occurs at toe where media impacts this zone\n- Size and position depends on mill speed and loading",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Why is grinding considered more energy-intensive than crushing, and what percentage of energy is actually used for particle breakage?",
+      "back": "Grinding more energy-intensive because:\n1. Particles already smaller, requiring more energy per unit size reduction\n2. Most kinetic energy dissipated as heat, noise, vibration, other losses\n3. Only 1-2% actually expended in breaking particles\n4. Random nature makes it less efficient than directed crushing\n5. More surface area must be created (energy proportional to new surface area)\n6. Smaller particles require more precise energy application\n\nThis low efficiency explains why grinding accounts for 50-70% of mineral processing plant power consumption.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Explain why the aspect ratio is important in mill design, particularly for SAG mills.",
+      "back": "HIGH ASPECT (D > L) - typical SAG mills:\n- Greater drop height (more impact energy)\n- Larger diameter = higher pressure on particles\n- Shorter length = faster throughput\n- Less residence time but more violent action\n- Better for coarser products\n- Suits autogenous/semi-autogenous grinding\n\nLOW ASPECT (L > D) - typical rod mills:\n- Prevents rods from wedging across diameter\n- Longer residence time\n- More cascading action\n- Better for controlled, selective grinding\n- Rods maintain parallel orientation\n\nSQUARE (D ≈ L): Balanced approach, common in conventional ball mills.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Describe the relationship between mill speed, type of breakage, and product characteristics.",
+      "back": "LOW SPEED (50-65% critical) - CASCADING:\n- Media rolls and slides\n- Abrasion and chipping dominant\n- Finer product\n- More slimes produced\n- Higher liner wear\n- Better for rod mills\n- Selective grinding\n\nMEDIUM SPEED (65-80% critical) - CATARACTING:\n- Media lifts and falls\n- Impact and compression dominant\n- Balanced product size\n- Optimal for most ball mills\n- Good energy efficiency\n- Most common operating range\n\nHIGH SPEED (>85% critical) - CENTRIFUGING:\n- Media stuck to shell\n- No grinding occurs\n- Energy wasted\n- Must be avoided\n\nRELATIONSHIP: Speed controls energy transfer mechanism, determining breakage type and product characteristics.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Explain how Bond's equation is used in grinding and what factors are considered.",
+      "back": "Bond's equation estimates power required for specific grinding capacity.\n\nPROCESS:\n1. Calculate theoretical power using Bond's equation\n2. Apply efficiency factors for:\n   - Size of mill\n   - Size and type of grinding media\n   - Type of grinding circuit (open vs. closed)\n   - Ore characteristics (Bond Work Index)\n   - Feed and product sizes\n3. Adjust for:\n   - Operating conditions\n   - Equipment efficiency\n   - Circuit configuration\n4. Determine operating power requirement\n\nUSES:\n- Size grinding equipment\n- Predict energy consumption\n- Optimize circuit design\n- Estimate operating costs\n- Compare grinding options",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Why do SAG mills require both coarse ore removal and pebble mills in some circuits?",
+      "back": "COARSE ORE REMOVAL (screening):\n- Very coarse ore may be too hard for efficient SAG grinding\n- Critical size material (neither heavy enough to grind nor light enough to break) accumulates\n- Removing prevents mill clogging\n- Improves SAG efficiency\n\nPEBBLE MILLS for completion:\n- Removed coarse fraction goes to pebble mill\n- Pebble mills use natural hard ore as media\n- Completes grinding of resistant material\n- Returns properly sized material to circuit\n\nOVERALL BENEFIT:\n- SAG mill handles bulk of grinding efficiently\n- Problematic size fractions handled separately\n- Optimizes overall circuit performance\n- Prevents SAG from being overloaded with critical-size material",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Explain the significance of 'equilibrium ball charge' and how it develops.",
+      "back": "DEVELOPMENT PROCESS:\n1. New balls added at maximum size (e.g., 125 mm)\n2. Balls wear down through abrasion and impact\n3. Creates range of sizes from new (large) to worn (small)\n4. Small balls leave with product or are screened out\n5. Continuous addition of new balls at top size\n6. Steady-state distribution achieved\n\nSIGNIFICANCE:\n- Provides media for all particle sizes in feed\n- Large balls grind coarse particles\n- Medium balls grind medium particles\n- Small balls grind fine particles\n- More efficient than single-size charge\n- Self-maintaining with regular ball addition\n- Optimizes grinding across size range\n\nPRACTICAL IMPLICATIONS:\n- Don't try to maintain single ball size\n- Regular addition of top-size balls sufficient\n- Screen out undersize balls\n- Monitor power draw to ensure proper loading",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Discuss the selective grinding mechanism in rod mills and why it's valuable for mineral processing.",
+      "back": "MECHANISM:\n1. Rods maintain essentially parallel alignment\n2. Coarse feed spreads rods at feed end (cone shape)\n3. Large particles encounter widely-spaced rods first\n4. Rods apply line contact pressure\n5. Large particles preferentially ground\n6. Fine particles pass through more easily\n7. Acts like series of crushing rolls\n\nVALUE FOR MINERAL PROCESSING:\n- Prevents overgrinding of fines (slime production minimized)\n- Produces narrow size distribution\n- Critical for gravity separation (slimes interfere)\n- Important for flotation (some ores sensitive to slimes)\n- Reduces reagent consumption\n- Improves downstream process efficiency\n- Better liberation at coarser sizes possible\n- Lower overall energy consumption\n\nAPPLICATIONS WHERE CRITICAL:\n- Gravity concentration feed prep\n- Flotation with slime-sensitive ores\n- Magnetic separation feed\n- Ball mill feed preparation",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "How do lifter bars influence grinding performance and why is their design critical?",
+      "back": "FUNCTIONS:\n1. Prevent slippage of mill charge on liner\n2. Lift grinding media and charge\n3. Control trajectory of falling media\n4. Protect liner from wear\n5. Influence residence time\n\nDESIGN FACTORS:\n- HEIGHT: Affects lift height and energy transfer\n  • Higher = more lift, more impact\n  • Lower = less lift, more cascading\n- FACE ANGLE: Controls release point and trajectory\n  • Steep = earlier release, longer trajectory\n  • Shallow = later release, shorter fall\n- SPACING: Affects how much charge is gripped\n  • Closer = more positive grip\n  • Wider = more slippage\n\nPERFORMANCE IMPACTS:\n- Power draw (affects mill capacity)\n- Grinding efficiency\n- Product size distribution\n- Liner wear rate\n- Media consumption\n- Throughput\n\nCRITICAL because:\n- Small changes significantly affect performance\n- Optimized design improves efficiency 10-15%\n- Wrong design causes excessive liner wear\n- Affects where grinding media impacts (should hit charge, not liner)",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    },
+    {
+      "front": "Explain why most of the grinding occurs at the toe of the charge and what operational implications this has.",
+      "back": "PHYSICAL REASONS:\n1. Cataracting media falls directly onto toe\n2. Maximum impact energy transfer occurs here\n3. Cascading media also converges at toe\n4. Highest concentration of media-particle interactions\n5. Maximum compressive forces\n6. Particles trapped between falling media and charge\n7. Multiple breakage mechanisms active simultaneously\n\nOPERATIONAL IMPLICATIONS:\nDESIGN:\n- Mill sized to maximize active toe region\n- Lifter bars must direct media to toe, not liner\n- Liner wear greatest near toe (needs thicker liner sections)\n- Feed introduction should allow material to reach toe\n\nOPERATION:\n- Optimal mill loading keeps toe properly positioned\n- Speed affects toe location and activity level\n- Pulp density affects material flow to toe\n- Too much charge buries toe (reduces efficiency)\n- Too little charge reduces toe activity\n\nMONITORING:\n- Liner wear patterns indicate toe position\n- Unusual wear = mill not operating optimally\n- Power draw reflects toe activity\n- Product quality indicates toe effectiveness\n\nOPTIMIZATION:\n- Adjust speed to optimize toe impact\n- Maintain proper loading for toe exposure\n- Ensure cataracting media hits toe, not liner\n- Balance cascading and cataracting for best results\n\nUnderstanding toe dynamics is essential for maximizing grinding efficiency, minimizing liner wear, optimizing energy utilization, and achieving desired product quality.",
+      "course": "MT221",
+      "term": "T1",
+      "topic": "advanced"
+    }
+  ],
 
   // =================================================================
   // GM220 - MODULE 1
