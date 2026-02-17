@@ -1720,8 +1720,7 @@ const flashcards = {
         "term": "T1",
         "topic": "principles of comminution"
     }
-]
-,
+],
   //GM220 T1
 
   "MODULE 1: THE EARTH - EVOLUTION, COMPOSITION AND STRUCTURE": [
@@ -2404,5 +2403,5 @@ const flashcards = {
       "term": "T1",
       "topic": "summary"
     }
-  ],
+  ]
 };
