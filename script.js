@@ -1,14 +1,10 @@
-
 // ============================================================
-// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v10.1 FINAL) ===
-// === Server-Side Access + Local Content + Doc Delivery ===
+// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.0 ULTIMATE) ===
+// === Server-Side Access + Local Content + Doc Delivery + SRS + Smart TTS ===
 // ============================================================
 
 // --- CONFIGURATION & STATE ---
-// ✅ BACKEND: Handles Login, Analytics, and Document Fetching
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxhbrFtkTCj-6ZmnY0xmGjwxIq8YoP3mHEghVbEb4ZnVn_sKoCL_VI3CdsjEjibnGIFbQ/exec";
-
-// ✅ PAYMENT: Handles Dynamic Buy Links
 const PAYMENT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz2g3G6nxVlUW3afcHFpvKY360Qd-XoAKkJ7Jz20pznebDrpBHGKjgkhgC4DMXijnN_/exec";
 
 let ttsEnabled = false;
@@ -25,7 +21,33 @@ let currentMcqData = [], currentShortData = [], currentEssayData = [], currentFl
 let currentCourse = null, currentTerm = null, currentTermKey = null;
 let currentQuizType = null, currentQuestionIndex = 0, currentScore = 0, currentQuizData = [];
 let currentEssay = null, currentStepIndex = 0, essayScore = 0;
+
+// Flashcard Specific Contexts
 let currentFlashcardTopic = null, currentFlashcards = [], currentCardIndex = 0, isCardFront = true;
+let srsQueue = []; // Holds the calculated study queue
+
+// ============================================================
+// === 0. UNIVERSAL PARSER (Markdown -> HTML) ===
+// ============================================================
+
+function parseKaeriMarkdown(text) {
+    if (!text) return "";
+    let t = text;
+    // Headers
+    t = t.replace(/^## (.*$)/gim, "<h3 style='margin:10px 0; color:#72efdd;'>$1</h3>");
+    t = t.replace(/^# (.*$)/gim, "<h2 style='margin:15px 0; color:#fff;'>$1</h2>");
+    // Blockquotes
+    t = t.replace(/^> (.*$)/gim, "<blockquote style='border-left:4px solid #72efdd; margin:10px 0; padding-left:15px; color:#a0a8b4; font-style:italic;'>$1</blockquote>");
+    // Lists
+    t = t.replace(/^- (.*$)/gim, "<li style='margin-left:20px;'>$1</li>");
+    // Formatting
+    t = t.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    t = t.replace(/__(.*?)__/g, "<u>$1</u>");
+    t = t.replace(/(?<!\\)\*([^\s].*?)(?<!\\)\*/g, "<em>$1</em>");
+    // Line Breaks
+    t = t.replace(/\n/g, "<br>");
+    return t;
+}
 
 // ============================================================
 // === 1. INITIALIZATION & DATA LOADING ===
@@ -58,12 +80,11 @@ async function initializeCourseLogic() {
             updateTtsButtonText();
         }
         
-        // --- ADD DOCUMENT BUTTON (If missing) ---
+        // Add Document Button if missing
         if (!document.getElementById('docs-btn')) {
             const docBtn = document.createElement('button');
             docBtn.id = 'docs-btn';
             docBtn.innerHTML = "📂 Course Documents";
-            // Green Styling to match Flashcards
             docBtn.style.backgroundColor = "#28a745"; 
             docBtn.style.color = "white";
             docBtn.style.border = "none";
@@ -74,7 +95,7 @@ async function initializeCourseLogic() {
             docBtn.style.cursor = "pointer";
             docBtn.onclick = renderDocuments;
 
-            // Insert as second button (after MCQ)
+            // Insert as second button
             if (modeButtonsDiv.children.length > 1) {
                 modeButtonsDiv.insertBefore(docBtn, modeButtonsDiv.children[1]);
             } else {
@@ -95,7 +116,7 @@ async function initializeCourseLogic() {
     currentEssayData = filterDataByCourseAndTerm(allEssayData, currentCourse, currentTerm);
     currentFlashcardTopics = filterFlashcardsByCourseAndTerm(allFlashcards, currentCourse, currentTerm);
 
-    // Inject Viewer HTML if missing (Self-Healing UI)
+    // Inject Viewer HTML
     if (!document.getElementById('smart-doc-viewer')) {
         injectDocViewerHTML();
     }
@@ -105,30 +126,54 @@ async function initializeCourseLogic() {
 }
 
 // ============================================================
-// === 2. DOCUMENT DELIVERY ENGINE (SKELETON & GREEN UI) ===
+// === 2. UNIVERSAL RENDERING ENGINE (KaTeX) ===
+// ============================================================
+
+function renderMath(targetId = null) {
+    if (typeof renderMathInElement !== 'function') return;
+
+    const renderOptions = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+            {left: "\\[", right: "\\]", display: true}
+        ],
+        throwOnError: false
+    };
+
+    if (targetId) {
+        const el = document.getElementById(targetId);
+        if (el) renderMathInElement(el, renderOptions);
+    } else {
+        const form = document.getElementById("quiz-form");
+        const result = document.getElementById("result");
+        if (form) renderMathInElement(form, renderOptions);
+        if (result) renderMathInElement(result, renderOptions);
+    }
+}
+
+// ============================================================
+// === 3. DOCUMENT DELIVERY ENGINE (SKELETON & SECURE) ===
 // ============================================================
 
 function injectDocViewerHTML() {
     if (document.getElementById('smart-doc-viewer')) return;
     
-    // Viewer with Skeleton Loader Overlay
     const viewerHTML = `
     <div id="smart-doc-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(5px);">
         <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:0; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd; overflow:hidden; position:relative;">
             
-            <!-- Header -->
             <div style="display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#0d1b2a; border-bottom:1px solid #3e506e; height:50px; box-sizing:border-box;">
                 <h3 id="viewer-title" style="color:white; margin:0; font-size:1.1em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70%;">Document</h3>
                 <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:6px 15px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:0.9em;">✕ Close</button>
             </div>
 
-            <!-- Loading Skeleton Overlay (Visible initially) -->
-            <div id="doc-loader-overlay" class="viewer-loader">
-                <div class="viewer-skeleton-box"></div>
+            <div id="doc-loader-overlay" class="viewer-loader" style="position:absolute; top:50px; left:0; width:100%; height:calc(100% - 50px); background:#1a1a2e; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:10;">
+                <div style="width:50px; height:50px; border:4px solid #3e506e; border-top:4px solid #72efdd; border-radius:50%; animation:spin 1s linear infinite;"></div>
                 <p style="color:#72efdd; margin-top:20px; font-size:0.9em;">Loading Preview...</p>
             </div>
 
-            <!-- The Iframe -->
             <iframe id="doc-frame" style="flex:1; width:100%; border:none; background:white;" allow="autoplay; fullscreen" allowfullscreen></iframe>
             
             <div style="text-align:center; color:#888; font-size:0.75em; padding:5px; background:#0d1b2a; border-top:1px solid #3e506e;">
@@ -157,25 +202,19 @@ function openDocumentViewer(fileId, title) {
         return;
     }
     
-    // 1. Reset State
     titleEl.textContent = title || "Document";
-    iframe.src = ""; // Clear previous to prevent ghosting
-    loader.style.display = 'flex'; // Show shimmer
+    iframe.src = ""; 
+    loader.style.display = 'flex';
     viewer.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     
-    // 2. Load Content (Optimized for Video/PDF using Preview mode)
+    // Optimized preview link
     iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
     
-    // 3. Remove Shimmer when loaded
     iframe.onload = function() {
-        // Small buffer to ensure rendering has started
-        setTimeout(() => {
-            loader.style.display = 'none';
-        }, 500); 
+        setTimeout(() => { loader.style.display = 'none'; }, 800); 
     };
 
-    // Analytics
     logDocumentView(title, fileId);
 }
 
@@ -214,14 +253,10 @@ async function renderDocuments() {
 
     const container = document.getElementById("quiz-form");
     
-    // 1. RENDER SKELETON LOADING GRID (Shimmering Gray Bars)
-    let skeletonHTML = `
-        <h2 style="text-align:center; margin-bottom:20px;">📚 Loading Library...</h2>
-        <div class="doc-button-grid">
-    `;
-    // Create 8 fake pulsing buttons
-    for(let i=0; i<8; i++) {
-        skeletonHTML += `<div class="skeleton"></div>`;
+    // Skeleton Loading State
+    let skeletonHTML = `<h2 style="text-align:center; margin-bottom:20px;">📚 Loading Library...</h2><div class="doc-button-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:15px;">`;
+    for(let i=0; i<6; i++) {
+        skeletonHTML += `<div style="height:100px; background:#2b3a55; border-radius:10px; opacity:0.5; animation:pulse 1.5s infinite;"></div>`;
     }
     skeletonHTML += `</div>`;
     
@@ -248,8 +283,6 @@ async function renderDocuments() {
         });
         
         const data = await response.json();
-        
-        // Handle BOTH response formats
         const documents = data.documents || (data.data && data.data.documents) || [];
         const success = data.success || false;
         
@@ -263,26 +296,24 @@ async function renderDocuments() {
             return;
         }
 
-        // 2. RENDER GREEN WRAPPED BUTTONS (Grid Layout)
         let html = `<h2 style="text-align:center; margin-bottom:20px;">📚 ${currentCourse} Documents</h2>`;
-        html += `<div class="doc-button-grid">`;
+        html += `<div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:15px; padding:20px 0;">`;
 
         documents.forEach(doc => {
-            // Icon selection based on type
             let icon = '📄';
             if(doc.type === 'VIDEO') icon = '🎬';
             if(doc.type === 'SLIDES') icon = '📊';
             if(doc.type === 'IMG') icon = '🖼️';
-            if(doc.type === 'PDF') icon = '📕';
-
+            
             html += `
-            <button class="doc-btn" onclick="openDocumentViewer('${doc.fileId}', '${doc.title.replace(/'/g, "\\'")}')">
-                <div class="doc-btn-meta">
-                    <span>${icon} ${doc.type || 'FILE'}</span>
-                    <span>${doc.size || ''}</span>
+            <div class="doc-card" onclick="openDocumentViewer('${doc.fileId}', '${doc.title.replace(/'/g, "\\'")}')" style="background:#2b3a55; padding:15px; border-radius:10px; border-left:5px solid #28a745; cursor:pointer; transition:0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <div style="font-size:0.7em; text-transform:uppercase; color:#28a745; font-weight:bold; letter-spacing:1px; margin-bottom:5px;">${doc.topic || 'General'}</div>
+                <div style="font-size:1.1em; font-weight:bold; color:white; margin-bottom:8px; line-height:1.3;">${doc.title}</div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; border-top:1px solid #3e506e; padding-top:10px;">
+                    <span style="background:#0d1b2a; padding:2px 8px; border-radius:4px; font-size:0.7em; color:#fff;">${icon} ${doc.type || 'FILE'}</span>
+                    <span style="color:#28a745; font-size:0.9em; font-weight:bold;">👁️ Open</span>
                 </div>
-                <div class="doc-btn-title">${doc.title}</div>
-            </button>`;
+            </div>`;
         });
 
         html += `</div>`;
@@ -291,7 +322,6 @@ async function renderDocuments() {
         container.innerHTML = html;
 
     } catch (e) {
-        console.error("Fetch Error:", e);
         container.innerHTML = `
             <div style="text-align:center; padding:20px; color:#dc3545;">
                 <h3>⚠️ Connection Error</h3>
@@ -302,7 +332,7 @@ async function renderDocuments() {
 }
 
 // ============================================================
-// === 3. SECURITY & AUTHENTICATION ===
+// === 4. SECURITY & AUTHENTICATION ===
 // ============================================================
 
 async function checkAccessStatus() {
@@ -318,9 +348,7 @@ async function checkAccessStatus() {
 
 async function verifyCodeFromModal() {
     const userCode = document.getElementById('access-code-input').value.trim();
-    
     if (!userCode) return alert("Please enter a code.");
-    
     const userEmail = prompt("Enter the Email you used to pay:"); 
     if (!userEmail) return alert("Email required for verification.");
 
@@ -352,7 +380,6 @@ async function verifyCodeFromModal() {
         if (result.success) {
             localStorage.setItem(`token_${currentTermKey}`, result.data.token || "VALID");
             localStorage.setItem(`expiry_${currentTermKey}`, result.data.expiry);
-            
             closePaymentModal();
             enableFullAccessUI();
             showAppNotification("✅ " + result.message, "success");
@@ -370,10 +397,9 @@ function blockDemo(type) {
     const key = `demo_${type}_used_${currentTermKey}`;
     let attempts = parseInt(localStorage.getItem(key) || "0");
     const maxAttempts = 10;
-    const attemptsLeft = maxAttempts - attempts;
     
     if (attempts < maxAttempts) {
-        showAppNotification(`Demo Mode: ${attemptsLeft} attempts remaining.`, "info", 2000);
+        showAppNotification(`Demo Mode: ${maxAttempts - attempts} attempts remaining.`, "info", 2000);
     }
     
     if (attempts >= maxAttempts) {
@@ -387,7 +413,7 @@ function blockDemo(type) {
 }
 
 // ============================================================
-// === 4. UI & NAVIGATION (UNCHANGED) ===
+// === 5. UI & NAVIGATION ===
 // ============================================================
 
 function enableFullAccessUI() {
@@ -479,7 +505,6 @@ function openPaymentModal() {
     document.getElementById('pay-amount').textContent = `K${currentPrice}`;
     document.getElementById('payment-modal').classList.add('show');
     
-    // Update Buy Link Dynamically
     updateBuyNowLink(currentCourse, currentTerm, currentPrice);
 
     setTimeout(() => {
@@ -492,7 +517,6 @@ function closePaymentModal() {
     document.getElementById('payment-modal').classList.remove('show');
 }
 
-// ✅ FIXED: Now points to the Google Script Payment URL
 function updateBuyNowLink(course, term, price) {
   const buyNowLink = document.getElementById('buy-now-link');
   const buyPriceElement = document.getElementById('buy-price');
@@ -500,7 +524,7 @@ function updateBuyNowLink(course, term, price) {
   if (buyNowLink && buyPriceElement) {
     buyPriceElement.textContent = `K${price}`;
     
-    // Dynamic URL for Payment Script
+    // Dynamic URL
     const paymentUrl = `${PAYMENT_SCRIPT_URL}?course=${course}&term=${term}`;
     buyNowLink.href = paymentUrl;
     
@@ -524,8 +548,6 @@ function showAppNotification(message, type = 'info', duration = 5000) {
     if (msgSpan) msgSpan.textContent = message;
     else el.innerText = message;
 
-    el.className = ''; 
-    void el.offsetWidth; 
     el.className = 'show ' + type;
 
     if (el.timeoutId) clearTimeout(el.timeoutId);
@@ -557,7 +579,7 @@ function clearDemoLocks() {
 }
 
 // ============================================================
-// === 5. QUIZ ENGINE (UNCHANGED) ===
+// === 6. QUIZ ENGINE (ADAPTIVE) ===
 // ============================================================
 
 function renderQuiz() {
@@ -588,17 +610,19 @@ function displayMcqQuestion() {
     
     let html = `
         <div class="question-header"><h3>MCQ ${currentQuestionIndex + 1} / ${currentQuizData.length}</h3></div>
-        <div class="question-box"><p>${q.q}</p><div class="options">
+        <div class="question-box">${parseKaeriMarkdown(q.q)}<div class="options">
     `;
     
     if (q.options) {
         q.options.forEach((opt, i) => {
-            html += `<label><input type="radio" name="mcq" value="${i}"/> ${String.fromCharCode(65 + i)}. ${opt}</label>`;
+            html += `<label><input type="radio" name="mcq" value="${i}"/> ${String.fromCharCode(65 + i)}. ${parseKaeriMarkdown(opt)}</label>`;
         });
     }
     
     html += `</div><button id="mcq-submit-btn" onclick="checkMcqAnswer()">✅ Submit</button></div>`;
     container.innerHTML = html;
+    
+    renderMath();
     document.getElementById("result").innerHTML = "";
     container.scrollIntoView({ behavior: "smooth" });
     readCurrentQuestion();
@@ -606,7 +630,6 @@ function displayMcqQuestion() {
 
 function checkMcqAnswer() {
     if (isSubmissionLocked) return;
-    
     const selected = document.querySelector('input[name="mcq"]:checked');
     if (!selected) return showAppNotification("Select an option!", "warning");
 
@@ -631,13 +654,13 @@ function checkMcqAnswer() {
         resultDiv.innerHTML = "<p>✔️ Correct!</p>";
         feedbackText = "Correct!";
     } else {
-        resultDiv.innerHTML = `<p>❌ Correct: ${String.fromCharCode(65 + q.correct)}. ${q.options[q.correct]}</p>`;
-        feedbackText = `Wrong. The correct answer is option ${String.fromCharCode(65 + q.correct)}, ${q.options[q.correct]}.`;
+        resultDiv.innerHTML = `<p>❌ Correct: ${String.fromCharCode(65 + q.correct)}. ${parseKaeriMarkdown(q.options[q.correct])}</p>`;
+        feedbackText = `Wrong. The correct answer is option ${String.fromCharCode(65 + q.correct)}.`;
     }
     
-    const explanationBox = `<div class="explanation-box">${q.explanation || ''}</div>`;
+    const explanationBox = `<div class="explanation-box">${parseKaeriMarkdown(q.explanation || '')}</div>`;
     resultDiv.innerHTML += explanationBox;
-    feedbackText += ` Explanation: ${q.explanation || ''}`;
+    feedbackText += ` Explanation: ${humanizeLaTeX(q.explanation || '')}`;
     
     currentQuestionIndex++;
     
@@ -646,6 +669,7 @@ function checkMcqAnswer() {
     nextBtn.onclick = displayMcqQuestion;
     resultDiv.appendChild(nextBtn);
 
+    renderMath();
     readText(feedbackText); 
 }
 
@@ -691,7 +715,7 @@ function renderShortAnswers() {
     currentQuestionIndex = 0;
     currentScore = 0;
     if (q.length === 0) {
-        container.innerHTML = "<p>No short answer questions available.</p>";
+        container.innerHTML = "<p>No questions available.</p>";
         updateProgress(0, 0);
         return;
     }
@@ -705,7 +729,9 @@ function displayShortAnswerQuestion() {
     updateProgress(currentQuestionIndex + 1, currentQuizData.length);
     if (!q) return showFinalShortAnswerScore();
     
-    container.innerHTML = `<h3>Short Answer ${currentQuestionIndex + 1} / ${currentQuizData.length}</h3><div class="question-box"><p>${q.q}</p></div><textarea id="short-answer-input"></textarea><button id="sa-submit-btn" onclick="checkShortAnswer()">✅ Submit</button>`;
+    container.innerHTML = `<h3>Short Answer ${currentQuestionIndex + 1} / ${currentQuizData.length}</h3><div class="question-box">${parseKaeriMarkdown(q.q)}</div><textarea id="short-answer-input"></textarea><button id="sa-submit-btn" onclick="checkShortAnswer()">✅ Submit</button>`;
+    
+    renderMath();
     document.getElementById("result").innerHTML = "";
     container.scrollIntoView({ behavior: "smooth" });
     readCurrentQuestion();
@@ -743,9 +769,9 @@ function checkShortAnswer() {
         feedbackText = `Wrong. The required keywords are: ${q.keywords.join(', ')}.`;
     }
     
-    const explanationBox = `<div class="explanation-box">${q.explanation || ''}</div>`;
+    const explanationBox = `<div class="explanation-box">${parseKaeriMarkdown(q.explanation || '')}</div>`;
     resultDiv.innerHTML += explanationBox;
-    feedbackText += ` Explanation: ${q.explanation || ''}`;
+    feedbackText += ` Explanation: ${humanizeLaTeX(q.explanation || '')}`;
     
     currentQuestionIndex++;
     
@@ -754,6 +780,7 @@ function checkShortAnswer() {
     nextBtn.onclick = displayShortAnswerQuestion;
     resultDiv.appendChild(nextBtn);
 
+    renderMath();
     readText(feedbackText); 
 }
 
@@ -845,14 +872,16 @@ function showEssayStep(index) {
     
     let html = `
         <div class="question-header"><h3>📄 ${essay.title} — Step ${index + 1} of ${essay.steps.length}</h3><p>Topic: ${essay.topic} | ${essay.year}</p></div>
-        <div class="question-box"><p><strong>Q:</strong> ${step.q}</p><div class="options">
+        <div class="question-box"><p><strong>Q:</strong> ${parseKaeriMarkdown(step.q)}</p><div class="options">
     `;
     step.options.forEach((opt, i) => {
-        html += `<label class="option"><input type="radio" name="step-option" value="${i}" /> <span>${String.fromCharCode(65 + i)}. ${opt}</span></label>`;
+        html += `<label class="option"><input type="radio" name="step-option" value="${i}" /> <span>${String.fromCharCode(65 + i)}. ${parseKaeriMarkdown(opt)}</span></label>`;
     });
     
     html += `</div><button id="essay-submit-btn" onclick="checkEssayStep()">✅ Submit Step</button></div>`;
     container.innerHTML = html;
+    
+    renderMath();
     document.getElementById("result").innerHTML = "";
     container.scrollIntoView({ behavior: "smooth" });
     readCurrentQuestion();
@@ -886,13 +915,13 @@ function checkEssayStep() {
         resultDiv.innerHTML = "<p>✔️ Correct!</p>";
         feedbackText = "Correct!";
     } else {
-        resultDiv.innerHTML = `<p>❌ Correct: ${String.fromCharCode(65 + step.correct)}. ${step.options[step.correct]}</p>`;
-        feedbackText = `Wrong. The correct option is ${String.fromCharCode(65 + step.correct)}, ${step.options[step.correct]}.`;
+        resultDiv.innerHTML = `<p>❌ Correct: ${String.fromCharCode(65 + step.correct)}. ${parseKaeriMarkdown(step.options[step.correct])}</p>`;
+        feedbackText = `Wrong. The correct option is ${String.fromCharCode(65 + step.correct)}.`;
     }
     
-    const explanationBox = `<div class="explanation-box">${step.explanation || ''}</div>`;
+    const explanationBox = `<div class="explanation-box">${parseKaeriMarkdown(step.explanation || '')}</div>`;
     resultDiv.innerHTML += explanationBox;
-    feedbackText += ` Explanation: ${step.explanation || ''}`;
+    feedbackText += ` Explanation: ${humanizeLaTeX(step.explanation || '')}`;
     
     const nextBtn = document.createElement("button");
     nextBtn.innerText = currentStepIndex < essay.steps.length - 1 ? "Next ➡️" : "Finish";
@@ -906,6 +935,7 @@ function checkEssayStep() {
     };
     resultDiv.appendChild(nextBtn);
 
+    renderMath();
     readText(feedbackText); 
 }
 
@@ -947,6 +977,75 @@ function showFinalEssayScore() {
     container.appendChild(backBtn);
 }
 
+// ============================================================
+// === 8. SRS ENGINE (SPACED REPETITION - SM-2 ALGORITHM) ===
+// ============================================================
+
+const SRS_KEY_PREFIX = "kaeri_srs_v1_";
+
+// 1. Get SRS Data for a specific card
+function getCardSRS(topic, cardIndex) {
+    const key = `${SRS_KEY_PREFIX}${currentTermKey}`;
+    const allData = JSON.parse(localStorage.getItem(key) || "{}");
+    if (!allData[topic]) allData[topic] = {};
+    return allData[topic][cardIndex] || { interval: 0, repetition: 0, efactor: 2.5, dueDate: 0, isNew: true };
+}
+
+// 2. Save SRS Data
+function saveCardSRS(topic, cardIndex, srsData) {
+    const key = `${SRS_KEY_PREFIX}${currentTermKey}`;
+    const allData = JSON.parse(localStorage.getItem(key) || "{}");
+    if (!allData[topic]) allData[topic] = {};
+    allData[topic][cardIndex] = srsData;
+    localStorage.setItem(key, JSON.stringify(allData));
+}
+
+// 3. The Algorithm (Updated with JUMP START LOGIC)
+function calculateNextReview(topic, cardIndex, quality) {
+    let card = getCardSRS(topic, cardIndex);
+    
+    if (quality < 3) {
+        // Reset if Forgot
+        card.repetition = 0;
+        card.interval = 1; 
+    } else {
+        // Successful recall
+        if (card.repetition === 0) {
+            // --- JUMP START LOGIC ---
+            // Allow skipping ahead on first successful review to match UI buttons
+            switch(quality) {
+                case 3: card.interval = 2; break; // Hard -> 2 days
+                case 4: card.interval = 4; break; // Good -> 4 days
+                case 5: card.interval = 7; break; // Easy -> 7 days
+                default: card.interval = 1;
+            }
+        } else if (card.repetition === 1) {
+            // Second review logic
+            card.interval = (card.interval >= 6) ? Math.round(card.interval * card.efactor) : 6;
+        } else {
+            // Standard Multiplier
+            card.interval = Math.round(card.interval * card.efactor);
+        }
+        card.repetition += 1;
+    }
+
+    // Update E-Factor
+    card.efactor = card.efactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+    if (card.efactor < 1.3) card.efactor = 1.3;
+
+    // Calculate Due Date
+    const now = new Date();
+    card.dueDate = now.setDate(now.getDate() + card.interval);
+    card.isNew = false;
+
+    saveCardSRS(topic, cardIndex, card);
+    return card;
+}
+
+// ============================================================
+// === 9. FLASHCARD ENGINE (SRS + SMART LAYOUT) ===
+// ============================================================
+
 function renderFlashcardTopics() {
     const container = document.getElementById("quiz-form");
     container.innerHTML = "";
@@ -980,90 +1079,136 @@ function attemptStartFlashcard(topic) {
 
 function startFlashcards(topic) {
     currentFlashcardTopic = topic;
-    currentFlashcards = currentFlashcardTopics[topic];
+    const allCards = currentFlashcardTopics[topic];
+    srsQueue = [];
+
+    const now = Date.now();
+    allCards.forEach((card, originalIndex) => {
+        const srs = getCardSRS(topic, originalIndex);
+        if (srs.isNew || srs.dueDate <= now) {
+            srsQueue.push({
+                ...card,
+                originalIndex: originalIndex,
+                srsData: srs
+            });
+        }
+    });
+
+    srsQueue.sort((a, b) => a.srsData.dueDate - b.srsData.dueDate);
+
+    currentFlashcards = srsQueue; 
     currentCardIndex = 0;
     isCardFront = true;
+
+    if (currentFlashcards.length === 0) {
+        const container = document.getElementById("quiz-form");
+        container.innerHTML = `
+        <div style="text-align: center;">
+            <h2>🎉 Caught Up!</h2>
+            <p>You have no cards due for review right now.</p>
+            <p>Check back tomorrow or start another topic.</p>
+            <button class="restart-button" onclick="renderFlashcardTopics()">Back to Topics</button>
+        </div>`;
+        return;
+    }
+
     displayFlashcard();
 }
 
 function displayFlashcard() {
     const container = document.getElementById("quiz-form");
-    const card = currentFlashcards[currentCardIndex];
+    
+    if (currentCardIndex >= currentFlashcards.length) {
+        return showFlashcardCompletion();
+    }
+
+    const cardObj = currentFlashcards[currentCardIndex]; 
     updateProgress(currentCardIndex + 1, currentFlashcards.length);
     
-    if (!card) return showFlashcardCompletion();
-    
-    const isLastCard = currentCardIndex === currentFlashcards.length - 1;
+    // --- SMART LAYOUT ANALYZER ---
+    function getLayoutClass(text) {
+        const hasBlockMath = /\$\$|\\\[/.test(text);
+        const hasList = /^- /m.test(text) || /<ul>|<ol>|<li>/.test(parseKaeriMarkdown(text));
+        const isLong = text.length > 120;
 
-    container.innerHTML = `
-        <h3>Flashcard: ${currentFlashcardTopic} (${currentCardIndex + 1} / ${currentFlashcards.length})</h3>
+        if (hasBlockMath || hasList || isLong) {
+            return "layout-detailed";
+        }
+        return "layout-center";
+    }
+
+    const frontLayout = getLayoutClass(cardObj.front);
+    const backLayout = getLayoutClass(cardObj.back);
+
+    let html = `
+        <h3>🧠 SRS Study: ${currentFlashcardTopic} (${currentCardIndex + 1} / ${currentFlashcards.length})</h3>
         <div class="flashcard-wrapper">
             <div class="flashcard ${isCardFront ? '' : 'back-active'}" onclick="flipCard()">
-                <div class="card-face card-front">${card.front}</div>
-                <div class="card-face card-back">${card.back}</div>
+                
+                <!-- FRONT FACE -->
+                <div class="card-face card-front ${frontLayout}">
+                    ${parseKaeriMarkdown(cardObj.front)}
+                    <div style="margin-top:20px; font-size:0.75em; color:#8892b0; font-style:italic; opacity:0.8;">(Tap to flip)</div>
+                </div>
+
+                <!-- BACK FACE -->
+                <div class="card-face card-back ${backLayout}">
+                    ${parseKaeriMarkdown(cardObj.back)}
+                </div>
+
             </div>
         </div>
-        <div class="flashcard-nav-buttons">
-            <button onclick="prevFlashcard()" ${currentCardIndex === 0 ? 'disabled' : ''}>⬅️ Prev</button>
-            <button onclick="nextFlashcard()">${isLastCard ? 'Finish 🏁' : 'Next ➡️'}</button>
-        </div>
-        <button class="back-to-topics-button" onclick="renderFlashcardTopics()">⬅️ Back to Topics</button>
     `;
+
+    // SRS CONTROLS
+    html += `<div class="flashcard-nav-buttons" style="margin-top: 20px;">`;
+
+    if (isCardFront) {
+        html += `<button onclick="flipCard()" style="width:100%; background:#007bff; color:white;">🔄 Show Answer</button>`;
+    } else {
+        html += `
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:8px; width:100%;">
+                <button onclick="rateCard(0)" style="background:#dc3545; font-size:0.8em; padding:12px 2px; border-radius:6px;">❌ Again<br><small style="opacity:0.7">1d</small></button>
+                <button onclick="rateCard(3)" style="background:#ffc107; color:#333; font-size:0.8em; padding:12px 2px; border-radius:6px;">😬 Hard<br><small style="opacity:0.7">2d</small></button>
+                <button onclick="rateCard(4)" style="background:#28a745; font-size:0.8em; padding:12px 2px; border-radius:6px;">✅ Good<br><small style="opacity:0.7">4d</small></button>
+                <button onclick="rateCard(5)" style="background:#17a2b8; font-size:0.8em; padding:12px 2px; border-radius:6px;">🚀 Easy<br><small style="opacity:0.7">7d</small></button>
+            </div>
+        `;
+    }
     
+    html += `</div>`;
+    html += `<button class="back-to-topics-button" onclick="renderFlashcardTopics()">⬅️ Back to Topics</button>`;
+
+    container.innerHTML = html;
+    
+    renderMath();
     container.scrollIntoView({ behavior: "smooth" });
     readFlashcard();
 }
 
-function flipCard() { isCardFront = !isCardFront; displayFlashcard(); }
-
-function prevFlashcard() { 
-    if (currentCardIndex > 0) { 
-        currentCardIndex--; 
-        isCardFront = true; 
-        displayFlashcard(); 
-    } 
+function flipCard() { 
+    isCardFront = !isCardFront; 
+    displayFlashcard(); 
 }
 
-function nextFlashcard() { 
-    if (currentCardIndex < currentFlashcards.length - 1) { 
-        currentCardIndex++; 
-        isCardFront = true; 
-        displayFlashcard(); 
-    } else { 
-        showFlashcardCompletion(); 
-    } 
+function rateCard(quality) {
+    const cardObj = currentFlashcards[currentCardIndex];
+    const result = calculateNextReview(currentFlashcardTopic, cardObj.originalIndex, quality);
+    showAppNotification(`Scheduled for: ${Math.round(result.interval)} days`, "info", 1000);
+    currentCardIndex++;
+    isCardFront = true;
+    displayFlashcard();
 }
 
 function showFlashcardCompletion() {
     const container = document.getElementById("quiz-form");
     container.innerHTML = `
         <div style="text-align: center;">
-            <h2>Topic Complete!</h2>
-            <p>You have reviewed all flashcards for "<strong>${currentFlashcardTopic}</strong>".</p>
+            <h2>Session Complete!</h2>
+            <p>You have reviewed all due cards for "<strong>${currentFlashcardTopic}</strong>".</p>
         </div>
     `;
     updateProgress(currentFlashcards.length, currentFlashcards.length);
-
-    const restartBtn = document.createElement("button");
-    restartBtn.innerText = "🔁 Review Again";
-    restartBtn.className = "restart-button";
-    restartBtn.style.marginRight = "10px";
-    restartBtn.onclick = () => attemptStartFlashcard(currentFlashcardTopic);
-    container.appendChild(restartBtn);
-
-    const challengeBtn = document.createElement("button");
-    challengeBtn.innerHTML = "⚔️ Challenge a Friend";
-    challengeBtn.className = "challenge-button";
-    challengeBtn.onclick = () => challengeFriend(currentFlashcards.length, 0, "Flashcards");
-    container.appendChild(challengeBtn);
-
-    const previewBtn = document.createElement("button");
-    previewBtn.innerText = "👁️ Preview & Print";
-    previewBtn.style.backgroundColor = "#007bff"; 
-    previewBtn.style.color = "white";
-    previewBtn.style.marginLeft = "10px";
-    previewBtn.onclick = generatePrintPreview;
-    container.appendChild(previewBtn);
 
     const backBtn = document.createElement("button");
     backBtn.innerText = "⬅️ Back to Topics";
@@ -1073,7 +1218,7 @@ function showFlashcardCompletion() {
 }
 
 // ============================================================
-// === 6. SMART FEATURES ===
+// === 10. SMART FEATURES & PRINT ===
 // ============================================================
 
 function challengeFriend(score, total, modeName) {
@@ -1086,7 +1231,6 @@ function challengeFriend(score, total, modeName) {
         const percent = Math.round((score / total) * 100);
         message = `I scored ${percent}% (${score}/${total}) in ${currentCourse} ${currentTerm} (${modeName})! Challenge you to beat my score! 👇\n${link}`;
     }
-    
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
 }
 
@@ -1115,19 +1259,19 @@ function generatePrintPreview() {
     
     if (currentQuizType === 'essay') {
         currentEssay.steps.forEach((step, index) => {
-            html += `<div class="preview-step"><div class="preview-q">Step ${index + 1}: ${step.q}</div><div class="preview-ans">✅ Correct Action: ${step.options[step.correct]}</div><div class="preview-exp">💡 Note: ${step.explanation || "No additional explanation."}</div></div>`;
+            html += `<div class="preview-step"><div class="preview-q">Step ${index + 1}: ${parseKaeriMarkdown(step.q)}</div><div class="preview-ans">✅ Correct Action: ${parseKaeriMarkdown(step.options[step.correct])}</div><div class="preview-exp">💡 Note: ${parseKaeriMarkdown(step.explanation || "No additional explanation.")}</div></div>`;
         });
     } else if (currentQuizType === 'mcq') {
         currentQuizData.forEach((item, index) => {
-            html += `<div class="preview-step"><div class="preview-q">Q${index + 1}: ${item.q}</div><div class="preview-ans">✅ Answer: ${item.options[item.correct]}</div><div class="preview-exp">💡 Explanation: ${item.explanation || "No additional explanation."}</div></div>`;
+            html += `<div class="preview-step"><div class="preview-q">Q${index + 1}: ${parseKaeriMarkdown(item.q)}</div><div class="preview-ans">✅ Answer: ${parseKaeriMarkdown(item.options[item.correct])}</div><div class="preview-exp">💡 Explanation: ${parseKaeriMarkdown(item.explanation || "No additional explanation.")}</div></div>`;
         });
     } else if (currentQuizType === 'shortAnswer') {
         currentQuizData.forEach((item, index) => {
-            html += `<div class="preview-step"><div class="preview-q">Q${index + 1}: ${item.q}</div><div class="preview-ans">🔑 Required Keywords: ${item.keywords.join(", ")}</div><div class="preview-exp">💡 Explanation: ${item.explanation || "No additional explanation."}</div></div>`;
+            html += `<div class="preview-step"><div class="preview-q">Q${index + 1}: ${parseKaeriMarkdown(item.q)}</div><div class="preview-ans">🔑 Required Keywords: ${item.keywords.join(", ")}</div><div class="preview-exp">💡 Explanation: ${parseKaeriMarkdown(item.explanation || "No additional explanation.")}</div></div>`;
         });
     } else if (currentQuizType === 'flashcard') {
         currentFlashcards.forEach((card, index) => {
-            html += `<div class="preview-step" style="border-left-color: #6f42c1;"><div class="preview-q" style="color: #333; font-size: 1.1em;">${index + 1}. ${card.front}</div><div class="preview-ans" style="color: #6f42c1; border-left-color: #6f42c1;">Definition:</div><div style="margin-top:5px; padding: 8px; background: #f8f9fa; border-radius: 4px;">${card.back}</div></div>`;
+            html += `<div class="preview-step" style="border-left-color: #6f42c1;"><div class="preview-q" style="color: #333; font-size: 1.1em;">${index + 1}. ${parseKaeriMarkdown(card.front)}</div><div class="preview-ans" style="color: #6f42c1; border-left-color: #6f42c1;">Definition:</div><div style="margin-top:5px; padding: 8px; background: #f8f9fa; border-radius: 4px;">${parseKaeriMarkdown(card.back)}</div></div>`;
         });
     }
     
@@ -1135,6 +1279,8 @@ function generatePrintPreview() {
     
     printContentData = { html: html.replace(/preview-/g, 'pdf-') };
     printDiv.innerHTML = html;
+
+    renderMath('print-preview-content');
     document.getElementById('print-preview-modal').classList.add('show');
     document.body.style.overflow = 'hidden';
 }
@@ -1144,6 +1290,7 @@ function proceedToPrint() {
     setTimeout(() => {
         const printDiv = document.getElementById("printable-summary");
         printDiv.innerHTML = printContentData.html;
+        renderMath('printable-summary');
         const style = document.createElement('style');
         style.innerHTML = `@page { margin: 20mm; size: A4; }`;
         printDiv.appendChild(style);
@@ -1158,38 +1305,38 @@ function closePrintPreview() {
 }
 
 // ============================================================
-// === 7. UTILITIES ===
+// === 11. TEXT-TO-SPEECH (SMART HUMAN ENGINE) ===
 // ============================================================
 
-function filterDataByCourseAndTerm(data, course, term) {
-    if (!Array.isArray(data)) return [];
-    return data.filter(item => item.course === course && item.term === term);
-}
+const ttsMap = [
+    { r: /\\alpha/g, s: "alpha" }, { r: /\\beta/g, s: "beta" }, { r: /\\gamma/g, s: "gamma" },
+    { r: /\\theta/g, s: "theta" }, { r: /\\lambda/g, s: "lambda" }, { r: /\\pi/g, s: "pi" },
+    { r: /\\Delta/g, s: "Delta" }, { r: /\\mu/g, s: "mew" }, { r: /\\sigma/g, s: "sigma" },
+    { r: /\\therefore/g, s: "therefore" }, { r: /\\exists/g, s: "there exists" },
+    { r: /\\forall/g, s: "for all" }, { r: /\\in/g, s: "is an element of" },
+    { r: /\\cup/g, s: "union" }, { r: /\\cap/g, s: "intersection" },
+    { r: /\\sin/g, s: "sine" }, { r: /\\cos/g, s: "cosine" }, { r: /\\tan/g, s: "tangent" },
+    { r: /\\int/g, s: "the integral of" }, { r: /\\sum/g, s: "the sum of" },
+    { r: /dy\/dx/g, s: "d y d x" }, { r: /\\lim/g, s: "the limit" }, { r: /\\to/g, s: "approaches" },
+    { r: /\\frac\{1\}\{2\}/g, s: "one half" },
+    { r: /\\frac\{(.+?)\}\{(.+?)\}/g, s: "$1 over $2" },
+    { r: /\^2/g, s: " squared" }, { r: /\^3/g, s: " cubed" },
+    { r: /\^\{(.+?)\}/g, s: " to the power of $1" },
+    { r: /\\sqrt\{(.+?)\}/g, s: "the square root of $1" },
+    { r: /\\vec\{(.+?)\}/g, s: "vector $1" },
+    { r: /\\approx/g, s: "is approximately" }, { r: /\\neq/g, s: "is not equal to" },
+    { r: /\\leq/g, s: "less or equal" }, { r: /\\geq/g, s: "greater or equal" },
+    { r: /\\times/g, s: "times" }, { r: /\\div/g, s: "divided by" }, { r: /\\cdot/g, s: "dot" },
+    { r: /\\ce\{(.+?)\}/g, s: "$1" }, { r: /->/g, s: "yields" },
+    { r: /\*\*/g, s: "" }, { r: /__/g, s: "" }, { r: /#/g, s: "" }, { r: />/g, s: "" },
+    { r: /\\text\{(.+?)\}/g, s: "$1" }, { r: /\$\$/g, s: "" }, { r: /\$/g, s: "" }, { r: /\\/g, s: "" }
+];
 
-function filterFlashcardsByCourseAndTerm(all, course, term) {
-    const filtered = {};
-    for (const topic in all) {
-        if (all.hasOwnProperty(topic)) {
-            const cards = all[topic].filter(card => card.course === course && card.term === term);
-            if (cards.length > 0) filtered[topic] = cards;
-        }
-    }
-    return filtered;
+function humanizeLaTeX(text) {
+    let cleanText = text;
+    ttsMap.forEach(map => { cleanText = cleanText.replace(map.r, map.s); });
+    return cleanText.replace(/\s+/g, ' ').trim();
 }
-
-function shuffle(array) {
-    let currentIndex = array.length, randomIndex;
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-    }
-    return array;
-}
-
-// ============================================================
-// === 8. TEXT-TO-SPEECH ===
-// ============================================================
 
 let utterance = null;
 function updateTtsButtonText() {
@@ -1220,24 +1367,21 @@ function readCurrentQuestion() {
     if (!ttsEnabled) return;
     stopReading();
     let textToRead = "";
-    if (currentQuizType === 'mcq' || currentQuizType === 'essay') {
-        const questionElement = document.querySelector('.question-box p');
-        const optionsElements = document.querySelectorAll('.options label');
-        if (questionElement) {
-            let content = questionElement.textContent.trim();
-            if (currentQuizType === 'essay') content = content.replace(/^Q:/, "Question: "); 
-            textToRead += content;
-        }
-        if (optionsElements.length > 0) {
-            textToRead += ". Options are: ";
-            optionsElements.forEach((label, i) => {
-                const optionText = label.textContent.replace(String.fromCharCode(65 + i) + ".", "").trim();
-                textToRead += `${String.fromCharCode(65 + i)}. ${optionText}. `;
+    if (currentQuizType === 'mcq' || currentQuizType === 'shortAnswer') {
+        const qData = currentQuizData[currentQuestionIndex];
+        textToRead += "Question " + (currentQuestionIndex + 1) + ". " + humanizeLaTeX(qData.q) + ". ";
+        if (qData.options) {
+            textToRead += "Options are: ";
+            qData.options.forEach((opt, i) => {
+                textToRead += String.fromCharCode(65 + i) + ". " + humanizeLaTeX(opt) + ". ... ";
             });
         }
-    } else if (currentQuizType === 'shortAnswer') {
-        const questionElement = document.querySelector('.question-box p');
-        if (questionElement) textToRead = questionElement.textContent.trim();
+    } else if (currentQuizType === 'essay') {
+        const step = currentEssay.steps[currentStepIndex];
+        textToRead += "Step " + (currentStepIndex + 1) + ". " + humanizeLaTeX(step.q) + ". ";
+        step.options.forEach((opt, i) => {
+            textToRead += String.fromCharCode(65 + i) + ". " + humanizeLaTeX(opt) + ". ... ";
+        });
     }
     readText(textToRead);
 }
@@ -1246,86 +1390,11 @@ function readFlashcard() {
     if (!ttsEnabled) return;
     stopReading();
     const card = currentFlashcards[currentCardIndex];
-    readText(isCardFront ? `Front of card. ${card.front}` : `Back of card. ${card.back}`);
+    readText(isCardFront ? "Front: " + humanizeLaTeX(card.front) : "Back: " + humanizeLaTeX(card.back));
 }
 
 // ============================================================
-// === 9. GLOBAL EVENT HANDLERS ===
-// ============================================================
-
-document.addEventListener("keydown", (e) => {
-    if ((e.key === 'u' || e.key === 'U') && currentCourse && !hasFullAccess) {
-        e.preventDefault();
-        openPaymentModal();
-        return; 
-    }
-    
-    if (!currentQuizType) return;
-    
-    if (currentQuizType === "mcq" || currentQuizType === "essay") {
-        const options = document.querySelectorAll('input[type="radio"]');
-        const selected = document.querySelector('input[type="radio"]:checked');
-        let index = Array.from(options).indexOf(selected);
-        switch (e.key) {
-            case "ArrowDown": case "ArrowRight":
-                if (options.length) { index = (index + 1) % options.length; options[index].checked = true; } break;
-            case "ArrowUp": case "ArrowLeft":
-                if (options.length) { index = (index - 1 + options.length) % options.length; options[index].checked = true; } break;
-            case "1": case "a": case "A": if (options[0]) options[0].checked = true; break;
-            case "2": case "b": case "B": if (options[1]) options[1].checked = true; break;
-            case "3": case "c": case "C": if (options[2]) options[2].checked = true; break;
-            case "4": case "d": case "D": if (options[3]) options[3].checked = true; break;
-            case "Enter":
-                if (currentQuizType === "mcq") checkMcqAnswer();
-                if (currentQuizType === "essay") checkEssayStep();
-                break;
-            case " ": case "n": case "N":
-                const nextBtn = document.querySelector("#result button");
-                if (nextBtn) nextBtn.click();
-                break;
-        }
-    }
-    
-    if (currentQuizType === "shortAnswer" && e.key === "Enter" && !e.shiftKey) {
-        e.preventDefault(); 
-        checkShortAnswer();
-    }
-    
-    if (currentQuizType === "flashcard") {
-        switch (e.key) {
-            case "ArrowLeft": prevFlashcard(); break;
-            case "ArrowRight": nextFlashcard(); break;
-            case " ": case "Enter": flipCard(); break;
-        }
-    }
-    
-    if (e.key === "Escape") {
-        closePaymentModal();
-        closePrintPreview();
-        closeDocViewer();
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const closeBtn = document.querySelector('.close-print-preview');
-    if(closeBtn) closeBtn.addEventListener('click', closePrintPreview);
-    
-    const modal = document.getElementById('print-preview-modal');
-    if(modal) modal.addEventListener('click', function(e) {
-        if (e.target === this) closePrintPreview();
-    });
-    
-    const paymentModal = document.getElementById('payment-modal');
-    if(paymentModal) paymentModal.addEventListener('click', function(e) {
-        if (e.target === this) closePaymentModal();
-    });
-    
-    // Initialize student board
-    setTimeout(renderStudentBoard, 100);
-});
-
-// ============================================================
-// === 10. STUDENT BOARD (UNCHANGED) ===
+// === 12. GLOBAL EVENT HANDLERS & STUDENT BOARD ===
 // ============================================================
 
 function renderStudentBoard() {
@@ -1366,7 +1435,7 @@ function renderStudentBoard() {
             <div class="board-announcement-title">
                 <span>${icon}</span> ${item.title}
             </div>
-            <div class="board-announcement-body">${item.body}</div>
+            <div class="board-announcement-body">${parseKaeriMarkdown(item.body)}</div>
         `;
     } else {
         annContainer.style.display = 'none';
@@ -1389,4 +1458,79 @@ function renderStudentBoard() {
     if ((hasNews && !hasQuote) || (!hasNews && hasQuote)) {
         board.classList.add('layout-full-width');
     }
-};
+}
+
+document.addEventListener("keydown", (e) => {
+    if ((e.key === 'u' || e.key === 'U') && currentCourse && !hasFullAccess) {
+        e.preventDefault();
+        openPaymentModal();
+        return; 
+    }
+    
+    if (!currentQuizType) return;
+    
+    if (currentQuizType === "mcq" || currentQuizType === "essay") {
+        const options = document.querySelectorAll('input[type="radio"]');
+        const selected = document.querySelector('input[type="radio"]:checked');
+        let index = Array.from(options).indexOf(selected);
+        switch (e.key) {
+            case "ArrowDown": case "ArrowRight":
+                if (options.length) { index = (index + 1) % options.length; options[index].checked = true; } break;
+            case "ArrowUp": case "ArrowLeft":
+                if (options.length) { index = (index - 1 + options.length) % options.length; options[index].checked = true; } break;
+            case "1": case "a": case "A": if (options[0]) options[0].checked = true; break;
+            case "2": case "b": case "B": if (options[1]) options[1].checked = true; break;
+            case "3": case "c": case "C": if (options[2]) options[2].checked = true; break;
+            case "4": case "d": case "D": if (options[3]) options[3].checked = true; break;
+            case "Enter":
+                if (currentQuizType === "mcq") checkMcqAnswer();
+                if (currentQuizType === "essay") checkEssayStep();
+                break;
+            case " ": case "n": case "N":
+                const nextBtn = document.querySelector("#result button");
+                if (nextBtn) nextBtn.click();
+                break;
+        }
+    }
+    
+    if (currentQuizType === "shortAnswer" && e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault(); 
+        checkShortAnswer();
+    }
+    
+    if (currentQuizType === "flashcard") {
+        if (e.key === " " || e.key === "Enter") {
+             if(isCardFront) flipCard();
+        }
+        if (!isCardFront) {
+            // Updated Keybinds for SRS Ratings
+            if (e.key === "1") rateCard(0); // Again
+            if (e.key === "2") rateCard(3); // Hard
+            if (e.key === "3") rateCard(4); // Good
+            if (e.key === "4") rateCard(5); // Easy
+        }
+    }
+    
+    if (e.key === "Escape") {
+        closePaymentModal();
+        closePrintPreview();
+        closeDocViewer();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.querySelector('.close-print-preview');
+    if(closeBtn) closeBtn.addEventListener('click', closePrintPreview);
+    
+    const modal = document.getElementById('print-preview-modal');
+    if(modal) modal.addEventListener('click', function(e) {
+        if (e.target === this) closePrintPreview();
+    });
+    
+    const paymentModal = document.getElementById('payment-modal');
+    if(paymentModal) paymentModal.addEventListener('click', function(e) {
+        if (e.target === this) closePaymentModal();
+    });
+    
+    setTimeout(renderStudentBoard, 100);
+});
