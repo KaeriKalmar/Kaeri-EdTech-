@@ -163,22 +163,49 @@ function renderMath(targetId = null) {
 }
 
 // ============================================================
-// === 3. DOCUMENT DELIVERY ENGINE ===
+// === 3. DOCUMENT DELIVERY ENGINE (IMPROVED LOADER) ===
 // ============================================================
 
 function injectDocViewerHTML() {
     if (document.getElementById('smart-doc-viewer')) return;
     
     const viewerHTML = `
+    <style>
+        .kaeri-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border-left-color: #72efdd;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
     <div id="smart-doc-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center;">
-        <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:20px; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd;">
+        <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:20px; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd; position: relative;">
+            
+            <!-- HEADER -->
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #3e506e;">
-                <h3 id="viewer-title" style="color:white; margin:0; font-size:1.3em;">Document Viewer</h3>
-                <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:bold;">✕ Close</button>
+                <h3 id="viewer-title" style="color:white; margin:0; font-size:1.1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%;">Document Viewer</h3>
+                <div style="display:flex; gap:10px;">
+                    <button id="ext-open-btn" style="background:#007bff; color:white; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; font-size:0.8em; display:none;">🔗 Open External</button>
+                    <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:8px 15px; border-radius:8px; cursor:pointer; font-weight:bold;">✕</button>
+                </div>
             </div>
-            <iframe id="doc-frame" style="flex:1; width:100%; border:none; border-radius:8px; background:white;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+            <!-- LOADER OVERLAY -->
+            <div id="viewer-loader" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; z-index:10; pointer-events: none;">
+                <div class="kaeri-spinner"></div>
+                <p style="color:#a0a8b4; font-size:0.9em;">Loading Document...</p>
+                <p style="color:#666; font-size:0.7em;">(Please wait)</p>
+            </div>
+
+            <!-- IFRAME -->
+            <iframe id="doc-frame" style="flex:1; width:100%; border:none; border-radius:8px; background:white; opacity: 0; transition: opacity 0.5s ease;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            
             <div style="margin-top:10px; text-align:center; color:#888; font-size:0.8em; padding-top:10px; border-top:1px solid #3e506e;">
-                <small>Protected Content - Do not share links outside Kaeri EdTech</small>
+                <small>Protected Content - Kaeri EdTech</small>
             </div>
         </div>
     </div>`;
@@ -191,9 +218,12 @@ function openDocumentViewer(fileId, title) {
         showAppNotification("⚠️ Document link unavailable", "error");
         return;
     }
+    
     const viewer = document.getElementById('smart-doc-viewer');
     const iframe = document.getElementById('doc-frame');
     const titleEl = document.getElementById('viewer-title');
+    const loader = document.getElementById('viewer-loader');
+    const extBtn = document.getElementById('ext-open-btn');
     
     if (!viewer || !iframe) {
         injectDocViewerHTML();
@@ -201,8 +231,39 @@ function openDocumentViewer(fileId, title) {
         return;
     }
     
+    // 1. Reset UI
     titleEl.textContent = title || "Document";
-    iframe.src = `https://drive.google.com/file/d/${fileId}/preview?usp=drivesdk`;
+    loader.style.display = 'block';     
+    iframe.style.opacity = '0';         
+    if(extBtn) extBtn.style.display = 'none'; // Hide fail-safe initially
+
+    // 2. Load Source (Using Preview to hide Share buttons)
+    // We utilize /preview instead of /view to keep the UI clean
+    const url = `https://drive.google.com/file/d/${fileId}/preview`;
+    iframe.src = url;
+    
+    // 3. Setup Fail-safe Link
+    if(extBtn) {
+        extBtn.onclick = () => window.open(`https://drive.google.com/file/d/${fileId}/view`, '_blank');
+    }
+
+    // 4. Handle Load
+    iframe.onload = function() {
+        loader.style.display = 'none';  
+        iframe.style.opacity = '1';     
+    };
+
+    // 5. Timeout Safety (Zambia Network Guard)
+    // If iframe takes > 8 seconds, show the "Open External" button just in case
+    setTimeout(() => {
+        if (loader.style.display !== 'none') {
+            loader.style.display = 'none'; // Hide spinner so it doesn't annoy
+            iframe.style.opacity = '1';    // Show whatever has loaded
+            if(extBtn) extBtn.style.display = 'inline-block'; // Show escape hatch
+            showAppNotification("⚠️ Network slow? Use 'Open External' if blank.", "warning", 4000);
+        }
+    }, 8000);
+
     viewer.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     logDocumentView(title, fileId);
@@ -213,7 +274,7 @@ function closeDocViewer() {
     if (viewer) {
         viewer.style.display = 'none';
         const iframe = document.getElementById('doc-frame');
-        if (iframe) iframe.src = "";
+        if (iframe) iframe.src = ""; // Stop loading to save data
         document.body.style.overflow = 'auto';
     }
 }
