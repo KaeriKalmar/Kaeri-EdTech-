@@ -1,5 +1,5 @@
 // ============================================================
-// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.0 SRS + SMART LAYOUT) ===
+// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.5 DUAL-MODE FINAL) ===
 // === Server-Side Access + Local Content + Doc Delivery + KaTeX + Smart TTS + Markdown ===
 // ============================================================
 
@@ -21,9 +21,11 @@ let currentMcqData = [], currentShortData = [], currentEssayData = [], currentFl
 let currentCourse = null, currentTerm = null, currentTermKey = null;
 let currentQuizType = null, currentQuestionIndex = 0, currentScore = 0, currentQuizData = [];
 let currentEssay = null, currentStepIndex = 0, essayScore = 0;
-// Flashcard specific contexts
+
+// Flashcard Specific Contexts
 let currentFlashcardTopic = null, currentFlashcards = [], currentCardIndex = 0, isCardFront = true;
-let srsQueue = []; // For storing the SRS study session
+let currentFlashcardMode = 'linear'; // 'linear' or 'srs'
+let srsQueue = []; 
 
 // ============================================================
 // === 0. UNIVERSAL PARSER (Markdown -> HTML) ===
@@ -163,49 +165,22 @@ function renderMath(targetId = null) {
 }
 
 // ============================================================
-// === 3. DOCUMENT DELIVERY ENGINE (IMPROVED LOADER) ===
+// === 3. DOCUMENT DELIVERY ENGINE ===
 // ============================================================
 
 function injectDocViewerHTML() {
     if (document.getElementById('smart-doc-viewer')) return;
     
     const viewerHTML = `
-    <style>
-        .kaeri-spinner {
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border-left-color: #72efdd;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px auto;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
     <div id="smart-doc-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center;">
-        <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:20px; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd; position: relative;">
-            
-            <!-- HEADER -->
+        <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:20px; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #3e506e;">
-                <h3 id="viewer-title" style="color:white; margin:0; font-size:1.1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%;">Document Viewer</h3>
-                <div style="display:flex; gap:10px;">
-                    <button id="ext-open-btn" style="background:#007bff; color:white; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; font-size:0.8em; display:none;">🔗 Open External</button>
-                    <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:8px 15px; border-radius:8px; cursor:pointer; font-weight:bold;">✕</button>
-                </div>
+                <h3 id="viewer-title" style="color:white; margin:0; font-size:1.3em;">Document Viewer</h3>
+                <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:bold;">✕ Close</button>
             </div>
-
-            <!-- LOADER OVERLAY -->
-            <div id="viewer-loader" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; z-index:10; pointer-events: none;">
-                <div class="kaeri-spinner"></div>
-                <p style="color:#a0a8b4; font-size:0.9em;">Loading Document...</p>
-                <p style="color:#666; font-size:0.7em;">(Please wait)</p>
-            </div>
-
-            <!-- IFRAME -->
-            <iframe id="doc-frame" style="flex:1; width:100%; border:none; border-radius:8px; background:white; opacity: 0; transition: opacity 0.5s ease;" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            
+            <iframe id="doc-frame" style="flex:1; width:100%; border:none; border-radius:8px; background:white;" allow="autoplay; fullscreen" allowfullscreen></iframe>
             <div style="margin-top:10px; text-align:center; color:#888; font-size:0.8em; padding-top:10px; border-top:1px solid #3e506e;">
-                <small>Protected Content - Kaeri EdTech</small>
+                <small>Protected Content - Do not share links outside Kaeri EdTech</small>
             </div>
         </div>
     </div>`;
@@ -218,12 +193,9 @@ function openDocumentViewer(fileId, title) {
         showAppNotification("⚠️ Document link unavailable", "error");
         return;
     }
-    
     const viewer = document.getElementById('smart-doc-viewer');
     const iframe = document.getElementById('doc-frame');
     const titleEl = document.getElementById('viewer-title');
-    const loader = document.getElementById('viewer-loader');
-    const extBtn = document.getElementById('ext-open-btn');
     
     if (!viewer || !iframe) {
         injectDocViewerHTML();
@@ -231,39 +203,8 @@ function openDocumentViewer(fileId, title) {
         return;
     }
     
-    // 1. Reset UI
     titleEl.textContent = title || "Document";
-    loader.style.display = 'block';     
-    iframe.style.opacity = '0';         
-    if(extBtn) extBtn.style.display = 'none'; // Hide fail-safe initially
-
-    // 2. Load Source (Using Preview to hide Share buttons)
-    // We utilize /preview instead of /view to keep the UI clean
-    const url = `https://drive.google.com/file/d/${fileId}/preview`;
-    iframe.src = url;
-    
-    // 3. Setup Fail-safe Link
-    if(extBtn) {
-        extBtn.onclick = () => window.open(`https://drive.google.com/file/d/${fileId}/view`, '_blank');
-    }
-
-    // 4. Handle Load
-    iframe.onload = function() {
-        loader.style.display = 'none';  
-        iframe.style.opacity = '1';     
-    };
-
-    // 5. Timeout Safety (Zambia Network Guard)
-    // If iframe takes > 8 seconds, show the "Open External" button just in case
-    setTimeout(() => {
-        if (loader.style.display !== 'none') {
-            loader.style.display = 'none'; // Hide spinner so it doesn't annoy
-            iframe.style.opacity = '1';    // Show whatever has loaded
-            if(extBtn) extBtn.style.display = 'inline-block'; // Show escape hatch
-            showAppNotification("⚠️ Network slow? Use 'Open External' if blank.", "warning", 4000);
-        }
-    }, 8000);
-
+    iframe.src = `https://drive.google.com/file/d/${fileId}/preview?usp=drivesdk`;
     viewer.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     logDocumentView(title, fileId);
@@ -274,7 +215,7 @@ function closeDocViewer() {
     if (viewer) {
         viewer.style.display = 'none';
         const iframe = document.getElementById('doc-frame');
-        if (iframe) iframe.src = ""; // Stop loading to save data
+        if (iframe) iframe.src = "";
         document.body.style.overflow = 'auto';
     }
 }
@@ -607,7 +548,7 @@ function clearDemoLocks() {
 }
 
 // ============================================================
-// === 6. QUIZ ENGINE (UPDATED FOR KaTeX & SMART TTS & MARKDOWN) ===
+// === 6. QUIZ ENGINE (MCQ, SHORT ANSWER, ESSAY) ===
 // ============================================================
 
 function renderQuiz() {
@@ -1006,7 +947,7 @@ function showFinalEssayScore() {
 }
 
 // ============================================================
-// === SRS ENGINE (SPACED REPETITION - SM-2 ALGORITHM) ===
+// === 7. SRS ENGINE (SPACED REPETITION - SM-2 ALGORITHM) ===
 // ============================================================
 
 const SRS_KEY_PREFIX = "kaeri_srs_v1_";
@@ -1015,17 +956,9 @@ const SRS_KEY_PREFIX = "kaeri_srs_v1_";
 function getCardSRS(topic, cardIndex) {
     const key = `${SRS_KEY_PREFIX}${currentTermKey}`;
     const allData = JSON.parse(localStorage.getItem(key) || "{}");
-    
-    // Structure: { "TopicName": { "0": { interval: 1, reps: 0, ef: 2.5, dueDate: 1715000... } } }
     if (!allData[topic]) allData[topic] = {};
-    
-    // Default 'New Card' state
     return allData[topic][cardIndex] || { 
-        interval: 0, 
-        repetition: 0, 
-        efactor: 2.5, 
-        dueDate: 0, // 0 means "New/Unseen"
-        isNew: true
+        interval: 0, repetition: 0, efactor: 2.5, dueDate: 0, isNew: true
     };
 }
 
@@ -1042,69 +975,62 @@ function saveCardSRS(topic, cardIndex, srsData) {
 function calculateNextReview(topic, cardIndex, quality) {
     let card = getCardSRS(topic, cardIndex);
     
-    // Reset if "Again" (Forgot)
     if (quality < 3) {
         card.repetition = 0;
-        card.interval = 1; // Review tomorrow
+        card.interval = 1; 
     } else {
-        // Successful recall (Quality 3, 4, or 5)
-        
         if (card.repetition === 0) {
-            // --- NEW: JUMP START LOGIC ---
-            // If it's the FIRST time, trust the user's rating
             switch(quality) {
-                case 3: card.interval = 2; break; // Hard -> 2 days
-                case 4: card.interval = 4; break; // Good -> 4 days
-                case 5: card.interval = 7; break; // Easy -> 7 days
+                case 3: card.interval = 2; break; 
+                case 4: card.interval = 4; break; 
+                case 5: card.interval = 7; break; 
                 default: card.interval = 1;
             }
         } else if (card.repetition === 1) {
-            // Second time seeing it successfully
-            // If it was easy before, jump further, otherwise standard 6
             card.interval = (card.interval >= 6) ? Math.round(card.interval * card.efactor) : 6;
         } else {
-            // Standard SM-2 Multiplier
             card.interval = Math.round(card.interval * card.efactor);
         }
-        
         card.repetition += 1;
     }
 
-    // Update E-Factor (Easiness Factor)
-    // The previous formula was standard, this one is slightly more forgiving
     card.efactor = card.efactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
     if (card.efactor < 1.3) card.efactor = 1.3;
 
-    // Calculate Due Date (Now + Interval in Days)
     const now = new Date();
-    // Add days to current time
     card.dueDate = now.setDate(now.getDate() + card.interval);
     card.isNew = false;
 
     saveCardSRS(topic, cardIndex, card);
     return card;
 }
+
 // ============================================================
-// === FLASHCARD ENGINE (UPDATED WITH SRS & SMART LAYOUT) ===
+// === 8. FLASHCARD ENGINE - HYBRID MASTER (LINEAR + SRS) ===
 // ============================================================
 
+// --- TOPIC SELECTION & MODE CHOICE ---
 function renderFlashcardTopics() {
     const container = document.getElementById("quiz-form");
     container.innerHTML = "";
     document.getElementById("result").innerHTML = "";
     currentQuizType = 'flashcard';
     updateProgress(0, 0);
+
     if (Object.keys(currentFlashcardTopics).length === 0) {
         container.innerHTML = "<p>No flashcards available for this term.</p>";
         return;
     }
+
     const header = document.createElement("h2");
     header.innerText = "Select Flashcard Topic";
     header.style.textAlign = "center";
     header.style.marginBottom = "25px";
     container.appendChild(header);
+
     const listDiv = document.createElement('div');
     listDiv.className = 'flashcard-topic-buttons';
+    
     for (const topic in currentFlashcardTopics) {
         const btn = document.createElement("button");
         btn.textContent = topic;
@@ -1116,50 +1042,122 @@ function renderFlashcardTopics() {
 
 function attemptStartFlashcard(topic) {
     if (blockDemo('flashcard')) return;
-    startFlashcards(topic);
+    showFlashcardModeSelection(topic);
 }
 
-function startFlashcards(topic) {
-    currentFlashcardTopic = topic;
-    const allCards = currentFlashcardTopics[topic];
-    srsQueue = [];
-
+function showFlashcardModeSelection(topic) {
+    const container = document.getElementById("quiz-form");
+    const totalCards = currentFlashcardTopics[topic].length;
+    
+    // Calculate SRS Due Count
     const now = Date.now();
-    allCards.forEach((card, originalIndex) => {
-        const srs = getCardSRS(topic, originalIndex);
-        if (srs.isNew || srs.dueDate <= now) {
-            srsQueue.push({
-                ...card,
-                originalIndex: originalIndex,
-                srsData: srs
-            });
-        }
+    let dueCount = 0;
+    currentFlashcardTopics[topic].forEach((card, index) => {
+        const srs = getCardSRS(topic, index);
+        if (srs.isNew || srs.dueDate <= now) dueCount++;
     });
 
-    srsQueue.sort((a, b) => a.srsData.dueDate - b.srsData.dueDate);
+    // Render Choice Menu
+    container.innerHTML = `
+        <div style="text-align: center; animation: fadeIn 0.3s;">
+            <h2 style="margin-bottom: 10px; color: white;">🗂️ ${topic}</h2>
+            <p style="color: #a0a8b4; margin-bottom: 25px;">Choose your study method:</p>
 
-    currentFlashcards = srsQueue; 
+            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 450px; margin: 0 auto;">
+                
+                <!-- OPTION 1: LINEAR (Review All) -->
+                <button onclick="startFlashcards('${topic}', 'linear')" 
+                    style="background: #1e2a3a; border: 2px solid #72efdd; padding: 20px; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 2em;">📖</span>
+                        <div>
+                            <div style="font-size: 1.2em; color: white; font-weight: bold;">Standard Review</div>
+                            <div style="font-size: 0.9em; color: #a0a8b4; margin-top: 5px;">Review all <strong>${totalCards}</strong> cards in order. Perfect for cramming before a test.</div>
+                        </div>
+                    </div>
+                </button>
+
+                <!-- OPTION 2: SRS (Smart) -->
+                <button onclick="startFlashcards('${topic}', 'srs')" 
+                    style="background: #1e2a3a; border: 2px solid #ffc107; padding: 20px; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 2em;">🧠</span>
+                        <div style="flex: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 1.2em; color: white; font-weight: bold;">Smart SRS Mode</span>
+                                <span style="background: ${dueCount > 0 ? '#ffc107' : '#28a745'}; color: #000; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold;">${dueCount} Due</span>
+                            </div>
+                            <div style="font-size: 0.9em; color: #a0a8b4; margin-top: 5px;">Algorithm-based. Focus only on what you are about to forget.</div>
+                        </div>
+                    </div>
+                </button>
+
+            </div>
+            
+            <button class="back-button" style="margin-top: 30px; background: transparent; color: #888; border: 1px solid #3e506e; padding: 10px 20px; border-radius: 20px;" onclick="renderFlashcardTopics()">Cancel</button>
+        </div>
+    `;
+}
+
+// --- INITIALIZATION LOGIC ---
+function startFlashcards(topic, mode) {
+    currentFlashcardTopic = topic;
+    currentFlashcardMode = mode; // Store mode
     currentCardIndex = 0;
     isCardFront = true;
+    
+    const allCards = currentFlashcardTopics[topic];
 
-    if (currentFlashcards.length === 0) {
-        const container = document.getElementById("quiz-form");
-        container.innerHTML = `
-        <div style="text-align: center;">
-            <h2>🎉 Caught Up!</h2>
-            <p>You have no cards due for review right now.</p>
-            <p>Check back tomorrow or start another topic.</p>
-            <button class="restart-button" onclick="renderFlashcardTopics()">Back to Topics</button>
-        </div>`;
-        return;
+    if (mode === 'srs') {
+        // --- SRS PATH: Filter & Sort ---
+        srsQueue = [];
+        const now = Date.now();
+        allCards.forEach((card, originalIndex) => {
+            const srs = getCardSRS(topic, originalIndex);
+            if (srs.isNew || srs.dueDate <= now) {
+                srsQueue.push({
+                    ...card,
+                    originalIndex: originalIndex,
+                    srsData: srs
+                });
+            }
+        });
+
+        // If no cards due
+        if (srsQueue.length === 0) {
+            const container = document.getElementById("quiz-form");
+            container.innerHTML = `
+            <div style="text-align: center; animation: fadeIn 0.5s;">
+                <h2 style="font-size: 3em; margin-bottom: 10px;">🎉</h2>
+                <h2 style="color: #28a745;">You're Caught Up!</h2>
+                <p style="color: #a0a8b4; max-width: 400px; margin: 10px auto;">You have no cards due for review right now in SRS mode.</p>
+                <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+                    <button class="restart-button" onclick="startFlashcards('${topic}', 'linear')">📖 Switch to Standard Review</button>
+                    <button class="back-button" onclick="renderFlashcardTopics()">⬅ Back to Topics</button>
+                </div>
+            </div>`;
+            return;
+        }
+
+        srsQueue.sort((a, b) => a.srsData.dueDate - b.srsData.dueDate);
+        currentFlashcards = srsQueue;
+
+    } else {
+        // --- LINEAR PATH: Load All ---
+        currentFlashcards = allCards.map((card, index) => ({
+            ...card,
+            originalIndex: index
+        }));
     }
 
     displayFlashcard();
 }
 
+// --- DISPLAY ENGINE (HYBRID UI) ---
 function displayFlashcard() {
     const container = document.getElementById("quiz-form");
     
+    // Check completion
     if (currentCardIndex >= currentFlashcards.length) {
         return showFlashcardCompletion();
     }
@@ -1167,23 +1165,24 @@ function displayFlashcard() {
     const cardObj = currentFlashcards[currentCardIndex]; 
     updateProgress(currentCardIndex + 1, currentFlashcards.length);
     
-    // --- SMART LAYOUT ANALYZER ---
+    // Smart Layout Analyzer
     function getLayoutClass(text) {
         const hasBlockMath = /\$\$|\\\[/.test(text);
         const hasList = /^- /m.test(text) || /<ul>|<ol>|<li>/.test(parseKaeriMarkdown(text));
         const isLong = text.length > 120;
-
-        if (hasBlockMath || hasList || isLong) {
-            return "layout-detailed";
-        }
-        return "layout-center";
+        return (hasBlockMath || hasList || isLong) ? "layout-detailed" : "layout-center";
     }
 
     const frontLayout = getLayoutClass(cardObj.front);
     const backLayout = getLayoutClass(cardObj.back);
+    const modeLabel = currentFlashcardMode === 'srs' ? "🧠 SRS Study" : "📖 Standard Review";
 
+    // RENDER CARD HTML
     let html = `
-        <h3>🧠 SRS Study: ${currentFlashcardTopic} (${currentCardIndex + 1} / ${currentFlashcards.length})</h3>
+        <h3 style="color: #a0a8b4; font-size: 0.9em; letter-spacing: 1px; text-transform: uppercase;">
+            ${modeLabel}: ${currentFlashcardTopic} <span style="color: white;">(${currentCardIndex + 1} / ${currentFlashcards.length})</span>
+        </h3>
+        
         <div class="flashcard-wrapper">
             <div class="flashcard ${isCardFront ? '' : 'back-active'}" onclick="flipCard()">
                 
@@ -1202,41 +1201,87 @@ function displayFlashcard() {
         </div>
     `;
 
-    // SRS CONTROLS
-    html += `<div class="flashcard-nav-buttons" style="margin-top: 20px;">`;
+    // --- CONTROLS SECTION (THE HYBRID PART) ---
+    html += `<div class="flashcard-nav-buttons" style="margin-top: 25px;">`;
 
-    if (isCardFront) {
-        html += `<button onclick="flipCard()" style="width:100%; background:#007bff; color:white;">🔄 Show Answer</button>`;
-    } else {
+    if (currentFlashcardMode === 'linear') {
+        // === LINEAR CONTROLS (Prev / Flip / Next) ===
+        const isLast = currentCardIndex === currentFlashcards.length - 1;
         html += `
-            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:8px; width:100%;">
-                <button onclick="rateCard(0)" style="background:#dc3545; font-size:0.8em; padding:12px 2px; border-radius:6px;">❌ Again<br><small style="opacity:0.7">1d</small></button>
-                <button onclick="rateCard(3)" style="background:#ffc107; color:#333; font-size:0.8em; padding:12px 2px; border-radius:6px;">😬 Hard<br><small style="opacity:0.7">2d</small></button>
-                <button onclick="rateCard(4)" style="background:#28a745; font-size:0.8em; padding:12px 2px; border-radius:6px;">✅ Good<br><small style="opacity:0.7">4d</small></button>
-                <button onclick="rateCard(5)" style="background:#17a2b8; font-size:0.8em; padding:12px 2px; border-radius:6px;">🚀 Easy<br><small style="opacity:0.7">7d</small></button>
-            </div>
+            <button onclick="prevFlashcard()" ${currentCardIndex === 0 ? 'disabled' : ''} 
+                style="background: #3e506e; border-radius: 8px; font-weight: bold;">⬅️ Prev</button>
+            
+            <button onclick="flipCard()" 
+                style="background: #007bff; flex: 2; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 0 #0056b3;">🔄 Flip Card</button>
+            
+            <button onclick="nextFlashcard()" 
+                style="background: ${isLast ? '#28a745' : '#3e506e'}; border-radius: 8px; font-weight: bold;">
+                ${isLast ? 'Finish 🏁' : 'Next ➡️'}
+            </button>
         `;
+    } else {
+        // === SRS CONTROLS (Show / Rate) ===
+        if (isCardFront) {
+            html += `<button onclick="flipCard()" style="width:100%; background:#007bff; padding: 15px; border-radius: 8px; font-weight: bold; color:white; box-shadow: 0 4px 0 #0056b3;">🔄 Show Answer</button>`;
+        } else {
+            html += `
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:10px; width:100%;">
+                    <button onclick="rateCard(0)" style="background:#dc3545; color: white; font-size:0.8em; padding:12px 2px; border-radius:8px;">❌ Again<br><small style="opacity:0.8">1d</small></button>
+                    <button onclick="rateCard(3)" style="background:#ffc107; color: #333; font-size:0.8em; padding:12px 2px; border-radius:8px;">😬 Hard<br><small style="opacity:0.8">2d</small></button>
+                    <button onclick="rateCard(4)" style="background:#28a745; color: white; font-size:0.8em; padding:12px 2px; border-radius:8px;">✅ Good<br><small style="opacity:0.8">4d</small></button>
+                    <button onclick="rateCard(5)" style="background:#17a2b8; color: white; font-size:0.8em; padding:12px 2px; border-radius:8px;">🚀 Easy<br><small style="opacity:0.8">7d</small></button>
+                </div>
+            `;
+        }
     }
     
     html += `</div>`;
-    html += `<button class="back-to-topics-button" onclick="renderFlashcardTopics()">⬅️ Back to Topics</button>`;
+    html += `<button class="back-to-topics-button" style="margin-top: 20px; background: transparent; color: #888;" onclick="renderFlashcardTopics()">⬅️ Back to Topics</button>`;
 
     container.innerHTML = html;
     
-    renderMath();
+    renderMath(); // KaTeX
     container.scrollIntoView({ behavior: "smooth" });
-    readFlashcard();
+    readFlashcard(); // Smart TTS
 }
 
+// --- NAVIGATION HELPERS ---
 function flipCard() { 
     isCardFront = !isCardFront; 
     displayFlashcard(); 
 }
 
+function prevFlashcard() { 
+    if (currentFlashcardMode !== 'linear') return; // Safety
+    if (currentCardIndex > 0) { 
+        currentCardIndex--; 
+        isCardFront = true; 
+        displayFlashcard(); 
+    } 
+}
+
+function nextFlashcard() { 
+    if (currentFlashcardMode !== 'linear') return; // Safety
+    if (currentCardIndex < currentFlashcards.length - 1) { 
+        currentCardIndex++; 
+        isCardFront = true; 
+        displayFlashcard(); 
+    } else { 
+        showFlashcardCompletion(); 
+    } 
+}
+
 function rateCard(quality) {
+    if (currentFlashcardMode !== 'srs') return; // Safety
     const cardObj = currentFlashcards[currentCardIndex];
+    // Calculate new date
     const result = calculateNextReview(currentFlashcardTopic, cardObj.originalIndex, quality);
-    showAppNotification(`Scheduled for: ${Math.round(result.interval)} days`, "info", 1000);
+    
+    // Feedback Toast
+    const days = Math.round(result.interval);
+    const msg = days === 1 ? "Review tomorrow" : `Review in ${days} days`;
+    showAppNotification(`📅 ${msg}`, "info", 1500);
+    
     currentCardIndex++;
     isCardFront = true;
     displayFlashcard();
@@ -1244,13 +1289,31 @@ function rateCard(quality) {
 
 function showFlashcardCompletion() {
     const container = document.getElementById("quiz-form");
+    const msg = currentFlashcardMode === 'srs' 
+        ? "You have reviewed all due cards for today." 
+        : "You have reviewed all cards in this topic.";
+
     container.innerHTML = `
-        <div style="text-align: center;">
+        <div style="text-align: center; animation: fadeIn 0.5s;">
             <h2>Session Complete!</h2>
-            <p>You have reviewed all due cards for "<strong>${currentFlashcardTopic}</strong>".</p>
+            <p>${msg}</p>
         </div>
     `;
     updateProgress(currentFlashcards.length, currentFlashcards.length);
+
+    // Dynamic buttons based on mode
+    const restartBtn = document.createElement("button");
+    restartBtn.innerText = "🔁 Review Again";
+    restartBtn.className = "restart-button";
+    restartBtn.style.marginRight = "10px";
+    restartBtn.onclick = () => attemptStartFlashcard(currentFlashcardTopic); // Go back to choice
+    container.appendChild(restartBtn);
+
+    const challengeBtn = document.createElement("button");
+    challengeBtn.innerHTML = "⚔️ Challenge a Friend";
+    challengeBtn.className = "challenge-button";
+    challengeBtn.onclick = () => challengeFriend(currentFlashcards.length, 0, "Flashcards");
+    container.appendChild(challengeBtn);
 
     const backBtn = document.createElement("button");
     backBtn.innerText = "⬅️ Back to Topics";
@@ -1260,7 +1323,7 @@ function showFlashcardCompletion() {
 }
 
 // ============================================================
-// === 7. SMART FEATURES & PRINT ===
+// === 9. SMART FEATURES & PRINT ===
 // ============================================================
 
 function challengeFriend(score, total, modeName) {
@@ -1347,7 +1410,7 @@ function closePrintPreview() {
 }
 
 // ============================================================
-// === 8. UTILITIES ===
+// === 10. UTILITIES ===
 // ============================================================
 
 function filterDataByCourseAndTerm(data, course, term) {
@@ -1377,7 +1440,7 @@ function shuffle(array) {
 }
 
 // ============================================================
-// === 9. TEXT-TO-SPEECH (SMART HUMAN ENGINE) ===
+// === 11. TEXT-TO-SPEECH (SMART HUMAN ENGINE) ===
 // ============================================================
 
 const ttsMap = [
@@ -1466,7 +1529,7 @@ function readFlashcard() {
 }
 
 // ============================================================
-// === 10. GLOBAL EVENT HANDLERS & STUDENT BOARD ===
+// === 12. GLOBAL EVENT HANDLERS & STUDENT BOARD ===
 // ============================================================
 
 function renderStudentBoard() {
@@ -1572,13 +1635,23 @@ document.addEventListener("keydown", (e) => {
     
     if (currentQuizType === "flashcard") {
         if (e.key === " " || e.key === "Enter") {
-             if(isCardFront) flipCard();
+             e.preventDefault(); // Stop scrolling
+             if (isCardFront) flipCard();
+             else if (currentFlashcardMode === 'linear') flipCard(); // Allow flip back in linear
         }
-        if (!isCardFront) {
-            if (e.key === "1") rateCard(0);
-            if (e.key === "2") rateCard(3);
-            if (e.key === "3") rateCard(4);
-            if (e.key === "4") rateCard(5);
+
+        if (currentFlashcardMode === 'linear') {
+            // Linear Shortcuts
+            if (e.key === "ArrowLeft") prevFlashcard();
+            if (e.key === "ArrowRight") nextFlashcard();
+        } else {
+            // SRS Shortcuts (Only when answer shown)
+            if (!isCardFront) {
+                if (e.key === "1") rateCard(0);
+                if (e.key === "2") rateCard(3);
+                if (e.key === "3") rateCard(4);
+                if (e.key === "4") rateCard(5);
+            }
         }
     }
     
