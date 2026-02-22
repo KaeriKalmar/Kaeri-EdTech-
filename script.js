@@ -1,5 +1,5 @@
 // ============================================================
-// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.5 DUAL-MODE FINAL) ===
+// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.0 SRS + SMART LAYOUT) ===
 // === Server-Side Access + Local Content + Doc Delivery + KaTeX + Smart TTS + Markdown ===
 // ============================================================
 
@@ -21,11 +21,9 @@ let currentMcqData = [], currentShortData = [], currentEssayData = [], currentFl
 let currentCourse = null, currentTerm = null, currentTermKey = null;
 let currentQuizType = null, currentQuestionIndex = 0, currentScore = 0, currentQuizData = [];
 let currentEssay = null, currentStepIndex = 0, essayScore = 0;
-
-// Flashcard Specific Contexts
+// Flashcard specific contexts
 let currentFlashcardTopic = null, currentFlashcards = [], currentCardIndex = 0, isCardFront = true;
-let currentFlashcardMode = 'linear'; // 'linear' or 'srs'
-let srsQueue = []; 
+let srsQueue = []; // For storing the SRS study session
 
 // ============================================================
 // === 0. UNIVERSAL PARSER (Markdown -> HTML) ===
@@ -240,9 +238,129 @@ function logDocumentView(title, fileId) {
     } catch (e) {}
 }
 
-async function renderDocuments() {
-    if (blockDemo('documents')) return; 
+// ============================================================
+// === NEW: Document Access Control & Quiz Starter Helpers ===
+// ============================================================
 
+// Document access bouncer - controls who can open documents
+function attemptOpenDoc(fileId, title) {
+    if (hasFullAccess) {
+        // Paid user: open normally
+        openDocumentViewer(fileId, title);
+    } else {
+        // Free user: show message and payment modal
+        showAppNotification("⚠️ Documents are only accessible in Full Access mode.", "warning", 2500);
+        setTimeout(() => {
+            openPaymentModal();
+        }, 1000);
+    }
+}
+
+// MCQ starter - initializes quiz with specified number of questions
+function startActualMcq(limit) {
+    const container = document.getElementById("quiz-form");
+    container.innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    
+    let q = shuffle([...currentMcqData]).slice(0, limit);
+    currentQuizData = q;
+    currentQuizType = 'mcq';
+    currentQuestionIndex = 0;
+    currentScore = 0;
+    
+    if (q.length === 0) {
+        container.innerHTML = "<p>No questions available.</p>";
+        updateProgress(0, 0);
+        return;
+    }
+    displayMcqQuestion();
+}
+
+// Short Answer starter - initializes with specified number of questions
+function startActualShortAnswer(limit) {
+    const container = document.getElementById("quiz-form");
+    container.innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    
+    let q = shuffle([...currentShortData]).slice(0, limit);
+    currentQuizData = q;
+    currentQuizType = 'shortAnswer';
+    currentQuestionIndex = 0;
+    currentScore = 0;
+    
+    if (q.length === 0) {
+        container.innerHTML = "<p>No short answer questions available.</p>";
+        updateProgress(0, 0);
+        return;
+    }
+    displayShortAnswerQuestion();
+}
+
+// Step selector for MCQ preset buttons
+function selectQuizStep(step, label) {
+    const totalAvailable = currentMcqData.length;
+    const finalCount = (step > totalAvailable) ? totalAvailable : step;
+    showAppNotification(`🎯 Starting ${finalCount} question quiz`, "success", 1500);
+    setTimeout(() => startActualMcq(finalCount), 500);
+}
+
+// Step selector for Short Answer preset buttons
+function selectShortAnswerStep(step, label) {
+    const totalAvailable = currentShortData.length;
+    const finalCount = (step > totalAvailable) ? totalAvailable : step;
+    showAppNotification(`🎯 Starting ${finalCount} question practice`, "success", 1500);
+    setTimeout(() => startActualShortAnswer(finalCount), 500);
+}
+
+// Custom number handler for MCQ
+function startCustomQuiz() {
+    const input = document.getElementById('custom-q-count');
+    if (!input) return;
+    
+    let requestedCount = parseInt(input.value);
+    const totalAvailable = currentMcqData.length;
+    
+    if (isNaN(requestedCount) || requestedCount < 1) {
+        showAppNotification("⚠️ Please enter a valid number", "warning");
+        return;
+    }
+    
+    if (requestedCount > totalAvailable) {
+        showAppNotification(`ℹ️ Only ${totalAvailable} available. Using all.`, "info", 2000);
+        requestedCount = totalAvailable;
+    }
+    
+    startActualMcq(requestedCount);
+}
+
+// Custom number handler for Short Answer
+function startCustomShortAnswer() {
+    const input = document.getElementById('custom-sa-count');
+    if (!input) return;
+    
+    let requestedCount = parseInt(input.value);
+    const totalAvailable = currentShortData.length;
+    
+    if (isNaN(requestedCount) || requestedCount < 1) {
+        showAppNotification("⚠️ Please enter a valid number", "warning");
+        return;
+    }
+    
+    if (requestedCount > totalAvailable) {
+        showAppNotification(`ℹ️ Only ${totalAvailable} available. Using all.`, "info", 2000);
+        requestedCount = totalAvailable;
+    }
+    
+    startActualShortAnswer(requestedCount);
+}
+
+// ============================================================
+// === MODIFIED: Document Renderer (Now shows locked preview) ===
+// ============================================================
+
+async function renderDocuments() {
+    // NOTE: blockDemo check removed - everyone sees the list!
+    
     const container = document.getElementById("quiz-form");
     container.innerHTML = `
         <div style="text-align:center; padding:40px;">
@@ -269,26 +387,43 @@ async function renderDocuments() {
         
         const data = await response.json();
         const documents = data.documents || (data.data && data.data.documents) || [];
-        const success = data.success || false;
         
-        if (!success || documents.length === 0) {
+        if (documents.length === 0) {
             container.innerHTML = `<div style="text-align:center; padding:30px;"><h3>📂 Library Empty</h3><p>No active documents found.</p><button class="restart-button" onclick="backToMenu()">Back to Menu</button></div>`;
             return;
         }
 
         let html = `<h2 style="text-align:center; margin-bottom:20px;">📚 ${currentCourse} Library</h2>`;
+        
+        // Add status banner for free users
+        if (!hasFullAccess) {
+            html += `
+                <div style="background:#2b3a55; border-left:6px solid #ffc107; padding:15px; border-radius:8px; margin-bottom:20px;">
+                    <p style="margin:0; color:#ffc107; font-weight:bold;">🔒 Preview Mode</p>
+                    <p style="margin:5px 0 0 0; font-size:0.9em;">Documents are visible but locked. Unlock Full Access to view them.</p>
+                </div>`;
+        }
+        
         html += `<div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:15px; padding:20px 0;">`;
 
         documents.forEach(doc => {
             const shortDesc = doc.description ? (doc.description.length > 80 ? doc.description.substring(0, 80) + '...' : doc.description) : '';
+            
+            // Dynamic styling based on access
+            const lockIcon = hasFullAccess ? "👁️ Open" : "🔒 Locked";
+            const lockColor = hasFullAccess ? "#28a745" : "#dc3545";
+            const cardOpacity = hasFullAccess ? "1" : "0.75";
+            
             html += `
-            <div class="doc-card" onclick="openDocumentViewer('${doc.fileId}', '${doc.title.replace(/'/g, "\\'")}')" style="background:#2b3a55; padding:15px; border-radius:10px; border-left:5px solid #28a745; cursor:pointer; transition:0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <div style="font-size:0.7em; text-transform:uppercase; color:#28a745; font-weight:bold; letter-spacing:1px; margin-bottom:5px;">${doc.topic || 'General'}</div>
+            <div class="doc-card" onclick="attemptOpenDoc('${doc.fileId}', '${doc.title.replace(/'/g, "\\'")}')" 
+                 style="background:#2b3a55; padding:15px; border-radius:10px; border-left:5px solid ${lockColor}; 
+                        cursor:pointer; transition:0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.2); opacity: ${cardOpacity};">
+                <div style="font-size:0.7em; text-transform:uppercase; color:${lockColor}; font-weight:bold; letter-spacing:1px; margin-bottom:5px;">${doc.topic || 'General'}</div>
                 <div style="font-size:1.1em; font-weight:bold; color:white; margin-bottom:8px; line-height:1.3;">${doc.title}</div>
                 <div style="font-size:0.85em; color:#a0a8b4; margin-bottom:10px;">${shortDesc}</div>
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; border-top:1px solid #3e506e; padding-top:10px;">
                     <span style="background:#0d1b2a; padding:2px 8px; border-radius:4px; font-size:0.7em; color:#fff;">${doc.type || 'FILE'} • ${doc.size || 'Unknown'}</span>
-                    <span style="color:#28a745; font-size:0.9em; font-weight:bold;">👁️ Open</span>
+                    <span style="color:${lockColor}; font-size:0.9em; font-weight:bold;">${lockIcon}</span>
                 </div>
             </div>`;
         });
@@ -300,6 +435,165 @@ async function renderDocuments() {
     } catch (e) {
         container.innerHTML = `<div style="text-align:center; padding:20px; color:#dc3545;"><h3>⚠️ Connection Error</h3><p>Could not load library.</p><button class="restart-button" onclick="renderDocuments()">Try Again</button></div>`;
     }
+}
+
+// ============================================================
+// === MODIFIED: Quiz Renderers with Tiered Access ===
+// ============================================================
+
+function renderQuiz() {
+    // FREE USER: Fixed at 10 questions
+    if (!hasFullAccess) {
+        if (blockDemo('mcq')) return;
+        startActualMcq(10);
+        return;
+    }
+    
+    // PAID USER: Show setup screen with preset buttons
+    const container = document.getElementById("quiz-form");
+    const totalAvailable = currentMcqData.length;
+    
+    if (totalAvailable <= 5) {
+        startActualMcq(totalAvailable);
+        return;
+    }
+    
+    const steps = [5, 10, 20, 30, 40, 50, totalAvailable];
+    const stepLabels = ['5', '10', '20', '30', '40', '50', 'ALL'];
+    
+    container.innerHTML = `
+        <div style="background:#1e2a3a; padding:30px; border-radius:15px; border:2px solid #72efdd; text-align:center; max-width:450px; margin:20px auto;">
+            <h2 style="color:white; margin-bottom:10px;">⚙️ Premium Quiz Setup</h2>
+            <p style="color:#a0a8b4; margin-bottom:20px;">Choose your challenge size</p>
+            
+            <div style="margin:30px 0;">
+                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:20px 0;">
+                    ${steps.map((step, index) => `
+                        <button onclick="selectQuizStep(${step}, '${stepLabels[index]}')" 
+                            style="flex:1; min-width:45px; background:${step === 10 ? '#28a745' : '#2b3a55'}; 
+                                   color:white; border:none; padding:12px 8px; border-radius:8px; 
+                                   font-weight:bold; cursor:pointer;">
+                            ${stepLabels[index]}
+                        </button>
+                    `).join('')}
+                </div>
+                
+                <div style="margin-top:25px; padding-top:20px; border-top:1px solid #3e506e;">
+                    <p style="color:#a0a8b4; margin-bottom:10px;">Or custom number:</p>
+                    <div style="display:flex; gap:10px;">
+                        <input type="number" id="custom-q-count" min="1" max="${totalAvailable}" value="10" 
+                               style="flex:2; padding:12px; border-radius:8px; border:1px solid #3e506e; 
+                                      background:#0d1b2a; color:white;">
+                        <button onclick="startCustomQuiz()" 
+                                style="flex:1; background:#007bff; color:white; border:none; 
+                                       padding:12px; border-radius:8px; font-weight:bold; cursor:pointer;">
+                            Go
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="margin-top:20px; color:#72efdd; background:#0d1b2a; padding:10px; border-radius:6px;">
+                    📊 ${totalAvailable} questions available
+                </div>
+            </div>
+            
+            <div style="margin-top:20px;">
+                <button onclick="backToMenu()" class="back-button" style="margin-top:0;">⬅️ Back</button>
+            </div>
+        </div>
+    `;
+}
+
+function renderShortAnswers() {
+    // FREE USER: Fixed at 10 questions
+    if (!hasFullAccess) {
+        if (blockDemo('shortAnswer')) return;
+        startActualShortAnswer(10);
+        return;
+    }
+    
+    // PAID USER: Show setup screen with preset buttons
+    const totalAvailable = currentShortData.length;
+    
+    if (totalAvailable <= 5) {
+        startActualShortAnswer(totalAvailable);
+        return;
+    }
+    
+    const container = document.getElementById("quiz-form");
+    const steps = [5, 10, 20, 30, 40, 50, totalAvailable];
+    const stepLabels = ['5', '10', '20', '30', '40', '50', 'ALL'];
+    
+    container.innerHTML = `
+        <div style="background:#1e2a3a; padding:30px; border-radius:15px; border:2px solid #ffc107; text-align:center; max-width:450px; margin:20px auto;">
+            <h2 style="color:white; margin-bottom:10px;">✍️ Premium Short Answer Setup</h2>
+            <p style="color:#a0a8b4; margin-bottom:20px;">Choose your practice size</p>
+            
+            <div style="margin:30px 0;">
+                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:20px 0;">
+                    ${steps.map((step, index) => `
+                        <button onclick="selectShortAnswerStep(${step}, '${stepLabels[index]}')" 
+                            style="flex:1; min-width:45px; background:${step === 10 ? '#28a745' : '#2b3a55'}; 
+                                   color:white; border:none; padding:12px 8px; border-radius:8px; 
+                                   font-weight:bold; cursor:pointer;">
+                            ${stepLabels[index]}
+                        </button>
+                    `).join('')}
+                </div>
+                
+                <div style="margin-top:25px; padding-top:20px; border-top:1px solid #3e506e;">
+                    <p style="color:#a0a8b4; margin-bottom:10px;">Custom number:</p>
+                    <div style="display:flex; gap:10px;">
+                        <input type="number" id="custom-sa-count" min="1" max="${totalAvailable}" value="10" 
+                               style="flex:2; padding:12px; border-radius:8px; border:1px solid #3e506e; 
+                                      background:#0d1b2a; color:white;">
+                        <button onclick="startCustomShortAnswer()" 
+                                style="flex:1; background:#007bff; color:white; border:none; 
+                                       padding:12px; border-radius:8px; font-weight:bold; cursor:pointer;">
+                            Go
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="margin-top:20px; color:#ffc107; background:#0d1b2a; padding:10px; border-radius:6px;">
+                    📚 ${totalAvailable} questions available
+                </div>
+            </div>
+            
+            <div style="margin-top:20px;">
+                <button onclick="backToMenu()" class="back-button" style="margin-top:0;">⬅️ Back</button>
+            </div>
+        </div>
+    `;
+}
+
+// ============================================================
+// === MODIFIED: Demo Limit Function (Documents bypass) ===
+// ============================================================
+
+function blockDemo(type) {
+    // Documents are always visible (just locked), so don't count attempts
+    if (type === 'documents') return false;
+    
+    if (hasFullAccess) return false;
+    
+    const key = `demo_${type}_used_${currentTermKey}`;
+    let attempts = parseInt(localStorage.getItem(key) || "0");
+    const maxAttempts = 10;
+    const attemptsLeft = maxAttempts - attempts;
+    
+    if (attempts < maxAttempts) {
+        showAppNotification(`Demo Mode: ${attemptsLeft} attempts remaining.`, "info", 2000);
+    }
+    
+    if (attempts >= maxAttempts) {
+        showAppNotification(`Demo limit reached. Unlock Full Access!`, "warning");
+        openPaymentModal(); 
+        return true;
+    }
+    
+    localStorage.setItem(key, attempts + 1);
+    return false;
 }
 
 // ============================================================
@@ -360,28 +654,6 @@ async function verifyCodeFromModal() {
     } catch (e) {
         showAppNotification("⚠️ Connection Error. Check internet.", "error");
     }
-}
-
-function blockDemo(type) {
-    if (hasFullAccess) return false;
-    
-    const key = `demo_${type}_used_${currentTermKey}`;
-    let attempts = parseInt(localStorage.getItem(key) || "0");
-    const maxAttempts = 10;
-    const attemptsLeft = maxAttempts - attempts;
-    
-    if (attempts < maxAttempts) {
-        showAppNotification(`Demo Mode: ${attemptsLeft} attempts remaining.`, "info", 2000);
-    }
-    
-    if (attempts >= maxAttempts) {
-        showAppNotification(`Demo limit reached. Unlock Full Access!`, "warning");
-        openPaymentModal(); 
-        return true;
-    }
-    
-    localStorage.setItem(key, attempts + 1);
-    return false;
 }
 
 // ============================================================
@@ -548,26 +820,8 @@ function clearDemoLocks() {
 }
 
 // ============================================================
-// === 6. QUIZ ENGINE (MCQ, SHORT ANSWER, ESSAY) ===
+// === 6. QUIZ ENGINE (Unchanged - Works with new starters) ===
 // ============================================================
-
-function renderQuiz() {
-    if (blockDemo('mcq')) return;
-    const container = document.getElementById("quiz-form");
-    container.innerHTML = "";
-    document.getElementById("result").innerHTML = "";
-    let q = shuffle([...currentMcqData]).slice(0, 10);
-    currentQuizData = q;
-    currentQuizType = 'mcq';
-    currentQuestionIndex = 0;
-    currentScore = 0;
-    if (q.length === 0) {
-        container.innerHTML = "<p>No questions available.</p>";
-        updateProgress(0, 0);
-        return;
-    }
-    displayMcqQuestion();
-}
 
 function displayMcqQuestion() {
     isSubmissionLocked = false; 
@@ -671,24 +925,6 @@ function showFinalMcqScore() {
     previewBtn.style.marginLeft = "10px";
     previewBtn.onclick = generatePrintPreview;
     container.appendChild(previewBtn);
-}
-
-function renderShortAnswers() {
-    if (blockDemo('shortAnswer')) return;
-    const container = document.getElementById("quiz-form");
-    container.innerHTML = "";
-    document.getElementById("result").innerHTML = "";
-    let q = shuffle([...currentShortData]).slice(0, 10);
-    currentQuizData = q;
-    currentQuizType = 'shortAnswer';
-    currentQuestionIndex = 0;
-    currentScore = 0;
-    if (q.length === 0) {
-        container.innerHTML = "<p>No short answer questions available.</p>";
-        updateProgress(0, 0);
-        return;
-    }
-    displayShortAnswerQuestion();
 }
 
 function displayShortAnswerQuestion() {
@@ -947,7 +1183,7 @@ function showFinalEssayScore() {
 }
 
 // ============================================================
-// === 7. SRS ENGINE (SPACED REPETITION - SM-2 ALGORITHM) ===
+// === SRS ENGINE (SPACED REPETITION - SM-2 ALGORITHM) ===
 // ============================================================
 
 const SRS_KEY_PREFIX = "kaeri_srs_v1_";
@@ -956,9 +1192,17 @@ const SRS_KEY_PREFIX = "kaeri_srs_v1_";
 function getCardSRS(topic, cardIndex) {
     const key = `${SRS_KEY_PREFIX}${currentTermKey}`;
     const allData = JSON.parse(localStorage.getItem(key) || "{}");
+    
+    // Structure: { "TopicName": { "0": { interval: 1, reps: 0, ef: 2.5, dueDate: 1715000... } } }
     if (!allData[topic]) allData[topic] = {};
+    
+    // Default 'New Card' state
     return allData[topic][cardIndex] || { 
-        interval: 0, repetition: 0, efactor: 2.5, dueDate: 0, isNew: true
+        interval: 0, 
+        repetition: 0, 
+        efactor: 2.5, 
+        dueDate: 0, // 0 means "New/Unseen"
+        isNew: true
     };
 }
 
@@ -975,62 +1219,69 @@ function saveCardSRS(topic, cardIndex, srsData) {
 function calculateNextReview(topic, cardIndex, quality) {
     let card = getCardSRS(topic, cardIndex);
     
+    // Reset if "Again" (Forgot)
     if (quality < 3) {
         card.repetition = 0;
-        card.interval = 1; 
+        card.interval = 1; // Review tomorrow
     } else {
+        // Successful recall (Quality 3, 4, or 5)
+        
         if (card.repetition === 0) {
+            // --- NEW: JUMP START LOGIC ---
+            // If it's the FIRST time, trust the user's rating
             switch(quality) {
-                case 3: card.interval = 2; break; 
-                case 4: card.interval = 4; break; 
-                case 5: card.interval = 7; break; 
+                case 3: card.interval = 2; break; // Hard -> 2 days
+                case 4: card.interval = 4; break; // Good -> 4 days
+                case 5: card.interval = 7; break; // Easy -> 7 days
                 default: card.interval = 1;
             }
         } else if (card.repetition === 1) {
+            // Second time seeing it successfully
+            // If it was easy before, jump further, otherwise standard 6
             card.interval = (card.interval >= 6) ? Math.round(card.interval * card.efactor) : 6;
         } else {
+            // Standard SM-2 Multiplier
             card.interval = Math.round(card.interval * card.efactor);
         }
+        
         card.repetition += 1;
     }
 
+    // Update E-Factor (Easiness Factor)
+    // The previous formula was standard, this one is slightly more forgiving
     card.efactor = card.efactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
     if (card.efactor < 1.3) card.efactor = 1.3;
 
+    // Calculate Due Date (Now + Interval in Days)
     const now = new Date();
+    // Add days to current time
     card.dueDate = now.setDate(now.getDate() + card.interval);
     card.isNew = false;
 
     saveCardSRS(topic, cardIndex, card);
     return card;
 }
-
 // ============================================================
-// === 8. FLASHCARD ENGINE - HYBRID MASTER (LINEAR + SRS) ===
+// === FLASHCARD ENGINE (UPDATED WITH SRS & SMART LAYOUT) ===
 // ============================================================
 
-// --- TOPIC SELECTION & MODE CHOICE ---
 function renderFlashcardTopics() {
     const container = document.getElementById("quiz-form");
     container.innerHTML = "";
     document.getElementById("result").innerHTML = "";
     currentQuizType = 'flashcard';
     updateProgress(0, 0);
-
     if (Object.keys(currentFlashcardTopics).length === 0) {
         container.innerHTML = "<p>No flashcards available for this term.</p>";
         return;
     }
-
     const header = document.createElement("h2");
     header.innerText = "Select Flashcard Topic";
     header.style.textAlign = "center";
     header.style.marginBottom = "25px";
     container.appendChild(header);
-
     const listDiv = document.createElement('div');
     listDiv.className = 'flashcard-topic-buttons';
-    
     for (const topic in currentFlashcardTopics) {
         const btn = document.createElement("button");
         btn.textContent = topic;
@@ -1042,122 +1293,50 @@ function renderFlashcardTopics() {
 
 function attemptStartFlashcard(topic) {
     if (blockDemo('flashcard')) return;
-    showFlashcardModeSelection(topic);
+    startFlashcards(topic);
 }
 
-function showFlashcardModeSelection(topic) {
-    const container = document.getElementById("quiz-form");
-    const totalCards = currentFlashcardTopics[topic].length;
-    
-    // Calculate SRS Due Count
+function startFlashcards(topic) {
+    currentFlashcardTopic = topic;
+    const allCards = currentFlashcardTopics[topic];
+    srsQueue = [];
+
     const now = Date.now();
-    let dueCount = 0;
-    currentFlashcardTopics[topic].forEach((card, index) => {
-        const srs = getCardSRS(topic, index);
-        if (srs.isNew || srs.dueDate <= now) dueCount++;
+    allCards.forEach((card, originalIndex) => {
+        const srs = getCardSRS(topic, originalIndex);
+        if (srs.isNew || srs.dueDate <= now) {
+            srsQueue.push({
+                ...card,
+                originalIndex: originalIndex,
+                srsData: srs
+            });
+        }
     });
 
-    // Render Choice Menu
-    container.innerHTML = `
-        <div style="text-align: center; animation: fadeIn 0.3s;">
-            <h2 style="margin-bottom: 10px; color: white;">🗂️ ${topic}</h2>
-            <p style="color: #a0a8b4; margin-bottom: 25px;">Choose your study method:</p>
+    srsQueue.sort((a, b) => a.srsData.dueDate - b.srsData.dueDate);
 
-            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 450px; margin: 0 auto;">
-                
-                <!-- OPTION 1: LINEAR (Review All) -->
-                <button onclick="startFlashcards('${topic}', 'linear')" 
-                    style="background: #1e2a3a; border: 2px solid #72efdd; padding: 20px; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <span style="font-size: 2em;">📖</span>
-                        <div>
-                            <div style="font-size: 1.2em; color: white; font-weight: bold;">Standard Review</div>
-                            <div style="font-size: 0.9em; color: #a0a8b4; margin-top: 5px;">Review all <strong>${totalCards}</strong> cards in order. Perfect for cramming before a test.</div>
-                        </div>
-                    </div>
-                </button>
-
-                <!-- OPTION 2: SRS (Smart) -->
-                <button onclick="startFlashcards('${topic}', 'srs')" 
-                    style="background: #1e2a3a; border: 2px solid #ffc107; padding: 20px; border-radius: 12px; text-align: left; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <span style="font-size: 2em;">🧠</span>
-                        <div style="flex: 1;">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="font-size: 1.2em; color: white; font-weight: bold;">Smart SRS Mode</span>
-                                <span style="background: ${dueCount > 0 ? '#ffc107' : '#28a745'}; color: #000; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold;">${dueCount} Due</span>
-                            </div>
-                            <div style="font-size: 0.9em; color: #a0a8b4; margin-top: 5px;">Algorithm-based. Focus only on what you are about to forget.</div>
-                        </div>
-                    </div>
-                </button>
-
-            </div>
-            
-            <button class="back-button" style="margin-top: 30px; background: transparent; color: #888; border: 1px solid #3e506e; padding: 10px 20px; border-radius: 20px;" onclick="renderFlashcardTopics()">Cancel</button>
-        </div>
-    `;
-}
-
-// --- INITIALIZATION LOGIC ---
-function startFlashcards(topic, mode) {
-    currentFlashcardTopic = topic;
-    currentFlashcardMode = mode; // Store mode
+    currentFlashcards = srsQueue; 
     currentCardIndex = 0;
     isCardFront = true;
-    
-    const allCards = currentFlashcardTopics[topic];
 
-    if (mode === 'srs') {
-        // --- SRS PATH: Filter & Sort ---
-        srsQueue = [];
-        const now = Date.now();
-        allCards.forEach((card, originalIndex) => {
-            const srs = getCardSRS(topic, originalIndex);
-            if (srs.isNew || srs.dueDate <= now) {
-                srsQueue.push({
-                    ...card,
-                    originalIndex: originalIndex,
-                    srsData: srs
-                });
-            }
-        });
-
-        // If no cards due
-        if (srsQueue.length === 0) {
-            const container = document.getElementById("quiz-form");
-            container.innerHTML = `
-            <div style="text-align: center; animation: fadeIn 0.5s;">
-                <h2 style="font-size: 3em; margin-bottom: 10px;">🎉</h2>
-                <h2 style="color: #28a745;">You're Caught Up!</h2>
-                <p style="color: #a0a8b4; max-width: 400px; margin: 10px auto;">You have no cards due for review right now in SRS mode.</p>
-                <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
-                    <button class="restart-button" onclick="startFlashcards('${topic}', 'linear')">📖 Switch to Standard Review</button>
-                    <button class="back-button" onclick="renderFlashcardTopics()">⬅ Back to Topics</button>
-                </div>
-            </div>`;
-            return;
-        }
-
-        srsQueue.sort((a, b) => a.srsData.dueDate - b.srsData.dueDate);
-        currentFlashcards = srsQueue;
-
-    } else {
-        // --- LINEAR PATH: Load All ---
-        currentFlashcards = allCards.map((card, index) => ({
-            ...card,
-            originalIndex: index
-        }));
+    if (currentFlashcards.length === 0) {
+        const container = document.getElementById("quiz-form");
+        container.innerHTML = `
+        <div style="text-align: center;">
+            <h2>🎉 Caught Up!</h2>
+            <p>You have no cards due for review right now.</p>
+            <p>Check back tomorrow or start another topic.</p>
+            <button class="restart-button" onclick="renderFlashcardTopics()">Back to Topics</button>
+        </div>`;
+        return;
     }
 
     displayFlashcard();
 }
 
-// --- DISPLAY ENGINE (HYBRID UI) ---
 function displayFlashcard() {
     const container = document.getElementById("quiz-form");
     
-    // Check completion
     if (currentCardIndex >= currentFlashcards.length) {
         return showFlashcardCompletion();
     }
@@ -1165,24 +1344,23 @@ function displayFlashcard() {
     const cardObj = currentFlashcards[currentCardIndex]; 
     updateProgress(currentCardIndex + 1, currentFlashcards.length);
     
-    // Smart Layout Analyzer
+    // --- SMART LAYOUT ANALYZER ---
     function getLayoutClass(text) {
         const hasBlockMath = /\$\$|\\\[/.test(text);
         const hasList = /^- /m.test(text) || /<ul>|<ol>|<li>/.test(parseKaeriMarkdown(text));
         const isLong = text.length > 120;
-        return (hasBlockMath || hasList || isLong) ? "layout-detailed" : "layout-center";
+
+        if (hasBlockMath || hasList || isLong) {
+            return "layout-detailed";
+        }
+        return "layout-center";
     }
 
     const frontLayout = getLayoutClass(cardObj.front);
     const backLayout = getLayoutClass(cardObj.back);
-    const modeLabel = currentFlashcardMode === 'srs' ? "🧠 SRS Study" : "📖 Standard Review";
 
-    // RENDER CARD HTML
     let html = `
-        <h3 style="color: #a0a8b4; font-size: 0.9em; letter-spacing: 1px; text-transform: uppercase;">
-            ${modeLabel}: ${currentFlashcardTopic} <span style="color: white;">(${currentCardIndex + 1} / ${currentFlashcards.length})</span>
-        </h3>
-        
+        <h3>🧠 SRS Study: ${currentFlashcardTopic} (${currentCardIndex + 1} / ${currentFlashcards.length})</h3>
         <div class="flashcard-wrapper">
             <div class="flashcard ${isCardFront ? '' : 'back-active'}" onclick="flipCard()">
                 
@@ -1201,87 +1379,41 @@ function displayFlashcard() {
         </div>
     `;
 
-    // --- CONTROLS SECTION (THE HYBRID PART) ---
-    html += `<div class="flashcard-nav-buttons" style="margin-top: 25px;">`;
+    // SRS CONTROLS
+    html += `<div class="flashcard-nav-buttons" style="margin-top: 20px;">`;
 
-    if (currentFlashcardMode === 'linear') {
-        // === LINEAR CONTROLS (Prev / Flip / Next) ===
-        const isLast = currentCardIndex === currentFlashcards.length - 1;
-        html += `
-            <button onclick="prevFlashcard()" ${currentCardIndex === 0 ? 'disabled' : ''} 
-                style="background: #3e506e; border-radius: 8px; font-weight: bold;">⬅️ Prev</button>
-            
-            <button onclick="flipCard()" 
-                style="background: #007bff; flex: 2; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 0 #0056b3;">🔄 Flip Card</button>
-            
-            <button onclick="nextFlashcard()" 
-                style="background: ${isLast ? '#28a745' : '#3e506e'}; border-radius: 8px; font-weight: bold;">
-                ${isLast ? 'Finish 🏁' : 'Next ➡️'}
-            </button>
-        `;
+    if (isCardFront) {
+        html += `<button onclick="flipCard()" style="width:100%; background:#007bff; color:white;">🔄 Show Answer</button>`;
     } else {
-        // === SRS CONTROLS (Show / Rate) ===
-        if (isCardFront) {
-            html += `<button onclick="flipCard()" style="width:100%; background:#007bff; padding: 15px; border-radius: 8px; font-weight: bold; color:white; box-shadow: 0 4px 0 #0056b3;">🔄 Show Answer</button>`;
-        } else {
-            html += `
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:10px; width:100%;">
-                    <button onclick="rateCard(0)" style="background:#dc3545; color: white; font-size:0.8em; padding:12px 2px; border-radius:8px;">❌ Again<br><small style="opacity:0.8">1d</small></button>
-                    <button onclick="rateCard(3)" style="background:#ffc107; color: #333; font-size:0.8em; padding:12px 2px; border-radius:8px;">😬 Hard<br><small style="opacity:0.8">2d</small></button>
-                    <button onclick="rateCard(4)" style="background:#28a745; color: white; font-size:0.8em; padding:12px 2px; border-radius:8px;">✅ Good<br><small style="opacity:0.8">4d</small></button>
-                    <button onclick="rateCard(5)" style="background:#17a2b8; color: white; font-size:0.8em; padding:12px 2px; border-radius:8px;">🚀 Easy<br><small style="opacity:0.8">7d</small></button>
-                </div>
-            `;
-        }
+        html += `
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:8px; width:100%;">
+                <button onclick="rateCard(0)" style="background:#dc3545; font-size:0.8em; padding:12px 2px; border-radius:6px;">❌ Again<br><small style="opacity:0.7">1d</small></button>
+                <button onclick="rateCard(3)" style="background:#ffc107; color:#333; font-size:0.8em; padding:12px 2px; border-radius:6px;">😬 Hard<br><small style="opacity:0.7">2d</small></button>
+                <button onclick="rateCard(4)" style="background:#28a745; font-size:0.8em; padding:12px 2px; border-radius:6px;">✅ Good<br><small style="opacity:0.7">4d</small></button>
+                <button onclick="rateCard(5)" style="background:#17a2b8; font-size:0.8em; padding:12px 2px; border-radius:6px;">🚀 Easy<br><small style="opacity:0.7">7d</small></button>
+            </div>
+        `;
     }
     
     html += `</div>`;
-    html += `<button class="back-to-topics-button" style="margin-top: 20px; background: transparent; color: #888;" onclick="renderFlashcardTopics()">⬅️ Back to Topics</button>`;
+    html += `<button class="back-to-topics-button" onclick="renderFlashcardTopics()">⬅️ Back to Topics</button>`;
 
     container.innerHTML = html;
     
-    renderMath(); // KaTeX
+    renderMath();
     container.scrollIntoView({ behavior: "smooth" });
-    readFlashcard(); // Smart TTS
+    readFlashcard();
 }
 
-// --- NAVIGATION HELPERS ---
 function flipCard() { 
     isCardFront = !isCardFront; 
     displayFlashcard(); 
 }
 
-function prevFlashcard() { 
-    if (currentFlashcardMode !== 'linear') return; // Safety
-    if (currentCardIndex > 0) { 
-        currentCardIndex--; 
-        isCardFront = true; 
-        displayFlashcard(); 
-    } 
-}
-
-function nextFlashcard() { 
-    if (currentFlashcardMode !== 'linear') return; // Safety
-    if (currentCardIndex < currentFlashcards.length - 1) { 
-        currentCardIndex++; 
-        isCardFront = true; 
-        displayFlashcard(); 
-    } else { 
-        showFlashcardCompletion(); 
-    } 
-}
-
 function rateCard(quality) {
-    if (currentFlashcardMode !== 'srs') return; // Safety
     const cardObj = currentFlashcards[currentCardIndex];
-    // Calculate new date
     const result = calculateNextReview(currentFlashcardTopic, cardObj.originalIndex, quality);
-    
-    // Feedback Toast
-    const days = Math.round(result.interval);
-    const msg = days === 1 ? "Review tomorrow" : `Review in ${days} days`;
-    showAppNotification(`📅 ${msg}`, "info", 1500);
-    
+    showAppNotification(`Scheduled for: ${Math.round(result.interval)} days`, "info", 1000);
     currentCardIndex++;
     isCardFront = true;
     displayFlashcard();
@@ -1289,31 +1421,13 @@ function rateCard(quality) {
 
 function showFlashcardCompletion() {
     const container = document.getElementById("quiz-form");
-    const msg = currentFlashcardMode === 'srs' 
-        ? "You have reviewed all due cards for today." 
-        : "You have reviewed all cards in this topic.";
-
     container.innerHTML = `
-        <div style="text-align: center; animation: fadeIn 0.5s;">
+        <div style="text-align: center;">
             <h2>Session Complete!</h2>
-            <p>${msg}</p>
+            <p>You have reviewed all due cards for "<strong>${currentFlashcardTopic}</strong>".</p>
         </div>
     `;
     updateProgress(currentFlashcards.length, currentFlashcards.length);
-
-    // Dynamic buttons based on mode
-    const restartBtn = document.createElement("button");
-    restartBtn.innerText = "🔁 Review Again";
-    restartBtn.className = "restart-button";
-    restartBtn.style.marginRight = "10px";
-    restartBtn.onclick = () => attemptStartFlashcard(currentFlashcardTopic); // Go back to choice
-    container.appendChild(restartBtn);
-
-    const challengeBtn = document.createElement("button");
-    challengeBtn.innerHTML = "⚔️ Challenge a Friend";
-    challengeBtn.className = "challenge-button";
-    challengeBtn.onclick = () => challengeFriend(currentFlashcards.length, 0, "Flashcards");
-    container.appendChild(challengeBtn);
 
     const backBtn = document.createElement("button");
     backBtn.innerText = "⬅️ Back to Topics";
@@ -1323,7 +1437,7 @@ function showFlashcardCompletion() {
 }
 
 // ============================================================
-// === 9. SMART FEATURES & PRINT ===
+// === 7. SMART FEATURES & PRINT ===
 // ============================================================
 
 function challengeFriend(score, total, modeName) {
@@ -1410,7 +1524,7 @@ function closePrintPreview() {
 }
 
 // ============================================================
-// === 10. UTILITIES ===
+// === 8. UTILITIES ===
 // ============================================================
 
 function filterDataByCourseAndTerm(data, course, term) {
@@ -1440,7 +1554,7 @@ function shuffle(array) {
 }
 
 // ============================================================
-// === 11. TEXT-TO-SPEECH (SMART HUMAN ENGINE) ===
+// === 9. TEXT-TO-SPEECH (SMART HUMAN ENGINE) ===
 // ============================================================
 
 const ttsMap = [
@@ -1529,7 +1643,7 @@ function readFlashcard() {
 }
 
 // ============================================================
-// === 12. GLOBAL EVENT HANDLERS & STUDENT BOARD ===
+// === 10. GLOBAL EVENT HANDLERS & STUDENT BOARD ===
 // ============================================================
 
 function renderStudentBoard() {
@@ -1635,23 +1749,13 @@ document.addEventListener("keydown", (e) => {
     
     if (currentQuizType === "flashcard") {
         if (e.key === " " || e.key === "Enter") {
-             e.preventDefault(); // Stop scrolling
-             if (isCardFront) flipCard();
-             else if (currentFlashcardMode === 'linear') flipCard(); // Allow flip back in linear
+             if(isCardFront) flipCard();
         }
-
-        if (currentFlashcardMode === 'linear') {
-            // Linear Shortcuts
-            if (e.key === "ArrowLeft") prevFlashcard();
-            if (e.key === "ArrowRight") nextFlashcard();
-        } else {
-            // SRS Shortcuts (Only when answer shown)
-            if (!isCardFront) {
-                if (e.key === "1") rateCard(0);
-                if (e.key === "2") rateCard(3);
-                if (e.key === "3") rateCard(4);
-                if (e.key === "4") rateCard(5);
-            }
+        if (!isCardFront) {
+            if (e.key === "1") rateCard(0);
+            if (e.key === "2") rateCard(3);
+            if (e.key === "3") rateCard(4);
+            if (e.key === "4") rateCard(5);
         }
     }
     
