@@ -3,7 +3,7 @@ const flashcards = {
   // =================================================================
   // MT221 - MODULE 1
   // =================================================================
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 1 - Definitions & Classification": [
+  "MODULE 1: INTRODUCTION TO METALLURGY": [
     {
       "front": "What is metallurgy?",
       "back": "The science and technology of metals, involving extracting metals from their ores and adapting them to the various uses of man.",
@@ -87,10 +87,8 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "classification of metallurgy"
-    }
-  ],
+    },
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 2 - Sources, Geology & Mining": [
     {
       "front": "What is primary (virgin) metal?",
       "back": "Metal extracted from ores, natural brines, or ocean water.",
@@ -244,10 +242,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "mining"
-    }
-  ],
-
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 3 - Ores, Minerals & Grades": [
+    },
     {
       "front": "Define the term 'ore.'",
       "back": "A naturally occurring aggregate of minerals from which a metal or metals may be extracted at a profit.",
@@ -471,10 +466,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "grade or tenor of ores"
-    }
-  ],
-
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 4 - Processing & Industry": [
+    },
     {
       "front": "What are wet processes in extractive metallurgy?",
       "back": "Processes involving reactions in aqueous solutions usually at low temperatures.",
@@ -600,10 +592,8 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "copper ore treatment"
-    }
-  ],
+    },
 
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 5 - Beneficiation & Liberation": [
     {
       "front": "What is beneficiation?",
       "back": "The treatment of ores and mineral products by mechanical and physical means to separate valuable minerals from worthless constituents.",
@@ -729,10 +719,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "liberation"
-    }
-  ],
-
-  "MODULE 1: INTRODUCTION TO METALLURGY - Section 6 - Separation Methods & Flotation": [
+    },
     {
       "front": "What is a concentrate in mineral processing?",
       "back": "The enriched product derived from the concentration process that contains the valuable minerals.",
@@ -913,7 +900,7 @@ const flashcards = {
   // =================================================================
   // MT221 - MODULE 2
   // =================================================================
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 1 - Basics of Comminution": [
+  "MODULE 2: PRINCIPLES OF COMMINUTION": [
     {
       "front": "What is comminution?",
       "back": "Comminution is the reduction in size, or simply 'to make small.' It involves mechanical operations that break large particles into smaller particles.",
@@ -997,10 +984,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "principles of comminution"
-    }
-  ],
-
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 2 - Circuits and Operations": [
+    },
     {
       "front": "Why is weighing and sampling of ore normally done on the finished product of a crushing plant before entering the grinding circuit?",
       "back": "Because this product is more homogeneous than run-of-mine ore and has not yet been ground into pulp, making it more representative for weighing and sampling.",
@@ -1063,10 +1047,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "principles of comminution"
-    }
-  ],
-
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 3 - Handling and Storage Equipment": [
+    },
     {
       "front": "What are conveyor belts?",
       "back": "Conveyor belts are loops which move materials from one location to another, consisting of two or more pulleys with a continuous loop of material.",
@@ -1206,10 +1187,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "principles of comminution"
-    }
-  ],
-
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 4 - Grinding Equipment": [
+    },
     {
       "front": "What does a semi-autogenous or autogenous mill do?",
       "back": "The semi-autogenous or autogenous mill grinds crusher product and prepares it for final grinding in a ball mill or rod mill.",
@@ -1286,10 +1264,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "principles of comminution"
-    }
-  ],
-
-  "MODULE 2: PRINCIPLES OF COMMINUTION - Section 5 - Comminution Theory": [
+    },
     {
       "front": "What is comminution theory concerned with?",
       "back": "Comminution theory is concerned with the relationship between energy input and the particle size made from a given feed size.",
@@ -1757,7 +1732,7 @@ const flashcards = {
   // =================================================================
   // MT221 - MODULE 3
   // =================================================================
-  "MODULE 3: CRUSHING - Section 1 - Introduction & Principles": [
+  "MODULE 3: CRUSHING": [
     {
       "front": "What does metallic mineral processing typically involve?",
       "back": "It's a 4-step process to get metals from rocks:\n① MINE the ore (dig it up)\n② CRUSH it into smaller pieces\n③ SEPARATE valuable minerals from waste\n④ PREPARE the concentrate for refining\n💡 Like making apple juice: pick apples → crush them → separate juice from pulp → bottle it",
@@ -1862,10 +1837,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "crushing principles"
-    }
-  ],
-
-  "MODULE 3: CRUSHING - Section 2 - Primary Crushers: Jaw & Gyratory": [
+    },
     {
       "front": "What is the purpose of primary crushers?",
       "back": "SUPER-STRONG machines that:\n• Take giant rocks (1.5m) 🗻\n• Crush them to manageable size (10-20cm) 🪨\n• Make them ready for next step\n\n💡 The \"heavyweight champion\" of crushing",
@@ -2397,10 +2369,7 @@ const flashcards = {
       "course": "MT221",
       "term": "T1",
       "topic": "comparison of jaw and gyratory crushers"
-    }
-  ],
-
-  "MODULE 3: CRUSHING - Section 3 - Secondary Crushers: Cone & Rolls": [
+    },
     {
       "front": "How do secondary crushers compare to primary crushers in terms of construction?",
       "back": "MUCH LIGHTER\nNot as heavy-duty\n\nPrimary = heavyweight boxer 🥊\nSecondary = middleweight",
@@ -3071,7 +3040,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 1
   // =================================================================
-  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 1 - Fundamentals": [
+  "MODULE 1: INTRODUCTION TO GEOLOGY": [
     {
       "front": "What is geology?",
       "back": "Geology (or Geoscience or Earth Science) is the study of Earth in terms of its History, its Materials, the Processes affecting these materials, and the Environment.",
@@ -3193,7 +3162,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 2 - Branches of Geology": [
+  "MODULE 1: INTRODUCTION TO GEOLOGY": [
     {
       "front": "What is mineralogy?",
       "back": "The study of the chemistry, crystal structure, and physical properties of minerals.",
@@ -3473,10 +3442,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "branch relationships"
-    }
-  ],
-
-  "MODULE 1: INTRODUCTION TO GEOLOGY - Section 3 - Careers & Education": [
+    },
     {
       "front": "What are the two main educational levels for geologists mentioned in the course?",
       "back": "1. BSc. Mining and Exploration Geology (produces General Geologists)\n2. MSc. and PhD. (produces Specialized Geologists)",
@@ -3762,7 +3728,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 2
   // =================================================================
-  "MODULE 2: THE SOLAR SYSTEM - Section 1 - Origins & Formation": [
+  "MODULE 2: THE SOLAR SYSTEM": [
     {
       "front": "What is the solar system?",
       "back": "A gravitationally bound system comprising the Sun, eight planets, dwarf planets, moons, asteroids, and comets.",
@@ -3825,10 +3791,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "giant planet formation"
-    }
-  ],
-
-  "MODULE 2: THE SOLAR SYSTEM - Section 2 - Composition & Mass": [
+    },
     {
       "front": "What percentage of the solar system's mass does the Sun comprise?",
       "back": "About 99.86%.",
@@ -3884,10 +3847,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "planetary materials"
-    }
-  ],
-
-  "MODULE 2: THE SOLAR SYSTEM - Section 3 - Classification & Objects": [
+    },
     {
       "front": "List the terrestrial planets.",
       "back": "Mercury, Venus, Earth, Mars.",
@@ -3964,10 +3924,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "planet features"
-    }
-  ],
-
-  "MODULE 2: THE SOLAR SYSTEM - Section 4 - Methods & Review": [
+    },
     {
       "front": "How do we study the solar system?",
       "back": "Using telescopes, radio telescopes, satellites, space probes, and by analyzing light and radiation.",
@@ -4015,7 +3972,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 3
   // =================================================================
-  "MODULE 3: THE EARTH - Section 1 - Evolution & Differentiation": [
+  "MODULE 3: THE EARTH": [
     {
       "front": "What is the Earth?",
       "back": "A planet that evolved over 4.6 billion years from a homogenous body into a layered structure through the process of differentiation.",
@@ -4095,7 +4052,7 @@ const flashcards = {
     }
   ],
 
-  "MODULE 3: THE EARTH - Section 2 - Internal Structure": [
+  "MODULE 3: THE EARTH": [
     {
       "front": "How many main layers is Earth divided into?",
       "back": "Five main layers composed of different materials, chemistry, and states.",
@@ -4291,10 +4248,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "summary"
-    }
-  ],
-
-  "MODULE 3: THE EARTH - Section 3 - External Structure": [
+    },
     {
       "front": "What are the five components of Earth's external structure?",
       "back": "1. Atmosphere (gaseous envelope) 2. Hydrosphere (liquid water) 3. Cryosphere (solid water/ice) 4. Lithosphere (land surface) 5. Biosphere (living organisms)",
@@ -4706,7 +4660,7 @@ const flashcards = {
   // =================================================================
   // GM220 - MODULE 4
   // =================================================================
-  "MODULE 4: PLATE TECTONICS - Section 1 - Theory, History & Evidence": [
+  "MODULE 4: PLATE TECTONICS": [
     {
       "front": "What are the Intended Learning Objectives (ILOs) for Plate Tectonics?",
       "back": "Explain the process of tectonic plate motion; recognize and assemble continents of the supercontinent Pangaea; understand the importance of convection currents; explain the significance of convection currents and plate tectonics.",
@@ -4776,10 +4730,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "evidence"
-    }
-  ],
-
-  "MODULE 4: PLATE TECTONICS - Section 2 - Mechanics & Motion": [
+    },
     {
       "front": "What is sea floor spreading?",
       "back": "A process at mid-ocean ridges where new oceanic crust forms through volcanic activity and moves away from the ridge.",
@@ -4828,10 +4779,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "plate count"
-    }
-  ],
-
-  "MODULE 4: PLATE TECTONICS - Section 3 - Plate Boundaries": [
+    },
     {
       "front": "What are the three types of plate boundaries?",
       "back": "1. Divergent\n2. Convergent\n3. Transform",
@@ -4971,10 +4919,7 @@ const flashcards = {
       "course": "GM220",
       "term": "T1",
       "topic": "transform features"
-    }
-  ],
-
-  "MODULE 4: PLATE TECTONICS - Section 4 - Wilson Cycle & Margins": [
+    },
     {
       "front": "What is the Wilson Cycle?",
       "back": "A model describing the opening and closing of ocean basins due to plate tectonics during supercontinent assembly and breakup.",
@@ -5056,7 +5001,7 @@ const flashcards = {
 // =================================================================
   // MI213 - INTRODUCTION TO MINING
   // =================================================================
-  "MODULE 1:INTRODUCTION TO MINING - Section 1 - Objectives & Basic Terminology": [
+  "MODULE 1:INTRODUCTION TO MINING": [
     {
       "front": "What is the primary aim of the Introduction to Mining module?",
       "back": "The primary aim is to introduce students to terms used to identify certain features of a mine, the five stages a mine goes through from inception to closure, the primary activities involved in the breakage and handling of rocks in the mine, as well as some mine planning and design considerations.",
@@ -5147,10 +5092,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "objectives and basics"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 2 - Underground Terminologies": [
+    },
     {
       "front": "What is a shaft?",
       "back": "A shaft is a vertical or an inclined main permanent opening, excavated at a safe distance from the influence of underground mining activities, which provides access from the surface or below surface to an ore body, and through which the mine is exploited.",
@@ -5332,10 +5274,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "underground terminologies"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 3 - Open Pit Terminologies": [
+    },
     {
       "front": "What is a bench in open pit mining?",
       "back": "A bench may be defined as a ledge that forms a single level of operation above which mineral or waste materials are mined back to a bench face. The mineral or waste is removed in successive layers, each of which is a bench.",
@@ -5461,10 +5400,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "open pit terminologies"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 4 - Prospecting Stage": [
+    },
     {
       "front": "What are the five stages in the life of a mine?",
       "back": "The five stages in the life of a mine are: prospecting, exploration, development, exploitation, and reclamation.",
@@ -5625,10 +5561,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "prospecting procedures"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 5 - Exploration & Development Stages": [
+    },
     {
       "front": "What is exploration?",
       "back": "Exploration, the second stage in the life of a mine, determines as accurately as possible the size and value of a mineral deposit, utilizing techniques like but more refined than those used in prospecting.",
@@ -5845,10 +5778,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "development procedures"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 6 - Exploitation & Reclamation Stages": [
+    },
     {
       "front": "What is exploitation in mining?",
       "back": "Exploitation, the fourth stage of mining, is associated with the actual recovery of minerals from the earth in quantity.",
@@ -6114,10 +6044,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "reclamation procedures"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 7 - Mining Operations": [
+    },
     {
       "front": "What are unit operations of mining?",
       "back": "The unit operations of mining are the basic steps used to produce a mineral from the deposit, supported by the auxiliary operations.",
@@ -6320,10 +6247,7 @@ const flashcards = {
       "course": "MI213",
       "term": "T1",
       "topic": "mining operations"
-    }
-  ],
-
-  "INTRODUCTION TO MINING - Section 8 - Mine Planning & Design": [
+    },
     {
       "front": "What is open pit mining?",
       "back": "Open pit mining is a method of operating a surface mine that is simple in concept but complex in its cost and efficiency requirements.",
