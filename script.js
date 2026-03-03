@@ -1,5 +1,5 @@
 // ============================================================
-// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.5 DUAL-MODE FINAL) ===
+// === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.7 PROFESSIONAL VIEWER) ===
 // === Server-Side Access + Local Content + Doc Delivery + KaTeX + Smart TTS + Markdown ===
 // ============================================================
 
@@ -165,22 +165,33 @@ function renderMath(targetId = null) {
 }
 
 // ============================================================
-// === 3. DOCUMENT DELIVERY ENGINE ===
+// === 3. DOCUMENT DELIVERY ENGINE (PROFESSIONAL VIEWER) ===
 // ============================================================
 
 function injectDocViewerHTML() {
     if (document.getElementById('smart-doc-viewer')) return;
     
     const viewerHTML = `
-    <div id="smart-doc-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center;">
-        <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:20px; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #3e506e;">
-                <h3 id="viewer-title" style="color:white; margin:0; font-size:1.3em;">Document Viewer</h3>
-                <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:bold;">✕ Close</button>
+    <div id="smart-doc-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(5px);">
+        <div style="background:#1a1a2e; width:95%; height:95%; border-radius:15px; padding:0; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.5); border:2px solid #72efdd; overflow:hidden; position:relative;">
+            
+            <!-- Header -->
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#0d1b2a; border-bottom:1px solid #3e506e; height:50px; box-sizing:border-box;">
+                <h3 id="viewer-title" style="color:white; margin:0; font-size:1.1em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70%;">Document</h3>
+                <button onclick="closeDocViewer()" style="background:#dc3545; color:white; border:none; padding:6px 15px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:0.9em;">✕ Close</button>
             </div>
-            <iframe id="doc-frame" style="flex:1; width:100%; border:none; border-radius:8px; background:white;" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <div style="margin-top:10px; text-align:center; color:#888; font-size:0.8em; padding-top:10px; border-top:1px solid #3e506e;">
-                <small>Protected Content - Do not share links outside Kaeri EdTech</small>
+
+            <!-- Loading Skeleton Overlay (Visible initially) -->
+            <div id="doc-loader-overlay" class="viewer-loader">
+                <div class="viewer-skeleton-box"></div>
+                <p style="color:#72efdd; margin-top:20px; font-size:0.9em;">Loading Preview...</p>
+            </div>
+
+            <!-- The Iframe -->
+            <iframe id="doc-frame" style="flex:1; width:100%; border:none; background:white;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            
+            <div style="text-align:center; color:#888; font-size:0.75em; padding:5px; background:#0d1b2a; border-top:1px solid #3e506e;">
+                Protected Content - Kaeri EdTech
             </div>
         </div>
     </div>`;
@@ -193,20 +204,34 @@ function openDocumentViewer(fileId, title) {
         showAppNotification("⚠️ Document link unavailable", "error");
         return;
     }
+    
     const viewer = document.getElementById('smart-doc-viewer');
     const iframe = document.getElementById('doc-frame');
     const titleEl = document.getElementById('viewer-title');
+    const loader = document.getElementById('doc-loader-overlay');
     
     if (!viewer || !iframe) {
         injectDocViewerHTML();
-        setTimeout(() => openDocumentViewer(fileId, title), 100);
+        setTimeout(() => openDocumentViewer(fileId, title), 50);
         return;
     }
     
+    // Reset state
     titleEl.textContent = title || "Document";
-    iframe.src = `https://drive.google.com/file/d/${fileId}/preview?usp=drivesdk`;
+    iframe.src = ""; // Clear previous to prevent ghosting
+    loader.style.display = 'flex'; // Show shimmer
     viewer.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    
+    // Load new document
+    iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+    iframe.onload = function() {
+        // Small buffer to ensure rendering has started
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    };
+
     logDocumentView(title, fileId);
 }
 
@@ -357,18 +382,25 @@ function startCustomShortAnswer() {
 }
 
 // ============================================================
-// === MODIFIED: Document Renderer (Now shows locked preview) ===
+// === MODIFIED: Document Renderer (Now with Skeleton Grid) ===
 // ============================================================
 
 async function renderDocuments() {
     // NOTE: blockDemo check removed - everyone sees the list!
     
     const container = document.getElementById("quiz-form");
-    container.innerHTML = `
-        <div style="text-align:center; padding:40px;">
-            <div style="border:4px solid #f3f3f3; border-top:4px solid #72efdd; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto;"></div>
-            <h3 style="color:#a0a8b4; margin-top:20px;">Connecting to Library...</h3>
-        </div>`;
+    
+    // Show skeleton grid while loading
+    let skeletonHTML = `
+        <h2 style="text-align:center; margin-bottom:20px;">📚 Loading Library...</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:15px; padding:20px 0;">
+    `;
+    for(let i=0; i<8; i++) {
+        skeletonHTML += `<div class="skeleton" style="height:180px; background:linear-gradient(90deg, #2b3a55 25%, #3e506e 50%, #2b3a55 75%); background-size:200% 100%; animation:shimmer 1.5s infinite; border-radius:10px;"></div>`;
+    }
+    skeletonHTML += `</div>`;
+    
+    container.innerHTML = skeletonHTML;
     document.getElementById("result").innerHTML = "";
     
     currentQuizType = 'documents'; 
@@ -693,7 +725,7 @@ function clearDemoLocks() {
 }
 
 // ============================================================
-// === 6. MODIFIED: QUIZ ENGINE with Tiered Access ===
+// === 6. QUIZ ENGINE with Tiered Access ===
 // ============================================================
 
 function renderQuiz() {
@@ -1388,7 +1420,7 @@ function startFlashcards(topic, mode) {
     displayFlashcard();
 }
 
-// --- DISPLAY ENGINE (HYBRID UI) ---
+// --- DISPLAY ENGINE (HYBRID UI + SMART LAYOUT) ---
 function displayFlashcard() {
     const container = document.getElementById("quiz-form");
     
@@ -1400,12 +1432,30 @@ function displayFlashcard() {
     const cardObj = currentFlashcards[currentCardIndex]; 
     updateProgress(currentCardIndex + 1, currentFlashcards.length);
     
-    // Smart Layout Analyzer
+    // === SMART LAYOUT ANALYZER (STEM & SCROLL FIX) ===
     function getLayoutClass(text) {
+        // 1. Detect Block Math ($$ ... $$) - Needs space & horizontal scroll
         const hasBlockMath = /\$\$|\\\[/.test(text);
+        
+        // 2. Detect SPECIFIC Chemistry & Physics Signals
+        const hasScience = /(\\ce\{|\\pu\{|\\vec\{|\\int|\\sum|\\frac\{|\\sqrt\{)/.test(text);
+    
+        // 3. Detect Lists (Bullet points)
         const hasList = /^- /m.test(text) || /<ul>|<ol>|<li>/.test(parseKaeriMarkdown(text));
-        const isLong = text.length > 120;
-        return (hasBlockMath || hasList || isLong) ? "layout-detailed" : "layout-center";
+    
+        // 4. Detect Text Length (lowered to 60 for mobile safety)
+        const isLong = text.length > 60;
+    
+        // 5. Detect Newlines (3 or more lines)
+        const hasBreaks = (text.match(/\n/g) || []).length > 2;
+    
+        // IF ANY of these are true, force Top Alignment
+        if (hasBlockMath || hasScience || hasList || isLong || hasBreaks) {
+            return "layout-detailed";
+        }
+        
+        // Otherwise, center it nicely
+        return "layout-center";
     }
 
     const frontLayout = getLayoutClass(cardObj.front);
@@ -1913,3 +1963,48 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setTimeout(renderStudentBoard, 100);
 });
+
+// ============================================================
+// === 13. ADDITIONAL CSS FOR PROFESSIONAL VIEWER & SKELETON ===
+// ============================================================
+(function addStyles() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .viewer-loader {
+            position: absolute;
+            top: 50px; /* below header */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 100px); /* accounting for header + footer */
+            background: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .viewer-skeleton-box {
+            width: 80%;
+            height: 60%;
+            background: linear-gradient(90deg, #2b3a55 25%, #3e506e 50%, #2b3a55 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 8px;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .skeleton {
+            height: 180px;
+            background: linear-gradient(90deg, #2b3a55 25%, #3e506e 50%, #2b3a55 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 10px;
+        }
+    `;
+    document.head.appendChild(style);
+})();
