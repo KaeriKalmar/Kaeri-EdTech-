@@ -3036,6 +3036,615 @@ const flashcards = {
       "topic": "hammer mills (impact crushers)"
     }
   ],
+  
+  
+  //MT221 TERM 2 DATA 
+  
+  
+  "CLASSIFICATION": [
+    {
+      front: "What is classification?",
+      back: "Classification is a separation process that divides a mixture of particles into two or more streams based on the velocity at which they settle in a fluid medium (water or air).\n\nLarger/denser particles settle faster and are separated from smaller/lighter particles, which remain suspended.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the gravitational force equation?",
+      back: "\\(F = m \\cdot g\\), where {}\\(m\\) = particle mass, \\(g\\) = acceleration due to gravity (9.81 m/s²).\n\nOnly mass changes; higher mass → higher force → faster settling.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How does particle mass affect settling velocity?",
+      back: "Higher mass → greater gravitational force → higher settling velocity.\n\nThis differential settling enables size‑based separation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define drag force.",
+      back: "Drag force is the resistance a particle experiences when moving through a fluid; it acts opposite to the direction of motion.\n\nDrag force is more significant for fine particles relative to their weight, keeping them suspended.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What are the four main objectives of classification?",
+      back: "(1) Size‑based separation\n(2) Desliming (removing very fine particles)\n(3) Dewatering (removing excess water)\n(4) Trash removal\n\nClassification serves both separation and cleaning functions.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why is classification used after comminution?",
+      back: "To control particle size before downstream processes (e.g., concentration, leaching).\n\nIt ensures the product meets specifications and avoids overgrinding.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is a hydrocyclone?",
+      back: "A static classifier that uses centrifugal force to separate coarse from fine particles in a water‑based slurry.\n\nNo moving parts; separation relies on fluid dynamics.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Can a hydrocyclone be used for dry grinding? Why?",
+      back: "No. It requires water to create slurry and swirling motion.\n\nDry grinding uses air classifiers or screens.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What are the five main components of a hydrocyclone?",
+      back: "Feed inlet, cylindrical section, vortex finder, conical section, apex (spigot).\n\nEach part contributes to the swirling flow and product discharge.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the function of the feed inlet?",
+      back: "Tangential entry that introduces slurry under pressure, initiating the swirling motion.\n\nThe tangential direction is critical for vortex formation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the function of the cylindrical section?",
+      back: "Allows the swirling motion to stabilize before the fluid enters the cone.\n\nProvides residence time for vortex development.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the function of the vortex finder?",
+      back: "Central tube for overflow (fine particles) to exit.\n\nIts length relative to the feed inlet prevents short‑circuiting.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the function of the conical section?",
+      back: "Increases tangential velocity, strengthening centrifugal force for better separation.\n\nThe taper accelerates the fluid.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the function of the apex (spigot)?",
+      back: "Bottom opening for underflow (coarse particles) to discharge.\n\nIts diameter controls the underflow rate and pressure.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why must the vortex finder be longer than the bottom of the feed inlet?",
+      back: "To prevent short‑circuiting—direct flow of feed into the overflow without separation.\n\nThis design rule ensures all particles are subjected to the swirling motion.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is short‑circuiting?",
+      back: "Short‑circuiting is the direct flow of feed from inlet to vortex finder without proper separation.\n\nIt degrades efficiency and is avoided by correct vortex finder length.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Describe the two opposing forces inside a hydrocyclone.",
+      back: "Outward centrifugal force (pushes coarse/heavy particles to the wall) and inward drag force (pulls fine/light particles toward the center).\n\nBalance determines which outlet a particle takes.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Which particles are affected by centrifugal force?",
+      back: "Coarse/heavy particles; force is proportional to mass.\n\nThey are thrown outward and downward.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Which particles are affected by drag force?",
+      back: "Fine/light particles; they are easily entrained in the inward flow.\n\nDrag force overcomes centrifugal force for fines.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Describe the path of a coarse particle from entry to exit in a hydrocyclone.",
+      back: "Entry → outward to wall → spiral down → exit through apex as underflow.\n\nCoarse particles are the oversize product.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Describe the path of a fine particle from entry to exit in a hydrocyclone.",
+      back: "Entry → inward toward center → upward → exit through vortex finder as overflow.\n\nFine particles are the undersize product.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the overflow product?",
+      back: "Overflow is the fine/undersize particles exiting through the vortex finder.\n\nOften the desired product in grinding circuits.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the underflow product?",
+      back: "Underflow is the coarse/oversize particles exiting through the apex.\n\nOften returned to the mill for regrinding.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How does high slurry density affect separation?",
+      back: "High slurry density (more solids, less water) increases viscosity, causing hindered settling; coarse may go to overflow, fine to underflow.\n\nSeparation becomes poor and less sharp.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How does low slurry density affect separation?",
+      back: "Low slurry density (more water) improves efficiency but reduces throughput.\n\nMore water allows better particle movement.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of increasing the vortex finder diameter?",
+      back: "A larger vortex finder diameter allows more coarse particles to short‑circuit, making the overflow coarser (higher D₅₀).\n\nMore material reports to overflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of decreasing the vortex finder diameter?",
+      back: "A smaller vortex finder diameter restricts coarse from entering overflow, producing a finer overflow (lower D₅₀).\n\nCut size shifts finer.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of a smaller apex diameter?",
+      back: "A smaller apex increases backpressure, may force coarse to overflow, and can cause roping.\n\nRoping is a thick discharge through overflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is roping?",
+      back: "Roping is blockage of the apex causing coarse material to discharge through the overflow as a thick rope.\n\nCorrected by increasing apex size or reducing feed solids.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of a larger apex diameter?",
+      back: "A larger apex reduces resistance, leading to finer overflow and more underflow.\n\nIt reduces water bypass and improves sharpness.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How does cyclone body diameter affect cut size?",
+      back: "Larger body → coarser cut; smaller body → finer cut.\n\nTangential velocity decreases with larger diameter, reducing centrifugal force.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of increasing feed pressure?",
+      back: "Higher feed pressure strengthens centrifugal force, leading to a finer cut and higher throughput.\n\nPressure is a key control variable.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of decreasing feed pressure?",
+      back: "Lower feed pressure weakens centrifugal force, resulting in a coarser cut and lower throughput.\n\nToo low pressure causes poor separation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How does inclining a cyclone affect performance?",
+      back: "Inclining (tilting) the cyclone typically makes the overflow finer and the underflow more dilute.\n\nUsed for fine‑tuning separation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is hindered settling?",
+      back: "Hindered settling occurs when high solids concentration slows particle settling due to interference.\n\nCaused by high slurry density; reduces efficiency.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What are five factors that can cause a coarse overflow?",
+      back: "(1) Large vortex finder diameter\n(2) Small apex diameter\n(3) High slurry density\n(4) Low feed pressure\n(5) Large body diameter\n\nEach reduces the effectiveness of coarse particle removal.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How can you make the overflow finer?",
+      back: "To make the overflow finer: decrease vortex finder diameter, increase apex diameter, increase feed pressure, or use a smaller cyclone body.\n\nThese increase centrifugal force or restrict coarse entry.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is an efficiency curve?",
+      back: "An efficiency curve (Tromp curve) is a graph of the probability of a particle reporting to the underflow versus particle size.\n\nShows classifier performance.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What does the x‑axis of an efficiency curve represent?",
+      back: "The x‑axis represents particle size, usually in micrometers (µm) or millimeters (mm).\n\nIt is often plotted on a logarithmic or linear scale.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What does the y‑axis of an efficiency curve represent?",
+      back: "The y‑axis represents the probability (0–100%) of a particle going to the underflow.\n\n0% means all particles of that size go to overflow; 100% means all go to underflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Describe the shape of an ideal efficiency curve.",
+      back: "An ideal efficiency curve is a vertical line at the cut size D₅₀: 100% probability to underflow for all particles larger than D₅₀, and 0% for all smaller.\n\nPerfect separation – unattainable in practice.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Describe the shape of a typical actual efficiency curve.",
+      back: "A typical actual efficiency curve is S‑shaped, approaching the ideal asymptotically.\n\nThe deviation from the vertical indicates imperfection in separation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is water bypass on an efficiency curve?",
+      back: "Water bypass is the fraction of feed water (and the finest particles associated with it) that reports to the underflow. It is the y‑intercept of the curve.\n\nRead directly from the graph.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is D₅₀?",
+      back: "D₅₀ is the particle size at which there is a 50% probability of reporting to the underflow (and 50% to the overflow).\n\nIt is the split point of the classifier.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is sharpness of separation?",
+      back: "Sharpness of separation is the steepness of the efficiency curve; a steeper curve indicates sharper (better) separation.\n\nIt is quantified by the slope at D₅₀ or by the ratio D₂₅/D₇₅ (closer to 1 means sharper).",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Where are misplaced fines on the efficiency curve?",
+      back: "Misplaced fines are fine particles that erroneously go to the underflow. On the curve, they appear to the left of D₅₀, where the curve is above 0%.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Where are misplaced coarse on the efficiency curve?",
+      back: "Misplaced coarse are coarse particles that erroneously go to the overflow. On the curve, they appear to the right of D₅₀, where the curve is below 100%.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "From data: size 0 µm → 10%, 20 µm → 25%, 40 µm → 45%, 60 µm → 70%, 80 µm → 88%, 100 µm → 96%. Find water bypass and D₅₀.",
+      back: "Water bypass = 10% (the y‑intercept). D₅₀ ≈ 52 µm (interpolated between 40 µm at 45% and 60 µm at 70%).\n\nWater bypass is the y‑value at zero size; D₅₀ is found at 50% probability.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "If water bypass is 15% and D₅₀ = 75 µm, is the separation sharp?",
+      back: "Not very sharp; a high water bypass (15%) indicates significant loss of fines to the underflow.\n\nSharpness also depends on the slope; water bypass alone does not fully define sharpness.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "A curve has D₂₅ = 40 µm, D₇₅ = 80 µm, D₅₀ = 60 µm. Calculate imperfection.",
+      back: "Imperfection = (D₇₅ - D₂₅) / (2 × D₅₀) = (80-40) / (2×60) = 40/120 = 0.33.\n\nLower imperfection values indicate sharper separation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why do we correct efficiency for water bypass?",
+      back: "To isolate the true size separation from the hydraulic entrainment effect.\n\nThe corrected curve removes the water‑borne fraction, giving a better measure of classifier performance.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What does the corrected efficiency equation \\( u = f - o \\) represent?",
+      back: "It represents a simplified mass balance after accounting for water: underflow solids = feed solids – overflow solids.\n\nUsed to compute the corrected partition curve.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Write the overall mass balance for a hydrocyclone.",
+      back: "\\(F = O + U\\) (feed = overflow + underflow).\n\nThis applies to total mass or solids mass.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "A cyclone is fed with 200 t/h of slurry. Overflow = 120 t/h. Find underflow.",
+      back: "\\(U = 200 - 120 = 80\\) t/h.\n\nSimple subtraction based on the mass balance.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Feed solids = 50 t/h; underflow solids = 30 t/h. Find overflow solids.",
+      back: "\\(O = 50 - 30 = 20\\) t/h.\n\nThe same principle applies to solids.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Feed water = 150 m³/h; underflow water = 100 m³/h. Find water bypass.",
+      back: "Water bypass = underflow water / feed water = 100/150 = 0.667 or 66.7%.\n\nThis is the fraction of feed water reporting to the underflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "If water bypass is 25% and feed water = 200 m³/h, find underflow water.",
+      back: "Underflow water = water bypass × feed water = 0.25 × 200 = 50 m³/h.\n\nDirect multiplication.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Feed = 100 t/h slurry at 30% solids. Underflow = 50 t/h at 50% solids. Find overflow solids and water.",
+      back: "Feed solids = 30; underflow solids = 25; overflow solids = 5. Total overflow slurry = 50 t/h, so overflow water = 50 − 5 = 45 t/h.\n\nSolved using simultaneous mass balances.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What are four advantages of hydrocyclones?",
+      back: "(1) High capacity\n(2) High efficiency for fine particles\n(3) Handles sticky/clayey materials\n(4) No moving parts → low maintenance\n\nThese make them ideal for wet fine classification.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What are three disadvantages of hydrocyclones?",
+      back: "(1) Wet only (cannot be used for dry grinding)\n(2) Sensitive to feed variations\n(3) Requires a pump (energy cost)\n\nNot suitable for dry or unstable feeds.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why is low maintenance an advantage of hydrocyclones?",
+      back: "No moving parts; only wear liners need occasional replacement.\n\nReduces downtime and operating costs.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Compare hydrocyclones and screens for fine particle separation.",
+      back: "Screens blind with fine particles; hydrocyclones excel because they have no physical aperture.\n\nHydrocyclones are preferred for fine wet classification.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Which is better for coarse cuts: hydrocyclone or screen?",
+      back: "Screens are better for coarse cuts because they can be very sharp and are not limited by fluid dynamics.\n\nHydrocyclones become less sharp for coarse separations.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Can screens handle sticky clay effectively?",
+      back: "Poorly – they blind; hydrocyclones handle clay well due to fluid forces.\n\nNo mesh to clog.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Which is more versatile for wet and dry applications: hydrocyclone or screen?",
+      back: "Screens handle both; hydrocyclones only wet.\n\nDry classification requires screens or air classifiers.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define apex.",
+      back: "Apex (also called spigot) is the bottom opening of a hydrocyclone; the underflow (coarse product) discharges here.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define roping.",
+      back: "Roping is a condition where the apex becomes blocked, causing coarse material to discharge through the overflow as a thick rope.\n\nCorrect by increasing apex size.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define short‑circuiting.",
+      back: "Short‑circuiting is the direct flow of feed from the inlet to the overflow without proper separation.\n\nPrevented by ensuring the vortex finder extends below the feed inlet.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define water bypass.",
+      back: "Water bypass is the fraction of feed water that reports to the underflow (along with its associated fine particles).\n\nIt is represented by the y‑intercept of the efficiency curve.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define overflow.",
+      back: "Overflow is the fine product exiting through the vortex finder.\n\nIt is also called the undersize product.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define underflow.",
+      back: "Underflow is the coarse product exiting through the apex.\n\nIt is also called the oversize product.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define slurry density.",
+      back: "Slurry density is the ratio of solids to water in the feed. Higher density means more solids and less water, which increases viscosity and hinders separation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define hindered settling.",
+      back: "Hindered settling occurs when high solids concentration causes particles to interfere with each other, slowing their settling rates.\n\nReduces classification efficiency.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define cut size D₅₀.",
+      back: "D₅₀ is the particle size at which there is a 50% probability of reporting to the underflow (and 50% to the overflow).\n\nIt is the split point of the classifier.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define sharpness of separation.",
+      back: "Sharpness of separation measures how well the classifier distinguishes between particles slightly above and slightly below the cut size. It is reflected in the steepness of the efficiency curve.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define desliming.",
+      back: "Desliming is the removal of very fine particles (slimes) from a slurry. It is one objective of classification.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Define dewatering.",
+      back: "Dewatering is the removal of excess water from a slurry, another application of classification.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What might cause the overflow to be too coarse?",
+      back: "Causes: large vortex finder diameter, small apex, high slurry density, low feed pressure, or large body diameter.\n\nEach reduces the effectiveness of coarse particle removal.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How can you correct a coarse overflow?",
+      back: "To correct: decrease vortex finder diameter, increase apex diameter, reduce feed solids, increase feed pressure.\n\nThese adjustments shift the cut finer.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What might cause the overflow to be too fine?",
+      back: "Causes: small vortex finder diameter, large apex, low feed pressure, or small body diameter.\n\nThese shift the cut finer.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How can you correct a fine overflow?",
+      back: "To correct: increase vortex finder diameter, decrease apex diameter, increase feed solids, reduce feed pressure.\n\nThese shift the cut coarser.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What could cause the underflow to be too wet (dilute)?",
+      back: "Large apex diameter, low feed pressure, or low slurry density.\n\nToo much water reports to underflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How can you thicken the underflow?",
+      back: "To thicken underflow (increase solids content): decrease apex diameter, increase feed pressure, or increase feed solids.\n\nReduces water in underflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is roping and how do you fix it?",
+      back: "Roping is blockage of the apex causing coarse material to discharge through the overflow. Fix: increase apex diameter, reduce feed solids, reduce feed pressure.\n\nRoping disrupts normal split.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is spray discharge (very wide underflow)?",
+      back: "Spray discharge is a condition where the apex is too large, causing the underflow to be too dilute and widely spread.\n\nReduce apex size to correct.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What causes short‑circuiting?",
+      back: "Short‑circuiting is caused by a vortex finder that is too short relative to the feed inlet bottom.\n\nRedesign or replace vortex finder to proper length.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How can the efficiency curve be used to optimize a cyclone?",
+      back: "By analyzing the efficiency curve, you can adjust operating parameters to reduce water bypass and increase the slope (sharpness).\n\nThe goal is to move the actual curve closer to the ideal.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "If water bypass is high, what adjustments reduce it?",
+      back: "Increase feed pressure, decrease apex diameter, or carefully increase vortex finder diameter.\n\nHigher pressure forces more water to overflow, reducing bypass.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "If sharpness is poor (flat curve), what changes help?",
+      back: "Reduce slurry density, adjust vortex finder and apex to proper proportions.\n\nBetter settling conditions improve sharpness.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What does a very low D₅₀ indicate?",
+      back: "A very low D₅₀ means the cyclone is cutting very fine; the overflow product is very fine.\n\nThis may be desired or may indicate over‑classification.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What does a very high D₅₀ indicate?",
+      back: "A very high D₅₀ means a coarse cut; the overflow product is coarse.\n\nMay indicate the need for larger cyclones or different settings.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "A cyclone in a grinding circuit has roping and the overflow is coarser than normal. What is likely the root cause?",
+      back: "Apex too small; coarse material builds up, causes roping, and coarse is forced to overflow.\n\nIncreasing apex size fixes both issues.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Feed density suddenly increases. What happens to the products?",
+      back: "Overflow becomes coarser, underflow becomes finer, and separation efficiency drops.\n\nHindered settling causes misplacement.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Pressure drops due to pump wear. How does this affect separation?",
+      back: "Lower pressure → coarser cut, lower throughput, and possibly increased water bypass.\n\nLess centrifugal force reduces performance.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "You want to increase the amount of fines in the overflow. What two adjustments are most effective?",
+      back: "Decrease vortex finder diameter and increase feed pressure.\n\nBoth shift the cut finer, sending more fines to overflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "You want to increase the amount of water in the overflow (reduce water bypass). What two adjustments?",
+      back: "Increase feed pressure and decrease apex diameter.\n\nThese changes force more water upward into the overflow.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "A new operator increased the vortex finder diameter. What will happen?",
+      back: "Overflow becomes coarser, cut size increases, and separation may become less sharp.\n\nLarger vortex finder allows coarse short‑circuiting.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "The apex is changed from 50 mm to 80 mm. Predict the effect.",
+      back: "Underflow becomes more dilute, overflow becomes finer, and water bypass increases.\n\nLarger apex reduces backpressure.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Is it feasible to install hydrocyclones for a dry grinding circuit?",
+      back: "No, hydrocyclones require water to create slurry and swirling motion. Dry grinding circuits use air classifiers or screens.\n\nHydrocyclones are limited to wet applications.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why are hydrocyclones often used in closed‑circuit grinding?",
+      back: "They efficiently return coarse particles to the mill while sending fines to the next stage.\n\nThis controls product size and prevents overgrinding.",
+      course: "MT221",
+      term: "T2"
+    }
+  ],
+
+
 
   // =================================================================
   // GM220 - MODULE 1
