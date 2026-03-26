@@ -1718,6 +1718,1418 @@ const mcqData = [
     "tag": "Application"
   },
 
+
+
+//MT221 TERM 2 DATA 
+
+//CLASSIFICATION 
+/**
+ * KAERI EDTECH QUIZ DATA - MT221 T2
+ * Mode: Classification & Hydrocyclones
+ * Pattern: Strict A-B-C-D Cycle (0-1-2-3)
+ */
+
+  {
+    q: "What is the primary basis for classification in mineral processing?",
+    options: [
+      "Particle density and size",
+      "Particle shape",
+      "Particle magnetic susceptibility",
+      "Particle surface charge"
+    ],
+    correct: 0,
+    explanation: "Classification separates particles based on settling velocity, which is determined by particle size and density (mass).",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The gravitational force acting on a particle is $F = m g$. Which statement is true?",
+    options: [
+      "g changes with particle size",
+      "For a given fluid, only m varies, leading to differential settling",
+      "m is constant for all particles",
+      "The force is independent of particle density"
+    ],
+    correct: 1,
+    explanation: "Since gravity ($g$) is constant at $9.81\\,m/s^2$, mass is the only variable in the force equation that changes per particle.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which best describes drag force in classification?",
+    options: [
+      "A force that increases with particle mass",
+      "A force that pushes particles toward the wall",
+      "A resistance force, more significant for fine particles relative to their weight",
+      "A force that only acts on particles in air"
+    ],
+    correct: 2,
+    explanation: "Drag opposes motion. Because fine particles have very little mass, the drag force dominates their movement compared to gravitational pull.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which is NOT a typical objective of classification?",
+    options: [
+      "Size-based separation",
+      "Desliming",
+      "Dewatering",
+      "Particle agglomeration"
+    ],
+    correct: 3,
+    explanation: "Agglomeration (clumping particles together) is the opposite of classification (sorting individual particles).",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Why is classification used after comminution?",
+    options: [
+      "To control particle size before downstream processes",
+      "To increase the hardness of the ore",
+      "To remove magnetic impurities",
+      "To dry the material"
+    ],
+    correct: 0,
+    explanation: "Classification ensures that only particles meeting the size specification proceed to flotation or leaching.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is desliming in a hydrocyclone circuit?",
+    options: [
+      "Removing excess chemical reagents",
+      "Removing very fine particles (slimes)",
+      "Separating heavy gold from light quartz",
+      "Increasing the density of the overflow"
+    ],
+    correct: 1,
+    explanation: "Desliming removes 'slimes' (ultra-fines) which can coat larger particles or interfere with chemical reactions in downstream stages.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A hydrocyclone separates particles based on the balance of which two forces?",
+    options: [
+      "Gravity and Magnetism",
+      "Electrostatic and Friction",
+      "Centrifugal force and Inward drag force",
+      "Buoyancy and Surface tension"
+    ],
+    correct: 2,
+    explanation: "Centrifugal force pushes coarse particles out to the wall, while drag force pulls fine particles into the central vortex.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which statement about hydrocyclones is true?",
+    options: [
+      "They use vibrating screens for separation",
+      "They require high electricity to spin the internal rotors",
+      "They cannot be used with water-based slurries",
+      "They are static devices with no moving parts"
+    ],
+    correct: 3,
+    explanation: "The rotational motion is created by the pressure of the pump, not by moving parts inside the cyclone itself.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which component is the primary discharge point for coarse/heavy product?",
+    options: [
+      "Apex (spigot)",
+      "Vortex finder",
+      "Tangential inlet",
+      "Overflow pipe"
+    ],
+    correct: 0,
+    explanation: "The Apex is the narrow opening at the very bottom where the underflow (coarse) exits.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The vortex finder is responsible for discharging which product?",
+    options: [
+      "The coarse underflow",
+      "The fine overflow",
+      "The pressurized feed",
+      "The tramp iron waste"
+    ],
+    correct: 1,
+    explanation: "The vortex finder is the internal tube that captures the upward-moving central vortex and sends it to the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Why must the vortex finder extend below the bottom of the feed inlet?",
+    options: [
+      "To increase the tangential velocity of the feed",
+      "To reduce the wear on the cylindrical section",
+      "To prevent short-circuiting of feed directly to overflow",
+      "To allow the air core to form at the apex"
+    ],
+    correct: 2,
+    explanation: "If the vortex finder is too short, the incoming feed will jump straight into the overflow without being centrifuged.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is 'Short-Circuiting' in the context of classification?",
+    options: [
+      "A failure in the electrical pump motor",
+      "When the air core collapses due to low pressure",
+      "When coarse particles report to the underflow correctly",
+      "When feed material exits through the overflow without being classified"
+    ],
+    correct: 3,
+    explanation: "Short-circuiting is a major efficiency loss where material bypasses the separation zone entirely.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The conical section of a hydrocyclone serves what primary purpose?",
+    options: [
+      "Increasing tangential velocity as the diameter decreases",
+      "Filtering out water from the solids",
+      "Slowing down the slurry to allow settling",
+      "Reversing the magnetic polarity of the ore"
+    ],
+    correct: 0,
+    explanation: "As the cone narrows, the fluid must spin faster to maintain momentum, increasing the centrifugal force on the particles.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which variable most directly controls the underflow concentration?",
+    options: [
+      "Inlet pressure",
+      "Apex (spigot) diameter",
+      "Vortex finder length",
+      "Body height"
+    ],
+    correct: 1,
+    explanation: "Changing the apex size is the primary way operators control how thick (concentrated) the underflow is.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "In the separation zone, where do the coarse particles migrate?",
+    options: [
+      "Toward the central air core",
+      "Toward the upward-moving vortex",
+      "Toward the outer wall of the cyclone",
+      "Toward the vortex finder entrance"
+    ],
+    correct: 2,
+    explanation: "Heavier/larger particles have more momentum and are thrown against the outer wall by centrifugal force.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The 'Air Core' in a hydrocyclone is essential because it:",
+    options: [
+      "Provides oxygen for mineral oxidation",
+      "Reduces the density of the water",
+      "Cools the slurry to prevent pipe wear",
+      "Is required for the stable formation of the inner upward vortex"
+    ],
+    correct: 3,
+    explanation: "Without a stable air core, the fluid cannot efficiently create the upward vortex that carries the fines to the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the specific path of a coarse particle from entry to exit?",
+    options: [
+      "Entry -> outer wall -> spiral downward -> apex discharge",
+      "Entry -> central core -> upward -> vortex finder",
+      "Entry -> spiral downward -> inward -> vortex finder",
+      "Entry -> outer wall -> upward -> spigot"
+    ],
+    correct: 0,
+    explanation: "Coarse particles stay near the wall, moving in a downward spiral until they reach the bottom opening.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the specific path of a fine particle from entry to exit?",
+    options: [
+      "Entry -> outer wall -> spiral down -> apex",
+      "Entry -> inward migration -> upward vortex -> vortex finder",
+      "Entry -> direct settlement -> apex",
+      "Entry -> downward spiral -> spigot"
+    ],
+    correct: 1,
+    explanation: "Fines are pulled inward by drag, join the upward vortex, and exit via the vortex finder.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "In mineral processing terminology, the overflow is usually the:",
+    options: [
+      "Heads",
+      "Tails",
+      "Undersize product",
+      "Oversize product"
+    ],
+    correct: 2,
+    explanation: "Undersize refers to particles smaller than the cut size ($D_{50}$), which report to the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "In a closed-circuit grinding mill, the underflow is typically:",
+    options: [
+      "The final product sent to flotation",
+      "Discarded as tailings to the dam",
+      "Filtered and dried for shipment",
+      "Returned to the mill for regrinding"
+    ],
+    correct: 3,
+    explanation: "Underflow contains the coarse particles that need further size reduction; thus, they are sent back to the mill.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the primary effect of high slurry viscosity on classification?",
+    options: [
+      "It hinders particle settling, making the cut size coarser",
+      "It speeds up separation by increasing friction",
+      "It reduces the wear on the internal liners",
+      "It eliminates the need for an air core"
+    ],
+    correct: 0,
+    explanation: "Thick, viscous slurry makes it harder for particles to move through the water, leading to a 'fuzzy' and coarse cut.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If the vortex finder diameter is increased while keeping other variables constant:",
+    options: [
+      "The overflow will become much finer",
+      "The cut size ($D_{50}$) will increase (coarser overflow)",
+      "The pressure drop will increase significantly",
+      "The apex will likely block immediately"
+    ],
+    correct: 1,
+    explanation: "A larger vortex finder reduces the velocity of the upward vortex, allowing larger particles to enter the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the risk of using an apex that is too small for the solids load?",
+    options: [
+      "The cyclone will overflow too much water",
+      "The centrifugal force will drop to zero",
+      "The cyclone will enter a 'roping' condition",
+      "The feed pump will automatically shut down"
+    ],
+    correct: 2,
+    explanation: "Roping happens when the apex is physically too small to let the required volume of solids out, causing a backup.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "During 'Roping', what happens to the classification efficiency?",
+    options: [
+      "It remains the same as spray discharge",
+      "It improves because the underflow is thicker",
+      "It fluctuates but stays within limits",
+      "It drops significantly as coarse particles are forced into the overflow"
+    ],
+    correct: 3,
+    explanation: "When the bottom is blocked, coarse material has nowhere to go but up into the final product, ruining the separation.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "How does the body diameter of the cyclone affect the centrifugal force?",
+    options: [
+      "Smaller body diameter = Higher centrifugal force",
+      "Larger body diameter = Higher centrifugal force",
+      "Body diameter has no relationship with force",
+      "Force is only determined by the apex size"
+    ],
+    correct: 0,
+    explanation: "Force is $mv^2/r$. A smaller radius ($r$) significantly increases the force at a constant velocity.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "To achieve a finer cut (smaller $D_{50}$), an operator should:",
+    options: [
+      "Decrease the feed pressure",
+      "Increase the feed pressure",
+      "Increase the apex diameter",
+      "Increase the slurry density"
+    ],
+    correct: 1,
+    explanation: "Higher pressure increases the spin speed, which increases the centrifugal force and makes the cut finer.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which adjustment would most effectively make the overflow product finer?",
+    options: [
+      "Increasing the slurry temperature",
+      "Diluting the feed with more water",
+      "Reducing the vortex finder diameter",
+      "Decreasing the feed pressure"
+    ],
+    correct: 2,
+    explanation: "Restricting the overflow exit size (vortex finder) forces the cyclone to be more 'selective' toward fines.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What characterizes 'Hindered Settling' in high-density slurries?",
+    options: [
+      "Particles settling faster due to magnetic attraction",
+      "Particles settling slower due to high water velocity",
+      "Particles settling at terminal velocity without interference",
+      "Particles colliding and interfering with each other's paths"
+    ],
+    correct: 3,
+    explanation: "In a crowded slurry, particles cannot move freely; they bump into each other, slowing down the sorting process.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A cyclone installed at an incline (e.g., 45 degrees) will generally produce:",
+    options: [
+      "A finer overflow and more dilute underflow",
+      "A coarser overflow and thicker underflow",
+      "No change compared to vertical installation",
+      "Total blockage of the vortex finder"
+    ],
+    correct: 0,
+    explanation: "Gravity helps 'wash' the fines out of the underflow side when tilted, leading to these results.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which condition is a primary cause of misplaced coarse particles in the overflow?",
+    options: [
+      "Low feed pressure",
+      "High slurry density and viscosity",
+      "Very large apex diameter",
+      "Using a very small vortex finder"
+    ],
+    correct: 1,
+    explanation: "High density/viscosity prevents coarse particles from reaching the wall, so they get 'swept' into the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The Efficiency (Partition) Curve tracks what on the X-axis?",
+    options: [
+      "Slurry Density",
+      "Feed Pressure",
+      "Particle Size",
+      "Water Bypass Percentage"
+    ],
+    correct: 2,
+    explanation: "The curve shows how separation probability changes as particle size increases.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is indicated by the steepness (slope) of the Efficiency Curve?",
+    options: [
+      "The total tonnage capacity",
+      "The level of pump wear",
+      "The water-to-solids ratio",
+      "The sharpness of separation"
+    ],
+    correct: 3,
+    explanation: "A vertical-like steep slope means the cyclone is very precise at distinguishing between sizes.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "In an 'Ideal' classification process, the efficiency curve would look like:",
+    options: [
+      "A vertical step-function at the cut point",
+      "A flat horizontal line at 50%",
+      "A bell-shaped curve",
+      "A diagonal line from 0 to 100"
+    ],
+    correct: 0,
+    explanation: "Ideal means every single particle below the cut goes to overflow, and every particle above goes to underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The Y-intercept of a partition curve corresponds to which phenomenon?",
+    options: [
+      "Short-circuiting of coarse to overflow",
+      "The water bypass to underflow",
+      "The total power consumption",
+      "The apex blockage point"
+    ],
+    correct: 1,
+    explanation: "The Y-intercept represents the fines that report to the underflow simply because they followed the water.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If a cyclone has a $D_{50}$ of $75\\,\\mu m$, it means:",
+    options: [
+      "75% of the total feed reports to the underflow",
+      "The average size of the overflow is exactly $75\\,\\mu m$",
+      "A $75\\,\\mu m$ particle has a 50% chance of going to the underflow",
+      "The apex must be at least $75\\,mm$ wide"
+    ],
+    correct: 2,
+    explanation: "$D_{50}$ is the 'cut point' where the probability of reporting to either stream is equal.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "How is the 'Imperfection' ($I$) of a cyclone calculated?",
+    options: [
+      "$(D_{25} + D_{75}) / D_{50}$",
+      "$D_{50} / (D_{75} - D_{25})$",
+      "The total mass of misplaced fines",
+      "$(D_{75} - D_{25}) / (2 \\times D_{50})$"
+    ],
+    correct: 3,
+    explanation: "This formula standardizes the sharpness of the curve, allowing comparison between different cyclones.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "On a partition curve, 'Misplaced Fines' are found in the region:",
+    options: [
+      "To the left of $D_{50}$, where the curve is above the 0 line",
+      "To the right of $D_{50}$, where the curve is below the 100 line",
+      "Exactly at the 50% probability point",
+      "Where the curve meets the X-axis"
+    ],
+    correct: 0,
+    explanation: "These are small particles that should have gone to overflow but ended up in the underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "On a partition curve, 'Misplaced Coarse' are found in the region:",
+    options: [
+      "Left of $D_{50}$ and above the water bypass line",
+      "To the right of $D_{50}$, where the curve is below the 100% line",
+      "At the very beginning of the curve",
+      "Only in the underflow stream"
+    ],
+    correct: 1,
+    explanation: "These are large particles that should have reported to underflow but stayed in the overflow instead.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If the water bypass is $20\\%$, what is the minimum value the partition curve can reach on the Y-axis?",
+    options: [
+      "0%",
+      "10%",
+      "20%",
+      "50%"
+    ],
+    correct: 2,
+    explanation: "Because $20\\%$ of the water (and the fines in it) always goes to underflow, the curve starts at 20.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which of these curves represents a more efficient (sharper) classifier?",
+    options: [
+      "A curve with $I = 0.85$",
+      "A curve with $I = 0.50$",
+      "A curve with $I = 0.15$",
+      "A curve with $I = 0.35$"
+    ],
+    correct: 3,
+    explanation: "Lower imperfection ($I$) values indicate a steeper, more precise curve.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the primary law governing mass balance in a hydrocyclone?",
+    options: [
+      "Mass of Feed = Mass of Overflow + Mass of Underflow",
+      "Mass of Feed = Mass of Overflow - Mass of Underflow",
+      "Mass of Feed = 2 x Mass of Underflow",
+      "Mass of Underflow = Mass of Feed / Water Bypass"
+    ],
+    correct: 0,
+    explanation: "The Law of Conservation of Mass: Input must equal total output.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A cyclone receives $300\\,t/h$ of slurry. If the overflow is $210\\,t/h$, what is the underflow?",
+    options: [
+      "510 t/h",
+      "90 t/h",
+      "210 t/h",
+      "300 t/h"
+    ],
+    correct: 1,
+    explanation: "Underflow = Feed - Overflow = 300 - 210 = 90 t/h.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If feed solids = $80\\,t/h$ and underflow solids = $65\\,t/h$, calculate the overflow solids.",
+    options: [
+      "145 t/h",
+      "65 t/h",
+      "15 t/h",
+      "80 t/h"
+    ],
+    correct: 2,
+    explanation: "Overflow solids = Feed solids - Underflow solids = 80 - 65 = 15 t/h.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Feed water is $400\\,m^3/h$. Underflow water is $80\\,m^3/h$. Calculate the water bypass fraction.",
+    options: [
+      "0.10 (10%)",
+      "0.80 (80%)",
+      "0.50 (50%)",
+      "0.20 (20%)"
+    ],
+    correct: 3,
+    explanation: "Bypass = Underflow Water / Feed Water = 80 / 400 = 0.2.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If water bypass is $30\\%$ and feed water is $500\\,m^3/h$, what is the underflow water rate?",
+    options: [
+      "150 m³/h",
+      "30 m³/h",
+      "350 m³/h",
+      "500 m³/h"
+    ],
+    correct: 0,
+    explanation: "Underflow water = 0.30 x 500 = 150 m³/h.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Feed is $200\\,t/h$ at $40\\%$ solids. Underflow is $100\\,t/h$ at $70\\%$ solids. Find overflow solids.",
+    options: [
+      "80 t/h",
+      "10 t/h",
+      "70 t/h",
+      "100 t/h"
+    ],
+    correct: 1,
+    explanation: "Feed solids = 0.4x200 = 80. Underflow solids = 0.7x100 = 70. Overflow solids = 80 - 70 = 10 t/h.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Why are hydrocyclones preferred over mechanical classifiers in modern plants?",
+    options: [
+      "They have lower operational power for the same tonnage",
+      "They take up significantly less floor space and have no moving parts",
+      "They can handle dry powders without needing water",
+      "They provide a 100% perfect separation curve"
+    ],
+    correct: 2,
+    explanation: "The footprint of a cyclone cluster is tiny compared to a rake or spiral classifier.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A significant disadvantage of hydrocyclones is:",
+    options: [
+      "They cannot handle abrasive slurries",
+      "They are extremely expensive to purchase",
+      "They require heavy lubrication for the internal bearings",
+      "They are sensitive to fluctuations in feed pressure and density"
+    ],
+    correct: 3,
+    explanation: "Changes in pump pressure directly change the cut size, which can upset the whole grinding circuit.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which material is commonly used for hydrocyclone liners to prevent wear?",
+    options: [
+      "Natural rubber or Ceramic",
+      "Untreated mild steel",
+      "Soft plastic",
+      "Aluminum foil"
+    ],
+    correct: 0,
+    explanation: "The high-velocity slurry is very abrasive; rubber and ceramics provide the best life-span.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "For a very fine separation (e.g., $10\\,\\mu m$), which equipment is best?",
+    options: [
+      "A single large-diameter cyclone",
+      "A cluster of many small-diameter cyclones",
+      "A standard vibrating screen",
+      "A simple settling pond"
+    ],
+    correct: 1,
+    explanation: "Small cyclones generate the massive centrifugal force needed to sort ultra-fine particles.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Screens are generally superior to cyclones when:",
+    options: [
+      "Handling sticky clay materials",
+      "Separating ultra-fine slimes below $5\\,\\mu m$",
+      "A very sharp cut is required for coarse material ($>1\\,mm$)",
+      "Floor space is the most critical constraint"
+    ],
+    correct: 2,
+    explanation: "Screens provide a physical barrier, ensuring 100% sharpness at large sizes, whereas cyclones always have some bypass.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which classifier is most suitable for 'Wet' processing of large tonnages?",
+    options: [
+      "Air Classifier",
+      "Electrostatic Separator",
+      "Sieve Bend",
+      "Hydrocyclone"
+    ],
+    correct: 3,
+    explanation: "Hydrocyclones are the industry standard for high-capacity wet classification.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What does the term 'Spigot' refer to in a hydrocyclone?",
+    options: [
+      "The Apex opening",
+      "The Feed pump",
+      "The Vortex finder",
+      "The pressure gauge"
+    ],
+    correct: 0,
+    explanation: "Spigot and Apex are interchangeable terms for the bottom discharge port.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which condition describes 'Spray Discharge'?",
+    options: [
+      "When the underflow forms a thick, solid cylinder",
+      "When the underflow exits in a wide, umbrella-shaped cone",
+      "When the overflow pipe is leaking",
+      "When the feed pressure is zero"
+    ],
+    correct: 1,
+    explanation: "Spray discharge is the normal, healthy state of a cyclone underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If you observe a 'Rope' at the discharge, you should:",
+    options: [
+      "Decrease the feed pressure",
+      "Check for a larger apex or reduce feed density",
+      "Decrease the apex diameter further",
+      "Turn off the air core compressor"
+    ],
+    correct: 2,
+    explanation: "Roping indicates the apex is overwhelmed; opening it or thinning the feed fixes it.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The percentage of feed water reporting to the underflow is:",
+    options: [
+      "Solids recovery",
+      "Sharpness index",
+      "Cut size efficiency",
+      "Water bypass"
+    ],
+    correct: 3,
+    explanation: "Water bypass is the fraction of total water that takes the bottom exit.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which part of the hydrocyclone is the 'Cylindrical Section'?",
+    options: [
+      "The top part where the feed enters tangentially",
+      "The bottom part that narrows into the apex",
+      "The tube that discharges the overflow",
+      "The external pump housing"
+    ],
+    correct: 0,
+    explanation: "Separation starts in the cylindrical 'chamber' before particles move into the cone.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the primary function of the tangential inlet?",
+    options: [
+      "To measure the feed temperature",
+      "To convert pump pressure into rotational velocity",
+      "To filter out large rocks before they enter the cone",
+      "To inject air into the slurry"
+    ],
+    correct: 1,
+    explanation: "The tangential entry forces the fluid to move along the wall, creating the spiral.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What is the Split Point ($D_{50}$)?",
+    options: [
+      "The density of the underflow",
+      "The pressure at which the apex blocks",
+      "The size where a particle has 50% probability to underflow",
+      "The diameter of the vortex finder"
+    ],
+    correct: 2,
+    explanation: "It is the mathematical 'cut' point of the classifier.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "High sharpness of separation is indicated by an imperfection value ($I$) close to:",
+    options: [
+      "1.0",
+      "0.8",
+      "0.5",
+      "0.1"
+    ],
+    correct: 3,
+    explanation: "Lower imperfection values (closer to zero) mean a sharper, more vertical curve.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If an operator notices the overflow is too coarse, they should FIRST check for:",
+    options: [
+      "A worn-out vortex finder or oversized vortex finder",
+      "An apex that is too large",
+      "Low slurry density",
+      "High feed pressure"
+    ],
+    correct: 0,
+    explanation: "Wear in the vortex finder increases its diameter, which immediately coarsens the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "To make the overflow product finer, which physical change is most likely?",
+    options: [
+      "Increase the apex size",
+      "Decrease the vortex finder diameter",
+      "Decrease the feed pressure",
+      "Increase the feed slurry density"
+    ],
+    correct: 1,
+    explanation: "A smaller vortex finder diameter restricts coarse particles from escaping via the top.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A very fine overflow product (too fine) can be corrected by:",
+    options: [
+      "Increasing the feed pressure",
+      "Reducing the apex diameter",
+      "Increasing the vortex finder diameter",
+      "Decreasing the water in the feed"
+    ],
+    correct: 2,
+    explanation: "Opening the vortex finder shifts the cut point coarser.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If the underflow is too dilute (too much water), the operator should:",
+    options: [
+      "Increase the feed pressure",
+      "Increase the apex diameter",
+      "Increase the slurry density",
+      "Decrease the apex diameter"
+    ],
+    correct: 3,
+    explanation: "Decreasing the apex restricts the water flow, forcing more water to the overflow and thickening the underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which condition is the most likely cause of a 'Wet' (dilute) underflow?",
+    options: [
+      "An apex diameter that is too large",
+      "An apex diameter that is too small",
+      "High feed pressure",
+      "Low feed density"
+    ],
+    correct: 0,
+    explanation: "A large hole at the bottom lets too much water escape with the solids.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "To thicken the underflow without changing the apex, you could:",
+    options: [
+      "Increase the feed solids concentration",
+      "Increase the feed pressure",
+      "Decrease the vortex finder diameter",
+      "Decrease the pump speed"
+    ],
+    correct: 1,
+    explanation: "Higher pressure strengthens the centrifugal force, pushing more solids into the underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If roping is occurring consistently, the standard maintenance fix is to:",
+    options: [
+      "Shorten the vortex finder",
+      "Increase the feed pressure",
+      "Install a larger apex (spigot) insert",
+      "Dilute the overflow stream"
+    ],
+    correct: 2,
+    explanation: "Consistently small apexes cause roping; changing to a larger insert solves the volume backup.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What does 'Spray Discharge' indicate about the air core?",
+    options: [
+      "The air core is blocked by debris",
+      "The air core has collapsed due to roping",
+      "The feed pump is sucking air",
+      "The air core is stable and open through the center"
+    ],
+    correct: 3,
+    explanation: "Spray discharge is a visual confirmation that the central air core is functioning properly.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A cyclone shows high short-circuiting. Which part is likely damaged?",
+    options: [
+      "The vortex finder (too short or worn)",
+      "The apex (too small)",
+      "The pump impeller",
+      "The cylindrical section liner"
+    ],
+    correct: 0,
+    explanation: "If the vortex finder is damaged, the feed can 'leak' directly into the overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Reducing the water bypass is crucial because:",
+    options: [
+      "It saves water for the tailings dam",
+      "It reduces the amount of misplaced fines in the underflow",
+      "It increases the feed pressure automatically",
+      "It prevents the apex from wearing out"
+    ],
+    correct: 1,
+    explanation: "Misplaced fines in the underflow lead to 'overgrinding' in the mill, which wastes energy.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which change would most likely improve the Sharpness of Separation?",
+    options: [
+      "Increasing the feed pressure",
+      "Increasing the slurry density",
+      "Reducing the feed slurry density (adding more water)",
+      "Increasing the vortex finder diameter"
+    ],
+    correct: 2,
+    explanation: "Lower density reduces hindered settling, allowing particles to be sorted strictly by mass/size.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A $D_{50}$ of $15\\,\\mu m$ is considered a:",
+    options: [
+      "Coarse cut",
+      "Medium cut",
+      "Industrial cut",
+      "Very fine cut"
+    ],
+    correct: 3,
+    explanation: "Industrial cyclones usually cut between $45\\,\\mu m$ and $150\\,\\mu m$. $15\\,\\mu m$ is quite advanced.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If the cut size $D_{50}$ is very large (e.g., $300\\,\\mu m$):",
+    options: [
+      "The overflow will contain very large particles",
+      "The underflow will be pure water",
+      "The feed pressure must be extremely high",
+      "The vortex finder must be very small"
+    ],
+    correct: 0,
+    explanation: "A high $D_{50}$ means the 'gate' is wide open, allowing coarse material to overflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A hydrocyclone cluster experiencing roping across all units likely has:",
+    options: [
+      "Too many cyclones in operation for the feed volume",
+      "An overall feed slurry density that is too high",
+      "Feed pressure that is too high",
+      "Blockage in the overflow manifold"
+    ],
+    correct: 1,
+    explanation: "Global roping suggests the feed material itself is too thick for the system to handle.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "When slurry density increases, the centrifugal force on all particles:",
+    options: [
+      "Increases significantly",
+      "Decreases because of higher friction",
+      "Increases slightly",
+      "Stays the same"
+    ],
+    correct: 2,
+    explanation: "Density is part of the mass ($m$) in $mv^2/r$. Heavier fluid creates more momentum/force.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If the pump speed increases, the pressure gauge on the cyclone will:",
+    options: [
+      "Decrease",
+      "Stay at zero",
+      "Stutter",
+      "Increase"
+    ],
+    correct: 3,
+    explanation: "Higher pump speed equals higher flow rate, which requires higher pressure to push through the fixed cyclone geometry.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "To maximize the recovery of fines to the overflow, you should:",
+    options: [
+      "Increase feed pressure and decrease apex size",
+      "Decrease feed pressure and increase apex size",
+      "Decrease vortex finder diameter and increase pressure",
+      "Increase slurry density and decrease pressure"
+    ],
+    correct: 0,
+    explanation: "These conditions create the strongest sorting force and push water (and fines) upward.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "To minimize water bypass (get a drier underflow):",
+    options: [
+      "Decrease pressure and increase apex",
+      "Increase pressure and decrease apex",
+      "Dilute the feed and increase vortex diameter",
+      "Increase the feed density and decrease pressure"
+    ],
+    correct: 1,
+    explanation: "Higher pressure forces more water up, and a small apex restricts water from going down.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A larger vortex finder diameter usually results in:",
+    options: [
+      "Finer overflow and lower capacity",
+      "Higher water bypass and thicker underflow",
+      "Coarser overflow and higher tonnage capacity",
+      "Lower feed pressure and finer overflow"
+    ],
+    correct: 2,
+    explanation: "Larger exits allow more volume (tonnage) but at a coarser quality.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Increasing the apex diameter while keeping the feed constant will:",
+    options: [
+      "Thicken the underflow",
+      "Coarsen the overflow",
+      "Dilute the underflow and increase water bypass",
+      "Increase the feed pressure"
+    ],
+    correct: 3,
+    explanation: "Opening the bottom port lets more water and small particles through, diluting the underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Can hydrocyclones be used for dewatering tailings?",
+    options: [
+      "Yes, they are commonly used as a first stage before filtration",
+      "No, they are strictly for size separation",
+      "Only if the tailings contain gold",
+      "Only if used in air classification"
+    ],
+    correct: 0,
+    explanation: "Hydrocyclones can remove a large portion of water, making the final filtering much easier.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The main benefit of a closed-circuit grinding system is:",
+    options: [
+      "Reduced water usage",
+      "Elimination of the need for pumps",
+      "Prevention of overgrinding of already fine particles",
+      "Higher mill rotation speed"
+    ],
+    correct: 1,
+    explanation: "By removing fines immediately via the overflow, the mill only spends energy on the coarse material.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Is 'Optimal' classification always the sharpest classification?",
+    options: [
+      "Yes, sharp cuts are always best",
+      "No, sometimes a coarser cut is needed to prevent downstream filter blinding",
+      "Only if the ore is very hard",
+      "Only in dry grinding"
+    ],
+    correct: 2,
+    explanation: "Operations must balance sharpness with the needs of the next process step.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which adjustment improves both the sharpness and the cut size (makes it finer)?",
+    options: [
+      "Increasing feed density",
+      "Reducing feed pressure",
+      "Reducing vortex finder diameter and increasing pressure",
+      "Increasing apex size and decreasing pressure"
+    ],
+    correct: 3,
+    explanation: "These two actions are the core 'tuning' knobs for fine, sharp separation.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "In a plant processing 10,000 tpd of clay-heavy ore, which is best?",
+    options: [
+      "A cluster of 20 hydrocyclones",
+      "A massive shaking table",
+      "A series of 5 dry screens",
+      "A simple gravity spiral"
+    ],
+    correct: 0,
+    explanation: "Cyclones are the only practical way to handle high-clay, high-tonnage wet slurries.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The drag force on a particle in a cyclone is directly related to:",
+    options: [
+      "The particle's color",
+      "The fluid's viscosity and the particle's surface area",
+      "The magnetic field of the earth",
+      "The hardness of the particle"
+    ],
+    correct: 1,
+    explanation: "Drag is a fluid-resistance force based on how much surface the fluid can 'push' against.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A partition curve with $D_{50} = 100\\,\\mu m$ and water bypass $25\\%$. Find the probability of a $1\\,\\mu m$ particle to underflow.",
+    options: [
+      "0%",
+      "50%",
+      "25%",
+      "100%"
+    ],
+    correct: 2,
+    explanation: "Ultra-fine particles ($1\\,\\mu m$) behave like water and follow the bypass value exactly.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Calculate Imperfection ($I$) if $D_{25} = 40$, $D_{75} = 120$, $D_{50} = 100$.",
+    options: [
+      "0.10",
+      "0.80",
+      "0.50",
+      "0.40"
+    ],
+    correct: 3,
+    explanation: "Step 1: $(120 - 40) = 80$. Step 2: $2 \\times 100 = 200$. Step 3: $80 / 200 = 0.4$.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "What physically happens to the air core when you increase the apex diameter significantly?",
+    options: [
+      "The air core widens",
+      "The air core collapses",
+      "The air core stays the same",
+      "The air core turns into liquid"
+    ],
+    correct: 0,
+    explanation: "A larger opening allows more air to enter the center, widening the core.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Low sharpness ($I > 0.6$) is usually caused by:",
+    options: [
+      "Using high-quality ceramic liners",
+      "Operating at very high solids concentration (density)",
+      "Having a very small vortex finder",
+      "Keeping the pressure constant"
+    ],
+    correct: 1,
+    explanation: "High density causes too much particle interference (hindered settling), ruining precision.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "If an apex is reduced from $80\\,mm$ to $50\\,mm$, the underflow will:",
+    options: [
+      "Become thinner and more dilute",
+      "Become thicker with higher solids percentage",
+      "Stop completely",
+      "Turn into air"
+    ],
+    correct: 2,
+    explanation: "A smaller opening restricts the water, leading to a denser discharge.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "To prevent coarse short-circuiting to the overflow in a closed circuit:",
+    options: [
+      "Increase the mill speed",
+      "Reduce the apex diameter",
+      "Decrease the slurry temperature",
+      "Increase the vortex finder insertion depth (length)"
+    ],
+    correct: 3,
+    explanation: "Making the vortex finder longer ensures it sits safely below the 'splash' of the incoming feed.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A technician sees the pressure gauge is at 0, but the pump is running. What is wrong?",
+    options: [
+      "The apex is blocked",
+      "The gauge is broken or the pump is not moving any slurry (priming issue)",
+      "The vortex finder is too long",
+      "The slurry is too hot"
+    ],
+    correct: 0,
+    explanation: "No pressure at the cyclone means no flow is actually reaching the unit.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Feed = $1000\\,t/h$ slurry. Overflow = $35\\%$ solids. Underflow = $75\\%$ solids. Feed = $45\\%$ solids. Find Underflow tonnage.",
+    options: [
+      "450 t/h",
+      "250 t/h",
+      "750 t/h",
+      "350 t/h"
+    ],
+    correct: 1,
+    explanation: "Step 1: Solids = $0.45 \\times 1000 = 450$. Step 2: $0.75U + 0.35(1000-U) = 450$. Step 3: $0.4U = 100 \\Rightarrow U = 250\\,t/h$.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The primary purpose of classification is to prevent:",
+    options: [
+      "Chemical corrosion",
+      "Water evaporation",
+      "Overgrinding",
+      "Magnetic interference"
+    ],
+    correct: 2,
+    explanation: "Removing fines immediately means the mill doesn't waste energy grinding them into useless dust.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which Y-intercept value on an efficiency curve is most desirable?",
+    options: [
+      "50%",
+      "100%",
+      "A value as close to 0 as possible",
+      "A negative value"
+    ],
+    correct: 3,
+    explanation: "The Y-intercept represents the water bypass. Lower bypass means a cleaner, drier underflow.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Desliming is effectively the same as:",
+    options: [
+      "Removing coarse material from underflow",
+      "Removing fine material from the overflow",
+      "Removing fine material from the underflow",
+      "Increasing the slurry density to 100%"
+    ],
+    correct: 0,
+    explanation: "Desliming (removing slimes) ensures the heavy coarse stream is clean for the next stage.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "Which parameter does the Efficiency Curve NOT help evaluate?",
+    options: [
+      "Cut Size ($D_{50}$)",
+      "Water Bypass",
+      "Sharpness of Separation",
+      "Power consumption of the pump motor"
+    ],
+    correct: 1,
+    explanation: "Power consumption is a mechanical/electrical metric, not a classification quality metric.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "The tangential velocity of the slurry is responsible for:",
+    options: [
+      "Washing the particles",
+      "Heating the water",
+      "Generating the centrifugal force",
+      "Measuring the solids concentration"
+    ],
+    correct: 2,
+    explanation: "Velocity in a circle (tangential) creates the outward force that sorts the particles.",
+    course: "MT221",
+    term: "T2"
+  },
+
+  {
+    q: "A hydrocyclone with a $1000\\,mm$ body diameter will cut:",
+    options: [
+      "Coarser than a $100\\,mm$ cyclone at the same pressure",
+      "Finer than a $100\\,mm$ cyclone at the same pressure",
+      "At exactly the same size",
+      "Only dry air"
+    ],
+    correct: 3,
+    explanation: "Larger radius means lower centrifugal force ($v^2/r$), resulting in a coarser separation.",
+    course: "MT221",
+    term: "T2"
+  },
+
+
   // --- GM220 Module 1: The Earth - Evolution, Composition and Structure ---
 
   {
