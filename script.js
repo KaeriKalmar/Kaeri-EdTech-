@@ -2,6 +2,8 @@
 // === KAERI EDTECH QUIZ ENGINE - HYBRID MASTER (v11.9 MERGED) ===
 // === Server-Side Access + Local Content + Doc Delivery + KaTeX + Smart TTS + Markdown ===
 // === Enhanced with Silent Revalidation, Expiry Display, and Analytics ===
+// === NEW: Professional Revision Kit Generator (Branded Covers + Session Metadata) ===
+// === ADDITIVE SAFE UPDATES: Subscription guide idempotency + extra plan info helper ===
 // ============================================================
 
 // --- CONFIGURATION & STATE ---
@@ -106,6 +108,23 @@ async function initializeCourseLogic() {
             updateTtsButtonText();
         }
         
+        // Add Progress Dashboard Button if missing
+        if (!document.getElementById('progress-btn')) {
+            const progressBtn = document.createElement('button');
+            progressBtn.id = 'progress-btn';
+            progressBtn.innerHTML = "\uD83D\uDCCA My Progress";
+            progressBtn.style.backgroundColor = "#6f42c1";
+            progressBtn.style.color = "white";
+            progressBtn.style.border = "none";
+            progressBtn.style.padding = "15px 20px";
+            progressBtn.style.fontSize = "1.1em";
+            progressBtn.style.borderRadius = "8px";
+            progressBtn.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+            progressBtn.style.cursor = "pointer";
+            progressBtn.onclick = renderProgressDashboard;
+            modeButtonsDiv.appendChild(progressBtn);
+        }
+
         // Add Document Button if missing
         if (!document.getElementById('docs-btn')) {
             const docBtn = document.createElement('button');
@@ -701,7 +720,273 @@ function blockDemo(type) {
 }
 
 // ============================================================
-// === 5. UI & NAVIGATION ===
+// === 5. PROGRESS TRACKING ENGINE (localStorage only) ===
+// ============================================================
+
+const PROGRESS_KEY_PREFIX = 'kaeri_progress_v1_';
+
+function _progressKey() {
+    return `${PROGRESS_KEY_PREFIX}${currentTermKey}`;
+}
+
+function _loadProgress() {
+    try {
+        return JSON.parse(localStorage.getItem(_progressKey()) || 'null') || {
+            sessions: [],
+            streak: { count: 0, lastDate: null },
+            totalQuestions: 0,
+            totalCorrect: 0,
+            flashcardSessions: 0,
+            mcqBest: 0,
+            saBest: 0,
+            essayBest: 0
+        };
+    } catch(e) {
+        return {
+            sessions: [],
+            streak: { count: 0, lastDate: null },
+            totalQuestions: 0,
+            totalCorrect: 0,
+            flashcardSessions: 0,
+            mcqBest: 0,
+            saBest: 0,
+            essayBest: 0
+        };
+    }
+}
+
+function _saveProgress(data) {
+    try {
+        if (data.sessions.length > 60) {
+            data.sessions = data.sessions.slice(-60);
+        }
+        localStorage.setItem(_progressKey(), JSON.stringify(data));
+    } catch(e) {}
+}
+
+function _updateStreak(data) {
+    const today = new Date().toISOString().slice(0, 10);
+    const last  = data.streak.lastDate;
+    if (last === today) return;
+    const yesterday = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+    if (last === yesterday) {
+        data.streak.count += 1;
+    } else {
+        data.streak.count = 1;
+    }
+    data.streak.lastDate = today;
+}
+
+function recordProgressSession(type, score, total, label) {
+    if (!currentTermKey) return;
+    const data    = _loadProgress();
+    const percent = total > 0 ? Math.round((score / total) * 100) : 0;
+    data.sessions.push({ type, score, total, percent, ts: Date.now(), label: label || type });
+    if (type !== 'flashcard') {
+        data.totalQuestions += total;
+        data.totalCorrect   += score;
+    }
+    if (type === 'mcq')         data.mcqBest          = Math.max(data.mcqBest,   percent);
+    if (type === 'shortAnswer') data.saBest            = Math.max(data.saBest,    percent);
+    if (type === 'essay')       data.essayBest         = Math.max(data.essayBest, percent);
+    if (type === 'flashcard')   data.flashcardSessions += 1;
+    _updateStreak(data);
+    _saveProgress(data);
+}
+
+function _timeAgo(ts) {
+    const diff  = Date.now() - ts;
+    const mins  = Math.floor(diff / 60000);
+    const hours = Math.floor(diff / 3600000);
+    const days  = Math.floor(diff / 864e5);
+    if (mins  < 1)   return 'just now';
+    if (mins  < 60)  return `${mins}m ago`;
+    if (hours < 24)  return `${hours}h ago`;
+    if (days  === 1) return 'yesterday';
+    return `${days}d ago`;
+}
+
+function _confirmResetProgress() {
+    if (confirm('Reset all progress data for this course/term? This cannot be undone.')) {
+        localStorage.removeItem(_progressKey());
+        showAppNotification('\u{1F5D1}\uFE0F Progress reset.', 'info', 2000);
+        setTimeout(renderProgressDashboard, 300);
+    }
+}
+
+function renderProgressDashboard() {
+    const container = document.getElementById('quiz-form');
+    container.innerHTML = '';
+    document.getElementById('result').innerHTML = '';
+    currentQuizType = 'dashboard';
+    updateProgress(0, 0);
+
+    if (!currentTermKey) {
+        container.innerHTML = '<p style="text-align:center;color:#a0a8b4;">Load a course first.</p>';
+        return;
+    }
+
+    const data     = _loadProgress();
+    const sessions = data.sessions;
+
+    const overallPct = data.totalQuestions > 0
+        ? Math.round((data.totalCorrect / data.totalQuestions) * 100) : 0;
+
+    const last7  = sessions.filter(s => Date.now() - s.ts < 7  * 864e5);
+    const last30 = sessions.filter(s => Date.now() - s.ts < 30 * 864e5);
+    const recent = sessions.slice(-10);
+
+    function modeAvg(type) {
+        const s = sessions.filter(x => x.type === type && x.total > 0);
+        if (!s.length) return null;
+        return Math.round(s.reduce((a, b) => a + b.percent, 0) / s.length);
+    }
+    const mcqAvg = modeAvg('mcq');
+    const saAvg  = modeAvg('shortAnswer');
+    const esAvg  = modeAvg('essay');
+
+    const streakCount = data.streak.count || 0;
+    const streakColor = streakCount >= 7 ? '#ffc107' : streakCount >= 3 ? '#72efdd' : '#a0a8b4';
+
+    function bar(pct, color) {
+        if (pct === null) return '<span style="color:#555;font-size:0.85em;">No data yet</span>';
+        const fill = Math.max(0, Math.min(100, pct));
+        return `<div style="display:flex;align-items:center;gap:8px;">
+            <div style="flex:1;height:8px;background:#2b3a55;border-radius:4px;overflow:hidden;">
+                <div style="width:${fill}%;height:100%;background:${color};border-radius:4px;"></div>
+            </div>
+            <span style="font-size:0.85em;color:white;font-weight:700;min-width:36px;text-align:right;">${pct}%</span>
+        </div>`;
+    }
+
+    function sparkline(pts) {
+        if (!pts.length) return '<span style="color:#555;font-size:0.8em;">No sessions yet</span>';
+        const W = 200, H = 40, pad = 4;
+        const maxV = Math.max(...pts.map(p => p.percent), 1);
+        const xs = pts.map((_, i) => pad + i * ((W - pad*2) / Math.max(pts.length - 1, 1)));
+        const ys = pts.map(p => H - pad - (p.percent / 100) * (H - pad*2));
+        const poly = xs.map((x, i) => `${x},${ys[i]}`).join(' ');
+        const dots = pts.map((p, i) => {
+            const c = p.percent >= 70 ? '#72efdd' : p.percent >= 50 ? '#ffc107' : '#ef4444';
+            return `<circle cx="${xs[i]}" cy="${ys[i]}" r="3" fill="${c}"/>`;
+        }).join('');
+        return `<svg width="${W}" height="${H}" style="overflow:visible;display:block;">
+            <polyline points="${poly}" fill="none" stroke="#3e506e" stroke-width="1.5" stroke-linejoin="round"/>
+            ${dots}
+        </svg>`;
+    }
+
+    function sessionList() {
+        const rev = [...sessions].reverse().slice(0, 5);
+        if (!rev.length) return '<p style="color:#555;font-size:0.85em;text-align:center;">No sessions yet.</p>';
+        const icon = { mcq:'\uD83D\uDCDD', shortAnswer:'\u270D\uFE0F', essay:'\uD83D\uDCC4', flashcard:'\uD83C\uDCCF' };
+        return rev.map(s => {
+            const color = s.percent >= 70 ? '#72efdd' : s.percent >= 50 ? '#ffc107' : '#ef4444';
+            const lbl   = s.type === 'flashcard'
+                ? `${icon[s.type]||'\uD83D\uDCDA'} ${s.label} \u2014 ${s.total} cards`
+                : `${icon[s.type]||'\uD83D\uDCDA'} ${s.label} \u2014 ${s.score}/${s.total} (${s.percent}%)`;
+            return `<div style="display:flex;justify-content:space-between;align-items:center;
+                        padding:9px 12px;border-radius:8px;background:#0d1b2a;
+                        border-left:3px solid ${color};margin-bottom:6px;">
+                <span style="font-size:0.88em;color:white;">${lbl}</span>
+                <span style="font-size:0.75em;color:#555;white-space:nowrap;margin-left:8px;">${_timeAgo(s.ts)}</span>
+            </div>`;
+        }).join('');
+    }
+
+    container.innerHTML = `
+    <div style="max-width:520px;margin:0 auto;padding:4px;">
+
+        <div style="text-align:center;margin-bottom:20px;">
+            <h2 style="color:white;margin:0 0 4px 0;">\uD83D\uDCCA My Progress</h2>
+            <p style="color:#a0a8b4;font-size:0.85em;margin:0;">${currentCourse} ${currentTerm}</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px;">
+            <div style="background:#1e2a3a;border-radius:10px;padding:14px 10px;text-align:center;border:1px solid #2b3a55;">
+                <div style="font-size:1.6em;font-weight:900;color:#72efdd;">${overallPct}%</div>
+                <div style="font-size:0.72em;color:#a0a8b4;margin-top:3px;">Overall Accuracy</div>
+            </div>
+            <div style="background:#1e2a3a;border-radius:10px;padding:14px 10px;text-align:center;border:1px solid #2b3a55;">
+                <div style="font-size:1.6em;font-weight:900;color:${streakColor};">${streakCount}\uD83D\uDD25</div>
+                <div style="font-size:0.72em;color:#a0a8b4;margin-top:3px;">Day Streak</div>
+            </div>
+            <div style="background:#1e2a3a;border-radius:10px;padding:14px 10px;text-align:center;border:1px solid #2b3a55;">
+                <div style="font-size:1.6em;font-weight:900;color:white;">${sessions.length}</div>
+                <div style="font-size:0.72em;color:#a0a8b4;margin-top:3px;">Total Sessions</div>
+            </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;">
+            <div style="background:#1e2a3a;border-radius:10px;padding:12px;border:1px solid #2b3a55;">
+                <div style="font-size:0.72em;color:#a0a8b4;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">Questions Answered</div>
+                <div style="font-size:1.3em;font-weight:700;color:white;">${data.totalQuestions.toLocaleString()}</div>
+                <div style="font-size:0.75em;color:#72efdd;">${data.totalCorrect.toLocaleString()} correct</div>
+            </div>
+            <div style="background:#1e2a3a;border-radius:10px;padding:12px;border:1px solid #2b3a55;">
+                <div style="font-size:0.72em;color:#a0a8b4;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">Activity</div>
+                <div style="font-size:0.85em;color:white;">Last 7 days: <strong style="color:#72efdd;">${last7.length}</strong></div>
+                <div style="font-size:0.85em;color:white;">Last 30 days: <strong style="color:#72efdd;">${last30.length}</strong></div>
+            </div>
+        </div>
+
+        <div style="background:#1e2a3a;border-radius:10px;padding:16px;border:1px solid #2b3a55;margin-bottom:18px;">
+            <div style="font-size:0.78em;color:#a0a8b4;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:14px;">Performance by Mode</div>
+            <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                    <span style="font-size:0.85em;color:white;">\uD83D\uDCDD MCQ</span>
+                    <span style="font-size:0.75em;color:#a0a8b4;">Best: ${data.mcqBest}%</span>
+                </div>
+                ${bar(mcqAvg, '#72efdd')}
+            </div>
+            <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                    <span style="font-size:0.85em;color:white;">\u270D\uFE0F Short Answer</span>
+                    <span style="font-size:0.75em;color:#a0a8b4;">Best: ${data.saBest}%</span>
+                </div>
+                ${bar(saAvg, '#ffc107')}
+            </div>
+            <div style="margin-bottom:2px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                    <span style="font-size:0.85em;color:white;">\uD83D\uDCC4 Essay Sim</span>
+                    <span style="font-size:0.75em;color:#a0a8b4;">Best: ${data.essayBest}%</span>
+                </div>
+                ${bar(esAvg, '#e67e00')}
+            </div>
+            <div style="margin-top:12px;padding-top:10px;border-top:1px solid #2b3a55;">
+                <span style="font-size:0.85em;color:white;">\uD83C\uDCCF Flashcard Sessions</span>
+                <span style="float:right;font-size:0.85em;color:#a78bfa;font-weight:700;">${data.flashcardSessions}</span>
+            </div>
+        </div>
+
+        <div style="background:#1e2a3a;border-radius:10px;padding:16px;border:1px solid #2b3a55;margin-bottom:18px;">
+            <div style="font-size:0.78em;color:#a0a8b4;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;">Score Trend (last ${recent.filter(s=>s.type!=='flashcard').length} quiz sessions)</div>
+            <div style="overflow-x:auto;">${sparkline(recent.filter(s => s.type !== 'flashcard'))}</div>
+            <div style="margin-top:8px;display:flex;gap:14px;font-size:0.72em;color:#a0a8b4;">
+                <span><span style="color:#72efdd;">●</span> \u226570%</span>
+                <span><span style="color:#ffc107;">●</span> 50\u201369%</span>
+                <span><span style="color:#ef4444;">●</span> &lt;50%</span>
+            </div>
+        </div>
+
+        <div style="background:#1e2a3a;border-radius:10px;padding:16px;border:1px solid #2b3a55;margin-bottom:20px;">
+            <div style="font-size:0.78em;color:#a0a8b4;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;">Recent Sessions</div>
+            ${sessionList()}
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:10px;">
+            <button onclick="backToMenu()" class="back-button" style="margin:0;">\u2B05\uFE0F Back to Menu</button>
+            <button onclick="_confirmResetProgress()"
+                style="background:transparent;color:#ef4444;border:1px solid #ef4444;
+                       padding:10px 16px;border-radius:8px;cursor:pointer;font-size:0.85em;">
+                \uD83D\uDDD1\uFE0F Reset Progress
+            </button>
+        </div>
+    </div>`;
+}
+
+// ============================================================
+// === 5b. UI & NAVIGATION ===
 // ============================================================
 
 function enableFullAccessUI() {
@@ -806,8 +1091,18 @@ function openPaymentModal() {
     }, 300);
 }
 
+// ============================================================
+// === MODIFIED: closePaymentModal with idempotency reset for subscription guide ===
+// ============================================================
 function closePaymentModal() {
-    document.getElementById('payment-modal').classList.remove('show');
+    const modal = document.getElementById('payment-modal');
+    if (modal) modal.classList.remove('show');
+    
+    // ADDITIVE: Close the subscription guide if it exists (idempotency reset)
+    const guide = document.getElementById('subscription-guide');
+    if (guide) {
+        guide.removeAttribute('open');
+    }
 }
 
 function updateBuyNowLink(course, term, price) {
@@ -867,6 +1162,13 @@ function clearDemoLocks() {
     ["mcq", "shortAnswer", "essay", "flashcard", "documents"].forEach(
         m => localStorage.removeItem(`demo_${m}_used_${currentTermKey}`)
     );
+}
+
+// ============================================================
+// === ADDITIVE HELPER: Show info for extra price cards (does not break existing flow) ===
+// ============================================================
+function showExtraPlanInfo(plan, price) {
+    showAppNotification(`ℹ️ ${plan} (${price}) – coming soon! For now, use "Buy Now" for single term.`, "info", 4000);
 }
 
 // ============================================================
@@ -1062,10 +1364,14 @@ function checkMcqAnswer() {
     feedbackText += ` Explanation: ${humanizeLaTeX(q.explanation || '')}`;
     
     currentQuestionIndex++;
-    
+
+    // ── CHANGE 1: On last question, Finish button skips straight to final card ──
+    const isLastMcq = currentQuestionIndex >= currentQuizData.length;
     const nextBtn = document.createElement("button");
-    nextBtn.innerText = currentQuestionIndex < currentQuizData.length ? "Next ➡️" : "Finish Quiz";
-    nextBtn.onclick = displayMcqQuestion;
+    nextBtn.innerText = isLastMcq ? "Finish Quiz" : "Next ➡️";
+    nextBtn.onclick = isLastMcq
+        ? () => { document.getElementById("result").innerHTML = ""; showFinalMcqScore(); }
+        : displayMcqQuestion;
     resultDiv.appendChild(nextBtn);
 
     renderMath();
@@ -1102,6 +1408,21 @@ function showFinalMcqScore() {
     previewBtn.onclick = generatePrintPreview;
     container.appendChild(previewBtn);
 
+    // ── CHANGE 2: Switch learning modality panel ──
+    const switchDiv = document.createElement("div");
+    switchDiv.style.cssText = "margin-top:30px; padding:18px; background:#0d1b2a; border-radius:12px; border:1px solid #3e506e; text-align:center;";
+    switchDiv.innerHTML = `
+        <p style="color:#a0a8b4; margin:0 0 12px 0; font-size:0.9em;">🔄 <strong style="color:#72efdd;">Switch Learning Mode</strong></p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+            <button onclick="renderShortAnswers()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">✍️ Short Answer</button>
+            <button onclick="renderEssaySimulation()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">📄 Essay Sim</button>
+            <button onclick="renderFlashcardTopics()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">🃏 Flashcards</button>
+        </div>
+    `;
+    container.appendChild(switchDiv);
+
+    // Record local progress
+    recordProgressSession('mcq', currentScore, currentQuizData.length, `${currentCourse} ${currentTerm} MCQ`);
     // Log analytics
     logAnalyticsEvent('quiz_complete', `MCQ score: ${currentScore}/${currentQuizData.length} (${percent}%)`);
 }
@@ -1158,10 +1479,14 @@ function checkShortAnswer() {
     feedbackText += ` Explanation: ${humanizeLaTeX(q.explanation || '')}`;
     
     currentQuestionIndex++;
-    
+
+    // ── CHANGE 1: On last question, Finish button skips straight to final card ──
+    const isLastSA = currentQuestionIndex >= currentQuizData.length;
     const nextBtn = document.createElement("button");
-    nextBtn.innerText = currentQuestionIndex < currentQuizData.length ? "Next ➡️" : "Finish";
-    nextBtn.onclick = displayShortAnswerQuestion;
+    nextBtn.innerText = isLastSA ? "Finish" : "Next ➡️";
+    nextBtn.onclick = isLastSA
+        ? () => { document.getElementById("result").innerHTML = ""; showFinalShortAnswerScore(); }
+        : displayShortAnswerQuestion;
     resultDiv.appendChild(nextBtn);
 
     renderMath();
@@ -1198,6 +1523,20 @@ function showFinalShortAnswerScore() {
     previewBtn.onclick = generatePrintPreview;
     container.appendChild(previewBtn);
 
+    // ── CHANGE 2: Switch learning modality panel ──
+    const switchDiv = document.createElement("div");
+    switchDiv.style.cssText = "margin-top:30px; padding:18px; background:#0d1b2a; border-radius:12px; border:1px solid #3e506e; text-align:center;";
+    switchDiv.innerHTML = `
+        <p style="color:#a0a8b4; margin:0 0 12px 0; font-size:0.9em;">🔄 <strong style="color:#72efdd;">Switch Learning Mode</strong></p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+            <button onclick="renderQuiz()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">📝 MCQ</button>
+            <button onclick="renderEssaySimulation()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">📄 Essay Sim</button>
+            <button onclick="renderFlashcardTopics()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">🃏 Flashcards</button>
+        </div>
+    `;
+    container.appendChild(switchDiv);
+
+    recordProgressSession('shortAnswer', currentScore, currentQuizData.length, `${currentCourse} ${currentTerm} Short Answer`);
     logAnalyticsEvent('quiz_complete', `Short Answer score: ${currentScore}/${currentQuizData.length} (${percent}%)`);
 }
 
@@ -1309,14 +1648,17 @@ function checkEssayStep() {
     const explanationBox = `<div class="explanation-box">${parseKaeriMarkdown(step.explanation || '')}</div>`;
     resultDiv.innerHTML += explanationBox;
     feedbackText += ` Explanation: ${humanizeLaTeX(step.explanation || '')}`;
-    
+
+    // ── CHANGE 1: On last step, Finish button skips straight to final card ──
+    const isLastStep = currentStepIndex >= essay.steps.length - 1;
     const nextBtn = document.createElement("button");
-    nextBtn.innerText = currentStepIndex < essay.steps.length - 1 ? "Next ➡️" : "Finish";
+    nextBtn.innerText = isLastStep ? "Finish" : "Next ➡️";
     nextBtn.onclick = () => {
-        if (currentStepIndex < essay.steps.length - 1) {
+        if (!isLastStep) {
             currentStepIndex++;
-            showEssayStep(currentStepIndex); 
+            showEssayStep(currentStepIndex);
         } else {
+            document.getElementById("result").innerHTML = "";
             showFinalEssayScore();
         }
     };
@@ -1363,6 +1705,20 @@ function showFinalEssayScore() {
     backBtn.onclick = renderEssaySimulation;
     container.appendChild(backBtn);
 
+    // ── CHANGE 2: Switch learning modality panel ──
+    const switchDiv = document.createElement("div");
+    switchDiv.style.cssText = "margin-top:30px; padding:18px; background:#0d1b2a; border-radius:12px; border:1px solid #3e506e; text-align:center;";
+    switchDiv.innerHTML = `
+        <p style="color:#a0a8b4; margin:0 0 12px 0; font-size:0.9em;">🔄 <strong style="color:#72efdd;">Switch Learning Mode</strong></p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+            <button onclick="renderQuiz()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">📝 MCQ</button>
+            <button onclick="renderShortAnswers()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">✍️ Short Answer</button>
+            <button onclick="renderFlashcardTopics()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">🃏 Flashcards</button>
+        </div>
+    `;
+    container.appendChild(switchDiv);
+
+    recordProgressSession('essay', essayScore, currentEssay.steps.length, currentEssay.title);
     logAnalyticsEvent('essay_complete', `${currentEssay.title} score: ${essayScore}/${currentEssay.steps.length} (${percent}%)`);
 }
 
@@ -1754,12 +2110,34 @@ function showFlashcardCompletion() {
     challengeBtn.onclick = () => challengeFriend(currentFlashcards.length, 0, "Flashcards");
     container.appendChild(challengeBtn);
 
+    const previewBtn = document.createElement("button");
+    previewBtn.innerText = "👁️ Preview & Print";
+    previewBtn.style.backgroundColor = "#007bff"; 
+    previewBtn.style.color = "white";
+    previewBtn.style.marginLeft = "10px";
+    previewBtn.onclick = generatePrintPreview;
+    container.appendChild(previewBtn);
+
     const backBtn = document.createElement("button");
     backBtn.innerText = "⬅️ Back to Topics";
     backBtn.className = "back-button";
     backBtn.onclick = renderFlashcardTopics;
     container.appendChild(backBtn);
 
+    // ── CHANGE 2: Switch learning modality panel ──
+    const switchDiv = document.createElement("div");
+    switchDiv.style.cssText = "margin-top:30px; padding:18px; background:#0d1b2a; border-radius:12px; border:1px solid #3e506e; text-align:center;";
+    switchDiv.innerHTML = `
+        <p style="color:#a0a8b4; margin:0 0 12px 0; font-size:0.9em;">🔄 <strong style="color:#72efdd;">Switch Learning Mode</strong></p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+            <button onclick="renderQuiz()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">📝 MCQ</button>
+            <button onclick="renderShortAnswers()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">✍️ Short Answer</button>
+            <button onclick="renderEssaySimulation()" style="background:#2b3a55; color:white; border:1px solid #3e506e; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:0.85em;">📄 Essay Sim</button>
+        </div>
+    `;
+    container.appendChild(switchDiv);
+
+    recordProgressSession('flashcard', currentFlashcards.length, currentFlashcards.length, `${currentFlashcardTopic} Flashcards`);
     logAnalyticsEvent('flashcard_complete', `${currentFlashcardTopic} (${currentFlashcardMode} mode)`);
 }
 
@@ -1780,73 +2158,526 @@ function challengeFriend(score, total, modeName) {
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
 }
 
-function generatePrintPreview() {
-    const printDiv = document.getElementById("print-preview-content");
-    const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-    
-    let modeTitle = "";
-    if (currentQuizType === 'essay') modeTitle = currentEssay.title;
-    else if (currentQuizType === 'flashcard') modeTitle = currentFlashcardTopic + " - Glossary";
-    else modeTitle = `${currentCourse} ${currentTerm} - Practice Session`;
-    
-    let html = `
-        <div class="preview-header">
-            <h1>${modeTitle}</h1>
-            <p><strong>Kaeri EdTech Study Systems</strong></p>
-            <p>📞 Call/WhatsApp: <strong>0964312504</strong> for Full Access</p>
-            <p style="font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 5px; margin-top: 5px;">
-                Generated on: ${date} | Preview - Click Print to save as PDF
-            </p>
-            <div style="background: #fff3cd; padding: 10px; border-radius: 5px; margin-top: 10px; border: 1px solid #ffeaa7; font-size: 0.9em;">
-                <strong>💡 Tip:</strong> Use "Save as PDF" option in print dialog to create digital copy. Watermark will appear on all pages.
-            </div>
-        </div>
-    `;
-    
-    if (currentQuizType === 'essay') {
-        currentEssay.steps.forEach((step, index) => {
-            html += `<div class="preview-step"><div class="preview-q">Step ${index + 1}: ${parseKaeriMarkdown(step.q)}</div><div class="preview-ans">✅ Correct Action: ${parseKaeriMarkdown(step.options[step.correct])}</div><div class="preview-exp">💡 Note: ${parseKaeriMarkdown(step.explanation || "No additional explanation.")}</div></div>`;
+// ── PRINT HELPERS (KAERI STANDARD REVISION KIT ENGINE v2.0) ──────────────
+// Replaces the old flat _buildPrintItemHTML / _buildPrintDocHTML system.
+// On preview: clean card list, no cover.
+// On print:   full branded A4 document — front cover, TOC, JS-paginated
+//             content pages (no card bleeds), back cover with QR code.
+// ─────────────────────────────────────────────────────────────────────────
+
+// ── COURSE IDENTITY MAP ───────────────────────────────────────────────────
+const COURSE_IDENTITY = {
+    'CS110': { accent: '#00bcd4', name: 'Introduction to Computing' },
+    'MA110': { accent: '#42a5f5', name: 'Mathematics' },
+    'PH110': { accent: '#ab47bc', name: 'Physics' },
+    'CH110': { accent: '#ef5350', name: 'Chemistry' },
+    'BI110': { accent: '#7cb342', name: 'Biology' },
+    'LA111': { accent: '#ffa726', name: 'Communication Skills' },
+    'MT221': { accent: '#26a69a', name: 'Mineral Processing' },
+};
+
+// ── SECTION COLOUR PALETTE (9 rotating slots) ────────────────────────────
+const SECTION_PALETTE = [
+    { bg: '#f1f8e9', acc: '#7cb342' },
+    { bg: '#e0f7fa', acc: '#00bcd4' },
+    { bg: '#ffebee', acc: '#ef5350' },
+    { bg: '#e3f2fd', acc: '#42a5f5' },
+    { bg: '#f3e5f5', acc: '#ab47bc' },
+    { bg: '#fff3e0', acc: '#ffa726' },
+    { bg: '#e0f2f1', acc: '#26a69a' },
+    { bg: '#fce4ec', acc: '#ec407a' },
+    { bg: '#f9fbe7', acc: '#c0ca33' },
+];
+
+// ── SESSION LABELS ────────────────────────────────────────────────────────
+const SESSION_LABELS = {
+    mcq:         { title: 'Multiple Choice',    icon: '📋' },
+    shortAnswer: { title: 'Short Answer',       icon: '✍️'  },
+    essay:       { title: 'Essay Simulation',   icon: '📄' },
+    flashcard:   { title: 'Flashcard Glossary', icon: '🃏' },
+};
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function _courseIdentity(course) {
+    return COURSE_IDENTITY[course] || { accent: '#111435', name: course };
+}
+function _termLabel(term) {
+    return term ? 'Term ' + term.replace('T', '') : '';
+}
+
+// ── GROUP SESSION DATA INTO SECTIONS ─────────────────────────────────────
+function _buildSectionsFromSession() {
+    const type = currentQuizType;
+    const sections = [];
+
+    if (type === 'mcq' || type === 'shortAnswer') {
+        const groups = {}, order = [];
+        currentQuizData.forEach((q) => {
+            const topic = q.topic || q.section || 'General';
+            if (!groups[topic]) { groups[topic] = []; order.push(topic); }
+            groups[topic].push(q);
         });
-    } else if (currentQuizType === 'mcq') {
-        currentQuizData.forEach((item, index) => {
-            html += `<div class="preview-step"><div class="preview-q">Q${index + 1}: ${parseKaeriMarkdown(item.q)}</div><div class="preview-ans">✅ Answer: ${parseKaeriMarkdown(item.options[item.correct])}</div><div class="preview-exp">💡 Explanation: ${parseKaeriMarkdown(item.explanation || "No additional explanation.")}</div></div>`;
+        order.forEach((topic, i) => {
+            sections.push({
+                num:   i + 1,
+                name:  topic,
+                pal:   SECTION_PALETTE[i % SECTION_PALETTE.length],
+                items: groups[topic],
+            });
         });
-    } else if (currentQuizType === 'shortAnswer') {
-        currentQuizData.forEach((item, index) => {
-            html += `<div class="preview-step"><div class="preview-q">Q${index + 1}: ${parseKaeriMarkdown(item.q)}</div><div class="preview-ans">🔑 Required Keywords: ${item.keywords.join(", ")}</div><div class="preview-exp">💡 Explanation: ${parseKaeriMarkdown(item.explanation || "No additional explanation.")}</div></div>`;
+
+    } else if (type === 'essay' && currentEssay) {
+        sections.push({
+            num:   1,
+            name:  currentEssay.title,
+            pal:   SECTION_PALETTE[0],
+            items: currentEssay.steps,
         });
-    } else if (currentQuizType === 'flashcard') {
-        currentFlashcards.forEach((card, index) => {
-            html += `<div class="preview-step" style="border-left-color: #6f42c1;"><div class="preview-q" style="color: #333; font-size: 1.1em;">${index + 1}. ${parseKaeriMarkdown(card.front)}</div><div class="preview-ans" style="color: #6f42c1; border-left-color: #6f42c1;">Definition:</div><div style="margin-top:5px; padding: 8px; background: #f8f9fa; border-radius: 4px;">${parseKaeriMarkdown(card.back)}</div></div>`;
+
+    } else if (type === 'flashcard') {
+        sections.push({
+            num:   1,
+            name:  currentFlashcardTopic,
+            pal:   SECTION_PALETTE[3],
+            items: currentFlashcards,
         });
     }
-    
-    html += `<div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666;"><p>Study smarter with Kaeri EdTech. Contact 0964312504 for full access.</p></div>`;
-    
-    printContentData = { html: html.replace(/preview-/g, 'pdf-') };
-    printDiv.innerHTML = html;
+    return sections;
+}
 
-    renderMath('print-preview-content');
+// ── SINGLE CARD HTML (used in both preview and print doc) ─────────────────
+function _itemCardHTML(item, sectionName, type, idx, pal) {
+    const acc = pal.acc;
+    let labelText = '', qHTML = '', aHTML = '', eHTML = '';
+
+    function md(t) { return t ? parseKaeriMarkdown(t) : ''; }
+
+    if (type === 'mcq') {
+        labelText = 'Q' + (idx + 1);
+        qHTML = md(item.q);
+        const opt = (item.options && item.options[item.correct] !== undefined)
+            ? String.fromCharCode(65 + item.correct) + '. ' + md(item.options[item.correct]) : '—';
+        aHTML = '<strong>Answer:</strong> ' + opt;
+        eHTML = md(item.explanation || 'No additional explanation.');
+    } else if (type === 'shortAnswer') {
+        labelText = 'Q' + (idx + 1);
+        qHTML = md(item.q);
+        aHTML = '<strong>Keywords:</strong> ' + (item.keywords || []).join(', ');
+        eHTML = md(item.explanation || 'No additional explanation.');
+    } else if (type === 'essay') {
+        labelText = 'Step ' + (idx + 1);
+        qHTML = md(item.q);
+        const opt = (item.options && item.options[item.correct] !== undefined)
+            ? String.fromCharCode(65 + item.correct) + '. ' + md(item.options[item.correct]) : '—';
+        aHTML = '<strong>Correct:</strong> ' + opt;
+        eHTML = md(item.explanation || 'No additional explanation.');
+    } else if (type === 'flashcard') {
+        labelText = 'Card ' + (idx + 1);
+        qHTML = md(item.front);
+        aHTML = md(item.back);
+        eHTML = '';
+    }
+
+    return `
+    <div style="border:1px solid #ddd;border-left:5px solid ${acc};border-radius:6px;background:#fff;
+                padding:13px 15px;box-shadow:0 2px 5px rgba(0,0,0,0.05);
+                page-break-inside:avoid;break-inside:avoid;margin-bottom:0;">
+        <div style="font-size:10px;font-weight:800;color:${acc};letter-spacing:0.5px;margin-bottom:3px;text-transform:uppercase;">${labelText}</div>
+        <div style="font-size:9px;font-weight:600;color:${acc};text-transform:uppercase;letter-spacing:0.3px;margin-bottom:5px;">${sectionName}</div>
+        <div style="font-size:13px;font-weight:700;color:#111435;margin-bottom:9px;line-height:1.4;">${qHTML}</div>
+        <div style="font-size:12px;font-weight:500;color:#1e3a2f;background:#f0faf4;padding:6px 10px;border-radius:4px;margin-bottom:6px;">${aHTML}</div>
+        ${eHTML ? `<div style="background:#f9f9f9;padding:6px 10px;font-size:11px;color:#333;line-height:1.45;border-left:4px solid ${acc};border-radius:0 4px 4px 0;">
+            <span style="font-weight:800;color:${acc};text-transform:uppercase;font-size:10px;margin-right:4px;">EXPLANATION</span>${eHTML}</div>` : ''}
+    </div>`;
+}
+
+// ── FULL BRANDED A4 PRINT DOCUMENT ────────────────────────────────────────
+function _buildFullPrintDocument(course, term, sessionType, sections, date) {
+    const identity  = _courseIdentity(course);
+    const termLabel = _termLabel(term);
+    const sessInfo  = SESSION_LABELS[sessionType] || { title: sessionType, icon: '📄' };
+    const qrUrl     = 'https://quickchart.io/qr?text=https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VbCc0hEL7UVMs55diC3i&dark=111435&size=300';
+
+    let totalItems = 0;
+    sections.forEach(s => { totalItems += s.items.length; });
+
+    // TOC rows
+    let tocRows = '';
+    sections.forEach(s => {
+        const typePrefix = sessionType === 'flashcard' ? 'Card' : sessionType === 'essay' ? 'Step' : 'Q';
+        tocRows += `
+        <div style="display:flex;align-items:center;padding:11px 18px;border-radius:4px;
+                    font-size:12px;font-weight:500;background:${s.pal.bg};margin-bottom:6px;
+                    page-break-inside:avoid;break-inside:avoid;">
+            <span style="font-weight:800;color:${s.pal.acc};margin-right:18px;min-width:22px;">${String(s.num).padStart(2,'0')}</span>
+            <span style="flex-grow:1;color:#222;">${s.name}</span>
+            <span style="color:#666;margin-right:14px;font-size:10px;">${typePrefix}1 – ${typePrefix}${s.items.length}</span>
+            <span style="font-weight:700;color:${s.pal.acc};">${s.items.length} items</span>
+        </div>`;
+    });
+
+    // Sections data serialised for the in-iframe pagination engine
+    const sectionsJSON = JSON.stringify(sections.map(s => ({
+        num: s.num, name: s.name, pal: s.pal,
+        items: s.items,
+    })));
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    :root { --primary:#111435; --yellow:#fccb00; }
+    *{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ margin:0; padding:0; background:#e6e6e6; font-family:'Inter',Arial,sans-serif; }
+    @page{ size:A4; margin:0; }
+    .sheet{ width:210mm; height:297mm; background:white; margin:20px auto;
+            position:relative; overflow:hidden; page-break-after:always;
+            box-shadow:0 0 15px rgba(0,0,0,0.25); }
+    @media print{ body{background:none;} .sheet{margin:0;box-shadow:none;} }
+    .pg-header{ position:absolute; top:13mm; left:14mm; right:14mm; height:14mm;
+                border-bottom:2px solid var(--primary); display:flex;
+                justify-content:space-between; align-items:flex-end;
+                padding-bottom:5px; color:var(--primary); }
+    .pg-footer{ position:absolute; bottom:13mm; left:14mm; right:14mm; height:10mm;
+                border-top:1px solid #ccc; display:flex; justify-content:space-between;
+                align-items:center; font-size:9px; color:#888; padding-top:4px; }
+    .pg-content{ position:absolute; top:32mm; bottom:27mm; left:14mm; right:14mm;
+                 overflow:hidden; display:flex; flex-direction:column; }
+    .brand{ font-weight:800; font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:var(--primary); }
+    .meta { font-size:9px; font-weight:600; color:#666; text-transform:uppercase; }
+    .pg-num{ font-weight:700; color:var(--primary); }
+    .sheet.cover{ background:var(--primary); color:white; display:flex;
+                  flex-direction:column; justify-content:center; padding:18mm; }
+    .cover-graphics{ position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+    .diag{ position:absolute; top:-50%; right:-20%; width:150%; height:150%;
+           background:linear-gradient(135deg,transparent 45%,rgba(252,203,0,0.13) 45%,rgba(252,203,0,0.13) 55%,transparent 55%);
+           transform:rotate(25deg); }
+    .circ{ position:absolute; bottom:-150px; left:-150px; width:400px; height:400px;
+           border-radius:50%; background:rgba(26,32,85,0.75); }
+    .cover-inner{ position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:center; }
+    .stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:36px 0; max-width:72%; }
+    .stat-num{ font-size:40px; font-weight:800; color:var(--yellow); display:block; line-height:1; }
+    .stat-lbl{ font-size:10px; text-transform:uppercase; color:#ddd; letter-spacing:1px; }
+    .cover-rule{ border-top:1px solid var(--yellow); padding-top:18px; margin-top:auto; }
+    .sec-title{ font-size:13px; font-weight:800; color:var(--primary);
+                border-bottom:3px solid var(--yellow); padding-bottom:8px; margin-bottom:14px; }
+</style>
+</head>
+<body>
+
+<!-- FRONT COVER -->
+<div class="sheet cover">
+    <div class="cover-graphics"><div class="diag"></div><div class="circ"></div></div>
+    <div class="cover-inner">
+        <div style="color:var(--yellow);font-weight:700;font-size:11px;letter-spacing:2px;margin-bottom:18px;">
+            ${course} · ${identity.name.toUpperCase()}
+        </div>
+        <h1 style="font-size:46px;font-weight:800;line-height:1.1;margin:0 0 16px 0;">
+            ${termLabel}<br>${sessInfo.icon} ${sessInfo.title}
+        </h1>
+        <p style="font-size:16px;font-weight:300;color:#ddd;line-height:1.5;margin:0;">
+            Complete Study Kit &mdash; ${totalItems} Items
+        </p>
+        <div class="stats-grid">
+            <div><span class="stat-num">${totalItems}</span><span class="stat-lbl">ITEMS</span></div>
+            <div><span class="stat-num">${sections.length}</span><span class="stat-lbl">SECTIONS</span></div>
+            <div><span class="stat-num" style="font-size:22px;">${course}</span><span class="stat-lbl">COURSE</span></div>
+            <div><span class="stat-num">A4</span><span class="stat-lbl">FORMAT</span></div>
+        </div>
+        <div class="cover-rule">
+            <h3 style="color:var(--yellow);margin:0;">KAERI EDTECH</h3>
+            <p style="font-size:10px;opacity:0.75;margin-top:4px;">${identity.name} · ${termLabel} · ${date}</p>
+        </div>
+    </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="sheet">
+    <div class="pg-header">
+        <span class="brand">KAERI EDTECH</span>
+        <span class="meta">${course} · ${termLabel}</span>
+    </div>
+    <div class="pg-footer">
+        <span>&copy; 2026 Kaeri EdTech</span><span class="pg-num">Page 2</span>
+    </div>
+    <div class="pg-content">
+        <div class="sec-title">Table of Contents &mdash; ${sections.length} Section${sections.length !== 1 ? 's' : ''}</div>
+        ${tocRows}
+        <div style="margin-top:16px;padding:12px 16px;background:#f8f9fc;border-radius:6px;font-size:12px;color:#444;line-height:1.6;">
+            <strong style="color:var(--primary);">How to use this kit:</strong>
+            Cover the answer, attempt the question, then reveal and read the explanation.
+            This kit contains <strong>${totalItems} items</strong> across <strong>${sections.length} section${sections.length !== 1 ? 's' : ''}</strong>.
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT PAGES (filled by pagination engine below) -->
+<div id="dynamic-content"></div>
+
+<!-- BACK COVER -->
+<div class="sheet cover" style="justify-content:flex-start;">
+    <div class="cover-graphics">
+        <div class="diag" style="background:linear-gradient(135deg,transparent 45%,rgba(252,203,0,0.08) 45%,rgba(252,203,0,0.08) 55%,transparent 55%);"></div>
+    </div>
+    <div class="cover-inner" style="justify-content:space-between;">
+        <div>
+            <h1 style="color:white;font-size:44px;margin-bottom:8px;">KAERI EDTECH</h1>
+            <p style="color:#ddd;font-weight:300;font-size:16px;">Empowering Learners Through Smart Educational Technology</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-left:5px solid var(--yellow);padding:22px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+                <div style="flex:1;">
+                    <div style="font-size:10px;font-weight:800;color:var(--yellow);letter-spacing:1px;margin-bottom:8px;">CALL / WHATSAPP</div>
+                    <div style="font-size:22px;font-weight:800;color:white;margin-bottom:3px;">096-100-5406</div>
+                    <div style="font-size:22px;font-weight:800;color:white;margin-bottom:18px;">096-431-2504</div>
+                    <div style="font-size:10px;font-weight:800;color:var(--yellow);letter-spacing:1px;margin-bottom:4px;">FOLLOW OUR WHATSAPP CHANNEL</div>
+                    <div style="font-size:11px;color:#aaa;">Scan to join the official Kaeri EdTech community.</div>
+                </div>
+                <img src="${qrUrl}" style="width:110px;height:110px;border:2px solid white;border-radius:8px;">
+            </div>
+        </div>
+        <div style="font-size:10px;color:#aaa;line-height:1.7;border-top:1px solid #333;padding-top:16px;">
+            <strong>Document:</strong> ${course} · ${identity.name} · ${termLabel} · ${sessInfo.title}<br>
+            <strong>Generated:</strong> ${date} &nbsp;&nbsp;
+            <strong>&copy; 2026 Kaeri EdTech. All rights reserved.</strong>
+        </div>
+    </div>
+</div>
+
+<!-- PAGINATION ENGINE: measures every card before placing it -->
+<script>
+(function(){
+    const MM=3.7795275591,PAGE_H=297*MM,TOP=32*MM,BOT=27*MM,SIDE=14*MM,BUF=22;
+    const CONTENT_H=PAGE_H-TOP-BOT-BUF, CONTENT_W=(210-14-14)*MM, GAP=10;
+    const root=document.getElementById('dynamic-content');
+    const sb=document.createElement('div');
+    sb.style.cssText='position:fixed;top:-9999px;left:-9999px;width:'+CONTENT_W+'px;visibility:hidden;pointer-events:none;font-family:Inter,Arial,sans-serif;';
+    document.body.appendChild(sb);
+
+    const TYPE=${JSON.stringify(sessionType)};
+    const COURSE=${JSON.stringify(course)};
+    const TERM=${JSON.stringify(termLabel)};
+    const SESS_TITLE=${JSON.stringify(sessInfo.title)};
+    const SECS=${sectionsJSON};
+
+    let pageCount=2;
+
+    function measure(el){
+        sb.innerHTML='';
+        const cl=el.cloneNode(true);
+        sb.appendChild(cl);
+        const st=window.getComputedStyle(cl);
+        return cl.offsetHeight+(parseFloat(st.marginTop)||0)+(parseFloat(st.marginBottom)||0);
+    }
+
+    function newPage(){
+        pageCount++;
+        const sheet=document.createElement('div');
+        sheet.className='sheet';
+        sheet.innerHTML=
+            '<div class="pg-header"><span class="brand">KAERI EDTECH</span>'+
+            '<span class="meta">'+COURSE+' \xB7 '+TERM+' \xB7 '+SESS_TITLE+'</span></div>'+
+            '<div class="pg-footer"><span>\u00A9 2026 Kaeri EdTech</span>'+
+            '<span class="pg-num">Page '+pageCount+'</span></div>'+
+            '<div class="pg-content" id="pg-'+pageCount+'"></div>';
+        root.appendChild(sheet);
+        return {el:sheet.querySelector('#pg-'+pageCount),used:0};
+    }
+
+    function place(el,state,gap){
+        gap=(gap===undefined)?GAP:gap;
+        const h=measure(el),g=state.used>0?gap:0;
+        if(state.used+h+g>CONTENT_H) state=newPage();
+        if(state.used>0){const sp=document.createElement('div');sp.style.height=GAP+'px';state.el.appendChild(sp);}
+        state.el.appendChild(el);
+        state.used+=h+(state.used>0?GAP:0);
+        return state;
+    }
+
+    function banner(sec){
+        const d=document.createElement('div');
+        d.style.cssText='background:'+sec.pal.bg+';color:'+sec.pal.acc+';padding:8px 14px;'+
+            'border-left:6px solid '+sec.pal.acc+';display:flex;align-items:center;'+
+            'font-weight:700;font-size:12px;font-family:Inter,Arial,sans-serif;'+
+            'page-break-inside:avoid;break-inside:avoid;';
+        d.textContent='SECTION '+sec.num+' \xB7 '+sec.name.toUpperCase();
+        return d;
+    }
+
+    function cardEl(item,secName,idx,pal){
+        const acc=pal.acc;
+        let lbl='',qH='',aH='',eH='';
+        function md(t){
+            if(!t)return'';
+            return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+                     .replace(/__(.*?)__/g,'<u>$1</u>')
+                     .replace(/\n/g,'<br>');
+        }
+        if(TYPE==='mcq'){
+            lbl='Q'+(idx+1);
+            qH=md(item.q||'');
+            const o=(item.options&&item.options[item.correct]!==undefined)
+                ?String.fromCharCode(65+item.correct)+'. '+md(item.options[item.correct]):'—';
+            aH='<strong>Answer:</strong> '+o;
+            eH=md(item.explanation||'No additional explanation.');
+        } else if(TYPE==='shortAnswer'){
+            lbl='Q'+(idx+1);
+            qH=md(item.q||'');
+            aH='<strong>Keywords:</strong> '+(item.keywords||[]).join(', ');
+            eH=md(item.explanation||'No additional explanation.');
+        } else if(TYPE==='essay'){
+            lbl='Step '+(idx+1);
+            qH=md(item.q||'');
+            const o=(item.options&&item.options[item.correct]!==undefined)
+                ?String.fromCharCode(65+item.correct)+'. '+md(item.options[item.correct]):'—';
+            aH='<strong>Correct:</strong> '+o;
+            eH=md(item.explanation||'No additional explanation.');
+        } else {
+            lbl='Card '+(idx+1);
+            qH=md(item.front||'');
+            aH=md(item.back||'');
+            eH='';
+        }
+        const d=document.createElement('div');
+        d.innerHTML='<div style="border:1px solid #ddd;border-left:5px solid '+acc+
+            ';border-radius:6px;background:#fff;padding:13px 15px;'+
+            'box-shadow:0 2px 5px rgba(0,0,0,0.05);page-break-inside:avoid;break-inside:avoid;">'+
+            '<div style="font-size:10px;font-weight:800;color:'+acc+';letter-spacing:0.5px;margin-bottom:3px;text-transform:uppercase;">'+lbl+'</div>'+
+            '<div style="font-size:9px;font-weight:600;color:'+acc+';text-transform:uppercase;letter-spacing:0.3px;margin-bottom:5px;">'+secName+'</div>'+
+            '<div style="font-size:13px;font-weight:700;color:#111435;margin-bottom:9px;line-height:1.4;">'+qH+'</div>'+
+            '<div style="font-size:12px;font-weight:500;color:#1e3a2f;background:#f0faf4;padding:6px 10px;border-radius:4px;margin-bottom:6px;">'+aH+'</div>'+
+            (eH?'<div style="background:#f9f9f9;padding:6px 10px;font-size:11px;color:#333;line-height:1.45;border-left:4px solid '+acc+';border-radius:0 4px 4px 0;">'+
+            '<span style="font-weight:800;color:'+acc+';text-transform:uppercase;font-size:10px;margin-right:4px;">EXPLANATION</span>'+eH+'</div>':'')+
+            '</div>';
+        return d.firstElementChild;
+    }
+
+    function build(){
+        SECS.forEach(function(sec){
+            var state=newPage();
+            state=place(banner(sec),state,0);
+            sec.items.forEach(function(item,idx){
+                state=place(cardEl(item,sec.name,idx,sec.pal),state,10);
+            });
+        });
+    }
+
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(build);
+    else window.addEventListener('load',build);
+})();
+</script>
+</body>
+</html>`;
+}
+
+// ── IN-APP PREVIEW (no cover — clean scannable list) ─────────────────────
+function generatePrintPreview() {
+    const sections = _buildSectionsFromSession();
+    const date     = new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+    const sessInfo = SESSION_LABELS[currentQuizType] || { title: currentQuizType, icon: '📄' };
+    const identity = _courseIdentity(currentCourse);
+    const termLbl  = _termLabel(currentTerm);
+
+    let totalItems = 0;
+    sections.forEach(s => { totalItems += s.items.length; });
+
+    let previewHTML = `
+    <div style="font-family:Arial,sans-serif;color:#1a1a1a;font-size:10pt;">
+        <div style="border-bottom:3px solid #111435;padding-bottom:10px;margin-bottom:18px;">
+            <div style="font-size:9px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">
+                ${currentCourse} · ${identity.name} · ${termLbl}
+            </div>
+            <h2 style="font-size:16pt;margin:0 0 4px 0;color:#111435;">${sessInfo.icon} ${sessInfo.title}</h2>
+            <div style="font-size:8pt;color:#555;">Generated: ${date} &nbsp;|&nbsp; ${totalItems} items across ${sections.length} section${sections.length !== 1 ? 's' : ''}</div>
+            <div style="font-size:7.5pt;color:#888;margin-top:3px;border-top:1px solid #eee;padding-top:3px;">
+                Kaeri EdTech Study Systems &nbsp;|&nbsp; 📞 096-100-5406 &nbsp;|&nbsp; 096-431-2504
+            </div>
+        </div>`;
+
+    sections.forEach(s => {
+        previewHTML += `
+        <div style="background:${s.pal.bg};color:${s.pal.acc};padding:7px 12px;
+                    border-left:5px solid ${s.pal.acc};font-weight:700;font-size:11px;
+                    margin-bottom:8px;border-radius:3px;">
+            SECTION ${s.num} · ${s.name.toUpperCase()}
+        </div>`;
+        s.items.forEach((item, idx) => {
+            previewHTML += `<div style="margin-bottom:8px;">${_itemCardHTML(item, s.name, currentQuizType, idx, s.pal)}</div>`;
+        });
+    });
+
+    previewHTML += `
+        <div style="margin-top:18px;padding-top:10px;border-top:1px solid #ddd;text-align:center;font-size:7.5pt;color:#888;">
+            Study smarter with Kaeri EdTech &mdash; 📞 096-100-5406 &nbsp;|&nbsp; 096-431-2504
+        </div>
+    </div>`;
+
+    // Store for proceedToPrint
+    printContentData = {
+        sections,
+        date,
+        course:      currentCourse,
+        term:        currentTerm,
+        sessionType: currentQuizType,
+    };
+
+    const previewContent = document.getElementById('print-preview-content');
+    if (previewContent) {
+        previewContent.innerHTML = previewHTML;
+        if (typeof renderMath === 'function') renderMath('print-preview-content');
+    }
+
     document.getElementById('print-preview-modal').classList.add('show');
     document.body.style.overflow = 'hidden';
 }
 
+// ── PROCEED TO PRINT (full branded A4 in hidden iframe) ───────────────────
 function proceedToPrint() {
+    if (!printContentData) return;
     closePrintPreview();
+
+    const { sections, date, course, term, sessionType } = printContentData;
+    const fullHTML = _buildFullPrintDocument(course, term, sessionType, sections, date);
+
+    const iframe = document.createElement('iframe');
+    iframe.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:210mm;height:297mm;border:none;visibility:hidden;';
+    document.body.appendChild(iframe);
+
+    const iDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iDoc.open();
+    iDoc.write(fullHTML);
+    iDoc.close();
+
+    // KaTeX inside iframe (physics/maths courses)
+    if (typeof renderMathInElement === 'function') {
+        try {
+            renderMathInElement(iDoc.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true  },
+                    { left: '$',  right: '$',  display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                    { left: '\\[', right: '\\]', display: true  },
+                ],
+                throwOnError: false,
+            });
+        } catch(e) { console.warn('KaTeX in print iframe:', e); }
+    }
+
+    // 1200ms: fonts load + pagination engine runs before print dialog opens
     setTimeout(() => {
-        const printDiv = document.getElementById("printable-summary");
-        printDiv.innerHTML = printContentData.html;
-        renderMath('printable-summary');
-        const style = document.createElement('style');
-        style.innerHTML = `@page { margin: 20mm; size: A4; }`;
-        printDiv.appendChild(style);
-        window.print();
-        setTimeout(() => { printDiv.innerHTML = ''; }, 1000);
-    }, 300);
+        try { iframe.contentWindow.focus(); iframe.contentWindow.print(); }
+        catch(e) { console.warn('Print failed:', e); }
+        setTimeout(() => { if (iframe.parentNode) document.body.removeChild(iframe); }, 3000);
+    }, 1200);
 }
 
 function closePrintPreview() {
-    document.getElementById('print-preview-modal').classList.remove('show');
+    const modal = document.getElementById('print-preview-modal');
+    if (modal) modal.classList.remove('show');
     document.body.style.overflow = 'auto';
 }
 
@@ -2161,6 +2992,37 @@ document.addEventListener('DOMContentLoaded', function() {
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
             border-radius: 10px;
+        }
+
+        /* ── Print modal preview item styles ── */
+        .print-item {
+            margin-bottom: 14px;
+            padding: 12px 14px;
+            border: 1px solid #dde3ea;
+            border-left: 5px solid #1a73e8;
+            border-radius: 5px;
+            background: #ffffff;
+            page-break-inside: avoid;
+        }
+        .print-item.essay  { border-left-color: #e67e00; }
+        .print-item.sa     { border-left-color: #b5830f; }
+        .print-item.flash  { border-left-color: #6f42c1; }
+        .item-label {
+            font-size: 0.72em; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px;
+            color: #1a73e8; margin-bottom: 5px;
+        }
+        .print-item.essay .item-label { color: #e67e00; }
+        .print-item.sa    .item-label { color: #b5830f; }
+        .print-item.flash .item-label { color: #6f42c1; }
+        .item-q   { font-size: 0.95em; color: #1a1a1a; line-height: 1.5; margin-bottom: 6px; }
+        .item-ans { font-size: 0.9em; color: #145a32; background: #eafaf1; padding: 5px 8px; border-radius: 3px; margin-bottom: 5px; font-weight: 600; }
+        .item-exp { font-size: 0.87em; color: #444; background: #f7f8fa; padding: 5px 8px; border-radius: 3px; line-height: 1.45; }
+
+        /* ── Fallback: hide app UI if user presses Ctrl+P directly ── */
+        @media print {
+            body > *:not(#printable-summary) { display: none !important; }
+            #printable-summary { display: block !important; }
         }
     `;
     document.head.appendChild(style);
