@@ -3644,7 +3644,251 @@ const flashcards = {
     }
   ],
 
+//MT221 TERM 2 DATA 
+  
 
+  "PYROMETALLURGY": [
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is the overall copper extraction route from **flotation concentrate** to the final pure product?",
+      back: "The route follows these stages: \n1. **Pre-treatment** (Agglomeration, Drying, Roasting). \n2. **Pyrometallurgy** (Smelting, Converting, Fire Refining). \n3. **Electrorefining** (producing $99.99\\% \\ce{Cu}$ cathodes).\n\n## Insight\nFlotation concentrate is just the starting point—it's like 'raw ore' that has been cleaned. To get to the copper used in electronics, we use heat (pyro) to melt away impurities and then electricity (electro) to reach ultra-high purity.\n\n> **Key Takeaway:** Concentrate $\\rightarrow$ Pre-treatment $\\rightarrow$ Smelting $\\rightarrow$ Refining."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Why is flotation concentrate **NOT** suitable for direct smelting?",
+      back: "Because it is wet ($10\\text{--}15\\% \\ce{H2O}$), fine, and soft. Fine particles are blown out by furnace gases, and moisture causes dangerous **steam explosions** at high temperatures.\n\n## Insight\nSmelting happens at over $1200^\\circ\\ce{C}$. If you throw 'wet' sand into a furnace that hot, the water turns to steam instantly and expands violently—it's like a mini-bomb. Also, the particles are so small they would just fly out the chimney like dust.\n\n> **Key Takeaway:** Pre-treatment is mandatory for safety and efficiency."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What are the characteristics of **flotation concentrate** as it enters pyrometallurgy?",
+      back: "1. **Copper ($\\ce{Cu}$):** $20\\text{--}30\\%$. \n2. **Moisture ($\\ce{H2O}$):** $10\\text{--}15\\%$. \n3. **Size:** Fine particles. \n4. **Nature:** Soft.\n\n## Insight\nThis is why we need pyrometallurgy. $20\\% \\text{ Copper}$ is mostly useless rock and sulphur. We need the extreme heat of the furnaces to burn away the waste and 'concentrate' that $20\\%$ into $99\\%+$ metal.\n\n> **Key Takeaway:** Concentrate is a low-grade, wet, and physically delicate feedstock."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is the primary purpose of the overall copper ($\\ce{Cu}$) extraction process?",
+      back: "To remove impurities like **Iron ($\\ce{Fe}$)**, **Sulphur ($\\ce{S}$)**, and **Gangue** (rocky waste), increasing purity from $20\\text{--}30\\%$ in concentrate to $99.99\\%$ in the final cathode.\n\n## Insight\nMetallurgy is basically a giant 'filtering' process. Each stage (Smelting, Converting, Refining) is like a finer and finer sieve, stripping away specific 'trash' elements until only pure copper atoms remain.\n\n> **Key Takeaway:** The goal is the progressive removal of $\\ce{Fe}, \\ce{S},$ and rock waste."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Why is **pre-treatment** of flotation concentrate necessary before it hits the furnace?",
+      back: "It prepares the material physically and chemically. It prevents the loss of fine particles (blow-out) and removes moisture ($\\ce{H2O}$) to prevent energy waste and explosions.\n\n## Insight\nThink of it as 'priming' the material. If you don't dry and lumpy-fy (agglomerate) the concentrate first, the furnace will be inefficient, dangerous, and you'll lose most of your copper through the exhaust stack.\n\n> **Key Takeaway:** Pre-treatment ensures the material is furnace-ready."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "List the three **pre-treatment steps** in their correct order.",
+      back: "1. **Agglomeration** (Making lumps). \n2. **Drying** (Removing water). \n3. **Roasting** (Partial oxidation at $500\\text{--}700^\\circ\\ce{C}$).\n\n## Insight\nYou have to make the 'lumps' first so they can be dried and then roasted. This logical flow ensures that by the time the material reaches the roaster, it won't crumble into dust or explode from trapped steam.\n\n> **Key Takeaway:** Agglomeration $\\rightarrow$ Drying $\\rightarrow$ Roasting."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Agglomeration** and what are its two main purposes?",
+      back: "It is the process of binding fine particles into larger, porous lumps. \n1. **To prevent blow-out:** Lumps are too heavy to be carried away by furnace gases. \n2. **To create porosity:** Allows heat and oxygen ($\\ce{O2}$) to penetrate the material easily.\n\n## Insight\nImagine trying to burn a pile of sawdust vs. a log. Sawdust blows away and chokes the fire. The log (the agglomerate) stays put and the 'pores' act like little tunnels that let the heat get right into the center of the reaction.\n\n> **Key Takeaway:** Agglomeration = Stability + Reactivity."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Differentiate between **Partial Drying** and **Bone Drying**.",
+      back: "• **Partial Drying:** Reduces moisture to $\\le 8\\%$. Used for **Reverberatory** furnaces. \n• **Bone Drying:** Reduces moisture to $< 1\\%$. Required for **Flash** furnaces.\n\n## Insight\nFlash furnaces are like 'jet engines'—they need the concentrate to be a bone-dry powder so it can be sprayed into the furnace like fuel. Reverberatory furnaces are 'bathtubs' of molten metal; they can handle a little bit of moisture ($8\\%$) without failing.\n\n> **Key Takeaway:** Bone drying is the 'extreme' drying required for Flash Smelting."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Roasting**? Include the typical temperature range.",
+      back: "Roasting is the **partial oxidation** of sulphide concentrate in air at $500\\text{--}700^\\circ\\ce{C}$. It produces a chemically prepared material called **Calcine**.\n\n## Insight\nNotice the temperature: $700^\\circ\\ce{C}$ is hot, but not hot enough to melt copper. Roasting is 'cooking,' not 'melting.' We are just trying to burn off some sulphur and change the surface of the particles.\n\n> **Key Takeaway:** Roasting = Chemical preparation via partial oxidation."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "State the four main purposes of **Roasting** copper concentrate.",
+      back: "1. Produces **Calcine**. \n2. Removes sulphur ($\\ce{S}$) as $\\ce{SO2}$ gas. \n3. Controls the $\\ce{S/Fe}$ ratio for better matte quality. \n4. Creates an **oxidic surface** for instant reactivity.\n\n## Insight\nIf you don't roast, you'll have too much sulphur in your furnace, making a 'thin,' low-quality matte. Roasting is the 'dial' we turn to make sure the chemistry of the melt is perfect before we even start smelting.\n\n> **Key Takeaway:** Roasting controls the chemistry of the future melt."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Write the main **roasting reaction** for chalcopyrite ($\\ce{CuFeS2}$).",
+      back: "$$2\\ce{CuFeS2} + \\ce{O2} \\rightarrow \\ce{Cu2S} + 2\\ce{FeO} + 3\\ce{SO2}$$\n\n## Insight\nThis reaction shows separation in action: the Copper stays a sulphide ($\\ce{Cu2S}$), the Iron becomes an oxide ($\\ce{FeO}$), and the Sulphur leaves as a gas. This 'Calcine' is now a mix of copper sulphide and iron oxide, ready for the next step.\n\n> **Key Takeaway:** Roasting turns iron into oxide while keeping copper as a sulphide."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Calcine** and what makes it special?",
+      back: "**Calcine** is the solid, oxidic product of roasting. It is special because its **oxidic surface** allows it to react **instantly** when it hits the extreme heat of the smelting furnace.\n\n## Insight\nNormal concentrate is 'cold' and takes time to react. Calcine is chemically 'primed.' The moment it touches the $1200^\\circ\\ce{C}$ furnace, the oxides and sulphides react with each other like a match hitting a strike-strip.\n\n> **Key Takeaway:** Calcine = Highly reactive 'primed' furnace feed."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Why is an **oxidic surface** on roasted concentrate so important?",
+      back: "It ensures the material reacts **instantly** with heat, which improves furnace efficiency and ensures the correct $\\ce{S/Fe}$ ratio for high-grade matte production.\n\n## Insight\nIn metallurgy, 'Time is Money.' The faster the material reacts, the more copper we can produce per hour. The oxidic surface is the 'accelerant' that makes the smelting furnace work at top speed.\n\n> **Key Takeaway:** Oxidic surface = Maximum smelting speed."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Define **Smelting** and list the feed materials and products.",
+      back: "Smelting is a high-temperature process ($1150\\text{--}1200^\\circ\\ce{C}$) involving: \n• **Feed:** Calcine + Silica flux ($\\ce{SiO2}$) + Air/Oxygen. \n• **Products:** Copper Matte ($40\\text{--}70\\% \\ce{Cu}$) and Iron Silicate Slag ($\\ce{FeSiO3}$).\n\n## Insight\nThis is the first time the material actually 'melts' into a liquid. We use 'Selective Oxidation' to make sure the iron and rock turn into waste (slag), while the copper stays safe in the matte.\n\n> **Key Takeaway:** Smelting = Melting + Separation into Matte and Slag."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Copper Matte** and what is its typical copper content?",
+      back: "Matte is a molten mixture of **Copper(I) sulphide** ($\\ce{Cu2S}$) and **Iron(II) sulphide** ($\\ce{FeS}$). Its copper content is typically between **$40\\% \\text{ and } 70\\%$**.\n\n## Insight\nThink of Matte as a 'Sulphide Soup.' We have removed the rocky waste (slag), but the copper is still 'holding hands' with iron and sulphur. It's not metal yet, but it's much more concentrated than the original ore.\n\n> **Key Takeaway:** Matte = Intermediate liquid sulphide ($40\\text{--}70\\% \\ce{Cu}$)."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is the role of **Silica Flux** ($\\ce{SiO2}$) in smelting? Write the reaction.",
+      back: "Silica flux combines with **Iron(II) oxide** ($\\ce{FeO}$) to form a low-melting, fluid slag that floats. \nReaction: $$\\ce{FeO} + \\ce{SiO2} \\rightarrow \\ce{FeSiO3} \\text{ (Slag)}$$\n\n## Insight\nWithout Silica, the iron oxide would be thick and 'crusty'—it would get stuck in the valuable matte. Silica acts like a 'soap,' grabbing the iron and turning it into a light, glassy liquid that floats to the top for easy removal.\n\n> **Key Takeaway:** Silica turns solid iron waste into liquid floating slag."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Why are iron, sulphur, and other impurities **'slagged off'** during smelting?",
+      back: "To purify the copper. Iron and rock (gangue) form liquid slag with silica; sulphur is burned away as $\\ce{SO2}$ gas. Copper remains behind because it has a higher affinity for sulphur than iron does.\n\n## Insight\nIt's a chemical 'war.' Oxygen wants to attack everything. But Copper is 'greedy' for sulphur and 'hides' in the matte, while the Iron is 'forced' to grab oxygen and join the silica in the slag waste pile.\n\n> **Key Takeaway:** Slagging is the primary method of removing rocky and iron impurities."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Explain the **Principle Operation** of copper smelting.",
+      back: "It uses **Selective Oxidation** at $1200^\\circ\\ce{C}$. By adding silica flux, we force the iron and rock into a light liquid (**Slag**) while the copper stays as a heavy liquid sulphide (**Matte**) that sinks to the bottom.\n\n## Insight\nImagine a salad dressing of oil and water. The Slag is the 'oil' (light waste on top) and the Matte is the 'water' (heavy value on the bottom). We just 'tap' the bottom of the furnace to let the copper matte flow out.\n\n> **Key Takeaway:** Selective oxidation + Density differences = Copper separation."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Converting** and what is the typical temperature range?",
+      back: "Converting is the process of blowing air or oxygen through molten matte at $1150\\text{--}1200^\\circ\\ce{C}$ to produce **Blister Copper** ($97\\text{--}98\\% \\ce{Cu}$).\n\n## Insight\nConverting is the 'Final Burn.' We take the liquid matte and blast it with oxygen. This burns off the *last* of the iron and the *last* of the sulphur, leaving behind metallic copper for the first time.\n\n> **Key Takeaway:** Converting upgrades Matte $\\rightarrow$ Blister Copper."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Blister Copper** and why is it called that?",
+      back: "It is the product of converting ($97\\text{--}98\\% \\ce{Cu}$). It is called 'blister' because as it cools, escaping $\\ce{SO2}$ gas creates **bubbles or blisters** on its surface.\n\n## Insight\nImagine a cold soda. When you open it, gas bubbles out. As the copper 'freezes' from liquid to solid, it can't hold the gas anymore, and the gas pushes out, leaving the surface looking like a 'blistered' skin.\n\n> **Key Takeaway:** Blister copper = High-grade metal with gas-bubble textures."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is **Direct-to-Copper** Flash Smelting?",
+      back: "A process where **Smelting** and **Converting** are combined in **one single furnace**, turning concentrate directly into blister copper.\n\n## Insight\nUsually, you need two furnaces (one for Smelting, one for Converting). Direct-to-Copper is a ' metallurgical shortcut.' It's very efficient, but it's much harder to keep the copper from 'sneaking' into the slag waste.\n\n> **Key Takeaway:** Direct-to-Copper = One furnace, one step, metallic copper."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "List the **Advantages** and **Disadvantages** of Direct-to-Copper Smelting.",
+      back: "• **Pros:** Lower capital cost (one furnace), lower power use, better $\\ce{SO2}$ gas capture for acid plants. \n• **Cons:** High copper ($\\ce{Cu}$) loss in the slag, high overall processing costs.\n\n## Insight\nIt's a trade-off. You save money on buildings and electricity, but you lose more of your precious copper into the 'trash' slag, which you then have to re-process later.\n\n> **Key Takeaway:** Good for energy/environment; tough on copper recovery."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is the primary purpose of **Fire Refining**?",
+      back: "To produce **Copper Anodes** ($99\\text{--}99.5\\% \\ce{Cu}$) by removing the very last traces of iron, sulphur, and excess oxygen from blister copper.\n\n## Insight\nBlister copper is $98\\%$ pure, but that's not good enough for high-tech use. Fire refining is the 'Final Polish' in a furnace before we move to the electric tanks. It makes the copper pure enough to be cast into heavy plates (Anodes).\n\n> **Key Takeaway:** Fire refining upgrades Blister Copper to Anode Grade."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Describe the **Oxidation Stage** (Stage 1) of Fire Refining.",
+      back: "Air or oxygen is blown into the molten blister copper. This oxidizes the remaining impurities like **Sulphur ($\\ce{S}$)**, **Iron ($\\ce{Fe}$)**, **Arsenic ($\\ce{As}$)**, and **Antimony ($\\ce{Sb}$)** so they can be removed.\n\n## Insight\nEven though the copper is $98\\%$ pure, there are still 'tiny passengers' left. This stage 'burns' those passengers out. The only problem is that some copper also gets oxidized into $\\ce{Cu2O}$, which we must fix in Stage 2.\n\n> **Key Takeaway:** Stage 1 uses oxygen to 'burn out' remaining impurities."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Describe the **Reduction (Poling) Stage** (Stage 2) of Fire Refining.",
+      back: "Green wood poles are dipped into the melt. They release reducing gases ($CH_4, H_2, CO$) that react with **Copper(I) oxide** ($\\ce{Cu2O}$) to turn it back into metallic **Copper ($\\ce{Cu}$)**.\n\n## Insight\nStage 1 left the copper with too much oxygen (as $\\ce{Cu2O}$). The green wood acts like a 'chemical magnet,' pulling the oxygen out of the copper so we end up with pure metal ready for casting.\n\n> **Key Takeaway:** Poling removes excess oxygen to restore metallic copper."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What are **Copper Anodes** and what is their role?",
+      back: "They are large, heavy plates of $99\\text{--}99.5\\%$ pure copper produced by fire refining. They serve as the **source of metal** (the starting material) for the electrorefining process.\n\n## Insight\nThink of the Anode as a 'Dirty Battery Plate.' In the next stage, we will use electricity to 'dissolve' this plate and move the copper to a clean one. The Anode is the 'feedstock' for the refinery.\n\n> **Key Takeaway:** Anodes = Impure metal plates for the final electric purification."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Define **Electrorefining**.",
+      back: "It is the process of producing ultra-pure copper ($99.99\\%$) by dissolving an **impure solid anode** and plating pure copper onto a **cathode** using electrolysis.\n\n## Insight\nThis is the end of the road. We use the 'power of the electron' to select only copper atoms. The impurities are too 'heavy' or 'weak' to make the jump to the cathode, so they just fall to the bottom of the tank.\n\n> **Key Takeaway:** Electrorefining = Final purification using electricity."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Describe the components of an **Electrorefining Cell**.",
+      back: "• A rectangular tank. \n• Impure **Anodes**. \n• Pure copper **Cathode** starter sheets. \n• **Electrolyte:** Copper sulphate ($\\ce{CuSO4}$) + Sulphuric acid ($\\ce{H2SO4}$).\n\n## Insight\nIt's like a giant battery. We hang the 'dirty' plates and 'clean' sheets in an acid bath. When we turn on the power, the copper moves through the acid from the dirty side to the clean side.\n\n> **Key Takeaway:** Anodes + Cathodes + Acidic Electrolyte = Refining Cell."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Write the **Anode** and **Cathode** reactions for Electrorefining.",
+      back: "• **Anode (Oxidation):** $\\ce{Cu(s) \\rightarrow Cu^{2+} + 2e^-}$ \n• **Cathode (Reduction):** $\\ce{Cu^{2+} + 2e^- \\rightarrow Cu(s)}$\n\n## Insight\nIt’s a perfect cycle. For every atom that 'falls off' the anode into the liquid, exactly one atom 'sticks' to the cathode from the liquid. The amount of copper in the liquid stays the same!\n\n> **Key Takeaway:** Anode dissolves; Cathode plates."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Why does the **Electrolyte concentration** remain constant during refining?",
+      back: "Because the rate of copper **dissolution** at the anode is exactly equal to the rate of copper **plating** at the cathode.\n\n## Insight\nThink of a crowded bus. Every time one person gets off at the back door (dissolving), one new person gets on at the front door (plating). The number of people on the bus (the concentration) never changes.\n\n> **Key Takeaway:** Dissolution rate = Plating rate."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What are **Anode Slimes** and why are they valuable?",
+      back: "They are the insoluble impurities—mainly **Silver ($\\ce{Ag}$)**, **Gold ($\\ce{Au}$)**, and **Platinum ($\\ce{Pt}$)**—that fall to the bottom of the cell. They are a massive source of **by-product revenue**.\n\n## Insight\nCopper ore is often 'gold-plated.' During refining, these noble metals refuse to dissolve in the acid. They just drop to the floor like 'expensive mud.' Selling this mud often pays for the entire cost of the electricity used!\n\n> **Key Takeaway:** Anode slimes = Precious metal byproduct (Ag, Au, Pt)."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "How are **Group 1 impurities** (Ag, Au, Pt) handled in the refinery?",
+      back: "These are 'Noble' metals. They **do not dissolve** in the acidic electrolyte. They stay as solid particles and settle by gravity to the bottom as **anode slimes**.\n\n## Insight\nThese metals are 'chemically lazy.' They don't want to react with the acid or the electricity. Because they are heavy, they just sink to the floor, making them very easy (and profitable) to collect later.\n\n> **Key Takeaway:** Group 1 metals are too noble to dissolve; they become slimes."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "How are **Group 2 impurities** (As, Fe, Ni, Co, Zn) handled in the refinery?",
+      back: "These metals **dissolve** completely into the electrolyte. To remove them, a 'bleed stream' is sent to **cascade cells** where they are extracted by electrowinning.\n\n## Insight\nUnlike gold, these metals are 'eager' to dissolve. They turn the liquid 'dirty.' If we don't 'bleed' out the dirty liquid and clean it, these impurities will eventually start sticking to our pure copper product.\n\n> **Key Takeaway:** Group 2 metals dissolve and are removed via a bleed stream."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "How are **Group 3 impurities** (Sb, Bi, Sn) handled in the refinery?",
+      back: "These are 'stubborn' impurities. **Sodium chloride ($\\ce{NaCl}$)** is added to the electrolyte to force them to form insoluble compounds that precipitate and join the anode slimes.\n\n## Insight\nGroup 3 metals are tricky—they don't sink on their own. We add 'Salt' ($\\ce{NaCl}$) to the liquid. The chlorine 'grabs' these metals and turns them into heavy solids that fall to the floor, keeping the liquid clean.\n\n> **Key Takeaway:** $\\ce{NaCl}$ is used to precipitate Antimony, Bismuth, and Tin."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "State the function of **Glue** and **Lignosulphonate** in the refinery.",
+      back: "• **Glue:** Ensures even current distribution for a **smooth** cathode surface. \n• **Lignosulphonate:** Refines **grain size** for a dense, uniform crystalline structure.\n\n## Insight\nWithout these additives, copper atoms would 'pile up' in messy spikes called dendrites. Glue and Ligno act like 'traffic cops,' making sure the copper atoms land in neat, flat rows so the final product is smooth and solid.\n\n> **Key Takeaway:** Additives control the physical 'smoothness' and 'density' of the copper."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Why are **Temperature ($63\\text{--}68^\\circ\\ce{C}$)** and **Flowrate ($25\\text{--}35\\text{ L/min}$)** strictly controlled?",
+      back: "To ensure that heavy noble metal particles (Ag, Au, Pt) have enough time to **settle** to the bottom. High flow or heat would keep these impurities floating, contaminating the cathode.\n\n## Insight\nIf the liquid is too hot or moving too fast, it acts like a 'storm,' keeping the gold and silver dust 'flying' in the water. We keep it calm and warm so the 'mud' can sink peacefully to the floor.\n\n> **Key Takeaway:** Control prevents 'floating slimes' from ruining copper purity."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "What is the effect of **Current Density** on the refining process?",
+      back: "It is the 'speed limit.' Higher current density increases the **plating speed**. However, if it's too high, the copper grows too fast and becomes rough or brittle.\n\n## Insight\nThink of it like a 3D printer. If you print slowly, you get a beautiful, smooth object. If you 'crank up' the speed (Current Density), the object might be finished sooner, but it will look messy and might fall apart.\n\n> **Key Takeaway:** Higher density = Faster production, but lower physical quality."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Differentiate between **Electrowinning** and **Electrorefining** based on the 'metal source'.",
+      back: "• **Refining:** Metal comes from a **solid impure anode**. \n• **Winning:** Metal comes from a **liquid solution** (pregnant electrolyte).\n\n## Insight\nIn Refining, we are 'cleaning' a solid plate. In Winning, there is no plate—the copper is 'swimming' in a liquid (usually from a mine leaching pond) and we use electricity to 'pull' it out of the water for the first time.\n\n> **Key Takeaway:** Refining = Solid to Solid; Winning = Liquid to Solid."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "Explain the term **'Enrichment Ratio'** in a metallurgical process.",
+      back: "It is the ratio of the grade of the final product to the grade of the starting feed. \n$$\\text{Ratio} = \\frac{\\text{Grade of Product}}{\\text{Grade of Feed}}$$\n\n## Insight\nIf you start with $25\\% \\text{ Cu}$ concentrate and produce $97.5\\% \\text{ Blister}$, your enrichment ratio is $3.9$. It tells you how many times 'better' or more concentrated your process made the metal.\n\n> **Key Takeaway:** Enrichment Ratio measures the 'upgrading' power of a process."
+    },
+    {
+      course: "MT221",
+      term: "T2",
+      front: "**Calculation:** Mass of blister from $100\\text{ t}$ concentrate ($25\\% \\ce{Cu}$) with $92\\% \\text{ recovery}$ and blister grade $97.5\\% \\ce{Cu}$.",
+      back: "1. **Total Cu in feed:** $100 \\times 0.25 = 25\\text{ t}$. \n2. **Cu recovered:** $25 \\times 0.92 = 23\\text{ t}$. \n3. **Mass of blister:** $23 / 0.975 = \\mathbf{23.59\\text{ t}}$.\n\n## Insight\nAlways follow the copper! First find out how much actual copper you have, then apply the recovery 'loss,' and finally 'package' that copper into the final product grade. \n\n> **Key Takeaway:** Blister Mass = (Feed Mass $\\times$ Feed Grade $\\times$ Recovery) / Product Grade."
+    }
+  ],
 
   // =================================================================
   // GM220 - MODULE 1
