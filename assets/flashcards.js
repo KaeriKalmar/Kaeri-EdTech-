@@ -3892,6 +3892,161 @@ const flashcards = {
   ],
 
 
+//MT221 SOLVENT EXTRACTION 
+
+  "SOLVENT EXTRACTION": [
+    {
+      front: "What is solvent extraction and where does it fit in the copper extraction route?",
+      back: "Solvent extraction is the hydrometallurgical process that upgrades dilute pregnant leach solution (PLS, 3–7 g/L Cu) to concentrated pure advance electrolyte (38–50 g/L Cu) for electrowinning.\nIt comes after leaching and before electrowinning.\n\nIt selectively transfers copper ions from aqueous to organic phase and back.\n\nKey Points:\n• Feed = PLS (3–7 g/L Cu)\n• Product = advance electrolyte (38–50 g/L Cu)\n• Role = upgrade concentration and remove impurities\n\nKey Takeaway: Solvent extraction upgrades and purifies PLS for electrowinning.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "State the two main roles of solvent extraction.",
+      back: "I. To remove unwanted impurities (Fe, As, Mg, etc.).\nII. To upgrade the metal concentration from 3–7 g/L Cu in PLS to 38–50 g/L Cu in the advance electrolyte.\n\nThe process achieves high selectivity for copper.\n\nKey Points:\n• Remove impurities\n• Upgrade concentration\n\nKey Takeaway: Solvent extraction purifies and concentrates copper.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Explain the water + oil analogy for solvent extraction.",
+      back: "Water = pregnant leach solution (PLS) containing Cu²⁺ ions.\nOil = organic phase (diluent + extractant).\nWhen shaken, an emulsion forms. The extractant captures copper ions from the water. When allowed to settle:\n- Water (raffinate) settles at the bottom with almost no copper.\n- Oil (loaded organic) floats on top carrying the captured copper.\n\nLonger shaking time gives higher recovery.\n\nKey Points:\n• Emulsion forms on shaking\n• Extractant captures metal\n• Raffinate at bottom\n\nKey Takeaway: Water + oil emulsion → copper moves into organic phase.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What happens in the emulsion during extraction?",
+      back: "In the emulsion the extractant molecules capture copper ions from the aqueous phase.\nThe longer the shaking (conditioning) time, the higher the metal recovery possibility. The opposite is true for short shaking.\n\nIon exchange occurs at the droplet interface.\n\nKey Points:\n• Emulsion formation\n• Longer shaking → higher recovery\n\nKey Takeaway: Emulsion allows ion exchange between aqueous and organic phases.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Write the ion exchange reaction in extraction.",
+      back: "\\(2\\mathrm{RH_{(org)}} + \\mathrm{Cu^{2+}_{(aq)}} \\rightleftharpoons \\mathrm{R_2Cu_{(org)}} + 2\\mathrm{H^+_{(aq)}}\\)\n\nThe extractant releases H⁺ ions into the aqueous phase and takes Cu²⁺ ions in return.\n\nKey Points:\n• Extractant donates H⁺\n• Cu²⁺ takes its place\n\nKey Takeaway: Extraction is H⁺ ↔ Cu²⁺ ion exchange.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Write the stripping (reverse) reaction using H₂SO₄.",
+      back: "\\(\\mathrm{R_2Cu_{(org)}} + \\mathrm{H_2SO_4_{(aq)}} \\rightleftharpoons 2\\mathrm{RH_{(org)}} + \\mathrm{CuSO_4_{(aq)}}\\)\n\nHigh H⁺ from H₂SO₄ forces Cu²⁺ out of the organic into the aqueous phase.\n\nKey Points:\n• Stripping is extraction reverse\n• Uses 2H⁺ + SO₄²⁻ from spent electrolyte\n\nKey Takeaway: Stripping uses H₂SO₄ to unload copper.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Explain the ion exchange that occurs in the emulsion during extraction.",
+      back: "In the emulsion the metal ion (Cu²⁺) takes the place of the hydrogen ion on the extractant, and hydrogen takes the place of the metal.\nThe extractant releases as many H⁺ ions as possible, creating sufficient spaces for metal ions.\n\nThis ability is called loading capacity.\n\nKey Points:\n• Metal takes place of H⁺\n• H⁺ released creates spaces\n\nKey Takeaway: Ion exchange in emulsion creates spaces for metal ions.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is loading capacity (LC) and how does it affect recovery?",
+      back: "Loading capacity is the ability of the extractant to create spaces for metal ions by releasing H⁺.\nHigher LC → more spaces → higher recovery.\nLower LC → fewer spaces → lower recovery (more organic needed).\n\nIt determines how much copper the organic can carry.\n\nKey Points:\n• LC creates spaces for metal ions\n• Higher LC = higher recovery\n\nKey Takeaway: Loading capacity controls recovery efficiency.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is loaded organic (extractand)?",
+      back: "Loaded organic is the organic phase after it has captured copper ions from the PLS during extraction.\n\nIt carries the metal to the stripping stage.\n\nKey Points:\n• Contains captured Cu²⁺\n• Called extractand\n\nKey Takeaway: Loaded organic carries the metal to stripping.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Explain stripping using the water + oil analogy.",
+      back: "Take the copper-loaded oil and shake it with strong acid water (spent electrolyte).\nEmulsion forms → Cu²⁺ leaves the oil and enters the acid water.\nWhen allowed to settle:\n- Bottom = rich electrolyte (38–50 g/L Cu)\n- Top = stripped (barren) organic ready for reuse.\n\nLonger shaking gives higher stripping efficiency.\n\nKey Points:\n• Reverse of extraction\n• High acid drives copper out\n\nKey Takeaway: Stripping = reverse emulsion that unloads copper into acid water.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is raffinate?",
+      back: "Raffinate is the copper-depleted aqueous solution that settles at the bottom after extraction. It has very low copper content.\n\nIt contains H₂SO₄ and remaining impurities; it is not pure H₂SO₄.\n\nKey Points:\n• Depleted metal value\n• Settles at the bottom\n\nKey Takeaway: Raffinate = depleted aqueous solution after extraction.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Differentiate between raffinate and spent electrolyte.",
+      back: "Raffinate = copper-depleted aqueous solution after extraction (low Cu, contains H₂SO₄).\nSpent electrolyte = strong acid solution (high H⁺, low Cu) sent to stripping.\n\nRaffinate is waste or recycle; spent electrolyte is the stripping agent.\n\nKey Points:\n• Raffinate = after extraction\n• Spent electrolyte = before stripping\n\nKey Takeaway: Raffinate is depleted; spent electrolyte is the stripping acid.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is advance (rich) electrolyte?",
+      back: "Advance (rich) electrolyte is the concentrated aqueous solution (38–50 g/L Cu) produced after stripping. It is sent to electrowinning.\n\nIt is pure and concentrated for high-quality cathode copper.\n\nKey Points:\n• 38–50 g/L Cu\n• From stripping stage\n\nKey Takeaway: Advance electrolyte is the pure feed for electrowinning.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why is raffinate neutralised with lime?",
+      back: "Raffinate is neutralised with lime (CaO) to pH ≈ 7 before disposal or reuse.\n\nIt contains acid and impurities; neutralisation prevents environmental harm.\n\nKey Points:\n• Contains H₂SO₄\n• Neutralised to pH 7\n\nKey Takeaway: Raffinate is neutralised for safe disposal.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "List the properties a good extractant must have.",
+      back: "- Should create many spaces for metal ions (high loading capacity)\n- Should separate easily from acid/water (low density)\n- Raffinate should settle at the bottom\n- Should have low viscosity\n- Should have high surface tension (repels water molecules)\n- Should be environmentally friendly, reusable and neutralised\n- Should be cheap to support the process\n\nThese properties ensure efficient phase separation and economics.\n\nKey Points:\n• High loading capacity\n• Low density, low viscosity\n• Environmentally friendly and cheap\n\nKey Takeaway: Extractant must create spaces, separate cleanly and be cheap.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What equipment is used for solvent extraction?",
+      back: "Mixer-settlers are used. Organic and aqueous phases are mixed vigorously to form emulsion, then allowed to settle and separate.\n\nCounter-current flow in several stages maximises efficiency.\n\nKey Points:\n• Mixer for emulsion\n• Settler for phase separation\n\nKey Takeaway: Mixer-settlers enable continuous counter-current operation.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What are the two main stages of solvent extraction?",
+      back: "1. Extraction (loading): copper moves from PLS into organic.\n2. Stripping (unloading): copper moves from loaded organic into spent electrolyte to form rich electrolyte.\n\nThe organic is recycled between the two stages.\n\nKey Points:\n• Extraction loads copper\n• Stripping unloads copper\n\nKey Takeaway: Two counter-current stages: extraction and stripping.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "State the operating factors that affect solvent extraction.",
+      back: "- pH of PLS (1.5–2.5)\n- Temperature (40–50 °C)\n- Phase ratio (O/A)\n- Residence/conditioning time\n- Extractant concentration\n- Impurity levels\n\nThese factors control extraction and stripping efficiency.\n\nKey Points:\n• pH and temperature\n• Phase ratio and time\n\nKey Takeaway: Optimum pH, temperature and phase ratio give high recovery.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of longer residence time in solvent extraction?",
+      back: "Longer residence (shaking/conditioning) time increases both extraction and stripping efficiency, giving higher metal recovery.\nThe opposite is true for short time.\n\nMore contact time allows complete ion exchange.\n\nKey Points:\n• Longer time → higher recovery\n• Applies to both extraction and stripping\n\nKey Takeaway: Longer residence time improves recovery.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "How is the organic phase regenerated?",
+      back: "The organic phase is regenerated in the stripping stage when H₂SO₄ forces Cu²⁺ out, converting R₂Cu back to 2RH.\nThe stripped organic returns to extraction.\n\nThe same organic is used in a closed loop.\n\nKey Points:\n• Stripping regenerates organic\n• Recycled continuously\n\nKey Takeaway: Stripping regenerates the organic for reuse.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "State the advantages of solvent extraction.",
+      back: "- High selectivity for copper\n- Upgrades dilute PLS to concentrated pure electrolyte\n- Continuous, low-energy and easily automated\n- Produces high-purity copper (99.99 %)\n\nIt is the bridge between leaching and electrowinning.\n\nKey Points:\n• Selective\n• Upgrades concentration\n• Low energy\n\nKey Takeaway: Solvent extraction is selective, efficient and produces pure electrolyte.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What calculations are performed in solvent extraction?",
+      back: "Extraction efficiency = (Cu in PLS – Cu in raffinate) / Cu in PLS × 100\nStripping efficiency = (Cu in rich electrolyte – Cu in spent electrolyte) / Cu loaded on organic × 100\n\nMass balance is used for metal and acid balance.\n\nKey Points:\n• Extraction efficiency\n• Stripping efficiency\n\nKey Takeaway: Efficiency calculations use mass balance.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Why is solvent extraction used for oxide ores?",
+      back: "Oxide ores give dilute PLS (3–7 g/L Cu) containing impurities. Solvent extraction upgrades and purifies it to 38–50 g/L Cu electrolyte.\n\nIt provides high selectivity for copper over other metals.\n\nKey Points:\n• Upgrades dilute solution\n• Removes impurities\n\nKey Takeaway: SX upgrades and purifies PLS from oxide leaching.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "Summarise the complete solvent extraction process in sequence.",
+      back: "1. PLS (3–7 g/L Cu) + barren organic → extraction (emulsion, ion exchange) → raffinate + loaded organic.\n2. Loaded organic + spent electrolyte (H₂SO₄) → stripping (reverse ion exchange) → rich electrolyte (38–50 g/L Cu) + stripped organic.\n3. Stripped organic recycled to extraction.\n\nClosed-loop organic recycle.\n\nKey Points:\n• Extraction → loading\n• Stripping → unloading\n\nKey Takeaway: PLS → raffinate + rich electrolyte; organic recycled.",
+      course: "MT221",
+      term: "T2"
+    },
+    {
+      front: "What is the effect of pH on solvent extraction?",
+      back: "Extraction efficiency increases with pH of PLS (optimum 1.5–2.5).\n\nAt low pH, H⁺ competes with Cu²⁺ for the extractant.\n\nKey Points:\n• Optimum pH 1.5–2.5\n• Higher pH favours extraction\n\nKey Takeaway: pH control is essential for high extraction efficiency.",
+      course: "MT221",
+      term: "T2"
+    }
+  ],
+
   // =================================================================
   // GM220 - MODULE 1
   // =================================================================
