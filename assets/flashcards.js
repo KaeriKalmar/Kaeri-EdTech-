@@ -3920,14 +3920,14 @@ const flashcards = {
       term: "T2"
     },
     {
-      front: "Write the ion exchange reaction in extraction.",
+      front: "What is the ion exchange reaction in extraction.",
       back: "\\(2\\mathrm{RH_{(org)}} + \\mathrm{Cu^{2+}_{(aq)}} \\rightleftharpoons \\mathrm{R_2Cu_{(org)}} + 2\\mathrm{H^+_{(aq)}}\\)\n\nThe extractant releases H⁺ ions into the aqueous phase and takes Cu²⁺ ions in return.\n\nKey Points:\n• Extractant donates H⁺\n• Cu²⁺ takes its place\n\nKey Takeaway: Extraction is H⁺ ↔ Cu²⁺ ion exchange.",
       course: "MT221",
       term: "T2"
     },
     {
-      front: "Write the stripping (reverse) reaction using H₂SO₄.",
-      back: "\\(\\mathrm{R_2Cu_{(org)}} + \\mathrm{H_2SO_4_{(aq)}} \\rightleftharpoons 2\\mathrm{RH_{(org)}} + \\mathrm{CuSO_4_{(aq)}}\\)\n\nHigh H⁺ from H₂SO₄ forces Cu²⁺ out of the organic into the aqueous phase.\n\nKey Points:\n• Stripping is extraction reverse\n• Uses 2H⁺ + SO₄²⁻ from spent electrolyte\n\nKey Takeaway: Stripping uses H₂SO₄ to unload copper.",
+      front: "what is the stripping (reverse) reaction using H₂SO₄.",
+      back: "\\(\\mathrm{R_2Cu_{(org)}} + \\mathrm{H_2SO_{4(aq)}} \\rightleftharpoons 2\\mathrm{RH_{(org)}} + \\mathrm{CuSO_{4(aq)}}\\)\n\nHigh H⁺ from H₂SO₄ forces Cu²⁺ out of the organic into the aqueous phase.\n\nKey Points:\n• Stripping is extraction reverse\n• Uses 2H⁺ + SO₄²⁻ from spent electrolyte\n\nKey Takeaway: Stripping uses H₂SO₄ to unload copper.",
       course: "MT221",
       term: "T2"
     },
