@@ -3892,6 +3892,251 @@ const flashcards = {
   ],
 
 
+//MT221 LEACHING
+
+  "LEACHING": [
+    {
+      "front": "Define leaching.",
+      "back": "Leaching is dissolving of the valuable metal into the solution using the acid or alkali.\n\n## Insight\nIt is the selective dissolution of the valuable metal using the specific acid that will dissolve the metal of interest only, leaving others in solid.\n\n> **Key Takeaway:** Leaching = selective dissolution of valuable metal into solution.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "State the principle of leaching.",
+      "back": "The principle is selective dissolution of the valuable metal into solution using acid or alkali, leaving the gangue as solid residue.\n\n## Insight\nThe driving force is the chemical reaction between the acid and the metal compound.\n\n> **Key Takeaway:** Leaching converts metal to soluble salt while gangue stays behind.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is sulphuric acid the most widely used acid in leaching?",
+      "back": "Sulphuric acid is the most widely used because:\n1. It is the cheapest.\n2. It is readily available.\n3. It is highly aggressive (reactive) with metals.\n\n## Insight\nIt produces soluble sulphate salts and is recyclable in closed circuit with solvent extraction.\n\n> **Key Takeaway:** H₂SO₄ is preferred for cost, availability and reactivity.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "List the five main methods of leaching.",
+      "back": "1. In-situ leaching\n2. Heap leaching\n3. Vat leaching\n4. Bacteria leaching\n5. Agitation (tank) leaching\n\n## Insight\nEach method is chosen based on ore grade, mining cost and required reaction rate.\n\n> **Key Takeaway:** Five methods match different ore grades and economics.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Describe in-situ leaching and its key problems.",
+      "back": "In-situ leaching is done underground with no mining activity. Acid is injected into the ore body and PLS is pumped out.\nIt is used for very low-grade material below cut-off grade that cannot support mining and comminution costs.\n\n**Key problems:** No crushing and grinding — process takes long (4–6 months) due to low reactivity; associated with water bodies; causes air pollution and environmental contamination.\n\n## Insight\nAlso used in decommission areas or with support pillars.\n\n> **Key Takeaway:** In-situ = in-place, no mining, slow and environmentally challenging.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Describe heap leaching and its counter-current flow.",
+      "back": "Heap leaching deals with low-grade material. Crushed ore (to 2 mm) is piled on an impermeable pad, flooded with acid.\nSolution percolates down, dissolving metal.\n**Counter-current flow**: metal value increases from left to right while acid decreases from right to left.\n\n## Insight\nFresh acid is sprayed from top; PLS collected at bottom.\n\n> **Key Takeaway:** Heap leaching is low-cost for large, low-grade ore.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is a false bottom in heap leaching and why is it used?",
+      "back": "False bottom (2) holds the material inside the heap to allow the solution to come out through holes.\n\n## Insight\nIt is part of the impermeable pad system that collects PLS.\n\n> **Key Takeaway:** False bottom enables PLS collection while supporting the heap.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Describe vat leaching.",
+      "back": "Vat leaching takes place in tanks.\nIt treats material that has the grade that can support mining, crushing and grinding costs.\n\n## Insight\nAfter grinding, fully liberated material with high surface area; fast reaction rates (2–4 hrs).\n\n> **Key Takeaway:** Vat leaching is for higher-grade material that justifies grinding costs.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Describe bacteria leaching and its advantages.",
+      "back": "Bacteria leaching is the solution of the metal in the presence of micro-organisms (bacteria).\nThe driving force is the bacteria.\nIt is associated with crushing and only treats sulphides (with pyrites).\n\n**Advantages:**\n- For treating low-grade sulphide minerals.\n- Used to treat ore material with noxious elements.\n- Self-sustaining: produces its own sulphuric acid.\n- Complete elimination of acid costs.\n\n## Insight\nTakes 1–3 months.\n\n> **Key Takeaway:** Bacteria leaching is self-sustaining and low-cost for low-grade sulphides.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Describe agitation (tank) leaching and the role of the steerer/agitator.",
+      "back": "Agitation leaching takes place in tanks with steerer/agitator.\nFeed is slurry from grinding.\nSteerer (agitator) keeps particles in suspension to avoid settling at the bottom and allows intimate reaction between acid and particles.\n\n## Insight\nFast reaction, high recovery.\n\n> **Key Takeaway:** Agitator ensures good mixing and fast reaction.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What factors affect agitation leaching?",
+      "back": "- Slurry density (higher → lower efficiency)\n- Residence time (how long acid + metal react)\n- pH (strength of acid)\n\n## Insight\nThe higher the slurry density, the lower the efficiency.\n\n> **Key Takeaway:** Higher slurry density reduces efficiency; longer residence time improves recovery.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Write the general leaching reaction for copper oxide ores.",
+      "back": "CuO + H₂SO₄ → CuSO₄ + H₂O\n\nFor malachite:\nCu₂(OH)₂CO₃ + 2H₂SO₄ → 2CuSO₄ + 3H₂O + CO₂↑\n\n## Insight\nH⁺ attacks the oxide/carbonate, releasing Cu²⁺ into solution.\n\n> **Key Takeaway:** Oxide leaching is simple acid attack.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Write the leaching reaction for sulphide ores (e.g. chalcopyrite).",
+      "back": "2CuFeS₂ + 4O₂ + 2H₂SO₄ → 2CuSO₄ + Fe₂(SO₄)₃ + 2H₂O\n\n## Insight\nRequires oxidation (O₂ or bacteria) to convert sulphide to sulphate.\n\n> **Key Takeaway:** Sulphide leaching requires oxidation.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What are the advantages of leaching (general)?",
+      "back": "- Treats low-grade ores that cannot be concentrated by flotation.\n- Lower capital and operating costs for heap and bacteria methods.\n- Self-sustaining acid production in bacteria leaching.\n- Selective dissolution of target metal.\n\n## Insight\nAllows treatment of ores not suitable for pyrometallurgy.\n\n> **Key Takeaway:** Leaching treats low-grade material at low cost.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What are the disadvantages of leaching (general)?",
+      "back": "- The sulphuric acid produced cannot be recovered.\n- It doesn’t have the capacity to produce sellable H₂SO₄ acid.\n- The process is slow.\n- No capacity to recover platinum group metals.\n\n## Insight\nEnvironmental issues with open heaps and in-situ methods.\n\n> **Key Takeaway:** Leaching is slow and has acid recovery and environmental limitations.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Compare VAT and HEAP leaching.",
+      "back": "VAT can treat about 10–12 thousand tonnes.\nHeap can treat 100,000 tonnes of the material.\nHeap can treat 10 times what VAT can.\n\n## Insight\nVAT supports grinding and is faster; heap uses crushing only and is cheaper for large tonnage.\n\n> **Key Takeaway:** Heap treats 10 times more material than VAT.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is counter-current flow in heap leaching?",
+      "back": "Counter-current flow means the metal value increases from left to right while acid decreases from right to left.\n\n## Insight\nFresh acid enters from one side; PLS exits from the other, maximising extraction.\n\n> **Key Takeaway:** Counter-current flow increases metal value in PLS.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the role of the steerer/agitator in agitation leaching?",
+      "back": "The steerer (agitator) keeps particles in suspension to avoid settling at the bottom and allows intimate reaction between acid and particles.\n\n## Insight\nIt suspends the slurry material from grinding.\n\n> **Key Takeaway:** Agitator ensures good mixing and fast reaction.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is bacteria leaching self-sustaining?",
+      "back": "Bacteria produce their own sulphuric acid to dissolve the metal of interest.\n\n## Insight\nComplete elimination of acid costs.\n\n> **Key Takeaway:** Bacteria leaching eliminates external acid costs.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Summarise the complete leaching process flow.",
+      "back": "Crushing/grinding → leaching (one of five methods) → PLS (3–7 g/L Cu) → solvent extraction → advance electrolyte (38–50 g/L Cu) → electrowinning → cathode copper.\n\n## Insight\nLeaching is the first hydrometallurgical step.\n\n> **Key Takeaway:** Leaching supplies PLS for upgrading in solvent extraction.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the effect of slurry density on agitation leaching?",
+      "back": "Higher slurry density reduces efficiency because particles settle and have less contact with acid.\n\n## Insight\nLower density improves mixing and reaction rate.\n\n> **Key Takeaway:** Higher slurry density lowers leaching efficiency.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the effect of residence time on leaching?",
+      "back": "Longer residence time allows more contact between acid and metal particles, giving higher metal dissolution and recovery.\n\n## Insight\nShort time gives incomplete reaction.\n\n> **Key Takeaway:** Longer residence time improves recovery.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the effect of pH/strength of acid on leaching?",
+      "back": "Higher acid strength (lower pH) increases reaction rate and metal dissolution.\n\n## Insight\nStronger acid provides more H⁺ for the reaction.\n\n> **Key Takeaway:** Stronger acid gives faster leaching.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is agitation important in tank leaching?",
+      "back": "Agitation keeps particles in suspension, prevents settling at the bottom, and allows intimate contact between acid and particles for fast reaction.\n\n## Insight\nThe steerer/agitator suspends the slurry from grinding.\n\n> **Key Takeaway:** Agitation ensures fast and complete reaction.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What are the environmental problems of in-situ and heap leaching?",
+      "back": "In-situ: associated with water bodies, causes groundwater contamination and air pollution.\nHeap: open area causes air pollution; rain dilutes acid, reducing efficiency.\n\n## Insight\nBoth methods are difficult to control environmentally.\n\n> **Key Takeaway:** Leaching methods have significant environmental challenges.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the difference between in-situ and heap leaching?",
+      "back": "In-situ: underground, no mining, no crushing/grinding, very slow.\nHeap: surface pile of crushed ore, requires crushing, faster than in-situ but still slow.\n\n## Insight\nIn-situ is for extremely low-grade; heap is for larger tonnage.\n\n> **Key Takeaway:** In-situ needs no mining; heap needs crushing.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is vat leaching faster than heap leaching?",
+      "back": "Vat leaching treats fully liberated material after grinding with high surface area and agitation in tanks, giving fast reaction (2–4 hrs).\nHeap leaching uses only crushed ore with slower percolation.\n\n## Insight\nVat supports grinding costs for higher-grade material.\n\n> **Key Takeaway:** Vat is faster because of grinding and tank agitation.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is self-sustaining acid production in bacteria leaching?",
+      "back": "Bacteria oxidise pyrite and produce their own H₂SO₄, eliminating external acid costs.\n\n## Insight\nComplete elimination of acid costs for low-grade sulphides.\n\n> **Key Takeaway:** Bacteria leaching produces its own acid.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "State the advantages of heap leaching.",
+      "back": "- Low capital and operating costs.\n- Treats very large tonnage (100,000 tonnes).\n- Low acid cost (self-sustaining for sulphides).\n\n## Insight\nIdeal for low-grade material.\n\n> **Key Takeaway:** Heap is low-cost for large, low-grade ore.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "State the disadvantages of heap leaching.",
+      "back": "- Slow process (months).\n- Affected by weather (rain dilutes acid).\n- Open area causes air pollution.\n- No capacity to recover platinum group metals.\n\n## Insight\nRequires large land area.\n\n> **Key Takeaway:** Heap is slow and weather-sensitive.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the role of the impermeable pad in heap leaching?",
+      "back": "The impermeable pad prevents acid and PLS from leaking into the ground.\n\n## Insight\nIt collects the solution at the bottom.\n\n> **Key Takeaway:** Impermeable pad contains the solution.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the false bottom in heap leaching?",
+      "back": "False bottom (2) holds the material inside the heap and has holes to allow the solution to come out.\n\n## Insight\nIt is part of the drainage system.\n\n> **Key Takeaway:** False bottom enables PLS collection.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is bacteria leaching only applied to sulphides with pyrites?",
+      "back": "Bacteria oxidise pyrites to generate acid and Fe³⁺ that then oxidise the sulphide mineral.\n\n## Insight\nIt cannot treat oxides effectively.\n\n> **Key Takeaway:** Bacteria leaching is specific to sulphides.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the difference in reaction time between vat and bacteria leaching?",
+      "back": "Vat leaching: fast reaction (2–4 hours).\nBacteria leaching: slow (1–3 months).\n\n## Insight\nVat uses agitation and grinding; bacteria rely on biological oxidation.\n\n> **Key Takeaway:** Vat is fast; bacteria is slow but low-cost.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the effect of high slurry density in agitation leaching?",
+      "back": "High slurry density reduces efficiency because particles settle at the bottom and have less contact with acid.\n\n## Insight\nLower density improves mixing.\n\n> **Key Takeaway:** High slurry density lowers leaching efficiency.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is agitation (steerer) necessary in tank leaching?",
+      "back": "The steerer/agitator keeps particles in suspension to avoid settling at the bottom and allows intimate reaction between acid and particles.\n\n## Insight\nIt suspends the slurry from grinding.\n\n> **Key Takeaway:** Agitator ensures fast and complete reaction.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "State the environmental problems of in-situ and heap leaching.",
+      "back": "In-situ: associated with water bodies, causes groundwater contamination and air pollution.\nHeap: open area causes air pollution; rain dilutes acid.\n\n## Insight\nBoth methods are difficult to control environmentally.\n\n> **Key Takeaway:** Leaching methods have significant environmental challenges.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Why is leaching preferred for low-grade ores?",
+      "back": "Leaching treats low-grade ores that cannot be concentrated by flotation at low capital and operating costs.\n\n## Insight\nHeap and bacteria methods are economical for very large tonnages.\n\n> **Key Takeaway:** Leaching is economical for low-grade material.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "What is the link between leaching and solvent extraction?",
+      "back": "Leaching produces PLS (3–7 g/L Cu). Solvent extraction upgrades this PLS to 38–50 g/L Cu advance electrolyte for electrowinning.\n\n## Insight\nLeaching is the first hydrometallurgical step.\n\n> **Key Takeaway:** Leaching supplies PLS for upgrading in solvent extraction.",
+      "course": "MT221",
+      "term": "T2"
+    },
+    {
+      "front": "Summarise the complete leaching process flow.",
+      "back": "Crushing/grinding → leaching (one of five methods) → PLS (3–7 g/L Cu) → solvent extraction → advance electrolyte (38–50 g/L Cu) → electrowinning → cathode copper.\n\n## Insight\nLeaching is the first hydrometallurgical step.\n\n> **Key Takeaway:** Leaching supplies PLS for upgrading in solvent extraction.",
+      "course": "MT221",
+      "term": "T2"
+    }
+  ],
+
 //MT221 SOLVENT EXTRACTION 
 
   "SOLVENT EXTRACTION": [
