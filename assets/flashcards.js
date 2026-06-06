@@ -7657,5 +7657,1483 @@ const flashcards = {
       "term": "T1",
       "topic": "mine planning"
     }
-  ]
+  ],
+  
+  
+  
+  
+  
+    
+    // ============================================================
+// MAIN CONTINUOUS DECK – MI213 TERM 2 – MODULE 4 AQUEOUS EXTRACTION
+// EXHAUSTIVE – LATEX, KATEX & MARKDOWN INTELLIGENTLY USED
+// ============================================================
+
+  "MODULE 4 AQUEOUS EXTRACTION": [
+    // =========================================================
+    // SECTION 1.1 – CLASSIFICATION OF METHODS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1: CLASSIFICATION OF AQUEOUS EXTRACTION METHODS**\n\n**QUESTION 1:** What are *aqueous extraction methods*?",
+      back: "**ANSWER + EXPLANATION:** Aqueous extraction methods use water or liquid solvents to recover minerals. Both hydraulic action of the liquid and solution chemical attack are used. They account for about **10%** of surface mineral production but are increasing for certain minerals, and are comparatively inexpensive."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the two main subclasses of aqueous extraction?",
+      back: "**ANSWER + EXPLANATION:** \n\n- **Placer mining** – recovery of heavy minerals from alluvial deposits using water to excavate, transport, and concentrate. Includes hydraulic mining and dredging.\n- **Solution mining** – recovery of soluble minerals using water, heated water, or solvents. Includes borehole extraction, leaching, and evaporite operations."
+    },
+    // =========================================================
+    // SECTION 1.2 – HYDRAULIC MINING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2: HYDRAULIC MINING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is hydraulic mining?",
+      back: "**ANSWER + EXPLANATION:** A high‑pressure water jet is directed against a bank of unconsolidated placer material. The jet undercuts and caves the bank. The resulting slurry flows into a sluice box where heavy minerals (e.g., gold, tin) are trapped behind riffles. Water pressure is typically $\\pu{300-1400 kPa}$, nozzle diameter $\\pu{40-150 mm}$, flow $\\pu{77-510 L/s}$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the six conditions for a placer to be minable by hydraulic methods?",
+      back: "**ANSWER + EXPLANATION:** \n1. Material disintegrates under water pressure.\n2. Adequate water supply at required head.\n3. Adequate space for waste disposal.\n4. Density difference between ore and gangue.\n5. Natural gradient ($2$‑$6\\%$) for slurry transport.\n6. Compliance with environmental regulations."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.1: HYDRAULIC MINING – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What steps are required to develop a hydraulic mining operation?",
+      back: "**ANSWER + EXPLANATION:** \n1. Ensure adequate water supply (upstream preferred).\n2. Identify waste disposal area (downstream).\n3. Obtain permits and environmental approvals.\n4. Build pump station or holding basin.\n5. Lay large‑diameter header pipe.\n6. Strip overburden if needed (using monitors).\n7. Implement environmental protection (settling ponds, water treatment).\n8. Plan land reclamation before mining begins."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.2: HYDRAULIC MINING – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** Describe the production cycle in hydraulic mining.",
+      back: "**ANSWER + EXPLANATION:** The cycle is abbreviated: **jet** (monitor undercuts bank) → **slurry flows** by gravity → **sluice concentration** (riffles trap heavy minerals) → **waste disposal** (tailings to settling pond) → **reclamation** (often integrated). No prior breakage or mechanical loading is required."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.3: HYDRAULIC MINING – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What are the geological and operational conditions for hydraulic mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Material:** unconsolidated soil/gravel, few boulders.\n- **Deposit shape:** placer, tabular, bank or bench.\n- **Dip:** nearly flat ($2$‑$6\\%$ grade).\n- **Thickness:** $\\pu{5-60 m}$.\n- **Grade:** can be very low.\n- **Depth:** very shallow, little overburden.\n- **Water:** large supply, $\\pu{77-510 L/s}$, head $\\pu{300-1400 kPa}$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.4: HYDRAULIC MINING – CHARACTERISTICS**\n\n**QUESTION 1:** List the **advantages** of hydraulic mining.",
+      back: "**ANSWER + EXPLANATION:** \n- High productivity ($\\pu{75-230 m^3}$ per employee‑shift)\n- Low mining cost (relative cost $\\sim5\\%$)\n- Low capital cost\n- Simple equipment and cycle\n- Can be automated\n- Few workers required"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of hydraulic mining.",
+      back: "**ANSWER + EXPLANATION:** \n- Severe environmental damage unless elaborate protection is used\n- High water consumption ($\\pu{77-510 L/s}$)\n- Limited to unconsolidated deposits\n- Cutting action difficult to control\n- Banned in many jurisdictions (e.g., most of the USA, except Alaska)"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.5: HYDRAULIC MINING – APPLICATIONS**\n\n**QUESTION 1:** Where is hydraulic mining used today?",
+      back: "**ANSWER + EXPLANATION:** \n- Primary: gold and tin placers in South America, Africa, Asia.\n- In the USA, limited to Alaska.\n- Other uses: stripping overburden, slurrying phosphate pebble (Florida), re‑mining dewatered tailings dams.\n- Modern monitors can be computer‑controlled (intelligent monitors)."
+    },
+    // =========================================================
+    // SECTION 1.3 – DREDGING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3: DREDGING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is dredging?",
+      back: "**ANSWER + EXPLANATION:** Dredging is underwater excavation of a placer deposit from a floating vessel (dredge). The dredge may incorporate processing and waste disposal. Water can be natural or man‑made (pond). Two main types: **bucket‑line dredges** (mechanical) and **cutter‑head suction dredges** (hydraulic)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** How does a bucket‑line dredge work?",
+      back: "**ANSWER + EXPLANATION:** Buckets continuously move around a bucket ladder, excavating and elevating material into the processing plant aboard. Waste is discharged via a stacking conveyor at the rear. The dredge moves using **spuds** and wire ropes anchored to banks. Output formula: $$\\text{Output} = (\\text{bucket cap.}) \\times (\\text{buckets/min}) \\times 60 \\times (\\text{hr/day}) \\times (\\text{fill factor})$$ Example: $\\pu{0.28 m^3} \\times 22 \\times 60 \\times 22.5 \\times 0.60 = \\pu{5000 m^3/day}$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.1: DREDGING – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What is required to develop a dredging operation?",
+      back: "**ANSWER + EXPLANATION:** \n- Create a pond (damming a stream, pumping, or existing groundwater).\n- Ensure adequate water supply ($\\pu{13-125 L/s}$).\n- Plan waste disposal and reclamation.\n- Minimal overburden removal (if any).\n- Obtain environmental permits."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.2: DREDGING – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** Describe the production cycle in dredging.",
+      back: "**ANSWER + EXPLANATION:** Continuous mining – no breakage required. **Excavation** (mechanical or hydraulic) → **transport to dredge** → **processing** (often wet gravity separation on board) → **waste disposal** (tailings deposited behind, filling the pond). Reclamation is often integrated."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.3: DREDGING – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What conditions are suitable for dredging?",
+      back: "**ANSWER + EXPLANATION:** \n- **Material:** unconsolidated soil/gravel, some boulders permissible.\n- **Deposit shape:** placer, tabular, bank.\n- **Dip:** preferably flat ($2$‑$6\\%$ grade).\n- **Thickness:** $\\pu{8-60 m}$.\n- **Grade:** can be very low.\n- **Depth:** very shallow, little overburden.\n- **Water:** $\\pu{13-125 L/s}$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.4: DREDGING – CHARACTERISTICS**\n\n**QUESTION 1:** List the **advantages** of dredging.",
+      back: "**ANSWER + EXPLANATION:** \n- Most productive of all mining methods ($\\pu{190-300 m^3}$ per employee‑shift)\n- Lowest mining cost\n- High production rate (up to $\\pu{7e6 m^3/year}$)\n- Low labour (crew of $2$‑$30$)\n- Good recovery (up to $90\\%$)\n- Continuous operation, no breakage"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of dredging.",
+      back: "**ANSWER + EXPLANATION:** \n- Severe environmental damage possible\n- High water consumption ($\\pu{3000-4000 L/m^3}$ of material)\n- Limited to unconsolidated deposits\n- High capital investment for large dredges\n- Inflexible and unselective\n- Limited to placer deposits"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.5: DREDGING – APPLICATIONS**\n\n**QUESTION 1:** Where is dredging used?",
+      back: "**ANSWER + EXPLANATION:** \n- Harbour and river dredging\n- Overburden removal (iron, coal, phosphate)\n- Beach‑type titanium deposits\n- Sand and gravel\n- Tailings recovery\n- Worldwide for gold, tin, titanium, diamonds, heavy sands (South America, Southeast Asia, Australia)."
+    },
+    // =========================================================
+    // SECTION 1.4 – SOLUTION MINING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4: SOLUTION MINING – OVERVIEW**\n\n**QUESTION 1:** What is solution mining?",
+      back: "**ANSWER + EXPLANATION:** Recovery of minerals by leaching, dissolution, melting, or slurrying. Categories:\n1. **Borehole extraction** (wells)\n2. **Leaching** (heap, dump, in‑situ)\n3. **Evaporite/evaporation** (solar ponds). Used for in‑situ deposits, previously mined materials, evaporites, and lake deposits."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.1: BOREHOLE EXTRACTION**\n\n**QUESTION 1:** What is borehole extraction? Give examples.",
+      back: "**ANSWER + EXPLANATION:** Uses wells to access mineral values. Examples:\n- Melting of sulfur\n- In‑situ leaching of $\\ce{U}$, $\\ce{Cu}$, $\\ce{Au}$, $\\ce{Ag}$\n- Dissolution of salt ($\\ce{NaCl}$), potash ($\\ce{KCl}$), trona ($\\ce{Na2CO3·NaHCO3·2H2O}$)\n- Slurrying of phosphate, kaolin, oil sands, coal, gilsonite, uranium."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2: LEACHING METHODS – OVERVIEW**\n\n**QUESTION 1:** What is leaching? Distinguish heap, dump, and in‑situ leaching.",
+      back: "**ANSWER + EXPLANATION:** Chemical extraction of metals. Types:\n- **Heap leaching:** Ore stacked on an impermeable pad, irrigated with lixiviant.\n- **Dump leaching:** Similar but on large waste dumps.\n- **In‑situ leaching:** Lixiviant injected into the ore body through boreholes.\nBoth percolation and flooded methods exist; bacteria can catalyse reactions."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2.1: HEAP LEACH – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** Describe the steps to develop a heap leach operation.",
+      back: "**ANSWER + EXPLANATION:** \n1. Clear vegetation, slope pad $\\sim5\\%$ for drainage.\n2. Construct impervious pad and berms (asphalt, geomembrane).\n3. Build pregnant and barren solution ponds.\n4. Mine, crush, and remove fines from ore.\n5. Stack ore in lifts ($\\ge \\pu{3 m}$) using trucks/FELs/stackers.\n6. Rip surface for permeability.\n7. Install irrigation (sprinklers, wobblers, drip emitters) and start leaching."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2.2: LEACHING – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the production cycle in heap leaching?",
+      back: "**ANSWER + EXPLANATION:** \n1. Prepare ore (crush, agglomerate).\n2. Apply lixiviant.\n3. Percolation through heap.\n4. Collect pregnant solution.\n5. Recover mineral (e.g., carbon‑in‑pulp, electrowinning) and regenerate solvent.\nLeaching may last $30$‑$90$ days for thin heaps, longer for thicker dumps."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2.3: LEACHING – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What conditions favour heap leaching?",
+      back: "**ANSWER + EXPLANATION:** \n- **Ore:** permeable or rubbled, low grade but accessible to leach solution.\n- **Rock:** can be weak but impervious to fluid transport.\n- **Deposit:** massive or large vein, steep dip (if vein).\n- **Size:** any, prefer large.\n- **Environment:** climate where evaporation balances precipitation (to avoid water buildup)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2.4: LEACHING – CHARACTERISTICS**\n\n**QUESTION 1:** List the **advantages** of leaching methods.",
+      back: "**ANSWER + EXPLANATION:** \n- Low mining cost (relative cost $\\sim5\\%$)\n- Low labour requirements\n- Applicable to low‑grade deposits\n- Reduced development time/cost\n- Can supplement primary mining\n- Good safety and health\n- Biological catalysts can enhance recovery"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of leaching methods.",
+      back: "**ANSWER + EXPLANATION:** \n- Limited to soluble minerals\n- Moderate water requirements\n- Large land area for heaps\n- Unselective\n- Recovery may be low\n- Groundwater contamination risk\n- Water balance critical\n- Lixiviants dangerous to birds (require netting)"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3: EVAPORITE OPERATIONS**\n\n**QUESTION 1:** What are evaporite operations?",
+      back: "**ANSWER + EXPLANATION:** Evaporites are sedimentary deposits formed by evaporation of saline water (e.g., halite $\\ce{NaCl}$, potash $\\ce{KCl}$, trona). They can be mined conventionally or by solution mining using **solar ponds**. Saline brines are pumped into shallow ponds; water evaporates, minerals crystallise and are harvested. Requires warm, dry climate and level land."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3.1: EVAPORITE – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** How is an evaporite operation developed?",
+      back: "**ANSWER + EXPLANATION:** \n1. Locate large, nearly flat areas.\n2. Lay down fine‑grained bed (sand/clay).\n3. Install geomembrane or other containment layer.\n4. Pump brine into ponds, matching inflow with net evaporation rate.\n5. Allow solar concentration and crystallisation.\n6. Drain remaining water, harvest mineral (leaving a protective salt layer).\n7. Reinitiate flow."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3.2: EVAPORITE – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the production cycle in evaporite operations?",
+      back: "**ANSWER + EXPLANATION:** Pump solution into pond → evaporate water (solar) → crystallise minerals → drain → harvest mineral → reinitiate flow. The process is continuous over large areas, using free solar energy."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3.3: EVAPORITE – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What conditions are required for evaporite mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Ore:** brines or evaporites that can be turned into brines.\n- **Rock:** medium to strong if extracted in‑situ.\n- **Deposit type:** large underground evaporite or surface brines.\n- **Climate:** warm, dry, high evaporation rate.\n- **Land:** large, flat areas."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3.4: EVAPORITE – CHARACTERISTICS**\n\n**QUESTION 1:** List the **advantages** of evaporite operations.",
+      back: "**ANSWER + EXPLANATION:** \n- Low cost (especially with lake brines)\n- Natural concentration often available\n- Uses free solar energy\n- Reduced development time/cost\n- High recovery\n- Good health and safety\n- Low labour costs"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of evaporite operations.",
+      back: "**ANSWER + EXPLANATION:** \n- Specialised method (applies primarily to brines)\n- Moderate water requirements\n- Requires large land areas\n- Possible environmental consequences (salinisation, water table alteration)"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3.5: EVAPORITE – APPLICATIONS**\n\n**QUESTION 1:** Where are evaporite methods applied?",
+      back: "**ANSWER + EXPLANATION:** \n- Common salt ($\\ce{NaCl}$), potash ($\\ce{KCl}$), trona\n- Lithium and boron from lake brines (e.g., Atacama Desert)\n- Magnesium from lake brines, well brines, and seawater.\n- Arid regions (US Great Salt Lake, Chile, China)."
+    }
+  ],
+  
+  // ============================================================
+// MAIN CONTINUOUS DECK – MI213 TERM 2 – MODULE 5 MECHANICAL EXTRACTION
+// EXHAUSTIVE – LATEX, KATEX & MARKDOWN INTELLIGENTLY USED
+// ============================================================
+
+  "MODULE 5 MECHANICAL EXTRACTION": [
+    // =========================================================
+    // SECTION 1.0 – CLASSIFICATION
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.0: CLASSIFICATION OF MECHANICAL EXTRACTION METHODS**\n\n**QUESTION 1:** What are the four commonly used surface mining mechanical extraction methods?",
+      back: "**ANSWER + EXPLANATION:** \n1. Open pit mining\n2. Quarrying\n3. Open cast (strip) mining\n4. Auger mining\n\nOpen pit and open cast are the most important and rank among the eight most important of all mining methods."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the difference between *quarry* and *quarrying*?",
+      back: "**ANSWER + EXPLANATION:** \n- **Quarry** is a mine that produces crushed stone or aggregates (e.g., ballast, road surfacing).\n- **Quarrying** is the mining method that produces intact blocks of rock called *dimension stone* (e.g., polished marble, granite tiles). Most quarries actually use open pit mining, not quarrying."
+    },
+    // =========================================================
+    // SECTION 1.1 – OPEN PIT MINING – BASIC
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1: OPEN PIT MINING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is open pit mining?",
+      back: "**ANSWER + EXPLANATION:** Mining a near‑surface deposit by means of a surface pit excavated using one or more horizontal benches. Benches are $\\pu{9-30 m}$ high. A thick deposit resembles an inverted cone. Used for metallic, nonmetallic, and sometimes coal deposits."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the purposes of benches in an open pit?",
+      back: "**ANSWER + EXPLANATION:** Benches control:\n- Depth of blastholes\n- Slope of pit walls\n- Dangers of highwall faces\n- Provide enough face length for sustained production\n- Coordinate overburden removal and ore extraction"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are typical bench dimensions for different minerals?",
+      back: "**ANSWER + EXPLANATION:** \n- **Copper:** height $\\pu{12-18 m}$, width $\\pu{24-38 m}$, slope $50°$‑$60°$\n- **Iron:** height $\\pu{9-14 m}$, width $\\pu{18-30 m}$, slope $60°$‑$70°$\n- **Nonmetallic:** height $\\pu{12-30 m}$, width $\\pu{18-45 m}$, slope $50°$‑$60°$\n- **Coal:** height $\\pu{15-23 m}$, width $\\pu{15-30 m}$, slope $60°$‑$70°$\nGeneral range: height $\\pu{9-30 m}$, width $\\pu{15-45 m}$, slope $50°$‑$70°$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** What is the scale and importance of open pit mining?",
+      back: "**ANSWER + EXPLANATION:** Open pit mining is a large‑scale method, responsible for **more than 60%** of all surface output worldwide. It enables mining of ever‑decreasing grades of most metallic deposits and uses highly mechanised, mass production equipment that is capital intensive but labour saving."
+    },
+    // =========================================================
+    // SECTION 1.1.1 – OPEN PIT – DEVELOPMENT
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1.1: OPEN PIT – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What are the major steps in developing an open pit mine?",
+      back: "**ANSWER + EXPLANATION:** \n1. Obtain permits, clear land.\n2. Construct surface buildings, waste dumps, topsoil stockpiles.\n3. Locate ore storage, processing facilities.\n4. Select and acquire equipment.\n5. Advanced overburden removal.\n6. Coordinate overburden and mining according to short‑ and long‑range plans."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is a *box cut* (drop cut)?",
+      back: "**ANSWER + EXPLANATION:** The initial entry in a bench – a wedge‑shaped volume removed to establish a new bench face. Drillholes are placed in parallel rows in descending order of depth so that after blasting and excavation, a ramp of negotiable grade is created from the upper to lower bench."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are *working slope* and *ultimate slope*?",
+      back: "**ANSWER + EXPLANATION:** \n- **Working slope:** slope angle with a high factor of safety used during exploitation.\n- **Ultimate slope:** maximum slope at final pit stage, steepened to reduce stripping ratio (gambling on time‑dependent instability). When ultimate slope is used, benches become safety berms to catch dislodged material."
+    },
+    // =========================================================
+    // SECTION 1.1.2 – OPEN PIT – CYCLE
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1.2: OPEN PIT – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the cycle for overburden removal in open pit mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Drilling:** auger (weak rock), roller‑bit (average), percussion (hard)\n- **Blasting:** $\\ce{ANFO}$ or slurry, loaded by bulk trucks or hand, electric caps or detonating cord\n- **Excavation:** power shovel, hydraulic shovel, FEL, dozer, scraper, bucket‑wheel (soil)\n- **Haulage:** truck, belt conveyor, dozer, scraper"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the cycle for mining ore in open pit?",
+      back: "**ANSWER + EXPLANATION:** \n- **Drilling:** roller‑bit (average), percussion (hard)\n- **Blasting:** $\\ce{ANFO}$, slurry; soft rock can be ripped\n- **Excavation:** power shovel, hydraulic shovel, FEL, dragline, scraper (soil‑like ores)\n- **Haulage:** truck, belt conveyor, rail\n- **Hoisting (steep pits):** high‑angle conveyor, skip hoist, hydraulic pipeline"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are the main auxiliary operations in open pit mining?",
+      back: "**ANSWER + EXPLANATION:** Slope stability, dust control, pumping/drainage, waste disposal, surveying, maintenance (equipment & haul roads), communication, personnel transport, environmental control, reclamation (pursued during exploitation)."
+    },
+    // =========================================================
+    // SECTION 1.1.3 – OPEN PIT – CONDITIONS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1.3: OPEN PIT – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What geological conditions favour open pit mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Ore strength:** any\n- **Rock strength:** any\n- **Deposit shape:** any, preferably parallel to surface\n- **Dip:** any, preferably low\n- **Size:** large or thick\n- **Grade:** can be very low if other conditions favourable\n- **Uniformity:** uniform preferred (blending possible)\n- **Depth:** shallow to intermediate (limited by economic stripping ratio)"
+    },
+    // =========================================================
+    // SECTION 1.1.4 – OPEN PIT – CHARACTERISTICS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1.4: OPEN PIT – CHARACTERISTICS (ADVANTAGES)**\n\n**QUESTION 1:** List the **advantages** of open pit mining.",
+      back: "**ANSWER + EXPLANATION:** \n- High productivity ($\\pu{90-360 t}$/employee‑shift, ore + waste)\n- Lowest cost of broadly used methods\n- High production rate (can be increased by adding excavators)\n- Low labour (unskilled possible)\n- Flexible output\n- Ideal for large equipment (economies of scale)\n- Low rock breakage cost\n- Simple development\n- Good recovery ($\\sim100\\%$)\n- Low to moderate dilution\n- Favourable health & safety (no underground hazards)"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of open pit mining.",
+      back: "**ANSWER + EXPLANATION:** \n- Depth limited to $\\sim\\pu{300 m}$ by equipment technology\n- Limited by stripping ratio ($0.8$‑$4\\ \\pu{m^3/t}$)\n- High capital investment\n- Extensive reclamation required\n- Requires large deposit and equipment for lowest cost\n- Weather can impede\n- Slope stability critical\n- Must provide waste disposal\n- Pit may fill with polluted water (acid mine drainage)"
+    },
+    // =========================================================
+    // SECTION 1.1.5 – OPEN PIT – APPLICATIONS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1.5: OPEN PIT – APPLICATIONS**\n\n**QUESTION 1:** To which mineral deposits is open pit mining applied?",
+      back: "**ANSWER + EXPLANATION:** Copper, gold, iron, coal, uranium, bauxite, molybdenum, and most nonmetallic minerals. Also the most common method for surface limestone and other surface stone quarries."
+    },
+    // =========================================================
+    // SECTION 1.2 – QUARRYING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2: QUARRYING (DIMENSION STONE)**\n\n**QUESTION 1:** What is dimension stone quarrying?",
+      back: "**ANSWER + EXPLANATION:** The mining method that produces rectangular blocks of rock (dimension stone) such as marble and granite for architectural building blocks, monuments, decorative slabs, flagstone, curbing, roofing, floor and wall tiles. Benches (called *faces*) are lower and generally vertical; highwalls can approach $\\pu{300 m}$ in height."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What materials are produced by quarrying?",
+      back: "**ANSWER + EXPLANATION:** Granite, marble, slate, and other stones with sound structural or aesthetic architectural properties. Nearly all such mines are small surface operations."
+    },
+    // =========================================================
+    // SECTION 1.3 – OPEN CAST (STRIP) MINING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3: OPEN CAST (STRIP) MINING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is open cast (strip) mining?",
+      back: "**ANSWER + EXPLANATION:** A surface mining method for coal and other bedded deposits where overburden is **cast** directly into adjacent mined‑out panels (not hauled to waste dumps). Excavation and dumping are combined (casting). Typical dimensions: highwall height $\\pu{30-60 m}$, cut width $\\pu{23-45 m}$, highwall slope $60°$‑$70°$, spoil slope $35°$‑$50°$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the two major variations of open cast mining?",
+      back: "**ANSWER + EXPLANATION:** \n1. **Area mining** – flat terrain, flat‑lying seams; cuts are straight, parallel panels advancing across the property.\n2. **Contour mining** – hilly/mountainous terrain; cuts follow the contours, extracting coal to a depth fixed by the economic stripping ratio."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.2: OPEN CAST – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** How is an open cast mine developed?",
+      back: "**ANSWER + EXPLANATION:** Clear land → locate surface plant (central location for minimum haul distance) → special attention to topsoil stockpiles and reclamation → coal handling facilities → select equipment → initial pit development (drop cut, may require some haulage). After first cut, highwall is maintained and subsequent cuts are more efficient."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.3: OPEN CAST – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the cycle for stripping overburden in open cast mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Drilling:** auger (soft), roller‑bit (average), percussion (hard). Holes stop $\\sim\\pu{1 m}$ above coal.\n- **Blasting:** $\\ce{ANFO}$, gel, slurry; electric caps or detonating cord.\n- **Excavation:** dragline, overburden shovel, hydraulic shovel, bucket‑wheel excavator, dozer, scraper.\n- **Haulage (if needed):** truck, scraper, conveyor."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the cycle for mining coal or ore in open cast?",
+      back: "**ANSWER + EXPLANATION:** \n- **Cleaning:** rotary brush or dozer cleans top of seam.\n- **Drilling:** small auger or percussion where needed.\n- **Blasting:** $\\ce{ANFO}$ (ripping alternative).\n- **Excavation:** FEL, power shovel, continuous miner (surface type).\n- **Haulage:** truck, tractor‑trailer, belt conveyor, hydraulic conveyor, rail."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.4: OPEN CAST – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What conditions are suitable for open cast mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Ore strength:** any\n- **Rock strength:** any\n- **Deposit shape:** tabular, bedded\n- **Dip:** any, but preferably horizontal/low\n- **Size:** preferably continuous, large lateral extent\n- **Grade:** low if other conditions favourable\n- **Uniformity:** preferably uniform\n- **Depth:** shallow to moderate (to control stripping ratio)"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.5: OPEN CAST – CHARACTERISTICS**\n\n**QUESTION 1:** List the **advantages** of open cast mining.",
+      back: "**ANSWER + EXPLANATION:** \n- Highest productivity of any coal method ($\\sim9\\ \\text{t/employee‑hr}$, $>2.5\\times$ underground)\n- Lowest cost per tonne (relative cost $\\sim10\\%$)\n- High production rate\n- Early production\n- Low labour intensity\n- Relatively flexible\n- Suitable for large equipment\n- Low blasting costs\n- Simple development\n- Highwall support seldom needed\n- Good recovery ($\\sim100\\%$)\n- Eliminates overburden haulage\n- Good health & safety"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of open cast mining.",
+      back: "**ANSWER + EXPLANATION:** \n- Depth limited by equipment ($\\sim\\pu{90 m}$)\n- Stripping ratio limits ($1.3$‑$19\\ \\pu{m^3/t}$)\n- Surface damage, extensive reclamation required\n- Public image negative\n- Some excavators require skilled operators\n- Requires large equipment for lowest cost\n- Weather can impede\n- Careful sequencing required\n- Slopes must be monitored\n- Surface runoff control needed to avoid acid mine drainage"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.6: OPEN CAST – APPLICATIONS**\n\n**QUESTION 1:** Where is open cast mining used?",
+      back: "**ANSWER + EXPLANATION:** Extensively for surface mining of coal. Also used for anthracite coal, bentonite, lignite, phosphate, tar sands, and uranium."
+    },
+    // =========================================================
+    // SECTION 1.4 – AUGER MINING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4: AUGER MINING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is auger mining?",
+      back: "**ANSWER + EXPLANATION:** A method that recovers coal or other minerals from under the highwall when the ultimate stripping ratio has been reached in open cast mining. An augering machine or a remotely controlled continuous miner bores parallel holes/entries into the highwall while the crew stays on surface. Two variations: **traditional augering** (drag‑bit heads, $\\pu{0.6-2.4 m}$ diameter, $\\pu{60-90 m}$ holes, recovery $40$‑$65\\%$) and **highwall mining** (continuous miner, $\\pu{3 m}$ wide entries, depth up to $\\pu{300 m}$, recovery $\\sim60\\%$)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.1: AUGER – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** How is an auger mining site developed?",
+      back: "**ANSWER + EXPLANATION:** Requires coordination with ongoing stripping. Highwall trimmed of loose rock. Bench cleared to width $\\pu{15-25 m}$. Storage for coal and for auger flights (or conveyor units). Haul road maintained for trucks."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2: AUGER – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the production cycle in auger mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Excavation:** augering machine (1‑3 heads) or highwall miner.\n- **Haulage:** auger flights → conveyor → loader → trucks (for augering); conveyor train → trucks (for highwall miner).\n- **Auxiliary:** providing electrical power and maintaining haul roads."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3: AUGER – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What conditions are required for auger mining?",
+      back: "**ANSWER + EXPLANATION:** \n- **Ore strength:** any\n- **Rock strength:** any\n- **Deposit shape:** tabular or bedded\n- **Dip:** low or nearly horizontal\n- **Size:** small to large\n- **Grade:** low\n- **Uniformity:** uniform in thickness, free of partings\n- **Depth:** shallow to moderate\n- Also require sufficient highwall length, bench width, and roof conditions."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.4: AUGER – CHARACTERISTICS**\n\n**QUESTION 1:** List the **advantages** of auger mining.",
+      back: "**ANSWER + EXPLANATION:** \n- High productivity ($\\pu{22-450 t}$/employee‑shift)\n- Lowest mining cost of any coal method (relative cost $\\sim5\\%$)\n- Intermediate production rate ($\\pu{90-2200 t}$/shift)\n- Little development required (when used with open cast)\n- Low labour\n- Low capital for augering (highwall mining can be contracted on royalty)\n- Preserves surface topography, no separate reclamation cost\n- Recovers coal otherwise lost\n- Good health & safety (explosion hazard exists but manageable)"
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the **disadvantages** of auger mining.",
+      back: "**ANSWER + EXPLANATION:** \n- Application limited to conditions associated with open cast mining; rarely employed alone.\n- Low coal recovery ($40$‑$65\\%$).\n- Methane explosion hazard (can be mitigated).\n- Production capability dependent on a single extraction unit."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.5: AUGER – APPLICATIONS**\n\n**QUESTION 1:** Where has auger mining been used?",
+      back: "**ANSWER + EXPLANATION:** Since the 1940s in surface mines. Highwall mining has existed since the Joy Pushbutton Miner (1950s), originally unsuccessful; modern highwall miners are reliable and productive."
+    }
+  ],
+  
+    
+    // ============================================================
+// MAIN CONTINUOUS DECK – MI213 TERM 2 – MODULE 6 ROCK BREAKAGE & FRAGMENTATION
+// EXHAUSTIVE – LATEX, KATEX & MARKDOWN INTELLIGENTLY USED
+// ============================================================
+
+  "MODULE 6 ROCK BREAKAGE": [
+    // =========================================================
+    // SECTION 1.1 – PRINCIPLES OF ROCK BREAKAGE
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1: PRINCIPLES OF ROCK BREAKAGE**\n\n**QUESTION 1:** What is *rock breakage*?",
+      back: "**ANSWER + EXPLANATION:** The freeing or detaching of large masses of harder rock from the parent deposit. Historical advances include fire quenching, corundum, tungsten carbide inserts, black powder, dynamite, $\\ce{ANFO}$, and water‑based explosives. Modern mining uses the same basic elements: rock breakage and materials handling."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the two different types of rock breakage operations?",
+      back: "**ANSWER + EXPLANATION:** \n- **Rock penetration** (drilling, boring, channeling) – forms a hole or kerf for explosive placement, to produce an opening, or to extract dimension stone.\n- **Rock fragmentation** – breaks rock into manageable sizes, normally by chemical energy (blasting) or mechanical/hydraulic/novel methods."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What is the basic energy relationship for rock breakage?",
+      back: "**ANSWER + EXPLANATION:** The weight of rock broken, $W$, is proportional to the energy consumed, $E$: $$W \\propto E$$ For penetration processes (drilling), the rate of advance $R$ is proportional to power: $$R \\propto \\frac{dE}{dt} \\propto P$$ This emphasises that penetration rate is directly proportional to power applied."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** How do rock strengths affect breakage?",
+      back: "**ANSWER + EXPLANATION:** Rock strengths: compressive $>$ shear $>$ tensile. It is advantageous to apply loads that overcome the smallest strength (tensile) first, then shear, then compressive. However, in drilling, rock is often broken by compressive forces. Drill designers now focus on conserving energy using the proportional relationships."
+    },
+    // =========================================================
+    // SECTION 1.2 – ROCK PENETRATION METHODS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2: ROCK PENETRATION METHODS**\n\n**QUESTION 1:** What are the primary mechanical attack methods for rock penetration?",
+      back: "**ANSWER + EXPLANATION:** \n- **Percussion** (hammering action)\n- **Rotary** (shearing action)\n- **Rotary‑percussion** (combination)\nSurface mines favour roller‑bit rotary drills. Percussion drill rotates only to index each blow; rotary‑percussion applies independent rotational shearing force to increase efficiency."
+    },
+    // =========================================================
+    // SECTION 1.2.1 – DRILLING (OPERATING COMPONENTS)
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.1: DRILLING – OPERATING COMPONENTS**\n\n**QUESTION 1:** What are the four components of a drilling system?",
+      back: "**ANSWER + EXPLANATION:** \n1. **Drill** – converts energy (electrical, pneumatic, hydraulic, combustion) into rotational/percussive energy.\n2. **Drill rod** (steel, stem, string, pipe) – transmits energy to the bit.\n3. **Bit** – attacks the rock to cause failure.\n4. **Circulation fluid** – cleans hole, controls dust, cools bit, stabilises hole (compressed air often used in surface mines)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the predominant use of drilling in mines?",
+      back: "**ANSWER + EXPLANATION:** Placement of explosives (production drilling). Other uses: sampling during exploration, roof bolt holes, anchors, cable reinforcements, and utility lines (electrical, communications, compressed air, water). In coal mines, roof bolt drilling is predominant."
+    },
+    // =========================================================
+    // SECTION 1.2.2 – MECHANICS & PERFORMANCE FACTORS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.2: MECHANICS & PERFORMANCE FACTORS**\n\n**QUESTION 1:** What are the two essential types of mechanical rock cutting tools?",
+      back: "**ANSWER + EXPLANATION:** \n- **Indenter** – applies force normal to rock surface (percussion drill, compression).\n- **Drag bit** (pick) – applies force approximately parallel to rock surface (rotary drill, shearing/tension). Rotary‑percussion uses a combination."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What four groups of factors affect drill performance?",
+      back: "**ANSWER + EXPLANATION:** \n1. **Operating variables** (controllable): drill power, blow energy/frequency, rotary speed, thrust, rod design, fluid flow.\n2. **Drillhole factors** (uncontrollable): hole size, length, inclination.\n3. **Rock factors** (drillability): rock properties, geology, stress state.\n4. **Service factors** (independent): labour, supervision, power supply, weather."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What is the empirical equation for rotary drilling penetration rate?",
+      back: "**ANSWER + EXPLANATION:** $$P = \\frac{(214 - 98\\log_{10} S_c) W R}{250 D} \\quad (\\text{m/hr})$$ where $P$ = penetration rate, $S_c$ = rock compressive strength (MPa), $W$ = pulldown weight (t), $R$ = rotary speed (rpm), $D$ = hole diameter (mm)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** How are drilling methods selected by rock type?",
+      back: "**ANSWER + EXPLANATION:** Soft rock (shale, weathered limestone, coal): hydraulic jet, rotary drag‑bit. Medium‑hard: rotary roller‑bit, rotary percussion. Hard (granite, chert): rotary roller‑bit, percussion. Very hard (taconite, quartzite): percussion, thermal jet piercing. Hydraulic drills now dominate underground percussion (lower energy, faster, less noise)."
+    },
+    // =========================================================
+    // SECTION 2.1 – THEORY OF EXPLOSIVES (OVERVIEW)
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1: THEORY OF EXPLOSIVES**\n\n**QUESTION 1:** Why use explosives to break rock?",
+      back: "**ANSWER + EXPLANATION:** Two reasons: **ease of fragmentation** (break rock to make digging, loading, hauling easier) and **ease of stripping** (move overburden/waste by explosive means to reduce mechanical work). Fragmentation refers to the size distribution of broken rock in the muckpile."
+    },
+    // =========================================================
+    // SECTION 2.1.1 – NATURE OF EXPLOSIVES
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1.1: NATURE OF EXPLOSIVES**\n\n**QUESTION 1:** What is an explosive/blasting agent?",
+      back: "**ANSWER + EXPLANATION:** A compound or mixture (mainly $\\ce{C}$, $\\ce{H2}$, $\\ce{O2}$, $\\ce{N2}$) that undergoes rapid decomposition when initiated by heat, impact, friction, or shock. The exothermic reaction produces gases ($\\ce{H2O}$, $\\ce{CO2}$, $\\ce{N2}$) at high pressure and temperature. **Detonation** (supersonic shock wave, $1500$‑$9000\\ \\text{m/s}$) vs. **deflagration** (subsonic burning, no shock)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** How do explosives break rock?",
+      back: "**ANSWER + EXPLANATION:** By both (1) the impact of the shock wave and (2) expanding high‑pressure gases from detonation. Key explosive properties: energy density, bulk density, rate of energy release, pressure‑time history. Key rock properties: density, porosity, strength, modulus of elasticity, structure (jointing, bedding)."
+    },
+    // =========================================================
+    // SECTION 2.1.2 – CHEMICAL REACTIONS OF EXPLOSIVES
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1.2: CHEMICAL REACTIONS – OXYGEN BALANCE**\n\n**QUESTION 1:** What is *oxygen balance*?",
+      back: "**ANSWER + EXPLANATION:** The point at which an explosive has exactly enough oxygen to completely oxidise all contained fuels, with no excess to react with nitrogen. It optimises energy output and minimises toxic gases ($\\ce{NO_x}$, $\\ce{CO}$, $\\ce{CH4}$). For $\\ce{NH4NO3}$ + $\\ce{CH2}$, the optimal is $94.5\\%$ $\\ce{NH4NO3}$ and $5.5\\%$ fuel oil."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** Write the oxygen balance equation for a simple explosive.",
+      back: "**ANSWER + EXPLANATION:** $$\\mathrm{OB} = O_0 - 2C_0 - 0.5H_0$$ where $O_0$, $C_0$, $H_0$ are g‑atoms/kg of oxygen, carbon, and hydrogen in the mixture. For metals, add terms: $-0.667\\mathrm{Al}_0 - \\mathrm{Ca}_0 - 0.5\\mathrm{Na}_0$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are the consequences of fuel excess or shortage in $\\ce{ANFO}$?",
+      back: "**ANSWER + EXPLANATION:** \n- **Oxygen‑balanced** ($94.5\\%$ AN, $5.5\\%$ FO): $$3\\ce{NH4NO3} + \\ce{CH2} \\rightarrow 7\\ce{H2O} + \\ce{CO2} + 3\\ce{N2} + 930\\ \\text{kcal/kg}$$\n- **Fuel excess** ($92\\%$ AN, $8\\%$ FO): produces $\\ce{CO}$ and lower energy ($810\\ \\text{kcal/kg}$).\n- **Fuel shortage** ($96.6\\%$ AN, $3.4\\%$ FO): produces $\\ce{NO}$ and even lower energy ($600\\ \\text{kcal/kg}$)."
+    },
+    // =========================================================
+    // SECTION 2.1.3 – CLASSIFICATION OF EXPLOSIVES
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1.3: CLASSIFICATION OF EXPLOSIVES**\n\n**QUESTION 1:** How do regulatory authorities classify explosives?",
+      back: "**ANSWER + EXPLANATION:** \n- **High explosives** – detonated by a No. 8 blasting cap when unconfined (e.g., dynamite).\n- **Low explosives** – deflagrate when confined (e.g., black powder, safety fuse).\n- **Blasting agents** – detonator‑insensitive; can be detonated but not by a No. 8 cap (e.g., $\\ce{ANFO}$, water gels)."
+    },
+    // =========================================================
+    // SECTION 2.1.4 – INGREDIENTS OF EXPLOSIVES
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1.4: INGREDIENTS OF EXPLOSIVES**\n\n**QUESTION 1:** What are the main fuels and oxidisers?",
+      back: "**ANSWER + EXPLANATION:** Fuels: fuel oil (diesel), carbon, aluminium, $\\ce{TNT}$. Oxidisers: ammonium nitrate ($\\ce{NH4NO3}$), sodium nitrate, calcium carbonate. Other additives: sensitizers (nitroglycerine, $\\ce{TNT}$, aluminium), energizers (metal powders), water, thickeners, emulsifiers, etc. Slurries (water gels) and emulsions are common."
+    },
+    // =========================================================
+    // SECTION 2.1.5 – BLASTING PROPERTIES
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1.5: BLASTING PROPERTIES OF EXPLOSIVES**\n\n**QUESTION 1:** List the nine important blasting properties.",
+      back: "**ANSWER + EXPLANATION:** \n1. Velocity of Detonation (VOD) – $1500$‑$9000\\ \\text{m/s}$.\n2. Detonation pressure (kbar) – pressure as wave travels.\n3. Borehole pressure ($1$‑$6\\ \\text{MPa}$) – measure of ability to displace rock.\n4. Density – strength positively correlated.\n5. Energy output (RWS, RBS) – relative weight/bulk strength vs. standard $\\ce{ANFO}$.\n6. Cap sensitivity – ease of initiation.\n7. Gap sensitivity – ability to detonate across an air gap.\n8. Water resistance – low for $\\ce{ANFO}$, high for dynamite.\n9. Fume class – amount of toxic fumes."
+    },
+    // =========================================================
+    // SECTION 2.1.6 – DETONATION & INITIATION SYSTEMS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.1.6: DETONATION & INITIATION SYSTEMS**\n\n**QUESTION 1:** What are the three types of initiation systems?",
+      back: "**ANSWER + EXPLANATION:** \n- **Electric** – current heats bridge wire, ignites pyrotechnic match head, then delay element, then primer (lead azide) and base charge ($\\ce{PETN}$). Stray currents and radio are hazards.\n- **Nonelectric (shock‑tube)** – most common; immune to stray current and radio.\n- **Electronic** – microchip replaces pyrotechnic delay; ±1% accuracy vs. ±5% for conventional; higher cost but better blasting results."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are MS and LP delay series?",
+      back: "**ANSWER + EXPLANATION:** \n- **Millisecond (MS) series** – 20‑40 delays, separation $25\\ \\text{ms}$.\n- **Long‑period (LP) series** – usually 20 delays, separation $200$‑$400\\ \\text{ms}$.\nElectronic detonators can be programmed for any delay up to 10‑20 seconds, with ±1% accuracy."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What three major elements are required for a blast initiation system?",
+      back: "**ANSWER + EXPLANATION:** \n1. **Initial energy source** – match/igniter cord, blasting cap, electric current, low‑energy firing cap.\n2. **Distribution network** – blasting fuse, electric circuit, detonating cord ($3.19$‑$12.76\\ \\text{g/m}$), low‑energy detonating cord ($0.51$‑$1.28\\ \\text{g/m}$).\n3. **Detonator** – blasting cap (fuse or electric), cartridge explosive, booster/primer."
+    },
+    // =========================================================
+    // SECTION 2.2 – SURFACE MINE BLASTING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 2.2: SURFACE MINE BLASTING – PRACTICES**\n\n**QUESTION 1:** What are the major elements of surface blasting practice?",
+      back: "**ANSWER + EXPLANATION:** \n- Hole inclination: generally vertical (may be inclined).\n- Subdrilling: hole extends below floor to ensure complete breakage.\n- Rows: usually multiple (2,3+).\n- Hole pattern: square, rectangular, or triangular.\n- Explosives: $\\ce{ANFO}$ (bulk or packaged), slurry, gel.\n- Loading: machine (bulk) or hand; confined by stemming; may deck load.\n- Detonation: double line of detonating cord with millisecond delays.\n- Secondary breakage: mudcapping, blockholing, dropballing, impact hammer."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** Define *burden* and *spacing* in blasting patterns.",
+      back: "**ANSWER + EXPLANATION:** \n- **Burden** – perpendicular distance from the nearest free face to the centre of the charge (m).\n- **Spacing** – distance between holes in a row (m).\nTypical surface mine ranges: burden $4.6$‑$9.1\\ \\text{m}$, spacing $4.6$‑$9.1\\ \\text{m}$."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are *drilling factor* and *powder factor*?",
+      back: "**ANSWER + EXPLANATION:** \n- **Drilling factor** – length of hole drilled per tonne of material blasted ($\\text{m/tonne}$). Surface mines range $6.7$‑$13.4\\ \\text{mm/tonne}$.\n- **Powder factor** – weight of explosives per tonne of material blasted ($\\text{kg/tonne}$). Surface mines range $0.03$‑$0.5\\ \\text{kg/tonne}$.\nBoth should be minimised consistent with good fragmentation."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** How is a blasting pattern designed for an open pit?",
+      back: "**ANSWER + EXPLANATION:** Determine: bank height & slope, hole diameter ($\\pu{150-460 mm}$), hole angle (vertical or sloped up to $30°$), hole depth (bank height + subdrilling; subdrilling $0.2$‑$0.5$ × burden), burden, explosive loading density ($\\text{kg/m}$), charge height, weight per hole, spacing, number of holes, weight of rock broken, drilling factor, powder factor. Parameters are often set empirically by experimenting in the mine."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 5:** Worked example: Design parameters for a surface mine blast.\nGiven: copper ore $w = 2.4\\ \\text{t/m}^3$, bank length $L = 61\\ \\text{m}$, AN slurry loading density $r = 104\\ \\text{kg/m}$, powder factor $PF = 0.25\\ \\text{kg/t}$, charge height $k = 11\\ \\text{m}$, hole diameter $d = 305\\ \\text{mm}$, burden $b = 12.2\\ \\text{m}$, bank height $h = 15.2\\ \\text{m}$. Find number of holes and spacing.",
+      back: "**ANSWER + EXPLANATION:** \n- Bank area $A = b \\times h = 12.2 \\times 15.2 = 186\\ \\text{m}^2$\n- Bank volume $V = L \\times A = 61 \\times 186 = 11,327\\ \\text{m}^3$\n- Bank weight $W = w \\times V = 2.4 \\times 11,327 = 27,184\\ \\text{t}$\n- Charge per hole $c = r \\times k = 104 \\times 11 = 1,144\\ \\text{kg}$\n- Rock broken per hole $m = c / PF = 1,144 / 0.25 = 4,576\\ \\text{t}$\n- Number of holes $n = W / m = 27,184 / 4,576 \\approx 6$ holes\n- Spacing $s = L / n = 61 / 6 \\approx 10\\ \\text{m}$"
+    }
+  ],
+    
+    
+    
+    // ============================================================
+// MAIN CONTINUOUS DECK – MI213 TERM 2 – MODULE 7 SUPPORTED METHODS
+// ============================================================
+
+  "MODULE 7 SUPPORTED METHODS": [
+    // =========================================================
+    // SECTION 1.1: CLASSIFICATION OF METHODS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.1: CLASSIFICATION OF SUPPORTED METHODS**\n\n**QUESTION 1:** What are *supported methods* in underground mining?",
+      back: "**ANSWER + EXPLANATION:** Supported methods are those that require artificial support (backfill, timber, or steel) to maintain stability in exploitation openings. They are used when production openings will not remain standing during their life and when major caving or subsidence cannot be tolerated. They bridge unsupported and caving methods."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the role of *pillars* in supported methods?",
+      back: "**ANSWER + EXPLANATION:** Pillars of the original rock mass provide near‑rigid support, the ultimate ground control. However, in vertical methods, pillars in production areas are impractical because they interfere with operations. Therefore, artificial pillars of backfill material are used to control the rock mass and make output safe and productive."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What is *RQD* and why is it important for supported methods?",
+      back: "**ANSWER + EXPLANATION:** RQD (Rock Quality Designation) measures rock competency based on drill core recovery of intact pieces >102 mm. It helps evaluate the load‑carrying capacity of natural rock and is critical in deciding whether a supported method is needed and which type."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** What are the three main supported methods?",
+      back: "**ANSWER + EXPLANATION:** 1. Cut‑and‑fill stoping (most common), 2. Stull stoping (infrequent), 3. Square‑set stoping (historically important, now rarely used). They are applied to rock ranging from moderate to incompetent."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 5:** How do the three supported methods differ in application?",
+      back: "**ANSWER + EXPLANATION:** Cut‑and‑fill and stull stoping are applied to moderately competent rock; square‑setting is used only for the least competent rock. All three are generally employed for vertical stoping. Their use has declined considerably over time."
+    },
+    // =========================================================
+    // SECTION 1.2: CUT-AND-FILL – BASIC DESCRIPTION
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2: CUT-AND-FILL STOPING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is *cut‑and‑fill stoping*?",
+      back: "**ANSWER + EXPLANATION:** Cut‑and‑fill stoping is a supported method where ore is extracted in horizontal slices (cuts), and after each slice the void is filled with backfill material. It is normally used in overhand fashion (mining upward), but underhand variations exist. The fill supports walls and provides a solid floor for equipment on the next slice."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the major types of *fill material* used?",
+      back: "**ANSWER + EXPLANATION:** 1) Waste sorted from stopes or special waste‑excavated stopes; 2) Waste from development work; 3) Sand and gravel or de‑slimed mill tailings – sometimes mixed with cement to harden into a consistency approaching hard rock. The choice depends on required support and availability."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are typical *stope dimensions* in cut‑and‑fill mining?",
+      back: "**ANSWER + EXPLANATION:** Stope width: 2 to 30 m (equipment size sets minimum). Stope height: 45 to 90 m. Stope length: 60 to 600 m. However, the height of the open part of the stope is seldom more than 10 m because fill is placed regularly."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** What are the three common variations of cut‑and‑fill stoping?",
+      back: "**ANSWER + EXPLANATION:** 1. Overhand cut‑and‑fill (mining upward); 2. Drift‑and‑fill (for poorer ground, using small drifts backfilled individually); 3. Underhand cut‑and‑fill (mining downward, with cemented fill as roof). Each is widely practiced worldwide."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 5:** What is *overhand cut‑and‑fill*?",
+      back: "**ANSWER + EXPLANATION:** Mining from the bottom upward. Miners work under the roof with sufficient headroom to move equipment. Ramps (max grade 15‑20%) allow diesel equipment to move from level to level. Applied in relatively strong rock where stope can remain open with only bolting or bolting with mesh wire. Also called breast stoping or back stoping."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 6:** What is *drift‑and‑fill stoping*?",
+      back: "**ANSWER + EXPLANATION:** Used for worse ground conditions than traditional overhand cut‑and‑fill. Mining keeps openings small (drifts) to reduce rock failure risk. Each horizontal slice is removed by drifting forward, then backfilled within a few metres of the back. Provides excellent support of hangingwall and footwall, especially where the vein is multiple drifts wide."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 7:** What is *underhand cut‑and‑fill stoping*?",
+      back: "**ANSWER + EXPLANATION:** Used in poorer quality rock. Horizontal slices are taken from top to bottom of the stope. After each slice, the stope is filled (usually with cemented deslimed or sand fill) which becomes the roof for subsequent cuts. The fill is normally cemented to maximise support capabilities."
+    },
+    // =========================================================
+    // SECTION 1.2.1: CUT-AND-FILL – SEQUENCE OF DEVELOPMENT
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.1: CUT-AND-FILL – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** How does development of cut‑and‑fill stopes differ from other vertical stoping methods?",
+      back: "**ANSWER + EXPLANATION:** It follows the same general plan (haulage drift, drawpoints, crosscuts) but does not need an undercut or loading bells because ore moves from stope to drawpoints by gravity flow through ore passes. Mining begins with the first horizontal slice, either at top or bottom of stope. Ramps must be driven for mobile equipment, or equipment will be captive in the stope (some mines use captive equipment to reduce development openings)."
+    },
+    // =========================================================
+    // SECTION 1.2.2: CUT-AND-FILL – CYCLE OF OPERATIONS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.2: CUT-AND-FILL – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the typical production cycle in mechanised cut‑and‑fill?",
+      back: "**ANSWER + EXPLANATION:** Drilling (pneumatic, rotary‑percussion, or percussion) → Blasting → Secondary breakage/blasting (slabs of dynamite, drill & blast, or impact hammer) → Loading (LHD, FEL, or slusher/scraper) → Haulage (LHD, truck, rail). Then the filling operation is integrated, interrupting the production cycle. Fill barricades are often required."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What equipment is typically used in each step of cut‑and‑fill?",
+      back: "**ANSWER + EXPLANATION:** Drilling: pneumatic, rotary‑percussion, or percussion drills. Blasting: ANFO or other explosives. Secondary breakage: dynamite slabs, drill & blast, impact hammer. Loading: LHD, FEL, or slusher/scraper. Haulage: LHD, truck, or rail. Filling equipment may include conveyors, pumps for slurry fill, or trucks for waste rock."
+    },
+    // =========================================================
+    // SECTION 1.2.3: CUT-AND-FILL – CONDITIONS AMENABLE
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.3: CUT-AND-FILL – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What are the ore and rock strength requirements for cut‑and‑fill?",
+      back: "**ANSWER + EXPLANATION:** Ore strength: moderately weak to strong (can be quite weak with drift‑and‑fill, must be stronger for other variations). Rock strength: weak to fairly weak. The method works where rock is not competent enough for unsupported methods but not so weak that fill cannot stabilise it."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What deposit shape, dip, size, grade, and depth are suitable for cut‑and‑fill?",
+      back: "**ANSWER + EXPLANATION:** Shape: tabular, irregular, or discontinuous. Dip: moderate to fairly steep (>45°); flatter deposits require ore passes steeper than angle of repose. Size: narrow to moderate width (2‑30 m), large extent. Grade: fairly high. Uniformity: moderate, variable (can sort waste in stope). Depth: moderate to deep, typically 1.2‑2.4 km."
+    },
+    // =========================================================
+    // SECTION 1.2.4: CUT-AND-FILL – CHARACTERISTICS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.4: CUT-AND-FILL – CHARACTERISTICS (ADVANTAGES & DISADVANTAGES)**\n\n**QUESTION 1:** What are the *advantages* of cut‑and‑fill stoping?",
+      back: "**ANSWER + EXPLANATION:** Moderate productivity (low with slushers, better with diesel); moderate production rate; permits good selectivity; low development cost; moderate capital investment, adaptable to mechanisation; versatile, flexible, adaptable (≥3 variations); excellent recovery if pillars recovered (90‑100%); low dilution (5‑10%); surface waste can be used as fill; moderately good safety record."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the *disadvantages* of cut‑and‑fill stoping?",
+      back: "**ANSWER + EXPLANATION:** Fairly high mining cost (relative cost ~55%, high with slushers, lower with diesels); handling of fill may be up to 50% of mining cost; filling operations interfere with production; must provide stope access for mechanised equipment; labour‑intensive, requires skilled miners and close supervision; compressibility of fill may cause ground settlement."
+    },
+    // =========================================================
+    // SECTION 1.2.5: CUT-AND-FILL – APPLICATIONS AND VARIATIONS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.5: CUT-AND-FILL – APPLICATIONS AND VARIATIONS**\n\n**QUESTION 1:** What are modern variations and applications of cut‑and‑fill?",
+      back: "**ANSWER + EXPLANATION:** Cut‑and‑fill is one of the most variable methods. Modern operations are highly mechanised, using diesel equipment for efficiency. Variations include overhand, underhand, drift‑and‑fill, and mining of very narrow veins (as narrow as 2 m). Used worldwide for high‑grade ore bodies where selectivity and low dilution are critical (gold, silver, lead, zinc, uranium)."
+    },
+    // =========================================================
+    // SECTION 1.3: STULL STOPING
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3: STULL STOPING**\n\n**QUESTION 1:** What is *stull stoping* and where is it used?",
+      back: "**ANSWER + EXPLANATION:** Stull stoping is an infrequently used supported method for narrow, steep veins. Timber beams called stulls are wedged directly between the hangingwall and footwall at regular intervals. The stulls serve as the principal or only support of the walls or back, and incidentally as working platforms. No systematic filling is used."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What conditions are amenable to stull stoping?",
+      back: "**ANSWER + EXPLANATION:** Narrow veins of fairly strong ore with moderately strong walls. Used principally in small mines, preferably with rich ore to pay high labour costs. Timber must be relatively cheap. Stope width equals vein width (walls form stope walls). Specifically applicable to thin, tabular deposits with a weak immediate hangingwall that would slab off unless supported."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** Why is stull stoping rarely used today?",
+      back: "**ANSWER + EXPLANATION:** It is labour‑intensive and costly. Timber can be expensive, and the method requires skilled miners. Modern cut‑and‑fill with cemented fill offers similar support with higher mechanisation and lower labour costs. However, it remains useful in very narrow, rich veins where other equipment cannot enter."
+    },
+    // =========================================================
+    // SECTION 1.4: SQUARE-SET STOPING – BASIC DESCRIPTION
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4: SQUARE-SET STOPING**\n\n**QUESTION 1:** What is *square‑set stoping*?",
+      back: "**ANSWER + EXPLANATION:** Square‑set stoping is a supported method where small blocks of ore are systematically extracted and replaced by a prismatic framework of timber sets, framed into an integrated support structure and backfilled level by level. It provides substantial support to surrounding rocks and can be conducted overhand, underhand, or horizontally. Applicable to the weakest ore and rock under the heaviest ground conditions."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the conditions amenable to square‑set stoping?",
+      back: "**ANSWER + EXPLANATION:** Ore and rock strengths: weak to very weak. Deposit shape: any, regular or irregular. Deposit dip: any, preferably >45° so gravity can assist ore flow. Used when ground conditions are too poor for any other method (squeezing or swelling ground, where subsidence cannot be tolerated)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** Why is square‑set stoping rarely used today?",
+      back: "**ANSWER + EXPLANATION:** It is expensive and slow due to extensive timbering and labour. Cut‑and‑fill stoping, especially drift‑and‑fill with cemented backfill, has made inroads into weaker rock categories, making square‑setting less significant. Historically important for mining under difficult conditions, but modern fill technologies have largely replaced it."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** What are the key characteristics (advantages/disadvantages) of square‑set stoping?",
+      back: "**ANSWER + EXPLANATION:** Advantages: can mine extremely weak ground with full control; versatile (overhand, underhand, horizontal); provides substantial support. Disadvantages: very high cost (timber and labour); slow production; timber can rot or burn; requires highly skilled miners; largely obsolete due to cemented fill methods."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 5:** Describe the typical sequence of development for square‑set stoping.",
+      back: "**ANSWER + EXPLANATION:** Development involves establishing a haulage level, then driving raises and crosscuts to the ore block. Timber sets are erected as the stope advances. Small blocks of ore are extracted, then timber frames are placed and backfilled. The process repeats level by level, building an integrated timber and fill support structure."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 6:** Describe the cycle of operations in square‑set stoping.",
+      back: "**ANSWER + EXPLANATION:** The cycle is: drill → blast → remove ore → erect timber sets → backfill → repeat. All operations are done in small, controlled increments. The method is slow but provides maximum ground support. Backfill may be waste rock, sand, or cemented tailings placed behind the timber sets."
+    }
+  ],
+    
+// ============================================================
+// MAIN CONTINUOUS DECK – MI213 TERM 2 – MODULE 8 CAVING METHODS
+// COMPLETE – EVERY TERM & CONCEPT INCLUDED
+// ============================================================
+
+  "MODULE 8 CAVING METHODS": [
+    // =========================================================
+    // SECTION 1.0: CLASSIFICATION OF CAVING METHODS
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.0: CLASSIFICATION OF CAVING METHODS**\n\n**QUESTION 1:** What defines *caving methods* in underground mining?",
+      back: "**ANSWER + EXPLANATION:** Exploitation openings are designed to collapse; caving of ore or rock is intentional and essential. Three main methods: longwall mining (horizontal tabular deposits), sublevel caving, and block caving (inclined/vertical massive deposits)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** How do caving methods compare in cost?",
+      back: "**ANSWER + EXPLANATION:** Caving methods include a moderately priced method (sublevel caving) as well as two of the cheapest underground methods (longwall and block caving). They deliberately destroy exploitation openings."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What rock mechanics principle applies to caving methods?",
+      back: "**ANSWER + EXPLANATION:** Principles are applied to **ensure** caving occurs (not to prevent it). The cross‑sectional area of the undercut is elongated to cause roof failure. Development openings must withstand shifting ground and subsidence that usually extends to surface."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** What production requirement is critical for caving methods?",
+      back: "**ANSWER + EXPLANATION:** Production must be maintained at a steady, continuous pace to avoid disruptions or hang‑ups in the caving action. Good mining engineering and supervision are indispensable."
+    },
+    // =========================================================
+    // SECTION 1.2: LONGWALL MINING – BASIC DESCRIPTION
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2: LONGWALL MINING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is longwall mining?",
+      back: "**ANSWER + EXPLANATION:** An exploitation method for flat‑lying, thin, tabular deposits (mainly coal) where a long face (200‑400 m) is established between headgate and tailgate entries. The face advances (retreat direction) and a system of heavy‑duty powered, yielding supports protects the face while the roof caves behind into the gob."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the *gob* or *goaf* in longwall mining?",
+      back: "**ANSWER + EXPLANATION:** The caved area behind the longwall face where the roof has collapsed. After each cut, the powered supports are advanced and the roof is allowed to cave. The gob is typically left as is and may be sealed for ventilation control."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What equipment is used to cut coal in longwall mining?",
+      back: "**ANSWER + EXPLANATION:** A drum shearer (often double‑drum) travels along the face, cutting coal. An armoured face conveyor (AFC) transports coal from the face to the headgate belt conveyor. Hydraulic shields provide roof support."
+    },
+    // --- 1.2.1 Sequence of Development ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.1: LONGWALL – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** How is a longwall panel developed?",
+      back: "**ANSWER + EXPLANATION:** Main entries are driven across the property, then orthogonal panel entries divide coal into large blocks. Continuous miners develop headgate and tailgate entry systems. Bleeders are driven at the inby extreme of panels for ventilation. The longwall face starts from the inner bleeder entry."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are bleeder entries in longwall mining?",
+      back: "**ANSWER + EXPLANATION:** Additional tunnels driven at the inby end of panels to allow methane and dust to be carried away from the longwall face. They are essential for ventilation and are often sealed after the panel is mined."
+    },
+    // --- 1.2.2 Cycle of Operations ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.2: LONGWALL – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the production cycle in longwall mining?",
+      back: "**ANSWER + EXPLANATION:** Mining (shearer cuts coal) → loading onto armoured face conveyor → haulage to belt conveyor. Hydraulic shields are advanced after each cut, allowing the roof to cave. Auxiliary operations include ground control (shields), gas and dust control, ventilation, power supply, and maintenance."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** How are the hydraulic shields operated?",
+      back: "**ANSWER + EXPLANATION:** Shields are self‑advancing. After the shearer passes, the shield is lowered, moved forward, and re‑engaged against the roof. This creates a temporary canopy of protection while the roof behind caves. They are hydraulically actuated and can be controlled remotely."
+    },
+    // --- 1.2.3 Conditions Amenable ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.3: CONDITIONS AMENABLE TO LONGWALL MINING**\n\n**QUESTION 1:** What are the strength requirements for longwall mining?",
+      back: "**ANSWER + EXPLANATION:** Ore strength: any, but should crush rather than yield under roof pressure; preferably weak and cuttable by shearer. Rock strength (roof): weak to moderate, must break and cave, ideally thin‑bedded. Floor must be firm and nonplastic."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What deposit geometry is suitable for longwall?",
+      back: "**ANSWER + EXPLANATION:** Deposit shape: tabular. Dip: low ($<12°$), preferably flat and uniform. Deposit size: large areal extent ($>260$ ha), thin‑bedded (1‑5 m), uniform thickness. Depth: moderate (150‑900 m for coal) to very deep ($<3.5$ km for noncoal)."
+    },
+    // --- 1.2.4 Characteristics and Applications ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.2.4: LONGWALL – CHARACTERISTICS & APPLICATIONS**\n\n**QUESTION 1:** What are the advantages of longwall mining?",
+      back: "**ANSWER + EXPLANATION:** Highest productivity for underground coal (4.4 tonnes/employee‑hr); low mining cost (relative cost ~15%); high production rate; outstanding continuity; low labour intensity; good safety. Applications include coal, and shortwall mining is a variation."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are typical disadvantages of longwall mining?",
+      back: "**ANSWER + EXPLANATION:** High capital cost; surface subsidence; methane explosion risk; complex ventilation; requires massive panel sizes; inflexible once started."
+    },
+    // =========================================================
+    // SECTION 1.3: SUBLEVEL CAVING – BASIC DESCRIPTION
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3: SUBLEVEL CAVING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is sublevel caving?",
+      back: "**ANSWER + EXPLANATION:** A caving method for near‑vertical metal or nonmetal deposits. Mining progresses downward while ore between sublevels is broken overhand. Overlaying waste rock (hangingwall or capping) caves into the void as ore is drawn off. Only waste caves; ore is drilled and blasted using fanhole rounds (fahlholes)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** How are sublevels arranged in sublevel caving?",
+      back: "**ANSWER + EXPLANATION:** Development drifts and crosscuts are staggered so that those on adjacent sublevels are not directly above one another. Fahlholes from one sublevel penetrate vertically to the second sublevel above. All main and secondary development is located in the footwall."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** What are fahlholes (fanhole rounds)?",
+      back: "**ANSWER + EXPLANATION:** Fan‑shaped drillholes drilled from sublevel drifts into the ore. They are blasted to break ore, which then falls by gravity. The pattern is designed to break ore while allowing overlying waste to cave in behind."
+    },
+    // --- 1.3.1 Sequence of Development ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.1: SUBLEVEL CAVING – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** How much development is required in sublevel caving?",
+      back: "**ANSWER + EXPLANATION:** Extensive – 15‑20% of production occurs during development. Major development is horizontal (haulage level, sublevel drifts, crosscuts), plus inclined (ramps) and near‑vertical (ore passes). Crosscuts are parallel to vein for narrow deposits or transverse for thick deposits."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the role of slot raises in sublevel caving?",
+      back: "**ANSWER + EXPLANATION:** Slot raises are driven to the cave boundary at the end of crosscuts, then slashed to form slots. The first blast breaks into the slot; subsequent rounds pull against the broken ore. Multiple blasts in adjacent crosscuts or entire sublevel may be detonated to meet production."
+    },
+    // --- 1.3.2 Cycle of Operations ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.2: SUBLEVEL CAVING – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What equipment is used in sublevel caving production?",
+      back: "**ANSWER + EXPLANATION:** Drilling: fandrill jumbos (2‑3 booms, pneumatic/hydraulic), hole size 50‑76 mm, drilling factor 0.2 m/tonne. Blasting: ANFO, electric or detonating fuse; secondary blasting with dynamite slabs. Loading: LHD or FEL. Haulage: LHD or FEL on sublevel, gravity flow through ore pass, then rail or conveyor on haulage level."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the main auxiliary operations in sublevel caving?",
+      back: "**ANSWER + EXPLANATION:** Ground control (light bolting, timber, shotcreting in drifts); ventilation (interconnected crosscuts, control devices, vent tubing); health and safety; maintenance; power supply; drainage; materials supply."
+    },
+    // --- 1.3.3 Conditions Amenable ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.3: CONDITIONS AMENABLE TO SUBLEVEL CAVING**\n\n**QUESTION 1:** What are the strength and geometry requirements for sublevel caving?",
+      back: "**ANSWER + EXPLANATION:** Ore strength: moderate to fairly strong (must stand without extensive support). Rock strength: weak to fairly strong, fractured or jointed, cavable (prefer moderate to large fragments, no fines). Deposit dip: fairly steep ($>60°$) or vertical (can be flat if thick). Deposit thickness $>6$ m. Depth $<1.2$ km."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What ore grade and uniformity are acceptable?",
+      back: "**ANSWER + EXPLANATION:** Ore grade: moderate. Uniformity: moderate (some dilution acceptable). Deposits can be tabular or massive (elongated vertically) and moderately irregular."
+    },
+    // --- 1.3.4 Characteristics ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.4: SUBLEVEL CAVING – CHARACTERISTICS**\n\n**QUESTION 1:** List the advantages of sublevel caving.",
+      back: "**ANSWER + EXPLANATION:** Fairly high productivity; high production rate; fairly high recovery (80‑90%); suitable for full mechanisation; adaptable, flexible, selective; no pillars; good health and safety; moderate mining cost (relative cost ~15%)."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the disadvantages of sublevel caving.",
+      back: "**ANSWER + EXPLANATION:** Moderate to high dilution (10‑35%); caving and subsidence destroy surface; draw control is critical; high development cost; must provide stope access for mechanised equipment."
+    },
+    // --- 1.3.5 Applications ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.3.5: SUBLEVEL CAVING – APPLICATIONS**\n\n**QUESTION 1:** Where is sublevel caving used worldwide?",
+      back: "**ANSWER + EXPLANATION:** Bituminous coal, anthracite coal, copper, lead, iron ore, nickel. Variations are not numerous, but the method is widely applied."
+    },
+    // =========================================================
+    // SECTION 1.4: BLOCK CAVING – BASIC DESCRIPTION
+    // =========================================================
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4: BLOCK CAVING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is block caving?",
+      back: "**ANSWER + EXPLANATION:** A mining method where masses, panels, or blocks of ore are undercut to induce caving. Broken ore is drawn off below. Both ore and rock normally cave. It proceeds in columnar fashion to the surface, causing massive subsidence but achieving exceptionally high production rates. Has potential to rival surface mining in output and cost."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What is the role of undercutting in block caving?",
+      back: "**ANSWER + EXPLANATION:** The area and volume of ore removed at the bottom of the block must be large enough to induce caving. Steady drawing of caved ore provides space for more broken ore and causes caving to continue upward until all ore in the block is caved."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 3:** How is cavability determined?",
+      back: "**ANSWER + EXPLANATION:** By analysing drill cores using RQD (Rock Quality Designation) – the percentage of intact core >102 mm. Good caving action generally requires the ore body to have fractures in three orientations. Cavability is essential for safety and economics."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 4:** What is the gravity‑flow ellipse/ellipsoid in block caving?",
+      back: "**ANSWER + EXPLANATION:** The shape of the zone from which ore flows to a drawpoint. It is modified by waste inflow as the caving funnel progresses upward. Drawpoint spacing must be designed so that ellipses are contiguous (or slightly overlapping) to ensure complete ore recovery and avoid dilution."
+    },
+    // --- 1.4.1 Variations ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.1: BLOCK CAVING – VARIATIONS**\n\n**QUESTION 1:** What are the three variations of block caving?",
+      back: "**ANSWER + EXPLANATION:** 1) **Block caving:** regular rectangular areas undercut in checkerboard pattern; mined in alternating order. 2) **Panel caving:** continuous strips across ore body; panels are caved simultaneously and retreated. 3) **Mass caving:** no division; irregularly sized prisms mined as large as consistent with caving properties."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What are the three materials handling methods in block caving?",
+      back: "**ANSWER + EXPLANATION:** 1) **Gravity draw:** uses finger and transfer raises to transport broken ore to chutes; requires fine, free‑flowing ore. 2) **Slusher method:** uses scrapers and slusher drifts; suitable for moderate fragmentation. 3) **Loader method:** uses LHDs or FELs at drawpoints; accommodates very coarse ore."
+    },
+    // --- 1.4.2 Sequence of Development ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.2: BLOCK CAVING – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** Describe the development sequence for block caving.",
+      back: "**ANSWER + EXPLANATION:** Mine level development from shaft station with high‑speed, high‑capacity haulage and ample ventilation. Main haulageways paralleled by laterals and crosscuts. Sublevels for grizzly or slusher operation. Chutes, drawpoints, or trenches are prepared under the block. Finger raises driven to grizzly sublevels. The most critical step is undercutting the ore zone."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What dangers are associated with block caving development?",
+      back: "**ANSWER + EXPLANATION:** Premature collapse, hang‑up, and air blast. Modern practice uses rock mechanics knowledge to ensure caving proceeds predictably, rather than weakening boundaries."
+    },
+    // --- 1.4.3 Cycle of Operations ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.3: BLOCK CAVING – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the production cycle in block caving?",
+      back: "**ANSWER + EXPLANATION:** A truncated cycle: only loading and haulage (no drilling and blasting for production, except for cave initiation). Broken ore flows by gravity to drawpoints, then is loaded by LHDs or slushers and hauled to the ore pass or crusher. Draw control is critical to maintain grade and recovery."
+    },
+    // --- 1.4.4 Conditions Amenable ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.4: CONDITIONS AMENABLE TO BLOCK CAVING**\n\n**QUESTION 1:** What ore and rock properties are required for block caving?",
+      back: "**ANSWER + EXPLANATION:** Ore strength: weak to moderate or fairly strong, friable, fractured, jointed; must cave freely under own weight, free running, not sticky if wet, not readily oxidised. Rock strength: weak to moderate, similar to ore. Depth: moderate, $>600$ m and $<1,200$ m."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** What deposit shape, dip, size, and grade are suitable?",
+      back: "**ANSWER + EXPLANATION:** Deposit shape: massive or thick tabular, fairly regular. Dip: fairly steep ($>60°$) or vertical (can be flat if thick). Deposit size: very large areal extent, thickness $>30$ m. Ore grade: low (ideal for disseminated ore masses). Uniformity: fairly uniform and homogeneous."
+    },
+    // --- 1.4.5 Characteristics ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.5: BLOCK CAVING – CHARACTERISTICS**\n\n**QUESTION 1:** List the advantages of block caving.",
+      back: "**ANSWER + EXPLANATION:** Relatively high productivity; fairly low mining cost (least of underground methods, relative cost ~10%); highest production rate of underground stoping methods; high recovery (90‑125%); rock breakage entirely by caving (no drilling/blasting cost for production); suitable for gravity draw or fully mechanised handling; good health and safety."
+    },
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**QUESTION 2:** List the disadvantages of block caving.",
+      back: "**ANSWER + EXPLANATION:** Large‑scale caving and subsidence; draw control critical; slow, extensive, costly development; dilution may be high (10‑25%); maintenance of openings costly; rigid and inflexible; hazardous work (hang‑ups, air blast); possible spontaneous combustion if sulphide content $>45\\%$."
+    },
+    // --- 1.4.6 Applications ---
+    {
+      course: "MI213",
+      term: "T2",
+      front: "**SECTION 1.4.6: BLOCK CAVING – APPLICATIONS**\n\n**QUESTION 1:** Where is block caving typically applied?",
+      back: "**ANSWER + EXPLANATION:** Large, disseminated mineral deposits that are too deep for open pit mining. If an underground method must be applied to such deposits, block caving is the logical first choice (e.g., copper, molybdenum, diamond kimberlites)."
+    }
+  ],
+
+
+
+// ============================================================
+// MAIN CONTINUOUS DECK – MI213 TERM 2 – MODULE 9 UNSUPPORTED METHODS
+// ============================================================
+    
+    
+    
+    
+  "MODULE 9 UNSUPPORTED METHODS": [
+    // =========================================================
+    // SECTION 1.1: ROOM‑AND‑PILLAR MINING – BASIC DESCRIPTION AND LAYOUT
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.1: ROOM‑AND‑PILLAR MINING – BASIC DESCRIPTION AND LAYOUT**\n\n**QUESTION 1:** What are *rooms* in room‑and‑pillar mining?", back: "**ANSWER + EXPLANATION:** Rooms are the open spaces (tunnels) where mining takes place. They are the voids left after ore is removed. Miners work in rooms, and equipment travels through them. Rooms are typically 3–6 metres wide in coal mining, wider in hard rock." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What are *pillars* in room‑and‑pillar mining?", back: "**ANSWER + EXPLANATION:** Pillars are blocks of unmined ore left in place to support the roof (overlying strata). They are the primary ground support in this unsupported method. Pillars carry the superincumbent load, preventing collapse. Their size and spacing depend on depth and rock strength." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *entries*?", back: "**ANSWER + EXPLANATION:** Entries are parallel tunnels driven into the deposit, usually 3–6 in a set. They provide access for ventilation, transport, and personnel. In coal mining, entries are numbered from left to right when looking inby (toward the face)." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What are *crosscuts*?", back: "**ANSWER + EXPLANATION:** Crosscuts are shorter tunnels driven perpendicular to entries, connecting them at regular intervals (every 15–30 metres). The intersection of entries and crosscuts forms the pillars. Crosscuts also improve ventilation and provide multiple working places." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What does the *checkerboard / grid pattern* refer to?", back: "**ANSWER + EXPLANATION:** The checkerboard pattern is the layout of rooms and pillars when entries and crosscuts are driven on a regular grid. In plan view, the pillars appear as squares or rectangles separated by open rooms, resembling a checkerboard or city block grid." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is meant by *flat‑lying or gently dipping* deposit?", back: "**ANSWER + EXPLANATION:** A deposit is flat‑lying if its dip (angle from horizontal) is less than 15°. Room‑and‑pillar works best in such deposits because gravity does not cause broken ore to roll downhill, and pillar loading is uniform. Steeper dips require modifications." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is *advance mining*?", back: "**ANSWER + EXPLANATION:** Advance mining is driving openings forward into untouched ore. The rooms and crosscuts are cut while pillars are left in place. This is the first phase of mining, establishing access and initial production." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is *retreat mining*?", back: "**ANSWER + EXPLANATION:** Retreat mining is the second phase where miners work backward (retreat) toward the main entries, extracting the pillars (pillaring) and allowing the roof to cave behind. This increases recovery but causes subsidence." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is the *gob* or *goaf*?", back: "**ANSWER + EXPLANATION:** The gob (goaf) is the area where the roof has collapsed after pillar extraction during retreat mining. The caved material fills the void, and the surface may subside. Gob is usually left as is, but may be sealed for ventilation control." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is a *continuous miner*?", back: "**ANSWER + EXPLANATION:** A continuous miner is a large machine with a rotating drum fitted with tungsten‑carbide teeth that cuts and loads ore in one continuous pass. Used in soft to medium‑hard rock (coal, salt, potash). It eliminates drilling and blasting." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is the *conventional cycle* in room‑and‑pillar?", back: "**ANSWER + EXPLANATION:** The conventional cycle is the sequential process: cut (undercut the face), drill (blast holes), blast (explosives), load (muck into shuttle cars), haul (to conveyor). It requires multiple working faces to maintain productivity." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** Why is room‑and‑pillar called an *unsupported method*?", back: "**ANSWER + EXPLANATION:** It is unsupported because the primary ground support comes from natural pillars of ore, not artificial fill or timber. Light roof bolts or mesh may be used locally, but they do not carry the main load. The rock must be competent enough to self‑support." },
+    // =========================================================
+    // SECTION 1.1.1: ROOM‑AND‑PILLAR – SEQUENCE OF DEVELOPMENT
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.1.1: ROOM‑AND‑PILLAR – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What are *main entries*?", back: "**ANSWER + EXPLANATION:** Main entries are the primary tunnels driven from the surface into the deposit, typically 4 to 6 parallel openings. They provide main access, ventilation intake, and belt conveyor installation. They are separated by barrier pillars from adjacent panels." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What are *panel entries*?", back: "**ANSWER + EXPLANATION:** Panel entries branch off from the main entries to access a specific block of ore called a panel. They are also driven in sets (3–5 entries) and are later connected by crosscuts. Panel entries are temporary and may be sealed or caved after mining." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *crosscuts* (in development context)?", back: "**ANSWER + EXPLANATION:** Crosscuts are driven between panel entries at regular intervals (every 15–30 m). They create the grid that forms pillars and allow air to circulate between entries. Crosscuts also provide alternative escape routes." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What are *barrier pillars*?", back: "**ANSWER + EXPLANATION:** Barrier pillars are wide, unmined blocks of ore left between panels or between main entries and panels. They are permanent and serve to isolate ventilation circuits, prevent subsidence from spreading, and protect main roadways from stress." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** Explain *advance mining* vs. *retreat mining* again.", back: "**ANSWER + EXPLANATION:** Advance mining develops the panel by driving entries and crosscuts forward, leaving pillars. Retreat mining reverses direction, extracting pillars as the miner moves back toward the main entries. Advance is development; retreat is production/pillaring." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What are *bleeder entries*?", back: "**ANSWER + EXPLANATION:** Bleeder entries are additional tunnels driven at the far end of a panel (inby end) to carry methane, dust, and contaminated air away from working faces. They are part of the ventilation system and are often sealed after the panel is mined." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What equipment is used in development?", back: "**ANSWER + EXPLANATION:** Continuous miner (cuts and loads), shuttle cars or battery haulers (transport to conveyor), roof bolter (installs bolts immediately behind miner), and belt conveyor (moves ore to main haulage). In hard rock, drilling jumbos and LHDs replace continuous miners." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is *pillar extraction* or *pillaring*?", back: "**ANSWER + EXPLANATION:** Pillar extraction is the process of removing pillars during retreat mining. Miners cut into the pillar in a planned sequence, allowing the roof to collapse behind. This increases recovery from 40‑60% to 70‑90% but causes subsidence." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is *inby* and *outby*?", back: "**ANSWER + EXPLANATION:** Inby means toward the working face, away from the mine entrance. Outby means toward the mine entrance, away from the face. For example, fresh air travels inby from the main shaft; coal travels outby to the surface." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is a *shuttle car*?", back: "**ANSWER + EXPLANATION:** A shuttle car is a battery‑powered or diesel vehicle that receives ore from the continuous miner or loader and hauls it to a belt conveyor or rail system. It has a conveyor floor for quick discharge." },
+    // =========================================================
+    // SECTION 1.1.2: ROOM‑AND‑PILLAR – CYCLE OF OPERATIONS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.1.2: ROOM‑AND‑PILLAR – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What are the five steps of the *conventional mining cycle*?", back: "**ANSWER + EXPLANATION:** Cut → Drill → Blast → Load → Haul. Cut makes a slot for free face; drill bores blast holes; blast breaks rock; load scoops muck; haul transports to conveyor. Steps are sequential and require multiple faces." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is the *cut* step?", back: "**ANSWER + EXPLANATION:** The cut is a narrow slot made by a cutting machine, usually at the bottom of the face (undercut). It provides a free face for the blast, improves fragmentation, and reduces explosive consumption. Undercut is most common in coal." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What is an *undercut*?", back: "**ANSWER + EXPLANATION:** An undercut is a horizontal cut at the bottom of the coal face, typically 1–2 metres deep and 10–15 cm high. It allows the blast to break coal upward, creating a clean floor and reducing dust." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What is a *shear* or *slot*?", back: "**ANSWER + EXPLANATION:** A shear is a vertical or horizontal cut made in the face, sometimes used instead of an undercut. It provides a free face but is less common. The term “slot” generally refers to any narrow opening created for blasting." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is *drilling* in the conventional cycle?", back: "**ANSWER + EXPLANATION:** After cutting, electric or pneumatic drills bore holes into the face in a pattern (e.g., burn cut, V-cut). Hole depth is slightly less than the cut depth (1.5–3 m). Drilling must be accurate to place explosives correctly." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is *blasting* in the conventional cycle?", back: "**ANSWER + EXPLANATION:** Explosives (ANFO or permitted explosives in coal) are loaded into holes, detonators inserted, and fired electrically or with detonating cord. The blast breaks rock from the face. In coal, permissible explosives are required to avoid igniting methane." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is *loading* (mucking) in the conventional cycle?", back: "**ANSWER + EXPLANATION:** A loading machine (e.g., gathering arm loader, continuous miner in load‑only mode) scoops the broken muck into shuttle cars, battery haulers, or onto a conveyor. Loading must be efficient to avoid delaying the cycle." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is *haulage* in the conventional cycle?", back: "**ANSWER + EXPLANATION:** Haulage is the transport of broken ore from the working face to the belt conveyor or rail system. Shuttle cars, battery haulers, or trucks are used. From the belt, ore moves to the surface or processing plant." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is a *cutting machine*?", back: "**ANSWER + EXPLANATION:** A cutting machine is a track‑mounted or rubber‑tired machine with a rotating chain or bar that cuts a slot in the coal face. It is used only in conventional mining, not in continuous mining." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is *continuous mining*?", back: "**ANSWER + EXPLANATION:** Continuous mining is a method using a continuous miner that cuts and loads ore simultaneously in one pass. The cycle is simplified to: mine → haul. It is faster than conventional mining but limited to soft to medium‑hard rock." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is a *continuous miner* machine?", back: "**ANSWER + EXPLANATION:** A continuous miner is a large machine with a rotating drum fitted with tungsten‑carbide cutting teeth. It sumps (advances) into the face, then shears (moves sideways) to cut the full entry width. Broken ore falls onto an internal conveyor." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What is an *integral roof bolter*?", back: "**ANSWER + EXPLANATION:** An integral roof bolter is a roof bolting system mounted directly on the continuous miner. As the miner advances, the bolter drills and installs bolts in the roof immediately behind the cutting drum, allowing very fast advance." },
+    { course: "MI213", term: "T2", front: "**QUESTION 13:** What are *auxiliary operations*?", back: "**ANSWER + EXPLANATION:** Auxiliary operations are support activities that run alongside production: roof control (scaling, bolting), ventilation (line brattice, fan tubing, bleeder), dust control (water sprays, rock dusting, dust collector), methane drainage, pumping, cleanup, power supply, communications." },
+    { course: "MI213", term: "T2", front: "**QUESTION 14:** What is *roof control*?", back: "**ANSWER + EXPLANATION:** Roof control is the practice of installing roof bolts, mesh, or other supports to stabilise the immediate roof and prevent falls. In room‑and‑pillar, it is done immediately after cutting. Bolts are mechanical or resin‑anchored." },
+    { course: "MI213", term: "T2", front: "**QUESTION 15:** What is *scaling*?", back: "**ANSWER + EXPLANATION:** Scaling is the process of removing loose or broken rock from the roof and walls using a scaler bar or mechanical scaler. It prevents falling rock injuries and prepares the surface for bolting." },
+    { course: "MI213", term: "T2", front: "**QUESTION 16:** What is *bolting*?", back: "**ANSWER + EXPLANATION:** Bolting is installing roof bolts into drilled holes. The bolts extend into competent strata and are tensioned to clamp roof layers together. Resin bolts use chemical cartridges; mechanical bolts use expansion shells." },
+    { course: "MI213", term: "T2", front: "**QUESTION 17:** What is *line brattice*?", back: "**ANSWER + EXPLANATION:** A line brattice is a temporary fabric or plastic curtain hung from the roof to direct fresh air from the entry to the face. It is used in coal mines to ventilate the working face and remove methane." },
+    { course: "MI213", term: "T2", front: "**QUESTION 18:** What is *fan tubing*?", back: "**ANSWER + EXPLANATION:** Fan tubing is flexible or rigid ducting connected to an auxiliary fan that delivers fresh air directly to the face. It is used when line brattice is insufficient, especially in dead‑end headings." },
+    { course: "MI213", term: "T2", front: "**QUESTION 19:** What is a *bleeder* (in ventilation)?", back: "**ANSWER + EXPLANATION:** A bleeder is a special entry at the far end of a panel that allows contaminated air (methane, dust) to leave the working area safely. Bleeders are often sealed after the panel is mined." },
+    { course: "MI213", term: "T2", front: "**QUESTION 20:** What is *dust control*?", back: "**ANSWER + EXPLANATION:** Dust control measures include water sprays on cutting heads and transfer points, rock dusting (spraying limestone powder to inert coal dust), and dust collectors (vacuum systems). Dust causes lung disease and explosion risk." },
+    { course: "MI213", term: "T2", front: "**QUESTION 21:** What is *rock dusting*?", back: "**ANSWER + EXPLANATION:** Rock dusting is spraying finely ground limestone powder onto all coal mine surfaces. The limestone mixes with coal dust, making the mixture non‑explosive. Regular rock dusting is required by law in coal mines." },
+    { course: "MI213", term: "T2", front: "**QUESTION 22:** What is a *dust collector*?", back: "**ANSWER + EXPLANATION:** A dust collector is a vacuum‑type device that extracts dust‑laden air from the face, filters it, and discharges clean air. It is mounted on continuous miners or separate units." },
+    { course: "MI213", term: "T2", front: "**QUESTION 23:** What is *methane drainage*?", back: "**ANSWER + EXPLANATION:** Methane drainage is the pre‑mining removal of methane gas from coal seams through boreholes drilled from the surface or underground. It reduces gas levels in the mine, lowering explosion risk and recovering methane as fuel." },
+    { course: "MI213", term: "T2", front: "**QUESTION 24:** What is a *pump station*?", back: "**ANSWER + EXPLANATION:** A pump station is a facility with pumps that removes groundwater or process water from the mine to prevent flooding. Water is collected in sumps and pumped to surface or treatment facilities." },
+    { course: "MI213", term: "T2", front: "**QUESTION 25:** What is *cleanup* in mining?", back: "**ANSWER + EXPLANATION:** Cleanup is the process of removing spilled material, debris, and loose rock from haulage ways, working areas, and conveyor belts. It maintains safe footing and prevents equipment damage." },
+    { course: "MI213", term: "T2", front: "**QUESTION 26:** What is *power supply* in room‑and‑pillar?", back: "**ANSWER + EXPLANATION:** Power supply includes electrical cables, transformers, switchgear, and trailing cables that deliver energy to continuous miners, bolters, shuttle cars, and ventilation fans. High‑voltage cables are carefully managed to avoid damage." },
+    { course: "MI213", term: "T2", front: "**QUESTION 27:** What are *communications* in mining?", back: "**ANSWER + EXPLANATION:** Communications systems (phones, two‑way radios, texting, and tracking systems) allow miners to contact each other and surface personnel. They are critical for emergency response and coordination of production." },
+    // =========================================================
+    // SECTION 1.1.3: ROOM‑AND‑PILLAR – CONDITIONS AMENABLE
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.1.3: ROOM‑AND‑PILLAR – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What *ore strength* is required?", back: "**ANSWER + EXPLANATION:** Ore strength can range from weak to hard. The method works for soft coal and hard limestone. However, very weak ore may crush under pillar load, and very hard ore may slow drilling/cutting." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What *rock strength* (roof and floor) is required?", back: "**ANSWER + EXPLANATION:** Roof and floor must be moderate to strong. The roof must span the room width without collapsing. Weak roof requires smaller rooms and more pillars, reducing productivity." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What *deposit shape* is suitable?", back: "**ANSWER + EXPLANATION:** Tabular (layer‑like) or bedded deposits. Irregular or massive deposits do not suit the regular grid pattern of rooms and pillars." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What *deposit dip* is acceptable?", back: "**ANSWER + EXPLANATION:** Low dip, ideally less than 15°, and preferably flat. Steeper dips cause gravity to move broken ore downhill, complicating loading and haulage, and create uneven pillar loading." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What *deposit size* (areal extent) is required?", back: "**ANSWER + EXPLANATION:** Large areal extent to justify the development of multiple entries and panels. Small, isolated deposits are not economical for room‑and‑pillar." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What *seam thickness* limits apply?", back: "**ANSWER + EXPLANATION:** For coal, thickness is typically less than 4.5 metres. Thicker seams require multiple passes (benching) or a different method. For noncoal, thickness can vary but uniform layers are best." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What *ore grade* is typical?", back: "**ANSWER + EXPLANATION:** Moderate grade. High‑grade ore may justify more expensive methods; very low‑grade may not cover costs. Room‑and‑pillar is cost‑effective for bulk commodities." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What *ore uniformity* is required?", back: "**ANSWER + EXPLANATION:** Fairly uniform, particularly in thickness. Sudden changes in seam thickness or partings (waste layers within ore) complicate mining and reduce recovery." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What *depth limits* apply?", back: "**ANSWER + EXPLANATION:** For coal, practical depth limit is about 450 metres; for noncoal in competent rock, up to 900 metres; for potash, up to 900 metres. Beyond these, pillar failure and roof control become too difficult." },
+    // =========================================================
+    // SECTION 1.1.4: ROOM‑AND‑PILLAR – CHARACTERISTICS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.1.4: ROOM‑AND‑PILLAR – CHARACTERISTICS (ADVANTAGES & DISADVANTAGES)**\n\n**QUESTION 1:** What is the *productivity* of room‑and‑pillar?", back: "**ANSWER + EXPLANATION:** Moderately high, typically 2.6 tonnes per employee‑hour for conventional coal mining, higher for continuous mining. Multiple faces allow continuous work even if one face is idle." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is the *mining cost* relative to other methods?", back: "**ANSWER + EXPLANATION:** Moderate, about 20% on the relative cost scale (where block caving is ~10% and cut‑and‑fill is ~55%). Lower cost than supported methods but higher than caving." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What is the *production rate*?", back: "**ANSWER + EXPLANATION:** Moderately high. With multiple faces and mechanisation, a single panel can produce thousands of tonnes per day. Rates can be increased by adding more faces." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What *recovery* is achievable?", back: "**ANSWER + EXPLANATION:** 40‑60% without pillar extraction (pillars left in place). With pillar extraction (retreat mining), recovery increases to 70‑90%. Pillar recovery is common in coal but less so in hard rock." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What *dilution* occurs?", back: "**ANSWER + EXPLANATION:** Low to moderate, typically 0‑40%. Dilution is low when ore boundaries are clear and mining follows the seam. Higher dilution occurs when waste must be taken to maintain roof or floor." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** Is room‑and‑pillar *suitable for mechanisation*?", back: "**ANSWER + EXPLANATION:** Yes, highly suitable. Continuous miners, shuttle cars, roof bolters, and conveyors are all mechanised. Even conventional mining uses mechanised cutting, drilling, and loading." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** Does it allow *multiple working faces*?", back: "**ANSWER + EXPLANATION:** Yes. The grid layout provides many faces (entries and crosscuts) that can be worked simultaneously. This is essential for conventional mining to achieve acceptable production rates." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** Is it *versatile* for different roof conditions?", back: "**ANSWER + EXPLANATION:** Yes. Pillar sizes and room widths can be adjusted to suit roof strength. Weak roof requires smaller rooms and more pillars; strong roof allows larger rooms." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** How is *ventilation* provided?", back: "**ANSWER + EXPLANATION:** Multiple entries allow separate splits of air to each working face. Bleeder entries remove contaminated air. This is a major advantage over single‑entry methods." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is the main *disadvantage* regarding subsidence?", back: "**ANSWER + EXPLANATION:** If pillars are recovered (retreat mining), caving and subsidence occur, which may damage surface structures, water bodies, or farmland. Subsidence can be controlled by leaving some pillars." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** Why is the layout *inflexible*?", back: "**ANSWER + EXPLANATION:** Once the grid of entries and crosscuts is established, changing pillar sizes or mining direction is difficult and costly. The geometry is fixed for the life of the panel." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What is *recovery without pillar extraction*?", back: "**ANSWER + EXPLANATION:** Poor, only 40‑60% of the ore is extracted, leaving a significant amount in permanent pillars. This is a major economic loss if ore is high‑value." },
+    { course: "MI213", term: "T2", front: "**QUESTION 13:** How does *depth* affect room‑and‑pillar?", back: "**ANSWER + EXPLANATION:** As depth increases, ground stress rises, requiring larger pillars and smaller rooms. This reduces productivity and recovery. Below 450 m (coal) or 900 m (hard rock), the method becomes uneconomic." },
+    { course: "MI213", term: "T2", front: "**QUESTION 14:** What is the *capital investment* requirement?", back: "**ANSWER + EXPLANATION:** Fairly high capital investment due to the need for multiple machines (continuous miners, bolters, shuttle cars, conveyors, ventilation fans). However, lower than longwall or block caving." },
+    { course: "MI213", term: "T2", front: "**QUESTION 15:** What *development* is required?", back: "**ANSWER + EXPLANATION:** Extensive development, especially in coal, where multiple entries, crosscuts, and bleeder systems must be driven before production begins. This delays initial cash flow." },
+    { course: "MI213", term: "T2", front: "**QUESTION 16:** What are *health and safety hazards*?", back: "**ANSWER + EXPLANATION:** Methane explosions, coal dust explosions, roof falls, diesel emissions, noise, and dust lung disease. These are significant, especially in coal mining, requiring rigorous safety protocols." },
+    // =========================================================
+    // SECTION 1.2: STOPE‑AND‑PILLAR MINING – BASIC DESCRIPTION
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.2: STOPE‑AND‑PILLAR MINING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is *stope‑and‑pillar mining*?", back: "**ANSWER + EXPLANATION:** Stope‑and‑pillar is an unsupported hard‑rock mining method similar to room‑and‑pillar but used for metals, limestone, and uranium. Pillars are often irregular and may contain low‑grade ore." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** How does it differ from room‑and‑pillar?", back: "**ANSWER + EXPLANATION:** Differences: irregular pillar pattern (not perfect grid); openings are often higher than they are wide; benching (mining in vertical layers) is common; pillars are usually not recovered; and it is used for hard rock, not coal." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *irregular pillars*?", back: "**ANSWER + EXPLANATION:** Pillars that are not uniform in size or spacing. They are left in areas of low‑grade ore or where ground conditions require extra support. This improves selectivity by allowing high‑grade zones to be fully extracted." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What is *benching* or *benches*?", back: "**ANSWER + EXPLANATION:** Benching is mining a thick deposit in two or more vertical layers (benches). The upper bench is mined first, providing a safe roof for the lower bench. Benches are typically 10–30 m high." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is *slabbing*?", back: "**ANSWER + EXPLANATION:** Slabbing is a form of selective mining where thin layers (slabs) of ore are removed from the face, often used in narrow stopes or to follow irregular ore boundaries." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is the *back* in stope‑and‑pillar?", back: "**ANSWER + EXPLANATION:** The back is the roof or overhead surface of an underground opening. In stope‑and‑pillar, the back is supported by pillars and sometimes by roof bolts. Scaling and bolting maintain back stability." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is *roof control* in this method?", back: "**ANSWER + EXPLANATION:** Roof control involves scaling loose rock, installing roof bolts, and monitoring pillar performance. Because pillars are natural rock, no artificial fill is used, but competent back is essential." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is a *haulage drift*?", back: "**ANSWER + EXPLANATION:** A haulage drift is a horizontal tunnel driven parallel to the ore body, usually in the footwall, used for ore transport and ventilation. It connects to the shaft or ramp." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is a *crosscut* (in stope‑and‑pillar)?", back: "**ANSWER + EXPLANATION:** A crosscut is a horizontal tunnel driven perpendicular to the haulage drift to access the ore body. Crosscuts allow multiple drawpoints and ventilation splits." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is a *ramp*?", back: "**ANSWER + EXPLANATION:** A ramp is an inclined tunnel connecting different levels, allowing rubber‑tyred equipment (LHDs, trucks) to drive between benches. Ramps provide flexibility for accessing multiple ore zones." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is a *slope* (main opening)?", back: "**ANSWER + EXPLANATION:** A slope is an inclined main opening from surface to the deposit, used for haulage and access. It is common in shallow deposits. Conveyors often run in slopes." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What is a *shaft* (vertical access)?", back: "**ANSWER + EXPLANATION:** A vertical shaft is used for deeper deposits. Hoisting equipment raises ore to surface. Shafts require more capital than slopes but are necessary at depth." },
+    { course: "MI213", term: "T2", front: "**QUESTION 13:** What is an *LHD* (load‑haul‑dump)?", back: "**ANSWER + EXPLANATION:** An LHD is a rubber‑tyred machine that scoops ore from the muck pile, hauls it a short distance, and dumps it into an ore pass or truck. It combines loading and haulage in one unit." },
+    { course: "MI213", term: "T2", front: "**QUESTION 14:** What is the *conventional cycle* in stope‑and‑pillar?", back: "**ANSWER + EXPLANATION:** Drill → Blast → Load → Haul. No cutting step (unlike coal). Drilling is done with jumbos; blasting with ANFO; loading with LHDs; haulage with trucks or conveyors." },
+    // =========================================================
+    // SECTION 1.2.1: STOPE‑AND‑PILLAR – SEQUENCE OF DEVELOPMENT
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.2.1: STOPE‑AND‑PILLAR – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What are the *primary access options*?", back: "**ANSWER + EXPLANATION:** Slope (inclined) for shallow deposits, shaft (vertical) for deep deposits. Slope allows conveyor haulage; shaft requires hoisting. Choice affects development time, cost, and ventilation." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is a *haulage drift* (in development)?", back: "**ANSWER + EXPLANATION:** Driven parallel to the ore body on each level, typically in footwall. It provides a main artery for ore transport, ventilation, and utility lines." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *crosscuts* used for?", back: "**ANSWER + EXPLANATION:** Crosscuts connect the haulage drift to the ore body, allowing access to different parts of the stope. They are spaced regularly along the drift." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What are *ramps* (in development)?", back: "**ANSWER + EXPLANATION:** Inclined tunnels connecting levels, allowing LHDs and trucks to move between benches without returning to surface. Ramps provide flexibility for mining multiple horizons simultaneously." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is *benching* (development stage)?", back: "**ANSWER + EXPLANATION:** The deposit is divided into vertical layers. The upper bench is developed first: drifts and crosscuts are driven, pillars are left. After upper bench is mined, the lower bench is developed, sometimes using longholes drilled from above." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is the *upper bench*?", back: "**ANSWER + EXPLANATION:** The top layer of a thick deposit. Mined first to provide a safe, stable roof for lower benches. Miners can inspect and bolt the back while standing on solid floor." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is the *lower bench*?", back: "**ANSWER + EXPLANATION:** The bottom layer, mined after the upper bench is completed. Blastholes may be drilled from the upper bench down into the lower bench, improving efficiency." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** How are *pillars laid out* in stope‑and‑pillar?", back: "**ANSWER + EXPLANATION:** Pillars are often irregular, placed in low‑grade ore or where needed structurally. Unlike room‑and‑pillar, there is no perfect grid. Pillars are generally left permanently." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** Why are pillars *usually not recovered*?", back: "**ANSWER + EXPLANATION:** Pillars are small, irregular, and difficult to extract without causing subsidence or damaging surface infrastructure. Also, they may contain low‑grade ore that is not worth the cost." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What gives stope‑and‑pillar *flexibility*?", back: "**ANSWER + EXPLANATION:** Ramps allow access to multiple levels without extensive new development. Multiple levels can be worked simultaneously. Truck haulage on ramps is more flexible than rail or conveyor." },
+    // =========================================================
+    // SECTION 1.2.2: STOPE‑AND‑PILLAR – CYCLE OF OPERATIONS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.2.2: STOPE‑AND‑PILLAR – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** What is the *drilling* step?", back: "**ANSWER + EXPLANATION:** Drilling is done with jumbos (multi‑boom drill rigs) on rubber tyres or rails. Holes are 2–4 m deep in a pattern. For benching, large‑diameter holes (100–150 mm) are drilled vertically from the upper bench." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is a *jumbo*?", back: "**ANSWER + EXPLANATION:** A jumbo is a mobile drill rig with two or three booms, each with a hydraulic drifter. It can drill multiple holes simultaneously, increasing speed and accuracy." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What is a *drifter*?", back: "**ANSWER + EXPLANATION:** A drifter is a percussion drill mounted on a jumbo boom. It uses a piston to deliver blows to the drill steel, with rotation to index the bit. High efficiency in hard rock." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What are *vertical blastholes* in benching?", back: "**ANSWER + EXPLANATION:** When mining a lower bench, vertical holes are drilled from the upper bench downward. They are larger diameter (up to 150 mm) and deeper, allowing bigger blasts and better economics." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is the *blasting* step?", back: "**ANSWER + EXPLANATION:** Explosives (ANFO, emulsions, or slurries) are loaded into holes, detonators inserted, and fired. Secondary blasting (dynamite, impact hammer) breaks oversize boulders." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is *secondary blasting*?", back: "**ANSWER + EXPLANATION:** Breaking oversize boulders that cannot pass through grizzlies or crushers. Methods include mudcapping (dynamite on surface), blockholing (drilling a small hole), or hydraulic impact hammer." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is the *loading* step?", back: "**ANSWER + EXPLANATION:** After blasting, an LHD (load‑haul‑dump) or front‑end loader scoops the broken ore from the stope floor. LHDs are most common because they can load, haul, and dump in one machine." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is a *slusher* or *scraper*?", back: "**ANSWER + EXPLANATION:** A slusher is a scraper drawn by a winch along a steel rope. It drags ore from the stope floor to a loading point. Used in narrow stopes where LHDs cannot operate, but productivity is low." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is the *haulage* step?", back: "**ANSWER + EXPLANATION:** The LHD hauls ore to a drawpoint, ore pass, or directly into a truck. Trucks (rigid or articulated) transport ore to a crusher station or hopper, then to a conveyor or rail." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What are *auxiliary operations*?", back: "**ANSWER + EXPLANATION:** Scaling (removing loose rock), roof bolting (weak areas), ventilation (brattice, fans, tubing), dust control (water sprays), pumping, power supply, and communications." },
+    // =========================================================
+    // SECTION 1.2.3: STOPE‑AND‑PILLAR – CONDITIONS AMENABLE
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.2.3: STOPE‑AND‑PILLAR – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What *ore strength* is required?", back: "**ANSWER + EXPLANATION:** Moderate to strong. Weak ore may crush under pillar load, causing failure. Very strong ore is acceptable but increases drilling and blasting costs." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What *rock strength* (walls) is required?", back: "**ANSWER + EXPLANATION:** Moderate to strong. The back must be self‑supporting over the stope span. Weak roof requires more pillars, reducing recovery." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What *deposit shape* is suitable?", back: "**ANSWER + EXPLANATION:** Tabular or lens‑shaped. Irregular or massive deposits are less suitable because the regular layout of pillars and openings is difficult to maintain." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What *deposit dip* is acceptable?", back: "**ANSWER + EXPLANATION:** Preferably flat (<15°), but dips up to 30° are mineable with modifications (e.g., slusher haulage, angled benches). Steeper dips cause ore to roll downhill." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What *thickness* can be mined?", back: "**ANSWER + EXPLANATION:** Up to 90 metres using benching. Thicker deposits may require sublevel stoping or caving." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What *depth* limits apply?", back: "**ANSWER + EXPLANATION:** Up to 900 metres in competent rock; up to 1,450 metres in very strong rock. Deeper mines increase ground stress, requiring larger pillars and smaller openings." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What *ore grade* is typical?", back: "**ANSWER + EXPLANATION:** Low to moderate. High‑grade ore may justify more expensive methods; low‑grade ore is acceptable because stope‑and‑pillar is relatively low cost." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What *ore uniformity* is required?", back: "**ANSWER + EXPLANATION:** Variable uniformity is acceptable because lean ore or waste can be left in pillars. This selectivity is a key advantage." },
+    // =========================================================
+    // SECTION 1.2.4: STOPE‑AND‑PILLAR – CHARACTERISTICS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.2.4: STOPE‑AND‑PILLAR – CHARACTERISTICS (ADVANTAGES & DISADVANTAGES)**\n\n**QUESTION 1:** What is the *productivity*?", back: "**ANSWER + EXPLANATION:** Moderate to high: 27–64 tonnes per employee‑shift. Mechanised LHDs and jumbos allow high output." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is the *mining cost*?", back: "**ANSWER + EXPLANATION:** Moderate, relative cost about 10% (low for underground hard‑rock methods). Cheaper than cut‑and‑fill but more expensive than block caving." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** Is the method *flexible*?", back: "**ANSWER + EXPLANATION:** Yes, highly flexible. Ramps allow multiple levels; pillars can be irregular; benching can be adjusted. Easy to modify compared to SLOS or caving." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** Is it *selective*?", back: "**ANSWER + EXPLANATION:** Yes. Low‑grade ore or waste can be left in pillars, and mining can follow high‑grade zones. This improves overall grade of extracted ore." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is the *recovery*?", back: "**ANSWER + EXPLANATION:** Fair to good: 60‑80% without pillaring. Pillars are rarely recovered, so up to 40% of ore may be left in place." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is the *dilution*?", back: "**ANSWER + EXPLANATION:** Low: 10‑20%. Dilution occurs from sloughing of weak walls or when following irregular ore boundaries." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What are the main *disadvantages*?", back: "**ANSWER + EXPLANATION:** Ground control requires continuous maintenance; high backs are difficult to scale; stress increases with depth; high capital for mechanisation; ventilation challenging in large openings; ore lost in pillars; pillar recovery impossible." },
+    // =========================================================
+    // SECTION 1.3: SHRINKAGE STOPING – BASIC DESCRIPTION
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.3: SHRINKAGE STOPING – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is *shrinkage stoping*?", back: "**ANSWER + EXPLANATION:** An overhand (bottom‑up) vertical unsupported method for steeply dipping (>45°) narrow veins. Ore is mined in horizontal slices from bottom to top, and 60‑70% of broken ore remains in the stope as a working platform and wall support." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is *overhand* mining?", back: "**ANSWER + EXPLANATION:** Mining from the bottom upward. In shrinkage stoping, each slice is above the previous one. Miners work on top of the broken ore platform." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *horizontal slices*?", back: "**ANSWER + EXPLANATION:** Layers of ore, typically 1.5–3 m thick, broken by blasting. After each slice, the stope height increases by the slice thickness, but the platform is lowered by drawing some ore." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What does *broken ore as working platform* mean?", back: "**ANSWER + EXPLANATION:** The broken ore left in the stope (60‑70% of total) provides a flat surface for miners to stand on while drilling and blasting the next slice. It must be firm and not pack." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is *swell factor*?", back: "**ANSWER + EXPLANATION:** The increase in volume when rock is broken. Typically 30‑40%. For example, 1 m³ of solid ore becomes 1.3‑1.4 m³ of broken ore. This swell allows drawing off some ore while maintaining platform height." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is *draw off / shrinking*?", back: "**ANSWER + EXPLANATION:** After each blast, 30‑40% of the broken ore is drawn from the bottom of the stope through finger raises or boxholes. This lowers the platform height to provide headroom for the next slice." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** Why does *60‑70% of ore remain* in the stope?", back: "**ANSWER + EXPLANATION:** To maintain a working platform (miners stand on it) and to support the walls. The broken ore exerts confining pressure on the hangingwall and footwall, reducing the need for artificial support." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What does *capital tied up* mean?", back: "**ANSWER + EXPLANATION:** Because most of the ore (60‑70%) stays in the stope until mining is completed, a significant amount of investment is locked in unrecovered inventory. This delays cash flow." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** Why must the *dip be >45°*?", back: "**ANSWER + EXPLANATION:** Gravity is required to draw broken ore from the bottom. If dip is less than the angle of repose (35‑45°), ore will not flow and must be scraped mechanically." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What are *finger raises* and *boxholes*?", back: "**ANSWER + EXPLANATION:** Finger raises are short inclined openings from the haulage level to the stope bottom; boxholes are vertical. They allow ore to flow by gravity to drawpoints. Both are used for drawing." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What are *drawpoints*?", back: "**ANSWER + EXPLANATION:** Points where broken ore is collected from the stope. Usually a chute or gate at the bottom of a finger raise. Miners open the gate to let ore flow into LHDs or rail cars." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What is a *sill level* or *undercut*?", back: "**ANSWER + EXPLANATION:** The horizontal opening at the bottom of the stope that connects the finger raises. The first blast breaks ore into this undercut, and subsequent slices rest on the broken pile." },
+    { course: "MI213", term: "T2", front: "**QUESTION 13:** What is an *airleg drill*?", back: "**ANSWER + EXPLANATION:** A pneumatic drill mounted on a telescopic leg (airleg). Miners hold the drill and the leg presses against the floor. Common in narrow shrinkage stopes where jumbos cannot fit." },
+    // =========================================================
+    // SECTION 1.3.1: SHRINKAGE STOPING – SEQUENCE OF DEVELOPMENT
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.3.1: SHRINKAGE STOPING – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What are *levels* and their spacing?", back: "**ANSWER + EXPLANATION:** Levels are horizontal tunnels at different elevations, spaced 60–180 m apart. The stope is developed between two levels. Lower level is haulage; upper level is for ventilation and may have manways." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is a *haulage drift* (in shrinkage)?", back: "**ANSWER + EXPLANATION:** A drift driven parallel to the vein, usually in the footwall, at the bottom level. It contains drawpoints and serves as the main ore transport route." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *sublevels*?", back: "**ANSWER + EXPLANATION:** Intermediate levels between main levels, spaced 30–60 m apart. Used when the stope height is large (e.g., >120 m) to provide additional drilling positions and ventilation." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What are *ore passes*?", back: "**ANSWER + EXPLANATION:** Vertical or inclined openings through which ore flows by gravity from the stope drawpoints to the main haulage level. They are typically lined with steel or concrete." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What are *finger raises* (development)?", back: "**ANSWER + EXPLANATION:** Raises driven from the haulage level up to the stope bottom, usually at an angle. Several fingers are driven under the stope to distribute draw." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is an *undercut* (sill level)?", back: "**ANSWER + EXPLANATION:** The initial void at the bottom of the stope, created by driving a horizontal opening (sill drift) and often enlarging it. The first blast breaks into this undercut." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is a *manway raise*?", back: "**ANSWER + EXPLANATION:** A vertical or inclined raise equipped with ladders or ladderway, used for personnel access to the stope. It is kept separate from ore passes for safety." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is a *slot raise*?", back: "**ANSWER + EXPLANATION:** A raise driven at one end of the stope to provide a free face for the first blast. It is usually rectangular and the full height of the stope." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is a *grizzly*?", back: "**ANSWER + EXPLANATION:** A set of steel bars or rails spaced at a fixed distance (e.g., 30 cm) placed over an ore pass. It prevents oversized boulders from entering the pass, where they could cause hang‑ups." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is a *chute*?", back: "**ANSWER + EXPLANATION:** A gate or valve at the bottom of an ore pass or finger raise that controls the flow of ore. Miners open the chute to draw ore into LHDs or rail cars." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is a *scraper/slusher drift*?", back: "**ANSWER + EXPLANATION:** A small drift from which a slusher (scraper) is operated to pull ore from the stope floor to a drawpoint when gravity flow is insufficient." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What are *ventilation raises*?", back: "**ANSWER + EXPLANATION:** Raises at the ends of the stope that connect to the upper level, allowing fresh air to circulate through the stope and remove fumes after blasting." },
+    // =========================================================
+    // SECTION 1.3.2: SHRINKAGE STOPING – CYCLE OF OPERATIONS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.3.2: SHRINKAGE STOPING – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** How is *drilling* done in shrinkage stoping?", back: "**ANSWER + EXPLANATION:** Miners stand on the broken ore platform and drill upward using airleg drills (narrow stopes) or hydraulic jumbos (wider stopes). Holes are 1.5–2.5 m deep, drilled in a pattern. Platform must be stable." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is an *airleg drill* also called?", back: "**ANSWER + EXPLANATION:** Jackleg or stopper. It uses compressed air to rotate and percuss the bit, with a telescopic leg to push against the floor. It is handheld and labour‑intensive." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What is a *hydraulic jumbo* (in shrinkage)?", back: "**ANSWER + EXPLANATION:** A rubber‑tyred drill rig with articulated booms, used in stopes wide enough (>2.4 m) to manoeuvre. Hydraulic power gives higher penetration rates than pneumatic." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** How is *blasting* done?", back: "**ANSWER + EXPLANATION:** Holes are loaded with ANFO (or permitted explosives in gassy mines), detonators inserted, and fired. Fumes (NOx, CO) must be cleared by ventilation before re‑entry." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is *drawing* (shrinking)?", back: "**ANSWER + EXPLANATION:** After blasting, before miners re‑enter, 30‑40% of the broken ore is drawn from the bottom through chutes. This lowers the platform to give 2–2.5 m headroom for the next drilling cycle." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is *secondary breakage*?", back: "**ANSWER + EXPLANATION:** Breaking oversize boulders that cannot pass through drawpoints or grizzlies. Methods: dynamite slabs (bomb blasting), blockholing (drill and blast), or hydraulic impact hammer." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is *bomb blasting*?", back: "**ANSWER + EXPLANATION:** Placing a slab of dynamite on top of a boulder and detonating it. Also called mudcapping or plaster shooting. Quick but inefficient and hazardous." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is *scaling*?", back: "**ANSWER + EXPLANATION:** Removing loose rock from the back and walls using a scaling bar or mechanical scaler. Essential before drilling to prevent falls." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is *roof bolting* in shrinkage stoping?", back: "**ANSWER + EXPLANATION:** Installing bolts in the back where rock is weak. Bolts are resin or mechanical. Mesh may be added to contain small fragments." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** How is *loading and haulage* done?", back: "**ANSWER + EXPLANATION:** Ore drawn from the bottom is collected by LHDs or slushers and loaded into trucks or rail cars. Haulage may be by truck on ramps or rail on main levels." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is a *slusher*?", back: "**ANSWER + EXPLANATION:** A scraper drawn by a winch rope. It drags ore along the floor to a loading point. Low productivity but useful in narrow or steep areas." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What are *auxiliary operations*?", back: "**ANSWER + EXPLANATION:** Ventilation (fume clearance, dust control), pumping, power supply, maintenance, and ground control." },
+    // =========================================================
+    // SECTION 1.3.3: SHRINKAGE STOPING – CONDITIONS AMENABLE
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.3.3: SHRINKAGE STOPING – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What *ore strength* is required?", back: "**ANSWER + EXPLANATION:** Strong. Weak ore will crush under the weight of overlying broken material, causing packing (consolidation) and possible stope collapse." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What *wall strength* (hangingwall/footwall) is required?", back: "**ANSWER + EXPLANATION:** Fairly strong to strong. Weak walls slough off, diluting ore and potentially causing ground failure. Broken ore supports the walls, but cannot compensate for very weak rock." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What *deposit shape* is suitable?", back: "**ANSWER + EXPLANATION:** Tabular or lenticular with regular dip and boundaries. Irregular deposits make slice height control difficult and cause unpredictable ore flow." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What *dip* is required?", back: "**ANSWER + EXPLANATION:** >45°, preferably 60‑90° (near vertical). Gravity is essential for drawing ore. Below 45°, ore may not flow and must be scraped, reducing efficiency." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What *width* is suitable?", back: "**ANSWER + EXPLANATION:** 1–30 metres. Very narrow (<1 m) is difficult to work in; very wide (>30 m) increases wall sloughing risk and requires extensive support." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What *depth* limits apply?", back: "**ANSWER + EXPLANATION:** Typically <750 metres. At greater depths, high ground stress causes wall sloughing, squeezing, and potential rockbursts. Deeper stopes also require more frequent scaling and bolting." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What *ore grade* is required?", back: "**ANSWER + EXPLANATION:** Fairly high. The capital tied up in the broken ore inventory (60‑70% of value) requires high grade to be economic. Low‑grade ore would not justify the delay in cash flow." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What *ore uniformity* is required?", back: "**ANSWER + EXPLANATION:** Uniform. Blending is not easily performed in shrinkage stoping, so grade variations cause inconsistent mill feed." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** Why must ore *not pack*?", back: "**ANSWER + EXPLANATION:** Packing is consolidation of broken ore under pressure, preventing flow to drawpoints. Once packed, the stope may be lost. Fine, moist, or soft ore packs easily." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** Why must ore *not oxidise* or spontaneously combust?", back: "**ANSWER + EXPLANATION:** Oxidation of sulphides generates heat. In a large broken ore mass, heat can build up, leading to spontaneous combustion, fire, or explosion. Sulphide ores are particularly risky." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is *angle of repose*?", back: "**ANSWER + EXPLANATION:** The steepest angle at which a pile of loose material remains stable. For crushed ore, typically 35‑45°. The stope dip must be greater than the angle of repose for gravity flow." },
+    // =========================================================
+    // SECTION 1.3.4: SHRINKAGE STOPING – CHARACTERISTICS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.3.4: SHRINKAGE STOPING – CHARACTERISTICS (ADVANTAGES & DISADVANTAGES)**\n\n**QUESTION 1:** What are the *advantages* of shrinkage stoping?", back: "**ANSWER + EXPLANATION:** Small to moderate scale, simple concept, low capital investment, little equipment, minimal ground support in stope, moderate development, works well in narrow veins (<2.4 m), recovery 75‑85%, dilution 10‑20%." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** Why is *gravity draw* an advantage?", back: "**ANSWER + EXPLANATION:** No mechanical loading equipment is needed in the stope. Ore flows by gravity to drawpoints, reducing labour and equipment costs." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** Why is *low capital investment* an advantage?", back: "**ANSWER + EXPLANATION:** No expensive jumbos, LHDs, or backfill systems are required. Airleg drills, simple chutes, and gravity draw keep initial costs low, making it suitable for small mines." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** Why is *minimal ground support* an advantage?", back: "**ANSWER + EXPLANATION:** The broken ore itself supports the walls, so no timber, fill, or extensive bolting is needed inside the stope. Only scaling and occasional bolts are required." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What are the *disadvantages* of shrinkage stoping?", back: "**ANSWER + EXPLANATION:** Low to moderate productivity, moderate to high mining cost (~45% relative), labour intensive, not easy to mechanise, dangerous footing, most of the ore (>60%) tied up in stope, oxidation/packing/spontaneous combustion risk, selectivity only fair." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** Why is *productivity* low?", back: "**ANSWER + EXPLANATION:** The cycle is slow: drilling, blasting, fume clearing, scaling, drawing. Only one slice per day or less. Labour is intensive, and mechanisation is limited." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** Why is *mining cost* high (~45%)?", back: "**ANSWER + EXPLANATION:** Labour‑intensive nature, slow cycle, and the capital cost of tied‑up ore all contribute. Only more expensive methods like cut‑and‑fill are higher." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** Why is *dangerous footing* a disadvantage?", back: "**ANSWER + EXPLANATION:** Miners stand on uneven, shifting broken ore. The platform can settle during drawing, causing falls. Loose rocks on the surface also create tripping hazards." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** Why is *capital tied up* a major economic drawback?", back: "**ANSWER + EXPLANATION:** 60‑70% of the stope’s ore value remains underground until the stope is completed. This delays cash flow and ties up investment that could be used elsewhere." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** Why is *oxidation and spontaneous combustion* a risk?", back: "**ANSWER + EXPLANATION:** Broken sulphide ore has large surface area exposed to air. Exothermic oxidation can raise temperatures above 100°C, potentially igniting timber or the ore itself. Requires careful monitoring." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** Why is *selectivity* only fair?", back: "**ANSWER + EXPLANATION:** The need to maintain a uniform platform height and the risk of wall sloughing limit precision in following ore boundaries. Some dilution is inevitable." },
+    // =========================================================
+    // SECTION 1.4: SUBLEVEL OPEN STOPING (SLOS) – BASIC DESCRIPTION
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.4: SUBLEVEL OPEN STOPING (SLOS) – BASIC DESCRIPTION**\n\n**QUESTION 1:** What is *sublevel open stoping (SLOS)*?", back: "**ANSWER + EXPLANATION:** An unsupported vertical mining method for steeply dipping (>45°), massive or thick ore bodies (6–30 m wide). Miners never enter the stope; all drilling and blasting are done from sublevel drifts. Broken ore falls by gravity to drawpoints." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What does *miners never enter the stope* mean?", back: "**ANSWER + EXPLANATION:** The stope is a large open void. Miners work from sublevel drifts (horizontal tunnels) above, below, or beside the stope. No personnel are inside the stope during or after blasting, improving safety." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *sublevels* in SLOS?", back: "**ANSWER + EXPLANATION:** Horizontal drifts driven at regular vertical intervals (10–30 m) through the ore or footwall. They provide access for drilling longholes into the ore block." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What are *longholes*?", back: "**ANSWER + EXPLANATION:** Drillholes of 50–150 mm diameter and 20–50 m length, drilled from sublevels into the ore. They allow large blasts breaking substantial tonnage per hole." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is the *blasthole method* (traditional)?", back: "**ANSWER + EXPLANATION:** A vertical slot is created at one end of the stope. From sublevels, radial (fan) holes are drilled into the ore. Blasting proceeds in slices, breaking ore into the open stope." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is the *open‑ending method*?", back: "**ANSWER + EXPLANATION:** Parallel holes are drilled from top to bottom of the stope using a sublevel at the top. Vertical slices are blasted, allowing larger diameter holes and more efficient blasting." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is *vertical crater retreat (VCR)*?", back: "**ANSWER + EXPLANATION:** A variation where large parallel holes are drilled from a top sublevel. Near‑spherical explosive charges blast horizontal slices (about 5 m thick) downward into an undercut. Very precise, minimising dilution." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is a *slot raise* (in SLOS)?", back: "**ANSWER + EXPLANATION:** A vertical opening driven at one end of the stope (or in the middle) to provide a free face for the first blast. It is slashed (enlarged) to form a slot 2–5 m wide." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What are *drawpoints* in SLOS?", back: "**ANSWER + EXPLANATION:** Collection points at the bottom of the stope where broken ore flows by gravity. They are connected to finger raises or ore passes that lead to the haulage level." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is *pillar recovery* in SLOS?", back: "**ANSWER + EXPLANATION:** Pillars left between stopes may be mined later using specialised techniques (e.g., pillar wrecking rings) or by using cemented fill to allow adjacent extraction." },
+    // =========================================================
+    // SECTION 1.4.1: SLOS – SEQUENCE OF DEVELOPMENT
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.4.1: SLOS – SEQUENCE OF DEVELOPMENT**\n\n**QUESTION 1:** What is the *haulage drift* in SLOS?", back: "**ANSWER + EXPLANATION:** A drift driven parallel to the ore body, usually in the footwall, at the bottom level. It provides access for ore removal, ventilation, and utilities." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What are *crosscuts* in SLOS development?", back: "**ANSWER + EXPLANATION:** Horizontal tunnels driven from the haulage drift toward the ore body. At the end of each crosscut, drawpoints are developed." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What are *drawpoints* (development)?", back: "**ANSWER + EXPLANATION:** Finger raises or ore passes driven upward from the haulage level into the bottom of the stope. They include chutes or gates to control ore flow." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What is a *grizzly* (in SLOS)?", back: "**ANSWER + EXPLANATION:** Steel bars placed over an ore pass to prevent oversized boulders from entering. Boulders are broken with secondary blasting or removed." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What are *sublevel drifts*?", back: "**ANSWER + EXPLANATION:** Horizontal drifts driven at regular intervals (10–30 m) through the ore or footwall, above the haulage level. From these, longholes are drilled." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What is *sublevel spacing*?", back: "**ANSWER + EXPLANATION:** The vertical distance between sublevels, typically 10–30 m. Closer spacing improves drilling accuracy but increases development cost." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is a *slot raise*?", back: "**ANSWER + EXPLANATION:** A vertical raise driven from the bottom haulage level to the top sublevel, usually at one end of the stope. It is later slashed to form a slot." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What is a *slot* (in SLOS)?", back: "**ANSWER + EXPLANATION:** The enlarged vertical opening created by slashing the slot raise. It provides a free face for the first blast and is typically 2–5 m wide." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What are *inter‑level raises*?", back: "**ANSWER + EXPLANATION:** Raises connecting sublevels for ventilation, manways, and ore passes. They allow air circulation and emergency escape." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What are *ventilation raises*?", back: "**ANSWER + EXPLANATION:** Dedicated raises at the ends of the stope to allow fresh air in and contaminated air out. Essential for clearing blast fumes." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What are *ring drilling drifts*?", back: "**ANSWER + EXPLANATION:** Small drifts driven perpendicular to the ore body on each sublevel, from which longholes are drilled in a fan (ring) pattern." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What is an *undercut* (for VCR)?", back: "**ANSWER + EXPLANATION:** A horizontal opening at the bottom of the stope, similar to shrinkage stoping, that provides a void for the first blast and collection of broken ore." },
+    // =========================================================
+    // SECTION 1.4.2: SLOS – CYCLE OF OPERATIONS
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.4.2: SLOS – CYCLE OF OPERATIONS**\n\n**QUESTION 1:** How is *drilling* done in SLOS?", back: "**ANSWER + EXPLANATION:** Hydraulic drill jumbos on sublevels drill longholes (50–150 mm diameter, 20–50 m length) into the ore. Two patterns: fan (ring) drilling from a central drift, or parallel drilling from top sublevel." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What is *fan drilling* or *ring drilling*?", back: "**ANSWER + EXPLANATION:** Holes radiate outward like a fan from a central drift. Used in narrower stopes. The ring refers to a full 360° pattern when viewed in plan, but typically half‑ring (fan) is used." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What is *parallel drilling*?", back: "**ANSWER + EXPLANATION:** Holes are drilled parallel to each other, often from the top sublevel downward. Used in wider stopes and VCR. Allows larger diameter holes." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What is *precision drilling* and why is it important?", back: "**ANSWER + EXPLANATION:** Hole deviation must be less than 2% (e.g., <1 m over 50 m). Higher deviation causes holes to exit the ore, leading to dilution or ore loss. Computer‑controlled jumbos improve accuracy." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What is a *drill jumbo* (hydraulic)?", back: "**ANSWER + EXPLANATION:** A mobile rig with one or two booms, each with a hydraulic drifter. Computer navigation systems allow precise hole placement." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** How is *blasting* done in SLOS?", back: "**ANSWER + EXPLANATION:** Explosives (ANFO, slurries, emulsions) are loaded into longholes, often using bulk explosive trucks that pump the explosive. Detonators (electronic or nonelectric) with precise delay timing are used." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What is a *slot blast*?", back: "**ANSWER + EXPLANATION:** The first blast in the slot raise, creating a free face. Usually a small blast." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What are *production blasts*?", back: "**ANSWER + EXPLANATION:** Subsequent blasts that break large volumes of ore into the open stope. May be vertical slices (blasthole method) or horizontal slices (VCR)." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** What is *loading (mucking)* in SLOS?", back: "**ANSWER + EXPLANATION:** Broken ore falls by gravity to drawpoints. LHDs (sometimes remote‑controlled) scoop ore from drawpoints and haul to ore passes or trucks." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** What is *remote control* LHD?", back: "**ANSWER + EXPLANATION:** LHD operated from a safe distance using radio or cable remote. Used in unstable ground or when loading from drawpoints under broken ore." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** What is *secondary blasting* in SLOS?", back: "**ANSWER + EXPLANATION:** Breaking oversize boulders that block drawpoints or grizzlies, using dynamite slabs or hydraulic impact hammers." },
+    { course: "MI213", term: "T2", front: "**QUESTION 12:** What is *haulage* in SLOS?", back: "**ANSWER + EXPLANATION:** Ore from loading points is transported by truck, conveyor, or rail to the shaft or ramp for hoisting to surface." },
+    { course: "MI213", term: "T2", front: "**QUESTION 13:** What are *auxiliary operations* in SLOS?", back: "**ANSWER + EXPLANATION:** Ventilation (fume clearance, dust control), ground control (scaling, bolting in sublevel drifts only), dust control (water sprays), pumping, power supply." },
+    // =========================================================
+    // SECTION 1.4.3: SLOS – CONDITIONS AMENABLE
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.4.3: SLOS – CONDITIONS AMENABLE**\n\n**QUESTION 1:** What *ore strength* is required?", back: "**ANSWER + EXPLANATION:** Moderate to strong. Weak ore may cave prematurely or cause dilution. However, SLOS can handle ore slightly less competent than shrinkage stoping because the stope is not occupied." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** What *wall strength* is required?", back: "**ANSWER + EXPLANATION:** Fairly strong to strong. Weak walls slough into the stope, causing severe dilution and potentially creating unstable slabs that hang up. For very weak walls, SLOS is not recommended." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** What *deposit shape* is suitable?", back: "**ANSWER + EXPLANATION:** Tabular, lenticular, or massive with regular boundaries. Irregular or branching ore bodies make longhole drilling difficult and increase dilution." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** What *dip* is required?", back: "**ANSWER + EXPLANATION:** >45°, preferably 60‑90°. Gravity flow essential. Flat dip requires mechanical slushers, reducing productivity." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** What *thickness* is suitable?", back: "**ANSWER + EXPLANATION:** 6–30 metres. For thicker deposits, pillars may be left or the stope divided into multiple panels. For narrower (<6 m), drilling becomes difficult and dilution increases." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What *depth* is possible?", back: "**ANSWER + EXPLANATION:** Up to 2.4 kilometres (e.g., Mt Isa Mine). At extreme depth, high stress may cause spalling or rockbursts, but the open stope is not occupied, so risk is lower. Sublevel drifts must be well supported." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** What *ore grade* is typical?", back: "**ANSWER + EXPLANATION:** Moderate grade. High‑grade ore may justify more selective methods; low‑grade ore may be uneconomic due to high development costs." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** What *ore uniformity* is required?", back: "**ANSWER + EXPLANATION:** Fairly uniform. Varying ore types complicate blasting and dilution control." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** Why must ore *not be sticky*?", back: "**ANSWER + EXPLANATION:** Sticky ore (e.g., with clay) will hang up in drawpoints, blocking flow. Requires mechanical agitation or secondary blasting." },
+    // =========================================================
+    // SECTION 1.4.4: SLOS – CHARACTERISTICS (ADVANTAGES & DISADVANTAGES)
+    // =========================================================
+    { course: "MI213", term: "T2", front: "**SECTION 1.4.4: SLOS – CHARACTERISTICS (ADVANTAGES & DISADVANTAGES)**\n\n**QUESTION 1:** What are the *advantages* of SLOS?", back: "**ANSWER + EXPLANATION:** Moderate to high productivity, moderate cost (~20% relative), mechanised, not labour‑intensive, low breakage cost, low handling cost (gravity draw), safe (miners not in stope), easy ventilation, simultaneous operations, recovery ~75%, dilution ~20%." },
+    { course: "MI213", term: "T2", front: "**QUESTION 2:** Why is *productivity* high?", back: "**ANSWER + EXPLANATION:** Several sublevels can be drilled simultaneously, large blasts break high tonnage, and loading/haulage is continuous. Simultaneous operations (drill, blast, load) increase output." },
+    { course: "MI213", term: "T2", front: "**QUESTION 3:** Why is *mining cost* moderate (~20%)?", back: "**ANSWER + EXPLANATION:** Lower than labour‑intensive methods (shrinkage, cut‑and‑fill) but higher than block caving. High development cost is offset by low operating cost." },
+    { course: "MI213", term: "T2", front: "**QUESTION 4:** Why is *safety* good?", back: "**ANSWER + EXPLANATION:** Miners never enter the open stope. They work from sublevel drifts that are supported. No exposure to falling rock or unstable back in the stope itself." },
+    { course: "MI213", term: "T2", front: "**QUESTION 5:** Why is *ventilation* easy?", back: "**ANSWER + EXPLANATION:** The large open stope acts as an airway. Separate sublevel drifts allow controlled airflow. Fumes can be cleared quickly by drawing air through the stope." },
+    { course: "MI213", term: "T2", front: "**QUESTION 6:** What are the *disadvantages* of SLOS?", back: "**ANSWER + EXPLANATION:** Complicated and expensive development, inflexible mining plan, precision longhole drilling required (<2% deviation), vibration and air blast, structural damage to nearby openings, requires regular ore boundaries." },
+    { course: "MI213", term: "T2", front: "**QUESTION 7:** Why is *development* expensive?", back: "**ANSWER + EXPLANATION:** Multiple sublevels, drawpoints, slot raises, and inter‑level raises must be completed before any ore is produced. Upfront capital and time are high." },
+    { course: "MI213", term: "T2", front: "**QUESTION 8:** Why is the method *inflexible*?", back: "**ANSWER + EXPLANATION:** Once sublevels are developed and longholes drilled, changing stope dimensions or mining direction is very difficult and costly. Planning must be precise." },
+    { course: "MI213", term: "T2", front: "**QUESTION 9:** Why is *precision drilling* critical?", back: "**ANSWER + EXPLANATION:** Hole deviation >2% leads to holes exiting the ore body. This causes either ore left in place (loss) or waste included (dilution). Computerised jumbos are often used." },
+    { course: "MI213", term: "T2", front: "**QUESTION 10:** Why does *vibration and air blast* occur?", back: "**ANSWER + EXPLANATION:** Large blastholes (100–150 mm) loaded with hundreds of kg of explosives produce strong ground vibrations and air overpressure. This can damage nearby drifts, affect surface structures, and cause noise complaints." },
+    { course: "MI213", term: "T2", front: "**QUESTION 11:** Why does it require *regular ore boundaries*?", back: "**ANSWER + EXPLANATION:** If the ore‑waste contact is irregular or undulating, longholes will inevitably break waste, increasing dilution. The method is best for massive or tabular deposits with sharp contacts." }
+  ],
 };
