@@ -2,23 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz App - Courses & Terms | Kaeri EdTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kaeri EdTech | CBU Revision Quizzes, Flashcards &amp; Study Kits</title>
+  <meta name="description" content="Kaeri EdTech: study smarter with MCQ, short-answer and flashcard revision for Copperbelt University (CBU) courses in Zambia. Try free, unlock full access by mobile money.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="application-name" content="Kaeri EdTech">
+  <link rel="canonical" href="https://kaerikalmar.github.io/KaeriEdTech/">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Open Graph / WhatsApp / Facebook previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kaeri EdTech">
+  <meta property="og:title" content="Kaeri EdTech | Study Smarter. Grow Confident.">
+  <meta property="og:description" content="Kaeri EdTech: study smarter with MCQ, short-answer and flashcard revision for Copperbelt University (CBU) courses in Zambia. Try free, unlock full access by mobile money.">
+  <meta property="og:url" content="https://kaerikalmar.github.io/KaeriEdTech/">
+  <meta property="og:image" content="https://kaerikalmar.github.io/KaeriEdTech/assets/logo.png">
+  <meta property="og:image:alt" content="Kaeri EdTech logo">
+  <meta property="og:locale" content="en_ZM">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kaeri EdTech | Study Smarter. Grow Confident.">
+  <meta name="twitter:description" content="Kaeri EdTech: study smarter with MCQ, short-answer and flashcard revision for Copperbelt University (CBU) courses in Zambia. Try free, unlock full access by mobile money.">
+  <meta name="twitter:image" content="https://kaerikalmar.github.io/KaeriEdTech/assets/logo.png">
+
+  <!-- Structured data: tells search engines "Kaeri EdTech" is one organisation with this website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://kaerikalmar.github.io/KaeriEdTech/#organization",
+        "name": "Kaeri EdTech",
+        "alternateName": ["Kaeri", "Kaeri EdTech Zambia"],
+        "url": "https://kaerikalmar.github.io/KaeriEdTech/",
+        "logo": "https://kaerikalmar.github.io/KaeriEdTech/assets/logo.png",
+        "slogan": "Study Smarter. Grow Confident.",
+        "description": "Revision quizzes, flashcards and study kits for Copperbelt University (CBU) students in Zambia.",
+        "areaServed": { "@type": "Country", "name": "Zambia" },
+        "email": "kaeriedtech@gmail.com",
+        "sameAs": ["https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://kaerikalmar.github.io/KaeriEdTech/#website",
+        "url": "https://kaerikalmar.github.io/KaeriEdTech/",
+        "name": "Kaeri EdTech",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://kaerikalmar.github.io/KaeriEdTech/#organization" }
+      }
+    ]
+  }
+  </script>
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- ==================== UNIVERSAL ENGINE (KaTeX) ==================== -->
-  <!-- CSS (The Skin) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-  <!-- JS (The Brain) -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-  <!-- Auto-Render (The Automator) -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-  <!-- Chemistry (The Chemist) -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/mhchem.min.js"></script>
 
-  <!-- CSS STYLES -->
+  <!-- PDF.js for Custom Document Viewer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+      // Tell PDF.js where its background worker is located
+      if (window.pdfjsLib) pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS STYLES (ORIGINAL - UNCHANGED) -->
   <style>
     /* --- GLOBAL SETTINGS --- */
     body { 
@@ -42,26 +100,23 @@
 
     /* --- UNIVERSAL MATH RESPONSIVENESS (The Safety Scroll) --- */
     .katex-display {
-        max-width: 100%;       /* Force it to stay within parent */
-        overflow-x: auto;      /* Add horizontal scrollbar ONLY if needed */
-        overflow-y: hidden;    /* Hide vertical scrollbars */
-        padding-bottom: 5px;   /* Space for the scrollbar to look nice */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        text-align: center;    /* Keep it centered */
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+        text-align: center;
         margin: 1em 0;
     }
     
-    /* Scrollbar Styling for Math & Cards */
     .katex-display::-webkit-scrollbar, .card-face::-webkit-scrollbar { height: 4px; width: 4px; }
     .katex-display::-webkit-scrollbar-track, .card-face::-webkit-scrollbar-track { background: rgba(13, 27, 42, 0.5); }
     .katex-display::-webkit-scrollbar-thumb, .card-face::-webkit-scrollbar-thumb { background: #3e506e; border-radius: 2px; }
 
-    /* Mobile Adjustment for Math */
     @media (max-width: 480px) {
         .katex { font-size: 0.95em !important; }
         .katex-display { margin: 0.5em 0 !important; }
     }
-    /* Protect English text from breaking layout */
     .question-box, .explanation-box, .flashcard .card-face {
         overflow-wrap: break-word;
         word-wrap: break-word;
@@ -316,6 +371,21 @@
     }
     #tts-toggle-button { background-color: #6610f2; }
     #tts-toggle-button:hover { background-color: #520dc2; }
+    #tts-settings-button { background-color: #4a0fb5; }
+    #tts-settings-button:hover { background-color: #3c0c94; }
+    /* Reader tools in the quiz strip */
+    #qs-tools { display:flex; align-items:center; }
+    #quiz-strip #qs-tools button { width:38px; height:44px; font-size:1.15rem; }
+    #qs-pause { display:none; }
+    body.tts-active #qs-pause { display:inline-block; }
+    html.no-tts #qs-tools, html.no-tts #tts-toggle-button, html.no-tts #tts-settings-button { display:none !important; }
+    #quiz-form:focus { outline:none; }
+    /* Reader settings dialog */
+    #tts-modal label, #tts-modal .tts-row { display:block; text-align:left; color:#a0a8b4; font-size:.9rem; margin:12px 0 6px; }
+    #tts-modal select { width:100%; padding:11px; border-radius:8px; background:#0d1b2a; color:#fff; border:1px solid #2b3a55; font-size:1rem; }
+    #tts-modal input[type=range] { width:100%; }
+    #tts-modal .tts-check { display:flex; align-items:center; gap:10px; margin:14px 0 0; color:#e0e6ed; }
+    #tts-modal .tts-check input { width:20px; height:20px; }
 
     #quiz-form { 
     background-color: #0d1b2a; 
@@ -602,45 +672,37 @@
     }
     .flashcard.back-active { transform: rotateY(180deg); }
 
-    /* === UPDATED CARD FACE LOGIC === */
     .card-face { 
         position: absolute; 
         width: 100%; 
         height: 100%; 
         backface-visibility: hidden; 
-        
         display: flex; 
-        flex-direction: column; /* ALWAYS COLUMN */
-        
+        flex-direction: column;
         padding: 20px; 
         box-sizing: border-box; 
         border-radius: 12px; 
         font-size: 1.3em; 
-        
-        overflow-y: auto;          /* Allow vertical scrolling */
-        overflow-x: hidden;        /* Stop horizontal scattering of the page */
+        overflow-y: auto;
+        overflow-x: hidden;
         word-break: break-word; 
         overflow-wrap: break-word; 
         transition: opacity 0.4s ease-in-out;
-        
-        /* Modern Scrollbar */
         scrollbar-width: thin;
         scrollbar-color: #72efdd #2b3a55;
     }
 
-    /* 1. Short Text: Perfectly Centered */
     .card-face.layout-center {
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-    /* 2. Long/Math Text: Top Aligned */
     .card-face.layout-detailed {
         justify-content: flex-start;
         align-items: flex-start;
         text-align: left;
-        padding-top: 25px; /* Breathable room at top */
+        padding-top: 25px;
     }
 
     .card-front { background-color: #2b3a55; color: #e0e6ed; }
@@ -773,7 +835,12 @@
     #app-notification.warning { background-color: #ffc107; color: #333; }
     #app-notification.error { background-color: #dc3545; }
 
-    /* === COMPACT PAYMENT MODAL === */
+    /* === FIX: Ensure SweetAlert2 popups render above the payment modal backdrop === */
+    .swal2-container {
+        z-index: 100000 !important;
+    }
+
+    /* === COMPACT PAYMENT MODAL (ORIGINAL - UNCHANGED) === */
     .modal { 
         display: none; 
         position: fixed; 
@@ -897,25 +964,7 @@
         box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
     }
 
-    @media (max-width: 768px) {
-        #buy-now-link button {
-            padding: 10px !important;
-            font-size: 0.95em !important;
-        }
-        .modal.show {
-            padding: 10px;
-            align-items: flex-start;
-        }
-        .modal-content {
-            width: 100%;
-            max-height: 95vh;
-        }
-        .pay-body {
-            max-height: calc(95vh - 150px);
-        }
-    }
-
-    /* === PRINT MODAL === */
+    /* === PRINT MODAL (ORIGINAL) === */
     .print-modal { 
         display: none; 
         position: fixed; 
@@ -1134,7 +1183,7 @@
         .pdf-step:nth-child(10n) { page-break-before: always; }
     }
 
-    /* === RESPONSIVE DESIGN === */
+    /* === RESPONSIVE DESIGN (ORIGINAL) === */
     @media (max-width: 992px) { 
         .quiz-container { margin: 40px 20px; padding: 30px 20px; } 
     }
@@ -1173,258 +1222,1083 @@
         .mode-buttons button, .flashcard-topic-buttons button, .flashcard-nav-buttons button { font-size: 1em; padding: 14px 18px; }
         .card-face { font-size: 1em; line-height: 1.4; }
     }
-  </style>
 
+    /* ===== ADDITIVE STYLES FOR NEW SUBSCRIPTION GUIDE (DO NOT OVERRIDE ORIGINAL) ===== */
+    .subscription-guide-addon {
+        margin-top: 20px;
+        border-top: 1px solid #dee2e6;
+        padding-top: 15px;
+    }
+    .subscription-guide-addon details {
+        background: #f0f7ff;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #d0e3ff;
+    }
+    .subscription-guide-addon summary {
+        padding: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #007bff;
+        list-style: none;
+        font-size: 0.9rem;
+    }
+    .subscription-guide-addon summary::-webkit-details-marker { display: none; }
+    .subscription-guide-addon summary::before { content: "📘 "; }
+    .guide-content {
+        padding: 0 15px 15px 15px;
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    .guide-content p { margin: 4px 0; }
+    .guide-confirm-line {
+        border-top: 1px solid #d0e3ff;
+        padding-top: 8px;
+        margin-top: 8px !important;
+        color: #28a745;
+        font-weight: bold;
+    }
+    .extra-price-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+        gap: 8px;
+        margin: 15px 0 10px;
+    }
+    .price-card-addon {
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 12px 5px;
+        text-align: center;
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+    .price-card-addon:hover { transform: translateY(-2px); background: #f8f9fa; }
+    .price-card-addon.featured { border: 2px solid #007bff; }
+    .plan-name { display: block; font-size: 0.75rem; color: #666; font-weight: bold; }
+    .plan-price { display: block; font-size: 1.25rem; font-weight: 800; color: #222; margin: 4px 0; }
+    .plan-desc { display: block; font-size: 0.65rem; color: #999; }
+    .note-text {
+        font-size: 0.7rem;
+        color: #6c757d;
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    /* ============================================================
+   FIX: Flashcard horizontal overflow – make equations scrollable
+   ============================================================ */
+
+/* The card wrapper must not clip overflow */
+.flashcard-wrapper {
+    overflow: visible; /* not hidden */
+}
+
+/* The card face itself must allow horizontal scrolling */
+.card-face {
+    overflow-x: auto;
+    overflow-y: auto; /* keep vertical scroll if needed */
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 25px; /* add extra right padding to avoid cut-off */
+    box-sizing: border-box;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+/* Ensure KaTeX display blocks inside the card also scroll */
+.card-face .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 5px; /* space for scrollbar */
+    margin: 0.5em 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* For very wide inline math, also add scroll */
+.card-face .katex {
+    font-size: 1em; /* consistent */
+}
+
+/* Optional: style the scrollbar to match your theme */
+.card-face::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+.card-face::-webkit-scrollbar-track {
+    background: rgba(13, 27, 42, 0.2);
+    border-radius: 3px;
+}
+.card-face::-webkit-scrollbar-thumb {
+    background: #72efdd;
+    border-radius: 3px;
+}
+
+/* Prevent any parent from hiding overflow */
+.flashcard {
+    overflow: visible;
+}
+
+/* ── NEW PAYMENT UI STYLES (DARK THEME) ── */
+/* Dark Modal Overrides */
+.modal-content {
+  background: #1b263b;
+  color: #e0e6ed;
+  border: 1px solid #3e506e;
+}
+.pay-header {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b) !important;
+  border-bottom: 3px solid #72efdd;
+}
+.pay-header h2 { color: #72efdd; }
+.pay-header p { color: #a0a8b4; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background: #0d1b2a;
+  padding: 4px;
+  border-radius: 10px;
+}
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #e0e6ed;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.tab-btn.active { background-color: #007bff; color: white; }
+
+/* Dark Form Inputs */
+.pay-input {
+  width: 100%;
+  background-color: #0d1b2a;
+  border: 1px solid #3e506e;
+  color: #e0e6ed;
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+.pay-input:focus { outline: none; border-color: #007bff; }
+
+/* Upload Box */
+.upload-box {
+  border: 2px dashed #3e506e;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #0d1b2a;
+  transition: 0.2s;
+}
+.upload-box.has-file { border-color: #28a745; }
+.upload-box:hover { border-color: #72efdd; }
+
+/* Price Box */
+.price-box {
+  background: #0d1b2a;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #72efdd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* History & Badges */
+.history-item {
+  background-color: #0d1b2a;
+  border: 1px solid #3e506e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-success { background: #28a745; color: white; }
+.badge-warning { background: #ffc107; color: #333; }
+.badge-danger { background: #dc3545; color: white; }
+
+/* Code Copy Box */
+.code-with-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1b263b;
+  border: 1px solid #72efdd;
+  border-radius: 6px;
+  padding: 6px 6px 6px 12px;
+  margin-top: 8px;
+}
+.code-with-copy .code-text {
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #72efdd;
+  word-break: break-all;
+}
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: #8892b0;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.copy-btn:hover { background: rgba(114, 239, 221, 0.1); color: #72efdd; }
+.copy-btn.copied { color: #28a745; }
+
+/* Cancel Button */
+.cancel-pay-btn {
+  background: transparent;
+  border: none;
+  color: #8892b0;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.cancel-pay-btn:hover { color: #e0e6ed; }
+
+/* Skeleton loader for init */
+.skeleton {
+  background: linear-gradient(90deg, #2b3a55 25%, #3e506e 50%, #2b3a55 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.hidden { display: none; }
+
+/* Spinner for submit button */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+
+
+    /* =====================================================================
+       REORGANISATION LAYER — appended after the original CSS.
+       Payment-modal rules above are intentionally untouched.
+       ===================================================================== */
+    :root {
+      --brand-mint:#64ffda; --brand-mint-alt:#72efdd; --brand-bg:#0d1b2a; --brand-card:#1b263b;
+      --brand-surface:#2b3a55; --brand-line:#3e506e; --brand-muted:#8892b0; --brand-accent:#007bff;
+      --brand-success:#28a745; --brand-warn:#ffc107; --brand-danger:#dc3545;
+      --body-pad:20px; --strip-h:44px;
+    }
+    @media (max-width:480px){ :root{ --body-pad:12px; } }
+
+    body, body.view-course { padding:0 var(--body-pad) 30px; }
+    body.quiz-running { padding-top:calc(var(--strip-h) + env(safe-area-inset-top,0px) + 12px); }
+
+    .quiz-container { margin:16px auto; padding:26px 22px; }
+    @media (max-width:480px){ .quiz-container{ padding:18px 12px; } }
+    #quiz-form:empty, #result:empty { display:none; }
+
+    /* Sticky headers (no magic-number body padding) */
+    #landing-header {
+      position:sticky; top:0; left:auto; width:auto;
+      margin:0 calc(-1 * var(--body-pad));
+      padding:calc(12px + env(safe-area-inset-top,0px)) var(--body-pad) 12px;
+      z-index:1002;
+    }
+    #landing-header .brand-title { font-size:1.8rem; }
+    #landing-header .brand-bar { width:48px; height:3px; background:var(--brand-accent); margin:8px auto; border-radius:2px; }
+    #landing-header .brand-tag { margin:0; color:#e0e6ed; font-style:italic; font-size:.9rem; opacity:.8; }
+
+    #fixed-header {
+      position:sticky; top:0; left:auto; width:auto;
+      margin:0 calc(-1 * var(--body-pad));
+      padding:calc(8px + env(safe-area-inset-top,0px)) var(--body-pad) 8px;
+    }
+    .hdr-row1, .hdr-row2 { display:flex; align-items:center; gap:10px; }
+    .hdr-row1 { justify-content:space-between; }
+    .hdr-row2 { margin-top:6px; }
+    .hdr-brand { color:var(--brand-mint); opacity:.8; font-weight:700; letter-spacing:1px; font-size:.75rem; text-transform:uppercase; }
+    #mode-banner { margin:0; padding:4px 12px; font-size:.8rem; border-radius:999px; box-shadow:none; }
+    #progress-wrap { display:none; flex:1; min-width:0; }
+    #progress-wrap.on { display:block; }
+    #progress-container { margin-top:0; height:8px; }
+    #progress-text { margin-top:2px; font-size:.75rem; text-align:left; }
+    #price-banner { position:static; margin-left:auto; padding:4px 12px; font-size:.85rem; border-radius:999px; box-shadow:none; }
+    #unlock-btn { width:auto; margin:0; padding:7px 14px; font-size:.78rem; }
+
+    /* Quiz strip */
+    #quiz-strip {
+      display:none; position:fixed; top:0; left:0; right:0; z-index:1003; box-sizing:border-box;
+      height:calc(var(--strip-h) + env(safe-area-inset-top,0px));
+      padding:env(safe-area-inset-top,0px) max(8px, env(safe-area-inset-right)) 0 max(8px, env(safe-area-inset-left));
+      background:var(--brand-card); box-shadow:0 2px 10px rgba(0,0,0,.35);
+      align-items:center; justify-content:space-between; gap:8px;
+    }
+    body.quiz-running #quiz-strip { display:flex; }
+    body.quiz-running #fixed-header { display:none !important; }
+    #quiz-strip button { margin:0; background:transparent; border:none; color:#fff; width:44px; height:44px; padding:0; font-size:1.3rem; box-shadow:none; border-radius:50%; }
+    #qs-count { color:var(--brand-mint-alt); font-weight:700; font-size:.95rem; letter-spacing:.5px; }
+    #qs-bar { position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--brand-line); }
+    #qs-fill { height:100%; width:0; background:var(--brand-success); transition:width .35s ease; }
+
+    /* ===== FOCUS MODE: any mode screen open (setup, quiz, results, docs, progress)
+       -> hide the course shell; show only the current screen + top navigation strip ===== */
+    body.in-mode { padding-top:calc(var(--strip-h) + env(safe-area-inset-top,0px) + 8px); }
+    body.in-mode #quiz-strip { display:flex; }
+    body.in-mode #fixed-header { display:none !important; }
+    body.in-mode #course-title,
+    body.in-mode #course-view > .info-card,
+    body.in-mode #course-view > .mode-buttons,
+    body.in-mode #course-view > .back-button,
+    body.in-mode #course-view > .course-footer,
+    body.in-mode #draggable-wa { display:none !important; }
+    body.in-mode .quiz-container { margin:0 auto; padding:14px 10px 28px; box-shadow:none; }
+
+    /* ===== FOCUS SCREEN: locked horizontally, scrolls vertically only ===== */
+    body.in-mode { overflow-x:hidden; overscroll-behavior-x:none; max-width:100vw; }
+    body.in-mode .quiz-container { width:100%; max-width:100%; box-sizing:border-box; overflow-x:hidden; }
+    body.in-mode #quiz-form, body.in-mode #result {
+      max-width:100%; box-sizing:border-box; overflow-wrap:break-word;
+      scroll-margin-top:calc(var(--strip-h) + env(safe-area-inset-top,0px) + 8px);
+    }
+    body.in-mode #quiz-form img, body.in-mode #quiz-form video, body.in-mode #quiz-form iframe,
+    body.in-mode #quiz-form svg, body.in-mode #result img { max-width:100%; height:auto; }
+    body.in-mode #quiz-form table, body.in-mode #result table { display:block; max-width:100%; overflow-x:auto; }
+    body.in-mode #quiz-form pre, body.in-mode #result pre { max-width:100%; white-space:pre-wrap; overflow-x:auto; }
+    body.in-mode .katex-display { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+    body.in-mode #quiz-form textarea, body.in-mode #quiz-form input[type=text] { width:100%; max-width:100%; box-sizing:border-box; }
+    body.in-mode .options label { max-width:100%; box-sizing:border-box; }
+
+    /* ===== FINAL SCREEN: only the score card ===== */
+    #final-anchor { display:block; height:0; overflow:hidden; }
+    body.final-screen #result { display:none !important; }
+    body.final-screen #quiz-form { text-align:center; padding-top:8px; }
+    body.final-screen #quiz-form h2 { font-size:1.7rem; color:var(--brand-mint-alt); margin:6px 0 12px; }
+
+    /* Welcome */
+    #welcome-view { display:flex; flex-direction:column; justify-content:center; min-height:calc(100vh - 170px); }
+    @supports (height:100dvh) { #welcome-view { min-height:calc(100dvh - 170px); } }
+    @media (orientation:landscape) and (max-height:500px){ #welcome-view{ min-height:0; } }
+    #welcome-view .student-board-wrapper { margin-bottom:24px; }
+    .cta-stack { display:flex; flex-direction:column; align-items:center; gap:12px; margin:10px 0 28px; }
+    .cta-btn {
+      display:flex; align-items:center; justify-content:center; box-sizing:border-box;
+      width:100%; max-width:320px; min-height:52px; padding:14px 20px; border-radius:10px;
+      font-size:1.1rem; font-weight:700; text-decoration:none; text-align:center; cursor:pointer; margin:0;
+    }
+    .cta-item { display:flex; flex-direction:column; align-items:center; gap:6px; width:100%; max-width:320px; }
+    .cta-sub { font-size:.8rem; line-height:1.3; color:var(--brand-muted); text-align:center; }
+    .cta-primary { background:var(--brand-accent); color:#fff; border:none; box-shadow:0 4px 12px rgba(0,123,255,.35); }
+    .cta-outline { background:transparent; color:var(--brand-mint); border:2px solid var(--brand-mint); }
+    .social-row { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; }
+    .social-link {
+      display:inline-flex; align-items:center; gap:6px; min-height:36px; padding:7px 14px;
+      border:1px solid var(--brand-line); border-radius:999px; color:#e0e6ed; text-decoration:none; font-size:.9rem;
+    }
+    .signoff { text-align:center; color:var(--brand-muted); font-size:.8rem; margin:18px 0 0; }
+
+    /* Courses */
+    .page-head { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+    .page-head h1 { margin:0; font-size:1.6rem; text-align:left; }
+    .back-circle { width:44px; height:44px; padding:0; margin:0; border-radius:50%; background:var(--brand-surface); border:1px solid var(--brand-line); color:#fff; font-size:1.2rem; flex:none; }
+    #course-list { display:grid; grid-template-columns:1fr; gap:14px; align-items:start; max-width:1200px; margin:0 auto; }
+    @media (min-width:768px){ #course-list{ grid-template-columns:repeat(2,1fr); } }
+    @media (min-width:1024px){ #course-list{ grid-template-columns:repeat(3,1fr); } }
+    #course-list .course-section { margin:0; }
+    @keyframes termIn { from{opacity:0; transform:translateY(-6px);} to{opacity:1; transform:none;} }
+    .term-buttons[style*="flex"] { animation:termIn .25s ease; }
+    .page-footer { display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:28px; }
+    .page-footer hr, .course-footer hr { width:100%; max-width:320px; border:0; border-top:1px solid var(--brand-line); margin:0; }
+    .icon-fab { width:48px; height:48px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.4rem; text-decoration:none; }
+
+    /* Course view */
+    .coming-soon { text-align:center; padding:36px 20px; margin:10px 0 24px; background:var(--brand-bg); border:1px dashed var(--brand-line); border-radius:12px; }
+    .coming-soon .cs-icon { font-size:2.6rem; margin-bottom:6px; }
+    .coming-soon h2 { margin:0 0 6px; color:var(--brand-mint-alt); }
+    .coming-soon .cs-term { margin:0 0 14px; font-weight:700; color:#fff; letter-spacing:.5px; }
+    .coming-soon p { max-width:460px; margin:0 auto 18px; color:#a0a8b4; }
+    body.term-empty #course-view > .info-card,
+    body.term-empty #course-view > .mode-buttons,
+    body.term-empty #unlock-btn,
+    body.term-empty #price-banner { display:none !important; }
+    .info-card { background:var(--brand-bg); border:1px solid var(--brand-accent); border-radius:10px; padding:12px 14px; margin-bottom:22px; }
+    .info-card .announcement { background:transparent; border:none; padding:0; margin:0 0 6px; font-size:.95em; }
+    .info-card summary { cursor:pointer; min-height:40px; display:flex; align-items:center; font-weight:700; color:var(--brand-mint-alt); }
+    .info-card .price-list { margin:8px 0 0; border:none; background:transparent; padding:0; }
+    .mode-buttons { grid-template-columns:repeat(2,1fr); gap:12px; }
+    @media (min-width:768px){ .mode-buttons{ grid-template-columns:repeat(3,1fr); } }
+    @media (min-width:1024px){ .mode-buttons{ grid-template-columns:repeat(4,1fr); } }
+    @media (max-width:359px){ .mode-buttons{ grid-template-columns:1fr; } }
+    .mode-buttons button { width:100%; min-height:52px; padding:12px 10px !important; font-size:1rem !important; }
+    .course-footer { display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:28px; }
+    .pill-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .pill-link { display:inline-flex; align-items:center; min-height:40px; padding:8px 18px; border-radius:999px; text-decoration:none; font-weight:700; font-size:.9rem; }
+    .pill-amb { border:1px solid var(--brand-success); color:var(--brand-success); }
+    .soft-pitch { text-align:center; margin-top:18px; font-size:.9rem; color:var(--brand-muted); }
+    .soft-pitch a { color:var(--brand-mint-alt); font-weight:700; text-decoration:none; }
+    .empty-progress { text-align:center; padding:30px 10px; }
+    .empty-progress .ep-actions { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+
+    /* ===== SHELL ACTIONS BAR (populated by setShellActions) ===== */
+    .shell-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .shell-actions:empty { display: none; }
+
+    /* Floating WhatsApp (draggable) */
+    #draggable-wa { right:max(16px, env(safe-area-inset-right)); bottom:max(16px, env(safe-area-inset-bottom)); z-index:900; touch-action:none; user-select:none; -webkit-user-select:none; }
+
+    /* Reset + referral modals */
+    .r-modal { display:none; position:fixed; inset:0; z-index:9998; background:rgba(0,0,0,.75); align-items:center; justify-content:center; padding:16px; box-sizing:border-box; }
+    .r-modal.show { display:flex; }
+    .r-card { width:100%; max-width:520px; max-height:calc(100dvh - 40px); overflow:auto; background:var(--brand-card); border:1px solid var(--brand-line); border-radius:14px; padding:22px; box-sizing:border-box; text-align:center; }
+    .r-card.sm { max-width:420px; }
+    .r-card h3 { margin:6px 0 10px; }
+    .r-input { width:100%; box-sizing:border-box; padding:12px; border-radius:8px; border:1px solid var(--brand-line); background:var(--brand-bg); color:#fff; font-size:1rem; }
+    .r-error { color:#ff8a95; font-size:.85rem; min-height:1.2em; margin:6px 0 0; }
+    .r-actions { display:flex; gap:10px; margin-top:14px; }
+    .r-btn { flex:1; min-height:46px; margin:0; border-radius:8px; border:none; font-weight:700; font-size:1rem; color:#fff; }
+    .r-cancel { background:var(--brand-surface); }
+    .r-danger { background:var(--brand-danger); }
+    .r-primary { background:var(--brand-accent); }
+
+    body.modal-open { overflow:hidden !important; }
+    body.modal-open #draggable-wa { opacity:0; pointer-events:none; }
+    #draggable-wa { transition:opacity .2s ease; }
+
+    @media (hover:none){ .course-button:hover, .mode-buttons button:hover, .term-buttons button:hover { transform:none; } }
+    @media (pointer:coarse){ .quiz-container button, .social-link, .pill-link { min-height:44px; } }
+    @media (prefers-reduced-motion:reduce){ *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
+    /* ===== BRAND (same construct as the Ambassador Portal) ===== */
+    :root { --brand-logo: url('data:image/jpeg;base64,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'); }
+    .brand-icon { display:block; flex:none; width:56px; height:56px; border-radius:12px; background-image:var(--brand-logo); background-size:contain; background-repeat:no-repeat; background-position:center; }
+    .brand-icon.xs { width:22px; height:22px; border-radius:5px; }
+    .brand-icon.md { width:72px; height:72px; border-radius:14px; }
+    .wordmark { font-weight:900; letter-spacing:1.2px; text-transform:uppercase; color:var(--brand-mint); line-height:1.1; text-shadow:0 0 15px rgba(100,255,218,.25); }
+    .wordmark span { color:#fff; }
+    .lockup { display:flex; align-items:center; justify-content:center; gap:12px; text-align:left; }
+    .lockup .wordmark { font-size:1.5rem; }
+    .lockup .brand-tag { margin:3px 0 0; color:var(--brand-muted); font-size:.8rem; font-style:italic; opacity:1; }
+    #landing-header { padding-top:calc(8px + env(safe-area-inset-top,0px)); padding-bottom:8px; }
+    .hdr-brand { display:inline-flex; align-items:center; gap:7px; color:inherit; opacity:1; font-size:.8rem; letter-spacing:1.2px; }
+    .hdr-brand .wordmark { font-size:.8rem; text-shadow:none; }
+    @media (max-width:359px){ .lockup .wordmark { font-size:1.2rem; } .lockup .brand-tag { font-size:.72rem; } }
+  
+    /* SEO: real <h1> + intro text for search engines and screen readers, not shown visually */
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  </style>
 </head>
 <body>
+  <h1 class="sr-only">Kaeri EdTech: revision quizzes and flashcards for CBU students</h1>
+  <p class="sr-only">Kaeri EdTech helps Copperbelt University (CBU) students in Zambia revise with MCQ practice, short-answer questions and flashcards. Courses: BI110 Biology, CS110 Computer Science, LA111 Communication Skills, MA110 Mathematics, PH110 Physics and CH110 Chemistry. Try it free, then unlock full access with mobile money.</p>
+  <noscript><p style="padding:16px;color:#fff;">Kaeri EdTech needs JavaScript to run quizzes. Please enable JavaScript in your browser.</p></noscript>
+
 
   <!-- ==================== NOTIFICATIONS ==================== -->
-
   <div id="app-notification" role="alert">
     <span class="notification-message"></span>
     <button class="close-btn" aria-label="Close notification">×</button>
   </div>
 
-  <!-- ==================== LANDING PAGE HEADER (FIXED) ==================== -->
-
+  <!-- ==================== LANDING HEADER (STICKY) ==================== -->
   <div id="landing-header">
-    <div style="text-align: center;">
-      <span class="brand-title" style="color: #64ffda; font-weight: 900; font-size: 2.2rem; letter-spacing: 1.5px; text-transform: uppercase; text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);">
-        Kaeri EdTech
-      </span>
-      <div style="width: 60px; height: 3px; background: #007bff; margin: 8px auto 8px auto; border-radius: 2px;"></div>
-      <p style="margin: 0; color: #e0e6ed; font-style: italic; font-size: 1rem; opacity: 0.8;">Study Smarter. Grow Confident. One Step at a Time.</p>
+    <div class="lockup">
+      <div class="brand-icon" role="img" aria-label="Kaeri EdTech"></div>
+      <div>
+        <div class="wordmark">Kaeri <span>EdTech</span></div>
+        <p class="brand-tag">Study Smarter. Grow Confident.</p>
+      </div>
     </div>
   </div>
 
-  <!-- ==================== COURSE PAGE HEADER (HIDDEN INITIALLY) ==================== -->
-
+  <!-- ==================== COURSE HEADER (STICKY, 2 ROWS) ==================== -->
   <div id="fixed-header">
-    <div style="position: absolute; top: 5px; left: 20px; font-size: 0.7rem; color: #64ffda; opacity: 0.7; font-weight: bold; letter-spacing: 1px;">
-        Kaeri EdTech
+    <div class="hdr-row1">
+      <span class="hdr-brand"><span class="brand-icon xs" role="img" aria-label="Kaeri EdTech"></span><span class="wordmark">Kaeri <span>EdTech</span></span></span>
+      <div id="mode-banner"></div>
     </div>
-    <div class="header-grid">
-      <div>
-        <div id="mode-banner"></div>
-        <div id="progress-container">
-          <div id="progress-fill"></div>
-        </div>
+    <div class="hdr-row2">
+      <div id="progress-wrap">
+        <div id="progress-container"><div id="progress-fill"></div></div>
         <div id="progress-text">Progress: 0 of 0</div>
       </div>
-      <!-- GOLD UNLOCK BUTTON -->
+      <div id="price-banner">Price: —</div>
       <button id="unlock-btn" onclick="openPaymentModal()">🔓 Unlock Full Access</button>
     </div>
   </div>
 
-  <div id="price-banner">Price: K15</div>
+  <!-- ==================== QUIZ STRIP (QUIZ RUNNING ONLY) ==================== -->
+  <div id="quiz-strip">
+    <button type="button" onclick="exitQuiz()" aria-label="Exit quiz">←</button>
+    <span id="qs-count">Q 0 / 0</span>
+    <span id="qs-tools">
+      <button type="button" id="qs-replay" onclick="replayReading()" aria-label="Read this again">🔁</button>
+      <button type="button" id="qs-pause" onclick="toggleReadPause()" aria-label="Pause or resume reading">⏸</button>
+      <button type="button" id="qs-tts" onclick="toggleTTS()" aria-label="Turn reader on or off">🔇</button>
+      <button type="button" id="qs-settings" onclick="openTtsSettings()" aria-label="Reader settings">⚙️</button>
+    </span>
+    <div id="qs-bar"><div id="qs-fill"></div></div>
+  </div>
 
   <!-- ==================== MAIN CONTAINER ==================== -->
-
   <div class="quiz-container">
 
-    <!-- :::: VIEW 1: LANDING PAGE :::: -->
     <div id="landing-view">
-      
-      <!-- Spacing for Fixed Header handled by body padding -->
-      <h1 style="margin-top: 20px;">Select a Course & Term</h1>
 
-      <!-- === START STUDENT BOARD === -->
-      <div id="student-board" class="student-board-wrapper" style="display: none;">
-        <!-- Announcements Section -->
-        <div id="board-announcements" class="board-section"></div>
-        <!-- Motivation Section -->
-        <div id="board-motivation" class="board-section"></div>
-      </div>
-      <!-- === END STUDENT BOARD === -->
-
-      <!-- COMMUNITY HUB (Channel + Group) -->
-      <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 35px; flex-wrap: wrap;">
-        <!-- CHANNEL (News) -->
-        <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
-          <button style="background: transparent; border: 1px solid #25D366; color: #25D366; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
-            📢 <strong>Follow Channel</strong>
-          </button>
-        </a>
-        <!-- GROUP (Chat) -->
-        <a href="https://chat.whatsapp.com/CnIBDd3l9eJ732pZDIiyw4?mode=hqrc" target="_blank" style="text-decoration: none; flex: 1; max-width: 200px;">
-          <button style="background: #25D366; border: none; color: white; width: 100%; padding: 10px; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 5px;">
-            👥 <strong>Join Group</strong>
-          </button>
-        </a>
-      </div>
-
-      <!-- Course: GM220 -->
-      <div class="course-section">
-        <button class="course-button" onclick="toggleTerms('gm220')">GM220 - Introduction to Geology</button>
-        <div id="gm220-terms" class="term-buttons">
-          <button onclick="loadCourse('GM220', 'T1', 15)">Term 1</button>
-          <button onclick="loadCourse('GM220', 'T2', 15)">Term 2</button>
-          <button onclick="loadCourse('GM220', 'T3', 20)">Term 3</button>
+      <!-- PAGE 1: WELCOME -->
+      <section id="welcome-view" data-display="flex">
+        <div id="student-board" class="student-board-wrapper" style="display: none;">
+          <div id="board-announcements" class="board-section"></div>
+          <div id="board-motivation" class="board-section"></div>
         </div>
-      </div>
 
-      <!-- Course: MI213 -->
-      <div class="course-section">
-        <button class="course-button" onclick="toggleTerms('mi213')">MI213 - Introduction to Mining</button>
-        <div id="mi213-terms" class="term-buttons">
-          <button onclick="loadCourse('MI213', 'T1', 15)">Term 1</button>
-          <button onclick="loadCourse('MI213', 'T2', 15)">Term 2</button>
-          <button onclick="loadCourse('MI213', 'T3', 20)">Term 3</button>
+        <div class="cta-stack">
+          <div class="cta-item">
+            <button type="button" class="cta-btn cta-primary" onclick="showSMNS()">🧬 SMNS Year 1</button>
+            <span class="cta-sub">School of Mathematics &amp; Natural Sciences</span>
+          </div>
+          <div class="cta-item">
+            <button type="button" class="cta-btn cta-primary" onclick="showGeologyYears()">⛰️ Geology (Years 1–5)</button>
+            <span class="cta-sub">School of Mines &amp; Mineral Sciences</span>
+          </div>
+          <a data-amb-link class="cta-btn cta-outline" href="AMB-PORTAL.html" target="_blank" rel="noopener">🚀 Ambassador Program</a>
         </div>
-      </div>
 
-      <!-- Course: MA210 -->
-      <div class="course-section">
-        <button class="course-button" onclick="toggleTerms('ma210')">MA210 - Engineering Mathematics II</button>
-        <div id="ma210-terms" class="term-buttons">
-          <button onclick="loadCourse('MA210', 'T1', 15)">Term 1</button>
-          <button onclick="loadCourse('MA210', 'T2', 15)">Term 2</button>
-          <button onclick="loadCourse('MA210', 'T3', 20)">Term 3</button>
+        <div class="social-row">
+          <a class="social-link" href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" rel="noopener">📢 Channel</a>
+          <a class="social-link" id="welcome-group-link" href="https://chat.whatsapp.com/GB4UZVkxgwUGa5R4nqfDMR?mode=hqrc" target="_blank" rel="noopener">👥 Group</a>
+          <a class="social-link" href="https://chat.whatsapp.com/GMQdC5pCZJtL7L17QMhdNl?s=sh&p=a&mlu=4" target="_blank" rel="noopener">🎓 Freshers</a>
         </div>
-      </div>
+        <p class="signoff">Kaeri EdTech · Study Smarter. Grow Confident.</p>
+      </section>
 
-      <!-- Course: MT221 -->
-      <div class="course-section">
-        <button class="course-button" onclick="toggleTerms('mt221')">MT221 - Introduction to Metallurgy</button>
-        <div id="mt221-terms" class="term-buttons">
-          <button onclick="loadCourse('MT221', 'T1', 15)">Term 1</button>
-          <button onclick="loadCourse('MT221', 'T2', 15)">Term 2</button>
-          <button onclick="loadCourse('MT221', 'T3', 20)">Term 3</button>
+      <!-- PAGE 2a: GEOLOGY YEAR SELECTION -->
+      <section id="years-view" style="display: none;">
+        <div class="page-head">
+          <button type="button" class="back-circle" onclick="backToPrograms()" aria-label="Back">←</button>
+          <h1>Select Geology Year</h1>
         </div>
-      </div>
-
-      <!-- Course: CH210 -->
-      <div class="course-section">
-        <button class="course-button" onclick="toggleTerms('ch210')">CH210 - Chemistry II</button>
-        <div id="ch210-terms" class="term-buttons">
-          <button onclick="loadCourse('CH210', 'T1', 15)">Term 1</button>
-          <button onclick="loadCourse('CH210', 'T2', 15)">Term 2</button>
-          <button onclick="loadCourse('CH210', 'T3', 20)">Term 3</button>
+        <div class="cta-stack">
+          <button type="button" class="cta-btn cta-primary" onclick="renderCourses('GEO_Y1','Geology Year 1')">Year 1</button>
+          <button type="button" class="cta-btn cta-primary" onclick="renderCourses('GEO_Y2','Geology Year 2')">Year 2</button>
+          <button type="button" class="cta-btn cta-primary" onclick="renderCourses('GEO_Y3','Geology Year 3')">Year 3</button>
+          <button type="button" class="cta-btn cta-primary" onclick="renderCourses('GEO_Y4','Geology Year 4')">Year 4</button>
+          <button type="button" class="cta-btn cta-primary" onclick="renderCourses('GEO_Y5','Geology Year 5')">Year 5</button>
         </div>
-      </div>
+      </section>
 
-      <!-- Course: PH210 -->
-      <div class="course-section">
-        <button class="course-button" onclick="toggleTerms('ph210')">PH210 - Physics II</button>
-        <div id="ph210-terms" class="term-buttons">
-          <button onclick="loadCourse('PH210', 'T1', 15)">Term 1</button>
-          <button onclick="loadCourse('PH210', 'T2', 15)">Term 2</button>
-          <button onclick="loadCourse('PH210', 'T3', 20)">Term 3</button>
+      <!-- PAGE 2b: COURSES (list is built from COURSE_DATA) -->
+      <section id="courses-view" style="display: none;">
+        <div class="page-head">
+          <button type="button" class="back-circle" onclick="goBackFromCourses()" aria-label="Back">←</button>
+          <h1 id="course-list-title">Select a Course</h1>
         </div>
-      </div>
+        <div id="dynamic-community-links" class="social-row" style="margin-bottom:20px;"></div>
+        <div id="course-list">
+        </div>
+        <div class="page-footer">
+          <hr>
+          <a class="icon-fab" href="https://wa.me/260964312504" target="_blank" rel="noopener" aria-label="WhatsApp support">💬</a>
+        </div>
+      </section>
+    </div>
 
-    </div> <!-- closing landing-view -->
-
-    <!-- :::: VIEW 2: COURSE PAGE :::: -->
+    <!-- PAGE 3: COURSE VIEW -->
     <div id="course-view" style="display: none;">
       <h1 id="course-title">Study Materials</h1>
-      
-      <p class="announcement">
-        <strong>Important:</strong> The full course is available. Your support keeps the app free & online.
-        <small style="opacity:0.7; font-size:0.8em; display:block; margin-top:5px;">
-          💡 Tip: Press 'U' to unlock full access
-        </small>
-      </p>
-      
-      <p class="price-list">
-        💰 <span id="price-desc">Course</span>: <strong><span id="price-val">K15</span></strong><br>
-        To MTN 0961005406 or Airtel 0974784161<br>
-        Or to Zanaco Account: 4584568100159 (Kaluluma Kaumbu)<br>
-        📞 WhatsApp proof to <a href="https://wa.me/260964312504" target="_blank">0964312504</a>
-      </p>
+
+      <div class="info-card">
+        <p class="announcement">
+          <strong>Full course available.</strong> Press 'U' to unlock · Your support keeps the app free &amp; online.
+        </p>
+        <details id="pricing-details">
+          <summary>💰 Pricing &amp; Payment Info</summary>
+          <p class="price-list">
+  💰 <strong><span id="price-desc">Select a course</span>:</strong> 
+  <span id="price-val" style="font-size:1.1em;">—</span>
+
+  <br><br>
+
+  📱 <strong>Mobile Money:</strong><br>
+  MTN: 0961005406<br>
+  Airtel: 0974784161<br>
+<I>Name:Kaluluma Kaumbu</I>
+  <br><br>
+
+  🏦 <strong>Bank Payment:</strong><br>
+  Zanaco Account: 4584568100159<br>
+  
+<I>Name:Kaluluma Kaumbu</I>
+  <br><br>
+
+  🚀 <strong style="color:#007bff;">
+    Tap the “Unlock Full Access” button at the top
+  </strong>
+
+  <br>
+
+  <em style="opacity:0.8;">
+    Then open the Subscription Guide and follow all the steps carefully.
+  </em>
+</p>
+        </details>
+      </div>
 
       <div class="mode-buttons">
         <button onclick="renderQuiz()">📋 Multiple Choice</button>
         <button onclick="renderShortAnswers()">✍️ Short Answer</button>
         <button onclick="renderEssaySimulation()">📝 Essay Simulation</button>
         <button onclick="renderFlashcardTopics()">🃏 Flashcards</button>
-        <!-- TTS and Docs Buttons will be appended here by JS -->
+      </div>
+
+      <!-- Shown by script.js only when the term has no data of any kind -->
+      <div id="coming-soon" class="coming-soon" style="display:none;" role="status">
+        <div class="cs-icon" aria-hidden="true">🛠️</div>
+        <h2>Content Coming Soon</h2>
+        <p class="cs-term" id="coming-soon-label"></p>
+        <p>Our team is preparing practice questions, flashcards and study materials for this term. They will appear here automatically as soon as they are published.</p>
+        <a id="coming-soon-channel" class="pill-link" href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" rel="noopener" style="border:1px solid #25D366; color:#25D366;">📢 Follow the channel for updates</a>
       </div>
 
       <div id="quiz-form"></div>
       <div id="result"></div>
 
+      <!-- Shell action bar — populated by setShellActions() when a mode is open.
+           Renders empty (and hidden via .shell-actions:empty) when no actions exist. -->
+      <div class="shell-actions" role="group" aria-label="Mode actions"></div>
+
       <button onclick="backToMenu()" class="back-button">⬅️ Back to Course Selection</button>
-      
-      <!-- FOOTER LINKS -->
-      <div class="whatsapp-buttons" style="margin-top:30px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
-        <p style="margin: 0; color: #8892b0; font-size: 0.9em;">Stay connected with us:</p>
-        <div style="display: flex; gap: 15px; width: 100%; justify-content: center; flex-wrap: wrap;">
-            <a href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" style="text-decoration:none;">
-            <button style="background: transparent; border: 1px solid #25D366; color: #25D366; padding: 10px 20px; font-size: 0.95em;">
-                📢 Official Channel
-            </button>
-            </a>
-            <a href="https://chat.whatsapp.com/CnIBDd3l9eJ732pZDIiyw4?mode=hqrc" target="_blank" style="text-decoration:none;">
-            <button style="background: #25D366; color: white; padding: 10px 20px; font-size: 0.95em;">
-                👥 Discussion Group
-            </button>
-            </a>
+
+      <div class="course-footer">
+        <p style="margin:0; color:var(--brand-muted); font-size:.9em;">Stay connected with us:</p>
+        <div class="pill-row">
+          <a class="pill-link" href="https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i" target="_blank" rel="noopener" style="border:1px solid #25D366; color:#25D366;">📢 Official Channel</a>
+          <a class="pill-link" id="footer-group-link" href="https://chat.whatsapp.com/GB4UZVkxgwUGa5R4nqfDMR?mode=hqrc" target="_blank" rel="noopener" style="background:#25D366; color:#fff;">👥 Discussion Group</a>
         </div>
+        <hr>
+        <a data-amb-link class="pill-link pill-amb" href="AMB-PORTAL.html" target="_blank" rel="noopener">🚀 Become an Ambassador →</a>
+        <p class="signoff" style="margin:0;">Kaeri EdTech · Study Smarter. Grow Confident.</p>
       </div>
     </div>
   </div>
 
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/260964312504" target="_blank" class="landing-whatsapp-button">💬</a>
+  <!-- FLOATING WHATSAPP (draggable, position saved) -->
+  <a id="draggable-wa" href="https://wa.me/260964312504" target="_blank" rel="noopener" class="landing-whatsapp-button" aria-label="WhatsApp support">💬</a>
 
-  <!-- COMPACT PAYMENT MODAL -->
-  <div id="payment-modal" class="modal">
-    <div class="modal-content">
-      <button class="close-modal" onclick="closePaymentModal()">&times;</button>
-      <div class="pay-header">
-        <h2>🔓 Unlock Access</h2>
-        <p id="pay-term-name">Course</p>
+<!-- ==================== PAYMENT MODAL (TABBED + INTERNAL FORM) ==================== -->
+<div id="payment-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closePaymentModal()">&times;</button>
+    <div class="pay-header">
+      <h2>🔓 Unlock Access</h2>
+      <p id="pay-term-name">Loading...</p>
+      <span id="pay-amount" style="display:block; margin-top:6px; font-size:1.1rem; color:#72efdd;">—</span>
+      <span id="pay-duration" style="display:block; margin-top:4px; font-size:0.85rem; color:#a0a8b4;"></span>
+    </div>
+    <div class="pay-body">
+    
+    <!-- ═══ LIPILA METHOD SELECTOR ═══ -->
+<div id="payMethodSelector" class="hidden">
+  <h3 style="color:#72efdd; text-align:center; margin-bottom:20px;">How do you want to pay?</h3>
+
+  <div class="lipila-method-card" onclick="selectPaymentMethod('lipila')"
+       style="background:#1e2a3a; border:2px solid #72efdd; border-radius:12px; padding:20px; margin-bottom:14px; cursor:pointer; transition:0.2s;">
+    <div style="font-size:1.2em; color:#fff; font-weight:700; margin-bottom:8px;">💳 Pay Now with Mobile Money</div>
+    <div style="font-size:0.9em; color:#a0a8b4; margin-bottom:14px;">Instant · Automatic · Recommended</div>
+    <div style="text-align:right;"><button class="btn btn-inline" style="width:auto; padding:8px 20px;">Continue →</button></div>
+  </div>
+
+  <div class="lipila-method-card" onclick="selectPaymentMethod('manual')"
+       style="background:#1e2a3a; border:2px solid #3e506e; border-radius:12px; padding:20px; margin-bottom:14px; cursor:pointer; transition:0.2s;">
+    <div style="font-size:1.2em; color:#fff; font-weight:700; margin-bottom:8px;">📱 I've already paid</div>
+    <div style="font-size:0.9em; color:#a0a8b4; margin-bottom:14px;">Upload your payment screenshot</div>
+    <div style="text-align:right;"><button class="btn btn-inline btn-secondary" style="width:auto; padding:8px 20px;">Upload proof →</button></div>
+  </div>
+</div>
+
+<!-- ═══ LIPILA FORM ═══ -->
+<div id="lipilaFormView" class="hidden">
+  <button class="cancel-pay-btn" onclick="backToMethodSelector()" style="text-align:left; margin-bottom:12px;">← Back</button>
+  <h3 style="color:#72efdd; margin-bottom:8px;">💳 Pay with Mobile Money</h3>
+  <p style="color:#a0a8b4; font-size:0.9em; margin-bottom:20px;">You'll get a prompt on your phone to confirm with your PIN.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <div class="form-group">
+      <label for="lipilaCourseSelect" style="color:#a0a8b4; font-size:0.85rem;">Course</label>
+      <select id="lipilaCourseSelect" class="pay-input" onchange="lipilaCourseChanged()" aria-label="Course">
+        <option value="" disabled selected>Loading...</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="lipilaTermSelect" style="color:#a0a8b4; font-size:0.85rem;">Term</label>
+      <select id="lipilaTermSelect" class="pay-input" onchange="lipilaTermChanged()" disabled aria-label="Term">
+        <option value="" disabled selected>Select Course First</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group"><label style="color:#a0a8b4; font-size:0.85rem;">Full Name</label>
+    <input type="text" id="lipilaFullName" class="pay-input" placeholder="e.g. Chanda Bwalya" autocomplete="name">
+  </div>
+  <div class="form-group"><label style="color:#a0a8b4; font-size:0.85rem;">Email Address</label>
+    <input type="email" id="lipilaEmail" class="pay-input" placeholder="you@email.com" autocomplete="email">
+    <small style="color:#8892b0; font-size:0.78rem;">Your access code is sent here.</small>
+  </div>
+  <div class="form-group"><label style="color:#a0a8b4; font-size:0.85rem;">Mobile Money Number</label>
+    <input type="tel" id="lipilaPhone" class="pay-input" placeholder="097XXXXXXX" autocomplete="tel">
+    <small style="color:#8892b0; font-size:0.78rem;">MTN · Airtel · Zamtel</small>
+  </div>
+
+  <div class="price-box" style="display:block;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <span style="color:#a0a8b4;">Amount due:</span>
+      <span id="lipilaAmount" style="font-weight:700; color:#72efdd; font-size:1.2rem;">K—</span>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
+      <span style="color:#a0a8b4; font-size:0.9em;">Access duration:</span>
+      <span id="lipilaDuration" style="color:#72efdd; font-size:0.9em;">—</span>
+    </div>
+    <div id="lipilaDevicesRow" style="display:none; justify-content:space-between; align-items:center; margin-top:6px;">
+      <span style="color:#a0a8b4; font-size:0.9em;">Devices allowed:</span>
+      <span id="lipilaDevices" style="color:#72efdd; font-size:0.9em;">—</span>
+    </div>
+  </div>
+  <div id="lipilaPriceNote" role="status" aria-live="polite" style="display:none; color:#ffc107; font-size:0.82rem; margin:-4px 0 12px;"></div>
+
+  <button type="button" class="btn pay-btn" id="lipilaPayBtn" disabled onclick="initiateLipila()" style="background:#007bff;">
+    Select course &amp; term
+  </button>
+  <p style="color:#8892b0; text-align:center; font-size:0.78rem; margin-top:10px;">🔒 Secure payment powered by Lipila</p>
+</div>
+
+<!-- ═══ PIN WAITING ═══ -->
+<div id="lipilaPinWaiting" class="hidden" style="text-align:center;">
+  <div style="font-size:3rem; margin-bottom:12px;">📱</div>
+  <h3 style="color:#fff; margin-bottom:8px;">Check your phone</h3>
+  <p style="color:#a0a8b4; margin-bottom:20px;">We sent a payment request to <strong id="lipilaPhoneMasked" style="color:#72efdd;">—</strong></p>
+  <p style="color:#fff; margin-bottom:20px;">Confirm <strong id="lipilaAmountConfirm">K—</strong> with your PIN in your mobile money app.</p>
+  <div style="background:#0d1b2a; border-radius:8px; padding:16px; margin-bottom:16px;">
+    <div style="color:#72efdd; font-weight:700; margin-bottom:8px;">⏳ Waiting for confirmation…</div>
+    <div id="lipilaCountdown" style="color:#a0a8b4; font-size:0.9em;">Expires in —</div>
+    <div id="lipilaTransientIndicator" class="hidden" style="color:#ffc107; font-size:0.82em; margin-top:8px;">⚠️ Network slow — still checking…</div>
+  </div>
+  <button class="cancel-pay-btn" onclick="closePaymentModal()">Cancel payment</button>
+</div>
+
+<!-- ═══ SUCCESS ═══ -->
+<div id="lipilaSuccess" class="hidden" style="text-align:center;">
+  <div style="font-size:3rem; margin-bottom:12px;">✅</div>
+  <h3 style="color:#fff; margin-bottom:8px;">Payment received!</h3>
+  <p style="color:#a0a8b4; margin-bottom:20px;" id="lipilaSuccessScope">—</p>
+  <p style="color:#a0a8b4; margin-bottom:8px;">Your access code:</p>
+  <div class="code-with-copy" style="margin-bottom:16px;">
+    <span class="code-text" id="lipilaSuccessCode">—</span>
+    <button class="copy-btn" onclick="copyLipilaCode(this)">Copy</button>
+  </div>
+  <p style="color:#8892b0; font-size:0.85rem; margin-bottom:20px;">📧 Also sent to <span id="lipilaSuccessEmail">—</span></p>
+  <button class="btn" onclick="useLipilaCodeNow()" style="background:#28a745; margin-bottom:10px;">Use this code now →</button>
+  <button class="cancel-pay-btn" onclick="closePaymentModal()">Done</button>
+</div>
+
+<!-- ═══ FAILED ═══ -->
+<div id="lipilaFailed" class="hidden" style="text-align:center;">
+  <div style="font-size:3rem; margin-bottom:12px;">❌</div>
+  <h3 style="color:#fff; margin-bottom:8px;">Payment not completed</h3>
+  <p style="color:#a0a8b4; margin-bottom:20px;" id="lipilaFailedReason">No money was taken.</p>
+  <button class="btn" onclick="retryLipila()" style="background:#28a745; margin-bottom:10px;">Try again</button>
+  <button class="btn btn-secondary" onclick="fallbackToManual()" style="margin-bottom:10px;">Use screenshot upload instead →</button>
+  <button class="cancel-pay-btn" onclick="closePaymentModal()">Done</button>
+</div>
+
+<!-- ═══ HELD ═══ -->
+<div id="lipilaHeld" class="hidden" style="text-align:center;">
+  <div style="font-size:3rem; margin-bottom:12px;">⏳</div>
+  <h3 style="color:#fff; margin-bottom:8px;">Payment received — code on its way</h3>
+  <p style="color:#a0a8b4; margin-bottom:20px;">Your payment was received. Our team is completing your access code right now. You'll get it by email shortly.</p>
+  <p style="color:#72efdd; font-weight:700; margin-bottom:20px;">You do NOT need to pay again.</p>
+  <button class="btn btn-secondary" onclick="switchPayTab('status'); closePaymentModal();">Check status later →</button>
+  <button class="cancel-pay-btn" onclick="closePaymentModal()">Done</button>
+</div>
+
+<!-- ═══ EXPIRED ═══ -->
+<div id="lipilaExpired" class="hidden" style="text-align:center;">
+  <div style="font-size:3rem; margin-bottom:12px;">⏱️</div>
+  <h3 style="color:#fff; margin-bottom:8px;">Payment request expired</h3>
+  <p style="color:#a0a8b4; margin-bottom:12px;">We didn't receive a confirmation.</p>
+  <p style="color:#ffc107; margin-bottom:20px; font-size:0.9em;">If you confirmed just now, your code will still arrive by email in a few minutes. Check your inbox before trying again — avoid paying twice.</p>
+  <button class="btn" onclick="switchPayTab('status'); closePaymentModal();" style="background:#007bff; margin-bottom:10px;">Check status →</button>
+  <button class="btn btn-secondary" onclick="retryLipila()" style="margin-bottom:10px;">Try again</button>
+  <button class="btn btn-secondary" onclick="fallbackToManual()" style="margin-bottom:10px;">Use screenshot upload instead →</button>
+  <button class="cancel-pay-btn" onclick="closePaymentModal()">Done</button>
+</div>
+    
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchPayTab('pay')">📝 Submit Payment</button>
+        <button class="tab-btn" onclick="switchPayTab('status')">📋 Check Status</button>
       </div>
-      <div class="pay-body">
-        <span class="pay-price" id="pay-amount">K15</span>
 
-        <!-- PAYMENT OPTIONS SECTION -->
-        <div style="margin-bottom: 20px; border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden;">
-          <!-- OPTION 1: BUY NOW -->
-          <div style="background: #f8f9fa; padding: 15px; border-bottom: 1px solid #dee2e6;">
-            <h4 style="margin: 0 0 10px 0; color: #007bff;">Option 1: Buy New Access</h4>
-            <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
-              Purchase fresh access for <strong id="buy-price">K15</strong>
-            </p>
-            <a id="buy-now-link" href="#" target="_blank" style="text-decoration: none;">
-              <button style="width: 100%; background: linear-gradient(135deg, #007bff, #0056b3); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">
-                🛒 Buy Now (K15)
-              </button>
-            </a>
+      <!-- Tab 1: Submit Payment -->
+      <div id="pay-view" class="hidden">
+        <!-- Loading skeleton -->
+        <div id="init-loader"><div class="skeleton" style="height:80px;"></div></div>
+
+        <form id="paymentForm" class="hidden" novalidate>
+          <!-- Name & Email -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group">
+              <label style="color:#a0a8b4; font-size:0.85rem;">Full Name</label>
+              <input type="text" name="fullName" class="pay-input" placeholder="e.g. Chanda Bwalya" required>
+            </div>
+            <div class="form-group">
+              <label style="color:#a0a8b4; font-size:0.85rem;">Email Address</label>
+              <input type="email" name="email" class="pay-input" placeholder="student@email.com" required>
+            </div>
           </div>
-          
-          <!-- OPTION 2: ACTIVATE EXISTING -->
-          <div style="padding: 15px;">
-            <h4 style="margin: 0 0 10px 0; color: #28a745;">Option 2: Activate Code</h4>
-            <p style="margin: 0 0 12px 0; font-size: 0.9em; color: #495057;">
-              Already paid? Enter your access code below
-            </p>
-            <input type="text" id="access-code-input" class="pay-input" placeholder="Enter Access Code">
-            <button class="pay-btn" onclick="verifyCodeFromModal()">✅ Activate Code</button>
+
+          <!-- Course & Term (auto-filled) -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group">
+              <label style="color:#a0a8b4; font-size:0.85rem;">Course</label>
+              <select name="courseCode" id="courseSelect" class="pay-input" required>
+                <option value="" disabled selected>Loading...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label style="color:#a0a8b4; font-size:0.85rem;">Term</label>
+              <select name="term" id="termSelect" class="pay-input" required disabled>
+                <option value="" disabled selected>Select Course First</option>
+              </select>
+            </div>
           </div>
+
+          <!-- Price box -->
+          <div class="price-box" style="display:block;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="color:#a0a8b4;">Amount Due:</span>
+              <span id="priceDisplay" style="font-weight:700; color:#72efdd; font-size:1.2rem;">K0.00</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
+              <span style="color:#a0a8b4; font-size:0.9em;">Access Duration:</span>
+              <span id="durationDisplay" style="color:#72efdd; font-size:0.9em;">—</span>
+            </div>
+            <div id="devicesRow" style="display:none; justify-content:space-between; align-items:center; margin-top:6px;">
+              <span style="color:#a0a8b4; font-size:0.9em;">Works on:</span>
+              <span id="devicesDisplay" style="color:#72efdd; font-size:0.9em;">—</span>
+            </div>
+          </div>
+
+          <!-- Phone & Ref -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group">
+              <label style="color:#a0a8b4; font-size:0.85rem;">Mobile Money Number</label>
+              <input type="tel" name="momoNumber" class="pay-input" placeholder="097xxxxxxx" required>
+            </div>
+            <div class="form-group">
+              <label style="color:#a0a8b4; font-size:0.85rem;">Transaction Reference</label>
+              <input type="text" name="transRef" class="pay-input" placeholder="e.g. TX12345678" required>
+            </div>
+          </div>
+
+          <!-- File Upload -->
+          <div class="form-group">
+            <label style="color:#a0a8b4; font-size:0.85rem;">Proof of Payment (Screenshot)</label>
+            <div class="upload-box" id="dropZone" onclick="document.getElementById('fileInput').click()">
+              <i class="fas fa-cloud-upload-alt" style="font-size:24px; color:#3e506e;"></i>
+              <div id="fileName" style="color:#8899a6; margin-top:5px;">Tap to upload screenshot</div>
+              <input type="file" id="fileInput" accept="image/*" hidden required>
+            </div>
+          </div>
+
+          <button type="button" class="btn pay-btn" id="paySubmitBtn" style="background:#28a745; margin-top:10px;">
+            ✅ Submit Payment
+          </button>
+        </form>
+
+        <!-- Subscription Guide & Extra Price Cards (kept for info) -->
+        <div class="subscription-guide-addon" style="border-top-color:#3e506e; margin-top:25px;">
+          <details id="subscription-guide">
+            <summary>📘 How to subscribe (7 steps)</summary>
+            <div class="guide-content" style="color:#a0a8b4;">
+              <p>1️⃣ <strong>Send money:</strong> Use details listed below.</p>
+              <div class="payment-info-box" style="background:#0d1b2a; border-color:#3e506e; color:#a0a8b4;">
+                <strong>Send Payment to:</strong><br>
+                • MTN: 0961005406<br>
+                • Airtel: 0974784161<br>
+                • Zanaco: 4584568100159 (Kaluluma Kaumbu)
+              </div>
+              <p>2️⃣ <strong>Screenshot:</strong> Save your payment proof.</p>
+              <p>3️⃣ <strong>Fill the form above:</strong> Upload your details & screenshot.</p>
+              <p>4️⃣ <strong>Submit:</strong> Wait for admin verification.</p>
+              <p>5️⃣ <strong>Check status:</strong> Use the "Check Status" tab above — your code appears once approved, with a one‑tap copy button.</p>
+              <p>6️⃣ <strong>Activate:</strong> Paste the code in the "Already have a Code?" section below.</p>
+              <p class="guide-confirm-line" style="color:#72efdd;">✅ Valid code gives full access for the plan duration (see amount line).</p>
+            </div>
+          </details>
+          <div class="extra-price-cards">
+            <div class="price-card-addon" data-plan-card="full" role="button" tabindex="0" onclick="onFullCourseClick()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onFullCourseClick();}">
+              <span class="plan-name">Full Course</span>
+              <span class="plan-price" data-plan="full-course">—</span>
+              <span class="plan-desc" data-plan-duration="full-course">All terms</span>
+            </div>
+            <div class="price-card-addon featured" data-plan-card="global" role="button" tabindex="0" onclick="onGlobalClick()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onGlobalClick();}">
+              <span class="plan-name">Global Access</span>
+              <span class="plan-price" data-plan="global">—</span>
+              <span class="plan-desc" data-plan-duration="global">Every course</span>
+            </div>
+          </div>
+          <div class="note-text">💡 Tap a plan card to fill the form for you. Price and duration come live from the price list.</div>
         </div>
-        
-        <!-- PAYMENT INFO BOX -->
-        <div class="payment-info-box">
-          <strong>Send Payment to:</strong><br>
-          • MTN: 0961005406<br>
-          • Airtel: 0974784161<br>
-          • Zanaco: 4584568100159 (Kaluluma Kaumbu)<br>
-          <em style="display:block; margin-top:5px; color:#007bff;">WhatsApp proof to: 0964312504</em>
+      </div> <!-- /pay-view -->
+
+      <!-- Tab 2: Check Status -->
+      <div id="status-view" class="hidden">
+        <div style="display: flex; gap: 10px; margin: 15px 0;">
+          <input type="email" id="checkEmail" class="pay-input" placeholder="Enter your email address" style="flex:1;">
+          <button class="btn" onclick="checkHistory()" style="width:auto; background:#007bff; margin-top:0;">🔍 Check</button>
         </div>
-        
-        <button class="cancel-pay-btn" onclick="closePaymentModal()">Maybe Later (Use Demo)</button>
+        <div id="historyList">
+          <p style="color:#8899a6; text-align:center;">Enter your email to see your purchases.</p>
+        </div>
+      </div>
+
+      <!-- Already have a Code? (Always visible) -->
+      <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #3e506e;">
+        <h4 style="color: #28a745; margin: 0 0 8px 0;">✅ Already have a Code?</h4>
+        <div style="display: flex; gap: 10px;">
+          <input type="text" id="access-code-input" class="pay-input" placeholder="Enter Access Code" style="flex:2;">
+          <button class="btn" onclick="verifyCodeFromModal()" style="flex:1; background:#007bff; margin-top:0;">Activate</button>
+        </div>
+      </div>
+
+      <!-- Become an Ambassador (kept) -->
+      <div style="margin-top:20px; background:#0d1b2a; border:1px solid #3e506e; border-radius:8px; padding:15px;">
+        <h4 style="margin:0 0 8px 0; color:#28a745;">🚀 Become an Ambassador</h4>
+        <p style="margin:0 0 12px 0; font-size:0.9em; color:#a0a8b4;">
+          Earn rewards & free access by sharing
+        </p>
+        <a data-amb-link href="AMB-PORTAL.html" target="_blank" rel="noopener"
+           style="display:block; box-sizing:border-box; width:100%; text-align:center; text-decoration:none; background:#28a745; color:white; padding:12px; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.3s;">
+          Join Now – It's Free →
+        </a>
+      </div>
+
+      <button class="cancel-pay-btn" onclick="closePaymentModal()">Maybe Later (Use Demo)</button>
+
+    </div> <!-- /pay-body -->
+  </div> <!-- /modal-content -->
+</div> <!-- /payment-modal -->
+
+  <!-- RESET PROGRESS CONFIRMATION -->
+  <div id="reset-modal" class="r-modal" role="dialog" aria-modal="true" aria-labelledby="reset-title">
+    <div class="r-card sm">
+      <div style="font-size:2.2rem;">🗑️</div>
+      <h3 id="reset-title">Reset progress?</h3>
+      <p style="color:#a0a8b4; margin:0;">All progress for this course and term will be deleted. This cannot be undone.</p>
+      <div class="r-actions">
+        <button type="button" class="r-btn r-cancel" onclick="closeResetModal()">Cancel</button>
+        <button type="button" class="r-btn r-danger" onclick="confirmResetProgress()">Reset</button>
       </div>
     </div>
   </div>
 
-  <!-- PRINT PREVIEW MODAL -->
+<!-- READER SETTINGS -->
+  <div id="tts-modal" class="r-modal" role="dialog" aria-modal="true" aria-labelledby="tts-title">
+    <div class="r-card sm">
+      <div style="font-size:2.2rem;">🔊</div>
+      <h3 id="tts-title">Reader settings</h3>
+      <label class="tts-check" for="tts-on" style="margin-top:4px;">
+        <input type="checkbox" id="tts-on" onchange="toggleTTS()"> Read questions aloud automatically
+      </label>
+      <label for="tts-voice">Voice</label>
+      <select id="tts-voice" onchange="setTtsVoice(this.value)"><option value="">Automatic (best English voice)</option></select>
+      <label for="tts-rate">Speed: <strong id="tts-rate-label">1×</strong></label>
+      <input type="range" id="tts-rate" min="0.6" max="1.6" step="0.1" value="1" oninput="setTtsRate(this.value)">
+      <div class="r-actions">
+        <button type="button" class="r-btn r-cancel" onclick="testTtsVoice()">▶ Test</button>
+        <button type="button" class="r-btn" style="background:#007bff;" data-autofocus onclick="closeTtsSettings()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESET MCQ TRACKING CONFIRMATION -->
+  <div id="pool-reset-modal" class="r-modal" role="dialog" aria-modal="true" aria-labelledby="pool-reset-title">
+    <div class="r-card sm">
+      <div style="font-size:2.2rem;">🎯</div>
+      <h3 id="pool-reset-title">Reset question tracking?</h3>
+      <p style="color:#a0a8b4; margin:0;">Your to-fix, building and mastered counts for this term start again from zero. Your quiz scores and progress are not affected.</p>
+      <div class="r-actions">
+        <button type="button" class="r-btn r-cancel" onclick="closePoolResetModal()">Cancel</button>
+        <button type="button" class="r-btn r-danger" onclick="confirmResetPool()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+<!-- EXIT QUIZ CONFIRMATION -->
+  <div id="exit-modal" class="r-modal" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+    <div class="r-card sm">
+      <div style="font-size:2.2rem;">🚪</div>
+      <h3 id="exit-title">Leave this quiz?</h3>
+      <p style="color:#a0a8b4; margin:0;">Your current answers will be lost.</p>
+      <div class="r-actions">
+        <button type="button" class="r-btn r-cancel" onclick="closeExitModal()">Stay</button>
+        <button type="button" class="r-btn r-danger" onclick="confirmExitQuiz()">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AMBASSADOR REFERRAL CAPTURE (shown only when ?ref= is present) -->
+  <div id="referral-modal" class="r-modal" role="dialog" aria-modal="true" aria-labelledby="referral-title">
+    <div class="r-card">
+      <div style="font-size:2.2rem;">🎁</div>
+      <h3 id="referral-title">A friend invited you</h3>
+      <p style="color:#a0a8b4; margin:0 0 14px;">Add your email so your friend gets credit for sharing Kaeri EdTech with you.</p>
+      <input type="email" id="referral-email" class="r-input" placeholder="you@email.com" autocomplete="email" inputmode="email">
+      <p id="referral-error" class="r-error" role="alert"></p>
+      <div class="r-actions">
+        <button type="button" class="r-btn r-cancel" onclick="skipAmbassadorTracking()">Skip</button>
+        <button type="button" id="referral-submit" class="r-btn r-primary" onclick="submitAmbassadorReferral()">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRINT PREVIEW MODAL (UNCHANGED) -->
   <div id="print-preview-modal" class="print-modal">
     <div class="print-modal-content">
       <div class="print-modal-header">
         <h2>📄 Print Preview</h2>
-        <button class="close-print-preview">&times;</button>
+        <button class="close-print-preview" onclick="closePrintPreview()">&times;</button>
       </div>
       <div class="print-preview-body" id="print-preview-content"></div>
       <div class="print-modal-footer">
@@ -1434,20 +2308,163 @@
     </div>
   </div>
 
-  <!-- Hidden container for final print -->
   <div id="printable-summary"></div>
 
-  <!-- ==================== EXTERNAL DATA SCRIPTS ==================== -->
-  <script src="assets/mcqDa.js"></script>
+  <!-- EXTERNAL ASSETS --> 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
   <script src="assets/shortDa.js"></script>
   <script src="assets/essayDa.js"></script>
   <script src="assets/flashcards.js"></script>
+
   <script src="assets/announcements.js"></script>
   <script src="assets/motivation.js"></script>
-
-  <!-- ==================== MAIN LOGIC SCRIPTS ==================== -->
-  <script src="acc.js"></script>
+  
   <script src="script.js"></script>
 
-</body>
+  <!-- PROGRAM / YEAR ROUTING + COMMUNITY LINKS -->
+  <script>
+  // ===== CONFIG: paste your WhatsApp links here =====
+  const COMMUNITY_CONFIG = {
+    channel:      'https://whatsapp.com/channel/0029VbCc0hEL7UVMs55diC3i',   // universal
+    support:      'https://wa.me/260964312504',                              // universal
+    smnsGroup:    'https://chat.whatsapp.com/GB4UZVkxgwUGa5R4nqfDMR?mode=hqrc',
+    geologyGroup: 'https://chat.whatsapp.com/CnIBDd3l9eJ732pZDIiyw4?s=cl&p=a&iam=2'
+  };
+  // ==================================================
+
+  // Course codes follow your existing manifest/pricing keys (BI110, not BI111).
+  const _YEAR1 = [
+    { id: 'bi110', code: 'BI110', name: 'Biology' },
+    { id: 'cs110', code: 'CS110', name: 'Computer Science' },
+    { id: 'la111', code: 'LA111', name: 'Communication Skills' },
+    { id: 'ma110', code: 'MA110', name: 'Mathematics' },
+    { id: 'ph110', code: 'PH110', name: 'Physics' },
+    { id: 'ch110', code: 'CH110', name: 'Chemistry' }
+  ];
+  const COURSE_DATA = {
+    SMNS_Y1: _YEAR1,
+    GEO_Y1: _YEAR1.map(c => c.code === 'BI110' ? { id: 'bi111', code: 'BI111', name: 'Biology' } : c),
+    GEO_Y2: [
+      { id: 'ch210', code: 'CH210', name: 'Chemistry II' },
+      { id: 'gm220', code: 'GM220', name: 'Fundamentals of Geology' },
+      { id: 'ma210', code: 'MA210', name: 'Mathematics II' },
+      { id: 'mi213', code: 'MI213', name: 'Introduction to Mining Engineering' },
+      { id: 'mt221', code: 'MT221', name: 'Introduction to Metallurgy' },
+      { id: 'ph210', code: 'PH210', name: 'Physics II' }
+    ],
+    GEO_Y3: [
+      { id: 'gm310', code: 'GM310', name: 'Mineralogy and Petrology' },
+      { id: 'gm311', code: 'GM311', name: 'Probability and Statistical Analysis' },
+      { id: 'gm312', code: 'GM312', name: 'Photogrammetry and Remote Sensing' },
+      { id: 'gm313', code: 'GM313', name: 'Structural Geology I' },
+      { id: 'gm314', code: 'GM314', name: 'Introductory Geomatics Engineering' },
+      { id: 'gm315', code: 'GM315', name: 'Geo-informatics and Computing' },
+      { id: 'gm320', code: 'GM320', name: 'Stratigraphy and Sedimentary Petrology' },
+      { id: 'gm321', code: 'GM321', name: 'Regolith Geology and Palaeoclimate' }
+    ],
+    GEO_Y4: [
+      { id: 'gm410', code: 'GM410', name: 'Igneous and Metamorphic Petrology' },
+      { id: 'gm411', code: 'GM411', name: 'Rock Mechanics and Engineering Geology' },
+      { id: 'gm412', code: 'GM412', name: 'Structural Geology II' },
+      { id: 'gm420', code: 'GM420', name: 'Mining and Exploration Geology' },
+      { id: 'gm430', code: 'GM430', name: 'Economic Geology' },
+      { id: 'gm440', code: 'GM440', name: 'Surface Processes & Geochemical Exploration' }
+    ],
+    GEO_Y5: [
+      { id: 'gm500', code: 'GM500', name: 'Special Project' },
+      { id: 'gm512', code: 'GM512', name: 'Independent Mapping Project' },
+      { id: 'gm520', code: 'GM520', name: 'Geostatistics and Resource Estimation' },
+      { id: 'gm521', code: 'GM521', name: 'Geophysics' },
+      { id: 'gm522', code: 'GM522', name: 'Geology of Zambia' },
+      { id: 'gm523', code: 'GM523', name: 'Management, Mine Economics & Deposit Evaluation' },
+      { id: 'gm524', code: 'GM524', name: 'Entrepreneurship and Small Scale Business Management' },
+      { id: 'gm531', code: 'GM531', name: 'Hydrogeology' }
+    ]
+  };
+
+  let currentListKey = 'SMNS_Y1';
+  const _el = id => document.getElementById(id);
+
+  function _groupLinkFor(key) {
+    const g = String(key).indexOf('GEO') === 0 ? COMMUNITY_CONFIG.geologyGroup : COMMUNITY_CONFIG.smnsGroup;
+    return g || '';
+  }
+
+  // Builds the course list + community links WITHOUT changing which screen is visible.
+  function buildCourseList(key, title) {
+    currentListKey = key;
+    const t = _el('course-list-title');
+    if (t) t.textContent = title || (key === 'SMNS_Y1' ? 'SMNS Year 1' : 'Geology ' + key.replace('GEO_Y', 'Year '));
+
+    const group = _groupLinkFor(key);
+    const comm = _el('dynamic-community-links');
+    if (comm) comm.innerHTML =
+      '<a class="social-link" href="' + COMMUNITY_CONFIG.channel + '" target="_blank" rel="noopener">📢 Channel</a>' +
+      (group ? '<a class="social-link" href="' + group + '" target="_blank" rel="noopener">👥 Join Group</a>' : '');
+    const fl = _el('footer-group-link');
+    if (fl) { if (group) { fl.href = group; fl.style.display = ''; } else fl.style.display = 'none'; }
+
+    const list = _el('course-list');
+    list.innerHTML = '';
+    (COURSE_DATA[key] || []).forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'course-section';
+      div.innerHTML =
+        '<button class="course-button" onclick="toggleTerms(\'' + c.id + '\')">' + c.code + ' - ' + c.name + '</button>' +
+        '<div id="' + c.id + '-terms" class="term-buttons">' +
+        ['T1', 'T2', 'T3'].map((x, i) => '<button onclick="loadCourse(\'' + c.code + '\', \'' + x + '\')">Term ' + (i + 1) + '</button>').join('') +
+        '</div>';
+      list.appendChild(div);
+    });
+    // Same rule as before: no dataset in MCQ_MANIFEST -> no button.
+    try { hideUnavailableTerms(); } catch (e) {}
+    const anyShown = Array.prototype.some.call(list.querySelectorAll('.course-section'), s => s.style.display !== 'none');
+    if (!anyShown) {
+      const p = document.createElement('p');
+      p.style.cssText = 'text-align:center;color:#a0a8b4;padding:20px 0;';
+      p.textContent = 'Study material for this year is coming soon. Join the channel to be notified.';
+      list.appendChild(p);
+    }
+  }
+
+  function showSMNS() {
+    buildCourseList('SMNS_Y1', 'SMNS Year 1');
+    _swapViews(_el('welcome-view'), _el('courses-view'), false);
+  }
+  function showGeologyYears() {
+    _swapViews(_el('welcome-view'), _el('years-view'), false);
+  }
+  function backToPrograms() {
+    _swapViews(_el('years-view'), _el('welcome-view'), false);
+  }
+  function renderCourses(key, title) {
+    buildCourseList(key, title);
+    _swapViews(_el('years-view'), _el('courses-view'), false);
+  }
+  function goBackFromCourses() {
+    collapseAllTerms();
+    if (currentListKey.indexOf('GEO_Y') === 0) _swapViews(_el('courses-view'), _el('years-view'), false);
+    else _swapViews(_el('courses-view'), _el('welcome-view'), false);
+  }
+
+  // Which program list contains this course code? (SMNS wins for shared Year 1 courses)
+  function programKeyForCourse(code) {
+    code = String(code || '').toUpperCase();
+    return Object.keys(COURSE_DATA).filter(k => COURSE_DATA[k].some(c => c.code === code))[0] || 'SMNS_Y1';
+  }
+
+  // Boot: always have a list in the DOM (deep links like ?course=GM310&term=T1 never see an empty one).
+  document.addEventListener('DOMContentLoaded', function () {
+    const wg = _el('welcome-group-link');
+    if (wg) wg.href = COMMUNITY_CONFIG.smnsGroup;
+    const c = new URLSearchParams(location.search).get('course');
+    buildCourseList(c ? programKeyForCourse(c) : 'SMNS_Y1');
+  });
+  </script>
+<script src="ExamCountdown.js"></script>
+<script src="ScoreCelebration.js"></script>
+<script src="Advanced_SA.js"></script>
+</body> 
 </html>
